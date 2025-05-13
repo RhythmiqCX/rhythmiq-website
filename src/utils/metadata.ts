@@ -16,8 +16,8 @@ interface MetadataProps {
 }
 
 export const generateMetadata = ({
-    title = `Rhythmiq - AI-Powered Customer Support & Team Collaboration`,
-    description = `Rhythmiq is an intelligent CX platform that transforms how companies interact with Customers. Leverage AI to automate workflows, enhance collaboration, and boost productivity. Experience smarter Customer Services today.`,
+    title = `Rhythmiq - AI-Powered Customer Support Agent`,
+    description = `Rhythmiq is an AI CX platform that transforms how companies interact with Customers. Leverage AI to automate support queries, create personalized AI agents, and boost productivity. Experience smarter Customer Services today.`,
     icons = [
         {
             rel: "icon",
@@ -34,7 +34,7 @@ export const generateMetadata = ({
     keywords = [
         "AI customer support",
         "whatsapp customer support",
-        "whatsapp chatbot",
+        "whatsapp chatbot india",
         "AI chat bot",
         "AI chatbot india",
         "customer service bot",

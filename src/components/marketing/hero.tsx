@@ -55,7 +55,7 @@ const Hero = () => {
                             </span>
                         </button>
                     </Container>
-                    <Container delay={0.15}>
+                    <Container>
                         <h1 className="text-4xl md:text-4xl lg:text-7xl font-bold text-center !leading-tight max-w-4xl mx-auto">
                             Transform your {" "}
                             <span className="">
