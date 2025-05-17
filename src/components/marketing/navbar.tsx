@@ -4,6 +4,7 @@ import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
 import { Button } from "../ui/button";
 import MobileMenu from "./mobile-menu";
+import ProductDropdown from "../ui/product-drowdown";
 
 const Navbar = () => {
     return (
@@ -19,8 +20,9 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* <div className="hidden lg:flex items-center gap-4">
+                    <div className="hidden lg:flex items-center gap-4">
                         <ul className="flex items-center gap-8">
+                        <ProductDropdown/>
                             {NAV_LINKS.map((link, index) => (
                                 <li key={index} className="text-sm font-medium -1 link">
                                     <Link href={link.href}>
@@ -29,7 +31,7 @@ const Navbar = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div> */}
+                    </div>
 
                     <div className="flex items-center gap-4">
                         <Link href="#waitlist" className="hidden lg:block">
