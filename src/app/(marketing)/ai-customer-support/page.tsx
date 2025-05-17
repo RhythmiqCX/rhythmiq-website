@@ -6,11 +6,12 @@ import { Button } from "@/components/ui/button";
 import Icons from "@/components/global/icons";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
+import ImageTextSection from '@/components/marketing/imagetext';
 
 export const metadata: Metadata = {
-  title: 'AI Customer Support Chatbot | Omni‑Channel Automation & CSAT Boost',
+  title: 'AI Customer Support Chatbot | Omni-Channel Automation & CSAT Boost',
   description:
-    'Deploy an AI‑powered customer support chatbot that deflects tickets, resolves FAQs and boosts CSAT across web, WhatsApp & more. Start a free demo today.',
+    'Deploy an AI-powered customer support chatbot that deflects tickets, resolves FAQs and boosts CSAT across web, WhatsApp & more. Start a free demo today.',
   alternates: {
     canonical: '/ai-customer-support',
   },
@@ -114,10 +115,18 @@ export default function AICustomerSupportPage() {
         </div>
       </section>
 
+      <section className="py-12 md:py-16">
+        <Container>
+          <p className="mx-auto max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
+            <strong>AI customer support</strong> is the use of conversational AI—large language model chatbots, intent detection and automated workflows—to resolve customer questions without a human agent. It hooks into your existing help desk, knowledge base and channels so customers get instant, accurate answers 24 hours a day.
+          </p>
+        </Container>
+      </section>
+
       {/* Feature list */}
       <section id="features" className="py-20">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
             Omni Channel AI Support, Ready Out-of-the-Box
           </h2>
           <ul className="grid gap-8 md:grid-cols-2">
@@ -161,6 +170,74 @@ export default function AICustomerSupportPage() {
         </div>
       </section>
 
+      <ImageTextSection
+        imgSrc="/images/support-instant.svg"
+        imgAlt="Instant answer icon"
+        eyebrow="Instant Answers"
+        headline="Resolve 70 % of tickets in under 2 seconds"
+        body={`LLM-powered intent detection pulls answers straight from your knowledge base.\nNo queues, no IVR, just happy customers.`}
+        />
+
+        <ImageTextSection
+        imgSrc="/images/support-handoff.svg"
+        imgAlt="Agent handoff icon"
+        eyebrow="Seamless Handoff"
+        headline="Escalate complex chats with full context"
+        body="If confidence drops, the bot hands over to a live agent with a summarised transcript—zero customer repetition."
+        reverse
+        />
+
+        <ImageTextSection
+        imgSrc="/images/support-multilingual.svg"
+        imgAlt="Multilingual globe icon"
+        eyebrow="Global Reach"
+        headline="Serve 60 + languages out-of-the-box"
+        body="Region-tuned models auto-detect and respond in your user’s language, boosting CSAT across borders."
+        />
+
+
+      <section id="implementation" className="py-16 md:py-24 bg-muted/5">
+        <Container className="space-y-10 max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center">How to Automate Customer Support in 5 Steps</h2>
+          <ol className="space-y-8 list-decimal list-inside">
+            <li>
+              <h4 className="font-semibold">Audit your ticket data</h4>
+              <p>Export the last 3 to 6 months from Zendesk, Intercom or Freshdesk. Tag repeat questions—these are the first flows to automate.</p>
+            </li>
+            <li>
+              <h4 className="font-semibold">Sync your knowledge base</h4>
+              <p>Connect help‑centre articles, FAQs and policy docs so the LLM replies with approved content.</p>
+            </li>
+            <li>
+              <h4 className="font-semibold">Train intents & fallbacks</h4>
+              <p>Label 15–20 core intents (shipping, refunds, account login…) and set a confidence threshold for live‑agent hand‑off.</p>
+            </li>
+            <li>
+              <h4 className="font-semibold">Launch on web chat first</h4>
+              <p>Prove deflection on your site, then roll out to WhatsApp Business API and social DMs.</p>
+            </li>
+            <li>
+              <h4 className="font-semibold">Measure & iterate weekly</h4>
+              <p>Track deflection %, CSAT and first‑response time. Fine‑tune prompts and add new intents every sprint.</p>
+            </li>
+          </ol>
+        </Container>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <Container className="grid gap-10 md:grid-cols-3 text-center">
+          {[
+            { href: '/whatsapp-ai-chatbot', title: 'WhatsApp AI Chatbot Guide', desc: 'Launch compliant WhatsApp support with AI.' },
+            { href: '/ai-chatbot-pricing', title: 'AI Chatbot Pricing', desc: 'Costs, vendor fees and ROI math.' },
+            { href: '/conversational-ai-chatbot', title: 'Conversational AI Chatbot Guide', desc: 'Build natural, multi-turn chatbots powered by NLP and large-language models.' },
+          ].map((link) => (
+            <Link key={link.href} href={link.href} className="space-y-2 border p-6 rounded-xl hover:shadow-lg transition-shadow">
+              <h3 className="font-semibold">{link.title}</h3>
+              <p className="text-sm text-muted-foreground">{link.desc}</p>
+            </Link>
+          ))}
+        </Container>
+      </section>
 
 
       {/* FAQ */}

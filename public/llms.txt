@@ -3,3 +3,21 @@ https://rhythmiqcx.com/ai-customer-support/
 summary: AI chatbot deflects tickets and boosts CSAT across web, WhatsApp & voice.
 tags: ai customer support, chatbot, help desk automation
 updated: 2025-05-15
+
+# WhatsApp AI Chatbot Landing Page
+https://rhythmiqcx.com/whatsapp-ai-chatbot/
+summary: Build a compliant WhatsApp chatbot that automates support, notifications & commerce across mobile-first markets.
+tags: whatsapp ai chatbot, whatsapp business api, conversational ai
+updated: 2025-05-16
+
+# AI Chatbot Pricing Guide
+https://rhythmiqcx.com/ai-chatbot-pricing/
+summary: 2025 pricing breakdown for AI chatbots—licence fees, WhatsApp BSP charges, per-conversation costs and total ownership tips.
+tags: ai chatbot pricing, conversation cost, whatsapp bsp, chatbot cost calculator
+updated: 2025-05-16
+
+# Conversational AI Chatbot Guide
+https://rhythmiqcx.com/conversational-ai-chatbot/
+summary: Learn how conversational AI platforms use LLMs, NLP and analytics to power human-like customer support at scale.
+tags: conversational ai, chatbot platform, dialogue design, nlp automation
+updated: 2025-05-16
