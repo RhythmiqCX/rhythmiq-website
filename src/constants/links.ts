@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
     {
         name: "Pricing",
-        href: "#"
+        href: "/ai-chatbot-pricing"
     },
     {
         name: "Features",
@@ -9,10 +9,10 @@ export const NAV_LINKS = [
     },
     {
         name: "Blog",
-        href: "#"
+        href: "/blog"
     },
     {
         name: "Contact",
-        href: "#"
+        href: "/contact-us"
     },
 ];
