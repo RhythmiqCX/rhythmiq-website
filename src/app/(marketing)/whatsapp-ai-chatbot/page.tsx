@@ -43,7 +43,7 @@ export default function WhatsAppAIChatbotPage() {
       <section className="py-12 md:py-16">
         <Container>
           <p className="mx-auto max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
-            A <strong>WhatsApp AI chatbot</strong> is an automated conversational agent that runs on the official WhatsApp Business API. It understands natural language, sends templated notifications, and resolves customer requests—24 x 7—without human intervention.
+            A <strong>WhatsApp AI chatbot</strong> is an automated conversational agent that runs on the official WhatsApp Business API. It understands natural language, sends templated notifications, and resolves customer requests 24 x 7 without human intervention.
           </p>
         </Container>
       </section>
@@ -60,7 +60,7 @@ export default function WhatsAppAIChatbotPage() {
             <p className="font-semibold mt-2">Faster resolution time</p>
           </div>
           <div>
-            <h3 className="text-4xl font-bold text-green-600">5×</h3>
+            <h3 className="text-4xl font-bold text-green-600">5x</h3>
             <p className="font-semibold mt-2">Higher conversions vs. email</p>
           </div>
         </Container>
@@ -76,11 +76,11 @@ export default function WhatsAppAIChatbotPage() {
             {[
               {
                 title: 'Global reach, local trust',
-                copy: '2.7 billion users already trust WhatsApp for daily chats—meet them where they live.'
+                copy: '2.7 billion users already trust WhatsApp for daily chats, meet them where they live.'
               },
               {
                 title: 'Rich media answers',
-                copy: 'Send images, PDFs, voice notes and location pins directly in the chat.'
+                copy: 'Send images, voice notes and other media directly in the chat.'
               },
               {
                 title: 'Verified business profile',
@@ -88,7 +88,7 @@ export default function WhatsAppAIChatbotPage() {
               },
               {
                 title: '24 x 7 multilingual support',
-                copy: 'Serve English, Hindi, Tamil, Spanish and 60+ languages via AI translation.'
+                copy: 'Serve English, Hindi, Bengali, Telugu, Tamil, Spanish and 60+ languages via AI translation.'
               },
               {
                 title: 'Opt in notifications',
@@ -96,7 +96,7 @@ export default function WhatsAppAIChatbotPage() {
               },
               {
                 title: 'Cheaper than SMS',
-                copy: 'Cut notification costs up to 60 % while keeping delivery rates near 100 %.'
+                copy: 'Cut notification costs up to 60% while keeping delivery rates near 100%.'
               }
             ].map((item) => (
               <div key={item.title} className="space-y-3">
@@ -108,80 +108,93 @@ export default function WhatsAppAIChatbotPage() {
         </Container>
       </section>
 
-            <ImageTextSection
-        imgSrc="/images/wa-catalog.svg"
-        imgAlt="Product catalog icon"
-        eyebrow="E-commerce"
-        headline="Let shoppers buy direct from chat"
-        body="Show carousels, size guides and payment links inside WhatsApp to trim cart abandonment."
-        />
+          <ImageTextSection
+      imgSrc="/images/wa-catalog.svg"
+      imgAlt="Product information icon"
+      eyebrow="Instant Info"
+      headline="Answer FAQs and order queries instantly"
+      body="Let customers ask about order status, shipping updates, and product details right from WhatsApp, no wait time."
+    />
 
-        <ImageTextSection
-        imgSrc="/images/wa-voice.svg"
-        imgAlt="Voice note to text icon"
-        eyebrow="Voice Note Magic"
-        headline="Auto-transcribe and summarise voice notes"
-        body="Your bot converts long voice messages to text, sends concise replies, and logs everything to your help desk."
-        reverse
-        />
+    <ImageTextSection
+      imgSrc="/images/wa-voice.svg"
+      imgAlt="Voice message icon"
+      eyebrow="Hands-Free Help"
+      headline="Handle voice with AI-powered accuracy"
+      body="Customers can send voice messages; your bot transcribes, understands intent, and replies accurately to their queries."
+      reverse
+    />
 
-        <ImageTextSection
-        imgSrc="/images/wa-cart.svg"
-        imgAlt="Recover cart icon"
-        eyebrow="Recovery Nudges"
-        headline="Recover up to 30 % more abandoned carts"
-        body="Triggered template messages remind customers to finish checkout—with personal discount codes."
-        />
+    <ImageTextSection
+      imgSrc="/images/wa-cart.svg"
+      imgAlt="Order support icon"
+      eyebrow="Order Assistance"
+      headline="Resolve order issues in seconds"
+      body="From cancellations to return requests, your WhatsApp bot guides customers through order support without human delays."
+    />
 
 
-      {/* ─────────────── Implementation flow */}
-      <section id="flow" className="py-16 md:py-24">
-        <Container className="space-y-10 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">Launch Your WhatsApp Bot in 5 Steps</h2>
-          <ol className="space-y-8 list-decimal list-inside">
-            <li>
-              <h4 className="font-semibold">Apply for WhatsApp Business API</h4>
-              <p>Submit your Facebook Business verification and display name. Most brands get approval in 48 hours.</p>
-            </li>
-            <li>
-              <h4 className="font-semibold">Connect Rhythmiq as your BSP</h4>
-              <p>Rhythmiq handles message routing, template management and hosting—no server setup required.</p>
-            </li>
-            <li>
-              <h4 className="font-semibold">Sync FAQs & intents</h4>
-              <p>Import your knowledge base, then label intents like <em>order status</em>, <em>refund</em> and <em>account login</em>.</p>
-            </li>
-            <li>
-              <h4 className="font-semibold">Design flows with drag and drop</h4>
-              <p>Create rich media journeys: product carousels, payment links, voice to text capture.</p>
-            </li>
-            <li>
-              <h4 className="font-semibold">Go live & monitor analytics</h4>
-              <p>Track open rate, CSAT and ticket deflection. Optimise templates and prompts weekly.</p>
-            </li>
-          </ol>
-        </Container>
-      </section>
+    <section id="flow" className="py-16 md:py-24">
+      <Container className="space-y-10 max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center">
+          Set Up Your WhatsApp Support Bot in 5 Simple Steps
+        </h2>
+        <ol className="space-y-8 list-decimal list-inside">
+          <li>
+            <h4 className="font-semibold">Get WhatsApp Business API Access</h4>
+            <p>
+              Provide your business details, and we'll handle verification and approval—usually live within 48 hours.
+            </p>
+          </li>
+          <li>
+            <h4 className="font-semibold">Connect Your WhatsApp Number</h4>
+            <p>
+              Link your existing number or let us provision one. We manage all BSP integration, message routing, and templates.
+            </p>
+          </li>
+          <li>
+            <h4 className="font-semibold">Upload Your FAQs & KB</h4>
+            <p>
+              Import your help articles, order policies, and support guides so the AI has the right answers at its fingertips.
+            </p>
+          </li>
+          <li>
+            <h4 className="font-semibold">Configure Intents & Workflows</h4>
+            <p>
+              Use our bot builder to map queries like <em>order status</em>, <em>refund</em>, and <em>store hours</em> to automated responses.
+            </p>
+          </li>
+          <li>
+            <h4 className="font-semibold">Launch & Analyze</h4>
+            <p>
+              Go live and monitor response rates, open rate, resolution time, and CSAT. Tweak workflows monthly to keep support sharp.
+            </p>
+          </li>
+        </ol>
+      </Container>
+    </section>
 
       {/* ─────────────── Feature list */}
-      <section className="py-20">
-        <Container className="space-y-12 container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">Key WhatsApp Chatbot Features</h2>
-          <ul className="grid gap-8 md:grid-cols-2">
-            {[
-              { title: 'Quick‑reply buttons', copy: 'Increase completion rate with one‑tap replies and CTA buttons.' },
-              { title: 'Voice‑to‑text bot', copy: 'Auto‑transcribe voice notes and answer in text or audio.' },
-              { title: 'E‑commerce integrations', copy: 'Sync Shopify, WooCommerce or custom cart and send order updates automatically.' },
-              { title: 'Smart routing', copy: 'Transfer high‑value chats to live agents in Zendesk or Intercom with full context.' }
-            ].map((f) => (
-              <li key={f.title} className="space-y-3">
-                <h3 className="text-xl font-semibold">{f.title}</h3>
-                <p>{f.copy}</p>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
+          <section className="py-20">
+      <Container className="space-y-12 container mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center">
+          Core WhatsApp Support Features
+        </h2>
+        <ul className="grid gap-8 md:grid-cols-2">
+          {[
+            { title: 'Template Management', copy: 'Pre-approved WhatsApp templates for order updates, refunds, and alerts.' },
+            { title: 'AI-Powered Auto Replies', copy: 'Instant answers to common queries with fallback to live agents when needed.' },
+            { title: 'Voice Note Support', copy: 'Transcribe and respond to customer voice messages automatically.' },
+            { title: 'Unified Inbox', copy: 'View WhatsApp chats alongside web chats - no more platform switching.' }
+          ].map((f) => (
+            <li key={f.title} className="space-y-3">
+              <h3 className="text-xl font-semibold">{f.title}</h3>
+              <p>{f.copy}</p>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </section>
 
       {/* ─────────────── Internal links */}
       <section className="py-16 md:py-24">
@@ -200,58 +213,61 @@ export default function WhatsAppAIChatbotPage() {
       </section>
 
    {/* FAQ */}
-<section id="faq" className="py-20">
-  <div className="container mx-auto max-w-3xl">
-    <h2 className="text-3xl font-bold text-center mb-10">
-      WhatsApp&nbsp;AI&nbsp;Chatbot&nbsp;FAQ
-    </h2>
+    <section id="faq" className="py-20">
+      <div className="container mx-auto max-w-3xl">
+        <h2 className="text-3xl font-bold text-center mb-10">
+          WhatsApp AI Chatbot FAQ
+        </h2>
 
-    <div className="space-y-6">
-      <details className="p-4 border rounded-lg">
-        <summary className="font-semibold">
-          How do I connect the chatbot to the WhatsApp&nbsp;Business&nbsp;API?
-        </summary>
-        <p className="mt-2">
-          Simply paste your BSP (Business Solution Provider) credentials in the dashboard,
-          map your phone number, and click “Activate.” Most teams are live in
-          under 15 minutes once Meta approves the number.
-        </p>
-      </details>
+        <div className="space-y-6">
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold">
+              How do I set up my WhatsApp number?
+            </summary>
+            <p className="mt-2">
+              After you buy a WhatsApp plan, we’ll guide you through connecting your existing number or getting a new one. No extra BSP setup needed—Rhythmiq handles everything.
+            </p>
+          </details>
 
-      <details className="p-4 border rounded-lg">
-        <summary className="font-semibold">
-          Is the bot officially approved by Meta / WhatsApp?
-        </summary>
-        <p className="mt-2">
-          Yes—every deployment runs through Meta’s WhatsApp&nbsp;Business
-          verification flow. We use approved message templates and stay within
-          the 24-hour customer-care window.
-        </p>
-      </details>
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold">
+              Can I use my own BSP account?
+            </summary>
+            <p className="mt-2">
+              Yes. If you already have a WhatsApp Business API provider, simply paste your API credentials in our dashboard and we’ll connect you immediately.
+            </p>
+          </details>
 
-      <details className="p-4 border rounded-lg">
-        <summary className="font-semibold">
-          Does it work in multiple languages?
-        </summary>
-        <p className="mt-2">
-          Absolutely. The AI supports 60 + languages out-of-the-box, including
-          Hindi, Tamil, Telugu, Spanish and Arabic. It automatically matches the
-          user’s language or falls back to English.
-        </p>
-      </details>
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold">
+              What happens if WhatsApp changes pricing?
+            </summary>
+            <p className="mt-2">
+              We pass through Meta’s conversation rates without markup and adjust our overage fees accordingly. You get full visibility of any rate changes in your invoice.
+            </p>
+          </details>
 
-      <details className="p-4 border rounded-lg">
-        <summary className="font-semibold">
-          What does it cost after the free trial?
-        </summary>
-        <p className="mt-2">
-          Pricing starts at $49 /month for 2 000 conversations, with pay-as-you-go
-          WhatsApp template fees. Custom annual plans are available for high-volume brands.
-        </p>
-      </details>
-    </div>
-  </div>
-</section>
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold">
+              How quickly can I add more agents?
+            </summary>
+            <p className="mt-2">
+              You can add agents with just a few clicks—new seats activate instantly and are billed at ₹500 or $7 per agent per month, after the 5 initial that come with your plan.
+            </p>
+          </details>
+
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold">
+              Is there a trial available?
+            </summary>
+            <p className="mt-2">
+              Yes, every plan includes a 7-day trial with full WhatsApp support features - no credit card required.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
 
 
       {/* ─────────────── CTA */}

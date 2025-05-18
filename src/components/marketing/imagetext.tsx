@@ -49,7 +49,7 @@ export default function ImageTextSection({
         )}
       >
         {/* Image */}
-        <div className="relative w-full aspect-[16/10] md:aspect-square rounded-xl overflow-hidden shadow-lg">
+        <div className="relative w-[400px] aspect-[16/10] md:aspect-square rounded-xl overflow-hidden shadow-lg">
           <Image
             src={imgSrc}
             alt={imgAlt}

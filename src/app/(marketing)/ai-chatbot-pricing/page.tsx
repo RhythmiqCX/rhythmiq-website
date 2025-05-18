@@ -5,11 +5,12 @@ import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from 'lucide-react';
 import Link from 'next/link';
 import ImageTextSection from '@/components/marketing/imagetext';
+import Pricing from '@/components/marketing/pricing';
 
 export const metadata: Metadata = {
-  title: 'AI Chatbot Pricing Guide 2025 | Costs, ROI & Vendor Comparison',
+  title: 'AI Chatbot Pricing 2025 | Costs, ROI & Vendor Comparison',
   description:
-    'Full 2025 breakdown of AI‑chatbot pricing. Compare per‑conversation fees, hosting, WhatsApp BSP charges and total cost of ownership before you buy.',
+    'Full 2025 breakdown of Rhythmiq AI chatbot pricing. Compare license fees, hosting, WhatsApp BSP charges and total cost of ownership before you buy.',
   alternates: {
     canonical: '/ai-chatbot-pricing',
   },
@@ -22,17 +23,17 @@ export default function AIChatbotPricingPage() {
       <section className="relative w-full bg-gradient-to-b from-indigo-600/20 to-background pt-28 pb-20 lg:py-32 text-center">
         <Container className="space-y-6">
           <h1 className="mx-auto max-w-4xl font-bold text-4xl md:text-5xl lg:text-7xl leading-tight">
-            2025 <span className="text-indigo-600">AI&nbsp;Chatbot&nbsp;Pricing</span> Guide
+            Rhythmiq <span className="text-indigo-600">AI&nbsp;Chatbot&nbsp;Pricing</span> for 2025
           </h1>
           <p className="mx-auto max-w-2xl text-muted-foreground text-base md:text-lg">
-            Understand every cost—per‑conversation, hosting, WhatsApp BSP fees and more—so you never overpay for automation.
+            Understand every cost, discover the plan which suits your needs more, so you never overpay for automation.
           </p>
           <div className="flex justify-center gap-4">
             <Link href="/book-demo">
               <Button size="lg">Get Custom Quote</Button>
             </Link>
-            <Link href="#breakdown" className="flex items-center gap-2 group text-indigo-700 font-medium">
-              <span>See Breakdown</span>
+            <Link href="#pricingtab" className="flex items-center gap-2 group text-indigo-700 font-medium">
+              <span>See Plans</span>
               <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -43,13 +44,13 @@ export default function AIChatbotPricingPage() {
       <section className="py-12 md:py-16">
         <Container>
           <p className="mx-auto max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
-            <strong>AI chatbot pricing</strong> refers to the total cost of deploying and running a conversational AI assistant—covering platform licence, message or conversation fees, cloud hosting, channel add‑ons like WhatsApp Business&nbsp;API, and optional implementation services.
+            <strong>AI chatbot pricing</strong> refers to the total cost of deploying and running a conversational AI assistant — covering platform licence, custom integration charges (if applicable), hosting, channel add ons like WhatsApp Business&nbsp;API, and optional Webhook services.
           </p>
         </Container>
       </section>
 
       {/* ─────────────── Quick cost ranges */}
-      <section className="py-16 md:py-20">
+      {/* <section className="py-16 md:py-20">
         <Container className="grid gap-10 md:grid-cols-3 text-center">
           <div>
             <h3 className="text-4xl font-bold text-indigo-600">$0.01–$0.05</h3>
@@ -64,7 +65,7 @@ export default function AIChatbotPricingPage() {
             <p className="font-semibold mt-2">Monthly platform licence</p>
           </div>
         </Container>
-      </section>
+      </section> */}
 
       {/* ─────────────── Why pricing varies */}
       {/* <section className="py-20">
@@ -87,6 +88,8 @@ export default function AIChatbotPricingPage() {
           </div>
         </div>
       </section> */}
+
+      <Pricing/>
 
       <section id="features" className="py-20">
         <div className="container mx-auto">
@@ -134,16 +137,16 @@ export default function AIChatbotPricingPage() {
         imgSrc="/images/price-wallet.svg"
         imgAlt="Wallet icon"
         eyebrow="Predictable Costs"
-        headline="Flat licence—no per-seat surprises"
-        body="Unlimited agents on every tier; pay only for conversations."
+        headline="Flat per-seat license, no surprises"
+        body="Pay Flat fee for your Plan, Add agents only if necessary"
         />
 
         <ImageTextSection
         imgSrc="/images/price-roi.svg"
         imgAlt="ROI graph icon"
-        eyebrow="ROI Calculator"
+        eyebrow="ROI on your support"
         headline="Break even in < 60 days"
-        body="Use our calculator to model savings on support head-count and increased sales."
+        body="Savings on support head-count, increase sales and improve onboarding on customers."
         reverse
         />
 
@@ -151,8 +154,8 @@ export default function AIChatbotPricingPage() {
         imgSrc="/images/price-shield.svg"
         imgAlt="Compliance shield icon"
         eyebrow="Compliance Bundled"
-        headline="SOC 2, GDPR & HIPAA at no extra cost"
-        body="Security audits and regional data hosting included—even on starter plans."
+        headline="ISO 9001, SOC 2, GDPR & HIPAA at no extra cost"
+        body="Industry grade security and regional data hosting included — even on starter plans."
         />
 
 
@@ -163,43 +166,48 @@ export default function AIChatbotPricingPage() {
           <ol className="space-y-8 list-decimal list-inside">
             <li>
               <h4 className="font-semibold">Estimate monthly conversations</h4>
-              <p>Check your current ticket volume or web‑chat sessions and add a 20 % buffer for growth.</p>
+              <p>Check your current ticket volume or web chat/bot sessions and add a 30% buffer for growth. AI will cover as many of your queries using the knowledge base it is trained on.</p>
             </li>
             <li>
               <h4 className="font-semibold">Pick your channels</h4>
-              <p>Web chat is cheapest; WhatsApp Business and Instagram DM add BSP or Meta fees per 24‑hour window.</p>
+              <p>Web chatbot is cheapest; WhatsApp Business is charged on a BSP level for per conversation. A conversation is defined as a chat with customer over Whatsapp in a 24 hour window. Choose the Omni channel support if you want custom channel integration also.</p>
             </li>
             <li>
               <h4 className="font-semibold">Choose model tier</h4>
-              <p>Standard GPT‑3.5 covers most FAQs. Upgrade to GPT‑4o or bilingual models if you need complex reasoning or multilingual support.</p>
+              <p>Based on whether you want to just use Web widget, Whatsapp or all the channels, choose your desired plan</p>
             </li>
             <li>
               <h4 className="font-semibold">Add service extras</h4>
-              <p>Implementation, custom prompts, or SOC 2 reports may be one‑time or annual line items.</p>
+              <p>Only add more agents, conversations, numbers if needed. Talk to our sales team for a custom quote that will help you save the most</p>
             </li>
           </ol>
         </Container>
       </section>
 
       {/* ─────────────── Feature list (price‑centric) */}
-      <section className="py-20 bg-muted/5">
-        <Container className="space-y-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">What’s included in Rhythmiq plans</h2>
-          <ul className="grid gap-8 md:grid-cols-2">
-            {[
-              { title: 'Unlimited agents', copy: 'No per‑seat fees—invite your whole team.' },
-              { title: 'LLM usage included', copy: 'Generous GPT token allowance on every tier.' },
-              { title: 'Free WhatsApp templates', copy: '10 approved templates bundled at no extra cost.' },
-              { title: '24 × 7 email & chat support', copy: 'All tiers get real‑human help in under 2 hours.' }
-            ].map((item) => (
-              <li key={item.title} className="space-y-3">
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p>{item.copy}</p>
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
+<section className="py-20 bg-muted/5">
+  <Container className="space-y-12">
+    <h2 className="text-3xl md:text-4xl font-bold text-center">
+      What’s included in Rhythmiq plans
+    </h2>
+
+    {/* Center the grid items */}
+    <ul className="grid gap-8 md:grid-cols-2 justify-items-center">
+      {[
+        { title: '5 agents', copy: '5 Customer support agents in your team can collaborate and manage queries.' },
+        { title: 'LLM usage included', copy: 'Generous GPT token allowance on every tier' },
+        { title: 'Free Virtual Number and Conversations for Whatsapp', copy: '1k+ convos in WA based on plans, so you focus on the customers and let us handle the logisitics on Whatsapp Business side' },
+        { title: '24 x 7 email & chat support', copy: 'All plans get real human help in within SLA.' }
+      ].map((item) => (
+        <li key={item.title} className="space-y-3 text-center">
+          <h3 className="text-xl font-semibold">{item.title}</h3>
+          <p>{item.copy}</p>
+        </li>
+      ))}
+    </ul>
+  </Container>
+</section>
+
 
       {/* ─────────────── Internal links */}
       <section className="py-16 md:py-24">
@@ -218,29 +226,33 @@ export default function AIChatbotPricingPage() {
       </section>
 
       {/* ─────────────── FAQ */}
-      <section id="faq" className="py-20">
+            <section id="faq" className="py-20">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-center mb-10">AI Chatbot Pricing FAQ</h2>
-          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-center mb-10">AI Chatbot Pricing FAQ</h2>
+            <div className="space-y-6">
             <details className="p-4 border rounded-lg">
-              <summary className="font-semibold">Is pay‑per‑message better than pay‑per‑conversation?</summary>
-              <p className="mt-2">For high‑engagement channels like WhatsApp, pay‑per‑conversation (24‑hour window) is cheaper. On web chat, pay‑per‑message can save money if interactions are short.</p>
+                <summary className="font-semibold">How many agents are included in each plan?</summary>
+                <p className="mt-2">Each plan comes with up to 5 agents. You can add more agents as add-ons for ₹500/person or $10/person per month.</p>
             </details>
             <details className="p-4 border rounded-lg">
-              <summary className="font-semibold">What are WhatsApp BSP fees?</summary>
-              <p className="mt-2">Meta charges per conversation; BSPs add a small pass‑through fee for hosting and routing. Rhythmiq bundles BSP fees into a single invoice.</p>
+                <summary className="font-semibold">What happens if I exceed my WhatsApp conversation quota?</summary>
+                <p className="mt-2">Extra conversations are billed at ₹0.75 per conversation (approx. $0.08) for WhatsApp plans.</p>
             </details>
             <details className="p-4 border rounded-lg">
-              <summary className="font-semibold">Do I pay for unused chat volume?</summary>
-              <p className="mt-2">No. Our plans roll over unused conversations for 30 days, so you only pay for what you use.</p>
+                <summary className="font-semibold">Can I roll over unused WhatsApp conversations?</summary>
+                <p className="mt-2">Yes, unused WhatsApp conversations roll over for 30 days. Use them within that period before they expire.</p>
             </details>
             <details className="p-4 border rounded-lg">
-              <summary className="font-semibold">Is there a free tier?</summary>
-              <p className="mt-2">Yes—our Sandbox tier gives you 200 free conversations per month with basic web chat.</p>
+                <summary className="font-semibold">Do I need my own WhatsApp number?</summary>
+                <p className="mt-2">No, Rhythmiq provides and manages your WhatsApp Business API number and other configuration. Just purchase a plan and we'll handle setup and compliance.</p>
             </details>
-          </div>
+            <details className="p-4 border rounded-lg">
+                <summary className="font-semibold">Is there a trial available?</summary>
+                <p className="mt-2">We offer a 7-day free trial on any plan, including full access to web chat and WhatsApp features — no credit card required.</p>
+            </details>
+            </div>
         </div>
-      </section>
+        </section>
 
       {/* ─────────────── CTA */}
       <section className="bg-indigo-600 text-primary-foreground py-20 text-center">

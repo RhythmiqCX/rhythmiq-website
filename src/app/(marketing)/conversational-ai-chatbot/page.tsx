@@ -77,7 +77,7 @@ export default function ConversationalAIChatbotPage() {
         imgAlt="Personalized chatbot responses illustration"
         eyebrow="Dynamic Personalisation"
         headline="Deliver Responses Tailored to Each User"
-        body="Pull in profile data, order history or sentiment signals to craft replies that resonate—and convert—every time."
+        body="Pull in profile data, customer history or sentiment signals to craft replies that resonate—and convert—every time."
         reverse
         />
 
@@ -90,56 +90,119 @@ export default function ConversationalAIChatbotPage() {
         />
 
 
-      {/* ─────────────── Why Conversational AI */}
-      <section className="py-16 md:py-24 bg-muted/10">
-        <Container className="space-y-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Why businesses adopt Conversational AI platforms</h2>
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: 'Natural multi‑turn dialogue', copy: 'LLMs remember context so users can ask follow‑up questions without repeating themselves.' },
-              { title: 'Omni‑channel reach', copy: 'Deploy the same bot on web, mobile, WhatsApp, Instagram and voice IVR.' },
-              { title: 'Continuous learning', copy: 'Improve intent accuracy with every chat via built‑in feedback loops.' },
-              { title: 'Personalised experiences', copy: 'Use CRM and order data to tailor responses and boosts conversions.' },
-              { title: 'Multilingual at scale', copy: 'Serve 60+ languages instantly—no separate training sets required.' },
-              { title: 'Analytics you can act on', copy: 'Spot trending questions, sentiment and drop‑off points in real time.' }
-            ].map((b) => (
-              <div key={b.title} className="space-y-3"><h3 className="text-xl font-semibold">{b.title}</h3><p>{b.copy}</p></div>
-            ))}
-          </div>
-        </Container>
-      </section>
+<section className="py-16 md:py-24 bg-muted/10">
+  <Container className="space-y-12">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+      Why Businesses Choose Rhythmiq Conversational AI
+    </h2>
+    <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto">
+      {[
+        {
+          title: 'Seamless Contextual Chat',
+          copy: 'Our AI retains conversation history so customers can ask follow-ups naturally; no repetition needed.'
+        },
+        {
+          title: 'Unified Web & WhatsApp',
+          copy: 'One platform to manage website chat, WhatsApp support and other channels in a single dashboard.'
+        },
+        {
+          title: 'Instant AI Responses',
+          copy: 'Resolve common queries automatically with your knowledge base—live agents only when needed.'
+        },
+        {
+          title: 'Data-Driven Optimization',
+          copy: 'Track deflection, CSAT, and conversation trends to continuously improve support.'
+        }
+      ].map((b) => (
+        <div key={b.title} className="space-y-3 text-center">
+          <h3 className="text-xl font-semibold">{b.title}</h3>
+          <p>{b.copy}</p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>
 
-      {/* ─────────────── Implementation steps */}
-      <section id="implementation" className="py-16 md:py-24">
-        <Container className="space-y-10 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">Deploy a Conversational AI Chatbot in 6 Steps</h2>
-          <ol className="space-y-8 list-decimal list-inside">
-            <li><h4 className="font-semibold">Define KPIs & success metrics</h4><p>Choose targets like deflection %, CSAT or average order value.</p></li>
-            <li><h4 className="font-semibold">Audit knowledge sources</h4><p>Gather help‑centre articles, existing chat logs and product docs.</p></li>
-            <li><h4 className="font-semibold">Label intents & entities</h4><p>Use our auto‑label tool to speed up training for topics such as billing or tech support.</p></li>
-            <li><h4 className="font-semibold">Choose language model tier</h4><p>Select GPT‑3.5 for basic FAQs or GPT‑4o for advanced reasoning.</p></li>
-            <li><h4 className="font-semibold">Design dialogue flows</h4><p>Drag and drop conversation paths, fallback intents, and live‑agent handoff nodes.</p></li>
-            <li><h4 className="font-semibold">Launch & optimise</h4><p>Monitor analytics, A/B test prompts and iterate weekly.</p></li>
-          </ol>
-        </Container>
-      </section>
+<section id="implementation" className="py-16 md:py-24">
+  <Container className="space-y-10 max-w-4xl mx-auto">
+    <h2 className="text-3xl md:text-4xl font-bold text-center">
+      Roll Out Your Conversational AI Chatbot in 6 Simple Steps
+    </h2>
+    <ol className="space-y-8 list-decimal list-inside">
+      <li>
+        <h4 className="font-semibold">Set Your Goals</h4>
+        <p>
+          Define what success looks like, whether it's reducing tickets, boosting CSAT, or increasing engagement.
+        </p>
+      </li>
+      <li>
+        <h4 className="font-semibold">Gather Your FAQs</h4>
+        <p>
+          Compile your top support articles, past chat transcripts, and product guides for AI training.
+        </p>
+      </li>
+      <li>
+        <h4 className="font-semibold">Map Intents & Responses</h4>
+        <p>
+          Label common customer intents (e.g. billing, shipping, returns) and write fallback templates for handoffs.
+        </p>
+      </li>
+      <li>
+        <h4 className="font-semibold">Pick Your AI Model</h4>
+        <p>
+          Choose a plan with the right performance—GPT-3.5 for essentials or GPT-4o for complex (comes with Omni Plan), nuanced queries.
+        </p>
+      </li>
+      <li>
+        <h4 className="font-semibold">Build & Test Flows</h4>
+        <p>
+          Drag and drop your conversation paths, simulate user queries, and refine until you're ready to go live.
+        </p>
+      </li>
+      <li>
+        <h4 className="font-semibold">Go Live & Monitor</h4>
+        <p>
+          Launch on Web and WhatsApp, then track deflection rates, response time, and customer feedback to iterate.
+        </p>
+      </li>
+    </ol>
+  </Container>
+</section>
 
-      {/* ─────────────── Feature list */}
-      <section className="py-20 bg-muted/5">
-        <Container className="space-y-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">Key conversational‑AI platform features</h2>
-          <ul className="grid gap-8 md:grid-cols-2">
-            {[
-              { title: 'Visual flow builder', copy: 'No‑code canvas to orchestrate complex dialogues.' },
-              { title: 'Real‑time sentiment', copy: 'Detect customer mood and trigger smart escalations.' },
-              { title: 'Voice & text channels', copy: 'Deploy to IVR, smart speakers and chat widgets from one console.' },
-              { title: 'Secure webhooks', copy: 'Integrate CRM, ERP and payment gateways via signed calls.' }
-            ].map((f) => (
-              <li key={f.title} className="space-y-3"><h3 className="text-xl font-semibold">{f.title}</h3><p>{f.copy}</p></li>
-            ))}
-          </ul>
-        </Container>
-      </section>
+
+    <section className="py-20 bg-muted/5">
+      <Container className="space-y-12 container mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center">
+          Core Conversational AI Features
+        </h2>
+        <ul className="grid gap-8 md:grid-cols-2 justify-items-center">
+          {[
+            {
+              title: 'No Code Builder',
+              copy: 'No code canvas for designing conversation flows and agent handoffs.'
+            },
+            {
+              title: 'Contextual Memory',
+              copy: 'Keep track of multi-turn dialogues so customers never have to repeat themselves.'
+            },
+            {
+              title: 'Web + WhatsApp Channels',
+              copy: 'Deploy your bot on both website chat and WhatsApp from a single dashboard.'
+            },
+            {
+              title: 'Analytics & Insights',
+              copy: 'Monitor chat deflection, CSAT, and pinpoint areas to optimize with real data.'
+            }
+          ].map((f) => (
+            <li key={f.title} className="space-y-3 text-center">
+              <h3 className="text-xl font-semibold">{f.title}</h3>
+              <p>{f.copy}</p>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </section>
+
 
       {/* ─────────────── Internal links */}
       <section className="py-16 md:py-24">
@@ -164,9 +227,9 @@ export default function ConversationalAIChatbotPage() {
           <div className="space-y-6">
             {[
               { q: 'Is conversational AI the same as a chatbot?', a: 'A chatbot is one application of conversational AI. Conversational AI includes the NLP engine, LLMs, voice processing and analytics that power the chatbot.' },
-              { q: 'Do I need thousands of training phrases?', a: 'No. Transfer learning lets you start with as few as 15 examples per intent and improve over time.' },
-              { q: 'What languages are supported?', a: 'Over 60 languages including Spanish, Hindi, Arabic and German.' },
-              { q: 'Can I integrate with Zendesk or Salesforce?', a: 'Yes—use secure webhooks or our native connectors to sync tickets, contacts and transcripts.' }
+              { q: 'Do I need a lot of Knowledge Base documents?', a: 'No. Start by explaining what is important, for rest of the parts if they are generic, you can have prompt which tells how to handle certain queries in a generic manner.' },
+              { q: 'What languages are supported?', a: 'Over 60+ languages including Spanish, Hindi, English, Telugu, Bengali, Arabic and German.' },
+              { q: 'Can I integrate with Zendesk or Salesforce?', a: 'Yes, use secure webhooks to sync tickets, contacts and transcripts. Omni Plan users can also prioritize feature requests specific to them.' }
             ].map((faq) => (
               <details key={faq.q} className="p-4 border rounded-lg"><summary className="font-semibold cursor-pointer">{faq.q}</summary><p className="mt-2 text-muted-foreground">{faq.a}</p></details>
             ))}

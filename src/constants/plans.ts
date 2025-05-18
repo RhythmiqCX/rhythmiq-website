@@ -2,12 +2,16 @@ export type PLAN = {
     id: string;
     title: string;
     desc: string;
-    monthlyPrice: number;
-    annuallyPrice: number;
+    monthlyPrice?: number;
+    annuallyPrice?: number;
     badge?: string;
     buttonText: string;
     features: string[];
-    link: string;
+    link?: string;
+    basicPriceINR: number
+    basicPriceUSD: number
+    customPriceINR: number
+    customPriceUSD: number
 };
 
 export const PLANS: PLAN[] = [
@@ -15,8 +19,12 @@ export const PLANS: PLAN[] = [
         id: "standard",
         title: "Standard",
         desc: "Perfect for small teams looking to automate their Customer Service with Chat support.",
-        monthlyPrice: 999,
-        annuallyPrice: 15,
+        monthlyPrice: 0,
+        annuallyPrice: 0,
+        basicPriceINR: 100,
+        basicPriceUSD: 100,
+        customPriceINR: 100,
+        customPriceUSD: 100,
         buttonText: "Choose Standard",
         features: [
             "AI content (1,000 words/mo)",
@@ -35,6 +43,10 @@ export const PLANS: PLAN[] = [
         desc: "Ideal for growing businesses who need advanced AI capabilities and integrations to scale their Support.",
         monthlyPrice: 79,
         annuallyPrice: 834,
+        basicPriceINR: 100,
+        basicPriceUSD: 100,
+        customPriceINR: 100,
+        customPriceUSD: 100,
         badge: "Most Popular",
         buttonText: "Choose Custom",
         features: [

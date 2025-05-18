@@ -12,9 +12,9 @@ updated: 2025-05-16
 
 # AI Chatbot Pricing Guide
 https://rhythmiqcx.com/ai-chatbot-pricing/
-summary: 2025 pricing breakdown for AI chatbots—licence fees, WhatsApp BSP charges, per-conversation costs and total ownership tips.
+summary: 2025 pricing breakdown for Rhythmiq AI chatbot - licence fees, WhatsApp BSP charges and total ownership tips.
 tags: ai chatbot pricing, conversation cost, whatsapp bsp, chatbot cost calculator
-updated: 2025-05-16
+updated: 2025-05-18
 
 # Conversational AI Chatbot Guide
 https://rhythmiqcx.com/conversational-ai-chatbot/

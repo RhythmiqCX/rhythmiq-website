@@ -105,10 +105,10 @@ export default function AICustomerSupportPage() {
           </div>
           <div className="space-y-3">
             <h3 className="text-xl font-semibold">
-              <span className="emoji">💰</span> 50 % Support Cost Savings
+              <span className="emoji">💰</span> 50 % Support Cost Savings
             </h3>
             <p>
-              Reduce live‑agent workload and reinvest savings into growth while
+              Reduce live agent workload and reinvest savings into growth while
               still offering human quality support.
             </p>
           </div>
@@ -118,7 +118,7 @@ export default function AICustomerSupportPage() {
       <section className="py-12 md:py-16">
         <Container>
           <p className="mx-auto max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
-            <strong>AI customer support</strong> is the use of conversational AI—large language model chatbots, intent detection and automated workflows—to resolve customer questions without a human agent. It hooks into your existing help desk, knowledge base and channels so customers get instant, accurate answers 24 hours a day.
+            <strong>AI customer support</strong> is the use of conversational AI — large language model chatbots, intent detection and automated workflows to resolve customer questions without a human agent. It hooks into your existing help desk, knowledge base and channels so customers get instant, accurate answers 24 hours a day.
           </p>
         </Container>
       </section>
@@ -141,11 +141,11 @@ export default function AICustomerSupportPage() {
             </li>
             <li className="space-y-2">
               <h3 className="text-xl font-semibold">
-                WhatsApp Business & Social Channels
+                WhatsApp Business
               </h3>
               <p>
-                Handle WhatsApp, Facebook Messenger, and Instagram DMs from one
-                AI console—perfect for mobile first markets such as India.
+                Handle customer queries on Whatsapp directly from your integrated Inbox
+                perfect for mobile as well as web users.
               </p>
             </li>
             <li className="space-y-2">
@@ -196,33 +196,47 @@ export default function AICustomerSupportPage() {
         />
 
 
-      <section id="implementation" className="py-16 md:py-24 bg-muted/5">
-        <Container className="space-y-10 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">How to Automate Customer Support in 5 Steps</h2>
-          <ol className="space-y-8 list-decimal list-inside">
-            <li>
-              <h4 className="font-semibold">Audit your ticket data</h4>
-              <p>Export the last 3 to 6 months from Zendesk, Intercom or Freshdesk. Tag repeat questions—these are the first flows to automate.</p>
-            </li>
-            <li>
-              <h4 className="font-semibold">Sync your knowledge base</h4>
-              <p>Connect help‑centre articles, FAQs and policy docs so the LLM replies with approved content.</p>
-            </li>
-            <li>
-              <h4 className="font-semibold">Train intents & fallbacks</h4>
-              <p>Label 15–20 core intents (shipping, refunds, account login…) and set a confidence threshold for live‑agent hand‑off.</p>
-            </li>
-            <li>
-              <h4 className="font-semibold">Launch on web chat first</h4>
-              <p>Prove deflection on your site, then roll out to WhatsApp Business API and social DMs.</p>
-            </li>
-            <li>
-              <h4 className="font-semibold">Measure & iterate weekly</h4>
-              <p>Track deflection %, CSAT and first‑response time. Fine‑tune prompts and add new intents every sprint.</p>
-            </li>
-          </ol>
-        </Container>
-      </section>
+
+    <section id="implementation" className="py-16 md:py-24 bg-muted/5">
+      <Container className="space-y-10 max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center">
+          How to Get Started with Rhythmiq in 5 Steps
+        </h2>
+        <ol className="space-y-8 list-decimal list-inside">
+          <li>
+            <h4 className="font-semibold">Select Your Plan & Add Agents</h4>
+            <p>
+              Choose the Web, WhatsApp, or Omni plan and invite up to 5 agents. Need more seats? You can add them anytime as add‑ons.
+            </p>
+          </li>
+          <li>
+            <h4 className="font-semibold">Connect Your Channels</h4>
+            <p>
+              Embed our web chat widget on your site and link your WhatsApp Business number. We handle BSP setup and template approval for you.
+            </p>
+          </li>
+          <li>
+            <h4 className="font-semibold">Upload Your Knowledge Base</h4>
+            <p>
+              Sync FAQs, help‑centre articles, and policy docs so our AI replies with accurate, brand‑approved answers.
+            </p>
+          </li>
+          <li>
+            <h4 className="font-semibold">Configure AI Intents & Fallbacks</h4>
+            <p>
+              Label your key topics (e.g. orders, returns, account issues) and set confidence thresholds. Low‑confidence chats automatically go to live agents.
+            </p>
+          </li>
+          <li>
+            <h4 className="font-semibold">Monitor & Optimize Monthly</h4>
+            <p>
+              Track chat deflection, CSAT, and conversation volume. Adjust prompts, expand KB, or increase quotas to continuously improve support.
+            </p>
+          </li>
+        </ol>
+      </Container>
+    </section>
+
 
       <section className="py-16 md:py-24">
         <Container className="grid gap-10 md:grid-cols-3 text-center">
