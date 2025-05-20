@@ -334,12 +334,12 @@ export default function ConversationalAIVsTraditionalChatbotsPage() {
           </div>
           {/* TODO: replace with dynamic component once you fetch related posts */}
           <div className="grid gap-12 md:grid-cols-3">
-              <RelatedCard
-              title="Response Time: Vol. 45"
-              href="/blog/response-time-vol-045"
-              imageSrc="/images/blog/good-cx.jpeg"
-              date="May 19, 2025"
-              description="How to optimize customer response metrics for better satisfaction."
+            <RelatedCard
+              title="AI Chatbot Pricing: How Much Should You Really Budget in 2025?"
+              href="/blog/ai-chatbot-pricing-how-much-should-you-really-budget"
+              imageSrc="/images/blog/chatbot-pricing.jpeg"
+              date="May 20, 2025"
+              description="Explore subscription-based, usage-based pricing models."
             />
             <RelatedCard
               title="Introducing MCP: Connect Fin & your data"
