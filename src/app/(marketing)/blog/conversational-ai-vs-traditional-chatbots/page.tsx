@@ -312,8 +312,8 @@ export default function ConversationalAIVsTraditionalChatbotsPage() {
 
                 <h3 className="mt-8 text-lg font-semibold [&_a]:text-indigo-600">
                     Ready to elevate your customer conversations with AI ? <br/>
-                    <a href="/signup" className="hover:underline">
-                      Try Rhythmiq’s AI Chatbot platform
+                    <a href="/#waitlist" className="hover:underline">
+                      Try Rhythmiq's AI Chatbot platform
                     </a>{' '}
                     today and see how seamless, personalized support can drive satisfaction and loyalty - free, no credit card required.
                 </h3>
