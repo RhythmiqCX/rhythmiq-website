@@ -34,7 +34,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <Link href="#waitlist" className="hidden lg:block">
+                        <Link href="/#waitlist" className="hidden lg:block">
                             <Button variant="default">
                                 Get Started
                             </Button>
