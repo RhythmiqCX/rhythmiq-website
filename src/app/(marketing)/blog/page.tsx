@@ -56,18 +56,18 @@ export default async function BlogListingPage() {
   return (
     <main className="flex flex-col">
     {/* Hero */}
-    <section className="py-20 bg-gradient-to-b from-indigo-600/20 to-background text-center">
+    <section className="py-20 bg-gradient-to-b from-indigo-600/20 to-background text-center px-4">
       <Container className="space-y-4">
         <h1 className="text-5xl font-bold">The Rhythmiq Blog</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Thoughts on conversational AI, CX automation, and customer experience.
+          Thoughts on Conversational AI, CX automation, and Customer experience.
         </p>
       </Container>
     </section>
   
     {/* Every post displayed as “featured” */}
     {posts.map((post) => (
-      <section key={post.slug} className="py-16">
+      <section key={post.slug} className="py-16 px-4">
         <Container className="mx-auto max-w-5xl grid md:grid-cols-2 gap-8 items-center">
           <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
             <Image

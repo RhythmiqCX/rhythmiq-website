@@ -1,10 +1,5 @@
-import Image from 'next/image';
-import Container from '@/components/global/container';
-import Link from 'next/link';
+import BlogLayout from '@/components/marketing/BlogLayout';
 
-// ──────────────────────────────────────────────────────────────────────────────
-// ⌘ Metadata (for SEO / social cards)
-// ──────────────────────────────────────────────────────────────────────────────
 export const metadata = {
   title: "Conversational AI vs. Traditional Chatbots: What's the Real Difference? - Rhythmiq Blog",
   description:
@@ -17,108 +12,36 @@ export const metadata = {
   },
 };
 
-
-// ──────────────────────────────────────────────────────────────────────────────
-// ⌘ Static article data (could be CMS- or MDX-driven later)
-// ──────────────────────────────────────────────────────────────────────────────
 const SECTIONS = [
-  {
-    id: 'understanding-traditional-chatbots',
-    label: 'Understanding Traditional Chatbots',
-  },
-  {
-    id: 'enter-conversational-ai',
-    label: 'Enter Conversational AI',
-  },
-  {
-    id: 'key-differences-at-a-glance',
-    label: 'Key Differences at a Glance',
-  },
-  {
-    id: 'impact-on-customer-experience',
-    label: 'Impact on Customer Experience',
-  },
-  {
-    id: 'which-is-right-for-your-business?',
-    label: 'Which is Right for Your Business?',
-  },
-  {
-    id: 'future-proofing-your-customer-engagement',
-    label: 'Future-proofing Your Customer Engagement',
-  },
+  { id: 'understanding-traditional-chatbots', label: 'Understanding Traditional Chatbots' },
+  { id: 'enter-conversational-ai', label: 'Enter Conversational AI' },
+  { id: 'key-differences-at-a-glance', label: 'Key Differences at a Glance' },
+  { id: 'impact-on-customer-experience', label: 'Impact on Customer Experience' },
+  { id: 'which-is-right-for-your-business?', label: 'Which is Right for Your Business?' },
+  { id: 'future-proofing-your-customer-engagement', label: 'Future-proofing Your Customer Engagement' },
+];
+
+const RELATED = [
+  { title: 'AI Chatbot Pricing: How Much Should You Really Budget in 2025?', href: '/blog/ai-chatbot-pricing-how-much-should-you-really-budget', imageSrc: '/images/blog/chatbot-pricing.jpeg', date: 'May 20, 2025', description: 'Explore subscription-based, usage-based pricing models.' },
+  { title: 'Introducing MCP: Connect Fin & your data', href: '/blog/introducing-model-context-protocol-fin', imageSrc: '/images/blog/mcp.png', date: 'May 1, 2025', description: 'Discover how MCP bridges your customer data with vital business tools.' },
+  { title: 'Building trust through responsible AI', href: '/blog/intercom-achieves-iso-42001-certification', imageSrc: '/images/blog/iso-cert.png', date: 'Apr 29, 2025', description: 'How our ISO/IEC 42001 certification ensures ethical AI practices.' },
 ];
 
 export default function ConversationalAIVsTraditionalChatbotsPage() {
   return (
-    <main className="flex flex-col">
-      {/* ╻──────────────────────────────── Hero / header */}
-      <section className="py-20 bg-gradient-to-b from-indigo-600/20 to-background text-center">
-        <Container className="max-w-4xl mx-auto space-y-6">
-          {/* Category + Date */}
-          <div className="flex justify-center items-center gap-4 text-sm text-indigo-400">
-            <Link
-              href="/blog/category/customer-service"
-              className="uppercase tracking-wide font-medium hover:text-indigo-600"
-            >
-              Customer Service
-            </Link>
-            <span className="text-muted-foreground hidden sm:inline">·</span>
-            <time
-              dateTime="2024-07-10"
-              className="text-muted-foreground hidden sm:inline"
-            >
-              May 20 2025
-            </time>
-          </div>
-
-          {/* Title & excerpt */}
-          <h1 className="text-4xl/tight md:text-5xl font-bold">
-            Conversational AI vs. Traditional Chatbots: What's the Real Difference?
-          </h1>
-          <p className="text-lg text-muted-foreground mx-auto max-w-prose">
-            Explore the crucial differences between rule-based chatbots and AI-powered conversational assistants—and learn which is right for your business.
-          </p>
-
-          {/* Author(s) & reading time */}
-          <div className="flex flex-wrap justify-center items-center gap-4 text-indigo-400">
-            <Author avatar="/icons/icon.png" name="Ray" />
-            {/* <Author avatar="/images/authors/bobby.jpg" name="Bobby Stapleton" /> */}
-            <ReadingTime minutes={7} />
-          </div>
-
-          {/* Hero image */}
-          <div className="relative w-full h-72 md:h-[420px] rounded-2xl overflow-hidden">
-            <Image
-              src="/images/blog/conversational-ai-vs-traditional.jpeg" // TODO replace
-              alt="Conversational AI vs Traditional Chatbots"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </Container>
-      </section>
-
-      {/* ╻──────────────────────────────── Content + sidebar */}
-      <section className="flex flex-row py-12 pl-12">
-      <aside className="hidden lg:block">
-            <nav className="sticky top-28">
-              <h2 className="font-semibold mb-4">Contents</h2>
-              <ul className="space-y-2 text-sm">
-                {SECTIONS.map((s) => (
-                  <li key={s.id}>
-                    <a href={`#${s.id}`} className="hover:text-indigo-600">
-                      {s.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-      </aside>
-      
-        <Container className="mx-auto max-w-4xl">
-          {/* ── Main article */}
-              <article className="prose prose-lg lg:prose-xl dark:prose-invert [&_*]:text-gray-300">
-                <h1>If you've ever interacted with customer support online, you've likely met a chatbot. Some feel robotic, answering only exact keywords, while others seem remarkably human. The secret? Conversational AI.</h1>
+    <BlogLayout
+      category={{ href: '/blog/category/customer-service', label: 'Customer Service' }}
+      date="2025-05-20"
+      title="Conversational AI vs. Traditional Chatbots: What's the Real Difference?"
+      excerpt="Explore the crucial differences between rule-based chatbots and AI-powered conversational assistants—and learn which is right for your business."
+      authors={[{ avatar: '/icons/icon.png', name: 'Ray' }]}
+      readingTime={8}
+      heroImage={{ src: '/images/blog/conversational-ai-vs-traditional.jpeg', alt: 'Conversational AI vs Traditional Chatbots' }}
+      sections={SECTIONS}
+      relatedArticles={RELATED}
+    >
+      {/* ── Main article */}
+      <h1>If you've ever interacted with customer support online, you've likely met a chatbot. Some feel robotic, answering only exact keywords, while others seem remarkably human. The secret? Conversational AI.</h1>
 
                 <p>
                   When businesses first began integrating chatbots into their customer service strategy, it was a significant breakthrough. Traditional chatbots, primarily rule-based, helped companies manage customer queries around the clock without needing constant human intervention. Fast forward to today, and conversational AI has taken center stage, drastically altering the landscape of customer engagement. But what's the real difference between traditional chatbots and conversational AI? And, importantly, which one is right for your business?
@@ -317,119 +240,6 @@ export default function ConversationalAIVsTraditionalChatbotsPage() {
                     </a>{' '}
                     today and see how seamless, personalized support can drive satisfaction and loyalty - free, no credit card required.
                 </h3>
-
-
-        </article>
-        </Container>
-      </section>
-
-      {/* ╻──────────────────────────────── Related articles */}
-      <section className="py-16 bg-gradient-to-b from-background to-indigo-600/10">
-        <Container className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-semibold">Related articles</h2>
-            <Link href="/blog" className="text-indigo-400 hover:text-indigo-600">
-              Browse all →
-            </Link>
-          </div>
-          {/* TODO: replace with dynamic component once you fetch related posts */}
-          <div className="grid gap-12 md:grid-cols-3">
-            <RelatedCard
-              title="AI Chatbot Pricing: How Much Should You Really Budget in 2025?"
-              href="/blog/ai-chatbot-pricing-how-much-should-you-really-budget"
-              imageSrc="/images/blog/chatbot-pricing.jpeg"
-              date="May 20, 2025"
-              description="Explore subscription-based, usage-based pricing models."
-            />
-            <RelatedCard
-              title="Introducing MCP: Connect Fin & your data"
-              href="/blog/introducing-model-context-protocol-fin"
-              imageSrc="/images/blog/mcp.png"
-              date="May 1, 2025"
-              description="Discover how MCP bridges your customer data with vital business tools."
-            />
-            <RelatedCard
-              title="Building trust through responsible AI"
-              href="/blog/intercom-achieves-iso-42001-certification"
-              imageSrc="/images/blog/iso-cert.png"
-              date="Apr 29, 2025"
-              description="How our ISO/IEC 42001 certification ensures ethical AI practices."
-            />
-          </div>
-        </Container>
-      </section>
-    </main>
+    </BlogLayout>
   );
-}
-
-// ╻─────────────────────────────────────────────────────────────────────────────
-// ♢ Inline helpers
-// ╻─────────────────────────────────────────────────────────────────────────────
-function Author({ avatar, name }: { avatar: string; name: string }) {
-  return (
-    <div className="flex items-center gap-2 text-sm text-muted-foreground ">
-      <Image src={avatar} alt={name} width={28} height={28} className="rounded-full" />
-      <span>{name}</span>
-    </div>
-  );
-}
-
-function ReadingTime({ minutes }: { minutes: number }) {
-  return (
-    <span className="flex items-center gap-1 text-sm text-muted-foreground">
-      {/* small bookmark icon */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        width="18"
-        height="18"
-        aria-hidden="true"
-      >
-        <path
-          fill="currentColor"
-          d="M18.462 0H5.539A1.846 1.846 0 0 0 3.692 1.846V6a1.85 1.85 0 0 0 .739 1.477L10.462 12l-6.031 4.523A1.85 1.85 0 0 0 3.692 18v4.154A1.846 1.846 0 0 0 5.54 24h12.923a1.846 1.846 0 0 0 1.846-1.846V18.04a1.86 1.86 0 0 0-.733-1.473L13.531 12l6.044-4.57a1.85 1.85 0 0 0 .733-1.472V1.846A1.846 1.846 0 0 0 18.462 0Z"
-        />
-      </svg>
-      {minutes} min
-    </span>
-  );
-}
-
-function RelatedCard({
-  title,
-  href,
-  imageSrc,
-  date,
-  description,
-}: {
-  title: string
-  href: string
-  imageSrc: string
-  date: string
-  description: string
-}) {
-  return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-      <Link href={href}>
-        <Image
-          src={imageSrc}
-          alt={title}
-          width={320}
-          height={149}
-          className="w-full h-44 object-cover"
-        />
-      </Link>
-      <div className="p-4">
-        <p className="text-xs text-muted-foreground">Published {date}</p>
-        <h3 className="text-lg font-semibold leading-snug">
-          <Link href={href} className="hover:text-indigo-400">
-            {title}
-          </Link>
-        </h3>
-        <p className="text-sm text-muted-foreground line-clamp-2">
-          {description}
-        </p>
-      </div>
-    </div>
-  )
 }

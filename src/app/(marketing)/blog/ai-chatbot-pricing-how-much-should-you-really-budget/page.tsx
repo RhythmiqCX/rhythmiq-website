@@ -1,10 +1,5 @@
-import Image from 'next/image';
-import Container from '@/components/global/container';
-import Link from 'next/link';
+import BlogLayout from '@/components/marketing/BlogLayout';
 
-// ──────────────────────────────────────────────────────────────────────────────
-// ⌘ Metadata (for SEO / social cards)
-// ──────────────────────────────────────────────────────────────────────────────
 export const metadata = {
   title: "AI Chatbot Pricing: How Much Should You Really Budget in 2025? - Rhythmiq Blog",
   description:
@@ -17,10 +12,7 @@ export const metadata = {
   },
 };
 
-// ──────────────────────────────────────────────────────────────────────────────
-// ⌘ Static article data (could be CMS- or MDX-driven later)
-// ──────────────────────────────────────────────────────────────────────────────
-const SECTIONS = [
+const PRICING_SECTIONS = [
   { id: 'understanding-pricing-structure', label: 'Understanding the Pricing Structure of AI Chatbots' },
   { id: 'subscription-pricing', label: 'Subscription-Based Pricing' },
   { id: 'usage-pricing', label: 'Usage-Based Pricing' },
@@ -32,76 +24,26 @@ const SECTIONS = [
   { id: 'choosing-chatbot', label: 'Choosing the Right Chatbot for Your Business' },
 ];
 
+const PRICING_RELATED = [
+  { title: "Conversational AI vs. Traditional Chatbots: What's the Real Difference?", href: '/blog/conversational-ai-vs-traditional-chatbots', imageSrc: '/images/blog/conversational-ai-vs-traditional.jpeg', date: 'May 20, 2025', description: 'Explore the crucial differences between rule-based chatbots and AI-powered conversational assistants—and learn which is right for your business.' },
+  { title: 'Introducing MCP: Connect Fin & your data', href: '/blog/introducing-model-context-protocol-fin', imageSrc: '/images/blog/mcp.png', date: 'May 1, 2025', description: 'Discover how MCP bridges your customer data with vital business tools.' },
+  { title: 'Building trust through responsible AI', href: '/blog/intercom-achieves-iso-42001-certification', imageSrc: '/images/blog/iso-cert.png', date: 'Apr 29, 2025', description: 'How our ISO/IEC 42001 certification ensures ethical AI practices.' },
+];
+
 export default function AIChatbotPricingPage() {
   return (
-    <main className="flex flex-col">
-      {/* ╻──────────────────────────────── Hero / header */}
-      <section className="py-20 bg-gradient-to-b from-indigo-600/20 to-background text-center">
-        <Container className="max-w-4xl mx-auto space-y-6">
-          {/* Category + Date */}
-          <div className="flex justify-center items-center gap-4 text-sm text-indigo-400">
-            <Link
-              href="/blog/category/customer-service"
-              className="uppercase tracking-wide font-medium hover:text-indigo-600"
-            >
-              Customer Service
-            </Link>
-            <span className="text-muted-foreground hidden sm:inline">·</span>
-            <time
-              dateTime="2025-05-20"
-              className="text-muted-foreground hidden sm:inline"
-            >
-              May 20 2025
-            </time>
-          </div>
-
-          {/* Title & excerpt */}
-          <h1 className="text-4xl/tight md:text-5xl font-bold">
-            AI Chatbot Pricing: How Much Should You Really Budget in 2025?
-          </h1>
-          <p className="text-lg text-muted-foreground mx-auto max-w-prose">
-            In today’s rapidly digitizing market, AI chatbots have evolved from being a luxury to an essential component of customer interaction strategies. But as businesses look to integrate these tools, how much does an AI chatbot really cost?
-          </p>
-
-          {/* Author(s) & reading time */}
-          <div className="flex flex-wrap justify-center items-center gap-4 text-indigo-400">
-            <Author avatar="/icons/icon.png" name="Ray" />
-            <ReadingTime minutes={8} />
-          </div>
-
-          {/* Hero image */}
-          <div className="relative w-full h-72 md:h-[420px] rounded-2xl overflow-hidden">
-            <Image
-              src="/images/blog/chatbot-pricing.jpeg"
-              alt="AI Chatbot Pricing 2025"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </Container>
-      </section>
-
-      {/* ╻──────────────────────────────── Content + sidebar */}
-      <section className="flex flex-row py-12 pl-12">
-        <aside className="hidden lg:block">
-          <nav className="sticky top-28">
-            <h2 className="font-semibold mb-4">Contents</h2>
-            <ul className="space-y-2 text-sm">
-              {SECTIONS.map((s) => (
-                <li key={s.id}>
-                  <a href={`#${s.id}`} className="hover:text-indigo-600">
-                    {s.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </aside>
-
-        <Container className="mx-auto max-w-4xl">
-          {/* ── Main article */}
-          <article className="prose prose-lg lg:prose-xl dark:prose-invert [&_*]:text-gray-300">
-            <h1>In today's rapidly digitizing market, AI chatbots have evolved from being merely a luxury to an essential component of customer interaction strategies.</h1>
+    <BlogLayout
+      category={{ href: '/blog/category/customer-service', label: 'Customer Service' }}
+      date="2025-05-20"
+      title="AI Chatbot Pricing: How Much Should You Really Budget in 2025?"
+      excerpt="In today's rapidly digitizing market, AI chatbots have evolved from being a luxury to an essential component of customer interaction strategies. But as businesses look to integrate these tools, how much does an AI chatbot really cost?"
+      authors={[{ avatar: '/icons/icon.png', name: 'Ray' }]}
+      readingTime={8}
+      heroImage={{ src: '/images/blog/chatbot-pricing.jpeg', alt: 'AI Chatbot Pricing 2025' }}
+      sections={PRICING_SECTIONS}
+      relatedArticles={PRICING_RELATED}
+    >
+      <h1>In today's rapidly digitizing market, AI chatbots have evolved from being merely a luxury to an essential component of customer interaction strategies.</h1>
             <p>But as businesses look to integrate these advanced tools, a common question emerges: How much does an AI chatbot really cost?</p>
             <p>Whether you're exploring free chatbot options, assessing popular platforms like Intercom or ada, or examining premium solutions, this comprehensive guide will help you understand how much you should budget in 2025.</p>
 
@@ -125,7 +67,7 @@ export default function AIChatbotPricingPage() {
               Usage-Based Pricing: Pay for What You Use
             </h2>
             <p>In contrast to fixed subscriptions, usage-based pricing scales with your actual chatbot interactions. Platforms like Azure Bot Service often follow this structure, allowing businesses to pay only for the processing power and storage they consume.</p>
-            <p>Here’s a realistic breakdown:</p>
+            <p>Here's a realistic breakdown:</p>
             <table>
               <thead>
                 <tr>
@@ -243,117 +185,6 @@ export default function AIChatbotPricingPage() {
                 Try it out today →
               </a>
             </h3>
-
-          </article>
-        </Container>
-      </section>
-
-      {/* ╻──────────────────────────────── Related articles */}
-      <section className="py-16 bg-gradient-to-b from-background to-indigo-600/10">
-        <Container className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-semibold">Related articles</h2>
-            <Link href="/blog" className="text-indigo-400 hover:text-indigo-600">
-              Browse all →
-            </Link>
-          </div>
-          {/* TODO: replace with dynamic component once you fetch related posts */}
-          <div className="grid gap-12 md:grid-cols-3">
-          <RelatedCard
-              title="Conversational AI vs. Traditional Chatbots: What's the Real Difference?"
-              href="/blog/conversational-ai-vs-traditional-chatbots"
-              imageSrc="/images/blog/conversational-ai-vs-traditional.jpeg"
-              date="May 20, 2025"
-              description="Explore the crucial differences between rule-based chatbots and AI-powered conversational assistants—and learn which is right for your business."
-            />
-            <RelatedCard
-              title="Introducing MCP: Connect Fin & your data"
-              href="/blog/introducing-model-context-protocol-fin"
-              imageSrc="/images/blog/mcp.png"
-              date="May 1, 2025"
-              description="Discover how MCP bridges your customer data with vital business tools."
-            />
-            <RelatedCard
-              title="Building trust through responsible AI"
-              href="/blog/intercom-achieves-iso-42001-certification"
-              imageSrc="/images/blog/iso-cert.png"
-              date="Apr 29, 2025"
-              description="How our ISO/IEC 42001 certification ensures ethical AI practices."
-            />
-          </div>
-        </Container>
-      </section>
-    </main>
-  );
-}
-
-// ╻─────────────────────────────────────────────────────────────────────────────
-// ♢ Inline helpers
-// ╻─────────────────────────────────────────────────────────────────────────────
-function Author({ avatar, name }: { avatar: string; name: string }) {
-  return (
-    <div className="flex items-center gap-2 text-sm text-muted-foreground ">
-      <Image src={avatar} alt={name} width={28} height={28} className="rounded-full" />
-      <span>{name}</span>
-    </div>
-  );
-}
-
-function ReadingTime({ minutes }: { minutes: number }) {
-  return (
-    <span className="flex items-center gap-1 text-sm text-muted-foreground">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        width="18"
-        height="18"
-        aria-hidden="true"
-      >
-        <path
-          fill="currentColor"
-          d="M18.462 0H5.539A1.846 1.846 0 0 0 3.692 1.846V6a1.85 1.85 0 0 0 .739 1.477L10.462 12l-6.031 4.523A1.85 1.85 0 0 0 3.692 18v4.154A1.846 1.846 0 0 0 5.54 24h12.923a1.846 1.846 0 0 0 1.846-1.846V18.04a1.86 1.86 0 0 0-.733-1.473L13.531 12l6.044-4.57a1.85 1.85 0 0 0 .733-1.472V1.846A1.846 1.846 0 0 0 18.462 0Z"
-        />
-      </svg>
-      {minutes} min
-    </span>
-  );
-}
-
-function RelatedCard({
-  title,
-  href,
-  imageSrc,
-  date,
-  description,
-}: {
-  title: string;
-  href: string;
-  imageSrc: string;
-  date: string;
-  description: string;
-}) {
-  return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-      <Link href={href}>
-        <Image
-          src={imageSrc}
-          alt={title}
-          width={320}
-          height={149}
-          className="w-full h-44 object-cover"
-        />
-      </Link>
-      <div className="p-4">
-        <p className="text-xs text-muted-foreground">Published {date}</p>
-        <h3 className="text-lg font-semibold leading-snug">
-          <Link href={href} className="hover:text-indigo-400">
-            {title}
-          </Link>
-        </h3>
-        <p className="text-sm text-muted-foreground line-clamp-2">
-          {description}
-        </p>
-      </div>
-    </div>
+    </BlogLayout>
   );
 }
