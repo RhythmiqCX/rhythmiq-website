@@ -23,7 +23,7 @@ const SECTIONS = [
 
 const RELATED = [
   { title: 'AI Chatbot Pricing: How Much Should You Really Budget in 2025?', href: '/blog/ai-chatbot-pricing-how-much-should-you-really-budget', imageSrc: '/images/blog/chatbot-pricing.jpeg', date: 'May 20, 2025', description: 'Explore subscription-based, usage-based pricing models.' },
-  { title: 'Introducing MCP: Connect Fin & your data', href: '/blog/introducing-model-context-protocol-fin', imageSrc: '/images/blog/mcp.png', date: 'May 1, 2025', description: 'Discover how MCP bridges your customer data with vital business tools.' },
+  { title: 'Customer-Service AI: 7 Automation Workflows That Save 30+ Hours/Week', href: '/blog/customer-service-ai-workflows', imageSrc: '/images/blog/customer-service-ai-workflows.jpeg', date: 'May 21, 2025', description: 'Discover seven AI-driven workflows to automate your customer service and save your team over 30 hours weekly.'},
   { title: 'Building trust through responsible AI', href: '/blog/intercom-achieves-iso-42001-certification', imageSrc: '/images/blog/iso-cert.png', date: 'Apr 29, 2025', description: 'How our ISO/IEC 42001 certification ensures ethical AI practices.' },
 ];
 
