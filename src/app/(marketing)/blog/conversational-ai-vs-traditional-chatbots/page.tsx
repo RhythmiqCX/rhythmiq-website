@@ -24,7 +24,7 @@ const SECTIONS = [
 const RELATED = [
   { title: 'AI Chatbot Pricing: How Much Should You Really Budget in 2025?', href: '/blog/ai-chatbot-pricing-how-much-should-you-really-budget', imageSrc: '/images/blog/chatbot-pricing.jpeg', date: 'May 20, 2025', description: 'Explore subscription-based, usage-based pricing models.' },
   { title: 'Customer-Service AI: 7 Automation Workflows That Save 30+ Hours/Week', href: '/blog/customer-service-ai-workflows', imageSrc: '/images/blog/customer-service-ai-workflows.jpeg', date: 'May 21, 2025', description: 'Discover seven AI-driven workflows to automate your customer service and save your team over 30 hours weekly.'},
-  { title: 'Calculating ROI on Your AI Chatbot in 4 Simple Steps (Free Spreadsheet)', href: '/blog/calculating-roi-on-your-ai-chatbot', imageSrc: '/images/blog/ai-chatbot-roi.jpeg', date: 'May 22, 2025', description: 'Quickly estimate your AI chatbot’s cost savings and ROI using our easy four-step guide and free spreadsheet template.'}
+  { title: 'Calculating ROI on Your AI Chatbot in 4 Simple Steps', href: '/blog/calculating-roi-on-your-ai-chatbot', imageSrc: '/images/blog/ai-chatbot-roi.jpeg', date: 'May 22, 2025', description: 'Quickly estimate your AI chatbot’s cost savings and ROI using our easy four-step guide.'}
   ];
 
 export default function ConversationalAIVsTraditionalChatbotsPage() {

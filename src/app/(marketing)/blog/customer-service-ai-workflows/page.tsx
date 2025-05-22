@@ -40,11 +40,11 @@ const RELATED = [
     description: 'Explore the crucial differences between rule-based chatbots and AI-powered conversational assistants.',
   },
   {
-    title: 'Calculating ROI on Your AI Chatbot in 4 Simple Steps (Free Spreadsheet)',
+    title: 'Calculating ROI on Your AI Chatbot in 4 Simple Steps',
     href: '/blog/calculating-roi-on-your-ai-chatbot',
     imageSrc: '/images/blog/ai-chatbot-roi.jpeg',
     date: 'May 22, 2025',
-    description: 'Quickly estimate your AI chatbot’s cost savings and ROI using our easy four-step guide and free spreadsheet template.'
+    description: 'Quickly estimate your AI chatbot’s cost savings and ROI using our easy four-step guide.'
   }
   
 ];

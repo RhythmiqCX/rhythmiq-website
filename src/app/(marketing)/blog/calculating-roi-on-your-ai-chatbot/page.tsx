@@ -2,9 +2,9 @@
 import BlogLayout from '@/components/marketing/BlogLayout';
 
 export const metadata = {
-  title: "Calculating ROI on Your AI Chatbot in 4 Simple Steps (Free Spreadsheet) - Rhythmiq Blog",
+  title: "Calculating ROI on Your AI Chatbot in 4 Simple Steps - Rhythmiq Blog",
   description:
-    "Quickly estimate your AI chatbot's cost savings and ROI using our easy four-step guide and free spreadsheet template.",
+    "Quickly estimate your AI chatbot's cost savings and ROI using our easy four-step guide.",
   openGraph: {
     images: ['/images/blog/ai-chatbot-roi.jpeg'],
     type: 'article',
@@ -18,7 +18,6 @@ const SECTIONS = [
   { id: 'estimate-work-handled-by-chatbot', label: 'Estimate Work Handled by Your Chatbot' },
   { id: 'calculate-direct-cost-savings', label: 'Calculate Direct Cost Savings' },
   { id: 'factor-in-chatbot-costs-and-calculate-roi', label: 'Factor in Chatbot Costs and Calculate ROI' },
-  { id: 'bonus-download-roi-spreadsheet', label: 'Bonus: Download ROI Spreadsheet' },
   { id: 'beyond-roi-intangible-benefits', label: 'Beyond ROI: Intangible Benefits' },
   { id: 'wrapping-it-up', label: 'Wrapping It Up' }
 ];
@@ -52,8 +51,8 @@ export default function CalculatingRoiChatbotPage() {
     <BlogLayout
       category={{ href: '/blog/category/ai-chatbot-pricing', label: 'Pricing' }}
       date="2025-05-22"
-      title="Calculating ROI on Your AI Chatbot in 4 Simple Steps (Free Spreadsheet)"
-      excerpt="Quickly estimate your AI chatbot's cost savings and ROI using our easy four-step guide and free spreadsheet template."
+      title="Calculating ROI on Your AI Chatbot in 4 Simple Steps"
+      excerpt="Quickly estimate your AI chatbot's cost savings and ROI using our easy four-step guide."
       authors={[{ avatar: '/icons/icon.png', name: 'Ray' }]}
       readingTime={8}
       heroImage={{ src: '/images/blog/ai-chatbot-roi.jpeg', alt: 'Calculating AI chatbot ROI' }}
@@ -62,7 +61,7 @@ export default function CalculatingRoiChatbotPage() {
     >
       <h1>You've probably heard that AI chatbots are great tools to automate customer support and increase satisfaction. But before you dive in, you're likely asking the key question: how much value - real, measurable value—can an AI chatbot bring to your business?</h1>
 
-      <p>This guide makes it easy to calculate your AI chatbot's Return on Investment in just four straightforward steps. And to make it even simpler, we're providing you with a free spreadsheet template to crunch the numbers effortlessly.</p>
+      <p>This guide makes it easy to calculate your AI chatbot's Return on Investment in just four straightforward steps.</p>
 
       <h2 id="identify-current-support-costs" className="scroll-mt-16">Step 1: Identify Your Current Support Costs</h2>
       <p>Before knowing how much you're going to save, you first need to see what you're currently spending on customer support. Typically, costs fall into three buckets:</p>
@@ -93,34 +92,71 @@ export default function CalculatingRoiChatbotPage() {
         <p>Even if we assumed a generous amount of CTC (Cost to Company) for the Customer Support agents in the current scenario in your org, you can half these numbers and still see an annual saving of $54,000[or ₹720,000 for Indian Orgs].</p>
 
         <h2 id="factor-in-chatbot-costs-and-calculate-roi" className="scroll-mt-16">
-        Step 4: Factor in Chatbot Costs and Calculate ROI
-        </h2>
-        <p>Account for your chatbot expenses:</p>
-        <ul>
-        <li>Subscription fee: $400 [₹33,000] per month → $4,800 [or ₹4,00,000] annually</li>
-        <li>Setup/training spread: $125 [₹10,000] per month → $1,500 [or ₹1,20,000] annually</li>
-        <li>Maintenance & optimization: $100 [₹8,000] per month → $1,200 [or ₹1,00,000] annually</li>
-        </ul>
-        <p>Total annual chatbot cost = $6,500 [or ₹5,40,000]</p>
+            Step&nbsp;4: Factor in Chatbot Costs and Calculate ROI</h2>
 
+          <p>
+            Every Rhythmiq plan already includes <strong>up to 5 agent seats</strong>,
+            so the only recurring cost is the plan fee itself.
+          </p>
 
-      <p><strong>Calculate ROI:</strong><br />
-        Net benefit = $108,000 - $6,500 = $101,500<br />
-        ROI = ($101,500 ÷ $6,500) x 100 ≈ <strong>1,561%</strong>
-      </p>
+          <table className="table-auto text-sm my-4">
+            <thead>
+              <tr>
+                <th className="px-2 py-1 text-left">Plan</th>
+                <th className="px-2 py-1 text-left">Monthly Fee&nbsp;(USD)</th>
+                <th className="px-2 py-1 text-left">Annual Fee&nbsp;(USD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="px-2 py-1">Web Plan</td>
+                <td className="px-2 py-1">$19</td>
+                <td className="px-2 py-1">$228</td>
+              </tr>
+              <tr>
+                <td className="px-2 py-1">WhatsApp Plan</td>
+                <td className="px-2 py-1">$39</td>
+                <td className="px-2 py-1">$468</td>
+              </tr>
+              <tr>
+                <td className="px-2 py-1">Omni Plan</td>
+                <td className="px-2 py-1">$99</td>
+                <td className="px-2 py-1">$1,188</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p className="text-muted-foreground">
+            <em>
+              (Prices include the first 5 support agents; larger teams can add more seats
+              as needed. Rough Pricing for Omni Plan included, talk to sales for a final quote.)
+            </em>
+          </p>
+
+          <p>Example using the <strong>Omni Plan</strong>:</p>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Annual plan fee&nbsp;&nbsp;&nbsp;&nbsp;  $1,188</li>
+            <li>Setup & training&nbsp;&nbsp;  $1,500&nbsp; (one-time, year 1)</li>
+            <li>Maintenance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $1,200  ($100 × 12)</li>
+          </ul>
+
+          <p>Total annual chatbot cost  = <strong>$3,888</strong></p>
+
+          <p>
+            Net benefit  = $108,000 − $3,888 = <strong>$104,112</strong><br />
+            ROI  ≈ (<strong>$104,112 ÷ $3,888</strong>) × 100 ≈ <strong>2,680 %</strong>
+          </p>
+
+          <p className="mt-4 text-muted-foreground">
+            Higher-tier plans unlock more channels (Web + WhatsApp + Instagram, etc.) and
+            handle a greater share of total queries, so real-world ROI is usually even
+            higher despite the larger subscription fee.
+          </p>
+
 
       <blockquote>
         “Businesses are often surprised by how substantial the ROI of automation can be, especially when repetitive tasks are high-volume.”
       </blockquote>
-
-      <h2 id="bonus-download-roi-spreadsheet" className="scroll-mt-16">Bonus: Download Your Free ROI Calculator Spreadsheet</h2>
-      <p>We've pre-filled our spreadsheet with Rhythmiq's three plan prices so you can instantly see which plan saves the most for your use case:</p>
-      <ul>
-        <li><strong>Web Plan:</strong> ₹1,999 [~$19]</li>
-        <li><strong>WhatsApp Plan:</strong> ₹3,999 [~$39]</li>
-        <li><strong>Omni Plan:</strong> ₹7,999 [~$99]</li>
-      </ul>
-      <p><a href="/downloads/roi-calculator.xlsx" className="underline">Download the ROI Spreadsheet →</a></p>
 
       <h2 id="beyond-roi-intangible-benefits" className="scroll-mt-16">Beyond ROI: The Intangible Benefits</h2>
       <p>Apart from pure money based savings, AI chatbots will give your business:</p>
