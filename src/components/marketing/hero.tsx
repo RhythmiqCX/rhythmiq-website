@@ -57,7 +57,7 @@ const Hero = () => {
                         </button>
                         </Link>
                     </Container>
-                    <Container>
+                 
                         <h1 className="text-4xl md:text-4xl lg:text-7xl font-bold text-center !leading-tight max-w-4xl mx-auto">
                             Transform your {" "}
                             <span className="">
@@ -65,7 +65,7 @@ const Hero = () => {
                             </span>
                             with AI
                         </h1>
-                    </Container>
+                   
                     <Container delay={0.2}>
                         <p className="max-w-xl mx-auto mt-2 text-base lg:text-lg text-center text-muted-foreground">
                             {/* AI-powered automation and insights to maximize your campaigns and grow your brand. */}
