@@ -21,3 +21,27 @@ https://rhythmiqcx.com/conversational-ai-chatbot/
 summary: Learn how conversational AI platforms use LLMs, NLP and analytics to power human-like customer support at scale.
 tags: conversational ai, chatbot platform, dialogue design, nlp automation
 updated: 2025-05-16
+
+# AI Chatbot Pricing Guide (Blog)
+https://rhythmiqcx.com/blog/ai-chatbot-pricing-how-much-should-you-really-budget/
+summary: Get a 2025 breakdown of subscription, usage, and premium pricing models to budget your AI chatbot investment effectively.
+tags: ai chatbot pricing, 2025 budget, subscription models
+updated: 2025-05-20
+
+# Calculating ROI on Your AI Chatbot in 4 Steps
+https://rhythmiqcx.com/blog/calculating-roi-on-your-ai-chatbot/
+summary: Learn how to calculate the financial impact of an AI chatbot in four steps using our free spreadsheet template.
+tags: ai chatbot roi, roi calculator, chatbot cost savings
+updated: 2025-05-22
+
+# Conversational AI vs. Traditional Chatbots
+https://rhythmiqcx.com/blog/conversational-ai-vs-traditional-chatbots/
+summary: Discover the key differences between rule-based chatbots and AI-powered conversational assistants to choose the right solution for your business.
+tags: conversational ai chatbot, traditional chatbots, chatbot comparison
+updated: 2025-05-20
+
+# Customer-Service AI: 7 Automation Workflows
+https://rhythmiqcx.com/blog/customer-service-ai-workflows/
+summary: Explore seven AI-driven customer-service workflows that can save your team over 30 hours of repetitive work each week.
+tags: customer service automation, ai workflows, support efficiency
+updated: 2025-05-21
