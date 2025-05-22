@@ -30,7 +30,7 @@ updated: 2025-05-20
 
 # Calculating ROI on Your AI Chatbot in 4 Steps
 https://rhythmiqcx.com/blog/calculating-roi-on-your-ai-chatbot/
-summary: Learn how to calculate the financial impact of an AI chatbot in four steps using our free spreadsheet template.
+summary: Learn how to calculate the financial impact of an AI chatbot in four steps.
 tags: ai chatbot roi, roi calculator, chatbot cost savings
 updated: 2025-05-22
 
