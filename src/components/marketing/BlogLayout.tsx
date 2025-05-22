@@ -63,7 +63,9 @@ export default function BlogLayout({
             <ReadingTime minutes={readingTime} />
           </div>
           <div className="relative w-11/12 max-w-md mx-auto h-56 sm:h-72 md:h-[420px] md:w-full md:max-w-none rounded-2xl overflow-hidden">
-            <Image src={heroImage.src} alt={heroImage.alt} fill className="object-cover" />
+            <Image sizes="(max-width: 640px) 100vw,
+         (max-width: 1024px) 80vw,
+         50vw" src={heroImage.src} alt={heroImage.alt} fill className="object-cover" />
           </div>
         </Container>
       </section>
