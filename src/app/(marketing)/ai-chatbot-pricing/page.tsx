@@ -20,7 +20,7 @@ export default function AIChatbotPricingPage() {
   return (
     <main className="flex flex-col">
       {/* ─────────────── Hero */}
-      <section className="relative w-full bg-gradient-to-b from-indigo-600/20 to-background pt-28 pb-20 lg:py-32 text-center">
+      <section className="relative w-full bg-gradient-to-b from-indigo-600/20 to-background pt-28 pb-20 lg:py-32 text-center px-4">
         <Container className="space-y-6">
           <h1 className="mx-auto max-w-4xl font-bold text-4xl md:text-5xl lg:text-7xl leading-tight">
             Rhythmiq <span className="text-indigo-600">AI&nbsp;Chatbot&nbsp;Pricing</span> for 2025
@@ -41,7 +41,7 @@ export default function AIChatbotPricingPage() {
       </section>
 
       {/* ─────────────── Definition snippet */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 px-4">
         <Container>
           <p className="mx-auto max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
             <strong>AI chatbot pricing</strong> refers to the total cost of deploying and running a conversational AI assistant — covering platform licence, custom integration charges (if applicable), hosting, channel add ons like WhatsApp Business&nbsp;API, and optional Webhook services.
@@ -91,7 +91,7 @@ export default function AIChatbotPricingPage() {
 
       <Pricing/>
 
-      <section id="features" className="py-20">
+      <section id="features" className="py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Four factors that drive AI chatbot cost
@@ -160,7 +160,7 @@ export default function AIChatbotPricingPage() {
 
 
       {/* ─────────────── Detailed breakdown steps */}
-      <section id="breakdown" className="py-16 md:py-24">
+      <section id="breakdown" className="py-16 px-4 md:py-24">
         <Container className="space-y-10 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center">Calculate Your Total Cost in 4 Steps</h2>
           <ol className="space-y-8 list-decimal list-inside">
@@ -185,7 +185,7 @@ export default function AIChatbotPricingPage() {
       </section>
 
       {/* ─────────────── Feature list (price‑centric) */}
-<section className="py-20 bg-muted/5">
+<section className="py-20 bg-muted/5 px-4">
   <Container className="space-y-12">
     <h2 className="text-3xl md:text-4xl font-bold text-center">
       What’s included in Rhythmiq plans
@@ -210,7 +210,7 @@ export default function AIChatbotPricingPage() {
 
 
       {/* ─────────────── Internal links */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 px-4 md:py-24">
         <Container className="grid gap-10 md:grid-cols-3 text-center">
           {[
             { href: '/ai-customer-support', title: 'AI Customer Support Guide', desc: 'Automate web chat & email with AI.' },
@@ -226,7 +226,7 @@ export default function AIChatbotPricingPage() {
       </section>
 
       {/* ─────────────── FAQ */}
-            <section id="faq" className="py-20">
+            <section id="faq" className="py-20 px-4">
         <div className="container mx-auto max-w-3xl">
             <h2 className="text-3xl font-bold text-center mb-10">AI Chatbot Pricing FAQ</h2>
             <div className="space-y-6">

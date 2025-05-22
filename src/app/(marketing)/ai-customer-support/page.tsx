@@ -83,7 +83,7 @@ export default function AICustomerSupportPage() {
 </div>
 
       {/* Value props */}
-      <section className="py-16 ">
+      <section className="py-16 mx-4">
         <div className="container mx-auto grid gap-12 md:grid-cols-3">
           <div className="space-y-3">
             <h3 className="text-xl font-semibold">
@@ -115,7 +115,7 @@ export default function AICustomerSupportPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16">
+      <section className="py-12 mx-4 md:py-16">
         <Container>
           <p className="mx-auto max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
             <strong>AI customer support</strong> is the use of conversational AI — large language model chatbots, intent detection and automated workflows to resolve customer questions without a human agent. It hooks into your existing help desk, knowledge base and channels so customers get instant, accurate answers 24 hours a day.
@@ -124,7 +124,7 @@ export default function AICustomerSupportPage() {
       </section>
 
       {/* Feature list */}
-      <section id="features" className="py-20">
+      <section id="features" className="py-20 mx-4">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
             Omni Channel AI Support, Ready Out-of-the-Box
@@ -197,7 +197,7 @@ export default function AICustomerSupportPage() {
 
 
 
-    <section id="implementation" className="py-16 md:py-24 bg-muted/5">
+    <section id="implementation" className="py-16 mx-4 md:py-24 bg-muted/5">
       <Container className="space-y-10 max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           How to Get Started with Rhythmiq in 5 Steps
@@ -238,7 +238,7 @@ export default function AICustomerSupportPage() {
     </section>
 
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 mx-4 md:py-24">
         <Container className="grid gap-10 md:grid-cols-3 text-center">
           {[
             { href: '/whatsapp-ai-chatbot', title: 'WhatsApp AI Chatbot Guide', desc: 'Launch compliant WhatsApp support with AI.' },
@@ -255,7 +255,7 @@ export default function AICustomerSupportPage() {
 
 
       {/* FAQ */}
-      <section id="faq" className="py-20">
+      <section id="faq" className="py-20 mx-4">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl font-bold text-center mb-10">
             AI Customer Support FAQ

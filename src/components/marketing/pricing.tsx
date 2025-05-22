@@ -20,7 +20,7 @@ const PLANS: PLAN[] = [
     basicPriceUSD: 19,
     customPriceINR: 4999,
     customPriceUSD: 79,
-    features: ['Includes 5 agents', 'Train on your Knowledge Base', 'Embeddable bot for your Website', 'Realtime Agent Fallback'],
+    features: ['Includes 2 agents', 'Train on your Knowledge Base', 'Embeddable bot for your Website', 'Realtime Agent Fallback'],
     buttonText: 'Choose Plan',
   },
   {
@@ -42,7 +42,7 @@ const PLANS: PLAN[] = [
     basicPriceUSD: 99,
     customPriceINR: 9999,
     customPriceUSD: 99,
-    features: ['Includes 10 agents', 'Custom Integrations', '1500 WA Convos/month', 'Email/SMS channel', 'Unlimited Bots'],
+    features: ['Includes 5 agents', 'Custom Integrations', '1500 WA Convos/month', 'Email/SMS channel', 'Unlimited Bots'],
     buttonText: 'Contact for Custom pricing',
   }
 ];
@@ -63,7 +63,7 @@ const Pricing = () => {
   };
 
   return (
-    <div id="pricingtab" className="relative flex flex-col items-center justify-center max-w-5xl py-20 mx-auto">
+    <div id="pricingtab" className="relative flex flex-col items-center justify-center max-w-5xl py-20 mx-auto px-4">
 
       <div className="flex flex-col items-center justify-center max-w-2xl mx-auto">
         <Container>

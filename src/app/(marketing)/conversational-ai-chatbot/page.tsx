@@ -19,7 +19,7 @@ export default function ConversationalAIChatbotPage() {
   return (
     <main className="flex flex-col">
       {/* ─────────────── Hero */}
-      <section className="relative w-full bg-gradient-to-b from-cyan-600/20 to-background pt-28 pb-20 lg:py-32 text-center">
+      <section className="relative w-full px-4 bg-gradient-to-b from-cyan-600/20 to-background pt-28 pb-20 lg:py-32 text-center">
         <Container className="space-y-6">
           <h1 className="mx-auto max-w-4xl font-bold text-4xl md:text-5xl lg:text-7xl leading-tight">
             Your 2025 <span className="text-cyan-600">Conversational&nbsp;AI&nbsp;Chatbot</span> Guide
@@ -38,7 +38,7 @@ export default function ConversationalAIChatbotPage() {
       </section>
 
       {/* ─────────────── Definition snippet */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 px-4 md:py-16">
         <Container>
           <p className="mx-auto max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
             <strong>Conversational AI</strong> is a blend of natural language processing (NLP), large language models and dialogue management that lets chatbots and voice assistants understand questions, generate human‑like answers and learn from every interaction.
@@ -90,7 +90,7 @@ export default function ConversationalAIChatbotPage() {
         />
 
 
-<section className="py-16 md:py-24 bg-muted/10">
+<section className="py-16 px-4 md:py-24 bg-muted/10">
   <Container className="space-y-12">
     <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
       Why Businesses Choose Rhythmiq Conversational AI
@@ -124,7 +124,7 @@ export default function ConversationalAIChatbotPage() {
 </section>
 
 <section id="implementation" className="py-16 md:py-24">
-  <Container className="space-y-10 max-w-4xl mx-auto">
+  <Container className="space-y-10 px-4 max-w-4xl mx-auto">
     <h2 className="text-3xl md:text-4xl font-bold text-center">
       Roll Out Your Conversational AI Chatbot in 6 Simple Steps
     </h2>
@@ -170,7 +170,7 @@ export default function ConversationalAIChatbotPage() {
 </section>
 
 
-    <section className="py-20 bg-muted/5">
+    <section className="py-20 px-4 bg-muted/5">
       <Container className="space-y-12 container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           Core Conversational AI Features
@@ -205,7 +205,7 @@ export default function ConversationalAIChatbotPage() {
 
 
       {/* ─────────────── Internal links */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 px-4 md:py-24">
         <Container className="grid gap-10 md:grid-cols-3 text-center">
           {[
             { href: '/ai-customer-support', title: 'AI Customer Support', desc: 'Automate web chat & email.' },
@@ -221,7 +221,7 @@ export default function ConversationalAIChatbotPage() {
       </section>
 
       {/* ─────────────── FAQ */}
-      <section id="faq" className="py-20">
+      <section id="faq" className="py-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl font-bold text-center mb-10">Conversational AI FAQ</h2>
           <div className="space-y-6">

@@ -95,7 +95,7 @@ export default function CalculatingRoiChatbotPage() {
             Step&nbsp;4: Factor in Chatbot Costs and Calculate ROI</h2>
 
           <p>
-            Every Rhythmiq plan already includes <strong>up to 5 agent seats</strong>,
+            Rhythmiq Omni plan already includes <strong>up to 5 agent seats</strong>,
             so the only recurring cost is the plan fee itself.
           </p>
 
@@ -109,7 +109,7 @@ export default function CalculatingRoiChatbotPage() {
             </thead>
             <tbody>
               <tr>
-                <td className="px-2 py-1">Web Plan</td>
+                <td className="px-2 py-1">Web Plan (2 agents)</td>
                 <td className="px-2 py-1">$19</td>
                 <td className="px-2 py-1">$228</td>
               </tr>
@@ -128,7 +128,7 @@ export default function CalculatingRoiChatbotPage() {
 
           <p className="text-muted-foreground">
             <em>
-              (Prices include the first 5 support agents; larger teams can add more seats
+              (Omni Prices include the first 5 support agents; larger teams can add more seats
               as needed. Rough Pricing for Omni Plan included, talk to sales for a final quote.)
             </em>
           </p>
@@ -148,7 +148,7 @@ export default function CalculatingRoiChatbotPage() {
           </p>
 
           <p className="mt-4 text-muted-foreground">
-            Higher-tier plans unlock more channels (Web + WhatsApp + Instagram, etc.) and
+            Higher-tier plans unlock more channels (Web + WhatsApp + Email, etc.) and
             handle a greater share of total queries, so real-world ROI is usually even
             higher despite the larger subscription fee.
           </p>

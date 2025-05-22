@@ -19,7 +19,7 @@ export default function WhatsAppAIChatbotPage() {
   return (
     <main className="flex flex-col">
       {/* ─────────────── Hero */}
-      <section className="relative w-full bg-gradient-to-b from-green-600/20 to-background pt-28 pb-20 lg:py-32 text-center">
+      <section className="relative w-full px-4 bg-gradient-to-b from-green-600/20 to-background pt-28 pb-20 lg:py-32 text-center">
         <Container className="space-y-6">
           <h1 className="mx-auto max-w-4xl font-bold text-4xl md:text-5xl lg:text-7xl leading-tight">
             Build a <span className="text-green-600">WhatsApp&nbsp;AI&nbsp;Chatbot</span> in Minutes
@@ -40,7 +40,7 @@ export default function WhatsAppAIChatbotPage() {
       </section>
 
       {/* ─────────────── Definition snippet */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 px-4 md:py-16">
         <Container>
           <p className="mx-auto max-w-3xl text-lg md:text-xl font-medium leading-relaxed">
             A <strong>WhatsApp AI chatbot</strong> is an automated conversational agent that runs on the official WhatsApp Business API. It understands natural language, sends templated notifications, and resolves customer requests 24 x 7 without human intervention.
@@ -67,7 +67,7 @@ export default function WhatsAppAIChatbotPage() {
       </section>
 
       {/* ─────────────── Why WhatsApp automation */}
-      <section className="py-16 md:py-24 bg-muted/10">
+      <section className="py-16 px-4 md:py-24 bg-muted/10">
         <Container className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
             Why automate customer service on WhatsApp in 2025
@@ -134,7 +134,7 @@ export default function WhatsAppAIChatbotPage() {
     />
 
 
-    <section id="flow" className="py-16 md:py-24">
+    <section id="flow" className="py-16 px-4 md:py-24">
       <Container className="space-y-10 max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           Set Up Your WhatsApp Support Bot in 5 Simple Steps
@@ -175,12 +175,12 @@ export default function WhatsAppAIChatbotPage() {
     </section>
 
       {/* ─────────────── Feature list */}
-          <section className="py-20">
+          <section className="py-20 px-4">
       <Container className="space-y-12 container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           Core WhatsApp Support Features
         </h2>
-        <ul className="grid gap-8 md:grid-cols-2">
+        <ul className="text-center grid gap-8 md:grid-cols-2">
           {[
             { title: 'Template Management', copy: 'Pre-approved WhatsApp templates for order updates, refunds, and alerts.' },
             { title: 'AI-Powered Auto Replies', copy: 'Instant answers to common queries with fallback to live agents when needed.' },
@@ -197,7 +197,7 @@ export default function WhatsAppAIChatbotPage() {
     </section>
 
       {/* ─────────────── Internal links */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 px-4 md:py-24">
         <Container className="grid gap-10 md:grid-cols-3 text-center">
           {[
             { href: '/ai-customer-support', title: 'AI Customer Support Guide', desc: 'Automate web chat and email with AI.' },
@@ -213,7 +213,7 @@ export default function WhatsAppAIChatbotPage() {
       </section>
 
    {/* FAQ */}
-    <section id="faq" className="py-20">
+    <section id="faq" className="py-20 px-4">
       <div className="container mx-auto max-w-3xl">
         <h2 className="text-3xl font-bold text-center mb-10">
           WhatsApp AI Chatbot FAQ

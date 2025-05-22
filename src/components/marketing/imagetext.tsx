@@ -41,7 +41,7 @@ export default function ImageTextSection({
   className,
 }: ImageTextSectionProps) {
   return (
-    <section className={cn('py-16 md:py-24', className)}>
+    <section className={cn('py-16 px-4 md:py-24', className)}>
       <div
         className={cn(
           'container mx-auto flex flex-col md:flex-row items-center gap-10',
@@ -55,7 +55,7 @@ export default function ImageTextSection({
             alt={imgAlt}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
+            className="object-contain"
             priority
           />
         </div>
