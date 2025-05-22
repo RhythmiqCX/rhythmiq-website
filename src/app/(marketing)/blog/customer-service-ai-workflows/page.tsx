@@ -40,12 +40,13 @@ const RELATED = [
     description: 'Explore the crucial differences between rule-based chatbots and AI-powered conversational assistants.',
   },
   {
-    title: 'Building trust through responsible AI',
-    href: '/blog/intercom-achieves-iso-42001-certification',
-    imageSrc: '/images/blog/iso-cert.png',
-    date: 'Apr 29, 2025',
-    description: 'How our ISO/IEC 42001 certification ensures ethical AI practices.',
-  },
+    title: 'Calculating ROI on Your AI Chatbot in 4 Simple Steps (Free Spreadsheet)',
+    href: '/blog/calculating-roi-on-your-ai-chatbot',
+    imageSrc: '/images/blog/ai-chatbot-roi.jpeg',
+    date: 'May 22, 2025',
+    description: 'Quickly estimate your AI chatbot’s cost savings and ROI using our easy four-step guide and free spreadsheet template.'
+  }
+  
 ];
 
 export default function CustomerServiceAIWorkflowsPage() {
