@@ -50,7 +50,7 @@ export default function AIChatbotPricingPage() {
             <h2 id="understanding-pricing-structure" className="scroll-mt-16">
               Understanding the Pricing Structure of AI Chatbots
             </h2>
-            <p>Before diving into the exact costs, it's important to know that chatbot pricing isn't uniform—it depends heavily on the features, capabilities, and complexity of the interactions you're aiming to automate. Typically, AI chatbot pricing falls into three primary categories:</p>
+            <p>Before diving into the exact costs, it's important to know that chatbot pricing isn't uniform, it depends heavily on the features, capabilities, and complexity of the interactions you're aiming to automate. Typically, AI chatbot pricing falls into three primary categories:</p>
             <ul>
               <li>Subscription-based (Monthly or Annual)</li>
               <li>Usage-based (Interactions or Sessions)</li>
@@ -145,7 +145,7 @@ export default function AIChatbotPricingPage() {
                 <strong>Large enterprises:</strong> Costs typically range from $2,500 (₹~200,000) to upwards of $10,000 (~₹800,000) monthly, given complex integration needs, advanced conversational capabilities, and stringent security requirements.
               </li>
               <p>
-                However, Rhythmiq delivers enterprise-grade conversational AI at a fraction of these costs—plans start at ₹1,999 (~$19) per month, and our best OmniChannel package is just ₹7,999 (~$99) monthly—making it the most budget-friendly solution for businesses of all sizes.
+                However, Rhythmiq delivers enterprise-grade conversational AI at a fraction of these costs : plans start at ₹1,999 (~$19) per month, and our best OmniChannel package is just ₹7,999 (~$99) monthly—making it the most budget-friendly solution for businesses of all sizes.
               </p>
             </ul>
 
@@ -180,7 +180,7 @@ export default function AIChatbotPricingPage() {
             <p>If your brand positions itself on customer-centricity, conversational AI will likely offer the more substantial long-term value. While traditional chatbots may have lower upfront costs, the improved customer loyalty, efficiency, and scalability offered by conversational AI often offset the initial investment.</p>
 
             <h3 className="mt-8 text-lg font-semibold [&_a]:text-indigo-600">
-              Ready to explore a conversational AI solution tailored for your business needs? Check out <u>Rhythmiq</u>, our robust and scalable AI chatbot platform—starting at just ₹1,999 (~$19) per month, and our best OmniChannel package at ₹7,999 (~$99)—making it more affordable than other solutions for companies serious about customer experience.<br/>
+              Ready to explore a conversational AI solution tailored for your business needs? Check out <u>Rhythmiq</u>, our robust and scalable AI chatbot platform, starting at just ₹1,999 (~$19) per month, and our best OmniChannel package at ₹7,999 (~$99) making it more affordable than other solutions for companies serious about customer experience.<br/>
               <a href="/#waitlist" className="hover:underline">
                 Try it out today →
               </a>
