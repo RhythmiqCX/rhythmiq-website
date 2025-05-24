@@ -29,16 +29,19 @@ export const heading = localFont({
             style: 'normal',
         }
     ],
-    variable: '--font-heading'
+    variable: '--font-heading',
+    display: "swap", 
 });
 
 export const base = Inter({
     subsets: ["latin"],
     variable: "--font-base",
+    display: "swap", 
 });
 
 export const subheading = Instrument_Serif({
     subsets: ["latin"],
     weight: ["400"],
     variable: "--font-subheading",
+    display: "swap", 
 });

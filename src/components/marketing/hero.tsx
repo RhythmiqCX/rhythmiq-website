@@ -2,31 +2,12 @@ import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../global/container";
-import Head from 'next/head'
 import Icons from "../global/icons";
 import { Button } from "../ui/button";
 import { OrbitingCircles } from "../ui/orbiting-circles";
 
 const Hero = () => {
     return (
-        <>
-      {/* ① Inline only the few rules your hero needs */}
-      <Head>
-        <style>{`
-          /* critical “hero” styles */
-          .hero {
-            font-size: 2.25rem;     /* text-4xl */
-            line-height: 1.1;       /* leading-tight */
-            font-weight: 700;       /* font-bold */
-            text-align: center;
-            margin: 0 auto;
-            max-width: 64rem;       /* max-w-4xl */
-          }
-          @media(min-width:1024px) {
-            .hero { font-size: 4.5rem }  /* lg:text-7xl */
-          }
-        `}</style>
-      </Head>
         <div className="relative flex flex-col items-center justify-center w-full py-20">
 
             <div className="absolute flex lg:hidden size-40 rounded-full bg-blue-500 blur-[10rem] top-0 left-1/2 -translate-x-1/2 -z-10"></div>
@@ -76,15 +57,15 @@ const Hero = () => {
                         </button>
                         </Link>
                     </Container>
-                    {/* <Container> */}
-                        <h1 className="hero text-4xl md:text-4xl lg:text-7xl font-bold text-center !leading-tight max-w-4xl mx-auto">
+                    <Container>
+                        <h1 className="text-4xl md:text-4xl lg:text-7xl font-bold text-center !leading-tight max-w-4xl mx-auto">
                             Transform your {" "}
                             <span className="">
                                 Customer Support {" "}
                             </span>
                             with AI
                         </h1>
-                    {/* </Container> */}
+                    </Container>
                     <Container delay={0.2}>
                         <p className="max-w-xl mx-auto mt-2 text-base lg:text-lg text-center text-muted-foreground">
                             {/* AI-powered automation and insights to maximize your campaigns and grow your brand. */}
@@ -124,7 +105,6 @@ const Hero = () => {
                 </div>
             </div>
         </div>
-        </>
     )
 };
 
