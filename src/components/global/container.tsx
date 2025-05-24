@@ -9,9 +9,14 @@ interface Props {
     delay?: number;
     reverse?: boolean;
     simple?: boolean;
+    disableAnimation?: boolean;
 }
 
-const Container = ({ children, className, delay = 0.2, reverse, simple }: Props) => {
+const Container = ({ children, className, delay = 0.2, reverse, simple, disableAnimation }: Props) => {
+    if (disableAnimation) {
+        return <div className={cn("w-full h-full", className)}>{children}</div>;
+      }
+
     return (
         <motion.div
             className={cn("w-full h-full", className)}
