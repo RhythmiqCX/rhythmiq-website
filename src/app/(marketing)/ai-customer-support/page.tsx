@@ -19,12 +19,12 @@ export const metadata: Metadata = {
 
 export default function AICustomerSupportPage() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col overflow-x-hidden">
         <div className="relative flex flex-col items-center justify-center w-full py-20">
 
 <div className="absolute flex lg:hidden size-40 rounded-full bg-blue-500 blur-[10rem] top-0 left-1/2 -translate-x-1/2 -z-10"></div>
 
-<div className="flex flex-col items-center justify-center gap-y-8 relative">
+<div className="flex flex-col items-center justify-center gap-y-8 relative px-4">
     <Container className="hidden lg:flex absolute inset-0 top-0 mb-auto flex-col items-center justify-center w-full min-h-screen -z-10">
         <OrbitingCircles
             speed={0.5}

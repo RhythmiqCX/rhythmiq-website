@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function AIChatbotPricingPage() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col overflow-x-hidden">
       {/* ─────────────── Hero */}
       <section className="relative w-full bg-gradient-to-b from-indigo-600/20 to-background pt-28 pb-20 lg:py-32 text-center px-4">
         <Container className="space-y-6">
