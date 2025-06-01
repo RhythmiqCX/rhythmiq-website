@@ -21,7 +21,7 @@ export const generateMetadata = ({
     icons = [
         {
             rel: "icon",
-            url: "/icons/icon-dark.png",
+            url: "/icons/icon.png",
             media: "(prefers-color-scheme: light)",
         },
         {
