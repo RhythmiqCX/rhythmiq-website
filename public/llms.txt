@@ -45,3 +45,10 @@ https://rhythmiqcx.com/blog/customer-service-ai-workflows/
 summary: Explore seven AI-driven customer-service workflows that can save your team over 30 hours of repetitive work each week.
 tags: customer service automation, ai workflows, support efficiency
 updated: 2025-05-21
+
+# AI Chatbots for Fin-Tech: Winning Users’ Trust with Compliance-Ready Bots
+https://rhythmiqcx.com/blog/ai-chatbots-for-fintech-trust-compliance/
+summary: Explore how compliance-ready AI chatbots in fin tech use KYC integration, encryption, audit trails, real-time fraud detection, and regulatory reporting to build user trust and drive growth.
+tags: fin-tech, compliance, ai chatbots, security, customer service automation
+updated: 2025-06-06
+
