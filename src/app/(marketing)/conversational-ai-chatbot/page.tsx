@@ -28,7 +28,11 @@ export default function ConversationalAIChatbotPage() {
             Discover how conversational AI platforms create natural dialogues, increase engagement and cut support costs — no PhD required.
           </p>
           <div className="flex justify-center gap-4">
-            <Link href="/book-demo"><Button size="lg">Book Live Demo</Button></Link>
+            <Link href="https://calendly.com/ray-rhythmiqcx/30min">
+              <Button size="lg">
+                Book a Demo
+              </Button>
+            </Link>
             <Link href="#implementation" className="flex items-center gap-2 group text-cyan-700 font-medium">
               <span>See Steps</span>
               <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-transform" />

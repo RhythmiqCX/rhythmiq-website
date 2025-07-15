@@ -70,7 +70,7 @@ export default function AICustomerSupportPage() {
         </Container>
         <Container delay={0.25} className="z-20">
             <div className="flex items-center justify-center mt-6 gap-x-4">
-                <Link href="/#waitlist" className="flex items-center gap-2 group">
+                <Link href="https://calendly.com/ray-rhythmiqcx/30min" className="flex items-center gap-2 group">
                     <Button size="lg">
                         Explore
                         <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-all duration-300" />

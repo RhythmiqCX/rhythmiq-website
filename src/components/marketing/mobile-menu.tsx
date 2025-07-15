@@ -40,12 +40,12 @@ const MobileMenu = () => {
           ))}
           <div className="pt-4 mt-4 border-t border-border">
             <Link
-              href="/#waitlist"
+              href="https://calendly.com/ray-rhythmiqcx/30min"
               className="w-full"
               onClick={() => setOpen(false)}
             >
               <Button className="w-full" variant="default">
-                Get Started
+                Book a Demo
               </Button>
             </Link>
           </div>

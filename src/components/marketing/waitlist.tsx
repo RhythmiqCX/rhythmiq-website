@@ -95,7 +95,7 @@ export default function WaitlistForm() {
     <Card className="max-w-xl mx-auto rounded-2xl shadow p-8">
       <CardContent>
         <h2 className="text-2xl font-semibold mb-4 text-center">
-          Join the Waitlist
+          Book a Demo
         </h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
           {/* Core 2 */}

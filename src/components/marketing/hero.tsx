@@ -42,7 +42,7 @@ const Hero = () => {
 
                 <div className="flex flex-col items-center justify-center text-center gap-y-4 bg-background/0">
                     <Container className="relative hidden lg:block overflow-hidden">
-                        <Link href='#waitlist'>
+                        <Link href="https://calendly.com/ray-rhythmiqcx/30min">
                         <button className="group relative grid overflow-hidden rounded-full px-2 py-1 shadow-[0_1000px_0_0_hsl(0_0%_15%)_inset] transition-colors duration-200 mx-auto">
                             <span>
                                 <span className="spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]" />
@@ -52,7 +52,7 @@ const Hero = () => {
                                 <span className="px-2 py-[0.5px] h-[18px] tracking-wide flex items-center justify-center rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-[9px] font-medium mr-2 text-white">
                                     COMING SOON
                                 </span>
-                                Join the Waitlist
+                                Book a Demo
                             </span>
                         </button>
                         </Link>

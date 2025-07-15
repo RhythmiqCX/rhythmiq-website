@@ -181,8 +181,8 @@ export default function AIChatbotPricingPage() {
 
             <h3 className="mt-8 text-lg font-semibold [&_a]:text-indigo-600">
               Ready to explore a conversational AI solution tailored for your business needs? Check out <u>Rhythmiq</u>, our robust and scalable AI chatbot platform, starting at just ₹1,999 (~$19) per month, and our best OmniChannel package at ₹7,999 (~$99) making it more affordable than other solutions for companies serious about customer experience.<br/>
-              <a href="/#waitlist" className="hover:underline">
-                Try it out today →
+              <a href="https://calendly.com/ray-rhythmiqcx/30min" className="hover:underline">
+                Book a Demo →
               </a>
             </h3>
     </BlogLayout>

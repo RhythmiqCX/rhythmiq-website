@@ -105,7 +105,7 @@ export default function CustomerServiceAIWorkflowsPage() {
 
       <h3 className='mt-8 text-lg font-semibold [&_a]:text-indigo-600'>
       <p>With <strong>Rhythmiq's AI-powered conversational platform</strong>, implementing these workflows is straightforward. Rhythmiq seamlessly integrates with your existing systems, providing intuitive, human-like interactions that keep your customers happy and your team productive.</p>
-      <p><a href="/#waitlist" className="hover:underline">Try Rhythmiq free today</a>- no credit card required, and start delivering the exceptional, automated customer experience your users expect in 2025 and beyond.</p>
+      <p><a href="https://calendly.com/ray-rhythmiqcx/30min" className="hover:underline">Book a demo</a>- no credit card required, and start delivering the exceptional, automated customer experience your users expect in 2025 and beyond.</p>
       </h3>
     </BlogLayout>
   );
