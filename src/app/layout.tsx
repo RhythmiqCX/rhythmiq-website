@@ -28,7 +28,7 @@ export default function RootLayout({
                     {children}
                     <Analytics />
                     <SpeedInsights />
-                    {/* <script
+                    <script
                         // eslint-disable-next-line react/no-danger
                         dangerouslySetInnerHTML={{
                             __html: `
@@ -48,7 +48,8 @@ export default function RootLayout({
                             })(document,"script");
                             `,
                         }}
-                        /> */}
+                        />
+                        <script src="http://localhost:8080/widget-loader.js"></script>
             </body>
         </html>
     );
