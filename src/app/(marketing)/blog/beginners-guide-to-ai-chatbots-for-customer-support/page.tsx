@@ -108,7 +108,7 @@ export default function AIChatbotBlogPage() {
         understand meaning, not just keywords, thanks to natural language
         processing (NLP) and machine learning.
         <br /> Here’s how it works: <br />
-        1. You type a question like “Where’s my order?” <br />
+        1. You type a question like “<strong>Where’s my order?</strong>” <br />
         2.The chatbot processes your message, checks connected systems (like a
         database or CRM), and replies with the right info. <br />
         Think of it like a helpful waiter. You ask for what you need, the
@@ -130,29 +130,29 @@ export default function AIChatbotBlogPage() {
         </p>
         <ul>
           <li>
-            <strong>Natural Language Understanding (NLU):</strong>
+            <strong>Natural Language Understanding (NLU) : </strong>
             This lets chatbots grasp the meaning behind different ways of asking
-            the same question. For example, “Where’s my order?” and “Track my
-            package” mean the same thing, and the chatbot understands both.
+            the same question. For example, <strong>“Where’s my order?” </strong>and <strong>“Track my
+            package”</strong> mean the same thing, and the chatbot understands both.
           </li>
           <li>
-            <strong>Personalization:</strong>
+            <strong>Personalization : </strong>
             By using past conversations or customer data, chatbots tailor their
             replies. This makes each interaction feel relevant and more helpful.
           </li>
           <li>
-            <strong>Integration with CRM and Helpdesk Tools:</strong>
+            <strong>Integration with CRM and Helpdesk Tools : </strong>
             AI chatbots connect to systems like CRMs to pull customer details or
             update support tickets automatically. This reduces manual work for
             agents.
           </li>
           <li>
-            <strong>Multi language Support:</strong>
+            <strong>Multi language Support : </strong>
             Many chatbots can respond in several languages. This helps
             businesses serve customers across the globe without extra effort.
           </li>
           <li>
-            <strong>Learning and Improvement:</strong>
+            <strong>Learning and Improvement : </strong>
             Thanks to machine learning, chatbots learn from past interactions.
             They get better over time at answering new questions and fixing
             earlier mistakes.
@@ -176,37 +176,37 @@ export default function AIChatbotBlogPage() {
         </p>
         <ul>
           <li>
-            <strong>24/7 Availability:</strong>
+            <strong>24/7 Availability : </strong>
             AI chatbots never sleep. Whether a customer is trying to reset a
             password at midnight or check shipping status on a weekend, chatbots
             provide instant support without needing human agents on call.
             <br />
-            <em>Example:</em> An e commerce store uses a chatbot to handle
+            <em>Example : </em> An e commerce store uses a chatbot to handle
             post purchase tracking and refund questions during off hours,
             reducing ticket backlog by 40%.
           </li>
           <li>
-            <strong>Instant Responses to Common Questions:</strong>
+            <strong>Instant Responses to Common Questions : </strong>
             Chatbots answer FAQs like order status, return policies, billing, or
             appointment scheduling keeping resolution times low and customer
             satisfaction high.
             <br />
-            <em>Example:</em> A telecom company deploys a chatbot to handle SIM
+            <em>Example : </em> A telecom company deploys a chatbot to handle SIM
             activation and data usage questions, resolving 70% of inquiries
             automatically.
           </li>
           <li>
-            <strong>Cost Efficiency and Reduced Workload:</strong>
+            <strong>Cost Efficiency and Reduced Workload : </strong>
             By automating repetitive tasks, businesses reduce the number of
             tickets human agents need to touch cutting support costs without
             impacting quality.
             <br />
-            <em>Example:</em> A SaaS startup reduced first response times by 60%
+            <em>Example : </em> A SaaS startup reduced first response times by 60%
             and saved over $100,000 annually in support costs by using an AI
             chatbot for tier one queries.
           </li>
           <li>
-            <strong>Scalability During Peak Times:</strong>
+            <strong>Scalability During Peak Times : </strong>
             During product launches, seasonal spikes, or unexpected surges, AI
             chatbots absorb high volumes of inquiries, letting human agents
             focus on complex or high value issues.
@@ -215,11 +215,11 @@ export default function AIChatbotBlogPage() {
             Friday queries in 24 hours without needing to hire temporary staff.
           </li>
           <li>
-            <strong>Consistent, On Brand Responses:</strong>
+            <strong>Consistent, On Brand Responses : </strong>
             Unlike human agents, AI chatbots don’t get tired or inconsistent.
             They provide accurate, policy aligned responses every time.
             <br />
-            <em>Example:</em> A healthcare provider uses a chatbot to ensure
+            <em>Example : </em> A healthcare provider uses a chatbot to ensure
             HIPAA compliant responses to appointment and billing questions
             across multiple channels.
           </li>
@@ -250,34 +250,34 @@ export default function AIChatbotBlogPage() {
 
         <ul>
           <li>
-            <strong>Reduces repetitive work:</strong> AI chatbots handle common
+            <strong>Reduces repetitive work :</strong> AI chatbots handle common
             questions, guide users through basic tasks, and process routine
             updates freeing agents to focus on complex or sensitive issues.
           </li>
           <li>
-            <strong>Enables smarter workload distribution:</strong> Chatbots
+            <strong>Enables smarter workload distribution :</strong> Chatbots
             take care of high volume, low effort requests, allowing human agents
             to step in where empathy and critical thinking are needed most.
           </li>
           <li>
-            <strong>Accelerates response times:</strong> Integrated with CRMs
+            <strong>Accelerates response times :</strong> Integrated with CRMs
             and databases, chatbots pull the right information instantly no need
             to escalate or switch tools.
           </li>
           <li>
-            <strong>Improves the employee experience:</strong> With fewer
+            <strong>Improves the employee experience :</strong> With fewer
             repetitive tickets and more meaningful conversations, support teams
             stay engaged, focused, and less prone to burnout.
           </li>
           <li>
-            <strong>Provides actionable insights:</strong> Built in analytics
+            <strong>Provides actionable insights :</strong> Built in analytics
             reveal what customers are asking, when, and how often helping teams
             improve knowledge bases, spot service gaps, and refine workflows.
           </li>
         </ul>
 
         <p>
-          <strong>Before AI chatbots:</strong>
+          <strong>Before AI chatbots :</strong>
         </p>
         <ul>
           <li>Agents spend hours answering repetitive FAQs.</li>
@@ -287,7 +287,7 @@ export default function AIChatbotBlogPage() {
         </ul>
 
         <p>
-          <strong>After AI chatbots:</strong>
+          <strong>After AI chatbots :</strong>
         </p>
         <ul>
           <li>Chatbots handle FAQs and simple tasks instantly.</li>
@@ -314,12 +314,12 @@ export default function AIChatbotBlogPage() {
 
         <ul>
           <li>
-            <strong>Identify a simple task to automate:</strong> Begin with a
+            <strong>Identify a simple task to automate : </strong> Begin with a
             high impact area like handling FAQs, tracking orders, or scheduling
             appointments. This keeps implementation focused and measurable.
           </li>
           <li>
-            <strong>Choose the right AI platform:</strong> Use tools like{" "}
+            <strong>Choose the right AI platform : </strong> Use tools like{" "}
             <a href="https://rhythmiqcx.com" className="text-indigo-600 underline">
               RhythmiqCX
             </a>{" "}, Intercomm, etc,
@@ -328,18 +328,18 @@ export default function AIChatbotBlogPage() {
             current team and tools.
           </li>
           <li>
-            <strong>Blend AI with human support:</strong> Set up your chatbot to
+            <strong>Blend AI with human support : </strong> Set up your chatbot to
             automatically handle routine questions while escalating complex
             issues to human agents. This ensures speed without sacrificing
             quality.
           </li>
           <li>
-            <strong>Train with real conversations:</strong> Use your past
+            <strong>Train with real conversations : </strong> Use your past
             support chats to teach the chatbot how customers typically phrase
             questions. This improves relevance and accuracy from day one.
           </li>
           <li>
-            <strong>Monitor and optimize regularly:</strong> Review analytics to
+            <strong>Monitor and optimize regularly : </strong> Review analytics to
             find gaps, identify common issues, and fine tune the chatbot’s
             performance over time.
           </li>
