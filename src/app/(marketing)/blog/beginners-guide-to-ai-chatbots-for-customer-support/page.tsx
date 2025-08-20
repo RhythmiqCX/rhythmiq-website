@@ -109,7 +109,7 @@ export default function AIChatbotBlogPage() {
         processing (NLP) and machine learning.
         <br /> Here’s how it works: <br />
         1. You type a question like “<strong>Where’s my order?</strong>” <br />
-        2.The chatbot processes your message, checks connected systems (like a
+        2. The chatbot processes your message, checks connected systems (like a
         database or CRM), and replies with the right info. <br />
         Think of it like a helpful waiter. You ask for what you need, the
         chatbot understands, checks the “kitchen” (data), brings your answer,
