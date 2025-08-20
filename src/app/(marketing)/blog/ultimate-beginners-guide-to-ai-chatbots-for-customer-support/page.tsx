@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     images: ["/images/blog/ai-guide.png"],
     type: "article",
-    publishedTime: "2025-07-15",
+    publishedTime: "2025-08-20",
     authors: ["Ray"],
   },
 };

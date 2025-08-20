@@ -56,4 +56,4 @@ updated: 2025-06-06
 https://rhythmiqcx.com/blog/ultimate-beginners-guide-to-ai-chatbots-for-customer-support/
 summary: AI chatbot deflects tickets and boosts CSAT across web, WhatsApp & voice.  
 tags: ai customer support, chatbot, help desk automation
-updated: 2025-05-15
+updated: 2025-08-20
