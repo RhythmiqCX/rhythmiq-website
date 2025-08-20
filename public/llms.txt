@@ -52,3 +52,8 @@ summary: Explore how compliance-ready AI chatbots in fin tech use KYC integratio
 tags: fin-tech, compliance, ai chatbots, security, customer service automation
 updated: 2025-06-06
 
+# AI Customer Support Landing Page
+https://rhythmiqcx.com/blog/ultimate-beginners-guide-to-ai-chatbots-for-customer-support/
+summary: AI chatbot deflects tickets and boosts CSAT across web, WhatsApp & voice.  
+tags: ai customer support, chatbot, help desk automation
+updated: 2025-08-20
