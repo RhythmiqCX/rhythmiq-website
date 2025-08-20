@@ -9,7 +9,7 @@ export const metadata = {
     images: ["/images/blog/ai-guide.png"],
     type: "article",
     publishedTime: "2025-08-20",
-    authors: ["Ray"],
+    authors: ["Kat"],
   },
 };
 
@@ -41,21 +41,21 @@ const RELATED = [
       "An easy-to-understand guide to MCP servers and how they power real-world AI solutions.",
   },
   {
+    title:
+      "AI Chatbots for Fin-Tech: Winning Users",
+    href: "/blog/ai-chatbot-for-fintech-compliance",
+    imageSrc: "/images/blog/fintech-chatbots-compliance.jpeg",
+    date: "June 6, 2025",
+    description:
+      "Learn how compliance-ready AI chatbots can build trust, ensure security, and drive growth in the fin-tech industry.",
+  },
+  {
     title: "Calculating ROI on Your AI Chatbot in 4 Simple Steps",
     href: "/blog/calculating-roi-on-your-ai-chatbot",
     imageSrc: "/images/blog/ai-chatbot-roi.jpeg",
     date: "May 22, 2025",
     description:
       "Quickly estimate your AI chatbot’s cost savings and ROI using our easy four-step guide.",
-  },
-  {
-    title:
-      "Customer-Service AI: 7 Automation Workflows That Save 30+ Hours/Week",
-    href: "/blog/customer-service-ai-workflows",
-    imageSrc: "/images/blog/customer-service-ai-workflows.jpeg",
-    date: "May 21, 2025",
-    description:
-      "Discover seven AI-driven workflows to automate your customer service and save your team over 30 hours weekly.",
   },
 ];
 
@@ -64,9 +64,9 @@ export default function AIChatbotBlogPage() {
     <BlogLayout
       category={{ href: "/blog/category/tech", label: "Tech" }}
       date="2025-08-20"
-      title="AI Chatbots in Customer Support: What, Why, and How"
+      title="Ultimate Beginners Guide to AI Chatbots for Customer Support"
       excerpt="A friendly guide to understanding AI chatbots and how they’re transforming customer support."
-      authors={[{ avatar: "/icons/icon.png", name: "Kat" }]}
+      authors={[{ avatar: "/icons/kat_icon.jpg", name: "Kat" }]}
       readingTime={10}
       heroImage={{
         src: "/images/blog/ai-guide.png",
@@ -351,15 +351,24 @@ export default function AIChatbotBlogPage() {
           strategically.
         </p>
 
-        <p>
-          <strong>Want to see how it works in your business?</strong> Visit{" "}
-          <a href="https://rhythmiqcx.com" className="text-indigo-600 underline">
-            RhythmiqCX
-          </a>{" "}
-          today to <strong>book a free demo</strong>. Discover how our
-          AI-powered platform helps teams reduce ticket volume, improve response
-          times, and deliver personalized support without extra overhead.
-        </p>
+<div className="my-8 p-6 border border-gray-300 rounded-2xl shadow-sm text-center">
+  <p className="mb-2">
+    <strong>Want to see how it works in your business?</strong>
+  </p>
+  <p>
+    Visit{" "}
+    <a
+      href="https://rhythmiqcx.com"
+      className="underline hover:text-indigo-600 transition"
+    >
+      RhythmiqCX
+    </a>{" "}
+    today to <strong>book a free demo</strong>. Discover how our
+    AI-powered platform helps teams reduce ticket volume, improve response
+    times, and deliver personalized support without extra overhead.
+  </p>
+</div>
+
 
         <p>
           AI isn’t the future it’s happening now. Let RhythmiqCX help you take
