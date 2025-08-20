@@ -2,7 +2,7 @@ import BlogLayout from "@/components/marketing/BlogLayout";
 
 export const metadata = {
   title:
-    "Ultimate Beginners guide to AI chatbots for customer support - Rhythmiq Blog",
+    "Beginners guide to AI chatbots for customer support - Rhythmiq Blog",
   description:
     "A friendly, no-fluff explainer on AI chatbots: what they are, how they work, and why they're changing the game in customer support.",
   openGraph: {
@@ -62,10 +62,10 @@ const RELATED = [
 export default function AIChatbotBlogPage() {
   return (
     <BlogLayout
-      category={{ href: "/blog/category/tech", label: "Tech" }}
+      category={{ href: "/blog/category/customer-support", label: "Customer Support" }}
       date="2025-08-20"
-      title="Ultimate Beginners Guide to AI Chatbots for Customer Support"
-      excerpt="A friendly guide to understanding AI chatbots and how they’re transforming customer support."
+      title="Beginners Guide to AI Chatbots for Customer Support"
+      excerpt="A easy guide to understanding AI tools and chatbots and how they’re transforming customer support."
       authors={[{ avatar: "/icons/kat_icon.jpg", name: "Kat" }]}
       readingTime={10}
       heroImage={{
