@@ -26,6 +26,14 @@ const SECTIONS = [
 ];
 
 const RELATED = [
+    {
+    title: "Beginners guide to AI chatbots for customer support",
+    href: "/blog/beginners-guide-to-ai-chatbots-for-customer-support",
+    imageSrc: "/images/blog/ai-guide.png",
+    date: "August 20, 2025",
+    description:
+      "A friendly, no-fluff explainer on AI chatbots: what they are, how they work, and why they're changing the game in customer support.",
+  },
   {
     title: "What the Heck is an MCP Server, and Why Should You Care?",
     href: "/blog/what-the-heck-is-an-mcp-server",
@@ -41,15 +49,7 @@ const RELATED = [
     date: "June 6, 2025",
     description:
       "Learn how compliance-ready AI chatbots can build trust, ensure security, and drive growth in the fin-tech industry.",
-  },
-  {
-    title: "Calculating ROI on Your AI Chatbot in 4 Simple Steps",
-    href: "/blog/calculating-roi-on-your-ai-chatbot",
-    imageSrc: "/images/blog/ai-chatbot-roi.jpeg",
-    date: "May 22, 2025",
-    description:
-      "Quickly estimate your AI chatbot’s cost savings and ROI using our easy four-step guide.",
-  },
+  }
 ];
 
 export default function AIChatbotBlogPage() {
