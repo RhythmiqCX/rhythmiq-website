@@ -14,7 +14,7 @@ export const metadata = {
 };
 
 const SECTIONS = [
-  { id: "introduction", label: "Introduction: Why AI + CRM Matters" },
+  { id: "introduction", label: "Introduction" },
   { id: "do-well", label: "What AI Chatbots Do Well" },
   { id: "falls-short", label: "Where AI Chatbots Fall Short" },
   { id: "human-touch", label: "Why The Human Touch Still Matters" },
