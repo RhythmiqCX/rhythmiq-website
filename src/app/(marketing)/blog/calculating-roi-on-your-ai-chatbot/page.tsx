@@ -171,7 +171,7 @@ export default function CalculatingRoiChatbotPage() {
       <p>An AI chatbot isn't just a trend, it's a strategic investment. Even conservative estimates show strong returns, making it easy to justify the spend.</p>
 
       <p>Ready to see these savings in action? Rhythmiq's AI-powered platform can automate up to 80% of your routine support queries.</p>
-      <p className='font-semibold [&_a]:text-indigo-600'><a href="/#waitlist" className="underline">Start your free trial of Rhythmiq today →</a></p>
+      <p className='font-semibold [&_a]:text-indigo-600'><a href="https://calendly.com/ray-rhythmiqcx/30min" className="underline">Start your free trial of Rhythmiq today →</a></p>
     </BlogLayout>
   );
 }
