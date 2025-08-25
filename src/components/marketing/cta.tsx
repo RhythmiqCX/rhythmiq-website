@@ -5,11 +5,11 @@ import Link from "next/link";
 import Container from "../global/container";
 import { Button } from "../ui/button";
 import Particles from "../ui/particles";
-import WaitlistForm from "./waitlist";
+
 
 const CTA = () => {
     return (
-        <div id="waitlist" className="relative flex flex-col items-center justify-center w-full py-20">
+        <div className="relative flex flex-col items-center justify-center w-full py-20">
             <Container className="py-20 max-w-6xl mx-auto">
                 <div className="relative flex flex-col items-center justify-center py-12 lg:py-20 px-0 rounded-2xl lg:rounded-3xl bg-background/20 text-center border border-foreground/20 overflow-hidden">
                     <Particles
@@ -47,12 +47,12 @@ const CTA = () => {
                     <p className="text-sm md:text-lg text-center text-accent-foreground/80 max-w-2xl mx-auto mt-4">
                         Transform your support with AI-powered automation. Resolve Issues faster, without human intervention <span className="hidden lg:inline">and automate support.</span>
                     </p> <br/>
-                    {/* <Link href="#pricing" className="mt-8">
+                    <Link href="https://calendly.com/ray-rhythmiqcx/30min" className="mt-8">
                         <Button size="lg">
                             Let&apos;s get started
                         </Button>
-                    </Link> */}
-                    <WaitlistForm/>
+                    </Link>
+
                 </div>
             </Container>
         </div>
