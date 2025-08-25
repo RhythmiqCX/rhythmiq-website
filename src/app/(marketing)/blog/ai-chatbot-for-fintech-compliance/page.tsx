@@ -45,7 +45,7 @@ export default function FinTechChatbotsTrustPage() {
       title="AI Chatbots for Fin Tech: Winning Users' Trust with Compliance-Ready Bots"
       excerpt="Learn how compliance-ready AI chatbots can build trust, ensure security, and drive growth in the fin-tech industry."
       authors={[{ avatar: '/icons/icon.png', name: 'Ray' }]}
-      readingTime={10}
+      readingTime={12}
       heroImage={{ src: '/images/blog/fintech-chatbots-compliance.jpeg', alt: 'Fin Tech AI Chatbots' }}
       sections={SECTIONS}
       relatedArticles={RELATED}
