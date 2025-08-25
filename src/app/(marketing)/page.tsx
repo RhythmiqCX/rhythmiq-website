@@ -7,7 +7,7 @@ import Hero from "@/components/marketing/hero";
 import Integration from "@/components/marketing/integration";
 import LanguageSupport from "@/components/marketing/lang-support";
 import Pricing from "@/components/marketing/pricing";
-import WaitlistForm from "@/components/marketing/waitlist";
+
 
 const HomePage = () => {
     return (
