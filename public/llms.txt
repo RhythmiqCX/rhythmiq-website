@@ -58,8 +58,8 @@ summary: AI chatbot deflects tickets and boosts CSAT across web, WhatsApp & voic
 tags: ai customer support, chatbot, help desk automation
 updated: 2025-08-20
 
-#AI + CRM Integration Guide
-https://rhythmiqcx.com/blog/ai-in-crm/
-summary: A practical, opinionated guide to connecting AI with your CRM to boost CSAT and ROI—covers architecture, workflows, security, and tools like Salesforce Einstein, HubSpot AI, Zoho Zia, Dynamics 365 AI & Freshworks Freddy.
-tags: ai in crm, crm integration, customer experience, csat, roi, salesforce einstein, hubspot ai, zoho zia, dynamics 365 ai
-updated: 2025-08-22
+# Why “I Don’t Know” Makes AI Chatbots More Trustworthy for Customer Support  
+https://rhythmiqcx.com/blog/25-08/  
+summary: A fun, strongly opinionated take on why humility makes AI chatbots better for customer support—explores the problem of hallucinations, ethics of honesty vs. confidence, practical limits, and how models like GPT-5, Claude 3, and Gemini 1.5 are reshaping trust and workflows.  
+tags: ai chatbots, customer support, ai ethics, trust in ai, gpt-5, claude 3, gemini 1.5, ai hallucinations, conversational ai, csat  
+updated: 2025-08-25
