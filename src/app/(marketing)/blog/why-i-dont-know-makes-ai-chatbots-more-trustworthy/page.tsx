@@ -63,7 +63,7 @@ export default function AIChatbotBlogPage() {
       title="Why “I Don’t Know” Makes AI Chatbots More Trustworthy for Customer Support."
       excerpt="AI chatbots are finally learning to admit when they don’t have the answer. Instead of hallucinating or misleading users, the best models now say “I don’t know”   a small change that could transform trust in customer support. Here’s why honesty is becoming AI’s most powerful feature."
       authors={[{ avatar: "/icons/kat_icon.jpg", name: "Kat" }]}
-      readingTime={10}
+      readingTime={12}
       heroImage={{
         src: "/images/blog/25-08.png", // Replace with actual image path
         alt: "AI Chatbot Illustration",
