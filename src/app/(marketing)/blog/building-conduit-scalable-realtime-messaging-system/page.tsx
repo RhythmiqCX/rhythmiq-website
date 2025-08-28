@@ -58,7 +58,7 @@ export default function AIChatbotBlogPage() {
     <BlogLayout
       category={{
         href: "/blog/category/tech",
-        label: "Technology",
+        label: "Tech",
       }}
       date="2025-08-27"
       title="Building Conduit: The Scalable, Real-Time Messaging Engine Powering RhythmiqCX  "

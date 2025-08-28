@@ -49,7 +49,19 @@ export default function RootLayout({
                             `,
                         }}
                         /> */}
-                        <script src="http://localhost:8080/widget-loader.js"></script>
+                        {/* <script
+                            // eslint-disable-next-line react/no-danger
+                            dangerouslySetInnerHTML={{
+                                __html: `
+                            (function(d,t){
+                            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                            g.src="http://localhost:8080/widget-loader.js?websiteToken=ovjh2mJC6MdroZcbph_FYWGm";
+                            g.defer=true;g.async=true;
+                            s.parentNode.insertBefore(g,s);
+                            })(document,"script");
+                            `,
+                            }}
+                        /> */}
             </body>
         </html>
     );
