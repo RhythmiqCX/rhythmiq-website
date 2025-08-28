@@ -63,3 +63,9 @@ https://rhythmiqcx.com/blog/25-08/
 summary: A fun, strongly opinionated take on why humility makes AI chatbots better for customer support—explores the problem of hallucinations, ethics of honesty vs. confidence, practical limits, and how models like GPT-5, Claude 3, and Gemini 1.5 are reshaping trust and workflows.  
 tags: ai chatbots, customer support, ai ethics, trust in ai, gpt-5, claude 3, gemini 1.5, ai hallucinations, conversational ai, csat  
 updated: 2025-08-25
+
+# Building Conduit: The Scalable, Real-Time Messaging Engine Powering RhythmiqCX
+https://rhythmiqcx.com/blog/building-conduit/
+summary: Conduit is a scalable, real time messaging  engiine built using opensource technologies like FastAPI, postresql, etc to power Rhthymiqcx.
+tags: Tech, open-source, customer support, development, whitepaper
+updated: 2025-08-28

@@ -114,7 +114,7 @@ const Footer = () => {
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                        <Link href="/privacy-policy" className="link hover:text-foreground transition-all duration-300">
                                             Privacy Policy
                                         </Link>
                                     </li>
