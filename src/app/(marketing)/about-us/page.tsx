@@ -17,19 +17,19 @@ export default function AboutUs() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-invert max-w-none">
               <p>
-    At rhthymiqcx, we believe world-class customer support is the foundation of lasting business success. 
+    At RhythmiqCX, we believe world-class customer support is the foundation of lasting business success. 
     Our mission is helping organizations of all sizes deliver experiences that delight customers and 
     strengthen loyalty. From seamless omnichannel service to cutting-edge automation and analytics, 
     we provide everything you need to support your customers with confidence.
   </p>
   <p>
-    We are engineers at heart, and that principle drives everything we do. We approach every challenge 
+    We are Engineers at heart, and that principle drives everything we do. We approach every challenge 
     with precision, creativity, and a problem-solving mindset to design solutions that are not only 
     effective today but scalable for tomorrow. Our dedication to quality engineering ensures reliability, 
     innovation, and long-term value for our clients.
   </p>
   <p>
-    Our mission : to deliver the best customer support solutions possible. By combining technical 
+    Our mission is to deliver the best customer support solutions. By combining technical 
     excellence with deep customer experience expertise, we create systems that are efficient, adaptable, 
     and impactful. Partner with us, and together we’ll transform the way you engage with your customers.
   </p>

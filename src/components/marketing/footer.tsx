@@ -33,7 +33,7 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                    <Link href="/ai-chatbot-pricing" className="link hover:text-foreground transition-all duration-300">
                                         Pricing
                                     </Link>
                                 </li>
@@ -86,7 +86,7 @@ const Footer = () => {
                             </h3>
                             <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                    <Link href="/blog" className="link hover:text-foreground transition-all duration-300">
                                         Blog
                                     </Link>
                                 </li>
@@ -96,7 +96,7 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                    <Link href="/contact-us" className="link hover:text-foreground transition-all duration-300">
                                         Support
                                     </Link>
                                 </li>

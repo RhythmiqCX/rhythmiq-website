@@ -66,7 +66,7 @@ updated: 2025-08-25
 
 # Building Conduit: The Scalable, Real-Time Messaging Engine Powering RhythmiqCX
 https://rhythmiqcx.com/blog/building-conduit/
-summary: Conduit is a scalable, real time messaging  engiine built using opensource technologies like FastAPI, postresql, etc to power Rhthymiqcx.
+summary: Conduit is a scalable, real time messaging  engiine built using opensource technologies like FastAPI, postresql, etc to power RhythmiqCX.
 tags: Tech, open-source, customer support, development, whitepaper
 updated: 2025-08-28
 
