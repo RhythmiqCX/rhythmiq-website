@@ -69,3 +69,9 @@ https://rhythmiqcx.com/blog/building-conduit/
 summary: Conduit is a scalable, real time messaging  engiine built using opensource technologies like FastAPI, postresql, etc to power Rhthymiqcx.
 tags: Tech, open-source, customer support, development, whitepaper
 updated: 2025-08-28
+
+# Emotions in AI: Can Machines Truly Care in Customer Support?  
+https://rhythmiqcx.com/blog/emotions-in-ai-customer-support/  
+summary: Exploring whether AI can truly replicate human empathy in customer support, covering emotional intelligence, AI’s current abilities, its limitations, and the future of hybrid human-AI models.  
+tags: AI, customer support, empathy, emotional intelligence, future of work  
+updated: 2025-08-29 
