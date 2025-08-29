@@ -49,7 +49,7 @@ export default function RootLayout({
                             `,
                         }}
                         /> */}
-                        <script
+                        {/* <script
                             // eslint-disable-next-line react/no-danger
                             dangerouslySetInnerHTML={{
                                 __html: `
@@ -60,6 +60,21 @@ export default function RootLayout({
                             s.parentNode.insertBefore(g,s);
                             })(document,"script");
                             `,
+                            }}
+                        /> */}
+                        <script
+                            // eslint-disable-next-line react/no-danger
+                            dangerouslySetInnerHTML={{
+                                __html: `
+                                !function(key) {
+                                    if (window.reb2b) return;
+                                    window.reb2b = {loaded: true};
+                                    var s = document.createElement("script");
+                                    s.async = true;
+                                    s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";
+                                    document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);
+                                }("Q6J2RHY01E6D");
+                                `
                             }}
                         />
             </body>
