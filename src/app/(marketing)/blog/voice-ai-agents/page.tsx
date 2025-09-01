@@ -15,12 +15,12 @@ export const metadata = {
 
 const SECTIONS = [
   { id: "introduction", label: "Introduction" },
-  { id: "h2", label: "From Switchboards to Smart Voices" },
-  { id: "h3", label: "Why Businesses Are Betting Big on AI Receptionists" },
-  { id: "h4", label: "The Tech Behind the Voices" },
-  { id: "h5", label: "How AI Voice Agents Redefine Customer Support" },
-  { id: "h6", label: "Challenges" },
-  { id:"h7", label:"AI as the Frontline, Humans as the Specialists"},
+  { id: "from-switchboards-to-smart-voices", label: "From Switchboards to Smart Voices" },
+  { id: "why-businesses-are-betting-big-on-ai-receptionists", label: "Why Businesses Are Betting Big on AI Receptionists" },
+  { id: "the-tech-behind-the-voices", label: "The Tech Behind the Voices" },
+  { id: "how-ai-voice-agents-redefine-customer-support", label: "How AI Voice Agents Redefine Customer Support" },
+  { id: "challenges", label: "Challenges" },
+  { id:"ai-as-the-frontline-humans-as-the-specialists", label:"AI as the Frontline, Humans as the Specialists"},
   { id: "conclusion", label: "First Hello, Lasting Impact" },
   {id:"FAQ", label:"FAQ"}
 ];
@@ -100,7 +100,7 @@ export default function AIChatbotBlogPage() {
   </p>
       </div>
 
-      <h2 id="h2" className="scroll-mt-16">
+      <h2 id="from-switchboards-to-smart-voices" className="scroll-mt-16">
         From Switchboards to Smart Voices: How We Got Here
       </h2>
       <div>
@@ -125,7 +125,7 @@ export default function AIChatbotBlogPage() {
   </p>
       </div>
 
-      <h2 id="h3" className="scroll-mt-16">
+      <h2 id="why-businesses-are-betting-big-on-ai-receptionists" className="scroll-mt-16">
         Why Businesses Are Betting Big on AI Receptionists
       </h2>
       <div>
@@ -151,7 +151,7 @@ export default function AIChatbotBlogPage() {
   </p>
       </div>
 
-      <h2 id="h4" className="scroll-mt-16">
+      <h2 id="the-tech-behind-the-voices" className="scroll-mt-16">
         The Tech Behind the Voices
       </h2>
 
@@ -181,7 +181,7 @@ export default function AIChatbotBlogPage() {
   </p>
       </div>
 
-      <h2 id="h5">How AI Voice Agents Redefines Customer Support</h2>
+      <h2 id="how-ai-voice-agents-redefine-customer-support">How AI Voice Agents Redefines Customer Support</h2>
       <div>
           <p>
     First impressions matter more than most businesses admit. You can have the
@@ -204,7 +204,7 @@ export default function AIChatbotBlogPage() {
   </p>
       </div>
 
-      <h2 id="h6" className="scroll-mt-16">
+      <h2 id="challenges" className="scroll-mt-16">
         But Not All is Smooth Sailing : Challenges
       </h2>
       <div>
@@ -230,7 +230,7 @@ export default function AIChatbotBlogPage() {
   </p>
       </div>
       
-      <h2 id="h7" className="scroll-mt-16">
+      <h2 id="ai-as-the-frontline-humans-as-the-specialists" className="scroll-mt-16">
         The Future: AI as the Frontline, Humans as the Specialists
       </h2>
       <div>
