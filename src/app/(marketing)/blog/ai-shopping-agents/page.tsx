@@ -93,7 +93,7 @@ export default function AIChatbotBlogPage() {
       This isn’t some quiet shift; it’s a full-blown
       <strong>AI shopping revolution</strong>. These
       <strong>autonomous shopping</strong> tools are reshaping the very
-      <strong>future of e-commerce</strong>. And here’s the brutal truth:
+      <strong> future of e-commerce</strong>. And here’s the brutal truth:
       retailers who don’t adapt won’t just fall behind they’ll vanish. If your
       store isn’t ready for bots to read it, you might as well be invisible.
     </p>
