@@ -62,7 +62,7 @@ export default function RootLayout({
                             `,
                             }}
                         /> */}
-                        {/* <script
+                        <script
                             // eslint-disable-next-line react/no-danger
                             dangerouslySetInnerHTML={{
                                 __html: `
@@ -76,7 +76,7 @@ export default function RootLayout({
                                 }("Q6J2RHY01E6D");
                                 `
                             }}
-                        /> */}
+                        />
             </body>
         </html>
     );
