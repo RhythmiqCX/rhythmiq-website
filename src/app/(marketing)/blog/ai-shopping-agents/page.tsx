@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "AI shopping agents are transforming e-commerce from endless scrolling into frictionless, personalized buying.",
       openGraph: {
-    images: ["/images/blog/1-9.png"], // Replace with actual image path
+    images: ["/images/blog/1-9.jpg"], // Replace with actual image path
     type: "article",
     publishedTime: "2025-09-01",
     authors: ["Kat"],
@@ -15,12 +15,12 @@ export const metadata = {
 
 const SECTIONS = [
   { id: "introduction", label: "Introduction: Replicating emotions" },
-  { id: "h2", label: "What Are AI Shopping Agents?" },
-  { id: "h3", label: "Why Consumers Will Flock to Them" },
-  { id: "h4", label: "Retailers: Invisible Unless Optimized" },
-  { id: "h5", label: "How These Agents Actually Work" },
-  { id: "h6", label: "Risks Retailers Can’t Ignore" },
-  { id:"h7", label:"The Future: Conversational Commerce as Default"},
+  { id: "what-are-ai-shopping-agents", label: "What Are AI Shopping Agents?" },
+  { id: "why-customers-will-flock-to-them", label: "Why Consumers Will Flock to Them" },
+  { id: "retailers-invisible-unless-optimized", label: "Retailers: Invisible Unless Optimized" },
+  { id: "how-these-agents-actually-work", label: "How These Agents Actually Work" },
+  { id: "risk-retailers-cant-ignore", label: "Risks Retailers Can’t Ignore" },
+  { id:"future", label:"The Future: Conversational Commerce as Default"},
   { id: "conclusion", label: "Verdict" },
   {id:"FAQ", label:"FAQ"}
 ];
@@ -57,8 +57,8 @@ export default function AIChatbotBlogPage() {
   return (
     <BlogLayout
       category={{
-        href: "/blog/category/tech",
-        label: "Tech",
+        href: "/blog/category/general",
+        label: "General",
       }}
       date="2025-09-01"
       title="Rise of AI Shopping Agents: How They’re Reshaping E-commerce"
@@ -66,7 +66,7 @@ export default function AIChatbotBlogPage() {
       authors={[{ avatar: "/icons/kat_icon.jpg", name: "Kat" }]}
       readingTime={7}
       heroImage={{
-        src: "/images/blog/1-9.png", // Replace with actual image path
+        src: "/images/blog/1-9.jpg", // Replace with actual image path
         alt: "AI Chatbot Illustration",
       }}
       sections={SECTIONS}
@@ -93,13 +93,13 @@ export default function AIChatbotBlogPage() {
       This isn’t some quiet shift; it’s a full-blown
       <strong>AI shopping revolution</strong>. These
       <strong>autonomous shopping</strong> tools are reshaping the very
-      <strong>future of e-commerce</strong>. And here’s the brutal truth:
+      <strong> future of e-commerce</strong>. And here’s the brutal truth:
       retailers who don’t adapt won’t just fall behind they’ll vanish. If your
       store isn’t ready for bots to read it, you might as well be invisible.
     </p>
       </div>
 
-      <h2 id="h2" className="scroll-mt-16">
+      <h2 id="what-are-ai-shopping-agents" className="scroll-mt-16">
         What Are AI Shopping Agents?
       </h2>
       <div>
@@ -120,7 +120,7 @@ export default function AIChatbotBlogPage() {
     </p>
       </div>
 
-      <h2 id="h3" className="scroll-mt-16">
+      <h2 id="why-customers-will-flock-to-them" className="scroll-mt-16">
         Why Consumers Will Flock to Them
       </h2>
       <div>
@@ -144,7 +144,7 @@ export default function AIChatbotBlogPage() {
     </p>
       </div>
 
-      <h2 id="h4" className="scroll-mt-16">
+      <h2 id="retailers-invisible-unless-optimized" className="scroll-mt-16">
         Retailers: Invisible Unless Optimized
       </h2>
 
@@ -170,7 +170,7 @@ export default function AIChatbotBlogPage() {
     </p>
       </div>
 
-      <h2 id="h5">How These Agents Actually Work</h2>
+      <h2 id="how-these-agents-actually-work">How These Agents Actually Work</h2>
       <div>
         <p>
       Let’s clear the air: <em>AI shopping isn’t magic</em>. It’s algorithms
@@ -195,7 +195,7 @@ export default function AIChatbotBlogPage() {
     </p>
       </div>
 
-      <h2 id="h6" className="scroll-mt-16">
+      <h2 id="risk-retailers-cant-ignore" className="scroll-mt-16">
         Risks Retailers Can’t Ignore
       </h2>
       <div>
@@ -220,7 +220,7 @@ export default function AIChatbotBlogPage() {
     </p>
       </div>
       
-      <h2 id="h7" className="scroll-mt-16">
+      <h2 id="future" className="scroll-mt-16">
         The Future: Conversational Commerce as Default
       </h2>
       <div>
