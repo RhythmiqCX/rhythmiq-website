@@ -75,3 +75,15 @@ https://rhythmiqcx.com/blog/emotions-in-ai-customer-support/
 summary: Exploring whether AI can truly replicate human empathy in customer support, covering emotional intelligence, AI’s current abilities, its limitations, and the future of hybrid human-AI models.  
 tags: AI, customer support, empathy, emotional intelligence, future of work  
 updated: 2025-08-29 
+
+# Rise of AI Shopping Agents
+https://rhythmiqcx.com/blog/ai-shopping-agents
+summary: AI shopping agents are transforming e-commerce from endless scrolling into frictionless, personalized buying. These intelligent assistants search products, compare options, add items to carts, and even complete purchases.
+tags : tech, sales, voice-ai, multi language ai, customer support
+updated: 2025-09-01
+
+# AI Voice Agents & Virtual Receptionists
+https://rhythmiqcx.com/blog/voice-ai-agents/
+summary: AI voice agents are taking over the first “hello” in customer support. Always available, multi-language, and document-trained, they cut costs for businesses and deliver instant, consistent service for customers
+tags : AI, tech, voice-ai, customer support, ai ethics
+updated: 2025-09-03
