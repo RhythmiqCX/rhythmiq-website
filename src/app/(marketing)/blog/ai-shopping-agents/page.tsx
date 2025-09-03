@@ -152,7 +152,6 @@ export default function AIChatbotBlogPage() {
       <h2 id="retailers-invisible-unless-optimized" className="scroll-mt-16">
         Retailers: Invisible Unless Optimized
       </h2>
-
       <div>
         <p>
           Here’s the part most retailers don’t want to hear: if you don’t
@@ -267,6 +266,7 @@ export default function AIChatbotBlogPage() {
           because invisibility equals irrelevance.
         </p>
       </div>
+
       <h2 id="FAQ" className="scroll-mt-16">
         Frequently Asked Questions (FAQ)
       </h2>
@@ -314,6 +314,7 @@ export default function AIChatbotBlogPage() {
           embrace autonomous e-commerce will lead; others risk invisibility.
         </p>
       </div>
+
     </BlogLayout>
   );
 }
