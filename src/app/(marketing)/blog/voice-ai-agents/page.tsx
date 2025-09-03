@@ -29,7 +29,7 @@ const RELATED = [
   {
     title: "Rise of AI Shopping Agents: How They’re Reshaping E-commerce",
     href: "/blog/ai-shopping-agents",
-    imageSrc: "/images/blog/1-9.png",
+    imageSrc: "/images/blog/1-9.jpg",
     date: "September 1, 2025",
     description:
       "AI shopping agents are transforming e-commerce from endless scrolling into frictionless, personalized buying.",
@@ -82,20 +82,20 @@ export default function AIChatbotBlogPage() {
       </h2>
       <div>
           <p>
-    <strong>First impressions are everything in customer </strong> That might sound dramatic, but
+    First impressions are everything in customer  That might sound dramatic, but
     think about it when was the last time you called a company and thought,
     “Wow, that greeting was smooth”? For most of us, it’s a rare moment. Now
     imagine this: it’s 2 AM, a frustrated customer calls in Spanish about a
-    weird billing issue, and an <strong>AI voice agent</strong> answers with perfect
+    weird billing issue, and an AI voice agent answers with perfect
     fluency, calmly sorts the problem, and even sends a confirmation email 
     all before a human would have finished saying “Your call is important to
     us.” That’s not science fiction; it’s happening now.
   </p>
   <p>
-    These <strong>virtual receptionists</strong> are becoming the new “front door” for
-    <strong>customer support innovation</strong>. First impressions set the tone for the
+    These virtual receptionists are becoming the new “front door” for
+    customer support innovation. First impressions set the tone for the
     entire customer journey. A single positive call builds trust faster than ten
-    follow-up emails. And in the <strong>future of call centers</strong>, where automation
+    follow-up emails. And in the future of call centers, where automation
     decides who thrives, those first impressions will make or break a brand.
   </p>
       </div>
@@ -114,13 +114,13 @@ export default function AIChatbotBlogPage() {
   <p>
     Then came chatbots better, but still robotic. They gave answers, not
     conversations. But here’s where it gets exciting: today’s
-    <strong>conversational AI</strong> has evolved into <strong>intelligent voice assistants</strong> that
+    conversational AI has evolved into intelligent voice assistants that
     actually understand context, respond naturally, and even switch
     languages mid-call. No more robotic tones, no more rigid menus.
   </p>
   <p>
-    And let’s be clear this isn’t just “IVR 2.0.” <strong>AI in customer support</strong> with
-    <strong>natural language voice bots</strong> is a revolution. We’ve gone from
+    And let’s be clear this isn’t just “IVR 2.0.” AI in customer support with
+    natural language voice bots is a revolution. We’ve gone from
     machines that block conversations to machines that start them.
   </p>
       </div>
@@ -130,22 +130,22 @@ export default function AIChatbotBlogPage() {
       </h2>
       <div>
         <p>
-    Let’s talk business math. An <strong>AI receptionist</strong> doesn’t call in sick. It
+    Let’s talk business math. An AI receptionist doesn’t call in sick. It
     doesn’t take coffee breaks. It doesn’t get flustered when five calls come
     in at once. It simply works 24/7, across time zones, across languages.
   </p>
   <p>
     I’ve seen it firsthand. One night our phone lines lit up because of a
     billing error. Normally, that would’ve meant chaos long wait times,
-    stressed agents, unhappy customers. Instead, the <strong>AI call handling</strong>
+    stressed agents, unhappy customers. Instead, the AI call handling
     system filtered the mess. Straightforward queries got solved instantly,
     and only the complicated cases reached human agents. No one burned out,
     and customers actually left <em>happy</em>. That’s rare in a billing crisis.
   </p>
   <p>
     Add to that the cost savings versus hiring a full reception team, plus the
-    fact that <strong>virtual customer service</strong> can scale instantly, and the logic is
-    obvious. <strong>Automated voice support</strong> isn’t just nice-to-have; it’s survival
+    fact that virtual customer service can scale instantly, and the logic is
+    obvious. Automated voice support isn’t just nice-to-have; it’s survival
     gear for modern companies. Customers expect it, and if you don’t offer
     it your competitor will.
   </p>
@@ -159,9 +159,9 @@ export default function AIChatbotBlogPage() {
         <p>
     So how do these voices actually work? Spoiler: it’s not magic it’s
     technology layered in just the right way. Start with
-    <strong>speech recognition</strong> (so the system can understand you). Add
-    <strong>large language models</strong> (so it knows how to respond intelligently). Then
-    finish with <strong>text-to-speech</strong> that’s polished enough to sound human, not
+    speech recognition (so the system can understand you). Add
+    large language models (so it knows how to respond intelligently). Then
+    finish with text-to-speech that’s polished enough to sound human, not
     robotic.
   </p>
   <p>
@@ -169,13 +169,13 @@ export default function AIChatbotBlogPage() {
     everything; they’re fed your company’s docs, policies, FAQs, and even tone
     guidelines. We uploaded our help center into an agent once, and within
     hours it was answering edge cases better than some of our newer team
-    members. That’s the power of <strong>virtual agent technology</strong>.
+    members. That’s the power of virtual agent technology.
   </p>
   <p>
     Personalization is the cherry on top. You can pick accents, voice tone,
     even simulate empathy so the customer feels understood. Companies like
     Zoom Virtual Agent, Interactions, and PolyAI are already pushing this
-    boundary. And honestly? <strong>Speech AI</strong> has gotten so good that sometimes I
+    boundary. And honestly? Speech AI has gotten so good that sometimes I
     have to remind myself: this is <em>customer support automation</em>, not a human
     rep.
   </p>
@@ -189,18 +189,18 @@ export default function AIChatbotBlogPage() {
     elevator music and a 15-minute wait, they’ve already formed an opinion.
   </p>
   <p>
-    This is where <strong>AI first impressions</strong> shine. Imagine instant pickup 
+    This is where AI first impressions shine. Imagine instant pickup 
     no hold music, no awkward pauses. Every greeting is polite, professional,
-    and consistent because <strong>customer experience automation</strong> doesn’t get
+    and consistent because customer experience automation doesn’t get
     tired or cranky. It’s the digital equivalent of always having your best
     employee at the front desk, ready to help at a moment’s notice.
   </p>
   <p>
-    Better yet, these <strong>AI customer support tools</strong> connect seamlessly
+    Better yet, these AI customer support tools connect seamlessly
     across channels. Call, chat, or even email the handoff feels natural,
     like you’re talking to the same assistant everywhere. And let’s be blunt:
     customers <em>do</em> judge companies by that first hello. With
-    <strong>conversational customer service</strong>, AI nails it every single time.
+    conversational customer service, AI nails it every single time.
   </p>
       </div>
 
@@ -215,17 +215,17 @@ export default function AIChatbotBlogPage() {
     trust takes a hit.
   </p>
   <p>
-    Then there’s emotion. <strong>AI limitations in customer support</strong> mean
+    Then there’s emotion. AI limitations in customer support mean
     complex, emotionally charged cases like a grieving customer or someone in
     panic still demand a human touch. Pretending otherwise is dangerous. Add in
-    <strong>ethical AI</strong> concerns like data privacy, compliance, and recording
+    ethical AI concerns like data privacy, compliance, and recording
     consent, and it’s clear this isn’t a free pass to automate recklessly.
   </p>
   <p>
     The truth? Over-automation backfires. A smart system balances
-    <strong>voice AI challenges</strong> with live-agent empathy. Companies that see
+    voice AI challenges with live-agent empathy. Companies that see
     AI as a total replacement, not augmentation, will burn customer trust
-    faster than they can save money. <strong>Balancing AI and human support</strong> is
+    faster than they can save money. Balancing AI and human support is
     the only sustainable play.
   </p>
       </div>
@@ -243,17 +243,17 @@ export default function AIChatbotBlogPage() {
     Then, when things get complicated, humans step in as empathy-driven
     specialists. It’s the best of both worlds: speed and efficiency upfront,
     followed by nuanced, human care when it’s needed most. This
-    <strong>AI + human hybrid support</strong> model isn’t futuristic; it’s already
+     AI + human hybrid support model isn’t futuristic; it’s already
     becoming the norm.
   </p>
   <p>
     Within five years, I’d bet most first contacts in support will be handled
-    by <strong>virtual receptionist technology</strong>. These systems will plug
+    by virtual receptionist technology. These systems will plug
     directly into CRMs, ticketing platforms, and knowledge bases so smoothly
     that the line between human and machine will blur. The
-    <strong>future of AI in customer support</strong> is clear: if you’re not
+    future of AI in customer support is clear: if you’re not
     investing now, you’ll be invisible tomorrow in the world of
-    <strong>intelligent customer experience</strong>.
+    intelligent customer experience.
   </p>
       </div>
 
@@ -262,15 +262,15 @@ export default function AIChatbotBlogPage() {
       </h2>
       <div>
         <p>
-    Let’s circle back. <strong>AI voice agents</strong> aren’t a gimmick they’re
+    Let’s circle back. AI voice agents aren’t a gimmick they’re
     redefining how businesses say hello. They’re the new gatekeepers of
-    <strong>customer support revolution</strong>, setting the tone before a human
+    customer support revolution, setting the tone before a human
     ever steps in. And in today’s fast-moving world, that tone is everything.
   </p>
   <p>
-    Businesses that feed these <strong>virtual receptionists</strong> with great
+    Businesses that feed these virtual receptionists with great
     data, training, and smart integration will win. Customers don’t care if
-    it’s a person or <strong>conversational AI</strong> on the other end; they only
+    it’s a person or conversational AI on the other end; they only
     care if it feels effortless. And that’s the lasting impact: trust built
     from the very first hello.
   </p>
@@ -282,14 +282,14 @@ export default function AIChatbotBlogPage() {
   <div>
     <h3>Q1: What makes AI voice agents different from IVR systems?</h3>
     <p>
-      Unlike static “Press 1, Press 2” menus, <strong>AI voice agents</strong> use
-      <strong>conversational AI</strong> to understand natural language, adapt to
+      Unlike static “Press 1, Press 2” menus, AI voice agents use
+      conversational AI to understand natural language, adapt to
       context, and provide real answers without trapping customers in a loop.
     </p>
 
     <h3>Q2: Can AI voice agents handle emotional conversations?</h3>
     <p>
-      Not fully. <strong>AI limitations in customer support</strong> mean empathy is
+      Not fully. AI limitations in customer support mean empathy is
       still best delivered by humans. However, modern systems can detect
       frustration and escalate to a live agent faster.
     </p>
@@ -297,22 +297,22 @@ export default function AIChatbotBlogPage() {
     <h3>Q3: How do virtual receptionists improve first impressions?</h3>
     <p>
       They provide instant answers, consistent tone, and zero wait time.
-      <strong>AI first impressions</strong> create trust from the first “hello,”
+      AI first impressions create trust from the first “hello,”
       something hold music will never do.
     </p>
 
     <h3>Q4: Are AI receptionists cost-effective for small businesses?</h3>
     <p>
-      Absolutely. <strong>AI customer support tools</strong> scale affordably, so
-      even small companies can offer <strong>automated voice support</strong> that
+      Absolutely. AI customer support tools scale affordably, so
+      even small companies can offer automated voice support that
       feels premium without hiring a full reception team.
     </p>
 
     <h3>Q5: What does the future of AI in customer support look like?</h3>
     <p>
-      Expect <strong>virtual receptionist technology</strong> to become the norm
+      Expect virtual receptionist technology to become the norm
       for first contact. In the near future, most initial customer interactions
-      will be handled by <strong>AI-powered voice systems</strong>, with humans
+      will be handled by AI-powered voice systems, with humans
       focusing on high-emotion, high-value cases.
     </p>
   </div>
