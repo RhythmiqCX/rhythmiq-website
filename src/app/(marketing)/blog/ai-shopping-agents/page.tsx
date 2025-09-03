@@ -224,7 +224,7 @@ export default function AIChatbotBlogPage() {
           responsibly aren’t just at risk they’re extinct.
         </p>
       </div>
-
+      
       <h2 id="future" className="scroll-mt-16">
         The Future: Conversational Commerce as Default
       </h2>
