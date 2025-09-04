@@ -1,16 +1,20 @@
 import BlogLayout from '@/components/marketing/BlogLayout';
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "AI Chatbots for Fin-Tech: Winning Users' Trust with Compliance Ready Bots - Rhythmiq Blog",
   description:
     "Learn how compliance-ready AI chatbots can build trust, ensure security, and drive growth in the fin-tech industry.",
+  alternates: {
+    canonical: "/blog/ai-chatbot-for-fintech-compliance"
+  },
   openGraph: {
     images: ['/images/blog/fintech-chatbots-compliance.jpeg'],
     type: 'article',
     publishedTime: '2025-06-06',
     authors: ['Ray'],
   },
-};
+});
 
 const SECTIONS = [
   { id: 'why-trust-currency', label: 'Why Trust is the Currency of Fin-Tech' },

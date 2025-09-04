@@ -1,17 +1,21 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title:
-    "AI in CRM: The Game-Changer Driving Higher ROI, CSAT, and Smarter Customer Experiences” - Rhythmiq Blog",
+    "Will AI Replace Humans in Customer Support? The Real Answer - Rhythmiq Blog",
   description:
-    "Discover how AI in CRM transforms customer experience by killing data silos, boosting ROI, and skyrocketing CSAT. Learn why syncing tools like Salesforce Einstein, HubSpot AI, and Zoho Zia with your CRM is the smartest move for sales, marketing, and support teams in 2025.",
+    "Will AI replace humans in customer support? The real answer is more nuanced than you think. Discover where AI excels, where humans are irreplaceable, and how to build the perfect hybrid team.",
+  alternates: {
+    canonical: "/blog/will-ai-replace-humans-in-customer-support"
+  },
   openGraph: {
     images: ["/images/blog/23-08.png"], // Replace with actual image path
     type: "article",
     publishedTime: "2025-08-23",
     authors: ["Kat"],
   },
-};
+});
 
 const SECTIONS = [
   { id: "introduction", label: "Introduction" },

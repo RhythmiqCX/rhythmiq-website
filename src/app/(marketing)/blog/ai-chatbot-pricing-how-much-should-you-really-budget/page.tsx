@@ -1,16 +1,20 @@
 import BlogLayout from '@/components/marketing/BlogLayout';
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "AI Chatbot Pricing: How Much Should You Really Budget in 2025? - Rhythmiq Blog",
   description:
     "Explore pricing models for AI chatbots in 2025—including subscription-based, usage-based, and premium solutions—to help you budget effectively.",
+  alternates: {
+    canonical: "/blog/ai-chatbot-pricing-how-much-should-you-really-budget"
+  },
   openGraph: {
     images: ['/images/blog/conversational-ai-vs-traditional.jpg'],
     type: 'article',
     publishedTime: '2025-05-20',
     authors: ["Ray"],
   },
-};
+});
 
 const PRICING_SECTIONS = [
   { id: 'understanding-pricing-structure', label: 'Understanding the Pricing Structure of AI Chatbots' },

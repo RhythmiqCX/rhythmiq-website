@@ -1,20 +1,20 @@
 // app/(marketing)/ai-chatbot-pricing/page.tsx
-import { Metadata } from 'next';
 import Container from '@/components/global/container';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from 'lucide-react';
 import Link from 'next/link';
 import ImageTextSection from '@/components/marketing/imagetext';
 import Pricing from '@/components/marketing/pricing';
+import { generateMetadata } from '@/utils';
 
-export const metadata: Metadata = {
+export const metadata = generateMetadata({
   title: 'AI Chatbot Pricing 2025 | Costs, ROI & Vendor Comparison',
   description:
     'Full 2025 breakdown of Rhythmiq AI chatbot pricing. Compare license fees, hosting, WhatsApp BSP charges and total cost of ownership before you buy.',
   alternates: {
     canonical: '/ai-chatbot-pricing',
   },
-};
+});
 
 export default function AIChatbotPricingPage() {
   return (

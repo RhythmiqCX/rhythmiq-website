@@ -1,19 +1,19 @@
 // app/(marketing)/conversational-ai-chatbot/page.tsx
-import { Metadata } from 'next';
 import Container from '@/components/global/container';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from 'lucide-react';
 import Link from 'next/link';
 import ImageTextSection from '@/components/marketing/imagetext';
+import { generateMetadata } from '@/utils';
 
-export const metadata: Metadata = {
+export const metadata = generateMetadata({
   title: 'Conversational AI Chatbot | Build Natural Dialogues that Convert',
   description:
     'Learn what conversational AI is, how chatbots use large language models, and step-by-step instructions to deploy a production ready conversational AI platform in 2025.',
   alternates: {
     canonical: '/conversational-ai-chatbot',
   },
-};
+});
 
 export default function ConversationalAIChatbotPage() {
   return (

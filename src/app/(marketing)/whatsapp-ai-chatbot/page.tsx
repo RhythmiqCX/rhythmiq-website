@@ -1,19 +1,19 @@
 // app/(marketing)/whatsapp-ai-chatbot/page.tsx
-import { Metadata } from 'next';
 import Container from '@/components/global/container';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from 'lucide-react';
 import Link from 'next/link';
 import ImageTextSection from '@/components/marketing/imagetext';
+import { generateMetadata } from '@/utils';
 
-export const metadata: Metadata = {
+export const metadata = generateMetadata({
   title: 'WhatsApp AI Chatbot | Automate Customer Support on WhatsApp Business API',
   description:
     'Step by step 2025 guide to building a WhatsApp AI chatbot. Learn approval, pricing, templates, and launch flows that deflect tickets and drive 5x higher engagement.',
   alternates: {
     canonical: '/whatsapp-ai-chatbot',
   },
-};
+});
 
 export default function WhatsAppAIChatbotPage() {
   return (

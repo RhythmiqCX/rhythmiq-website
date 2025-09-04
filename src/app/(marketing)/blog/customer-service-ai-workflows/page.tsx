@@ -1,16 +1,20 @@
 // app/(marketing)/blog/customer-service-ai-workflows.tsx
 import BlogLayout from '@/components/marketing/BlogLayout';
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "Customer-Service AI: 7 Automation Workflows That Save 30+ Hours/Week - Rhythmiq Blog",
   description: "Discover seven practical AI-driven workflows to automate your customer service and save over 30 hours per week.",
+  alternates: {
+    canonical: "/blog/customer-service-ai-workflows"
+  },
   openGraph: {
     images: ['/images/blog/customer-service-ai-workflows.jpeg'],
     type: 'article',
     publishedTime: '2025-05-21',
     authors: ['Ray'],
   },
-};
+});
 
 const SECTIONS = [
   { id: 'automated-order-status-and-shipment-tracking', label: 'Automated Order Status and Shipment Tracking' },

@@ -1,17 +1,21 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title:
-    "Why “I Don’t Know” Makes AI Chatbots More Trustworthy for Customer Support",
+    "Why “I Don't Know” Makes AI Chatbots More Trustworthy for Customer Support",
   description:
     "Is AI becoming aware and what its implications are for customer support.",
+  alternates: {
+    canonical: "/blog/why-i-dont-know-makes-ai-chatbots-more-trustworthy"
+  },
   openGraph: {
     images: ["/images/blog/25-08.png"], // Replace with actual image path
     type: "article",
     publishedTime: "2025-08-25",
     authors: ["Kat"],
   },
-};
+});
 
 const SECTIONS = [
   { id: "introduction", label: "Introduction: When Overconfidence Backfires" },

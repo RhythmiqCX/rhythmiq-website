@@ -7,6 +7,15 @@ import Hero from "@/components/marketing/hero";
 import Integration from "@/components/marketing/integration";
 import LanguageSupport from "@/components/marketing/lang-support";
 import Pricing from "@/components/marketing/pricing";
+import { generateMetadata } from "@/utils";
+
+export const metadata = generateMetadata({
+    title: "Rhythmiq - AI-Powered Customer Support Agent",
+    description: "Rhythmiq is an AI CX platform that transforms how companies interact with Customers. Leverage AI to automate support queries, create personalized AI agents, and boost productivity. Experience smarter Customer Services today.",
+    alternates: {
+        canonical: "/"
+    }
+});
 
 
 const HomePage = () => {

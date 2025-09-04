@@ -1,17 +1,21 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title:
     "Beginners guide to AI chatbots for customer support - Rhythmiq Blog",
   description:
     "A friendly, no-fluff explainer on AI chatbots: what they are, how they work, and why they're changing the game in customer support.",
+  alternates: {
+    canonical: "/blog/beginners-guide-to-ai-chatbots-for-customer-support"
+  },
   openGraph: {
     images: ["/images/blog/ai-guide.png"],
     type: "article",
     publishedTime: "2025-08-20",
     authors: ["Kat"],
   },
-};
+});
 
 const SECTIONS = [
   { id: "introduction", label: "Introduction" },

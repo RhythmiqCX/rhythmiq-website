@@ -11,6 +11,12 @@ interface MetadataProps {
     type?: "website" | "article" | "profile";
     locale?: string;
     alternates?: Record<string, string>;
+    openGraph?: {
+        images?: string[];
+        type?: string;
+        publishedTime?: string;
+        authors?: string[];
+    };
     publishedTime?: string;
     modifiedTime?: string;
 }
@@ -45,8 +51,10 @@ export const generateMetadata = ({
     ],
     author = process.env.NEXT_PUBLIC_AUTHOR_NAME,
     type = "website",
+    alternates,
+    openGraph,
 }: MetadataProps = {}): Metadata => {
-    const metadataBase = new URL(process.env.NEXT_PUBLIC_APP_URL || "https://vertra-ai.vercel.app");
+    const metadataBase = new URL(process.env.SITE_URL || "https://rhythmiqcx.com");
 
     return {
         metadataBase,
@@ -65,5 +73,14 @@ export const generateMetadata = ({
             telephone: false,
         },
         icons,
+        alternates: alternates ? {
+            canonical: alternates.canonical ? new URL(alternates.canonical, metadataBase).toString() : undefined
+        } : undefined,
+        openGraph: openGraph ? {
+            images: openGraph.images,
+            type: openGraph.type as "website" | "article" | "profile",
+            publishedTime: openGraph.publishedTime,
+            authors: openGraph.authors,
+        } : undefined,
     };
 };

@@ -7,17 +7,21 @@ import Link from 'next/link';
 import Container from '@/components/global/container';
 import Image from 'next/image';
 import { format, parseISO } from 'date-fns';
+import { generateMetadata } from '@/utils';
 
 // app/(marketing)/blog/page.tsx
-export const metadata = {
+export const metadata = generateMetadata({
   title: "Rhythmiq Blog | AI Chatbot Pricing, Customer Support Automation & Conversational AI",
   description:
     "Actionable guides, ROI studies and comparisons on AI chatbots, WhatsApp automation and customer service.",
+  alternates: {
+    canonical: "/blog"
+  },
   openGraph: {
     images: ['/images/blog/blog-cover.jpeg'],
     type: 'website',
   },
-};
+});
 
 
 interface PostMeta {

@@ -1,16 +1,20 @@
 import BlogLayout from '@/components/marketing/BlogLayout';
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "Conversational AI vs. Traditional Chatbots: What's the Real Difference? - Rhythmiq Blog",
   description:
     "Explore the crucial differences between rule-based chatbots and AI-powered conversational assistants—and learn which is right for your business.",
+  alternates: {
+    canonical: "/blog/conversational-ai-vs-traditional-chatbots"
+  },
   openGraph: {
     images: ['/images/blog/conversational-ai-vs-traditional.jpg'], 
     type: 'article',
     publishedTime: '2025-05-20',
     authors: ["Ray"],
   },
-};
+});
 
 const SECTIONS = [
   { id: 'understanding-traditional-chatbots', label: 'Understanding Traditional Chatbots' },

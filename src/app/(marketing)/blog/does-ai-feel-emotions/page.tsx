@@ -1,17 +1,21 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title:
     "Emotions in AI: Can Machines Truly Care like Humans?",
   description:
     "Discover the role of emotions in AI, its limitations, and why the future of customer service is a partnership between humans and machines.",
-      openGraph: {
+  alternates: {
+    canonical: "/blog/does-ai-feel-emotions"
+  },
+  openGraph: {
     images: ["/images/blog/29-08.png"], // Replace with actual image path
     type: "article",
     publishedTime: "2025-08-29",
     authors: ["Kat"],
   },
-};
+});
 
 const SECTIONS = [
   { id: "introduction", label: "Introduction: Replicating emotions" },

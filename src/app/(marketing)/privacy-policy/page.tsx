@@ -1,6 +1,13 @@
-"use client";
-
 import React from "react";
+import { generateMetadata } from '@/utils';
+
+export const metadata = generateMetadata({
+  title: "Privacy Policy - RhythmiqCX | Data Protection & Privacy",
+  description: "Read RhythmiqCX's privacy policy to understand how we collect, use, and protect your personal information. GDPR compliant and transparent data practices.",
+  alternates: {
+    canonical: "/privacy-policy"
+  },
+});
 
 export default function PrivacyPolicyPage() {
   return (

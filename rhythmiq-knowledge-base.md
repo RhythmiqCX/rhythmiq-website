@@ -1,7 +1,7 @@
 # Rhythmiq AI Customer Support Platform - Knowledge Base
 
 ## Company Overview
-**Rhythmiq** is an AI-powered customer support chatbot platform that delivers human-quality service in 60+ languages. The platform is designed to work across multiple channels including web, WhatsApp, and other existing platforms with no-code implementation.
+**Rhythmiq** is an AI-powered customer support platform that delivers human-quality service in 60+ languages. The platform is designed to work across multiple channels including web, WhatsApp, and other existing platforms with no-code implementation.
 
 ## Core Product Features
 

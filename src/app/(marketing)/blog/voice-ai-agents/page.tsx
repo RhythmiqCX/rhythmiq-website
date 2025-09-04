@@ -1,17 +1,21 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title:
     "AI Voice Agents & Virtual Receptionists: Redefining First Impressions in Customer Support",
   description:
-    "AI voice agents are taking over the first “hello” in customer support. Always available, multi-language, and document-trained, they cut costs for businesses and deliver instant, consistent service for customers",
-      openGraph: {
+    "AI voice agents are taking over the first \"hello\" in customer support. Always available, multi-language, and document-trained, they cut costs for businesses and deliver instant, consistent service for customers",
+  alternates: {
+    canonical: "/blog/voice-ai-agents"
+  },
+  openGraph: {
     images: ["/images/blog/3-9.png"], // Replace with actual image path
     type: "article",
     publishedTime: "2025-09-03",
     authors: ["Kat"],
   },
-};
+});
 
 const SECTIONS = [
   { id: "introduction", label: "Introduction" },

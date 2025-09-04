@@ -1,17 +1,21 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title:
     "AI in CRM: The Game-Changer Driving Higher ROI, CSAT, and Smarter Customer Experiences” - Rhythmiq Blog",
   description:
     "Discover how AI in CRM transforms customer experience by killing data silos, boosting ROI, and skyrocketing CSAT. Learn why syncing tools like Salesforce Einstein, HubSpot AI, and Zoho Zia with your CRM is the smartest move for sales, marketing, and support teams in 2025.",
+  alternates: {
+    canonical: "/blog/ai-in-crm"
+  },
   openGraph: {
     images: ["/images/blog/crm-ai.png"], // Replace with actual image path
     type: "article",
     publishedTime: "2025-08-22",
     authors: ["Kat"],
   },
-};
+});
 
 const SECTIONS = [
   { id: "introduction", label: "Introduction: Why AI + CRM Matters" },

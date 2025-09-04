@@ -1,16 +1,20 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
-  title: "Rise of AI Shopping Agents: How They’re Reshaping E-commerce",
+export const metadata = generateMetadata({
+  title: "Rise of AI Shopping Agents: How They're Reshaping E-commerce",
   description:
     "AI shopping agents are transforming e-commerce from endless scrolling into frictionless, personalized buying.",
+  alternates: {
+    canonical: "/blog/ai-shopping-agents"
+  },
   openGraph: {
     images: ["/images/blog/1-9.jpg"], // Replace with actual image path
     type: "article",
     publishedTime: "2025-09-01",
     authors: ["Kat"],
   },
-};
+});
 
 const SECTIONS = [
   { id: "introduction", label: "Introduction: Replicating emotions" },

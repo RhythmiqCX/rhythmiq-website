@@ -1,16 +1,20 @@
 import BlogLayout from '@/components/marketing/BlogLayout';
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "What the Heck is an MCP Server, and Why Should You Care? - Rhythmiq Blog",
   description:
     "A plain-English, fun explainer on what MCP servers are, why they matter, and how they power modern tech—no jargon, just real talk.",
+  alternates: {
+    canonical: "/blog/what-the-heck-is-an-mcp-server"
+  },
   openGraph: {
     images: ['/images/blog/mcp.jpeg'],
     type: 'article',
     publishedTime: '2025-07-15',
     authors: ['Ray'],
   },
-};
+});
 
 const SECTIONS = [
   { id: 'what-is-mcp', label: 'What is an MCP Server, Really?' },

@@ -1,5 +1,4 @@
 // app/(marketing)/ai-customer-support/page.tsx
-import { Metadata } from 'next';
 import Container from '@/components/global/container'
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
 import { Button } from "@/components/ui/button";
@@ -7,15 +6,16 @@ import Icons from "@/components/global/icons";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import ImageTextSection from '@/components/marketing/imagetext';
+import { generateMetadata } from '@/utils';
 
-export const metadata: Metadata = {
+export const metadata = generateMetadata({
   title: 'AI Customer Support Chatbot | Omni-Channel Automation & CSAT Boost',
   description:
     'Deploy an AI-powered customer support chatbot that deflects tickets, resolves FAQs and boosts CSAT across web, WhatsApp & more. Start a free demo today.',
   alternates: {
     canonical: '/ai-customer-support',
   },
-};
+});
 
 export default function AICustomerSupportPage() {
   return (

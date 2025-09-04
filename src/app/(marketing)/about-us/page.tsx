@@ -1,6 +1,13 @@
-"use client";
-
 import React from "react";
+import { generateMetadata } from '@/utils';
+
+export const metadata = generateMetadata({
+  title: "About Us - RhythmiqCX | AI-Powered Customer Support Solutions",
+  description: "Learn about RhythmiqCX, the AI CX platform that transforms how companies interact with customers. Our mission is delivering world-class customer support through cutting-edge automation and analytics.",
+  alternates: {
+    canonical: "/about-us"
+  },
+});
 
 export default function AboutUs() {
   return (

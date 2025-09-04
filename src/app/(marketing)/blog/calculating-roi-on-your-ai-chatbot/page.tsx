@@ -1,17 +1,21 @@
 // app/(marketing)/blog/calculating-roi-on-your-ai-chatbot.tsx
 import BlogLayout from '@/components/marketing/BlogLayout';
+import { generateMetadata } from '@/utils';
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "Calculating ROI on Your AI Chatbot in 4 Simple Steps - Rhythmiq Blog",
   description:
     "Quickly estimate your AI chatbot's cost savings and ROI using our easy four-step guide.",
+  alternates: {
+    canonical: "/blog/calculating-roi-on-your-ai-chatbot"
+  },
   openGraph: {
     images: ['/images/blog/ai-chatbot-roi.jpeg'],
     type: 'article',
     publishedTime: '2025-05-22',
     authors: ['Ray'],
   },
-};
+});
 
 const SECTIONS = [
   { id: 'identify-current-support-costs', label: 'Identify Current Support Costs' },
