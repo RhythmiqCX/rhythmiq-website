@@ -191,7 +191,7 @@ export default function AIChatbotBlogPage() {
         </p>
       </div>
 
-      <h2 id="transparency-as-the-antidote">Transparency as the Antidote</h2>
+      <h2 id="transparency-as-the-antidote" className="scroll-mt-16">Transparency as the Antidote</h2>
       <div>
         <p>
           The single most underrated superpower in AI transparency? Saying, “I
