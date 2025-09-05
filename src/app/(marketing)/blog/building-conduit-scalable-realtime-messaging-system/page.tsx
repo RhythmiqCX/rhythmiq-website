@@ -221,7 +221,7 @@ export default function AIChatbotBlogPage() {
         </p>
       </div>
 
-      <h2 id="h5">The Hard Part: Making Distributed Systems Behave</h2>
+      <h2 id="h5" className="scroll-mt-16">The Hard Part: Making Distributed Systems Behave</h2>
       <div>
         <p>
           Anyone who’s built a distributed system knows the pain: doing two

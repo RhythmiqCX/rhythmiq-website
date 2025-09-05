@@ -203,7 +203,7 @@ export default function AIChatbotBlogPage() {
         </p>
       </div>
 
-      <h2 id="future">The Future: Hybrid Support Models</h2>
+      <h2 id="future" className="scroll-mt-16">The Future: Hybrid Support Models</h2>
       <div>
         <p>
           Now, let’s be real: AI isn’t going away. And it shouldn’t. The

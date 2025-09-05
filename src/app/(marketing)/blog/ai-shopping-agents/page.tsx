@@ -179,7 +179,7 @@ export default function AIChatbotBlogPage() {
         </p>
       </div>
 
-      <h2 id="how-these-agents-actually-work">
+      <h2 id="how-these-agents-actually-work" className="scroll-mt-16">
         How These Agents Actually Work
       </h2>
       <div>

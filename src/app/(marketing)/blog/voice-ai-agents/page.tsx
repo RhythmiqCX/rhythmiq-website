@@ -185,7 +185,7 @@ export default function AIChatbotBlogPage() {
   </p>
       </div>
 
-      <h2 id="how-ai-voice-agents-redefine-customer-support">How AI Voice Agents Redefines Customer Support</h2>
+      <h2 id="how-ai-voice-agents-redefine-customer-support" className="scroll-mt-16">How AI Voice Agents Redefines Customer Support</h2>
       <div>
           <p>
     First impressions matter more than most businesses admit. You can have the
@@ -280,7 +280,7 @@ export default function AIChatbotBlogPage() {
   </p>
       </div>
 
-<h2 id="FAQ">
+<h2 id="FAQ" className="scroll-mt-16">
   9. Frequently Asked Questions (FAQ)
   </h2>
   <div>

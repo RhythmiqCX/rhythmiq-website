@@ -307,7 +307,7 @@ export default function AIChatbotBlogPage() {
         </p>
       </div>
 
-      <h2 id="integrate-ai">How to Integrate AI into Your Customer Support</h2>
+      <h2 id="integrate-ai" className="scroll-mt-16">How to Integrate AI into Your Customer Support</h2>
       <div>
         <p>
           Adding AI chatbots to your daily customer experience (CX) operations

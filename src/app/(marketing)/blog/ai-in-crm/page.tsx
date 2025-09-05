@@ -219,7 +219,7 @@ export default function AIChatbotBlogPage() {
           can feel the difference immediately.
         </p>
       </div>
-      <h2 id="impact-roi">Impact on ROI</h2>
+      <h2 id="impact-roi" className="scroll-mt-16">Impact on ROI</h2>
       <div>
         <p>
           Now let’s talk about what every exec secretly cares about: ROI. AI +

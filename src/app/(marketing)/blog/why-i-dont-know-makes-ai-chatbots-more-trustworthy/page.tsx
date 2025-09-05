@@ -186,7 +186,7 @@ honesty. And honesty is exactly what makes them stick around.
 
       </div>
 
-      <h2 id="h5">AI Ethics: Honesty vs. Confidence</h2>
+      <h2 id="h5" className="scroll-mt-16">AI Ethics: Honesty vs. Confidence</h2>
       <div>
         <p>
 Here’s the big ethical question: should AI always try to give <em>something</em>, even if it 

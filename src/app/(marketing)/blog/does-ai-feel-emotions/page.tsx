@@ -138,7 +138,7 @@ export default function AIChatbotBlogPage() {
   </p>
       </div>
 
-      <h2 id="h5">The Human Advantage</h2>
+      <h2 id="h5" className="scroll-mt-16">The Human Advantage</h2>
       <div>
         <p>
     Here’s the part nobody likes to admit: humans still have the upper hand. Why? Because when it comes to <strong>human support vs AI</strong>, people bring authentic empathy, adaptability, and creativity to the table. We don’t just follow scripts we improvise. We read between the lines, notice the sigh in someone’s voice, and respond with heart.  
