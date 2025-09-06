@@ -18,7 +18,7 @@ export const metadata = generateMetadata({
     canonical: "/blog"
   },
   openGraph: {
-    images: ['/images/blog/blog-cover.jpeg'],
+    images: ['/icons/white.jpeg'],
     type: 'website',
   },
 });

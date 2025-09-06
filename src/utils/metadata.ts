@@ -27,12 +27,12 @@ export const generateMetadata = ({
     icons = [
         {
             rel: "icon",
-            url: "/icons/rhythmiq-icon.png",
+            url: "/icons/icon.png",
             media: "(prefers-color-scheme: light)",
         },
         {
             rel: "icon",
-            url: "/icons/rhythmiq-icon.png",
+            url: "/icons/icon.png",
             media: "(prefers-color-scheme: dark)",
         },
     ],

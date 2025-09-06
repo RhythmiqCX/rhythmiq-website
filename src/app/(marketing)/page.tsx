@@ -14,6 +14,10 @@ export const metadata = generateMetadata({
     description: "Rhythmiq is an AI CX platform that transforms how companies interact with Customers. Leverage AI to automate support queries, create personalized AI agents, and boost productivity. Experience smarter Customer Services today.",
     alternates: {
         canonical: "/"
+    },
+    openGraph: {
+        images: ['/icons/white.jpeg'],
+        type: 'website',
     }
 });
 
