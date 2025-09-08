@@ -4,7 +4,7 @@ import Image from "next/image"
 import EngineAnimation from "./animation"
 export default function AiEngine() {
   return (
-<section className="relative w-full bg-background/80 text-white pt-56 pb-4 px-6 lg:px-12">
+<section className="relative w-full h-screen bg-background/80 text-white px-6 lg:px-12 flex flex-col justify-center">
   {/* Header */}
   <div className="max-w-5xl mx-auto text-center mb-4">
     <p className="uppercase text-xs tracking-wider text-violet-400 mb-2 font-semibold content-center margintop-200">

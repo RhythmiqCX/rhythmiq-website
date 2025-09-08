@@ -183,10 +183,9 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="h-screen w-screen snap-start bg-black text-white flex items-center justify-center"
+      className="h-screen w-screen snap-start snap-always bg-black text-white flex items-center justify-center scroll-mt-16"
     >
-      {/* Inner wrapper ensures all content scrolls within 100vh */}
-      <div className="w-full h-full overflow-y-auto no-scrollbar flex flex-col justify-center px-6 py-12">
+      <div className="w-full h-full flex flex-col justify-center px-6 py-12">
         <div className="max-w-7xl w-full mx-auto flex flex-col justify-center">
           {/* Top grid: text + chat */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16 w-full 

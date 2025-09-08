@@ -33,7 +33,7 @@ export default function IntegrationSection() {
   return (
     <section
       id="integration"
-      className="h-screen w-full flex flex-col justify-center bg-background px-6 snap-start"
+      className="h-screen w-full flex flex-col justify-center bg-background px-6 snap-start scroll-mt-16"
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6 text-white">

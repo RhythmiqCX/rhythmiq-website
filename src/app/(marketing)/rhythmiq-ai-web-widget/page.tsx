@@ -3,7 +3,9 @@
 import HeroSection from "./hero";
 import ImpactStats from "./stats";
 import UseCasesTestimonials from "./use";
-import ScrollSnapLayout from "./section2";
+import AIAgentSection from "./agents";
+import IntegrationSection from "./integration";
+import AiEngine from "./engine";
 import AnimatedSection from "./scrollanimation"; // 👈 new wrapper component
 
 export default function Home() {
@@ -19,9 +21,15 @@ export default function Home() {
         <ImpactStats />
       </AnimatedSection>
 
-      {/* SECTION 2 */}
+      {/* System / Integration / Technology - split into distinct full-screen sections */}
       <AnimatedSection>
-        <ScrollSnapLayout />
+        <AIAgentSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <IntegrationSection />
+      </AnimatedSection>
+      <AnimatedSection>
+        <AiEngine />
       </AnimatedSection>
 
       {/* Use Cases */}

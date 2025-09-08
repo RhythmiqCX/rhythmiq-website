@@ -15,10 +15,10 @@ export default function AnimatedSection({ children, height = "h-screen" }: Anima
   return (
     <motion.section
       ref={ref}
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`${height} w-full flex items-center justify-center snap-start`}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className={`${height} w-full flex items-center justify-center snap-start snap-always scroll-mt-16`}
     >
       {children}
     </motion.section>

@@ -46,7 +46,7 @@ export default function UseCasesTestimonials() {
   return (
     <section
       id="section4"
-      className="h-screen w-full flex flex-col justify-center bg-background/80 text-white px-6 snap-start"
+      className="h-screen w-full flex flex-col justify-center bg-background/80 text-white px-6 snap-start scroll-mt-16"
     >
       <div className="max-w-7xl mx-auto text-center flex flex-col justify-center h-full">
         <h2 className="text-2xl font-semibold mb-6 text-violet-500">Use Cases</h2>

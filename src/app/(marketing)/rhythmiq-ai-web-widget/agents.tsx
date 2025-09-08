@@ -84,7 +84,7 @@ export default function AIAgentSection() {
   const current = sections.find((s) => s.id === active);
 
   return (
-    <section className="w-full bg-cream text-dark-blue h-[calc(100vh-4rem)] overflow-y-auto pt-8">
+    <section className="w-full bg-cream text-dark-blue h-screen pt-8 scroll-mt-16">
       {/* Hero Section */}
 <div className="max-w-6xl mx-auto px-6 pb-12">
   <p className="text-xs font-mono uppercase tracking-wider text-violet-600 mb-4">
