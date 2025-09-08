@@ -9,7 +9,7 @@ export default function IntegrationSection() {
       title: "Generate Your Widget",
       description:
         "Provide your website URL, and instantly get a ready-to-use chatbot widget.",
-      image: "/images/embed.png", // transparent PNG
+      image: "/images/integrate-1.svg", // transparent PNG
       bg: "bg-teal-400",
     },
     {
@@ -17,7 +17,7 @@ export default function IntegrationSection() {
       title: "Add It to Your Site",
       description:
         "Copy-paste one line of code into your website. No setup, no fuss.",
-      image: "/images/code-snippet.png",
+      image: "/images/integrate-2.svg", 
       bg: "bg-purple-500",
     },
     {
@@ -25,7 +25,7 @@ export default function IntegrationSection() {
       title: "Go Live Instantly",
       description:
         "Your chatbot is live in minutes, engaging visitors and capturing leads.",
-      image: "/images/chat-bot.png",
+      image: "/images/integrate-3.svg",
       bg: "bg-orange-400",
     },
   ];
@@ -54,8 +54,8 @@ export default function IntegrationSection() {
                   <Image
                     src={step.image}
                     alt={step.title}
-                    width={120}
-                    height={120}
+                    width={400}
+                    height={400}
                     className="object-contain"
                   />
                 )}

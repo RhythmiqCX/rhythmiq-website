@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="180" viewBox="0 0 600 180">
+  <!-- Heading -->
+  <text x="300" y="35" font-family="Arial, sans-serif" font-size="16" fill="black" text-anchor="middle">
+    Works perfect on powerful platforms:
+  </text>
+
+  <!-- WordPress -->
+  <rect x="40" y="70" width="110" height="90" rx="12" fill="white" stroke="#ccc"/>
+  <circle cx="95" cy="115" r="25" stroke="black" stroke-width="2" fill="none"/>
+  <text x="95" y="115" font-family="Georgia, serif" font-size="24" fill="black" text-anchor="middle" dominant-baseline="middle">
+    W
+  </text>
+
+  <!-- Wix -->
+  <rect x="170" y="70" width="110" height="90" rx="12" fill="white" stroke="#ccc"/>
+  <text x="225" y="115" font-family="Arial Black, sans-serif" font-size="26" fill="black" text-anchor="middle" dominant-baseline="middle">
+    WiX
+  </text>
+
+  <!-- Squarespace -->
+  <rect x="300" y="70" width="110" height="90" rx="12" fill="white" stroke="#ccc"/>
+  <rect x="335" y="105" width="40" height="20" fill="black"/>
+
+  <!-- Joomla -->
+  <rect x="430" y="70" width="110" height="90" rx="12" fill="white" stroke="#ccc"/>
+  <text x="485" y="115" font-family="Arial Black, sans-serif" font-size="20" fill="black" text-anchor="middle" dominant-baseline="middle">
+    Joomla
+  </text>
+</svg>

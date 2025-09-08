@@ -14,14 +14,30 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({ cards }) => {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const extendedCards = [...cards, ...cards];
-
+  const [cardsPerView, setCardsPerView] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-useEffect(() => {
-  if (wrapperRef.current && extendedCards.length > 0) {
-    const cardWidth = wrapperRef.current.children[0].clientWidth + 24;
+  // Duplicate cards for infinite loop
+  const extendedCards = [...cards, ...cards];
+
+  // Responsive cards per view
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      if (window.innerWidth >= 1024) setCardsPerView(3);
+      else if (window.innerWidth >= 768) setCardsPerView(2);
+      else setCardsPerView(1);
+    };
+    updateCardsPerView();
+    window.addEventListener("resize", updateCardsPerView);
+    return () => window.removeEventListener("resize", updateCardsPerView);
+  }, []);
+
+  // Handle looping transition
+  useEffect(() => {
+    if (!wrapperRef.current || extendedCards.length === 0) return;
+
+    const cardWidth =
+      wrapperRef.current.children[0].clientWidth + 24; // 24 = gap-6
     const translateValue = -currentIndex * cardWidth;
 
     setIsTransitioning(true);
@@ -29,9 +45,7 @@ useEffect(() => {
     wrapperRef.current.style.transform = `translateX(${translateValue}px)`;
 
     const transitionDuration = 500;
-    const timer = setTimeout(() => {
-      setIsTransitioning(false); // re-enable after transition
-    }, transitionDuration);
+    const timer = setTimeout(() => setIsTransitioning(false), transitionDuration);
 
     if (currentIndex === cards.length) {
       setTimeout(() => {
@@ -48,17 +62,14 @@ useEffect(() => {
     }
 
     return () => clearTimeout(timer);
-  }
-}, [currentIndex, cards.length, extendedCards.length]);
-
-
+  }, [currentIndex, cards.length, extendedCards.length]);
 
   const handleNext = () => setCurrentIndex((prev) => prev + 1);
   const handlePrev = () => setCurrentIndex((prev) => prev - 1);
 
   return (
-    <section className="relative w-full">
-      <div className="relative overflow-hidden">
+    <section className="relative w-full bg-neutral-950 py-12">
+      <div className="relative max-w-7xl mx-auto px-4 overflow-hidden">
         {/* Card wrapper */}
         <div
           ref={wrapperRef}
@@ -67,10 +78,11 @@ useEffect(() => {
           {extendedCards.map((card, index) => (
             <div
               key={index}
-              className="w-[500px] md:w-[450px] lg:w-[520px] flex-shrink-0 rounded-2xl shadow-xl bg-neutral-900 border border-neutral-800 overflow-hidden"
+              className={`flex-shrink-0 rounded-2xl shadow-lg bg-neutral-900 border border-neutral-800 overflow-hidden
+                w-[500px] md:w-[450px] lg:w-[520px]`}
             >
               {/* Image */}
-              <div className="h-64 sm:h-64 md:h-72 lg:h-80 w-full bg-neutral-800">
+              <div className="h-52 md:h-64 lg:h-72 w-full bg-neutral-800">
                 <img
                   src={card.image}
                   alt={card.title}
@@ -79,10 +91,10 @@ useEffect(() => {
               </div>
               {/* Text */}
               <div className="p-6 flex flex-col flex-grow text-left">
-                <h3 className="text-xl font-semibold text-gray-100 mb-3">
+                <h3 className="text-lg md:text-xl font-semibold text-violet-400 mb-3">
                   {card.title}
                 </h3>
-                <p className="text-gray-400">{card.description}</p>
+                <p className="text-gray-300">{card.description}</p>
               </div>
             </div>
           ))}
@@ -90,28 +102,20 @@ useEffect(() => {
 
         {/* Navigation Arrows */}
         <button
-  onClick={handlePrev}
-  disabled={isTransitioning}
-  className={`absolute top-1/2 left-2 -translate-y-1/2 z-10 p-3 rounded-full shadow-lg transition ${
-    isTransitioning
-      ? "bg-gray-300 cursor-not-allowed"
-      : "bg-white hover:bg-gray-200 text-neutral-900"
-  }`}
->
-  <ChevronLeft size={22} />
-</button>
+          onClick={handlePrev}
+          disabled={isTransitioning}
+          className={`absolute top-1/2 left-2 -translate-y-1/2 z-10 p-3 rounded-full bg-violet-500 text-white shadow-lg hover:bg-violet-600 transition disabled:opacity-40`}
+        >
+          <ChevronLeft size={22} />
+        </button>
 
-<button
-  onClick={handleNext}
-  disabled={isTransitioning}
-  className={`absolute top-1/2 right-2 -translate-y-1/2 z-10 p-3 rounded-full shadow-lg transition ${
-    isTransitioning
-      ? "bg-gray-300 cursor-not-allowed"
-      : "bg-white hover:bg-gray-200 text-neutral-900"
-  }`}
->
-  <ChevronRight size={22} />
-</button>
+        <button
+          onClick={handleNext}
+          disabled={isTransitioning}
+          className={`absolute top-1/2 right-2 -translate-y-1/2 z-10 p-3 rounded-full bg-violet-500 text-white shadow-lg hover:bg-violet-600 transition disabled:opacity-40`}
+        >
+          <ChevronRight size={22} />
+        </button>
       </div>
     </section>
   );
