@@ -68,7 +68,7 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
   const handlePrev = () => setCurrentIndex((prev) => prev - 1);
 
   return (
-    <section className="relative w-full bg-neutral-950 py-12">
+    <section className="relative w-full bg-neutral-950 py-12 overflow-x-hidden">
       <div className="relative max-w-7xl mx-auto px-4 overflow-hidden">
         {/* Card wrapper */}
         <div
@@ -79,7 +79,7 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
             <div
               key={index}
               className={`flex-shrink-0 rounded-2xl shadow-lg bg-neutral-900 border border-neutral-800 overflow-hidden
-                w-[90%] sm:w-[80%] md:w-[45%] lg:w-[30%] 
+                w-[90%] sm:w-[80%] md:w-[45%] lg:w-[30%] max-w-sm
                 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/40`}
             >
               {/* Image */}

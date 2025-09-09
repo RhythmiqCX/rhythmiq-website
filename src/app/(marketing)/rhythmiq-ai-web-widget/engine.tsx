@@ -4,9 +4,9 @@ import EngineAnimation from "./animation"
 
 export default function AiEngine() {
   return (
-    <section className="relative w-full min-h-screen bg-background/80 text-white px-6 lg:px-12 flex flex-col justify-center py-12">
+    <section className="relative w-full min-h-screen bg-background/80 text-white px-6 lg:px-12 flex flex-col justify-center py-12 overflow-x-hidden">
       {/* Header */}
-      <div className="max-w-5xl mx-auto text-center mb-8">
+      <div className="max-w-5xl mx-auto text-center mb-8 overflow-x-hidden">
         <p className="uppercase text-xs tracking-wider text-indigo-400 mb-2 font-semibold">
           Built for Speed & Scale
         </p>
@@ -23,7 +23,7 @@ export default function AiEngine() {
       </div>
 
       {/* Diagram + Steps */}
-      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center overflow-x-hidden">
         {/* Steps Left */}
         <div className="space-y-6 order-1">
           <Step

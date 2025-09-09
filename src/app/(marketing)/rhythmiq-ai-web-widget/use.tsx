@@ -46,9 +46,9 @@ export default function UseCasesTestimonials() {
   return (
     <section
       id="section4"
-      className="w-full bg-background/80 text-white px-4 sm:px-6 lg:px-12 py-16 snap-start scroll-mt-16"
+      className="w-full bg-background/80 text-white px-4 sm:px-6 lg:px-12 py-16 snap-start scroll-mt-16 overflow-x-hidden"
     >
-      <div className="max-w-7xl mx-auto text-center flex flex-col">
+      <div className="max-w-7xl mx-auto text-center flex flex-col overflow-x-hidden">
         {/* Heading */}
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 text-indigo-500">
           Use Cases

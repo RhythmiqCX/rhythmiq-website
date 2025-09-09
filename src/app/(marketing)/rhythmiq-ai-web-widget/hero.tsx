@@ -184,12 +184,12 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen w-screen snap-start snap-always bg-background/80 text-white flex items-center justify-center scroll-mt-16"
+      className="min-h-screen w-screen snap-start snap-always bg-background/80 text-white flex items-center justify-center scroll-mt-16 overflow-x-hidden"
     >
-      <div className="w-full h-full flex flex-col justify-center px-6 py-12">
-        <div className="max-w-7xl w-full mx-auto flex flex-col justify-center">
+      <div className="w-full h-full flex flex-col justify-center px-6 py-12 overflow-x-hidden">
+        <div className="max-w-7xl w-full mx-auto flex flex-col justify-center overflow-x-hidden">
           {/* Top grid: text + chat */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16 w-full overflow-x-hidden">
             {/* Text */}
             <div
               className={`transition-all duration-1000 ${
@@ -256,7 +256,7 @@ const HeroSection: React.FC = () => {
           </div>
 
           {/* Benefits (stacked on mobile, grid on larger screens) */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto w-full overflow-x-hidden">
             <BenefitItem icon={Clock} title="24/7 Availability" />
             <BenefitItem icon={Brain} title="AI-Powered Intelligence" />
             <BenefitItem icon={Users} title="Better Customer Experience" />

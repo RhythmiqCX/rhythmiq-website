@@ -83,9 +83,9 @@ export default function AIAgentSection() {
   const current = sections.find((s) => s.id === active);
 
   return (
-    <section className="w-full bg-cream text-dark-blue min-h-screen py-12 px-4 sm:px-6 lg:px-12 scroll-mt-16">
+    <section className="w-full bg-cream text-dark-blue min-h-screen py-12 px-4 sm:px-6 lg:px-12 scroll-mt-16 overflow-x-hidden">
       {/* Hero Section */}
-      <div className="max-w-6xl mx-auto pb-12">
+      <div className="max-w-6xl mx-auto pb-12 overflow-x-hidden">
         <p className="text-xs font-mono uppercase tracking-wider text-indigo-600 mb-4">
           RhythmiqCX Webchatbot
         </p>
@@ -100,7 +100,7 @@ export default function AIAgentSection() {
       </div>
 
       {/* Capabilities Section */}
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 pb-12">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 pb-12 overflow-x-hidden">
         {/* Left - Image */}
         <div className="border border-black/10 bg-white rounded-md relative overflow-hidden flex items-center justify-center p-6 min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
           {/* Background Animation */}
@@ -125,7 +125,7 @@ export default function AIAgentSection() {
         </div>
 
         {/* Right - Content */}
-        <div className="flex flex-col gap-6 overflow-y-auto max-h-[70vh] pr-2 no-scrollbar">
+        <div className="flex flex-col gap-6 overflow-y-auto overflow-x-hidden max-h-[70vh] pr-2 no-scrollbar">
           {/* Pills */}
           <ul className="flex gap-3 flex-wrap">
             {sections.map((s) => (

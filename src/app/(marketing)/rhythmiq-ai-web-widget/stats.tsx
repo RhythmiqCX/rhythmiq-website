@@ -29,7 +29,7 @@ const stats = [
 
 export default function ImpactStats() {
   return (
-    <section className="min-h-screen w-full bg-gradient-to-b bg-background/80 text-white flex flex-col justify-center items-center px-6 snap-start scroll-mt-16 p-50">
+    <section className="min-h-screen w-full bg-gradient-to-b bg-background/80 text-white flex flex-col justify-center items-center px-6 snap-start scroll-mt-16 p-50 overflow-x-hidden">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -42,7 +42,7 @@ export default function ImpactStats() {
       </motion.h2>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full auto-rows-fr">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full auto-rows-fr overflow-x-hidden">
         {stats.map((stat, i) => (
           <motion.div
             key={i}
