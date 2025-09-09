@@ -31,11 +31,8 @@ export default function IntegrationSection() {
   ];
 
   return (
-    <section
-      id="integration"
-      className="min-h-screen w-full flex flex-col justify-center bg-background px-4 sm:px-6 lg:px-12 snap-start scroll-mt-16 overflow-x-hidden"
-    >
-      <div className="max-w-6xl mx-auto text-center overflow-x-hidden">
+    <div className="w-full h-full flex flex-col justify-center text-center">
+      <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
           Seamless Integration in 3 Steps
@@ -79,6 +76,6 @@ export default function IntegrationSection() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

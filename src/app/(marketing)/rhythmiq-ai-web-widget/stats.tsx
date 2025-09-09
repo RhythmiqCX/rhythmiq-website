@@ -29,20 +29,21 @@ const stats = [
 
 export default function ImpactStats() {
   return (
-    <section className="min-h-screen w-full bg-gradient-to-b bg-background/80 text-white flex flex-col justify-center items-center px-6 snap-start scroll-mt-16 p-50 overflow-x-hidden">
-      {/* Heading */}
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-4xl md:text-5xl font-bold text-center mb-12"
-      >
-        Building the Future of Engagement{" "}
-        <span className="text-indigo-400">with AI</span>
-      </motion.h2>
+    <section className="h-screen w-full bg-gradient-to-b bg-background/80 text-white flex flex-col justify-center items-center px-6 snap-start scroll-mt-16 overflow-x-hidden">
+      <div className="w-full max-w-6xl flex flex-col justify-center items-center">
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8 md:mb-12"
+        >
+          Building the Future of Engagement{" "}
+          <span className="text-indigo-500">with AI</span>
+        </motion.h2>
 
-      {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full auto-rows-fr overflow-x-hidden">
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 w-full overflow-x-hidden">
         {stats.map((stat, i) => (
           <motion.div
             key={i}
@@ -58,18 +59,19 @@ export default function ImpactStats() {
             <p className="text-base opacity-90">{stat.label}</p>
           </motion.div>
         ))}
-      </div>
+        </div>
 
-      {/* Footer Text */}
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
-        className="mt-12 text-lg text-gray-400 text-center"
-      >
-        Delivering reliable, scalable, and intelligent automation for the
-        future.
-      </motion.p>
+        {/* Footer Text */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="mt-6 sm:mt-8 md:mt-12 text-base sm:text-lg text-gray-400 text-center"
+        >
+          Delivering reliable, scalable, and intelligent automation for the
+          future.
+        </motion.p>
+      </div>
     </section>
   );
 }

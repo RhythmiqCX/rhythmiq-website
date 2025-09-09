@@ -4,16 +4,16 @@ import EngineAnimation from "./animation"
 
 export default function AiEngine() {
   return (
-    <section className="relative w-full min-h-screen bg-background/80 text-white px-6 lg:px-12 flex flex-col justify-center py-12 overflow-x-hidden">
+    <div className="w-full h-full flex flex-col justify-center text-white text-center">
       {/* Header */}
-      <div className="max-w-5xl mx-auto text-center mb-8 overflow-x-hidden">
-        <p className="uppercase text-xs tracking-wider text-indigo-400 mb-2 font-semibold">
+      <div className="max-w-5xl mx-auto mb-4 sm:mb-6">
+        <p className="uppercase text-xs tracking-wider text-indigo-500 mb-2 font-semibold">
           Built for Speed & Scale
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
           Powered by the Conduit Engine
         </h2>
-        <p className="text-base text-gray-300 max-w-3xl mx-auto">
+        <p className="text-sm sm:text-base text-gray-300 max-w-3xl mx-auto">
           Conduit is our real-time messaging and AI orchestration engine,
           designed to handle thousands of simultaneous conversations without
           breaking a sweat. Every layer is tuned for speed, reliability, and
@@ -23,9 +23,9 @@ export default function AiEngine() {
       </div>
 
       {/* Diagram + Steps */}
-      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center overflow-x-hidden">
+      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-center">
         {/* Steps Left */}
-        <div className="space-y-6 order-1">
+        <div className="space-y-4 sm:space-y-6 order-1">
           <Step
             id="[1]"
             title="Smart Query Handling"
@@ -50,7 +50,7 @@ export default function AiEngine() {
         </motion.div>
 
         {/* Steps Right */}
-        <div className="space-y-6 order-3">
+        <div className="space-y-4 sm:space-y-6 order-3">
           <Step
             id="[2]"
             title="AI-Powered Responses"
@@ -64,7 +64,7 @@ export default function AiEngine() {
           />
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

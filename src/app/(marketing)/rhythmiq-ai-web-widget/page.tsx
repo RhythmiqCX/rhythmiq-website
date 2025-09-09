@@ -30,7 +30,7 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Final CTA + Footer */}
-      <AnimatedSection height="min-h-[60vh] sm:min-h-[50vh]">
+      <AnimatedSection>
         <section className="w-full flex flex-col justify-center bg-background/80 text-white px-4 sm:px-6 lg:px-12 overflow-x-hidden">
           <div className="max-w-5xl mx-auto text-center py-12 sm:py-16 lg:py-20">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6">
