@@ -79,19 +79,20 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
             <div
               key={index}
               className={`flex-shrink-0 rounded-2xl shadow-lg bg-neutral-900 border border-neutral-800 overflow-hidden
-                w-[500px] md:w-[450px] lg:w-[520px]`}
+                w-[90%] sm:w-[80%] md:w-[45%] lg:w-[30%] 
+                transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/40`}
             >
               {/* Image */}
-              <div className="h-52 md:h-64 lg:h-72 w-full bg-neutral-800">
+              <div className="h-52 md:h-64 lg:h-72 w-full bg-neutral-800 overflow-hidden">
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
               {/* Text */}
               <div className="p-6 flex flex-col flex-grow text-left">
-                <h3 className="text-lg md:text-xl font-semibold text-violet-400 mb-3">
+                <h3 className="text-lg md:text-xl font-semibold text-indigo-400 mb-3">
                   {card.title}
                 </h3>
                 <p className="text-gray-300">{card.description}</p>
@@ -101,21 +102,27 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
         </div>
 
         {/* Navigation Arrows */}
-        <button
-          onClick={handlePrev}
-          disabled={isTransitioning}
-          className={`absolute top-1/2 left-2 -translate-y-1/2 z-10 p-3 rounded-full bg-violet-500 text-white shadow-lg hover:bg-violet-600 transition disabled:opacity-40`}
-        >
-          <ChevronLeft size={22} />
-        </button>
+{/* Navigation Arrows */}
+<button
+  onClick={handlePrev}
+  disabled={isTransitioning}
+  className="absolute top-1/2 -translate-y-1/2 left-2 
+             z-20 p-2 rounded-full bg-indigo-500/80 text-white 
+             shadow-lg hover:bg-indigo-600 transition disabled:opacity-40"
+>
+  <ChevronLeft size={20} />
+</button>
 
-        <button
-          onClick={handleNext}
-          disabled={isTransitioning}
-          className={`absolute top-1/2 right-2 -translate-y-1/2 z-10 p-3 rounded-full bg-violet-500 text-white shadow-lg hover:bg-violet-600 transition disabled:opacity-40`}
-        >
-          <ChevronRight size={22} />
-        </button>
+<button
+  onClick={handleNext}
+  disabled={isTransitioning}
+  className="absolute top-1/2 -translate-y-1/2 right-2 
+             z-20 p-2 rounded-full bg-indigo-500/80 text-white 
+             shadow-lg hover:bg-indigo-600 transition disabled:opacity-40"
+>
+  <ChevronRight size={20} />
+</button>
+
       </div>
     </section>
   );

@@ -26,7 +26,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message, isBot, delay = 0 }) 
     >
       <div
         className={`max-w-xs px-4 py-2 rounded-2xl ${
-          isBot ? "bg-violet-500 text-white" : "bg-gray-800 text-gray-100"
+          isBot ? "bg-indigo-500 text-white" : "bg-gray-800 text-gray-100"
         }`}
       >
         <p className="text-sm">{message}</p>
@@ -42,7 +42,7 @@ const TypingIndicator: React.FC<{ visible: boolean }> = ({ visible }) => (
       visible ? "opacity-100" : "opacity-0"
     }`}
   >
-    <div className="bg-violet-500 px-4 py-2 rounded-2xl">
+    <div className="bg-indigo-500 px-4 py-2 rounded-2xl">
       <div className="flex space-x-1">
         <div className="w-2 h-2 bg-white rounded-full animate-bounce"></div>
         <div
@@ -136,7 +136,7 @@ const ChatAnimation: React.FC = () => {
   return (
     <div className="bg-black rounded-xl shadow-lg p-4 w-full max-w-sm mx-auto border border-gray-800">
       <div className="flex items-center mb-4 pb-3 border-b border-gray-700">
-        <div className="w-9 h-9 bg-violet-500 rounded-full flex items-center justify-center mr-3">
+        <div className="w-9 h-9 bg-indigo-500 rounded-full flex items-center justify-center mr-3">
           <CheckSquare className="w-5 h-5 text-white" />
         </div>
         <div>
@@ -165,13 +165,14 @@ const BenefitItem: React.FC<{ icon: React.ElementType; title: string }> = ({
   title,
 }) => (
   <div className="flex flex-col items-center text-center">
-    <div className="w-12 h-12 bg-violet-500/20 rounded-full flex items-center justify-center mb-3">
-      <Icon className="w-6 h-6 text-violet-400" />
+    <div className="w-12 h-12 bg-indigo-500/20 rounded-full flex items-center justify-center mb-3">
+      <Icon className="w-6 h-6 text-indigo-400" />
     </div>
     <span className="text-sm font-medium text-gray-200">{title}</span>
   </div>
 );
 
+// Hero Section
 // Hero Section
 const HeroSection: React.FC = () => {
   const [textVisible, setTextVisible] = useState(false);
@@ -183,42 +184,41 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="h-screen w-screen snap-start snap-always bg-black text-white flex items-center justify-center scroll-mt-16"
+      className="min-h-screen w-screen snap-start snap-always bg-background/80 text-white flex items-center justify-center scroll-mt-16"
     >
       <div className="w-full h-full flex flex-col justify-center px-6 py-12">
         <div className="max-w-7xl w-full mx-auto flex flex-col justify-center">
           {/* Top grid: text + chat */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16 w-full 
-                flex-col-reverse lg:flex-row">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16 w-full">
             {/* Text */}
-  <div
-    className={`transition-all duration-1000 ${
-      textVisible
-        ? "opacity-100 translate-x-0"
-        : "opacity-0 -translate-x-8"
-    }`}
-  >
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white pt-8">
-      Instant Answers,
-      <br />
-      <span className="text-violet-500">Effortless Support</span>
-    </h1>
-    <p className="text-base sm:text-lg text-gray-400 mb-8 leading-relaxed">
-      Our AI-powered bot provides immediate, intelligent help so your
-      customers never have to wait. Say goodbye to long queues and hello
-      to instant resolution.
-    </p>
+            <div
+              className={`transition-all duration-1000 ${
+                textVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-8"
+              }`}
+            >
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+                Instant Answers,
+                <br />
+                <span className="text-indigo-500">Effortless Support</span>
+              </h1>
+              <p className="text-base sm:text-lg text-gray-400 mb-8 leading-relaxed">
+                Our AI-powered bot provides immediate, intelligent help so your
+                customers never have to wait. Say goodbye to long queues and
+                hello to instant resolution.
+              </p>
 
               {/* Highlights */}
               <div className="flex flex-wrap gap-3 mb-8">
-                <div className="flex items-center bg-violet-500/20 px-4 py-2 rounded-full">
-                  <Zap className="w-4 h-4 text-violet-400 mr-2" />
+                <div className="flex items-center bg-indigo-500/20 px-4 py-2 rounded-full">
+                  <Zap className="w-4 h-4 text-indigo-400 mr-2" />
                   <span className="text-sm font-medium text-gray-200">
                     Lightning Fast
                   </span>
                 </div>
-                <div className="flex items-center bg-violet-500/20 px-4 py-2 rounded-full">
-                  <Shield className="w-4 h-4 text-violet-400 mr-2" />
+                <div className="flex items-center bg-indigo-500/20 px-4 py-2 rounded-full">
+                  <Shield className="w-4 h-4 text-indigo-400 mr-2" />
                   <span className="text-sm font-medium text-gray-200">
                     99.9% Uptime
                   </span>
@@ -227,7 +227,7 @@ const HeroSection: React.FC = () => {
 
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-violet-500 text-black rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg">
+                <button className="px-8 py-4 bg-indigo-500 text-black rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg">
                   Start Free Trial
                 </button>
                 <button className="px-8 py-4 border-2 border-gray-600 text-white rounded-xl hover:bg-gray-800 transition-all duration-300 font-semibold text-lg">
@@ -238,7 +238,7 @@ const HeroSection: React.FC = () => {
               {/* Trust Badge */}
               <p className="text-sm text-gray-500 mt-6">
                 Trusted by{" "}
-                <span className="text-violet-500 font-semibold">10,000+</span>{" "}
+                <span className="text-indigo-500 font-semibold">10,000+</span>{" "}
                 businesses worldwide
               </p>
             </div>
@@ -255,7 +255,7 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Benefits (always inside hero, stacked on mobile) */}
+          {/* Benefits (stacked on mobile, grid on larger screens) */}
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto w-full">
             <BenefitItem icon={Clock} title="24/7 Availability" />
             <BenefitItem icon={Brain} title="AI-Powered Intelligence" />
@@ -267,5 +267,6 @@ const HeroSection: React.FC = () => {
     </section>
   );
 };
+
 
 export default HeroSection;

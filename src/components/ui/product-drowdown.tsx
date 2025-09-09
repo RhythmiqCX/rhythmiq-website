@@ -6,6 +6,7 @@ import Link from 'next/link';
 const PRODUCT_LINKS = [
   { name: 'Customer Support Chatbot', href: '/ai-customer-support' },
   { name: 'WhatsApp AI Chatbot', href: '/whatsapp-ai-chatbot' },
+  { name: 'Rhythmiq AI Web-Widget Chatbot', href: '/rhythmiq-ai-web-widget' },
   { name: 'Conversational AI Bot', href: '/conversational-ai-chatbot' }
 ];
 

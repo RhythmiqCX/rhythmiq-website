@@ -46,11 +46,14 @@ export default function UseCasesTestimonials() {
   return (
     <section
       id="section4"
-      className="h-screen w-full flex flex-col justify-center bg-background/80 text-white px-6 snap-start scroll-mt-16"
+      className="w-full bg-background/80 text-white px-4 sm:px-6 lg:px-12 py-16 snap-start scroll-mt-16"
     >
-      <div className="max-w-7xl mx-auto text-center flex flex-col justify-center h-full">
-        <h2 className="text-2xl font-semibold mb-6 text-violet-500">Use Cases</h2>
-        <p className="text-lg mb-12 max-w-3xl mx-auto text-gray-200">
+      <div className="max-w-7xl mx-auto text-center flex flex-col">
+        {/* Heading */}
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 text-indigo-500">
+          Use Cases
+        </h2>
+        <p className="text-base sm:text-lg lg:text-xl mb-8 sm:mb-12 max-w-3xl mx-auto text-gray-200">
           RhythmiqCX makes customer engagement effortless across industries.
           From automating support to capturing leads, our AI-powered chatbots
           handle the conversations that matter most so your team can focus on
