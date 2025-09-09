@@ -32,13 +32,13 @@ export default function AnimatedSection({
   return (
     <motion.section
       ref={ref}
-      initial={shouldAnimate ? { opacity: 0, y: 80, scale: 0.95 } : {}}
+      initial={shouldAnimate ? { opacity: 0, y: 80, scale: 0.95 } : { opacity: 1, y: 0, scale: 1 }}
       animate={
         shouldAnimate
           ? isInView
             ? { opacity: 1, y: 0, scale: 1 }
-            : { opacity: 0, y: 80, scale: 0.95 }
-          : {}
+            : { opacity: 1, y: 0, scale: 1 }
+          : { opacity: 1, y: 0, scale: 1 }
       }
       transition={shouldAnimate ? { duration: 0.8, ease: "easeInOut" } : {}}
       className={`
@@ -47,7 +47,8 @@ export default function AnimatedSection({
         px-4 sm:px-6 lg:px-12
         pb-12 sm:pb-16 lg:pb-20
         flex flex-col items-center justify-center
-        overflow-hidden
+        overflow-hidden sm:overflow-hidden
+        overflow-y-auto sm:overflow-y-hidden
       `}
     >
       {/* Subtle animated background overlay */}
@@ -60,7 +61,7 @@ export default function AnimatedSection({
         />
       )}
 
-      <div className="w-full max-w-7xl relative z-10 overflow-hidden">{children}</div>
+      <div className="w-full max-w-7xl relative z-10 overflow-hidden sm:overflow-hidden overflow-y-auto sm:overflow-y-hidden">{children}</div>
     </motion.section>
   );
 }

@@ -209,14 +209,7 @@ const BenefitItem: React.FC<{ icon: React.ElementType; title: string }> = ({
 );
 
 // Hero Section
-// Hero Section
 const HeroSection: React.FC = () => {
-  const [textVisible, setTextVisible] = useState(false);
-
-  useEffect(() => {
-    setTextVisible(true);
-  }, []);
-
   return (
     <section
       id="hero"
@@ -226,13 +219,7 @@ const HeroSection: React.FC = () => {
         {/* Main Content Container */}
         <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-16">
           {/* Text Content */}
-          <div
-            className={`w-full lg:w-1/2 transition-all duration-1000 ${
-              textVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-8"
-            }`}
-          >
+          <div className="w-full lg:w-1/2">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight text-white">
               Instant Answers,
               <br />
@@ -279,13 +266,7 @@ const HeroSection: React.FC = () => {
           </div>
 
           {/* Chat Animation */}
-          <div
-            className={`w-full lg:w-1/2 transition-all duration-1000 delay-300 flex justify-center ${
-              textVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-8"
-            }`}
-          >
+          <div className="w-full lg:w-1/2 flex justify-center">
             <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg">
               <ChatAnimation />
             </div>

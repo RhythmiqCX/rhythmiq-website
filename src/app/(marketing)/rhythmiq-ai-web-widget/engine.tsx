@@ -4,9 +4,9 @@ import EngineAnimation from "./animation"
 
 export default function AiEngine() {
   return (
-    <div className="w-full h-full flex flex-col justify-center text-white text-center">
+    <div className="w-full h-full flex flex-col justify-center text-white mt-2 text-center overflow-y-auto sm:overflow-y-hidden">
       {/* Header */}
-      <div className="max-w-5xl mx-auto mb-4 sm:mb-6">
+      <div className="max-w-5xl mx-auto mb-3 sm:mb-4 lg:mb-6">
         <p className="uppercase text-xs tracking-wider text-indigo-500 mb-2 font-semibold">
           Built for Speed & Scale
         </p>

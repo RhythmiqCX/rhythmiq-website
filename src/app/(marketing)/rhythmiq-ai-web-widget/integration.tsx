@@ -31,18 +31,18 @@ export default function IntegrationSection() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col justify-center text-center">
+    <div className="w-full h-full flex flex-col justify-center text-center overflow-y-auto sm:overflow-y-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-white">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6 text-white">
           Seamless Integration in 3 Steps
         </h2>
-        <p className="text-gray-400 mb-8 sm:mb-12 text-base sm:text-lg">
+        <p className="text-gray-400 mb-6 sm:mb-8 lg:mb-12 text-sm sm:text-base lg:text-lg">
           Get started without hassle — just drop it in and watch it work.
         </p>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 overflow-x-hidden pb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-10 overflow-x-hidden pb-4">
           {steps.map((step) => (
             <div
               key={step.id}
@@ -50,7 +50,7 @@ export default function IntegrationSection() {
             >
               {/* Colorful Block */}
               <div
-                className={`${step.bg} w-full h-52 sm:h-60 rounded-2xl flex items-center justify-center transition-transform transform hover:scale-105 hover:-translate-y-2 hover:shadow-2xl`}
+                className={`${step.bg} w-full h-40 sm:h-48 lg:h-52 xl:h-60 rounded-2xl flex items-center justify-center transition-transform transform hover:scale-105 hover:-translate-y-2 hover:shadow-2xl`}
               >
                 {step.image && (
                   <Image
@@ -64,11 +64,11 @@ export default function IntegrationSection() {
               </div>
 
               {/* Text Below */}
-              <div className="mt-4 sm:mt-6 text-center px-2">
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
+              <div className="mt-3 sm:mt-4 lg:mt-6 text-center px-2">
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-white mb-1 sm:mb-2">
                   {step.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-300">
+                <p className="text-xs sm:text-sm lg:text-base text-gray-300">
                   {step.description}
                 </p>
               </div>

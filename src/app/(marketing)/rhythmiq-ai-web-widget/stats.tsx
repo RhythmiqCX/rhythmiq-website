@@ -29,21 +29,21 @@ const stats = [
 
 export default function ImpactStats() {
   return (
-    <section className="h-screen w-full bg-gradient-to-b bg-background/80 text-white flex flex-col justify-center items-center px-6 snap-start scroll-mt-16 overflow-x-hidden">
+    <section className="h-screen w-full bg-gradient-to-b bg-background/80 text-white flex flex-col justify-center items-center px-4 sm:px-6 snap-start scroll-mt-16 overflow-x-hidden overflow-y-auto sm:overflow-y-hidden">
       <div className="w-full max-w-6xl flex flex-col justify-center items-center">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8 md:mb-12"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12"
         >
           Building the Future of Engagement{" "}
           <span className="text-indigo-500">with AI</span>
         </motion.h2>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 w-full overflow-x-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 w-full overflow-x-hidden">
         {stats.map((stat, i) => (
           <motion.div
             key={i}
@@ -51,12 +51,12 @@ export default function ImpactStats() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
             whileHover={{ scale: 1.05 }}
-            className={`rounded-2xl p-8 flex flex-col justify-center text-center shadow-lg bg-gradient-to-br ${stat.color} ${stat.size}`}
+            className={`rounded-2xl p-4 sm:p-6 md:p-8 flex flex-col justify-center text-center shadow-lg bg-gradient-to-br ${stat.color} ${stat.size}`}
           >
-            <h3 className="text-5xl font-extrabold mb-3 drop-shadow-lg">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2 sm:mb-3 drop-shadow-lg">
               {stat.value}
             </h3>
-            <p className="text-base opacity-90">{stat.label}</p>
+            <p className="text-sm sm:text-base opacity-90">{stat.label}</p>
           </motion.div>
         ))}
         </div>
@@ -66,7 +66,7 @@ export default function ImpactStats() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-6 sm:mt-8 md:mt-12 text-base sm:text-lg text-gray-400 text-center"
+          className="mt-4 sm:mt-6 md:mt-8 lg:mt-12 text-sm sm:text-base md:text-lg text-gray-400 text-center"
         >
           Delivering reliable, scalable, and intelligent automation for the
           future.

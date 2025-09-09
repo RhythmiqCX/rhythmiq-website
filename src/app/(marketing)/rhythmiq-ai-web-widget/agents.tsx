@@ -83,16 +83,16 @@ export default function AIAgentSection() {
   const current = sections.find((s) => s.id === active);
 
   return (
-    <div className="w-full h-full flex flex-col justify-center text-dark-blue">
+    <div className="w-full h-full flex flex-col justify-center text-dark-blue overflow-y-auto sm:overflow-y-hidden">
       {/* Hero Section */}
-      <div className="max-w-6xl mx-auto mb-8">
-        <p className="text-xs font-mono uppercase tracking-wider text-indigo-600 mb-4">
+      <div className="max-w-6xl mx-auto mb-3 sm:mb-6 lg:mb-8">
+        <p className="text-xs font-mono uppercase tracking-wider text-indigo-600 mb-1 sm:mb-4">
           RhythmiqCX Webchatbot
         </p>
-        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-serif leading-tight mb-6">
+        <h1 className="text-xl sm:text-3xl lg:text-4xl xl:text-6xl font-serif leading-tight mb-2 sm:mb-6">
           Smarter, Faster <br className="hidden sm:block" /> Customer Support
         </h1>
-        <p className="text-base sm:text-lg text-dark-blue/70 max-w-2xl mb-6">
+        <p className="text-xs sm:text-base lg:text-lg text-dark-blue/70 max-w-2xl mb-3 sm:mb-6">
           RhythmiqCX is the intelligent website chatbot built to help startups
           and growing businesses deliver instant answers, reduce support costs,
           and keep customers happy—without adding more agents to your team.
@@ -100,9 +100,9 @@ export default function AIAgentSection() {
       </div>
 
       {/* Capabilities Section */}
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-3 sm:gap-6 lg:gap-8">
         {/* Left - Image */}
-        <div className="border border-black/10 bg-white rounded-md relative overflow-hidden flex items-center justify-center p-6 min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
+        <div className="border border-black/10 bg-white rounded-md relative overflow-hidden flex items-center justify-center p-3 sm:p-6 min-h-[200px] sm:min-h-[400px] lg:min-h-[500px]">
           {/* Background Animation */}
           <motion.div
             key={active}
@@ -125,14 +125,14 @@ export default function AIAgentSection() {
         </div>
 
         {/* Right - Content */}
-        <div className="flex flex-col gap-6 overflow-hidden">
+        <div className="flex flex-col gap-3 sm:gap-6 overflow-hidden">
           {/* Pills */}
-          <ul className="flex gap-3 flex-wrap">
+          <ul className="flex gap-2 sm:gap-3 flex-wrap">
             {sections.map((s) => (
               <li key={s.id}>
                 <button
                   onClick={() => setActive(s.id)}
-                  className={`px-4 py-2 rounded-full border text-xs font-mono uppercase tracking-wider transition-colors ${
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border text-xs font-mono uppercase tracking-wider transition-colors ${
                     active === s.id
                       ? "bg-indigo border-indigo text-white shadow-md"
                       : "bg-gray-100 border-black/30 text-black hover:bg-dark-blue hover:text-indigo-500 hover:border-dark-blue"
@@ -146,16 +146,16 @@ export default function AIAgentSection() {
 
           {/* Content */}
           <div>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif mb-4">
+            <h2 className="text-lg sm:text-2xl lg:text-3xl font-serif mb-2 sm:mb-4">
               {current?.title}
             </h2>
-            <p className="text-base text-dark-blue/70 mb-6">{current?.desc}</p>
+            <p className="text-sm sm:text-base text-dark-blue/70 mb-3 sm:mb-6">{current?.desc}</p>
 
             <div>
-              <span className="block font-mono text-xs uppercase tracking-wider text-dark-blue/60 border-b border-black/10 pb-2 mb-4">
+              <span className="block font-mono text-xs uppercase tracking-wider text-dark-blue/60 border-b border-black/10 pb-1 sm:pb-2 mb-2 sm:mb-4">
                 Featured Capabilities
               </span>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-dark-blue/80 ">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-2 text-xs sm:text-sm text-dark-blue/80">
                 {current?.features.map((f, i) => (
                   <li key={i}>{f}</li>
                 ))}

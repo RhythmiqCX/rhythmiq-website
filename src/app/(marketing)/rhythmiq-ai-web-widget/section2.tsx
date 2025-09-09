@@ -63,9 +63,9 @@ export default function ScrollSnapLayout() {
       </aside>
 
       {/* Active Section */}
-      <div className="flex-1 overflow-hidden">
-        <section className="h-screen w-full bg-background/80 px-4 sm:px-6 lg:px-12 flex items-center justify-center overflow-hidden">
-          <div className="w-full max-w-7xl overflow-hidden">
+      <div className="flex-1 overflow-hidden sm:overflow-hidden overflow-y-auto sm:overflow-y-hidden">
+        <section className="h-screen w-full bg-background/80 px-4 sm:px-6 lg:px-12 flex items-center justify-center overflow-hidden sm:overflow-hidden overflow-y-auto sm:overflow-y-hidden">
+          <div className="w-full max-w-7xl overflow-hidden sm:overflow-hidden overflow-y-auto sm:overflow-y-hidden">
             {renderContent()}
           </div>
         </section>
