@@ -213,7 +213,7 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen w-full snap-start snap-always bg-background/80 text-white flex items-center justify-center scroll-mt-16 overflow-x-hidden"
+      className="min-h-screen w-full bg-background/80 text-white flex items-center justify-center overflow-x-hidden"
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Content Container */}

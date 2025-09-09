@@ -29,7 +29,7 @@ const stats = [
 
 export default function ImpactStats() {
   return (
-    <section className="h-screen w-full bg-gradient-to-b bg-background/80 text-white flex flex-col justify-center items-center px-4 sm:px-6 snap-start scroll-mt-16 overflow-x-hidden overflow-y-auto sm:overflow-y-hidden">
+    <section className="min-h-screen w-full bg-gradient-to-b bg-background/80 text-white flex flex-col justify-center items-center px-4 sm:px-6 overflow-x-hidden overflow-y-auto sm:overflow-y-hidden">
       <div className="w-full max-w-6xl flex flex-col justify-center items-center">
         {/* Heading */}
         <motion.h2

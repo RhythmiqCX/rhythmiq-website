@@ -8,7 +8,7 @@ import AnimatedSection from "./scrollanimation"; // 👈 new wrapper component
 
 export default function Home() {
   return (
-    <main className="h-screen w-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-smooth overscroll-none">
+    <main className="min-h-screen w-screen overflow-x-hidden">
       {/* Hero Section */}
       <AnimatedSection disableOnMobile={true}>
         <HeroSection />
