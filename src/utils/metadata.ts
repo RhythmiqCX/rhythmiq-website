@@ -25,28 +25,13 @@ export const generateMetadata = ({
     title = `Rhythmiq - AI-Powered Customer Support Agent`,
     description = `Rhythmiq is an AI CX platform that transforms how companies interact with Customers. Leverage AI to automate support queries, create personalized AI agents, and boost productivity. Experience smarter Customer Services today.`,
     icons = [
-        // Browser tab icons (small, specific sizes) - MUST be first for browser tabs
+        // Use square icon everywhere
         {
             rel: "icon",
-            url: "/icons/icon.png",
-            sizes: "16x16",
-            type: "image/png",
-        },
-        {
-            rel: "icon",
-            url: "/icons/icon.png",
+            url: "/icons/rhythmiq-icon.png",
             sizes: "32x32",
             type: "image/png",
-            media: "(prefers-color-scheme: light)",
         },
-        {
-            rel: "icon",
-            url: "/icons/icon.png",
-            sizes: "32x32",
-            type: "image/png",
-            media: "(prefers-color-scheme: dark)",
-        },
-        // Search results and social media icons (larger) - Google will pick these
         {
             rel: "icon",
             url: "/icons/rhythmiq-icon.png",
@@ -64,13 +49,6 @@ export const generateMetadata = ({
             rel: "apple-touch-icon",
             url: "/icons/rhythmiq-icon.png",
             sizes: "180x180",
-        },
-        // Android icons
-        {
-            rel: "icon",
-            url: "/icons/rhythmiq-icon.png",
-            sizes: "192x192",
-            type: "image/png",
         },
     ],
     noIndex = false,
