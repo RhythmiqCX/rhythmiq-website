@@ -83,7 +83,7 @@ export default function RootLayout({
                                 __html: `
                             (function(d,t){
                             var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                            g.src="http://app.rhythmiqcx.com/widget/widget-loader.js?websiteToken=LqLCFHzJ7Syw-Wz-eQK1ltcD";
+                            g.src="https://app.rhythmiqcx.com/widget/widget-loader.js?websiteToken=LqLCFHzJ7Syw-Wz-eQK1ltcD";
                             g.defer=true;g.async=true;
                             s.parentNode.insertBefore(g,s);
                             })(document,"script");
