@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import HeroSection from "./hero";
 import ImpactStats from "./stats";
 import UseCasesTestimonials from "./use";
@@ -37,11 +37,13 @@ export default function Home() {
               Ready to Get Started?
             </h2>
             <p className="text-gray-300 mb-8 text-base sm:text-lg lg:text-xl">
-              Add your final call to action here.
+              Enter a new era of customer support with Rhythmiq AI. Take a free demo , no credit card required.
             </p>
+            <Link href="https://calendly.com/ray-rhythmiqcx/30min">
             <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-xl font-semibold shadow-lg hover:opacity-90 transition">
-              Start Free Trial
+              Schedule a Free Demo
             </button>
+            </Link>
           </div>
         </section>
       </AnimatedSection>
