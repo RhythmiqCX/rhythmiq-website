@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Clock, Brain, Users, CheckSquare, Zap, Shield, MoreVertical, Maximize2, Send, Smile } from "lucide-react";
-
+import Link from "next/link";
 // ChatMessage component
 interface ChatMessageProps {
   message: string;
@@ -248,13 +248,13 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-indigo-500 text-black rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border-2 border-gray-600 text-white rounded-xl hover:bg-gray-800 transition-all duration-300 font-semibold text-lg">
+            <div className="flex flex-col self-start justify-start align-center sm:flex-row gap-4">
+              <Link href="https://calendly.com/ray-rhythmiqcx/30min" target="_blank" rel="noopener noreferrer">
+              <button className="w-80 px-8 py-4 bg-indigo-500 text-black rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg">
                 Book a Demo
               </button>
+              </Link>
+              
             </div>
 
             {/* Trust Badge */}
