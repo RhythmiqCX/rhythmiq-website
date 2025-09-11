@@ -111,3 +111,9 @@ updated: 2025-09-05
 https://rhythmiqcx.com/blog/agentic-ai-and-autonomous-systems/
 summary: Agentic AI is redefining automation by moving from assistance to autonomy. These systems sense, reason, act, and learn independently.
 tags: AI, tech, agentic-ai, ai-workflow, automation, ai-bot,chatbot, customer-support
+
+# Rhythmiq AI Web Widget
+https://rhythmiqcx.com/rhythmiq-ai-web-widget/
+summary: Deploy an intelligent AI-powered web chatbot that provides instant customer support, captures leads, and automates conversations 24/7 with 99.99% uptime and 85% automation rate.
+tags: ai web widget, website chatbot, customer support automation, lead generation, 24/7 support, conversational ai
+updated: 2025-09-12
