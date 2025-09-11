@@ -77,6 +77,19 @@ export default function RootLayout({
                                 `
                             }}
                         />
+                        <script
+                            // eslint-disable-next-line react/no-danger
+                            dangerouslySetInnerHTML={{
+                                __html: `
+                            (function(d,t){
+                            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                            g.src="http://app.rhythmiqcx.com/widget/widget-loader.js?websiteToken=LqLCFHzJ7Syw-Wz-eQK1ltcD";
+                            g.defer=true;g.async=true;
+                            s.parentNode.insertBefore(g,s);
+                            })(document,"script");
+                            `,
+                            }}
+                        />
             </body>
         </html>
     );
