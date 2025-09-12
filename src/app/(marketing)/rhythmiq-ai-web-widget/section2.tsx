@@ -41,7 +41,7 @@ export default function ScrollSnapLayout() {
   };
 
   return (
-    <div className="flex h-screen w-full overflow-x-hidden">
+    <div className="flex min-h-screen sm:h-screen w-full overflow-x-hidden">
       {/* Sidebar */}
       <aside className="hidden lg:block sticky top-0 h-screen w-56 bg-background/80 text-white p-6 shrink-0">
         <ul className="space-y-4">
@@ -63,8 +63,8 @@ export default function ScrollSnapLayout() {
       </aside>
 
       {/* Active Section */}
-      <div className="flex-1 overflow-hidden sm:overflow-hidden overflow-y-auto sm:overflow-y-hidden">
-        <section className="min-h-screen w-full bg-background/80 px-4 sm:px-6 lg:px-12 flex items-start justify-center overflow-y-auto">
+      <div className="flex-1 overflow-hidden sm:overflow-hidden overflow-y-visible sm:overflow-y-hidden">
+        <section className="min-h-screen w-full bg-background/80 px-4 sm:px-6 lg:px-12 flex items-start justify-center overflow-y-visible sm:overflow-y-auto">
   <div className="w-full max-w-7xl">
     {renderContent()}
   </div>

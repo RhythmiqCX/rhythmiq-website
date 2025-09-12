@@ -31,7 +31,7 @@ export default function IntegrationSection() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col justify-center text-center overflow-y-auto sm:overflow-y-hidden">
+    <div className="w-full h-full flex flex-col justify-center text-center overflow-y-visible sm:overflow-y-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6 text-white">

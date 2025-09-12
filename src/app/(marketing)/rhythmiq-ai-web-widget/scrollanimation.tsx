@@ -43,12 +43,12 @@ export default function AnimatedSection({
       transition={shouldAnimate ? { duration: 0.8, ease: "easeInOut" } : {}}
       className={`
         relative
-        h-screen w-full snap-start snap-always scroll-mt-16
+        min-h-screen sm:h-screen w-full snap-start snap-always scroll-mt-16
         px-4 sm:px-6 lg:px-12
         pb-12 sm:pb-16 lg:pb-20
         flex flex-col items-center justify-center
         overflow-hidden sm:overflow-hidden
-        overflow-y-auto sm:overflow-y-hidden
+        overflow-y-visible sm:overflow-y-hidden
       `}
     >
       {/* Subtle animated background overlay */}
@@ -61,7 +61,7 @@ export default function AnimatedSection({
         />
       )}
 
-      <div className="w-full max-w-7xl relative z-10 overflow-hidden sm:overflow-hidden overflow-y-auto sm:overflow-y-hidden">{children}</div>
+      <div className="w-full max-w-7xl relative z-10 overflow-hidden sm:overflow-hidden overflow-y-visible sm:overflow-y-hidden">{children}</div>
     </motion.section>
   );
 }
