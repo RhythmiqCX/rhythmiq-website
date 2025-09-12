@@ -250,7 +250,7 @@ const HeroSection: React.FC = () => {
             {/* CTA */}
             <div className="flex flex-col self-start justify-start align-center sm:flex-row gap-4">
               <Link href="https://calendly.com/ray-rhythmiqcx/30min" target="_blank" rel="noopener noreferrer">
-              <button className="w-80 px-8 py-4 bg-indigo-500 text-black rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-lg">
+              <button className="w-full sm:w-80 px-6 sm:px-8 py-3 sm:py-4 bg-indigo-500 text-black rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold text-base sm:text-lg">
                 Book a Demo
               </button>
               </Link>
