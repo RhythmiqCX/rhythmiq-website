@@ -106,3 +106,8 @@ https://rhythmiqcx.com/blog/ai-hallucinations-on-the-rise/
 summary: Discover how AI hallucinations and false but confident answers are rising, with error rates nearly doubling in chatbot responses.
 tags : AI, tech, ai hallucinations, customer support, ai ethics
 updated: 2025-09-05
+
+# Agentic AI and Autonomous Systems
+https://rhythmiqcx.com/blog/agentic-ai-and-autonomous-systems/
+summary: Agentic AI is redefining automation by moving from assistance to autonomy. These systems sense, reason, act, and learn independently.
+tags: AI, tech, agentic-ai, ai-workflow, automation, ai-bot,chatbot, customer-support
