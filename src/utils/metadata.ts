@@ -83,7 +83,7 @@ export const generateMetadata = ({
         "AI customer service",
         "AI bot providers india"
     ],
-    author = process.env.NEXT_PUBLIC_AUTHOR_NAME,
+    author = process.env.NEXT_PUBLIC_AUTHOR_NAME || "Rhythmiq",
     type = "website",
     alternates,
     openGraph,
@@ -93,14 +93,14 @@ export const generateMetadata = ({
     return {
         metadataBase,
         title: {
-            template: `%s | ${process.env.NEXT_PUBLIC_APP_NAME}`,
+            template: `%s | ${process.env.NEXT_PUBLIC_APP_NAME || "Rhythmiq"}`,
             default: title
         },
         description,
         keywords,
         authors: [{ name: author }],
         creator: author,
-        publisher: process.env.NEXT_PUBLIC_APP_NAME,
+        publisher: process.env.NEXT_PUBLIC_APP_NAME || "Rhythmiq",
         formatDetection: {
             email: false,
             address: false,
@@ -111,7 +111,7 @@ export const generateMetadata = ({
             canonical: alternates.canonical ? new URL(alternates.canonical, metadataBase).toString() : undefined
         } : undefined,
         openGraph: openGraph ? {
-            images: openGraph.images,
+            images: openGraph.images?.map(img => new URL(img, metadataBase).toString()),
             type: openGraph.type as "website" | "article" | "profile",
             publishedTime: openGraph.publishedTime,
             authors: openGraph.authors,
