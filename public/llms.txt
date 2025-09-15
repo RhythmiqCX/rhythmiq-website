@@ -118,3 +118,9 @@ https://rhythmiqcx.com/rhythmiq-ai-web-widget/
 summary: Deploy an intelligent AI-powered web chatbot that provides instant customer support, captures leads, and automates conversations 24/7 with 99.99% uptime and 85% automation rate.
 tags: ai web widget, website chatbot, customer support automation, lead generation, 24/7 support, conversational ai
 updated: 2025-09-12
+
+# AI Governance, Ethics, Safety & Disinformation: Building Responsible AI Systems
+https://rhythmiqcx.com/blog/ai-governance-ethics-safety-disinformation
+summary : Explore AI governance, ethics, safety, and the disinformation challenge and how responsible AI can shape a trustworthy future.
+tags: AI, ai-ethics, ai-safety
+updated: 2025-09-15
