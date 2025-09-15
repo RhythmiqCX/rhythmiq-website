@@ -46,7 +46,7 @@ export default function UseCasesTestimonials() {
   return (
     <section
       id="section4"
-      className="w-full bg-background/80 text-white px-4 sm:px-6 lg:px-12 overflow-x-hidden"
+      className="mb-16 mt-16 w-full bg-background/80 text-white px-4 sm:px-6 lg:px-12 overflow-x-hidden"
     >
       <div className="max-w-7xl mx-auto text-center flex flex-col overflow-x-hidden">
         {/* Heading */}

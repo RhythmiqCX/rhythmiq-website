@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Mail, Copy } from 'lucide-react';
 import { toast } from 'sonner';
-
+import Link from 'next/link';
 export default function ContactUsPage() {
     const copyToClipboard = (email: string, label: string) => {
         navigator.clipboard.writeText(email);
@@ -67,6 +67,11 @@ export default function ContactUsPage() {
             </div>
           </CardContent>
         </Card>
+        <Link href="https://calendly.com/ray-rhythmiqcx/30min">
+            <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-xl font-semibold shadow-lg hover:opacity-90 transition">
+              Schedule a Free Demo
+            </button>
+            </Link>
       </div>
     </div>
   );
