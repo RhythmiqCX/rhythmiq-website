@@ -2,27 +2,27 @@ import { motion } from "framer-motion";
 
 const stats = [
   {
-    value: "500+",
+    value: "10+",
     label: "early adopters engaged",
-    size: "md:col-span-2", // bigger block
+    size: "md:col-span-2", 
     color: "from-purple-500 to-indigo-600",
   },
   {
-    value: "10X",
+    value: "5X",
     label: "efficiency boost vs human agents",
     size: "md:col-span-1",
     color: "from-pink-500 to-rose-600",
   },
   {
-    value: "85%",
+    value: "75%",
     label: "conversations fully automated",
     size: "md:col-span-1",
     color: "from-blue-500 to-cyan-600",
   },
   {
-    value: "99.99%",
+    value: "95.99%",
     label: "uptime and reliability",
-    size: "md:col-span-2", // bigger block
+    size: "md:col-span-2", 
     color: "from-emerald-500 to-green-600",
   },
 ];
