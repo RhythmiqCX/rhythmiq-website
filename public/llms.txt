@@ -124,3 +124,8 @@ https://rhythmiqcx.com/blog/ai-governance-ethics-safety-disinformation
 summary : Explore AI governance, ethics, safety, and the disinformation challenge and how responsible AI can shape a trustworthy future.
 tags: AI, ai-ethics, ai-safety
 updated: 2025-09-15
+
+# Multimodal AI: Uses, Challenges & Future
+https://rhythmiqcx.com/blog/ai-governance-ethics-safety-disinformation
+summary : Explore how multimodal AI combines text, images, audio & video to transform industries, with real-world use cases, risks, and future trends.
+tags : AI, multimodal ai, ai chatbot ,voice ai, image ai, video ai
