@@ -19,7 +19,7 @@ export const metadata = generateMetadata({
 const SECTIONS = [
   {
     id: "introduction",
-    label: "Introduction : What is Multimodal AI & Why It’s a Game‐Changer",
+    label: "Introduction : What is Multimodal AI & Why It’s a Game Changer",
   },
   {
     id: "recent-advances-major-players",
