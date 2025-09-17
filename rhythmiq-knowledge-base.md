@@ -3,6 +3,8 @@
 ## Company Overview
 **Rhythmiq** is an AI-powered customer support platform that delivers human-quality service in 60+ languages. The platform is designed to work across multiple channels including web, WhatsApp, and other existing platforms with no-code implementation.
 
+**RhythmiqCX Web Widget** is our flagship web widget product - an intelligent website chatbot built to help startups and growing businesses deliver instant answers, reduce support costs, and keep customers happy without adding more agents to your team.
+
 ## Core Product Features
 
 ### 1. AI-Powered Customer Service
@@ -35,6 +37,48 @@
 - Configure intents and fallbacks
 - Set confidence thresholds for automatic handoff
 
+## RhythmiqCX Web Widget Features
+
+### Build Capabilities
+- **Custom conversation builder**: Design your chatbot exactly how you want it
+- **Visual flow editor**: Full control over flows, tone, and logic without relying on third-party platforms
+- **Message templates**: Pre-built templates for common interactions
+- **Context-aware replies**: Intelligent responses based on conversation history
+- **Persona & tone control**: Customize the bot's personality and communication style
+- **Multi-language setup**: Support for 60+ languages
+- **Web SDK for easy embed**: Simple integration with any website
+- **Customizable UI components**: Match your brand's look and feel
+
+### Integration Capabilities
+- **API-first architecture**: Seamlessly plug into your web app
+- **Webhook support**: Real-time data synchronization
+- **CRM & support tool connectors**: Connect with existing systems
+- **Knowledge base sync**: Automatic updates from your documentation
+- **Custom data integrations**: Connect with your backend systems
+- **User authentication support**: Secure user identification
+- **Single sign-on (SSO)**: Streamlined user experience
+- **Secure data handling**: Enterprise-grade security
+
+### Training & Intelligence
+- **Knowledge upload**: Power your chatbot with your own data and policies
+- **Custom FAQ training**: Teach it product knowledge and support workflows
+- **Policy & compliance guardrails**: Ensure brand-approved responses
+- **Intent recognition**: Understand customer queries accurately
+- **Multi-source context handling**: Pull from multiple knowledge sources
+- **Real-time learning updates**: Continuously improve from conversations
+- **Human fallback routing**: Seamless handoff when needed
+- **Conversation labeling**: Track and categorize interactions
+
+### Optimization & Analytics
+- **Conversation analytics dashboard**: Deep insights into chat performance
+- **Customer satisfaction tracking**: Monitor CSAT scores and sentiment
+- **Message-level insights**: Analyze individual interactions
+- **Missed question detection**: Identify knowledge gaps
+- **Improvement recommendations**: AI-powered optimization suggestions
+- **Topic trend reports**: Understand common customer issues
+- **Agent handoff reporting**: Track escalation patterns
+- **A/B testing for flows**: Optimize conversation paths
+
 ## Key Performance Metrics
 
 ### Ticket Deflection & Efficiency
@@ -42,6 +86,12 @@
 - **35% Higher CSAT**: Customers get instant, accurate answers with no queues or IVR
 - **50% Support Cost Savings**: Reduce live agent workload while maintaining quality
 - **Resolve 70% of tickets in under 2 seconds**: LLM-powered intent detection
+
+### Web Widget Performance
+- **10+ early adopters engaged**: Growing user base
+- **5X efficiency boost** vs human agents
+- **75% conversations fully automated**: Minimal human intervention needed
+- **99.99% uptime and reliability**: Enterprise-grade availability
 
 ### WhatsApp-Specific Metrics
 - **98% Message open rate** on WhatsApp
@@ -51,11 +101,17 @@
 
 ## Channel Support
 
-### Web & In-App Chatbot
-- Embed conversational AI widget on websites
-- Natural language understanding
-- Pulls answers from knowledge base
-- Instant response capabilities
+### Web & In-App Chatbot (RhythmiqCX)
+- **Instant Answers, Effortless Support**: AI-powered bot provides immediate, intelligent help
+- **Lightning Fast Response**: 99.9% uptime with instant resolution
+- **24/7 Availability**: Round-the-clock customer support
+- **AI-Powered Intelligence**: Advanced natural language understanding
+- **Better Customer Experience**: No queues, no waiting, instant help
+- **Automatic Resolution**: Handle common queries without human intervention
+- **Seamless Integration**: 3-step setup process
+  1. Generate your widget with website URL
+  2. Copy-paste one line of code into your website
+  3. Go live instantly in minutes
 
 ### WhatsApp Business Integration
 - Official WhatsApp Business API integration
@@ -78,7 +134,12 @@
 
 ## Implementation & Setup
 
-### 5-Step Setup Process
+### RhythmiqCX Web Widget Setup (3 Steps)
+1. **Generate Your Widget**: Provide your website URL and instantly get a ready-to-use chatbot widget
+2. **Add It to Your Site**: Copy-paste one line of code into your website - no setup, no fuss
+3. **Go Live Instantly**: Your chatbot is live in minutes, engaging visitors and capturing leads
+
+### Traditional Platform Setup (5 Steps)
 1. **Select Plan & Add Agents**: Choose Web, WhatsApp, or Omni plan with up to 5 agents
 2. **Connect Channels**: Embed web chat widget and link WhatsApp Business number
 3. **Upload Knowledge Base**: Sync FAQs, help articles, and policy documents
@@ -139,17 +200,35 @@
 
 ## Technical Features
 
+### Conduit Engine - Real-Time Messaging & AI Orchestration
+**Conduit** is our proprietary real-time messaging and AI orchestration engine, designed to handle thousands of simultaneous conversations without breaking a sweat. Every layer is tuned for speed, reliability, and trust.
+
+#### Conduit Architecture Components
+- **Centrifugo**: Pub/sub server written in Go, handles WebSockets, SSE, gRPC
+- **FastAPI**: Python's async superstar for HTTP API and message handling
+- **PostgreSQL**: World's most advanced open-source database for data persistence
+- **Redis**: High-performance caching and cluster coordination
+
+#### Conduit Processing Pipeline
+1. **Smart Query Handling**: Incoming questions are instantly routed and cleaned up for maximum comprehension
+2. **AI-Powered Responses**: Uses advanced retrieval-augmented generation (RAG) for precise, context-aware answers
+3. **Accuracy & Safety Checks**: Responses verified against compliance and quality rules
+4. **Continuous Optimization**: Every conversation feeds back into the system for improvement
+
 ### AI Capabilities
 - Large Language Model (LLM) integration
 - Intent detection and natural language processing
 - Multilingual support with region-tuned models
 - Sentiment analysis and conversation tracking
+- Retrieval-augmented generation (RAG) for accurate responses
 
 ### Integration Capabilities
 - Existing help desk integration
 - Knowledge base synchronization
 - CRM system connectivity
 - Webhook support for custom integrations
+- API-first architecture
+- Single sign-on (SSO) support
 
 ### Security & Compliance
 - **GDPR Compliant**: Data can be kept in region
@@ -158,15 +237,78 @@
 - **Encryption**: At rest and in transit
 - **Audit Logs**: Full regulatory compliance
 
+## Conduit Engine - Technical Deep Dive
+
+### What is Conduit?
+Conduit is our proprietary real-time messaging and AI orchestration engine that powers RhythmiqCX. It's designed to handle thousands of simultaneous conversations without breaking a sweat, with every layer tuned for speed, reliability, and trust.
+
+### Architecture Overview
+Conduit is built using open-source technologies that work together seamlessly:
+
+- **Centrifugo**: Our pub/sub server written in Go, handling WebSockets, SSE, and gRPC
+- **FastAPI**: Python's async superstar for HTTP API and message handling
+- **PostgreSQL**: The world's most advanced open-source database for data persistence
+- **Redis**: High-performance caching and cluster coordination
+
+### Key Features
+- **Horizontal Scaling**: Scales using Redis for distributed coordination
+- **Real-time Communication**: WebSocket and SSE support for instant messaging
+- **Atomic Operations**: Ensures database state updates and notifications happen together
+- **High Availability**: Built for 99.99% uptime and reliability
+- **Open Source Foundation**: All components are proven, open-source technologies
+
+### Processing Pipeline
+1. **Smart Query Handling**: Incoming questions are instantly routed and cleaned up
+2. **AI-Powered Responses**: Uses RAG (Retrieval-Augmented Generation) for accurate answers
+3. **Safety Checks**: Responses verified against compliance and quality rules
+4. **Continuous Learning**: Every conversation improves the system
+
+This engine ensures your customers always get fast, accurate answers, whether handled by AI or a human agent.
+
 ## Use Cases & Applications
 
-### E-commerce Support
+### RhythmiqCX Web Widget Use Cases
+
+#### Lead Capture & Qualification
+- Automatically greet visitors and collect contact details
+- Qualify leads 24/7 with no missed opportunities
+- Capture leads even outside business hours
+
+#### 24/7 Customer Support
+- Instant answers to FAQs like shipping, returns, and account questions
+- Reduce support tickets while boosting customer satisfaction
+- Handle common queries without human intervention
+
+#### E-commerce Assistance
+- Guide customers to the right products
+- Check stock availability in real time
+- Handle order tracking and status updates
+- Process returns and refunds
+
+#### SaaS Onboarding
+- Walk new users through your platform
+- Answer setup questions and reduce churn
+- Provide proactive onboarding support
+
+#### Appointment Booking
+- Seamlessly integrate with calendars
+- Schedule demos, consultations, or service appointments
+- Handle booking without human intervention
+
+#### Feedback & Surveys
+- Collect customer feedback in conversation flow
+- Make it effortless to understand user sentiment
+- Improve experiences based on feedback
+
+### Traditional Use Cases
+
+#### E-commerce Support
 - Order status updates and tracking
 - Return and refund processing
 - Product information and availability
 - Payment and billing support
 
-### Customer Service Automation
+#### Customer Service Automation
 - FAQ resolution
 - Account management
 - Technical support
@@ -220,6 +362,8 @@ If confidence drops, the bot hands over to a live agent with a summarized transc
 
 ### Contact Information
 - Website: https://rhythmiqcx.com/
+- Web Widget Product Page: https://rhythmiqcx.com/rhythmiq-ai-web-widget/
+- Demo Scheduling: https://calendly.com/ray-rhythmiqcx/30min
 - Product pages available for detailed information
 - Blog with educational content about AI chatbots
 - Contact form for inquiries and support

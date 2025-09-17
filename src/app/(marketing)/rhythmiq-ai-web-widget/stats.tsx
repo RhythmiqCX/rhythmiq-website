@@ -20,7 +20,7 @@ const stats = [
     color: "from-blue-500 to-cyan-600",
   },
   {
-    value: "95.99%",
+    value: "99.99%",
     label: "uptime and reliability",
     size: "md:col-span-2", 
     color: "from-emerald-500 to-green-600",
