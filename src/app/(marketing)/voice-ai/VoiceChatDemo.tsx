@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 
 const VoiceChatDemo = () => {
     const [muted, setMuted] = useState(false);
-    const bottomRef = useRef(null);
     
   const [messages, setMessages] = useState([
     {
@@ -94,7 +93,7 @@ const VoiceChatDemo = () => {
     <div className="min-h-screen max-h-screen overflow-y-auto bg-background-80 flex flex-col px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
       <div className="max-w-4xl mx-auto w-full flex flex-col h-full min-h-0">
         {/* Header */}
-        <div className="text-center mb-6 sm:mb-8">
+        <div className="scroll-mt-16 text-center mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-3 sm:mb-4">
             Voice AI Demo
           </h2>
@@ -245,7 +244,7 @@ const VoiceChatDemo = () => {
     <p className="text-xs text-gray-400">Hold to record your voice</p>
   </div>
 
-  {/* 🔹 Mute Button - smaller, bottom left */}
+  {/* Mute Button - smaller, bottom left */}
   <button
     onClick={() => setMuted(!muted)}
     className="absolute bottom-2 left-2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-lg transition-colors duration-200 flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9"
@@ -285,7 +284,7 @@ const VoiceChatDemo = () => {
 
       {/* Mute "X" */}
       <svg
-        className={`absolute inset-0 w-full h-full transition-all duration-300 ${
+        className={`mx-[6px] mt-[4px] h-[16px] w-[16px] absolute inset-0 w-full h-full transition-all duration-300 ${
           muted ? "opacity-100 scale-100" : "opacity-0 scale-75"
         }`}
         fill="none"
@@ -296,7 +295,7 @@ const VoiceChatDemo = () => {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={2}
-          d="M5 5l12 12M6 18L18 6"
+          d="M6 6L18 18M6 18L18 6"
         />
       </svg>
     </div>

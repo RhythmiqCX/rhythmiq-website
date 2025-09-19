@@ -171,3 +171,29 @@ img {
               background-position: 0% 50%;
             }
           }
+
+@keyframes gradient-smooth {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-smooth {
+  background: linear-gradient(
+    -45deg,
+    #2dd4bf, /* teal */
+    #06b6d4, /* cyan */
+    #8b5cf6, /* violet */
+    #6366f1, /* indigo */
+    #9333ea, /* purple */
+    #3b82f6  /* blue */
+  );
+  background-size: 400% 400%;
+  animation: gradient-smooth 10s ease infinite;
+}

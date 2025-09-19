@@ -28,7 +28,7 @@ const Footer = () => {
                             </h3>
                             <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                    <Link href="#features" className="link hover:text-foreground transition-all duration-300">
                                         Features
                                     </Link>
                                 </li>
@@ -37,13 +37,13 @@ const Footer = () => {
                                         Pricing
                                     </Link>
                                 </li>
-                                <li className="mt-2">
+                                {/* <li className="mt-2">
                                     <Link href="#" className="link hover:text-foreground transition-all duration-300">
                                         Testimonials
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li className="mt-2">
-                                    <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                    <Link href="#languages" className="link hover:text-foreground transition-all duration-300">
                                         Supported Languages
                                     </Link>
                                 </li>
@@ -56,25 +56,25 @@ const Footer = () => {
                                 </h3>
                                 <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                                     <li>
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                            Content Creators
+                                        <Link href="/rhythmiq-ai-web-widget" className="link hover:text-foreground transition-all duration-300">
+                                            Rythmiq AI Web Widget
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                            Businesses
+                                        <Link href="/whatsapp-ai-chatbot" className="link hover:text-foreground transition-all duration-300">
+                                            Whatsapp AI Chatbot
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
-                                            Education
+                                        <Link href="/voice-ai" className="link hover:text-foreground transition-all duration-300">
+                                            Realtime Voice AI
                                         </Link>
                                     </li>
-                                    <li className="mt-2">
+                                    {/* <li className="mt-2">
                                         <Link href="#" className="link hover:text-foreground transition-all duration-300">
                                             Enterprise
                                         </Link>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
                         </Container>
@@ -90,11 +90,11 @@ const Footer = () => {
                                         Blog
                                     </Link>
                                 </li>
-                                <li className="mt-2">
+                                {/* <li className="mt-2">
                                     <Link href="#" className="link hover:text-foreground transition-all duration-300">
                                         Translation Guides
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li className="mt-2">
                                     <Link href="/contact-us" className="link hover:text-foreground transition-all duration-300">
                                         Support
@@ -119,7 +119,7 @@ const Footer = () => {
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="#" className="link hover:text-foreground transition-all duration-300">
+                                        <Link href="/terms-and-conditions" className="link hover:text-foreground transition-all duration-300">
                                             Terms & Conditions
                                         </Link>
                                     </li>

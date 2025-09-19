@@ -24,14 +24,13 @@ const Hero = () => {
           </h1>
         </div>
 
-        {/* Subtitle */}
         <p className="text-sm md:text-base text-gray-300 leading-relaxed max-w-2xl">
           Transform your customer operations with AI agents so realistic, your customers will prefer them.
         </p>
                 <AnimatedGradientButton />
 
           <div className="flex flex-col items-center">
-            <p className="mb-1 text-xs text-gray-400">Not a developer?</p>
+            <p className="mb-1 text-xs text-gray-400">Ready to get started?</p>
             <button
               className="bg-transparent border border-slate-600 hover:border-cyan-400 
                              hover:bg-cyan-400/10 text-white font-medium py-2.5 px-6 rounded-md 

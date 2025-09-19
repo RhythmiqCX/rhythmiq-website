@@ -7,7 +7,7 @@ const Analysis = () => {
     return (
         <div className="relative flex flex-col items-center justify-center w-full py-20">
             <Container>
-                <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+                <div id="features" className="scroll-mt-16 flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug">
                         Intelligent Customer Support  <br /><span className="font-subheading italic">dashboard</span>
                     </h2>

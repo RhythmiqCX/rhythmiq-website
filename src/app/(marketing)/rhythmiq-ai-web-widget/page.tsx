@@ -4,6 +4,7 @@ import HeroSection from "./hero";
 import ImpactStats from "./stats";
 import UseCasesTestimonials from "./use";
 import Section2 from "./section2";
+import CallToAction from "./CallToAction";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
       
 
       {/* Final CTA + Footer */}
-  <section className="w-full flex flex-col justify-center bg-background/80 text-white px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
+  {/* <section className="w-full flex flex-col justify-center bg-background/80 text-white px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
     <div className="max-w-3xl mx-auto text-center flex flex-col justify-center">
       <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2">
         Ready to Get Started?
@@ -42,8 +43,8 @@ export default function Home() {
         </button>
       </Link>
     </div>
-  </section>
-
+  </section> */}
+  <CallToAction />
     </main>
   );
 }
