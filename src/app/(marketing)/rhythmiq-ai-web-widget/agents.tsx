@@ -15,7 +15,7 @@ const sections = [
   {
     id: "build",
     title: "Build",
-    desc: "Design your chatbot exactly how you want it. RhythmiqCX gives you full control over flows, tone, and logic—without relying on third-party platforms.",
+    desc: "Design your chatbot exactly how you want it. RhythmiqCX gives you full control over flows, tone, and logic without relying on third-party platforms.",
     image: "/images/build.svg",
     features: [
       "Custom conversation builder",
@@ -95,7 +95,7 @@ export default function AIAgentSection() {
         <p className="text-base sm:text-lg text-dark-blue/70 max-w-2xl mb-6">
           RhythmiqCX is the intelligent website chatbot built to help startups
           and growing businesses deliver instant answers, reduce support costs,
-          and keep customers happy—without adding more agents to your team.
+          and keep customers happy without adding more agents to your team.
         </p>
       </div>
 

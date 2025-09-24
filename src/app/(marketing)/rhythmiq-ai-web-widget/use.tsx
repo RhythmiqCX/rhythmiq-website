@@ -9,13 +9,13 @@ export default function UseCasesTestimonials() {
       image: "/images/lead-gen.png",
       title: "Lead Capture & Qualification",
       description:
-        "Automatically greet visitors, collect contact details, and qualify leads 24/7—no missed opportunities, even outside business hours.",
+        "Automatically greet visitors, collect contact details, and qualify leads 24/7 no missed opportunities, even outside business hours.",
     },
     {
       image: "/images/24-7-support.png",
       title: "24/7 Customer Support",
       description:
-        "Instant answers to FAQs like shipping, returns, and account questions—reducing support tickets while boosting customer satisfaction.",
+        "Instant answers to FAQs like shipping, returns, and account questions reducing support tickets while boosting customer satisfaction.",
     },
     {
       image: "/images/ecom.png",

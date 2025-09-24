@@ -38,7 +38,7 @@ export default function IntegrationSection() {
           Seamless Integration in 3 Steps
         </h2>
         <p className="text-gray-400 mb-6 sm:mb-8 lg:mb-12 text-sm sm:text-base lg:text-lg">
-          Get started without hassle — just drop it in and watch it work.
+          Get started without hassle   just drop it in and watch it work.
         </p>
 
         {/* Steps Grid */}
