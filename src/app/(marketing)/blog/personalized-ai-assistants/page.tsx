@@ -1,9 +1,9 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 export const metadata = generateMetadata({
-  title: "Multimodal AI: Uses, Challenges & Future",
+  title: "Hyper-Personalized AI Assistants: The Future of Custom AI UX",
   description:
-    "Explore custom AI assistants that adapt to you their benefits, tech, risks & best practices for trustworthy personalization.",
+    "Explore custom AI assistants that adapt to you—benefits, tech, risks & best practices for trustworthy personalization.s",
   alternates: {
     canonical: "/blog/personalized-ai-assistants",
   },

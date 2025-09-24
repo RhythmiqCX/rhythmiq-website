@@ -45,12 +45,12 @@ const SECTIONS = [
 
 const RELATED = [
     {
-      title: "Multimodal AI: Uses, Challenges & Future",
+      title: "Hyper-Personalized AI Assistants: The Future of Custom AI UX",
       href: "/blog/personalized-ai-assistants",
       imageSrc: "/images/blog/19-9.jpg",
       date: "September 19, 2025",
       description:
-        "Explore custom AI assistants that adapt to you their benefits, tech, risks & best practices for trustworthy personalization.",
+        "Explore custom AI assistants that adapt to you—benefits, tech, risks & best practices for trustworthy personalization.",
     },
   {
     title: "Multimodal AI: Uses, Challenges & Future",
