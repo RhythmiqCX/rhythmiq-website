@@ -150,7 +150,13 @@ tags : edge ai, edge computing ai, ai at the edge, edge ai use cases, edge ai fu
 updated : 2025-09-24
 
 # AI Customer Support vs Humans
-https://rhythmiqcx.com//blog/category/customer-support
+https://rhythmiqcx.com/blog/ai-vs-human-support
 summary : The rise of AI in customer support is dividing opinions. On one hand, it offers instant replies, reduced costs, and scalable support. On the other, customers still crave human empathy, trust, and accountability.
 tags : ai customer support vs humans, ai vs human agents, empathy in customer service, ai chatbots in cx, human empathy vs ai efficiency, customer service automation debate, future of cx, hybrid ai human support, agent assist ai, ethical ai in customer support
-updated : 2025-09-26
+updated : 2025-09-30
+
+# Open-Source AI vs Closed AI: The Battle for the Future
+https://rhythmiqcx.com/blog//open-source-vs-closed-ai
+summary : Explore the heated debate between open-source and closed AI models   innovation vs control, safety vs speed, and who wins the AI race.
+tags : open-source ai, closed ai models, ai debate 2025, future of ai tech, ai regulation, open vs closed ai, ai governance, ai risks and ethics, hybrid ai systems, ai competition
+updated : 2025-09-30
