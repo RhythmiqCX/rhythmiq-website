@@ -49,8 +49,8 @@ const Hero = () => {
                             </span>
                             <span className="backdrop absolute inset-[1px] rounded-full bg-background transition-colors duration-200 group-hover:bg-neutral-800" />
                             <span className="z-10 py-0.5 text-sm text-neutral-100 flex items-center">
-                                <span className="px-2 py-[0.5px] h-[18px] tracking-wide flex items-center justify-center rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-[9px] font-medium mr-2 text-white">
-                                    COMING SOON
+                                <span className="px-2 py-[0.5px] h-[18px] tracking-wide flex items-center justify-center rounded-full bg-gradient-to-r from-green-400 to-emerald-600 text-[9px] font-medium mr-2 text-white">
+                                    LIVE NOW
                                 </span>
                                 Book a Demo
                             </span>
