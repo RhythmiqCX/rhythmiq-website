@@ -1,14 +1,26 @@
+type Props = {
+  section1Subheading: string;
+  section1Heading: string;
+  section2?: boolean;
+  section1Content?: string;
+  section2Subheading?: string;
+  section2Heading?: string;
+  section2Content?: string;
+  imageUrl1?: string;
+  imageUrl2?: string;
+};
+
 export default function VoiceAIFeatures({
   section1Subheading,
   section1Heading,
-  section2=false,
-  section1Content="",
-  section2Subheading="",
-  section2Heading="",
-  section2Content="",
-  imageUrl1="",
-  imageUrl2="",
-}) {
+  section2 = false,
+  section1Content = "",
+  section2Subheading = "",
+  section2Heading = "",
+  section2Content = "",
+  imageUrl1 = "",
+  imageUrl2 = "",
+}: Props) {
   return (
     <>
       <section className="h-[70vh] w-full px-8 py-12 bg-background/80 flex justify-center ">
