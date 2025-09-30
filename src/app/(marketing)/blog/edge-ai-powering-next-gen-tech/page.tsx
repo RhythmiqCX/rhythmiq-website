@@ -116,7 +116,7 @@ export default function AIChatbotBlogPage() {
     </p>
       </div>
 
-      <h2 id="how-ai-search-engines-work" className="scroll-mt-16">
+      <h2 id="how-edge-ai-works" className="scroll-mt-16">
         How Edge AI Works (Without Melting Your Brain)
       </h2>
       <div>
@@ -179,7 +179,7 @@ export default function AIChatbotBlogPage() {
     </p>
       </div>
 
-      <h2 id="opportunities-challenges" className="scroll-mt-16">
+      <h2 id="benefits-challenges" className="scroll-mt-16">
         Benefits & Challenges (No Rose-Tinted Glasses Here)
       </h2>
       <div>

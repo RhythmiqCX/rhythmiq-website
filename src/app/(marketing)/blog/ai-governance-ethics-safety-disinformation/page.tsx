@@ -71,7 +71,7 @@ export default function AIChatbotBlogPage() {
         href: "/blog/category/general",
         label: "General",
       }}
-      date="2025-09-12"
+      date="2025-09-15"
       title="AI Governance, Ethics, Safety & Disinformation: Building Trustworthy AI"
       excerpt="AI’s rapid growth brings both opportunity and risk. Strong governance, ethical safeguards, reliable safety measures, and countering disinformation are critical to ensure AI benefits society responsibly."
       authors={[{ avatar: "/icons/kat_icon.jpg", name: "Kat" }]}
