@@ -77,7 +77,7 @@ export default function AIChatbotBlogPage() {
         href: "/blog/category/tech",
         label: "Tech",
       }}
-      date="2025-09-30"
+      date="2025-10-01"
       title="AI Copyright Wars: Who Owns AI-Generated Content?"
       excerpt="As AI tools generate art, music, and text at scale, a legal and ethical storm brews: should creators, companies, or the AI itself own the rights?"
       authors={[{ avatar: "/icons/kat_icon.jpg", name: "Kat" }]}
