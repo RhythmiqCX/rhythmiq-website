@@ -114,7 +114,7 @@ export default function AIChatbotBlogPage() {
   <p>
     But here’s the rub: the second people saw AI art winning competitions, 
     or AI text showing up in published books, the lawyers came knocking.  
-    <Link href="/blog/multimodal-ai-models" className="text-blue-500">AI-generated content is a goldmine</Link> , but also a legal nightmare.  
+    <Link href="/blog/multimodal-ai-models" className="text-blue-500"> AI-generated content is a goldmine</Link>, but also a legal nightmare.  
     Who owns that MidJourney masterpiece  the user, the company, or the 
     countless artists whose work was fed into the training set?  
   </p>
