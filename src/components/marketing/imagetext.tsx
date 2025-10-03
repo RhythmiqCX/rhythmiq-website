@@ -22,6 +22,8 @@ interface ImageTextSectionProps {
   reverse?: boolean;
   /** Optional custom className */
   className?: string;
+  /** Optional override for the image wrapper sizing/classes */
+  imageWrapperClassName?: string;
 }
 
 /*
@@ -39,6 +41,7 @@ export default function ImageTextSection({
   ctaHref,
   reverse,
   className,
+  imageWrapperClassName,
 }: ImageTextSectionProps) {
   return (
     <section className={cn('py-16 px-4 md:py-24', className)}>
@@ -49,7 +52,10 @@ export default function ImageTextSection({
         )}
       >
         {/* Image */}
-        <div className="relative w-[400px] aspect-[16/10] md:aspect-square rounded-xl overflow-hidden shadow-lg">
+        <div className={cn(
+          "relative w-[400px] aspect-[16/10] md:aspect-square overflow-hidden",
+          imageWrapperClassName
+        )}>
           <Image
             src={imgSrc}
             alt={imgAlt}

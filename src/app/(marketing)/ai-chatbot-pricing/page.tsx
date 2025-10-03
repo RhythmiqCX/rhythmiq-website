@@ -112,12 +112,13 @@ export default function AIChatbotPricingPage() {
         </div>
       </section>
 
-            <ImageTextSection
+      <ImageTextSection
         imgSrc="/images/price-wallet.svg"
         imgAlt="Wallet icon"
         eyebrow="Predictable Costs"
-        headline="Flat per-seat license, no surprises"
-        body="Pay Flat fee for your Plan, Add agents only if necessary"
+        headline="Flat per plan fee, no surprises"
+        body="Pay Flat fee for your Plan, upgrade only if necessary"
+        imageWrapperClassName="w-[200px] md:w-[240px]"
         />
 
         <ImageTextSection
@@ -127,19 +128,21 @@ export default function AIChatbotPricingPage() {
         headline="Break even in < 60 days"
         body="Savings on support head-count, increase sales and improve onboarding on customers."
         reverse
+        imageWrapperClassName="w-[200px] md:w-[240px]"
         />
 
         <ImageTextSection
         imgSrc="/images/price-shield.svg"
         imgAlt="Compliance shield icon"
         eyebrow="Compliance Bundled"
-        headline="ISO 9001, SOC 2, GDPR & HIPAA at no extra cost"
-        body="Industry grade security and regional data hosting included — even on starter plans."
+        headline="ISO 9001, SOC 2, GDPR at no extra cost"
+        body="Industry grade security and regional data hosting included with every plan."
+        imageWrapperClassName="w-[200px] md:w-[240px]"
         />
 
 
       {/* ─────────────── Detailed breakdown steps */}
-      <section id="breakdown" className="py-16 px-4 md:py-24 bg-muted/5">
+      <section id="breakdown" className="py-16 px-4 md:py-24">
         <Container className="space-y-12 max-w-5xl mx-auto">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">How to choose your web widget plan</h2>
