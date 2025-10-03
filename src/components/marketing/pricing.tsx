@@ -51,7 +51,7 @@ const PLANS: PLAN[] = [
       'Real-time Agent Fallback',
       'Custom CRM integrations',
       '24 x 7 Premium Support over email, phone, and ticketing', 
-      'AI agents: 3',
+      'AI agents: 7',
       'Overages: $15 per 1000 messages',
     ],
     buttonText: 'Choose Plan',
