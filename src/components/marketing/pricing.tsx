@@ -37,7 +37,7 @@ const PLANS: PLAN[] = [
     id: 'Growth',
     title: 'Growth',
     desc: 'For growing organizations needing more volume and customization.',
-    basicPriceINR: 3999,
+    basicPriceINR: 4999,
     basicPriceUSD: 79,
     customPriceINR: 9999,
     customPriceUSD: 149,
@@ -59,7 +59,7 @@ const PLANS: PLAN[] = [
     id: 'Enterprise',
     title: 'Enterprise',
     desc: 'Ideal for large enterprises with high volume and advanced needs.',
-    basicPriceINR: 7999,
+    basicPriceINR: 24999,
     basicPriceUSD: 299,
     customPriceINR: 9999,
     customPriceUSD: 299,
@@ -161,7 +161,8 @@ const Plan = ({ plan, currency, priceType }: { plan: PLAN; currency: Currency; p
   return (
     <div className={cn(
       "flex flex-col h-full relative rounded-2xl lg:rounded-3xl transition-all bg-background/ items-start w-full border border-foreground/10 overflow-hidden",
-      plan.title === "Custom" && "border-blue-500"
+      plan.title === "Custom" && "border-blue-500",
+      plan.title === "Growth" && "ring-1 shadow-[0_0_40px_rgba(99,102,241,0.45)]"
     )}>
       {plan.title === "Custom" && (
         <div className="absolute top-1/2 inset-x-0 mx-auto h-12 -rotate-45 w-full bg-blue-600 rounded-2xl lg:rounded-3xl blur-[8rem] -z-10" />
@@ -182,7 +183,9 @@ const Plan = ({ plan, currency, priceType }: { plan: PLAN; currency: Currency; p
               />
               <span className="text-xl font-semibold">{currencySymbol}</span>
             </h3>
-            <span className="inline-flex items-center whitespace-nowrap text-sm font-semibold text-indigo-600 bg-indigo-600/10 px-2 py-1 rounded-md">or Talk to us</span>
+            {currency === 'USD' && (
+              <span className="inline-flex items-center whitespace-nowrap text-sm font-semibold text-indigo-600 bg-indigo-600/10 px-2 py-1 rounded-md">or Talk to us</span>
+            )}
           </div>
         ) : (
           <h3 className="mt-3 text-3xl font-medium md:text-5xl">
