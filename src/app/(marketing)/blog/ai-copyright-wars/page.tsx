@@ -242,7 +242,7 @@ export default function AIChatbotBlogPage() {
       </h2>
       <div>
         <p>
-    The fight over  AI content ownership  is far from settled.  
+    The fight over  <Link href="/blog/open-source-vs-closed-ai" className="text-blue-500 no-underline">AI content ownership</Link>  is far from settled.  
     As courts and governments scramble to catch up, new 
      copyright frameworks  are almost inevitable.  
     One possibility: licensing systems where AI companies pay 
