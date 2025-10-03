@@ -9,6 +9,7 @@ import { CheckIcon } from "lucide-react";
 import { useState } from "react";
 import Container from "../global/container";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 // Define your plans directly here or import from constants
 const PLANS: PLAN[] = [
@@ -204,8 +205,10 @@ const Plan = ({ plan, currency, priceType }: { plan: PLAN; currency: Currency; p
       </div>
 
       <div className="flex flex-col items-start w-full px-4 py-2 md:px-8">
-        <Button size="lg" variant={plan.title === "Custom" ? "blue" : "white"} className="w-full">
-          {plan.buttonText}
+        <Button asChild size="lg" variant={plan.title === "Custom" ? "blue" : "white"} className="w-full">
+          <Link href={plan.title === 'Enterprise' ? 'https://calendly.com/ray-rhythmiqcx/30min' : 'https://app.rhythmiqcx.com/'}>
+            {plan.buttonText}
+          </Link>
         </Button>
         
         {(
