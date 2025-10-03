@@ -84,7 +84,7 @@ type Currency = 'INR' | 'USD';
 type PriceType = 'Standard' | 'Custom';
 
 const Pricing = () => {
-  const [currency, setCurrency] = useState<Currency>('INR');
+  const [currency, setCurrency] = useState<Currency>('USD');
   const [priceType, setPriceType] = useState<PriceType>('Standard');
 
   const handleCurrencyToggle = () => {
