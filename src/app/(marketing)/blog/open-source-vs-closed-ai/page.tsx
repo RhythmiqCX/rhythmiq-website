@@ -76,7 +76,7 @@ export default function AIChatbotBlogPage() {
         label: "Tech",
       }}
       date="2025-09-30"
-      title="AI Customer Support vs Humans"
+      title="Open-Source AI vs Closed AI: The Battle for the Future"
       excerpt="Explore the heated debate between open-source and closed AI models   innovation vs control, safety vs speed, and who wins the AI race."
       authors={[{ avatar: "/icons/kat_icon.jpg", name: "Kat" }]}
       readingTime={5}

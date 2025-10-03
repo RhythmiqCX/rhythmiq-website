@@ -87,7 +87,7 @@ export default function BlogLayout({
           </nav>
         </aside>
         <Container className="mx-auto max-w-4xl px-4">
-          <article className="prose prose-lg lg:prose-xl dark:prose-invert [&_*]:text-gray-300">
+          <article className="prose prose-lg lg:prose-xl dark:prose-invert [&_*]:text-gray-300 [&_a]:text-blue-500 [&_a]:no-underline">
             {children}
           </article>
         </Container>

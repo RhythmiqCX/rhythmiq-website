@@ -9,41 +9,74 @@ import { CheckIcon } from "lucide-react";
 import { useState } from "react";
 import Container from "../global/container";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 // Define your plans directly here or import from constants
 const PLANS: PLAN[] = [
   {
-    id: 'Web Chatbot',
-    title: 'Web Chatbot',
-    desc: 'Starter Plan for SMBs with website traffic',
+    id: 'Basic',
+    title: 'Basic',
+    desc: 'Best for small teams and businesses starting with AI support.',
     basicPriceINR: 1999,
-    basicPriceUSD: 19,
+    basicPriceUSD: 29,
     customPriceINR: 4999,
     customPriceUSD: 79,
-    features: ['Includes 2 agents', 'Train on your Knowledge Base', 'Embeddable bot for your Website', 'Realtime Agent Fallback'],
+    features: [
+      'Unlimited Human agents',
+      'Completely Customizable with theme, color, branding, and orientation',
+      'AI-backed, multi-lingual chat support with 5000 monthly message',
+      'Unlimited Knowledge Base Documents',
+      'Real-time Analytics',
+      'Real-time Agent Fallback',
+      '24 x 7 Premium Support over email, phone, and ticketing', 
+      'AI agents: 3',
+      'Overages: $15 per 1000 messages',
+    ],
     buttonText: 'Choose Plan',
   },
   {
-    id: 'Whatsapp',
-    title: 'Whatsapp',
-    desc: 'For mobile first support and reach on Whatsapp',
-    basicPriceINR: 3999,
-    basicPriceUSD: 59,
+    id: 'Growth',
+    title: 'Growth',
+    desc: 'For growing organizations needing more volume and customization.',
+    basicPriceINR: 4999,
+    basicPriceUSD: 79,
     customPriceINR: 9999,
     customPriceUSD: 149,
-    features: ['Includes 5 agents', 'Incldues 1 virtual number', 'Train on your Knowledge Base', '1000 WA Convos/month', 'Auto replies'],
+    features: [
+      'Unlimited Human agents',
+      'Completely Customizable with theme, color, branding, and orientation',
+      'AI-backed, multi-lingual chat support with 10,000 monthly message',
+      'Unlimited Knowledge Base Documents',
+      'Real-time Analytics',
+      'Real-time Agent Fallback',
+      'Custom CRM integrations',
+      '24 x 7 Premium Support over email, phone, and ticketing', 
+      'AI agents: 3',
+      'Overages: $15 per 1000 messages',
+    ],
     buttonText: 'Choose Plan',
   },
   {
-    id: 'Omni Channel',
-    title: 'Omni Channel',
-    desc: 'Tailored solutions for high-volume, multiple channels',
-    basicPriceINR: 7999,
-    basicPriceUSD: 99,
+    id: 'Enterprise',
+    title: 'Enterprise',
+    desc: 'Ideal for large enterprises with high volume and advanced needs.',
+    basicPriceINR: 24999,
+    basicPriceUSD: 299,
     customPriceINR: 9999,
-    customPriceUSD: 99,
-    features: ['Includes 5 agents', 'Custom Integrations', '1500 WA Convos/month', 'Email/SMS channel', 'Unlimited Bots'],
-    buttonText: 'Contact for Custom pricing',
+    customPriceUSD: 299,
+    features: [
+      'Unlimited Human agents',
+      'Completely Customizable with theme, color, branding, and orientation',
+      'AI-backed, multi-lingual chat support with 25,000+ monthly message',
+      'Unlimited Knowledge Base Documents',
+      'Real-time Analytics',
+      'Real-time Agent Fallback',
+      'Custom CRM integrations',
+      '24 x 7 Premium Support over email, phone, and ticketing', 
+      'AI agents: Unlimited',
+      'Overages: $10 per 1000 messages',
+    ],
+    buttonText: 'Talk to us',
   }
 ];
 
@@ -107,7 +140,7 @@ const Pricing = () => {
         </Container>
       </div>
 
-      <div className="grid w-full grid-cols-1 lg:grid-cols-3 pt-8 lg:pt-12 gap-4 lg:gap-6 max-w-4xl mx-auto">
+      <div className="grid w-full grid-cols-1 lg:grid-cols-3 auto-rows-fr items-stretch pt-8 lg:pt-12 gap-4 lg:gap-6 max-w-4xl mx-auto">
         {PLANS.map((plan) => (
           <Container key={plan.id} delay={0.1}>
             <Plan plan={plan} currency={currency} priceType={priceType} />
@@ -128,8 +161,9 @@ const Plan = ({ plan, currency, priceType }: { plan: PLAN; currency: Currency; p
 
   return (
     <div className={cn(
-      "flex flex-col relative rounded-2xl lg:rounded-3xl transition-all bg-background/ items-start w-full border border-foreground/10 overflow-hidden",
-      plan.title === "Custom" && "border-blue-500"
+      "flex flex-col h-full relative rounded-2xl lg:rounded-3xl transition-all bg-background/ items-start w-full border border-foreground/10 overflow-hidden",
+      plan.title === "Custom" && "border-blue-500",
+      plan.title === "Growth" && "ring-1 shadow-[0_0_40px_rgba(99,102,241,0.45)]"
     )}>
       {plan.title === "Custom" && (
         <div className="absolute top-1/2 inset-x-0 mx-auto h-12 -rotate-45 w-full bg-blue-600 rounded-2xl lg:rounded-3xl blur-[8rem] -z-10" />
@@ -137,46 +171,70 @@ const Plan = ({ plan, currency, priceType }: { plan: PLAN; currency: Currency; p
 
       <div className="p-4 md:p-8 flex rounded-t-2xl lg:rounded-t-3xl flex-col items-start w-full relative">
         <h2 className="font-medium text-xl text-foreground pt-5">{plan.title}</h2>
-        <h3 className="mt-3 text-3xl font-medium md:text-5xl">
-          <NumberFlow
-            value={price}
-            format={{
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 0,
-            }}
-            suffix=""
-          />
-          <span className="text-xl font-semibold">{currencySymbol}</span>
-        </h3>
+        {plan.title === 'Enterprise' ? (
+          <div className="mt-3 flex items-center gap-2 flex-nowrap">
+            <h3 className="text-3xl font-medium md:text-5xl whitespace-nowrap">
+              <NumberFlow
+                value={price}
+                format={{
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                }}
+                suffix=""
+              />
+              <span className="text-xl font-semibold">{currencySymbol}</span>
+            </h3>
+            {currency === 'USD' && (
+              <span className="inline-flex items-center whitespace-nowrap text-sm font-semibold text-indigo-600 bg-indigo-600/10 px-2 py-1 rounded-md">or Talk to us</span>
+            )}
+          </div>
+        ) : (
+          <h3 className="mt-3 text-3xl font-medium md:text-5xl">
+            <NumberFlow
+              value={price}
+              format={{
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              }}
+              suffix=""
+            />
+            <span className="text-xl font-semibold">{currencySymbol}</span>
+          </h3>
+        )}
         <p className="text-sm md:text-base text-muted-foreground mt-2">{plan.desc}</p>
       </div>
 
       <div className="flex flex-col items-start w-full px-4 py-2 md:px-8">
-        <Button size="lg" variant={plan.title === "Custom" ? "blue" : "white"} className="w-full">
-          {plan.buttonText}
+        <Button asChild size="lg" variant={plan.title === "Custom" ? "blue" : "white"} className="w-full">
+          <Link href={plan.title === 'Enterprise' ? 'https://calendly.com/ray-rhythmiqcx/30min' : 'https://app.rhythmiqcx.com/'}>
+            {plan.buttonText}
+          </Link>
         </Button>
-        <div className="h-8 overflow-hidden w-full mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={`${currency}-${priceType}`}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -20, opacity: 0 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
-              className="text-sm text-center text-muted-foreground mt-3 mx-auto block"
-            >
-              {`Priced in ${currency}`}
-            </motion.span>
-          </AnimatePresence>
-        </div>
+        
+        {(
+          <div className="h-8 overflow-hidden w-full mx-auto">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={`${currency}-${priceType}`}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+                className="text-sm text-center text-muted-foreground mt-3 mx-auto block"
+              >
+                {`Priced in ${currency}`}
+              </motion.span>
+            </AnimatePresence>
+          </div>
+        )}
       </div>
 
       <div className="flex flex-col items-start w-full p-5 mb-4 ml-1 gap-y-2">
         <span className="text-base text-left mb-2">Includes:</span>
         {plan.features.map((feature, index) => (
-          <div key={index} className="flex items-center justify-start gap-2">
-            <CheckIcon className="size-5" />
-            <span>{feature}</span>
+          <div key={index} className="flex items-start justify-start gap-2">
+            <CheckIcon className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0 text-green-600" />
+            <span className="leading-relaxed">{feature}</span>
           </div>
         ))}
       </div>

@@ -1,4 +1,4 @@
-type Props = {
+interface Props {
   section1Subheading: string;
   section1Heading: string;
   section2?: boolean;
@@ -8,7 +8,7 @@ type Props = {
   section2Content?: string;
   imageUrl1?: string;
   imageUrl2?: string;
-};
+}
 
 export default function VoiceAIFeatures({
   section1Subheading,
@@ -20,7 +20,7 @@ export default function VoiceAIFeatures({
   section2Content = "",
   imageUrl1 = "",
   imageUrl2 = "",
-}) {
+}: Props) {
   return (
     <>
       {/* Section 1 */}

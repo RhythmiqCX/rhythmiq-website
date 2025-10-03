@@ -2,13 +2,19 @@
 import React, { useState, useEffect } from 'react';
 
 export default function VoiceAICustomerSupport() {
-  const [messages, setMessages] = useState([]);
+  interface Message {
+    type: 'customer' | 'ai';
+    text: string;
+    delay: number;
+    duration: number;
+  }
+  const [messages, setMessages] = useState<Message[]>([]);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [waveActive, setWaveActive] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const containerRef = React.useRef(null);
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
-  const conversation = [
+  const conversation: Message[] = [
     { type: 'customer', text: "Hi, I need help with my recent order. It hasn't arrived yet.", delay: 1500, duration: 1200 },
     { type: 'ai', text: "I'd be happy to help you track your order. Could you provide your order number?", delay: 4000, duration: 0 },
     { type: 'customer', text: "Sure, it's ORD-2024-789456", delay: 6500, duration: 1200 },
@@ -32,7 +38,7 @@ export default function VoiceAICustomerSupport() {
       setMessages([]);
       setCurrentMessageIndex(0);
       
-      const intervals = [];
+      const intervals: ReturnType<typeof setTimeout>[] = [];
       
       conversation.forEach((msg, index) => {
         const timeout = setTimeout(() => {
