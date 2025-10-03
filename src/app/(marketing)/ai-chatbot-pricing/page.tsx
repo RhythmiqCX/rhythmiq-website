@@ -255,8 +255,6 @@ export default function AIChatbotPricingPage() {
 </section>
 
 
-  
-
       {/* ─────────────── FAQ */}
       <section id="faq" className="py-20 px-4 bg-muted/5">
         <div className="container mx-auto max-w-4xl">
@@ -274,7 +272,7 @@ export default function AIChatbotPricingPage() {
                 <span>How many support agents are included in each plan?</span>
                 <span className="text-indigo-500 group-open:rotate-180 transition-transform">+</span>
               </summary>
-              <div className="mt-4 prose prose-slate dark:prose-invert">
+              <div className="mt-4 prose prose-slate dark:prose-invert text-foreground">
                 <p>Each plan includes a unlimited number of agents who can manage conversations and train the AI.</p>
               </div>
             </details>
@@ -283,8 +281,10 @@ export default function AIChatbotPricingPage() {
                 <span>Are there any per-message or conversation fees?</span>
                 <span className="text-indigo-500 group-open:rotate-180 transition-transform">+</span>
               </summary>
-              <div className="mt-4 prose prose-slate dark:prose-invert">
-                <p>No! All plans include unlimited conversations. Unlike other tools that charge per message, Rhythmiq uses a simple per-agent model with no conversation limits.</p>
+              <div className="mt-4 prose prose-slate dark:prose-invert text-foreground">
+                <p>No! All plans include unlimited conversations. Unlike other tools that charge per message, Rhythmiq uses a simple plan model with no conversation limits.
+                  The limitations are only for the AI replies by the chatbot and even there we beat our competitors on value for your money.
+                </p>
               </div>
             </details>
             <details className="group p-6 bg-card/50 border border-border/50 rounded-xl hover:bg-card/70 transition-colors">
@@ -292,7 +292,7 @@ export default function AIChatbotPricingPage() {
                 <span>How easy is it to integrate the widget on my website?</span>
                 <span className="text-indigo-500 group-open:rotate-180 transition-transform">+</span>
               </summary>
-              <div className="mt-4 prose prose-slate dark:prose-invert">
+              <div className="mt-4 prose prose-slate dark:prose-invert text-foreground">
                 <p>Very easy! Just add one line of code to your website and the AI widget is live. Works with WordPress, Shopify, custom sites, and any platform that supports JavaScript.</p>
               </div>
             </details>
@@ -301,8 +301,8 @@ export default function AIChatbotPricingPage() {
                 <span>What AI models are included in the plans?</span>
                 <span className="text-indigo-500 group-open:rotate-180 transition-transform">+</span>
               </summary>
-              <div className="mt-4 prose prose-slate dark:prose-invert">
-                <p>All plans include generous GPT token allowances. Basic plans use GPT-3.5, while higher tiers include access to GPT-4o for more sophisticated responses and better accuracy.</p>
+              <div className="mt-4 prose prose-slate dark:prose-invert text-foreground">
+                <p>All plans include generous GPT token allowances. Even the basic plans use GPT-4, while higher tiers include access to latest GPT-o models for more sophisticated responses and better accuracy.</p>
               </div>
             </details>
             <details className="group p-6 bg-card/50 border border-border/50 rounded-xl hover:bg-card/70 transition-colors">
@@ -310,7 +310,7 @@ export default function AIChatbotPricingPage() {
                 <span>Is there a free trial available?</span>
                 <span className="text-indigo-500 group-open:rotate-180 transition-transform">+</span>
               </summary>
-              <div className="mt-4 prose prose-slate dark:prose-invert">
+              <div className="mt-4 prose prose-slate dark:prose-invert text-foreground">
                 <p>Yes! We offer a 7-day free trial on any plan with full access to all web widget features. No credit card required to get started.</p>
               </div>
             </details>
@@ -319,7 +319,7 @@ export default function AIChatbotPricingPage() {
                 <span>Can I customize the widget's appearance to match my brand?</span>
                 <span className="text-indigo-500 group-open:rotate-180 transition-transform">+</span>
               </summary>
-              <div className="mt-4 prose prose-slate dark:prose-invert">
+              <div className="mt-4 prose prose-slate dark:prose-invert text-foreground">
                 <p>Absolutely! Customize colors, fonts, positioning, and messaging to match your brand. Advanced customization options are available in higher-tier plans.</p>
               </div>
             </details>
