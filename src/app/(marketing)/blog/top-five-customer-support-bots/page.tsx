@@ -1,5 +1,6 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
+import Link from 'next/link';
 export const metadata = generateMetadata({
   title: "Top 5 Customer Support Chatbots in 2025",
   description:
@@ -104,7 +105,7 @@ export default function AIChatbotBlogPage() {
       <div>
         <h3>1. RhythmiqCX</h3>
         <p>
-          If 2025 belongs to any chatbot, it’s RhythmiqCX. This
+          If 2025 belongs to any chatbot, it’s <Link href="/ai-customer-support" className="text-blue-500">RhythmiqCX</Link>. This
           isn’t just another conversational tool  it’s the
           gold standard for AI customer support. While most
           bots still rely on rigid scripts or delayed training cycles,
@@ -114,7 +115,7 @@ export default function AIChatbotBlogPage() {
           adaptive AI chatbot of the year.
         </p>
         <p>
-          The web widget experience is where RhythmiqCX really shines:
+          The <Link href="/rhythmiq-ai-web-widget" className="text-blue-500">web widget</Link> experience is where RhythmiqCX really shines:
           lightweight, lightning-fast, and completely customizable to match your
           brand. Whether your customers are on desktop or mobile, the widget
           blends in seamlessly without slowing down their journey.
@@ -153,11 +154,11 @@ export default function AIChatbotBlogPage() {
           </p>
           <p>
             Visit{" "}
-            <a
-              href="https://rhythmiqcx.com"
-              className="underline hover:text-indigo-600 transition"
-            >
-             <strong>RhythmiqCX </strong> 
+              <a
+                href="https://rhythmiqcx.com"
+                className="text-blue-500 font-bold"
+              >
+             RhythmiqCX 
             </a>{" "}
             today to book a free demo. Discover how our
             AI-powered platform helps teams reduce ticket volume, improve
@@ -168,7 +169,7 @@ export default function AIChatbotBlogPage() {
         <h3>2. Intercom Fin AI</h3>
   <p>
     Intercom has long been a giant in B2B customer communication, 
-    and its latest evolution, Fin AI, doubles down on 
+    and its latest evolution, <Link href="https://fin.ai/" className="text-blue-500">Fin AI</Link>, doubles down on 
     delivering analytics-heavy support.  
     Fin isn’t just about answering questions — it’s about pulling data 
     from across your systems to give reps and customers 
@@ -195,7 +196,7 @@ export default function AIChatbotBlogPage() {
 
         <h3>3. Drift AI Chatbot</h3>
   <p>
-    Drift has built its reputation around 
+    <Link href="https://dev.drift.com/">Drift</Link> has built its reputation around 
     sales-first customer support.  
     Its AI chatbot is designed to capture leads, qualify them, 
     and pass them straight into your sales funnel.  
@@ -205,7 +206,7 @@ export default function AIChatbotBlogPage() {
   <p>
     The bot excels at engaging prospects in real time, 
     nurturing them through conversational playbooks, 
-    and syncing with sales CRMs.  
+    and syncing with <Link href="/blog/ai-in-crm" className="text-blue-500">sales CRMs</Link>.  
     If your biggest pain point is abandoned carts or 
     low conversion rates, Drift’s AI bot will give you a boost.  
   </p>
@@ -223,8 +224,8 @@ export default function AIChatbotBlogPage() {
   </p>
   <h3>4. Zendesk AI Bot</h3>
   <p>
-    When it comes to <strong>enterprise-grade workflows</strong>, 
-    <strong>Zendesk AI Bot</strong> is a natural fit.  
+    When it comes to <Link href="https://shorturl.at/uwCYf" className="text-blue-500">enterprise-grade workflows</Link>, 
+    Zendesk AI Bot is a natural fit.  
     Since it’s baked right into Zendesk’s already robust 
     ticketing system, it offers deep automation for teams 
     that live inside Zendesk every day.  
@@ -241,8 +242,8 @@ export default function AIChatbotBlogPage() {
     The learning curve is steep, setup is time-intensive, 
     and costs can balloon fast.  
     Smaller businesses often find it overkill, especially 
-    compared to lighter, more adaptive options like 
-    <strong>RhythmiqCX</strong>.  
+    compared to lighter, more adaptive options like  
+    RhythmiqCX.  
   </p>
   <p>
     <strong>Best for:</strong> Enterprises with complex workflows 
@@ -250,7 +251,7 @@ export default function AIChatbotBlogPage() {
   </p>
    <h3>5. Tidio AI Chatbot</h3>
   <p>
-    Tidio is the scrappy underdog on this list.  
+    <Link href="https://www.tidio.com/">Tidio</Link> is the scrappy underdog on this list.  
     For SMBs dipping their toes into AI chatbots, it’s a 
     budget-friendly, easy-to-set-up solution.  
     Its no-fuss interface and prebuilt templates make it 
