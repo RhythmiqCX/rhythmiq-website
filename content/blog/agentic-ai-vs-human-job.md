@@ -5,4 +5,5 @@ description: "Are AI agents replacing human workers? Explore the automation deba
 cover: "/images/blog/6-10.jpg"
 tag: "General"
 author: "Kat"
+category: "General"
 --- 
