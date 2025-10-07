@@ -75,7 +75,7 @@ export default function AIChatbotBlogPage() {
   return (
     <BlogLayout
       category={{
-        href: "/blog/category/technology",
+        href: "/blog/category/tech",
         label: "Technology",
       }}
       date="2025-09-24"
