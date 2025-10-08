@@ -178,3 +178,9 @@ https://rhythmiqcx.com/blog/agentic-ai-vs-human-job
 summary : Are AI agents replacing human workers? Explore the automation debate reshaping industries in 2025.
 tags : AI automation 2025, AI vs human jobs, AI agents, autonomous AI, future of work, AI ethics, AI displacement, generative AI tools, workplace automation, AI workforce transformation
 updated : 2025-10-6
+
+# AI Bubble Is Bursting: Ready for dotcom bubble 2.0?
+https://rhythmiqcx.com/blog/ai-bubble-is-bursting
+summary : The trillion-dollar AI bubble is showing cracks. Behind the curtain of “innovation” lies overused buzzwords and failed integrations. Here’s why the collapse is inevitable.
+tags : AI bubble 2025, AI hype collapse, AGI myth, agentic AI, AI investment crash, AI underdelivery, AI startup hype, automation limitations, bot traffic 2025, deepfake problem, AI marketing buzzwords, future of AI industry
+updated: 2025-10-8

@@ -47,7 +47,7 @@ const RELATED = [
     title: "Top 5 Customer Support Chatbots in 2025",
     href: "/blog/top-five-customer-support-bots",
     imageSrc: "/images/blog/3-10.jpg",
-    date: "October 6, 2025",
+    date: "October 3, 2025",
     description:
       "Explore the top customer support chatbots of 2025. See why RhythmiqCX ranks #1 for web widget AI chatbots and how it transforms customer experience.",
   },
