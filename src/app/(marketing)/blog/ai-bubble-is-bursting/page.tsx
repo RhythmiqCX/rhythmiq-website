@@ -112,7 +112,7 @@ Credit where it’s due: AI has come a long way. But it’s still in the R&D sta
 
 But that doesn’t maximize investor returns or help secure the next round of funding. So what did the AI industry do? They implemented AI into everything just for the sake of it and delivered half-baked products.
 
-All AI companies had to do was mention “AI” and sprinkle in a few buzzwords in their pitch deck. It wasn’t innovation—it was FOMO and marketing genius, dressed up as the second coming of the Lord himself.
+All AI companies had to do was mention “AI” and sprinkle in a few buzzwords in their pitch deck. It wasn’t innovationit was FOMO and marketing genius, dressed up as the second coming of the Lord himself.
         </p>
         <p>
           The echo chamber built itself. Thanks to all the “new technological advancements” now fake hype and false promises spreads faster than wild fire. 
