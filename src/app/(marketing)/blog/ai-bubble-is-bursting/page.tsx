@@ -102,7 +102,7 @@ export default function AIChatbotBlogPage() {
         </p>
         <p>
           Every funding round, a new buzzword popped up. First
-          year it was “AGI.” Then came “<Link href={"/blog/agentic-ai-and-autonomous-systems"}>Agentic AI</Link>” and <Link href={"/blog/what-the-heck-is-an-mcp-server"}>MCP server</Link>. Now it’s “Self-Learning
+          year it was “AGI.” Then came “<Link href={"/blog/agentic-ai-and-autonomous-systems"}>Agentic AI</Link>” and <Link href={"/blog/what-the-heck-is-an-mcp-server"}>“MCP server”</Link>. Now it’s “Self-Learning
           Systems.” Each term sounded smarter than the last, but none actually
           worked as advertised. The tech didn’t evolve as fast as the vocabulary
           did. </p>
