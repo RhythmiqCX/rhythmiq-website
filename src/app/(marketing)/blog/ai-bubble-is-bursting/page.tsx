@@ -102,7 +102,7 @@ export default function AIChatbotBlogPage() {
         </p>
         <p>
           Every funding round, a new buzzword popped up. First
-          year it was “AGI.” Then came “Agentic AI.” Now it’s “Self-Learning
+          year it was “AGI.” Then came “<Link href={"/blog/agentic-ai-and-autonomous-systems"}>Agentic AI</Link>” and <Link href={"/blog/what-the-heck-is-an-mcp-server"}>MCP server</Link>. Now it’s “Self-Learning
           Systems.” Each term sounded smarter than the last, but none actually
           worked as advertised. The tech didn’t evolve as fast as the vocabulary
           did. </p>
@@ -121,8 +121,7 @@ All AI companies had to do was mention “AI” and sprinkle in a few buzzwords 
           cycle because “AI is taking over the world” and “AI will take your job, wife and kids” sells more clicks than “AI
           still kinda struggles with the most simple tasks.” We’ve all been guilty of buying
           into the illusion thinking each new model release would mark the dawn
-          of true intelligence. But here we are, in 2025, and most systems still
-          hallucinate, still break under pressure, and still need humans to
+          of true intelligence. But here we are, in 2025, and most systems still <Link href={"/blog/ai-hallucinations-on-rise"}>hallucinate</Link>, still break under pressure, and still need humans to
           clean up their mess. The so-called AI Gold Rush looks more like a
           speculative fever dream than a technological revolution.
         </p>
@@ -203,8 +202,7 @@ All AI companies had to do was mention “AI” and sprinkle in a few buzzwords 
           service process something as basic as activating a subscription and
           issuing a refund. If the pioneers of AI can’t make their own AI work
           internally, what does that say about the tech’s maturity? It’s like
-          watching a chef burn their own signature dish. The message is clear:
-          this industry is still more about optics than operational reality.
+          watching a chef burn their own signature dish. The message is clear: <Link href={"/blog/agentic-ai-vs-human-job"}>this industry is still more about optics than operational reality</Link>.
         </p>
         <p>
           And it’s not just OpenAI. Across the board, we’re seeing companies
@@ -214,7 +212,7 @@ All AI companies had to do was mention “AI” and sprinkle in a few buzzwords 
           symptoms of a larger truth. AI, right now, is fun, flashy, and full of
           potential, but it’s still in the R&D stage. It’s experimental tech
           being force-fit into business-critical systems that demand
-          reliability, nuance, and empathy three things today’s AI just doesn’t
+          reliability, nuance, and <Link href={"/blog/does-ai-feel-emotions"}>empathy</Link> three things today’s AI just doesn’t
           consistently deliver.
         </p>
         <p>
