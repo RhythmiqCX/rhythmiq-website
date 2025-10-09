@@ -1,4 +1,5 @@
 import React from "react";
+import { CheckCircle, XCircle } from "lucide-react";
 
 export default function RhythmiqComparison() {
   return (
@@ -29,96 +30,136 @@ what sets them apart so you can choose the best fit for your growth goals.
 </p>
       </section>
 
+{/* 2. Differences table */}
+  <>
       {/* 2. Differences table */}
-<section id="table" className="mb-10 text-center">
-  <h2 className="text-2xl font-semibold text-white mb-6">
-    Feature Comparison
-  </h2>
+      <section id="table" className="mb-10 text-center">
+        <h2 className="text-2xl font-semibold text-white mb-6">
+          Feature Comparison
+        </h2>
 
-  {/* Logos Row */}
-  <div className="flex justify-center items-center gap-12 mb-4">
-    <div className="flex flex-col items-center">
-      <img
-        src="/images/tawk.png"
-        alt="Tawk.to Logo"
-        className="h-12 mb-2"
-      />
-      <span className="text-gray-300 text-sm font-medium">Tawk.to</span>
-    </div>
-    <div className="flex flex-col items-center">
-      <img
-        src="/icons/rhythmiq-icon.png"
-        alt="RhythmiqCX Logo"
-        className="h-12 mb-2"
-      />
-      <span className="text-gray-300 text-sm font-medium">RhythmiqCX</span>
-    </div>
-  </div>
+        {/* Logos Row */}
+        <div className="flex justify-center items-center gap-12 mb-4">
+          <div className="flex flex-col items-center">
+            <img src="/images/tawk.png" alt="Tawk.to Logo" className="h-12 mb-2" />
+            <span className="text-gray-300 text-sm font-medium">Tawk.to</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src="/icons/rhythmiq-icon.png" alt="RhythmiqCX Logo" className="h-12 mb-2" />
+            <span className="text-gray-300 text-sm font-medium">RhythmiqCX</span>
+          </div>
+        </div>
 
-  {/* Table */}
-  <div className="overflow-x-auto rounded-lg">
-    <table className="mx-auto w-full max-w-5xl table-auto border-collapse text-sm">
-      <thead>
-        <tr className="bg-gray-800 text-gray-200">
-          <th className="p-3 text-left font-semibold">Capability</th>
-          <th className="p-3 text-left font-semibold">Tawk.to</th>
-          <th className="p-3 text-left font-semibold">RhythmiqCX</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          [
-            "Price model",
-            "Free core product; optional paid add-ons per property (branding removal, AI, voice/video).",
-            "Low-cost paid plans: $29 / $79 / $299+ (Enterprise). Predictable pricing with AI message quota included.",
-          ],
-          [
-            "Agents",
-            "Unlimited human agents for free.",
-            "Unlimited human + AI agents; included in all plans.",
-          ],
-          [
-            "AI support",
-            "Optional AI Assist add-on, billed per property.",
-            "AI-first system multilingual support and included quotas (5k / 10k / 25k+).",
-          ],
-          [
-            "Customization & branding",
-            "$39/mo add-on to remove branding.",
-            "Full customization and white-label branding included.",
-          ],
-          [
-            "Analytics & reporting",
-            "Basic reporting only.",
-            "Detailed analytics and demo performance tracking built-in.",
-          ],
-          [
-            "Support",
-            "Community help docs; paid service options.",
-            "24×7 premium support (email, phone, ticket).",
-          ],
-          [
-            "Integrations",
-            "Basic; requires custom scripting for advanced needs.",
-            "Native CRM integrations on Growth+ plans.",
-          ],
-        ].map(([cap, Tawk, rhythm], i) => (
-          <tr
-            key={cap}
-            className={`${
-              i % 2 === 0 ? "bg-gray-900/50" : "bg-gray-800/50"
-            }`}
-          >
-            <td className="p-3 text-gray-200 font-medium">{cap}</td>
-            <td className="p-3 text-gray-400">{Tawk}</td>
-            <td className="p-3 text-gray-300">{rhythm}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-</section>
-
+        {/* Table */}
+        <div className="overflow-x-auto rounded-lg">
+          <table className="mx-auto w-full max-w-5xl table-auto border-collapse text-sm">
+            <thead>
+              <tr className="bg-gray-800 text-gray-200">
+                <th className="p-3 text-left font-semibold">Capability</th>
+                <th className="p-3 text-left font-semibold">Tawk.to</th>
+                <th className="p-3 text-left font-semibold">RhythmiqCX</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                [
+                  "Pricing Model",
+                  <>
+                    <div className="flex items-start gap-2 text-red-400">
+                      <XCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        Fragmented  free base product but every add-on (AI, branding, video)
+                        costs extra per website.
+                      </span>
+                    </div>
+                  </>,
+                  <>
+                    <div className="flex items-start gap-2 text-green-400">
+                      <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        Transparent all-in-one pricing (₹1,999 / ₹4,999 / ₹24,999) with AI,
+                        analytics, and support included.
+                      </span>
+                    </div>
+                  </>,
+                ],
+                [
+                  "AI Capabilities",
+                  <>
+                    <div className="flex items-start gap-2 text-red-400">
+                      <XCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>Optional paid AI Assist with limited message quota (starts at 100).</span>
+                    </div>
+                  </>,
+                  <>
+                    <div className="flex items-start gap-2 text-green-400">
+                      <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        Built-in multilingual AI support with generous message limits
+                        (5K / 10K / 25K+).
+                      </span>
+                    </div>
+                  </>,
+                ],
+                [
+                  "Customization & Branding",
+                  <>
+                    <div className="flex items-start gap-2 text-red-400">
+                      <XCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>Branding removal costs $39/month extra.</span>
+                    </div>
+                  </>,
+                  <>
+                    <div className="flex items-start gap-2 text-green-400">
+                      <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>Full white-label customization included at no cost.</span>
+                    </div>
+                  </>,
+                ],
+                [
+                  "Analytics & Reporting",
+                  <>
+                    <div className="flex items-start gap-2 text-red-400">
+                      <XCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>Basic reporting with limited data visibility.</span>
+                    </div>
+                  </>,
+                  <>
+                    <div className="flex items-start gap-2 text-green-400">
+                      <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>Real-time analytics and lead conversion insights included.</span>
+                    </div>
+                  </>,
+                ],
+                [
+                  "Support",
+                  <>
+                    <div className="flex items-start gap-2 text-red-400">
+                      <XCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>Community/ticket-only support unless on top tier.</span>
+                    </div>
+                  </>,
+                  <>
+                    <div className="flex items-start gap-2 text-green-400">
+                      <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>Human customer support across all plans.</span>
+                    </div>
+                  </>,
+                ],
+              ].map(([cap, tawk, rhythm], i) => (
+                <tr
+                  key={cap}
+                  className={`${i % 2 === 0 ? "bg-gray-900/50" : "bg-gray-800/50"}`}
+                >
+                  <td className="p-3 text-gray-200 font-medium">{cap}</td>
+                  <td className="p-3">{tawk}</td>
+                  <td className="p-3">{rhythm}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       {/* 3. Pros & Cons */}
       <section id="pros-cons" className="mb-10">
@@ -126,44 +167,60 @@ what sets them apart so you can choose the best fit for your growth goals.
         <div className="grid md:grid-cols-2 gap-8">
           {/* RhythmiqCX */}
           <div className="bg-gray-900/60 p-5 rounded-xl border border-gray-700">
-            <h3 className="text-xl font-semibold text-indigo-400 mb-2 text-center">RhythmiqCX</h3>
-            <h4 className="text-indigo-300 font-medium mb-2">Pros</h4>
-            <ul className="list-disc pl-5 text-gray-300 space-y-1">
-              <li>Low-cost, transparent pricing that includes AI usage.</li>
-              <li>AI-first chat experience  built-in multilingual and lead qualification.</li>
-              <li>Full customization with no “branding removal” upsell.</li>
-              <li>Analytics designed to measure demo and conversion performance.</li>
-              <li>24×7 premium support  no paywall for reliability.</li>
-              <li>Scales smoothly for teams moving from startup to enterprise.</li>
+            <h3 className="text-xl font-semibold text-green-400 mb-2 text-center">
+              RhythmiqCX
+            </h3>
+            <h4 className="text-green-300 font-medium mb-2 flex items-center gap-2">
+              <CheckCircle className="h-4 w-4" /> Pros
+            </h4>
+            <ul className="pl-5 text-gray-300 space-y-1">
+              <li>Transparent pricing  AI and analytics included in all tiers.</li>
+              <li>AI-first, multilingual chat designed for conversions.</li>
+              <li>Full white-label customization  no upsells.</li>
+              <li>Unlimited human + AI agents from the start.</li>
+              <li>Real-time analytics and agent fallback logic.</li>
+              <li>24×7 human support included by default.</li>
+              <li>Predictable scaling from startup to enterprise.</li>
             </ul>
 
-            <h4 className="text-indigo-300 font-medium mt-4 mb-2">Cons</h4>
-            <ul className="list-disc pl-5 text-gray-400 space-y-1">
-              <li>Not completely free  entry plan starts at $29/mo.</li>
-              <li>Some advanced integrations require Growth+ tier.</li>
+            <h4 className="text-green-300 font-medium mt-4 mb-2 flex items-center gap-2">
+              <XCircle className="h-4 w-4 text-gray-400" /> Cons
+            </h4>
+            <ul className="pl-5 text-gray-400 space-y-1">
+              <li>Not free  entry starts at ₹1,999/month.</li>
+              <li>Advanced CRM integrations from Growth tier upward.</li>
             </ul>
           </div>
 
           {/* Tawk.to */}
           <div className="bg-gray-900/60 p-5 rounded-xl border border-gray-700">
-            <h3 className="text-xl font-semibold text-amber-400 mb-2 text-center">Tawk.to</h3>
-            <h4 className="text-amber-300 font-medium mb-2">Pros</h4>
-            <ul className="list-disc pl-5 text-gray-300 space-y-1">
-              <li>Completely free for unlimited agents.</li>
-              <li>Quick setup  great for hobby projects or small sites.</li>
-              <li>Flexible add-ons for branding, AI, and video chat.</li>
+            <h3 className="text-xl font-semibold text-red-400 mb-2 text-center">
+              Tawk.to
+            </h3>
+            <h4 className="text-red-300 font-medium mb-2 flex items-center gap-2">
+              <CheckCircle className="h-4 w-4" /> Pros
+            </h4>
+            <ul className="pl-5 text-gray-300 space-y-1">
+              <li>Free for unlimited human agents.</li>
+              <li>Simple setup for small websites.</li>
+              <li>Optional add-ons for branding, AI, and video.</li>
             </ul>
 
-            <h4 className="text-amber-300 font-medium mt-4 mb-2">Cons</h4>
-            <ul className="list-disc pl-5 text-gray-400 space-y-1">
-              <li>Fragmented add-ons  each property billed separately.</li>
-              <li>AI, voice, and analytics require extra paid modules.</li>
-              <li>Limited reporting for demo/conversion tracking.</li>
-              <li>No included enterprise-grade support.</li>
+            <h4 className="text-red-300 font-medium mt-4 mb-2 flex items-center gap-2">
+              <XCircle className="h-4 w-4 text-gray-400" /> Cons
+            </h4>
+            <ul className="pl-5 text-gray-400 space-y-1">
+              <li>Add-ons billed per property  scales poorly with growth.</li>
+              <li>Limited AI message volume even on paid plans.</li>
+              <li>No conversion analytics or advanced reporting.</li>
+              <li>24×7 support only for top-tier subscribers.</li>
+              <li>Branding removal and CRM integration cost extra.</li>
             </ul>
           </div>
         </div>
       </section>
+    </>
+
 
       {/* 4. Why RhythmiqCX */}
       <section id="why-rhythmiq" className="mb-10 bg-gray-900/70 p-6 rounded-xl border border-gray-700 text-center">
