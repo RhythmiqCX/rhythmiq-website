@@ -184,3 +184,8 @@ https://rhythmiqcx.com/blog/ai-bubble-is-bursting
 summary : The trillion-dollar AI bubble is showing cracks. Behind the curtain of “innovation” lies overused buzzwords and failed integrations. Here’s why the collapse is inevitable.
 tags : AI bubble 2025, AI hype collapse, AGI myth, agentic AI, AI investment crash, AI underdelivery, AI startup hype, automation limitations, bot traffic 2025, deepfake problem, AI marketing buzzwords, future of AI industry
 updated: 2025-10-8
+
+# AI Chatbots for Healthcare Providers — Benefits & Challenges
+https://rhythmiqcx.com/blog/ai-chatbots-for-healthcare
+summary: AI chatbots are transforming healthcare by automating patient interactions, reducing admin overload, and improving care accessibility. But can they balance efficiency with empathy? Dive into the benefits, challenges, and real-world impact of AI chatbots in healthcare.
+tags: ai chatbot for healthcare, healthcare automation, patient engagement, digital health, healthcare ai, ai in medicine, patient experience, telehealth bots, a
