@@ -43,18 +43,18 @@ const Hero = () => {
                 <div className="flex flex-col items-center justify-center text-center gap-y-4 bg-background/0">
                     <Container className="relative hidden lg:block overflow-hidden">
                         <Link href="https://calendly.com/ray-rhythmiqcx/30min">
-                        <button className="group relative grid overflow-hidden rounded-full px-2 py-1 shadow-[0_1000px_0_0_hsl(0_0%_15%)_inset] transition-colors duration-200 mx-auto">
-                            <span>
-                                <span className="spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]" />
-                            </span>
-                            <span className="backdrop absolute inset-[1px] rounded-full bg-background transition-colors duration-200 group-hover:bg-neutral-800" />
-                            <span className="z-10 py-0.5 text-sm text-neutral-100 flex items-center">
-                                <span className="px-2 py-[0.5px] h-[18px] tracking-wide flex items-center justify-center rounded-full bg-gradient-to-r from-green-400 to-emerald-600 text-[9px] font-medium mr-2 text-white">
-                                    LIVE NOW
+                            <button className="group relative grid overflow-hidden rounded-full px-2 py-1 shadow-[0_1000px_0_0_hsl(0_0%_15%)_inset] transition-colors duration-200 mx-auto">
+                                <span>
+                                    <span className="spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]" />
                                 </span>
-                                Book a Demo
-                            </span>
-                        </button>
+                                <span className="backdrop absolute inset-[1px] rounded-full bg-background transition-colors duration-200 group-hover:bg-neutral-800" />
+                                <span className="z-10 py-0.5 text-sm text-neutral-100 flex items-center">
+                                    <span className="px-2 py-[0.5px] h-[18px] tracking-wide flex items-center justify-center rounded-full bg-gradient-to-r from-green-400 to-emerald-600 text-[9px] font-medium mr-2 text-white">
+                                        LIVE NOW
+                                    </span>
+                                    Book a Demo
+                                </span>
+                            </button>
                         </Link>
                     </Container>
                     <Container>
@@ -69,7 +69,7 @@ const Hero = () => {
                     <Container delay={0.2}>
                         <p className="max-w-xl mx-auto mt-2 text-base lg:text-lg text-center text-muted-foreground">
                             {/* AI-powered automation and insights to maximize your campaigns and grow your brand. */}
-                            Our AI first no code agent delivers human-quality service in 60+ langugages. 
+                            Our AI first no code agent delivers human-quality service in 60+ langugages.
                             Use it on your existing platform.
                         </p>
                     </Container>
@@ -90,11 +90,16 @@ const Hero = () => {
 
                             <div className="rounded-lg lg:rounded-[22px] border border-border bg-background">
                                 <Image
-                                    src="/images/dashboard.png"
-                                    alt="widget"
-                                    width={1920}
-                                    height={1080}
+                                    src="/images/dashboard.webp"
+                                    alt="AI Dashboard preview"
+                                    width={1200}
+                                    height={675}
                                     className="rounded-lg lg:rounded-[20px]"
+                                    priority // preload only if this is above-the-fold
+                                    fetchPriority="high"
+                                    loading="eager"
+                                    decoding="async"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 60vw"
                                 />
                             </div>
 
