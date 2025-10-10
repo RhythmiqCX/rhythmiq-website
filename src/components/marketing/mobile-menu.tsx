@@ -28,6 +28,16 @@ const MobileMenu = () => {
           <SheetTitle className="text-left">Menu</SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col space-y-4">
+          <div className="space-y-2">
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Comparisons</h3>
+            <Link
+              href="/tawk-to-vs-rhythmiqcx"
+              className="block text-base font-medium transition-colors hover:text-primary"
+              onClick={() => setOpen(false)}
+            >
+              Tawk.to vs RhythmiqCX
+            </Link>
+          </div>
           {NAV_LINKS.map((link, idx) => (
             <Link
               key={idx}

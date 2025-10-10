@@ -62,7 +62,7 @@ const Footer = () => {
       <Container delay={0.5} className="h-auto">
         <h3 className="text-base font-medium text-foreground">Comparison</h3>
         <ul className="mt-4 text-sm text-muted-foreground space-y-4">
-          <li><Link href="/tawk-to-comparsion">Tawk.to vs RhythmiqCX</Link></li>
+          <li><Link href="/tawk-to-vs-rhythmiqcx">Tawk.to vs RhythmiqCX</Link></li>
         </ul>
       </Container>
     </div>

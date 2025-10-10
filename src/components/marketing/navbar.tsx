@@ -5,6 +5,7 @@ import Wrapper from "../global/wrapper";
 import { Button } from "../ui/button";
 import MobileMenu from "./mobile-menu";
 import ProductDropdown from "../ui/product-drowdown";
+import ComparisonsDropdown from "../ui/comparisons-dropdown";
 
 const Navbar = () => {
     return (
@@ -23,6 +24,7 @@ const Navbar = () => {
                     <div className="hidden lg:flex items-center gap-4">
                         <ul className="flex items-center gap-8">
                         <ProductDropdown/>
+                        <ComparisonsDropdown/>
                             {NAV_LINKS.map((link, index) => (
                                 <li key={index} className="text-sm font-medium -1 link">
                                     <Link href={link.href}>

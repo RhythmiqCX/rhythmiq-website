@@ -17,7 +17,7 @@ export default function RhythmiqComparison() {
         <h2 className="text-2xl font-semibold text-white">Introduction : The Smart Upgrade for Teams Ready to Scale With AI</h2>
         <p>
 When comparing chat platforms, the biggest decision often comes down to whether you want simplicity and zero
-cost or depth, automation, and scalability. tawk.to has earned popularity for its forever-free live chat that
+cost or depth, automation, and scalability. Tawk.to has earned popularity for its forever-free live chat that
 helps businesses communicate instantly with customers. It’s a great entry-level choice for those who simply
 need to respond to website visitors without worrying about budgets or limits. However, as customer
 expectations grow and automation becomes key to scaling support and sales, the value of a platform that can
@@ -77,7 +77,7 @@ what sets them apart so you can choose the best fit for your growth goals.
                     <div className="flex items-start gap-2 text-green-400">
                       <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
                       <span>
-                        Transparent all-in-one pricing (₹1,999 / ₹4,999 / ₹24,999) with AI,
+                        Transparent all-in-one pricing ($29 / $79 / $299 or ₹1,999 / ₹4,999 / ₹24,999) with AI,
                         analytics, and support included.
                       </span>
                     </div>
@@ -88,15 +88,20 @@ what sets them apart so you can choose the best fit for your growth goals.
                   <>
                     <div className="flex items-start gap-2 text-red-400">
                       <XCircle className="h-4 w-4 mt-1 flex-shrink-0" />
-                      <span>Optional paid AI Assist with limited message quota (starts at 100).</span>
+                      <span>
+                        Paid AI Assist: $29 plan = 1,000 messages, $99 plan = 5,000 messages, $399 plan = 20,000 messages.
+                        <br />
+                        <strong className="text-red-300">Expensive and limited!</strong>
+                      </span>
                     </div>
                   </>,
                   <>
                     <div className="flex items-start gap-2 text-green-400">
                       <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
                       <span>
-                        Built-in multilingual AI support with generous message limits
-                        (5K / 10K / 25K+).
+                        <strong className="text-green-300">5x more value:</strong> $29 = 5,000 messages, $79 = 10,000 messages, $299 = 25,000+ messages.
+                        <br />
+                        <strong className="text-green-300">Built-in multilingual AI support included!</strong>
                       </span>
                     </div>
                   </>,
@@ -117,6 +122,75 @@ what sets them apart so you can choose the best fit for your growth goals.
                   </>,
                 ],
                 [
+                  "Knowledge Base & Training",
+                  <>
+                    <div className="flex items-start gap-2 text-red-400">
+                      <XCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        Limited web crawling: $29 = 500 pages, $99 = 2,000 pages, $399 = 10,000 pages.
+                        <br />
+                        <strong className="text-red-300">No custom document uploads!</strong>
+                      </span>
+                    </div>
+                  </>,
+                  <>
+                    <div className="flex items-start gap-2 text-green-400">
+                      <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        <strong className="text-green-300">Unlimited Knowledge Base Documents</strong> on every plan.
+                        <br />
+                        Upload PDFs, docs, FAQs - no limits or restrictions!
+                      </span>
+                    </div>
+                  </>,
+                ],
+                [
+                  "AI Agents (Simultaneous Conversations)",
+                  <>
+                    <div className="flex items-start gap-2 text-red-400">
+                      <XCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        Limited simultaneous AI conversations: $29 = 3, $99 = 5, $399 = 10.
+                        <br />
+                        <strong className="text-red-300">Restricts how many customers AI can help at once!</strong>
+                      </span>
+                    </div>
+                  </>,
+                  <>
+                    <div className="flex items-start gap-2 text-green-400">
+                      <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        <strong className="text-green-300">More simultaneous AI conversations:</strong> $29 = 5, $79 = 10, $299 = 25.
+                        <br />
+                        <strong className="text-green-300">Handle more customers simultaneously!</strong>
+                      </span>
+                    </div>
+                  </>,
+                ],
+                [
+                  "Custom Integrations",
+                  <>
+                    <div className="flex items-start gap-2 text-red-400">
+                      <XCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        Limited integration options. Custom integrations require additional development costs.
+                        <br />
+                        <strong className="text-red-300">You handle the integration work yourself!</strong>
+                      </span>
+                    </div>
+                  </>,
+                  <>
+                    <div className="flex items-start gap-2 text-green-400">
+                      <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        <strong className="text-green-300">Custom integrations included on higher tiers.</strong>
+                        <br />
+                        <strong className="text-green-300">We build and maintain integrations for you!</strong>
+                      </span>
+                    </div>
+                  </>,
+                ],
+                [
                   "Analytics & Reporting",
                   <>
                     <div className="flex items-start gap-2 text-red-400">
@@ -132,6 +206,31 @@ what sets them apart so you can choose the best fit for your growth goals.
                   </>,
                 ],
                 [
+                  "Overage Pricing (Extra Messages)",
+                  <>
+                    <div className="flex items-start gap-2 text-red-400">
+                      <XCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        Expensive overages: $0.03 per message (Growth) and $100 per 5,000 messages (Enterprise).
+                        <br />
+                        <strong className="text-red-300">$30 per 1,000 messages vs our $15!</strong>
+                      </span>
+                    </div>
+                  </>,
+                  <>
+                    <div className="flex items-start gap-2 text-green-400">
+                      <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <span>
+                        <strong className="text-green-300">50% cheaper overages:</strong> $15 per 1,000 messages (Basic/Growth), $10 per 1,000 (Enterprise).
+                        <br />
+                        <strong className="text-green-300">Up to 67% savings at Enterprise.</strong>
+                        <br />
+                        <strong className="text-green-300">Much more affordable scaling!</strong>
+                      </span>
+                    </div>
+                  </>,
+                ],
+                [
                   "Support",
                   <>
                     <div className="flex items-start gap-2 text-red-400">
@@ -142,7 +241,7 @@ what sets them apart so you can choose the best fit for your growth goals.
                   <>
                     <div className="flex items-start gap-2 text-green-400">
                       <CheckCircle className="h-4 w-4 mt-1 flex-shrink-0" />
-                      <span>Human customer support across all plans.</span>
+                      <span>24×7 email, web, phone and human support across all plans.</span>
                     </div>
                   </>,
                 ],
@@ -174,20 +273,22 @@ what sets them apart so you can choose the best fit for your growth goals.
               <CheckCircle className="h-4 w-4" /> Pros
             </h4>
             <ul className="pl-5 text-gray-300 space-y-1">
+              <li><strong>More AI capacity for less:</strong> $29 = 5,000 messages, $79 = 10,000 messages, $299 = 25,000+ messages.</li>
+              <li><strong>Cheaper overages:</strong> $15 per 1,000 (Basic/Growth), $10 per 1,000 (Enterprise) — up to 67% savings.</li>
+              <li><strong>More simultaneous conversations:</strong> 5 / 10 / 25 vs 3 / 5 / 10.</li>
+              <li><strong>Unlimited knowledge base:</strong> Upload unlimited docs vs Tawk.to's 500–10,000 page crawl limits.</li>
+              <li><strong>Custom integrations on higher tiers:</strong> we build and maintain integrations for you.</li>
               <li>Transparent pricing  AI and analytics included in all tiers.</li>
               <li>AI-first, multilingual chat designed for conversions.</li>
-              <li>Full white-label customization  no upsells.</li>
-              <li>Unlimited human + AI agents from the start.</li>
               <li>Real-time analytics and agent fallback logic.</li>
-              <li>24×7 human support included by default.</li>
-              <li>Predictable scaling from startup to enterprise.</li>
+              <li>24×7 human support across email, web, and phone.</li>
             </ul>
 
             <h4 className="text-green-300 font-medium mt-4 mb-2 flex items-center gap-2">
               <XCircle className="h-4 w-4 text-gray-400" /> Cons
             </h4>
             <ul className="pl-5 text-gray-400 space-y-1">
-              <li>Not free  entry starts at ₹1,999/month.</li>
+              <li>Not free  entry starts at ₹1,999/month ($29/month).</li>
               <li>Advanced CRM integrations from Growth tier upward.</li>
             </ul>
           </div>
@@ -201,7 +302,7 @@ what sets them apart so you can choose the best fit for your growth goals.
               <CheckCircle className="h-4 w-4" /> Pros
             </h4>
             <ul className="pl-5 text-gray-300 space-y-1">
-              <li>Free for unlimited human agents.</li>
+              <li>Free base tier.</li>
               <li>Simple setup for small websites.</li>
               <li>Optional add-ons for branding, AI, and video.</li>
             </ul>
@@ -210,11 +311,11 @@ what sets them apart so you can choose the best fit for your growth goals.
               <XCircle className="h-4 w-4 text-gray-400" /> Cons
             </h4>
             <ul className="pl-5 text-gray-400 space-y-1">
-              <li>Add-ons billed per property  scales poorly with growth.</li>
-              <li>Limited AI message volume even on paid plans.</li>
-              <li>No conversion analytics or advanced reporting.</li>
-              <li>24×7 support only for top-tier subscribers.</li>
-              <li>Branding removal and CRM integration cost extra.</li>
+              <li>Expensive overages: $30 per 1,000 (Growth) and $20 per 1,000 (Enterprise).</li>
+              <li>Lower AI message limits: 1,000 / 5,000 / 20,000.</li>
+              <li>Fewer simultaneous AI conversations: 3 / 5 / 10.</li>
+              <li>Knowledge base limits: 500 / 2,000 / 10,000 crawled pages; no doc uploads.</li>
+              <li>Add-ons billed per property — scales poorly with growth.</li>
             </ul>
           </div>
         </div>
@@ -234,8 +335,11 @@ what sets them apart so you can choose the best fit for your growth goals.
         </p>
 
         <ul className="list-disc text-gray-300 text-left max-w-3xl mx-auto space-y-1">
+          <li><strong>5x more AI value:</strong> $29 gets 5,000 messages vs Tawk.to's 1,000 messages. $79 gets 10,000 vs their 5,000 messages. $299 gets 25,000+ vs their 20,000 messages.</li>
+          <li><strong>Unlimited knowledge base:</strong> Upload unlimited documents vs Tawk.to's 500-10,000 page crawling limits.</li>
+          <li><strong>Custom integrations on higher tiers:</strong> dedicated help to connect your CRM, data, and workflows.</li>
           <li><strong>Affordable growth path:</strong> start small, keep all core features  no need for costly add-ons.</li>
-          <li><strong>AI included:</strong> every plan comes with multilingual AI and message quotas.</li>
+          <li><strong>AI included:</strong> every plan comes with multilingual AI and generous message quotas.</li>
           <li><strong>Conversion-ready:</strong> analytics, tracking, and reporting built for demo pipelines.</li>
           <li><strong>Enterprise feel at startup pricing:</strong> all essentials plus premium 24×7 support.</li>
         </ul>
@@ -249,9 +353,9 @@ what sets them apart so you can choose the best fit for your growth goals.
       <section id="conclusion" className="mt-10 text-center">
         <h2 className="text-2xl font-semibold text-white mb-3">Conclusion</h2>
         <p className="text-gray-300 max-w-3xl mx-auto">
-          If your goal is to chat casually or just collect messages, Tawk.to is unbeatable for free.  
-          If you’re growing a team and want predictable pricing, AI assistance, and real analytics that prove ROI   
-          <strong>RhythmiqCX delivers all of that at a low monthly cost.</strong>
+          If you just need basic, free live chat, Tawk.to is fine. But if you care about scale, AI coverage, and cost predictability, the choice is clear:
+          <strong> RhythmiqCX gives 5x more AI messages on entry, more simultaneous AI conversations, unlimited knowledge base, and up to 67% cheaper overages.</strong>
+          You’ll serve more customers, with better outcomes, at a lower total cost.
         </p>
 
         <div className="mt-6 flex flex-wrap justify-center gap-3">
