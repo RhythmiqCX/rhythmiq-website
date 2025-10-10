@@ -247,7 +247,7 @@ what sets them apart so you can choose the best fit for your growth goals.
                 ],
               ].map(([cap, tawk, rhythm], i) => (
                 <tr
-                  key={cap}
+                  key={i}
                   className={`${i % 2 === 0 ? "bg-gray-900/50" : "bg-gray-800/50"}`}
                 >
                   <td className="p-3 text-gray-200 font-medium">{cap}</td>
