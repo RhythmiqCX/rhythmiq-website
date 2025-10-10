@@ -52,7 +52,7 @@ export const generateMetadata = ({
         },
         {
             rel: "icon",
-            url: "/icons/icon.png",
+            url: "/icons/rhythmiq-icon.png",
             sizes: "16x16",
             type: "image/png",
         },
