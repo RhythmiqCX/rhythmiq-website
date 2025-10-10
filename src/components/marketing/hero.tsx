@@ -90,7 +90,7 @@ const Hero = () => {
 
                             <div className="rounded-lg lg:rounded-[22px] border border-border bg-background">
                                 <Image
-                                    src="/images/dashboard.webp"
+                                    src="/images/dashboard.png"
                                     alt="AI Dashboard preview"
                                     width={1200}
                                     height={675}
