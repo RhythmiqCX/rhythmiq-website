@@ -184,3 +184,10 @@ https://rhythmiqcx.com/blog/ai-bubble-is-bursting
 summary : The trillion-dollar AI bubble is showing cracks. Behind the curtain of “innovation” lies overused buzzwords and failed integrations. Here’s why the collapse is inevitable.
 tags : AI bubble 2025, AI hype collapse, AGI myth, agentic AI, AI investment crash, AI underdelivery, AI startup hype, automation limitations, bot traffic 2025, deepfake problem, AI marketing buzzwords, future of AI industry
 updated: 2025-10-8
+
+# AI Customer Support Failure: When Automation Replaces Empathy
+https://rhythmiqcx.com/blog/ai-customer-support-is-failing
+summary : AI promised faster, smarter customer support but 2025 proves otherwise. Here’s how automation fatigue, broken bots, and endless loops are eroding customer trust.
+tags : AI customer support 2025
+, automation fatigue, chatbot frustration, AI support failures, empathetic AI, human-AI collaboration, automation backlash, future of customer service, AI customer experience, AI trust crisis
+updated; 10-10-2025
