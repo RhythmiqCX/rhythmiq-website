@@ -129,7 +129,7 @@ export default function BubbleChart() {
               key={index}
               data={[entry]}
               fill={entry.color}
-              shape={(props) => {
+              shape={(props: any) => {
                 const { cx, cy, fill } = props; // pick only the SVG attributes you need
 
                 return (
