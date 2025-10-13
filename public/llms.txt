@@ -190,9 +190,16 @@ https://rhythmiqcx.com/blog/ai-customer-support-is-failing
 summary : AI promised faster, smarter customer support but 2025 proves otherwise. Here’s how automation fatigue, broken bots, and endless loops are eroding customer trust.
 tags : AI customer support 2025
 , automation fatigue, chatbot frustration, AI support failures, empathetic AI, human-AI collaboration, automation backlash, future of customer service, AI customer experience, AI trust crisis
-updated; 10-10-2025
+updated: 13-10-2025
 
 # AI Chatbots for Healthcare Providers — Benefits & Challenges
 https://rhythmiqcx.com/blog/ai-chatbots-for-healthcare
 summary: AI chatbots are transforming healthcare by automating patient interactions, reducing admin overload, and improving care accessibility. But can they balance efficiency with empathy? Dive into the benefits, challenges, and real-world impact of AI chatbots in healthcare.
 tags: ai chatbot for healthcare, healthcare automation, patient engagement, digital health, healthcare ai, ai in medicine, patient experience, telehealth bots, a
+updated: 11-10-2025
+
+# Are We Addicted to AI?
+https://rhythmiqcx.com/blog/ai-addiction-2025
+summary: AI has slipped into our daily routines from writing our emails to choosing our meals. But somewhere between “just trying ChatGPT once” and “using five AI tools before breakfast,” we may have developed a new kind of tech addiction.
+tags: AI customer support 2025, automation fatigue, chatbot frustration, AI support failures, empathetic AI, human-AI collaboration, automation backlash, future of customer service, AI customer experience, AI trust crisis
+updated: 13-10-2025

@@ -3,10 +3,10 @@ import { generateMetadata } from "@/utils";
 import BubbleChart from "./BubbleChart";
 import Link from "next/link";
 export const metadata = generateMetadata({
-  title: "",
-  description: "",
+  title: "AI Customer Support Failure: When Automation Replaces Empathy",
+  description: "AI promised faster, smarter customer support but 2025 proves otherwise. Here’s how automation fatigue, broken bots, and endless loops are eroding customer trust.",
   alternates: {
-    canonical: "blog/",
+    canonical: "blog/ai-customer-support-is-failing",
   },
   openGraph: {
     images: ["/images/blog/10-10.jpg"], // Replace with actual image path
