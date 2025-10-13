@@ -42,7 +42,7 @@ const RELATED = [
     {
     title: "AI Customer Support Is Failing Its Own Customers: The Automation Backlash of 2025",
     href: "/blog/ai-customer-support-is-failing",
-    imageSrc: "/images/blog/13-10.jpg",
+    imageSrc: "/images/blog/10-10.jpg",
     date: "October 10, 2025",
     description:
       "AI was meant to revolutionize customer support: instant answers, zero wait times, and 24/7 availability. Instead, it’s creating new frustrations, from robotic replies to endless loops and unresolved issues.",
@@ -71,7 +71,7 @@ export default function AIChatbotBlogPage() {
     <BlogLayout
       category={{
         href: "/blog/category/technology",
-        label: "Technology",
+        label: "Tech",
       }}
       date="2025-10-13"
       title="Are We Addicted to AI? The 2025 Tech Obsession No One Talks About"

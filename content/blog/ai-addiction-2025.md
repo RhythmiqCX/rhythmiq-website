@@ -5,5 +5,5 @@ description: "From chatbots to copilots, AI tools are everywhere and we can’t 
 cover: "/images/blog/13-10.jpg"
 tag: "Tech"
 author: "Kat"
-category: "Technology"
+category: "Tech"
 --- 
