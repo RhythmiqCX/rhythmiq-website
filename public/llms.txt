@@ -203,3 +203,10 @@ https://rhythmiqcx.com/blog/ai-addiction-2025
 summary: AI has slipped into our daily routines from writing our emails to choosing our meals. But somewhere between “just trying ChatGPT once” and “using five AI tools before breakfast,” we may have developed a new kind of tech addiction.
 tags: AI customer support 2025, automation fatigue, chatbot frustration, AI support failures, empathetic AI, human-AI collaboration, automation backlash, future of customer service, AI customer experience, AI trust crisis
 updated: 13-10-2025
+
+
+# The Dead Internet Theory
+https://rhythmiqcx.com/blog/dead-internet-theory
+summary : From fake engagement to soulless news articles, AI is finally taking over our beloved internet.
+tags : dead internet theory, AI slop, internet, human-AI collaboration, AI ethics
+updated: 15-10-2025
