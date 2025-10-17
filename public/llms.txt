@@ -210,3 +210,9 @@ https://rhythmiqcx.com/blog/dead-internet-theory
 summary : From fake engagement to soulless news articles, AI is finally taking over our beloved internet.
 tags : dead internet theory, AI slop, internet, human-AI collaboration, AI ethics
 updated: 15-10-2025
+
+# New Era of AI Companions: Love & Loneliness
+https://rhythmiqcx.com/blog/ai-companions
+summary : Exploring the implications of forming emotional bonds with AI, how we got here, the social impact, and the industry behind it.
+tags : AI companion, AI girlfriend, artificial intimacy, emotional AI, AI companionship risks, human-AI relationships, AI mental health, synthetic relationships, AI loneliness, AI social impact
+updated: 17-10-2025
