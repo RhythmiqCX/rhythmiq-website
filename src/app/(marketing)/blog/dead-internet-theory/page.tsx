@@ -71,8 +71,8 @@ export default function AIChatbotBlogPage() {
   return (
     <BlogLayout
       category={{
-        href: "/blog/category/technology",
-        label: "Tech",
+        href: "/blog/category/general",
+        label: "General",
       }}
       date="2025-10-15"
       title="The Dead Internet Theory"
