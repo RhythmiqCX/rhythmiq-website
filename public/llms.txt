@@ -210,3 +210,15 @@ https://rhythmiqcx.com/blog/dead-internet-theory
 summary : From fake engagement to soulless news articles, AI is finally taking over our beloved internet.
 tags : dead internet theory, AI slop, internet, human-AI collaboration, AI ethics
 updated: 15-10-2025
+
+# Will AI Take Our Jobs? A Realistic Look at the Future of Work
+https://rhythmiqcx.com/blog/will-ai-take-our-jobs
+summary: The question everyone’s secretly asking — will AI replace us or make us better? From startup floors to corporate boardrooms, we explore how automation is reshaping work, why fear spreads faster than facts, and how teams at RhythmiqCX turned AI anxiety into opportunity.
+tags: future of work 2025, AI automation, job displacement, human-AI collaboration, AI workforce trends, AI productivity tools, reskilling for automation, AI job evolution, ethical AI employment, automation and empathy
+updated: 15-10-2025
+
+# New Era of AI Companions: Love & Loneliness
+https://rhythmiqcx.com/blog/ai-companions
+summary : Exploring the implications of forming emotional bonds with AI, how we got here, the social impact, and the industry behind it.
+tags : AI companion, AI girlfriend, artificial intimacy, emotional AI, AI companionship risks, human-AI relationships, AI mental health, synthetic relationships, AI loneliness, AI social impact
+updated: 17-10-2025

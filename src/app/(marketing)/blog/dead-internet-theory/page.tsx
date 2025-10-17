@@ -10,7 +10,7 @@ export const metadata = generateMetadata({
   openGraph: {
     images: ["/images/blog/15-10.jpg"], // Replace with actual image path
     type: "article",
-    publishedTime: "2025-10-13",
+    publishedTime: "2025-10-15",
     authors: ["Kat"],
   },
 });
@@ -71,8 +71,8 @@ export default function AIChatbotBlogPage() {
   return (
     <BlogLayout
       category={{
-        href: "/blog/category/technology",
-        label: "Tech",
+        href: "/blog/category/general",
+        label: "General",
       }}
       date="2025-10-15"
       title="The Dead Internet Theory"
