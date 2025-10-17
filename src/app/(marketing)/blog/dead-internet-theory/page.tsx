@@ -10,7 +10,7 @@ export const metadata = generateMetadata({
   openGraph: {
     images: ["/images/blog/15-10.jpg"], // Replace with actual image path
     type: "article",
-    publishedTime: "2025-10-13",
+    publishedTime: "2025-10-15",
     authors: ["Kat"],
   },
 });
