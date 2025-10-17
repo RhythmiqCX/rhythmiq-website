@@ -18,12 +18,12 @@ export const metadata = generateMetadata({
 });
 
 const SECTIONS = [
-  { id: "part-1", label: "The Panic Button" },
-  { id: "part-2", label: "Reality Check" },
-  { id: "part-3", label: "How Jobs Are Shifting" },
-  { id: "part-4", label: "The Ugly Bits" },
-  { id: "part-5", label: "The Playbook" },
-  { id: "final", label: "Final Thoughts" },
+  { id: "the-panic-button", label: "The Panic Button" },
+  { id: "reality-check", label: "Reality Check" },
+  { id: "how-jobs-are-shifting", label: "How Jobs Are Shifting" },
+  { id: "the-ugly-bits", label: "The Ugly Bits" },
+  { id: "the-playbook", label: "The Playbook" },
+  { id: "final-thoughts", label: "Final Thoughts" },
 ];
 
 const RELATED = [
@@ -71,7 +71,7 @@ export default function WillAITakeOurJobsPage() {
       sections={SECTIONS}
       relatedArticles={RELATED}
     >
-      <section id="intro">
+      <section id="intro" className="mt-16">
   <h1>Will AI Take Our Jobs? A Realistic and Slightly Biased Look at the Future of Work</h1>
   <p>
     Nope, this isn’t a Hollywood robot takeover story. Will AI shake things up? Absolutely. 
@@ -83,8 +83,8 @@ export default function WillAITakeOurJobsPage() {
   {/* CTA: insert sign-up/demo widget code here */}
 </section>
 
-<section id="part-1">
-  <h2>The Panic Button, Why Everyone’s Asking “Will AI Take My Job?”</h2>
+<section id="the-panic-button" className="mt-16 scroll-mt-20">
+  <h2>The Panic Button, Why Everyone's Asking "Will AI Take My Job?"</h2>
   <p>
     It’s everywhere headlines shouting “AI is stealing your job!” or influencers predicting 
     the end of human work. When your feed fills with doom, it’s hard not to panic.  
@@ -97,8 +97,8 @@ export default function WillAITakeOurJobsPage() {
   </p>
 </section>
 
-<section id="part-2">
-  <h2>Reality Check! What AI Actually Does and Doesn’t</h2>
+<section id="reality-check" className="mt-16 scroll-mt-20">
+  <h2>Reality Check! What AI Actually Does and Doesn't</h2>
   <p>
     Forget the sci-fi drama. <Link href="./agentic-ai-and-autonomous-systems">AI is brilliant</Link> at patterns sorting, predicting, summarizing.  
     But it’s terrible at empathy, humor, and the weird, beautiful chaos of human intuition.  
@@ -116,7 +116,7 @@ export default function WillAITakeOurJobsPage() {
   {/* CTA: insert sign-up/demo widget code here */}
 </section>
 
-<section id="part-3">
+<section id="how-jobs-are-shifting" className="mt-16 scroll-mt-20">
   <h2>Inside RhythmiqCX: Real Tales from the AI Trenches</h2>
   <p>
     We’ll admit it the first time we rolled out our AI assistant, half the team freaked out.  
@@ -130,7 +130,7 @@ export default function WillAITakeOurJobsPage() {
   </p>
 </section>
 
-<section id="part-4">
+<section id="the-ugly-bits" className="mt-16 scroll-mt-20">
   <h2>The Messy Bits: Bias, Burnout, and Who Gets Left Behind</h2>
   <p>
     Let’s be honest. AI isn’t perfect. Biased data, lazy rollouts, and poor leadership can mess things up fast.  
@@ -142,7 +142,7 @@ export default function WillAITakeOurJobsPage() {
   </p>
 </section>
 
-<section id="part-5">
+<section id="the-playbook" className="mt-16 scroll-mt-20">
   <h2>The Playbook: How to Win in an AI-First World</h2>
   <p>
     Want the biased version? Lean in. Don’t fight the tech make it yours.  
@@ -162,8 +162,8 @@ export default function WillAITakeOurJobsPage() {
   
 </section>
 
-<section id="final">
-  <h2>Final Thoughts: My Two Cents and I’m Sticking to Them</h2>
+<section id="final-thoughts" className="mt-16 scroll-mt-20">
+  <h2>Final Thoughts: My Two Cents and I'm Sticking to Them</h2>
   <p>
     Will AI take our jobs? No. It’ll take the repetitive bits, and give us back time for what matters.  
     We’re not losing control we’re finally getting a smarter compass.
