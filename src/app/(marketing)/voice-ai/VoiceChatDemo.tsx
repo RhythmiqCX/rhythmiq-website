@@ -90,7 +90,8 @@ const VoiceChatDemo = () => {
   };
 
   return (
-    <div className="min-h-screen max-h-screen overflow-y-auto bg-background-80 flex flex-col px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+    <div className="min-h-[70vh] max-h-[70vh] overflow-y-auto bg-background-80 flex flex-col px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+
       <div className="max-w-4xl mx-auto w-full flex flex-col h-full min-h-0">
         {/* Header */}
         <div className="scroll-mt-16 text-center mb-6 sm:mb-8">

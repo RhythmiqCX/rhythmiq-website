@@ -2,20 +2,20 @@ import React from "react";
 import Hero from "./Hero";
 import CallToAction from "./CallToAction";
 import VoiceChatDemo from "./VoiceChatDemo";
-import VoiceAICustomerSupport from "./Features";
+// import VoiceAICustomerSupport from "./Features";
 import VoiceAIFeatures from "../../../components/marketing/VoiceAIFeatures";
 import CircularGallery from "../../../components/marketing/CircularGallery";
 // Improved copy object
 
 const voiceAIItems = [
-  { image: "/images/voice-ai-image1.jpg", text: "Voice AI Assistant" },
-  { image: "/images/voice-ai-image2.jpg", text: "Smart Conversations" },
-  { image: "/images/voice-ai-image3.jpg", text: "AI Voice Technology" },
-  { image: "/images/mic_3.gif", text: "Voice Recognition" },
-  { image: "/images/ai-assistant.gif", text: "AI Assistant" },
-  { image: "/images/third.gif", text: "Voice Processing" },
-  { image: "/images/24-7-support.png", text: "24/7 Support" },
-  { image: "/images/support-instant.svg", text: "Instant Response" },
+  { image: "/images/cg8.jpg", text: "AI CPU" },
+  { image: "/images/cg1'.jpg", text: "Smart Conversations" },
+  { image: "/images/cg2.jpg", text: "AI Voice Technology" },
+  { image: "/images/cg3.jpg", text: "Server" },
+  { image: "/images/cg4.jpg", text: "Ai GPU" },
+  { image: "/images/cg5.jpg", text: "Pekka 2.0" },
+  { image: "/images/cg6.jpg", text: "Ai Pekka" },
+  { image: "/images/cg7.jpg", text: "Bumble" },
 ];
 const featuresObject = [
   {
@@ -58,10 +58,9 @@ const VoiceAIApp = () => {
         <div style={{ height: '600px', position: 'relative' }}>
           <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} items={voiceAIItems}/>
         </div>
-        <VoiceAICustomerSupport />
-
+      
         <VoiceAIFeatures section2= {true} section1Content={featuresObject[0].section1Content} section1Heading={featuresObject[0].section1Heading} section1Subheading={featuresObject[0].section1Subheading} section2Content={featuresObject[1].section1Content} section2Heading={featuresObject[1].section1Heading} section2Subheading={featuresObject[1].section1Subheading} imageUrl1="images/mic_3.gif" imageUrl2="images/ai-voice-unscreen.gif"/>
-        <VoiceAIFeatures section1Content={featuresObject[2].section1Content} section1Heading={featuresObject[2].section1Heading} section1Subheading={featuresObject[2].section1Subheading} imageUrl1="images/Thirdai.gif"/>
+        <VoiceAIFeatures section1Content={featuresObject[2].section1Content} section1Heading={featuresObject[2].section1Heading} section1Subheading={featuresObject[2].section1Subheading} imageUrl1="images/thirdimg1-unscreen.gif"/>
         <CallToAction />
       </section>
     </div>

@@ -32,7 +32,7 @@ export default function VoiceAIFeatures({
             <img
               src={imageUrl1}
               alt="Feature Image"
-              className="rounded-2xl shadow-xl w-full max-w-[220px] h-auto"
+              className="rounded-2xl shadow-xl w-full max-w-[400px] h-auto"
             />
           </div>
 
@@ -62,7 +62,7 @@ export default function VoiceAIFeatures({
               <img
                 src={imageUrl2}
                 alt="Feature Image"
-                className="rounded-2xl shadow-xl w-full max-w-[280px] h-auto"
+                className="rounded-2xl shadow-xl w-full max-w-[400px] h-auto"
               />
             </div>
           </div>
