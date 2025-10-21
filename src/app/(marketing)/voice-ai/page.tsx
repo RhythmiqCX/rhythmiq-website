@@ -56,8 +56,8 @@ const VoiceAIApp = () => {
         <VoiceChatDemo />
         
         <div style={{ height: '600px', position: 'relative' }}>
-        <CircularGallery items={voiceAIItems} bend={1} textColor="#fff" borderRadius={8} font="bold 30px Figtree" />
-       </div>
+          <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} items={voiceAIItems}/>
+        </div>
         <VoiceAICustomerSupport />
 
         <VoiceAIFeatures section2= {true} section1Content={featuresObject[0].section1Content} section1Heading={featuresObject[0].section1Heading} section1Subheading={featuresObject[0].section1Subheading} section2Content={featuresObject[1].section1Content} section2Heading={featuresObject[1].section1Heading} section2Subheading={featuresObject[1].section1Subheading} imageUrl1="images/mic_3.gif" imageUrl2="images/ai-voice.gif"/>

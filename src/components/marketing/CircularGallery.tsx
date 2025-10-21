@@ -1,12 +1,13 @@
-"use client"
+"use client";
+
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'ogl';
 import { useEffect, useRef } from 'react';
 
 type GL = Renderer['gl'];
 
-function debounce<T extends (...args: unknown[]) => void>(func: T, wait: number) {
+function debounce<T extends (...args: any[]) => void>(func: T, wait: number) {
   let timeout: number;
-  return function (this: unknown, ...args: Parameters<T>) {
+  return function (this: any, ...args: Parameters<T>) {
     window.clearTimeout(timeout);
     timeout = window.setTimeout(() => func.apply(this, args), wait);
   };
@@ -16,7 +17,7 @@ function lerp(p1: number, p2: number, t: number): number {
   return p1 + (p2 - p1) * t;
 }
 
-function autoBind(instance: { [key: string]: unknown }): void {
+function autoBind(instance: any): void {
   const proto = Object.getPrototypeOf(instance);
   Object.getOwnPropertyNames(proto).forEach(key => {
     if (key !== 'constructor' && typeof instance[key] === 'function') {
@@ -78,7 +79,6 @@ class Title {
   textColor: string;
   font: string;
   mesh!: Mesh;
-  [key: string]: unknown;
 
   constructor({ gl, plane, renderer, text, textColor = '#545050', font = '30px sans-serif' }: TitleProps) {
     autoBind(this);
@@ -221,7 +221,6 @@ class Media {
   }
 
   createShader() {
-    console.log(`🖼️ Media: Creating shader for image: ${this.image}`);
     const texture = new Texture(this.gl, {
       generateMipmaps: true
     });
@@ -288,48 +287,12 @@ class Media {
       transparent: true
     });
     const img = new Image();
-    console.log(`📥 Media: Starting to load image: ${this.image}`);
-    
-    // Don't set crossOrigin for external URLs to avoid CORS issues with redirects
-    if (!this.image.startsWith('http')) {
-      img.crossOrigin = 'anonymous';
-      console.log(`🔒 Media: Set crossOrigin for local image: ${this.image}`);
-    } else {
-      console.log(`🌐 Media: External URL detected, skipping crossOrigin: ${this.image}`);
-    }
-    
+    img.crossOrigin = 'anonymous';
+    img.src = this.image;
     img.onload = () => {
-      console.log(`✅ Media: Successfully loaded image: ${this.image}`, {
-        naturalWidth: img.naturalWidth,
-        naturalHeight: img.naturalHeight,
-        complete: img.complete
-      });
       texture.image = img;
       this.program.uniforms.uImageSizes.value = [img.naturalWidth, img.naturalHeight];
     };
-    
-    img.onerror = (error) => {
-      console.error(`❌ Media: Failed to load image: ${this.image}`, error);
-      // Create a simple colored fallback texture
-      const canvas = document.createElement('canvas');
-      canvas.width = 400;
-      canvas.height = 300;
-      const ctx = canvas.getContext('2d');
-      if (ctx) {
-        ctx.fillStyle = '#333333';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = '#ffffff';
-        ctx.font = '20px Arial';
-        ctx.textAlign = 'center';
-        ctx.fillText('Image Failed to Load', canvas.width / 2, canvas.height / 2);
-      }
-      console.log(`🔄 Media: Using fallback canvas for: ${this.image}`);
-      texture.image = canvas;
-      this.program.uniforms.uImageSizes.value = [canvas.width, canvas.height];
-    };
-    
-    console.log(`🚀 Media: Setting image src: ${this.image}`);
-    img.src = this.image;
   }
 
   createMesh() {
@@ -432,7 +395,7 @@ class App {
     last: number;
     position?: number;
   };
-  onCheckDebounce: (...args: unknown[]) => void;
+  onCheckDebounce: (...args: any[]) => void;
   renderer!: Renderer;
   gl!: GL;
   camera!: Camera;
@@ -481,24 +444,14 @@ class App {
   }
 
   createRenderer() {
-    console.log('🎨 App: Creating WebGL renderer');
-    try {
-      this.renderer = new Renderer({
-        alpha: true,
-        antialias: true,
-        dpr: Math.min(window.devicePixelRatio || 1, 2)
-      });
-      this.gl = this.renderer.gl;
-      this.gl.clearColor(0, 0, 0, 0);
-      this.container.appendChild(this.renderer.gl.canvas as HTMLCanvasElement);
-      console.log('✅ App: WebGL renderer created successfully', {
-        canvas: this.renderer.gl.canvas,
-        gl: this.gl,
-        container: this.container
-      });
-    } catch (error) {
-      console.error('❌ App: Failed to create WebGL renderer:', error);
-    }
+    this.renderer = new Renderer({
+      alpha: true,
+      antialias: true,
+      dpr: Math.min(window.devicePixelRatio || 1, 2)
+    });
+    this.gl = this.renderer.gl;
+    this.gl.clearColor(0, 0, 0, 0);
+    this.container.appendChild(this.renderer.gl.canvas as HTMLCanvasElement);
   }
 
   createCamera() {
@@ -525,7 +478,6 @@ class App {
     borderRadius: number,
     font: string
   ) {
-    console.log('🔍 CircularGallery: createMedias called with items:', items);
     const defaultItems = [
       {
         image: `https://picsum.photos/seed/1/800/600?grayscale`,
@@ -553,7 +505,7 @@ class App {
       },
       {
         image: `https://picsum.photos/seed/17/800/600?grayscale`,
-        text: 'rini'
+        text: 'Santorini'
       },
       {
         image: `https://picsum.photos/seed/8/800/600?grayscale`,
@@ -577,11 +529,8 @@ class App {
       }
     ];
     const galleryItems = items && items.length ? items : defaultItems;
-    console.log('📸 CircularGallery: Using gallery items:', galleryItems);
     this.mediasImages = galleryItems.concat(galleryItems);
-    console.log('🔄 CircularGallery: Duplicated items for infinite scroll:', this.mediasImages.length, 'total items');
     this.medias = this.mediasImages.map((data, index) => {
-      console.log(`🎬 Creating media item ${index}:`, data);
       return new Media({
         geometry: this.planeGeometry,
         gl: this.gl,
@@ -621,7 +570,7 @@ class App {
 
   onWheel(e: Event) {
     const wheelEvent = e as WheelEvent;
-    const delta = wheelEvent.deltaY || (wheelEvent as WheelEvent & { wheelDelta?: number; detail?: number }).wheelDelta || (wheelEvent as WheelEvent & { wheelDelta?: number; detail?: number }).detail;
+    const delta = wheelEvent.deltaY || (wheelEvent as any).wheelDelta || (wheelEvent as any).detail;
     this.scroll.target += (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 0.2;
     this.onCheckDebounce();
   }
@@ -717,25 +666,8 @@ export default function CircularGallery({
   scrollEase = 0.05
 }: CircularGalleryProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  
   useEffect(() => {
-    console.log('🚀 CircularGallery: useEffect triggered', {
-      items,
-      bend,
-      textColor,
-      borderRadius,
-      font,
-      scrollSpeed,
-      scrollEase,
-      containerRef: containerRef.current
-    });
-    
-    if (!containerRef.current) {
-      console.error('❌ CircularGallery: containerRef.current is null');
-      return;
-    }
-    
-    console.log('🏗️ CircularGallery: Creating App instance');
+    if (!containerRef.current) return;
     const app = new App(containerRef.current, {
       items,
       bend,
@@ -745,12 +677,9 @@ export default function CircularGallery({
       scrollSpeed,
       scrollEase
     });
-    
     return () => {
-      console.log('🧹 CircularGallery: Cleaning up App instance');
       app.destroy();
     };
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
-  
   return <div className="w-full h-full overflow-hidden cursor-grab active:cursor-grabbing" ref={containerRef} />;
 }
