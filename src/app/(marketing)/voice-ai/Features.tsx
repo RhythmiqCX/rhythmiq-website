@@ -190,7 +190,7 @@ export default function VoiceAICustomerSupport() {
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0" style={{
-                  backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+                  backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)',
                   backgroundSize: '30px 30px'
                 }}></div>
               </div>
