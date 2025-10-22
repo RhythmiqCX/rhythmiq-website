@@ -84,7 +84,7 @@ export default function WillAITakeOurJobsPage() {
 </section>
 
 <section id="the-panic-button" className="mt-16 scroll-mt-20">
-  <h2>The Panic Button, Why Everyone's Asking "Will AI Take My Job?"</h2>
+  <h2>The Panic Button, Why Everyone&apos;s Asking &ldquo;Will AI Take My Job?&rdquo;</h2>
   <p>
     It’s everywhere headlines shouting “AI is stealing your job!” or influencers predicting 
     the end of human work. When your feed fills with doom, it’s hard not to panic.  
@@ -98,7 +98,7 @@ export default function WillAITakeOurJobsPage() {
 </section>
 
 <section id="reality-check" className="mt-16 scroll-mt-20">
-  <h2>Reality Check! What AI Actually Does and Doesn't</h2>
+  <h2>Reality Check! What AI Actually Does and Doesn&apos;t</h2>
   <p>
     Forget the sci-fi drama. <Link href="./agentic-ai-and-autonomous-systems">AI is brilliant</Link> at patterns sorting, predicting, summarizing.  
     But it’s terrible at empathy, humor, and the weird, beautiful chaos of human intuition.  
@@ -163,7 +163,7 @@ export default function WillAITakeOurJobsPage() {
 </section>
 
 <section id="final-thoughts" className="mt-16 scroll-mt-20">
-  <h2>Final Thoughts: My Two Cents and I'm Sticking to Them</h2>
+  <h2>Final Thoughts: My Two Cents and I&apos;m Sticking to Them</h2>
   <p>
     Will AI take our jobs? No. It’ll take the repetitive bits, and give us back time for what matters.  
     We’re not losing control we’re finally getting a smarter compass.
