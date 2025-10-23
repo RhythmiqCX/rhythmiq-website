@@ -17,7 +17,7 @@ const Hero = () => {
         {/* Main Heading */}
         <div className="space-y-4">
           <h3 className="text-sm md:text-base text-gray-500 font-medium">
-            TAGLINE
+            Redefining Customer Conversations with the Power of Voice AI
           </h3>
           <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
             Deploy Conversational <br /> Voice AI Agents

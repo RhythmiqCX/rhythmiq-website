@@ -19,10 +19,9 @@ export default function CallToAction() {
         </h2>
 
         {/* Content */}
-        <p className="text-gray-200 mb-8 text-base sm:text-lg lg:text-xl max-w-2xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Rerum blanditiis molestiae quisquam perferendis, 
-          alias voluptatum quos accusantium ullam doloribus illum.
+        <p className="text-centertext-gray-200 mb-8 text-base sm:text-lg lg:text-xl max-w-2xl">
+           From automating routine calls to empowering live agents,
+           Rhythmiq ensures seamless, 24/7 support that keeps your business in perfect rhythm with your customers.
         </p>
 
         {/* CTA Button */}
