@@ -8,14 +8,14 @@ import CircularGallery from "../../../components/marketing/CircularGallery";
 // Improved copy object
 
 const voiceAIItems = [
-  { image: "/images/cg8.jpg", text: "AI CPU" },
-  { image: "/images/cg1'.jpg", text: "Smart Conversations" },
-  { image: "/images/cg2.jpg", text: "AI Voice Technology" },
-  { image: "/images/cg3.jpg", text: "Server" },
-  { image: "/images/cg4.jpg", text: "Ai GPU" },
-  { image: "/images/cg5.jpg", text: "Pekka 2.0" },
-  { image: "/images/cg6.jpg", text: "Ai Pekka" },
-  { image: "/images/cg7.jpg", text: "Bumble" },
+  { image: "/images/vo1.webp", text: "Chat Bot" },
+  { image: "/images/vo2.svg", text: "Smart Conversations" },
+  { image: "/images/vo9.jpg", text: "AI Voice Technology" },
+  { image: "/images/vo4.webp", text: "Server" },
+  { image: "/images/vo5.webp", text: "Ai GPU" },
+  { image: "/images/vo7.webp", text: "Vocie Setting" },
+  { image: "/images/vo9.jpg", text: "AI Voice Call" },
+  { image: "/images/vo8.webp", text: "Coversation" },
 ];
 const featuresObject = [
   {
