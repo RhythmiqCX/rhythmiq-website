@@ -20,8 +20,8 @@ export default function CallToAction() {
 
         {/* Content */}
         <p className="text-centertext-gray-200 mb-8 text-base sm:text-lg lg:text-xl max-w-2xl">
-          At RhythmicX, we’re redefining customer engagement with cutting-edge Voice AI. Our conversational agents deliver real-time, human-like interactions that enhance every customer touchpoint. From automating routine calls to empowering live agents,
-           RhythmicX ensures seamless, 24/7 support that keeps your business in perfect rhythm with your customers.
+           From automating routine calls to empowering live agents,
+           Rhythmiq ensures seamless, 24/7 support that keeps your business in perfect rhythm with your customers.
         </p>
 
         {/* CTA Button */}

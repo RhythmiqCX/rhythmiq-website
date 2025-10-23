@@ -8,14 +8,14 @@ import CircularGallery from "../../../components/marketing/CircularGallery";
 // Improved copy object
 
 const voiceAIItems = [
-  { image: "/images/vo1.webp", text: "Chat Bot" },
-  { image: "/images/vo2.svg", text: "Smart Conversations" },
-  { image: "/images/vo9.jpg", text: "AI Voice Technology" },
-  { image: "/images/vo4.webp", text: "Server" },
-  { image: "/images/vo5.webp", text: "Ai GPU" },
-  { image: "/images/vo7.webp", text: "Vocie Setting" },
-  { image: "/images/vo9.jpg", text: "AI Voice Call" },
-  { image: "/images/vo8.webp", text: "Coversation" },
+  { image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm1kc3F1ZmZqNjN1ZjJndGo5NGYxdHA0aXEzM2NxZm9icjJyaTdndiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MbMBoPpI3MS44vkUTS/giphy.gif", text: "Voice Cloning" },
+  { image: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTM1djg2b3Zja2NqeW93aDJvNW1obmw4djBrcnBlam01eTdmajdzcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MeQ0kQLyqWL5XOsNf7/giphy.gif", text: "Neural TTS" },
+  { image: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXp1Z2dxemRuZTV5M3hnbzRldm96ZDZnNDdjYTQ0eGJ5bXgzYzN0NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LQv4IGmdZAF7TmMJEa/giphy.gif", text: "Real-time Synthesis" },
+  { image: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHhsM2dxNm14ZnM4bXN6aHg3ejNlMDZ6M2tjdDJ6YXRjcmVpZnp4aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ToMjGpDvCkRu9lHREUE/giphy.gif", text: "API Integration" },
+  { image: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTl3YWVxN2ZwbWdzcnZweHhmYWFrYWE2MHZ2OHhwYXE3NXc1b3ZsZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fsnTLgZFfWgHmxqQTk/giphy.gif", text: "GPU Acceleration" },
+  { image: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzZ4cGFuMzR6dmd2eHF2dmpzeDVoMWswN2hsZGRoYjRueWphNjMzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b0HYKHINjL32qEsoJt/giphy.gif", text: "Customization" },
+  { image: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXM4dTZjNXFrZzh5dXIyYmwwdGptNWlzYmVhZTV0c3RrbTAzaXVqaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/StcrDoMb4eSXn80J0J/giphy.gif", text: "Voice Calls" },
+  { image: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcno2eGR6N2NxN2oxNXN6dmV6bXpldG4wYWc5YTBpeHd3OWtmNjNleSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT1Ra12a03lcpJf5C0/giphy.gif", text: "Conversation AI" },
 ];
 const featuresObject = [
   {
