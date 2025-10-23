@@ -68,7 +68,7 @@ export default function SyntheticRealitiesPage() {
       sections={SECTIONS}
       relatedArticles={RELATED}
     >
-      <section id="intro" className="mt-16">
+      <section id="intro" className="mt-16 scroll-mt-20">
         <h1>Synthetic Realities: When AI Rewrites Memory and Imagination</h1>
         <p>
           AI is already remixing our past and inventing
