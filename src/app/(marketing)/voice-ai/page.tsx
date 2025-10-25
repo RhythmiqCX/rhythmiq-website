@@ -4,7 +4,6 @@ import CallToAction from "./CallToAction";
 import VoiceChatDemo from "./VoiceChatDemo";
 // import VoiceAICustomerSupport from "./Features";
 import VoiceAIFeatures from "../../../components/marketing/VoiceAIFeatures";
-import CircularGallery from "../../../components/marketing/CircularGallery";
 // Improved copy object
 
 const voiceAIItems = [
@@ -55,9 +54,9 @@ const VoiceAIApp = () => {
       >
         <VoiceChatDemo />
         
-        <div style={{ height: '600px', position: 'relative' }}>
+        {/* <div style={{ height: '600px', position: 'relative' }}>
           <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} items={voiceAIItems}/>
-        </div>
+        </div> */}
       
         <VoiceAIFeatures section2= {true} section1Content={featuresObject[0].section1Content} section1Heading={featuresObject[0].section1Heading} section1Subheading={featuresObject[0].section1Subheading} section2Content={featuresObject[1].section1Content} section2Heading={featuresObject[1].section1Heading} section2Subheading={featuresObject[1].section1Subheading} imageUrl1="images/mic_3.gif" imageUrl2="images/ai-voice-unscreen.gif"/>
         <VoiceAIFeatures section1Content={featuresObject[2].section1Content} section1Heading={featuresObject[2].section1Heading} section1Subheading={featuresObject[2].section1Subheading} imageUrl1="images/thirdimg1-unscreen.gif"/>
