@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata = generateMetadata({
   title: "Synthetic Realities: When AI Rewrites Memory and Imagination",
   description:
-    "A passionate, personal take on how AI is reshaping memory, creativity, and truth itself — and why it’s both beautiful and terrifying. From the team at RhythmiqCX.",
+    "A passionate, personal take on how AI is reshaping memory, creativity, and truth itself and why it’s both beautiful and terrifying. From the team at RhythmiqCX.",
   alternates: {
     canonical: "/blog/synthetic-realities-ai-rewrites-memory",
   },
@@ -56,7 +56,7 @@ export default function SyntheticRealitiesPage() {
   return (
     <BlogLayout
       category={{ href: "/blog/category/General", label: "General" }}
-      date="2025-10-23"
+      date="2025-10-26"
       title="Synthetic Realities: When AI Rewrites Memory and Imagination"
       excerpt="AI is remixing our past and imagining futures blurring the line between nostalgia and invention. Here’s a personal take on what that means for our memories, stories, and selves."
       authors={[{ avatar: "/icons/PV8.png", name: "PV8" }]}
