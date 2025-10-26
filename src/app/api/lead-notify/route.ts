@@ -45,9 +45,9 @@ export async function POST(request: Request) {
       </div>
     `;
 
-    const notificationEmail = process.env.LEAD_NOTIFICATION_EMAIL;
+    const notificationEmails = process.env.LEAD_NOTIFICATION_EMAIL;
     
-    if (!notificationEmail) {
+    if (!notificationEmails) {
       console.error('LEAD_NOTIFICATION_EMAIL is not configured');
       return NextResponse.json(
         { error: 'Email notification is not configured' },
@@ -55,9 +55,12 @@ export async function POST(request: Request) {
       );
     }
 
+    // Parse multiple emails (comma-separated)
+    const emailArray = notificationEmails.split(',').map(email => email.trim());
+
     await resend.emails.send({
       from: 'Rhythmiq Lead Notification <onboarding@resend.dev>', // Use Resend's test domain for now
-      to: notificationEmail,
+      to: emailArray, // Send to all emails
       subject: `🎯 New Lead: ${name} - Rhythmiq Website`,
       html: emailBody,
       replyTo: email, // Replies go to the lead's email
