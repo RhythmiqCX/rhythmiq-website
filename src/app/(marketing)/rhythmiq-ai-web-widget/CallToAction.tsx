@@ -22,8 +22,7 @@ export default function CallToAction() {
          <p className="text-gray-200 mb-8 text-base sm:text-lg lg:text-xl max-w-2xl">
           Step into the next era of customer engagement with Voice AI technology designed to
            transform how businesses communicate. Our advanced conversational agents deliver
-            real-time, intelligent, and natural interactions that not only resolve customer
-             queries but also build lasting relationships. Whether it’s automating routine calls or assisting live agents, our system ensures seamless, round-the-clock support — so your business never misses a moment to connect, impress, and grow
+            real-time, intelligent, and natural interactions.
         </p> 
 
         {/* CTA Button */}
