@@ -61,18 +61,15 @@ recognition.onresult = async (event: any) => {
 
   setIsProcessing(true);
 
-  const response = await fetch("/api/voice-llm", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ prompt: transcript }),
-});
-const data = await response.json();
-console.log(data.reply)
-setMessages((prev) => [
-  ...prev,
-  { id: Date.now(), type: "ai", text: data.reply, timestamp: new Date() },
-]);
-setIsProcessing(false);
+  // Simulate AI processing with a simple response
+  setTimeout(() => {
+    const aiResponse = "Thank you for your message! This is a demo voice AI assistant. To enable full functionality, please configure your AI service.";
+    setMessages((prev) => [
+      ...prev,
+      { id: Date.now(), type: "ai", text: aiResponse, timestamp: new Date() },
+    ]);
+    setIsProcessing(false);
+  }, 1000);
 };
 
     recognitionRef.current = recognition;
