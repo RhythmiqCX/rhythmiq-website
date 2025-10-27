@@ -12,7 +12,7 @@ export const metadata = generateMetadata({
   openGraph: {
     images: ["/images/blog/27-10.jpg"],
     type: "article",
-    publishedTime: "2025-10-26",
+    publishedTime: "2025-10-27",
     authors: ["PV8"],
   },
 });
@@ -57,7 +57,7 @@ export default function GamifyingConversationsPage() {
   return (
     <BlogLayout
       category={{ href: "/blog/category/Tech", label: "Tech" }}
-      date="2025-10-26"
+      date="2025-10-27"
       title="Gamifying Conversations: Making AI Chats More Human and Fun"
       excerpt="What if AI chats were as fun as games? Discover how RhythmiqCX is turning support into play blending empathy, humor, and gamification into every conversation."
       authors={[{ avatar: "/icons/PV8.png", name: "PV8" }]}
