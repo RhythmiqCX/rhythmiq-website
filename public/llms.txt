@@ -240,3 +240,9 @@ https://rhythmiqcx.com/blog/gamification-conversations
 summary: What if talking to your support bot felt as fun as playing a game? Explore how RhythmiqCX is turning AI chat into playful, human-like experiences—blending empathy, humor and gamification into customer conversations.
 tags: gamified AI, conversational AI gaming, AI chatbots fun UX, human-AI interaction, support bots gamification, customer engagement AI, playful chatbot design, brand loyalty AI, chatbot easter eggs, AI user experience
 updated: 27-10-2025
+
+#From Workflows to Worlds: Building Persistent AI Customer Journeys
+https://rhythmiqcx.com/blog/ai-customer-journeys
+summary: Memory-driven AI that actually remembers — not just logs. A passionate, personal take on turning linear workflows into living customer worlds where every conversation is contextual, personal, and human. Learn why memory is the next UX moat and how RhythmiqCX builds ethical, sticky journeys that customers love.
+tags: memory-driven AI, persistent customer journeys, conversational AI, contextual support, customer memory, AI ethics, human-in-the-loop, customer experience AI, personalized support, rhythmiqcx
+updated: 29-10-2025
