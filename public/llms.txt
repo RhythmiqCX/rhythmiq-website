@@ -246,3 +246,9 @@ https://rhythmiqcx.com/blog/ai-customer-journeys
 summary: Memory-driven AI that actually remembers — not just logs. A passionate, personal take on turning linear workflows into living customer worlds where every conversation is contextual, personal, and human. Learn why memory is the next UX moat and how RhythmiqCX builds ethical, sticky journeys that customers love.
 tags: memory-driven AI, persistent customer journeys, conversational AI, contextual support, customer memory, AI ethics, human-in-the-loop, customer experience AI, personalized support, rhythmiqcx
 updated: 29-10-2025
+
+#Beyond Chatbots: Building Brand Identity Through AI Conversations
+https://rhythmiqcx.com/blog/beyond-chatbots
+summary: Forget cookie-cutter bots the new era of AI is about brand personality. From humor and tone to microcopy and empathy, discover how brands are using conversational AI to build emotional resonance, not just resolve tickets. A bold, personal take on how voice, style, and wit are becoming the ultimate branding battlegrounds in automation — with stories from RhythmiqCX.
+tags: conversational branding, AI personality, tone in AI, brand voice automation, AI microcopy, emotional AI, chatbot design, customer experience AI, AI humor, rhythmiqcx
+updated: 31-10-2025
