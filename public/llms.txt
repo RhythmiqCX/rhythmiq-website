@@ -263,4 +263,4 @@ updated: 02-11-2025
 https://rhythmiqcx.com/blog/infinite-feedback-loop
 summary: When AI starts training on its own data, things get weird. A deep, human take on the dangers of recursive AI learning, synthetic bias, and why human-in-the-loop systems are the only way to keep automation honest. Featuring insights from RhythmiqCX’s work in memory-driven conversational design.
 tags: AI feedback loops, recursive AI learning, synthetic data, semantic drift, human-in-the-loop, AI ethics, self-learning AI, conversational AI, RhythmiqCX, predictive AI
-updated: 04-11-2025
+updated: 05-11-2025

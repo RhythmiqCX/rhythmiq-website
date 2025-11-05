@@ -10,9 +10,9 @@ export const metadata = generateMetadata({
     canonical: "/blog/infinite-feedback-loop",
   },
   openGraph: {
-    images: ["/images/blog/4-11.jpg"],
+    images: ["/images/blog/5-11.jpg"],
     type: "article",
-    publishedTime: "2025-11-04",
+    publishedTime: "2025-11-05",
     authors: ["PV8"],
   },
 });
@@ -56,13 +56,13 @@ export default function InfiniteFeedbackLoopPage() {
   return (
     <BlogLayout
       category={{ href: "/blog/category/Tech", label: "Tech" }}
-      date="2025-11-04"
+      date="2025-11-05"
       title="The Infinite Feedback Loop: How AI Learns From Its Own Conversations"
       excerpt="When AI starts learning from itself, the results get strange. Here’s how self-reinforcing AI systems shape the future of customer interactions and what we can do to keep them human."
       authors={[{ avatar: "/icons/PV8.png", name: "PV8" }]}
       readingTime={12}
       heroImage={{
-        src: "/images/blog/4-11.jpg",
+        src: "/images/blog/5-11.jpg",
         alt: "AI feedback loop illustration",
       }}
       sections={SECTIONS}
