@@ -14,6 +14,10 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    // Access environment variables at build time
+    const reb2bKey = process.env.REB2B_KEY || '';
+    const rhythmiqWidgetToken = process.env.RHYTHMIQ_WIDGET_TOKEN || '';
+
     return (
         <html lang="en" suppressHydrationWarning>
             <body
@@ -28,10 +32,10 @@ export default function RootLayout({
                     {children}
                     <Analytics />
                     <SpeedInsights />
-                    {/* <script
-                        // eslint-disable-next-line react/no-danger
-                        dangerouslySetInnerHTML={{
-                            __html: `
+                    {/* Example Chatwoot integration - tokens removed for security
+                        <script
+                            dangerouslySetInnerHTML={{
+                                __html: `
                             (function(d,t) {
                                 var BASE_URL="https://app.chatwoot.com";
                                 var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
@@ -41,55 +45,61 @@ export default function RootLayout({
                                 s.parentNode.insertBefore(g,s);
                                 g.onload=function(){
                                 window.chatwootSDK.run({
-                                    websiteToken: '6YoNKAezEsHJmjR3MeeLcoeM',
+                                    websiteToken: process.env.NEXT_PUBLIC_CHATWOOT_TOKEN,
                                     baseUrl: BASE_URL
                                 })
                                 }
                             })(document,"script");
                             `,
-                        }}
-                        /> */}
-                        {/* <script
-                            // eslint-disable-next-line react/no-danger
-                            dangerouslySetInnerHTML={{
-                                __html: `
-                            (function(d,t){
-                            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                            g.src="http://localhost:8080/widget-loader.js?websiteToken=ovjh2mJC6MdroZcbph_FYWGm";
-                            g.defer=true;g.async=true;
-                            s.parentNode.insertBefore(g,s);
-                            })(document,"script");
-                            `,
-                            }}
-                        /> */}
-                        <script
-                            // eslint-disable-next-line react/no-danger
-                            dangerouslySetInnerHTML={{
-                                __html: `
-                                !function(key) {
-                                    if (window.reb2b) return;
-                                    window.reb2b = {loaded: true};
-                                    var s = document.createElement("script");
-                                    s.async = true;
-                                    s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";
-                                    document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);
-                                }("Q6J2RHY01E6D");
-                                `
                             }}
                         />
+                        */}
+                        {/* Example widget loader - tokens removed for security
                         <script
-                            // eslint-disable-next-line react/no-danger
                             dangerouslySetInnerHTML={{
                                 __html: `
                             (function(d,t){
                             var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                            g.src="https://app.rhythmiqcx.com/widget/widget-loader.js?websiteToken=gAmsNFfQrRXfkFwvpQ9ET4o-";
+                            g.src="http://localhost:8080/widget-loader.js?websiteToken="+process.env.NEXT_PUBLIC_WIDGET_TOKEN;
                             g.defer=true;g.async=true;
                             s.parentNode.insertBefore(g,s);
                             })(document,"script");
                             `,
                             }}
                         />
+                        */}
+                        {reb2bKey && (
+                            <script
+                                // eslint-disable-next-line react/no-danger
+                                dangerouslySetInnerHTML={{
+                                    __html: `
+                                    !function(key) {
+                                        if (window.reb2b) return;
+                                        window.reb2b = {loaded: true};
+                                        var s = document.createElement("script");
+                                        s.async = true;
+                                        s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";
+                                        document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);
+                                    }("${reb2bKey}");
+                                    `
+                                }}
+                            />
+                        )}
+                        {rhythmiqWidgetToken && (
+                            <script
+                                // eslint-disable-next-line react/no-danger
+                                dangerouslySetInnerHTML={{
+                                    __html: `
+                                (function(d,t){
+                                var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                                g.src="https://app.rhythmiqcx.com/widget/widget-loader.js?websiteToken=${rhythmiqWidgetToken}";
+                                g.defer=true;g.async=true;
+                                s.parentNode.insertBefore(g,s);
+                                })(document,"script");
+                                `,
+                                }}
+                            />
+                        )}
                         
             </body>
         </html>
