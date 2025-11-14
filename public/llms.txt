@@ -282,3 +282,9 @@ https://rhythmiqcx.com/blog/breaking-the-script
 Summary:A bold, human-first take on how customer service is moving beyond bots reading from scripts — the next wave of AI-powered CX will feel like a barista conversation, not a hotline monologue. Learn how unscripted AI can build trust, where rule-following falls short, and how to design systems that improvise responsibly.
 Tags:RhythmiqCX, unscripted AI, conversational AI, CX automation, human-centered AI, AI empathy, memory-driven support, AI improvisation, brand voice, customer experience innovation, contextual automation, startup AI, AI ethics, customer trust
 Updated: 12-11-2025
+
+#AI Ghostwriting Scandals: Are the Internet’s Top Influencers Even Real Anymore?
+https://rhythmiqcx.com/blog/ai-ghostwriting
+Summary:A spicy, behind-the-scenes dive into the rise of AI ghostwriters secretly powering influencer content — and the uncomfortable question no one wants to ask: are we still following humans, or finely tuned digital personas? Explore how AI is reshaping authenticity, why creators are outsourcing their voice to models, and what synthetic celebrity means for trust, culture, and the future of online influence.
+Tags:AI ghostwriting, synthetic influencers, creator economy, LLM personas, RhythmiqCX, AI ethics, digital authenticity, influencer automation, synthetic celebrity, AI identity, content automation, brand voice, social media AI, AI trust, future of content
+Updated: 14-11-2025
