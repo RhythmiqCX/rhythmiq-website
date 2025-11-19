@@ -46,7 +46,7 @@ const RELATED = [
   },
   {
     title: "The Dark Side of Smart Agents: When Your AI Starts Arguing With You",
-    href: "/blog/dark-side-of-smart-agents",
+    href: "/blog/dark-side-ai-chatbot",
     imageSrc: "/images/blog/17-11-25.jpg",
     date: "November 17, 2025",
     description:
