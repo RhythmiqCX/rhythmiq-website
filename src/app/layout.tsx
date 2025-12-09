@@ -27,7 +27,8 @@ export default function RootLayout({
                     heading.variable,
                     subheading.variable,
                 )}
-            >                        
+            >                
+                    
                     <Toaster richColors theme="dark" position="top-right" />
                     {children}
                     <Analytics />
