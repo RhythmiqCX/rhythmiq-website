@@ -1,11 +1,8 @@
-"use client"; // 👈 Required because you’re using hooks
+"use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 const VoiceChatDemo = () => {
   const [muted, setMuted] = useState(false);
-  const startListening = () => recognitionRef.current?.start();
-  const stopListening = () => recognitionRef.current?.stop();
-
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -14,66 +11,307 @@ const VoiceChatDemo = () => {
       timestamp: new Date(Date.now() - 120000),
     },
   ]);
-  // const [isListening, setIsListening] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [showScrollDown, setShowScrollDown] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const messagesContainerRef = useRef<HTMLDivElement | null>(null);
-  const recognitionRef = useRef<any>(null);
-  const [transcript, setTranscript] = useState("");
+
   const [isListening, setIsListening] = useState(false);
 
-  useEffect(() => {
-    // Initialize SpeechRecognition
-    const SpeechRecognition =
-      (window as any).SpeechRecognition ||
-      (window as any).webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      alert("Your browser does not support speech recognition.");
-      return;
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const messagesContainerRef = useRef<HTMLDivElement | null>(null);
+
+  // MediaRecorder Refs
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
+
+  // Silence Detection Refs
+  const audioContextRef = useRef<AudioContext | null>(null);
+  const analyserRef = useRef<AnalyserNode | null>(null);
+  const silenceTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const animationFrameRef = useRef<number | null>(null);
+  const shouldAutoRestartRef = useRef(false);
+
+  const stopListening = useCallback(() => {
+    // Stop Recorder
+    if (
+      mediaRecorderRef.current &&
+      mediaRecorderRef.current.state === "recording"
+    ) {
+      mediaRecorderRef.current.stop();
     }
 
-    const recognition = new SpeechRecognition();
-    recognition.continuous = false; // stop after silence
-    recognition.interimResults = false; // only final result
-    recognition.lang = "en-US";
+    // Stop Audio Context/Analysis
+    if (audioContextRef.current) {
+      audioContextRef.current.close().catch(() => {});
+      audioContextRef.current = null;
+    }
+    if (animationFrameRef.current) {
+      cancelAnimationFrame(animationFrameRef.current);
+      animationFrameRef.current = null;
+    }
+    if (silenceTimerRef.current) {
+      clearTimeout(silenceTimerRef.current);
+      silenceTimerRef.current = null;
+    }
 
-    recognition.onstart = () => setIsListening(true);
-    recognition.onend = () => setIsListening(false);
-    recognition.onerror = (e: any) => {
-      console.error("Speech recognition error", e);
-      setIsListening(false);
-    };
-
-recognition.onresult = async (event: any) => {
-  const text = event.results[0][0].transcript;
-  setTranscript(text);
-  console.log("Transcribed:", text);
-
-  // ✅ Add the user's voice as a permanent chat message
-  const userMessage = {
-    id: Date.now(),
-    type: "user",
-    text,
-    timestamp: new Date(),
-  };
-  setMessages((prev) => [...prev, userMessage]);
-
-  setIsProcessing(true);
-
-  // Simulate AI processing with a simple response
-  setTimeout(() => {
-    const aiResponse = "Thank you for your message! This is a demo voice AI assistant. To enable full functionality, please configure your AI service.";
-    setMessages((prev) => [
-      ...prev,
-      { id: Date.now(), type: "ai", text: aiResponse, timestamp: new Date() },
-    ]);
-    setIsProcessing(false);
-  }, 1000);
-};
-
-    recognitionRef.current = recognition;
+    setIsListening(false);
   }, []);
+
+  const getChatCompletion = useCallback(async (userText: string) => {
+    const response = await fetch("/api/sarvam-proxy?type=chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: "sarvam-m",
+        messages: [
+          {
+            role: "system",
+            content:
+              "You are a helpful and friendly voice AI assistant for Rhythmiqcx. Rhythmiqcx is an AI CX platform that transforms how companies interact with customers. We leverage AI to automate support queries, create personalized AI agents, and boost productivity, ensuring seamless, 24/7 support. Keep your responses concise and conversational.",
+          },
+          { role: "user", content: userText },
+        ],
+        max_tokens: 150,
+      }),
+    });
+
+    if (!response.ok) throw new Error("Chat Completion failed");
+    const data = await response.json();
+    return data.choices[0]?.message?.content || "I didn't catch that.";
+  }, []);
+
+  const getTextToSpeech = useCallback(async (text: string) => {
+    const response = await fetch("/api/sarvam-proxy?type=text-to-speech", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: text,
+        target_language_code: "en-IN",
+        speaker: "anushka",
+        pitch: 0,
+        pace: 1.0,
+        loudness: 1.5,
+        speech_sample_rate: 24000,
+        enable_preprocessing: true,
+        model: "bulbul:v2",
+      }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("TTS API Error Body:", errorText);
+      throw new Error(`TTS failed: ${errorText}`);
+    }
+    const data = await response.json();
+    return data.audios?.[0]; // Assuming base64 string in audios array
+  }, []);
+
+  const playAudioResponse = useCallback((base64Audio: string) => {
+    return new Promise<void>((resolve) => {
+      const audio = new Audio(`data:audio/wav;base64,${base64Audio}`);
+      audio.onended = () => resolve();
+      audio.play().catch((e) => {
+        console.error("Audio playback error", e);
+        resolve(); // Resolve anyway to continue flow
+      });
+    });
+  }, []);
+
+  const processAudio = useCallback(
+    async (audioBlob: Blob) => {
+      setIsProcessing(true);
+
+      try {
+        // 1. STT
+        const formData = new FormData();
+        formData.append("file", audioBlob, "recording.webm");
+        formData.append("model", "saarika:v2.5");
+
+        const sttResponse = await fetch(
+          "/api/sarvam-proxy?type=speech-to-text",
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
+
+        if (!sttResponse.ok)
+          throw new Error(`STT API Error: ${sttResponse.statusText}`);
+
+        const sttData = await sttResponse.json();
+        const userText = sttData.transcript;
+
+        if (!userText || !userText.trim()) {
+          setIsProcessing(false);
+          if (shouldAutoRestartRef.current) {
+            startListeningRef.current();
+          }
+          return;
+        }
+
+        // Check for exit commands
+        const lowerText = userText.toLowerCase();
+        const isConversationEnd =
+          lowerText.includes("bye") ||
+          lowerText.includes("goodbye") ||
+          lowerText.includes("exit");
+        if (isConversationEnd) {
+          shouldAutoRestartRef.current = false;
+        }
+
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: Date.now(),
+            type: "user",
+            text: userText,
+            timestamp: new Date(),
+          },
+        ]);
+
+        // 2. Chat Completion
+        const aiText = await getChatCompletion(userText);
+
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: Date.now() + 1,
+            type: "ai",
+            text: aiText,
+            timestamp: new Date(),
+          },
+        ]);
+
+        // 3. TTS
+        if (!muted) {
+          try {
+            const audioBase64 = await getTextToSpeech(aiText);
+            if (audioBase64) {
+              await playAudioResponse(audioBase64);
+            }
+          } catch (ttsError) {
+            console.error("TTS Error:", ttsError);
+          }
+        }
+      } catch (error) {
+        console.error("Processing failed", error);
+        // Optional: Add error message to chat
+      } finally {
+        setIsProcessing(false);
+        if (shouldAutoRestartRef.current) {
+          startListeningRef.current();
+        }
+      }
+    },
+    [getChatCompletion, getTextToSpeech, playAudioResponse, muted]
+  );
+
+  const startListening = useCallback(async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mediaRecorder = new MediaRecorder(stream);
+      mediaRecorderRef.current = mediaRecorder;
+      audioChunksRef.current = [];
+
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          audioChunksRef.current.push(event.data);
+        }
+      };
+
+      mediaRecorder.onstop = () => {
+        const audioBlob = new Blob(audioChunksRef.current, {
+          type: "audio/webm",
+        });
+        processAudio(audioBlob);
+
+        // Cleanup tracks
+        stream.getTracks().forEach((track) => track.stop());
+      };
+
+      mediaRecorder.start();
+      setIsListening(true);
+
+      // --- Silence Detection Setup ---
+      const AudioContextClass =
+        window.AudioContext || (window as any).webkitAudioContext;
+      const audioCtx = new AudioContextClass();
+      audioContextRef.current = audioCtx;
+
+      const analyser = audioCtx.createAnalyser();
+      analyser.fftSize = 256;
+      analyserRef.current = analyser;
+
+      const source = audioCtx.createMediaStreamSource(stream);
+      source.connect(analyser);
+
+      const bufferLength = analyser.frequencyBinCount;
+      const dataArray = new Uint8Array(bufferLength);
+
+      let silenceStart = Date.now();
+      const SILENCE_THRESHOLD = 20; // 0-255. Adjust sensitivity.
+      const MAX_SILENCE_DURATION = 2000; // 2 seconds
+
+      const checkSilence = () => {
+        if (!analyserRef.current) return; // Use analyserRef.current directly
+
+        analyserRef.current.getByteFrequencyData(dataArray); // Use analyserRef.current
+
+        // Calculate average volume
+        let sum = 0;
+        for (let i = 0; i < bufferLength; i++) {
+          sum += dataArray[i];
+        }
+        const average = sum / bufferLength;
+
+        if (average > SILENCE_THRESHOLD) {
+          // Speech detected, reset timer
+          silenceStart = Date.now();
+        } else {
+          // Silence
+          if (Date.now() - silenceStart > MAX_SILENCE_DURATION) {
+            // Silence limit reached
+            stopListening();
+            return; // Stop loop
+          }
+        }
+
+        animationFrameRef.current = requestAnimationFrame(checkSilence);
+      };
+
+      // Start loop
+      checkSilence();
+    } catch (err) {
+      console.error("Failed to start recording", err);
+      alert("Could not access microphone.");
+      setIsListening(false);
+      shouldAutoRestartRef.current = false;
+    }
+  }, [processAudio, stopListening]); // Dependencies: processAudio, stopListening
+
+  // use refs to access latest functions without triggering re-renders or circular dependencies
+  const stopListeningRef = useRef(stopListening);
+  const startListeningRef = useRef(startListening);
+  const processAudioRef = useRef(processAudio);
+
+  useEffect(() => {
+    stopListeningRef.current = stopListening;
+    startListeningRef.current = startListening;
+    processAudioRef.current = processAudio;
+  }, [stopListening, startListening, processAudio]);
+
+  const handleVoiceInput = () => {
+    if (isProcessing) return;
+
+    if (isListening) {
+      // Manual stop: User wants to stop loop
+      shouldAutoRestartRef.current = false;
+      stopListening();
+    } else {
+      // Manual start: User wants to start loop
+      shouldAutoRestartRef.current = true;
+      startListening();
+    }
+  };
 
   const scrollToBottom = () => {
     messagesContainerRef.current?.scrollTo({
@@ -82,14 +320,14 @@ recognition.onresult = async (event: any) => {
     });
   };
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (messagesContainerRef.current) {
       const { scrollTop, scrollHeight, clientHeight } =
         messagesContainerRef.current;
       const isNearBottom = scrollHeight - scrollTop - clientHeight < 50;
       setShowScrollDown(!isNearBottom && messages.length > 2);
     }
-  };
+  }, [messages.length]);
 
   useEffect(() => {
     scrollToBottom();
@@ -101,12 +339,15 @@ recognition.onresult = async (event: any) => {
       container.addEventListener("scroll", handleScroll);
       return () => container.removeEventListener("scroll", handleScroll);
     }
-  }, [messages.length]);
+  }, [handleScroll]);
 
-  const handleVoiceInput = () => {
-    if (isListening || isProcessing) return;
-    recognitionRef.current?.start();
-  };
+  useEffect(() => {
+    const container = messagesContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+      return () => container.removeEventListener("scroll", handleScroll);
+    }
+  }, [handleScroll]);
 
   const formatTime = (timestamp: Date) => {
     return new Date(timestamp).toLocaleTimeString("en-US", {
@@ -124,8 +365,8 @@ recognition.onresult = async (event: any) => {
             Voice AI Demo
           </h2>
           <p className="text-sm sm:text-base text-gray-300 px-2">
-            Experience natural conversations with our advanced voice AI
-            assistant
+            Experience conversations with our advanced voice AI assistant. Tap
+            to record, tap again to send.
           </p>
         </div>
 
@@ -179,34 +420,27 @@ recognition.onresult = async (event: any) => {
             ))}
 
             {(isListening || isProcessing) && (
-  <div className="flex justify-start animate-fade-in">
-    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 sm:px-6 py-3 sm:py-4 shadow-lg w-fit max-w-[80%]">
-      <div className="flex items-center space-x-3 mb-2">
-        <div className="flex space-x-1">
-          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
-          <div
-            className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"
-            style={{ animationDelay: "0.1s" }}
-          ></div>
-          <div
-            className="w-2 h-2 bg-purple-400 rounded-full animate-bounce"
-            style={{ animationDelay: "0.2s" }}
-          ></div>
-        </div>
-        <span className="text-sm text-gray-300">
-          {isListening ? "Listening..." : ""}
-        </span>
-      </div>
-
-      {/* 🎤 Live transcript preview */}
-      {transcript && (
-        <p className="text-white text-sm italic leading-relaxed">
-          Responding...
-        </p>
-      )}
-    </div>
-  </div>
-)}
+              <div className="flex justify-start animate-fade-in">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 sm:px-6 py-3 sm:py-4 shadow-lg w-fit max-w-[80%]">
+                  <div className="flex items-center space-x-3 mb-2">
+                    <div className="flex space-x-1">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
+                      <div
+                        className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"
+                        style={{ animationDelay: "0.1s" }}
+                      ></div>
+                      <div
+                        className="w-2 h-2 bg-purple-400 rounded-full animate-bounce"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
+                    </div>
+                    <span className="text-sm text-gray-300">
+                      {isListening ? "Listening..." : "Processing..."}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )}
 
             <div ref={messagesEndRef} />
 
@@ -239,7 +473,7 @@ recognition.onresult = async (event: any) => {
               {/* Microphone Controls */}
               <button
                 onClick={handleVoiceInput}
-                disabled={isListening || isProcessing}
+                disabled={isProcessing}
                 className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-xl ${
                   isListening
                     ? "bg-red-500 hover:bg-red-600 animate-pulse"
@@ -271,12 +505,14 @@ recognition.onresult = async (event: any) => {
             <div className="text-center mt-1">
               <p className="text-sm sm:text-base text-white font-medium">
                 {isListening
-                  ? "Listening..."
+                  ? "Tap to Stop & Send"
                   : isProcessing
                   ? "Processing..."
-                  : "Tap to speak"}
+                  : "Tap to Speak"}
               </p>
-              <p className="text-xs text-gray-400">Hold to record your voice</p>
+              <p className="text-xs text-gray-400">
+                {isListening ? "Recording..." : "Start a new message"}
+              </p>
             </div>
 
             {/* Mute Button - smaller, bottom left */}
