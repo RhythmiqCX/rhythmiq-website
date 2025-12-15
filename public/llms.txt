@@ -371,3 +371,9 @@ Intent-driven AI can detect friction, infer meaning, and guide users at the exac
 Data is the “what.” Intent is the “why.” And the next era of AI belongs to systems that understand why users behave the way they do.
 Tags: intent-driven AI, AI meaning, product brain, decision-aware telemetry, friction detection, user intent modeling, screen-native intelligence, purposeful AI, micro decisions, predictive guidance, RhythmiqCX, AI evolution, understanding over data, next-gen AI UX, context-aware systems
 Updated: 12-12-2025
+
+#Chaos Engineering for AI Agents: Breaking Bots Before They Break You
+https://rhythmiqcx.com/blog/chaos-engineering
+Summary:A bold, story-driven exploration of why traditional chaos engineering fails in the age of AI agents — and why breaking bots intentionally is now a moral obligation, not an engineering luxury. This post argues that AI systems don’t fail like servers; they fail quietly, confidently, and emotionally, eroding user trust long before dashboards light up. Through real production scares, subtle timing failures, and uncomfortable behavioral breakdowns, it shows how AI agents misbehave under ambiguity rather than crash outright.
+Tags: chaos engineering for AI, AI agent reliability, AI failure modes, intent chaos, context-aware AI, timing intelligence, behavioral testing, silent failures, trust in AI systems, cognitive resilience, decision-driven AI, real-world AI testing, AI safety by design, RhythmiqCX, next-gen AI reliability
+Updated: 15-12-2025
