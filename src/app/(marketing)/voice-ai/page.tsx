@@ -94,7 +94,7 @@ const VoiceAIApp = () => {
           section2Heading={featuresObject[1].section1Heading}
           section2Subheading={featuresObject[1].section1Subheading}
           imageUrl1="images/mic_3.gif"
-          imageUrl2="images/ai-voice-unscreen.gif"
+          imageUrl2="images/ai-voice-1.gif"
         />
         <VoiceAIFeatures
           section1Content={featuresObject[2].section1Content}
