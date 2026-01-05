@@ -28,7 +28,7 @@ const SECTIONS = [
 const RELATED = [
   {
     title: "State Management in Voice AI Is a Nightmare",
-    href: "/blog/state-management-voice-ai",
+    href: "/blog/state-management-in-voice-ai",
     imageSrc: "/images/blog/2-1-26.jpg",
     date: "January 2, 2026",
     description:
@@ -161,7 +161,7 @@ export default function RealCostOfVoiceAI() {
 
         <p>
           This connects directly to{" "}
-          <Link href="/blog/state-management-voice-ai" className="text-blue-600">
+          <Link href="/blog/state-management-in-voice-ai" className="text-blue-600">
             State Management in Voice AI Is a Nightmare
           </Link>.
           Most failures don’t show up in logs as errors. They show up as
@@ -252,7 +252,7 @@ export default function RealCostOfVoiceAI() {
       </a>
 
       <Link
-        href="/product"
+        href="https://rhythmiqcx.com"
         className="inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-medium text-white hover:border-white hover:bg-white/5 transition"
       >
         Explore the product
