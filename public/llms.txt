@@ -70,10 +70,40 @@ summary: Conduit is a scalable, real time messaging  engiine built using opensou
 tags: Tech, open-source, customer support, development, whitepaper
 updated: 2025-08-28
 
+# What the Heck is an MCP Server, and Why Should You Care?
+https://rhythmiqcx.com/blog/what-the-heck-is-an-mcp-server/
+summary: A simple explainer on what MCP servers are, why they matter, and how they power modern tech.
+tags: Tech, MCP server, modern tech, technical explainer
+updated: 2025-07-15
+
+# AI in CRM: The Game-Changer Driving Higher ROI, CSAT, and Smarter Customer Experiences
+https://rhythmiqcx.com/blog/ai-in-crm/
+summary: Discover how AI in CRM transforms customer experience by killing data silos, boosting ROI, and skyrocketing CSAT.
+tags: AI in CRM, customer support, CRM automation, ROI, CSAT, customer experience
+updated: 2025-08-22
+
+# Can AI Chatbots Replace Customer Support Agents?
+https://rhythmiqcx.com/blog/will-ai-replace-humans-in-customer-support/
+summary: AI chatbots are transforming customer support but can they truly replace human empathy and problem-solving? This blog explores the future of AI in customer service.
+tags: AI chatbots, customer support, human agents, AI vs humans, customer service automation
+updated: 2025-08-23
+
+# Why "I Don't Know" Makes AI Chatbots More Trustworthy for Customer Support
+https://rhythmiqcx.com/blog/why-i-dont-know-makes-ai-chatbots-more-trustworthy/
+summary: Is AI becoming aware and what its implications are for customer support.
+tags: AI chatbots, customer support, AI ethics, trust in AI, AI awareness, conversational AI
+updated: 2025-08-25
+
 # Emotions in AI: Can Machines Truly Care in Customer Support?  
 https://rhythmiqcx.com/blog/emotions-in-ai-customer-support/  
-summary: Exploring whether AI can truly replicate human empathy in customer support, covering emotional intelligence, AI’s current abilities, its limitations, and the future of hybrid human-AI models.  
+summary: Exploring whether AI can truly replicate human empathy in customer support, covering emotional intelligence, AI's current abilities, its limitations, and the future of hybrid human-AI models.  
 tags: AI, customer support, empathy, emotional intelligence, future of work  
+updated: 2025-08-29
+
+# Emotions in AI: Can Machines Truly Care like Humans?
+https://rhythmiqcx.com/blog/does-ai-feel-emotions/
+summary: Discover the role of emotions in AI, its limitations, and why the future of customer service is a partnership between humans and machines.
+tags: AI, emotions, customer support, empathy, human-AI partnership, emotional intelligence
 updated: 2025-08-29 
 
 # Rise of AI Shopping Agents
@@ -129,6 +159,12 @@ updated: 2025-09-15
 https://rhythmiqcx.com/blog/ai-governance-ethics-safety-disinformation
 summary : Explore how multimodal AI combines text, images, audio & video to transform industries, with real-world use cases, risks, and future trends.
 tags : AI, multimodal ai, ai chatbot ,voice ai, image ai, video ai
+updated: 2025-09-17
+
+# Multimodal AI: How AI that Understands Images, Text, Audio & Video Is Changing Everything
+https://rhythmiqcx.com/blog/multimodal-ai-models/
+summary: Explore how multimodal AI combines text, images, audio & video to transform industries, with real-world use cases, risks, and future trends.
+tags: AI, multimodal AI, AI chatbot, voice AI, image AI, video AI, tech
 updated: 2025-09-17
 
 # Multimodal AI: Uses, Challenges & Future
@@ -213,9 +249,15 @@ updated: 15-10-2025
 
 # Will AI Take Our Jobs? A Realistic Look at the Future of Work
 https://rhythmiqcx.com/blog/will-ai-take-our-jobs
-summary: The question everyone’s secretly asking — will AI replace us or make us better? From startup floors to corporate boardrooms, we explore how automation is reshaping work, why fear spreads faster than facts, and how teams at RhythmiqCX turned AI anxiety into opportunity.
+summary: The question everyone's secretly asking — will AI replace us or make us better? From startup floors to corporate boardrooms, we explore how automation is reshaping work, why fear spreads faster than facts, and how teams at RhythmiqCX turned AI anxiety into opportunity.
 tags: future of work 2025, AI automation, job displacement, human-AI collaboration, AI workforce trends, AI productivity tools, reskilling for automation, AI job evolution, ethical AI employment, automation and empathy
 updated: 15-10-2025
+
+# Will AI Take Our Jobs? A Realistic and Passionate Look at the Future of Work
+https://rhythmiqcx.com/blog/ai-take-our-jobs/
+summary: A candid take on AI and the future of work. Will AI really replace humans? Or will it make our jobs better, smarter, and more human? Explore real startup lessons from RhythmiqCX.
+tags: AI automation, future of work, job displacement, human-AI collaboration, AI workforce, startup lessons, RhythmiqCX
+updated: 2025-10-16
 
 # New Era of AI Companions: Love & Loneliness
 https://rhythmiqcx.com/blog/ai-companions
