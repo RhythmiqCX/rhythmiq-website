@@ -12,4 +12,8 @@ export const NAV_LINKS = [
         name: "Contact",
         href: "/contact-us"
     },
+    {
+        name: "Tools",
+        href: "/tools"
+    }
 ];
