@@ -3,13 +3,12 @@ import Container from "@/components/global/container";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
-  Calculator,
-  BarChart3,
-  MessageSquare,
-  ShieldCheck,
   Repeat,
   Sparkles,
   Tag,
+  Image,
+  FileJson,
+  FileCode,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -46,17 +45,45 @@ const tools = [
     gradientFrom: "#8b5cf6",
     gradientTo: "#d946ef",
   },
+  {
+    title: "Favicon Generator",
+    description:
+      "Generate website favicons in all sizes instantly. Convert text or images to .ico and .png files for your web app.",
+    icon: Image,
+    href: "/tools/favicon-generator",
+    comingSoon: false,
+    gradientFrom: "#f59e0b",
+    gradientTo: "#d97706",
+  },
+  {
+    title: "JSON to XML Converter",
+    description:
+      "Convert JSON data into clean, well-structured XML instantly. No signup, no uploads, secure client-side conversion.",
+    icon: FileJson,
+    href: "/tools/json-to-xml-converter",
+    comingSoon: false,
+    gradientFrom: "#10b981",
+    gradientTo: "#0ea5e9",
+  },
+  {
+    title: "JSON to YAML Converter",
+    description:
+      "Convert JSON object to YAML format instantly. Clean, readable output for configuration files and more.",
+    icon: FileCode,
+    href: "/tools/json-to-yaml-converter",
+    comingSoon: false,
+    gradientFrom: "#ec4899",
+    gradientTo: "#8b5cf6",
+  },
 ];
 
 const ToolsPage = () => {
   return (
     <div className="relative w-full py-20 overflow-hidden">
-      {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-blue-500/20 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
 
       <Wrapper className="relative z-10">
         <Container className="flex flex-col gap-16">
-          {/* Hero Section */}
           <div className="flex flex-col items-center text-center gap-6 max-w-3xl mx-auto pt-10">
             <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary backdrop-blur-sm">
               <Sparkles className="mr-2 h-4 w-4" />
@@ -74,7 +101,6 @@ const ToolsPage = () => {
             </p>
           </div>
 
-          {/* Tools Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-4">
             {tools.map((tool, index) => (
               <Container
@@ -140,7 +166,6 @@ const ToolsPage = () => {
             ))}
           </div>
 
-          {/* Bottom CTA */}
           <Container delay={0.4} className="mt-12">
             <div className="relative rounded-3xl overflow-hidden border border-border/50 bg-card/30 backdrop-blur-sm p-8 md:p-16 text-center">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/5 pointer-events-none" />
