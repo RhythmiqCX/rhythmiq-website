@@ -9,6 +9,8 @@ import {
   Image,
   FileJson,
   FileCode,
+  FileText,
+  NotebookPen,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -25,6 +27,26 @@ export const metadata = generateMetadata({
 });
 
 const tools = [
+  {
+    title: "AI Document Generator",
+    description:
+      "Create professional SOPs, Proposals, and Legal Drafts instantly. Strictly structured templates with AI-powered expansion.",
+    icon: FileText,
+    href: "/tools/ai-document-generator",
+    comingSoon: false,
+    gradientFrom: "#6366f1",
+    gradientTo: "#a855f7",
+  },
+  {
+    title: "AI Notes Generator",
+    description:
+      "Convert raw text and transcripts into structured Cornell notes, outlines, and summaries for better retention.",
+    icon: NotebookPen,
+    href: "/tools/ai-notes-generator",
+    comingSoon: false,
+    gradientFrom: "#22c55e",
+    gradientTo: "#14b8a6",
+  },
   {
     title: "Meta Tag Generator",
     description:
