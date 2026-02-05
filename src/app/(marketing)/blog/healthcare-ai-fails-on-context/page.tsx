@@ -33,11 +33,11 @@ const RELATED = [
     imageSrc: "/images/blog/19-01-26.jpg",
     date: "January 19, 2026",
     description:
-      "Overconfidence isn’t intelligence. It’s a design flaw — and healthcare pays the price.",
+      "Overconfidence isn’t intelligence. It’s a design flaw and healthcare pays the price.",
   },
   {
     title: "The Hidden State Problem in Voice AI Conversations",
-    href: "/blog/hidden-state-problem-voice-ai",
+    href: "/blog/the-hidden-state-problem-voice-ai",
     imageSrc: "/images/blog/23-01-26.jpg",
     date: "January 23, 2026",
     description:
@@ -59,7 +59,7 @@ export default function HealthcareAIContextBlog() {
       category={{ href: "/blog/category/Tech", label: "Tech" }}
       date="2026-02-03"
       title="Healthcare AI Doesn’t Fail on Accuracy. It Fails on Context."
-      excerpt="Healthcare AI systems aren’t wrong — they’re forgetful. A raw, opinionated breakdown of why context, memory, and timing matter more than perfect answers."
+      excerpt="Healthcare AI systems aren’t wrong they’re forgetful. A raw, opinionated breakdown of why context, memory, and timing matter more than perfect answers."
       authors={[{ avatar: "/icons/PA.png", name: "PA" }]}
       readingTime={7}
       heroImage={{
@@ -115,7 +115,7 @@ export default function HealthcareAIContextBlog() {
       <p>That’s not intelligence. That’s a vending machine with a medical degree.</p>
 
       <p>
-        This is the same failure mode we see in customer support — where AI thinks
+        This is the same failure mode we see in customer support where AI thinks
         it’s having a conversation but is actually shaping outcomes. We tore that
         illusion apart in{" "}
         <Link
@@ -148,7 +148,7 @@ export default function HealthcareAIContextBlog() {
       <p>
         We already broke this down in{" "}
         <Link
-          href="/blog/hidden-state-problem-voice-ai"
+          href="/blog/the-hidden-state-problem-voice-ai"
           className="text-blue-600"
         >
           <strong>The Hidden State Problem in Voice AI Conversations</strong>
@@ -163,7 +163,7 @@ export default function HealthcareAIContextBlog() {
       <p>
         Voice removes safety nets. No scrolling. No re-reading. No quiet
         verification.
-      </p>
+      </p> 
 
       <p>
         When an AI voice bot says something confidently, people assume it knows
@@ -171,7 +171,7 @@ export default function HealthcareAIContextBlog() {
       </p>
 
       <p>
-        That’s why voice hallucinations are so dangerous — especially in
+        That’s why voice hallucinations are so dangerous especially in
         healthcare. We warned about this in{" "}
         <Link
           href="/blog/voice-ai-hallucinations"
@@ -218,12 +218,12 @@ export default function HealthcareAIContextBlog() {
       <p>Trust is not.</p>
 
       <p>
-        Trust comes from context — from remembering what already hurt, what was
+        Trust comes from context from remembering what already hurt, what was
         already asked, and when to stop talking.
       </p>
 
       <p>
-        This is why the future of AI isn’t louder or friendlier — it’s quieter,
+        This is why the future of AI isn’t louder or friendlier it’s quieter,
         more intentional, and willing to stop. We’ve said this before in{" "}
         <Link
           href="/blog/ai-that-knows"
