@@ -37,7 +37,7 @@ const RELATED = [
   },
   {
     title: "The Hidden State Problem in Voice AI Conversations",
-    href: "/blog/the-hidden-state-problem-voice-ai",
+    href: "/blog/the-hidden-state-problem-in-voice-ai",
     imageSrc: "/images/blog/23-01-26.jpg",
     date: "January 23, 2026",
     description:
@@ -119,13 +119,12 @@ export default function HealthcareAIContextBlog() {
         it’s having a conversation but is actually shaping outcomes. We tore that
         illusion apart in{" "}
         <Link
-          href="/blog/customer-support-decision-engine"
-          className="text-blue-600"
-        >
-          <strong>
-            Customer Support Is a Decision Engine Disguised as a Conversation
-          </strong>
-        </Link>.
+            href="/blog/customer-support-decision-engine"
+            className="text-blue-500 underline"
+          >
+            Customer Support is a Decision Engine disguised as a conversation
+          </Link>.
+
       </p>
 
       <h2 id="context-is-time-not-data" className="scroll-mt-16">
@@ -145,16 +144,18 @@ export default function HealthcareAIContextBlog() {
         <em>why it’s happening again</em>.
       </p>
 
-      <p>
-        We already broke this down in{" "}
-        <Link
-          href="/blog/the-hidden-state-problem-voice-ai"
-          className="text-blue-600"
-        >
-          <strong>The Hidden State Problem in Voice AI Conversations</strong>
-        </Link>
+      
+      <p>We already broke this down in{" "}
+         <Link
+             href="/blog/the-hidden-state-problem-in-voice-ai"
+          className="text-blue-600 hover:text-blue-400 transition-colors">
+            The Hidden State Problem in Voice AI Conversations
+          </Link>
+  
         . Healthcare just pretends it’s exempt.
       </p>
+
+       
 
       <h2 id="why-voice-makes-it-worse" className="scroll-mt-16">
         Why Voice Makes This Worse
@@ -163,7 +164,7 @@ export default function HealthcareAIContextBlog() {
       <p>
         Voice removes safety nets. No scrolling. No re-reading. No quiet
         verification.
-      </p> 
+      </p>
 
       <p>
         When an AI voice bot says something confidently, people assume it knows
@@ -173,19 +174,17 @@ export default function HealthcareAIContextBlog() {
       <p>
         That’s why voice hallucinations are so dangerous especially in
         healthcare. We warned about this in{" "}
-        <Link
-          href="/blog/voice-ai-hallucinations"
-          className="text-blue-600"
-        >
-          <strong>Voice AI Hallucinations Are More Dangerous Than Text Ones</strong>
-        </Link>{" "}
+         <Link href="/blog/voice-ai-hallucinations"
+          className="text-blue-600 hover:text-blue-400 transition-colors">
+            Voice AI Hallucinations Are More Dangerous Than Text Ones{" "}
+          </Link>
         and earlier when we explained why{" "}
         <Link
           href="/blog/voice-ai-sounds"
-          className="text-blue-600"
+          className="text-blue-500 underline"
         >
-          <strong>Voice AI Sounds Confident Even When It Should Hesitate</strong>
-        </Link>.
+          Voice AI Sounds Confident Even When It Should Hesitate
+        </Link>
       </p>
 
       <p>A confident voice without context isn’t helpful. It’s reckless.</p>
@@ -222,20 +221,20 @@ export default function HealthcareAIContextBlog() {
         already asked, and when to stop talking.
       </p>
 
-      <p>
-        This is why the future of AI isn’t louder or friendlier it’s quieter,
-        more intentional, and willing to stop. We’ve said this before in{" "}
-        <Link
-          href="/blog/ai-that-knows"
-          className="text-blue-600"
-        >
-          <strong>AI That Knows When to Quit</strong>
-        </Link>.
-      </p>
-
       <p>If your healthcare AI sounds smart but feels dumb, it’s not broken.</p>
 
       <p>It’s just missing context.</p>
+
+      <p>
+        This is why the future of AI isn’t louder or friendlier it’s quieter,
+        more intentional, and willing to stop. We’ve said this before in{" "}
+
+         <Link href="/blog/ai-that-knows"
+          className="text-blue-600 hover:text-blue-400 transition-colors">
+            AI That Knows When to Quit
+          </Link>
+        
+      </p>
 
       <div className="mt-14 rounded-3xl border-2 border-white/10 bg-background px-10 py-12">
         <div className="max-w-2xl">
