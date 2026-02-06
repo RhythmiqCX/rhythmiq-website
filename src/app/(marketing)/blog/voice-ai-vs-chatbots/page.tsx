@@ -169,28 +169,6 @@ export default function VoiceVsChatbots() {
           illusion of intelligence vanishes.
         </p>
         {/* ... table remains the same ... */}
-        <table className="w-full text-left border-collapse border border-white/10 my-10">
-          <thead>
-            <tr className="bg-white/5">
-              <th className="p-4 border-b border-white/10">Metric</th>
-              <th className="p-4 border-b border-white/10">Legacy IVR</th>
-              <th className="p-4 border-b border-white/10">Standard AI Bot</th>
-              <th className="p-4 border-b border-white/10 text-blue-400">
-                RhythmiqCX Standard
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="p-4 border-b border-white/10">Latency</td>
-              <td className="p-4 border-b border-white/10">N/A</td>
-              <td className="p-4 border-b border-white/10">2500ms+</td>
-              <td className="p-4 border-b border-white/10 text-blue-400">
-                &lt; 500ms
-              </td>
-            </tr>
-          </tbody>
-        </table>
       </section>
 
       {/* SECTION 3 - SENTIMENT */}
