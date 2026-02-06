@@ -116,11 +116,10 @@ export default function CustomerSupportDecisionEngine() {
 
         <p>Which is exactly how a decision engine works. And the moment your system forgets context, everything collapses. Users
           repeat themselves. Agents guess. Trust dies. That’s the whole thesis
-          behind
-          <Link href="/blog/the-hidden-state-problem-in-voice-ai" className="text-blue-600">
+          behind <Link href="/blog/the-hidden-state-problem-in-voice-ai" className="text-blue-600">
             "The Hidden State Problem in Voice AI Conversations"
-          </Link> and <Link href="/blog/state-management-in-voice-ai" className="text-blue-600">
-            State Management in Voice AI Is a Nightmare
+          </Link>  and  <Link href="/blog/state-management-in-voice-ai" className="text-blue-600"> 
+              State Management in Voice AI Is a Nightmare
           </Link>. Not AI problems. Memory problems.
         </p>
       </section>
@@ -137,7 +136,7 @@ export default function CustomerSupportDecisionEngine() {
         <p>
           Humans should handle nuance. Machines should handle repetition. That’s
           just common sense engineering.And honestly, CSAT is fake happy nonsense. Outcomes matter. That’s why
-          we replaced it with decision success in <Link href= "/blog/support-metrics" className="text-blue-600">
+          we replaced it with decision success in  <Link href= "/blog/support-metrics" className="text-blue-600">
             Support Metrics Are Broken Replace CSAT With Decision Success Rate
           </Link>. If the right decision fired instantly, you won. Everything else is
           theater.
@@ -163,15 +162,10 @@ export default function CustomerSupportDecisionEngine() {
 
         <p>
           Hallucinations are worse too. You can’t scroll back. You just trust
-          whatever the system says. That’s why{" "}
-          <Link href="/blog/voice-ai-hallucinations" className="text-blue-600">
-            Voice AI Hallucinations Are More Dangerous Than Text Ones
-          </Link>
-          and
-          <Link href="/blog/voice-ai-needs" className="text-blue-600">
-            Why Voice AI Needs Fewer Words Than Chat AI
-          </Link>
-          both exist. Fast and short beats smart and chatty.
+          whatever the system says. That’s why{" "}  <Link href="/blog/voice-ai-hallucinations" className="text-blue-600">
+             Voice AI Hallucinations Are More Dangerous Than Text Ones
+           </Link>  and   <Link href="/blog/voice-ai-needs" className="text-blue-600">
+            Why Voice AI Needs Fewer Words Than Chat AI  </Link>   both exist. Fast and short beats smart and chatty.
         </p>
       </section>
 
@@ -187,9 +181,7 @@ export default function CustomerSupportDecisionEngine() {
           Model intents. Define states. Map decisions. Treat it like backend
           architecture. And don’t ignore infra reality. AI doesn’t fail because it’s dumb. It
           fails because memory explodes and latency kills trust. We ranted about
-          this in <Link href="/blog/ai-models-eat-memory" className="text-blue-600">
-            AI Models Eat Memory for Breakfast
-          </Link> Intelligence is cheap. Plumbing is expensive.
+          this in  <Link  href="/blog/ai-models-eat-memory" className="text-blue-600">  AI Models Eat Memory for Breakfast   </Link>  Intelligence is cheap. Plumbing is expensive.
         </p>
 
         <p>
