@@ -51,6 +51,8 @@ const TONES = [
 ];
 
 import { repurposeContent } from "@/actions/tools/repurpose-content";
+import { checkUsageAction } from "@/actions/tools/check-usage";
+import { useEffect } from "react";
 
 // ... previous imports ...
 
@@ -64,6 +66,13 @@ const ContentRepurposerTool = () => {
     useState<GeneratedContent | null>(null);
   const [activeTab, setActiveTab] = useState<Platform>("linkedin");
   const [copiedState, setCopiedState] = useState<string | null>(null);
+  const [isLimitReached, setIsLimitReached] = useState(false);
+
+  useEffect(() => {
+    checkUsageAction("content-repurposer").then((res) =>
+      setIsLimitReached(res.isLimitReached),
+    );
+  }, []);
 
   const handleCopy = (text: string, id: string) => {
     navigator.clipboard.writeText(text);
@@ -103,6 +112,9 @@ const ContentRepurposerTool = () => {
       toast.error("Something went wrong. Please try again.");
     } finally {
       setIsGenerating(false);
+      checkUsageAction("content-repurposer").then((res) =>
+        setIsLimitReached(res.isLimitReached),
+      );
     }
   };
 
@@ -184,9 +196,11 @@ const ContentRepurposerTool = () => {
                 size="lg"
                 className="w-full gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-0"
                 onClick={generateContent}
-                disabled={isGenerating}
+                disabled={isGenerating || isLimitReached}
               >
-                {isGenerating ? (
+                {isLimitReached ? (
+                  <>Limit Reached (5/5)</>
+                ) : isGenerating ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" /> Repurposing...
                   </>
@@ -196,6 +210,12 @@ const ContentRepurposerTool = () => {
                   </>
                 )}
               </Button>
+              {isLimitReached && (
+                <p className="text-xs text-red-500 text-center mt-2">
+                  You have reached your daily limit of 5 generations for this
+                  tool.
+                </p>
+              )}
             </div>
           </div>
         </CardContent>

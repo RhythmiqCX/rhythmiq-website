@@ -21,6 +21,8 @@ import {
 import { Loader2, Printer, Copy, Check, NotebookPen } from "lucide-react";
 import { toast } from "sonner";
 import { generateNotes, NoteStyle } from "@/actions/tools/generate-notes";
+import { checkUsageAction } from "@/actions/tools/check-usage";
+import { useEffect } from "react";
 
 const NOTE_STYLES: { value: NoteStyle; label: string; description: string }[] =
   [
@@ -61,6 +63,13 @@ export default function AiNotesGeneratorTool() {
     title: string;
   } | null>(null);
   const [hasCopied, setHasCopied] = useState(false);
+  const [isLimitReached, setIsLimitReached] = useState(false);
+
+  useEffect(() => {
+    checkUsageAction("ai-notes-generator").then((res) =>
+      setIsLimitReached(res.isLimitReached),
+    );
+  }, []);
 
   const handleGenerate = async () => {
     if (!content.trim() || content.length < 50) {
@@ -88,6 +97,9 @@ export default function AiNotesGeneratorTool() {
       toast.error("Something went wrong. Please try again.");
     } finally {
       setIsGenerating(false);
+      checkUsageAction("ai-notes-generator").then((res) =>
+        setIsLimitReached(res.isLimitReached),
+      );
     }
   };
 
@@ -206,10 +218,12 @@ export default function AiNotesGeneratorTool() {
             <Button
               className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
               size="lg"
-              disabled={isGenerating || content.length < 50}
+              disabled={isGenerating || content.length < 50 || isLimitReached}
               onClick={handleGenerate}
             >
-              {isGenerating ? (
+              {isLimitReached ? (
+                <>Limit Reached (5/5)</>
+              ) : isGenerating ? (
                 <>
                   <Loader2 className="w-4 h-4 mr-2 animate-spin" />
                   Generating Notes...
@@ -221,6 +235,12 @@ export default function AiNotesGeneratorTool() {
                 </>
               )}
             </Button>
+            {isLimitReached && (
+              <p className="text-xs text-red-500 text-center mt-2">
+                You have reached your daily limit of 5 generations for this
+                tool.
+              </p>
+            )}
           </CardContent>
         </Card>
       </div>

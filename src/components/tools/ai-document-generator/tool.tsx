@@ -25,6 +25,8 @@ import {
   generateDocument,
   DocumentType,
 } from "@/actions/tools/generate-document";
+import { checkUsageAction } from "@/actions/tools/check-usage";
+import { useEffect } from "react";
 
 const DOCUMENT_TYPES: {
   value: DocumentType;
@@ -222,6 +224,13 @@ export default function AiDocumentGeneratorTool() {
     title: string;
   } | null>(null);
   const [hasCopied, setHasCopied] = useState(false);
+  const [isLimitReached, setIsLimitReached] = useState(false);
+
+  useEffect(() => {
+    checkUsageAction("ai-document-generator").then((res) =>
+      setIsLimitReached(res.isLimitReached),
+    );
+  }, []);
 
   // Handle inputs change
   const handleInputChange = (name: string, value: string) => {
@@ -257,6 +266,9 @@ export default function AiDocumentGeneratorTool() {
       toast.error("Something went wrong. Please try again.");
     } finally {
       setIsGenerating(false);
+      checkUsageAction("ai-document-generator").then((res) =>
+        setIsLimitReached(res.isLimitReached),
+      );
     }
   };
 
@@ -401,10 +413,12 @@ export default function AiDocumentGeneratorTool() {
             <Button
               className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90"
               size="lg"
-              disabled={isGenerating}
+              disabled={isGenerating || isLimitReached}
               onClick={handleGenerate}
             >
-              {isGenerating ? (
+              {isLimitReached ? (
+                <>Limit Reached (5/5)</>
+              ) : isGenerating ? (
                 <>
                   <Loader2 className="w-4 h-4 mr-2 animate-spin" />
                   Generating Document...
@@ -416,6 +430,12 @@ export default function AiDocumentGeneratorTool() {
                 </>
               )}
             </Button>
+            {isLimitReached && (
+              <p className="text-xs text-red-500 text-center mt-2">
+                You have reached your daily limit of 5 generations for this
+                tool.
+              </p>
+            )}
           </CardContent>
         </Card>
       </div>

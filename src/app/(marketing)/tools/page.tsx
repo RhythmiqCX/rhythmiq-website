@@ -11,6 +11,8 @@ import {
   FileCode,
   FileText,
   NotebookPen,
+  Home,
+  CalendarCheck,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -96,6 +98,26 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#ec4899",
     gradientTo: "#8b5cf6",
+  },
+  {
+    title: "AI Floor Plan Generator",
+    description:
+      "Generate optimized 2D floor plans instantly. Customize dimensions, rooms, and layouts based on your needs.",
+    icon: Home,
+    href: "/tools/ai-floor-plan-generator",
+    comingSoon: false,
+    gradientFrom: "#0ea5e9", // Sky
+    gradientTo: "#6366f1", // Indigo
+  },
+  {
+    title: "AI Schedule Maker",
+    description:
+      "Automatically generate optimized daily schedules. prioritize tasks, insert breaks, and maximize productivity.",
+    icon: CalendarCheck,
+    href: "/tools/ai-schedule-maker",
+    comingSoon: false,
+    gradientFrom: "#f97316", // Orange
+    gradientTo: "#ec4899", // Pink
   },
 ];
 

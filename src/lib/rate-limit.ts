@@ -36,7 +36,16 @@ function saveStore(store: UsageStore) {
 // Get Client IP
 async function getClientIp() {
     const headersList = await headers();
-    return headersList.get("x-forwarded-for")?.split(",")[0] || "unknown";
+
+    const forwardedFor = headersList.get("x-forwarded-for");
+    if (forwardedFor) return forwardedFor.split(",")[0];
+
+    const realIp = headersList.get("x-real-ip");
+    if (realIp) return realIp;
+
+    // Default to IPv6 localhost for local development if no headers found
+    // This ensures consistency with the generated tool-usage-store.json
+    return "::1";
 }
 
 export const rateLimit = {
