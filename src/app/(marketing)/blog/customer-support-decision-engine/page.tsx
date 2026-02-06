@@ -57,7 +57,7 @@ export default function CustomerSupportDecisionEngine() {
   return (
     <BlogLayout
       category={{ href: "/blog/category/Tech", label: "Tech" }}
-      date="2026-02-05"
+      date="2026-02-02"
       title="Customer Support Is a Decision Engine Disguised as a Conversation"
       excerpt="Support isn’t empathy at scale. It’s thousands of tiny business decisions wearing a friendly voice."
       authors={[{ avatar: "/icons/HS6.png", name: "HS6" }]}
@@ -101,7 +101,7 @@ export default function CustomerSupportDecisionEngine() {
           That’s not conversation. That’s a state machine. We already made this
           argument bluntly in{" "}
           <Link href= "/blog/cx-not-conversations" className="text-blue-600">
-            CX Is Not Conversations — It Is Micro Decisions
+            CX Is Not Conversations It Is Micro Decisions
           </Link>
           . Support has always been decisions pretending to be empathy.
         </p>
@@ -136,7 +136,7 @@ export default function CustomerSupportDecisionEngine() {
 
         <p>
           Humans should handle nuance. Machines should handle repetition. That’s
-          just common sense engineering.And honestly, CSAT is fake-happy nonsense. Outcomes matter. That’s why
+          just common sense engineering.And honestly, CSAT is fake happy nonsense. Outcomes matter. That’s why
           we replaced it with decision success in <Link href= "/blog/support-metrics" className="text-blue-600">
             Support Metrics Are Broken Replace CSAT With Decision Success Rate
           </Link>. If the right decision fired instantly, you won. Everything else is
@@ -153,7 +153,7 @@ export default function CustomerSupportDecisionEngine() {
         </p>
 
         <p>
-          It’s not one AI. It’s ASR, LLM, TTS, memory, orchestration duct-taped
+          It’s not one AI. It’s ASR, LLM, TTS, memory, orchestration duct taped
           together. We explain this mess in{" "}
           <Link href="/blog/voice-ai-is-distributed" className="text-blue-600">
             Voice AI Is a Distributed System Wearing a Human Mask
@@ -209,7 +209,7 @@ export default function CustomerSupportDecisionEngine() {
             </h2>
 
             <p className="text-neutral-300 mb-6 leading-relaxed">
-              We design support stacks like decision engines first — then layer
+              We design support stacks like decision engines first then layer
               chat and voice on top. Faster resolutions, fewer escalations, and
               conversations that actually feel human.
             </p>
