@@ -255,7 +255,7 @@ export default function FaviconGeneratorTool() {
             defaultValue="image"
             className="w-full"
             value={sourceType}
-            onValueChange={(v) => setSourceType(v as "image" | "text" | "ai")}
+            onValueChange={(v) => setSourceType(v as "image" | "text")}
           >
             <TabsList className="grid w-full grid-cols-2 mb-6">
               <TabsTrigger value="image" className="flex items-center gap-2">
