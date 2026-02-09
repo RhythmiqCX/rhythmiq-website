@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@/components/global/container";
+import ToolsCTA from "@/components/marketing/tools-cta";
 import Wrapper from "@/components/global/wrapper";
 import { generateMetadata } from "@/utils";
 import AiNotesGeneratorTool from "@/components/tools/ai-notes-generator/tool";
@@ -83,6 +84,7 @@ const AiNotesGeneratorPage = () => {
               </p>
             </div>
           </div>
+          <ToolsCTA />
         </Container>
       </Wrapper>
     </div>

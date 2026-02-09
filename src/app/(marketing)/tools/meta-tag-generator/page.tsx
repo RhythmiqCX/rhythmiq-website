@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@/components/global/container";
+import ToolsCTA from "@/components/marketing/tools-cta";
 import Wrapper from "@/components/global/wrapper";
 import { generateMetadata } from "@/utils";
 import MetaTagGeneratorTool from "@/components/tools/meta-tag-generator/tool";
@@ -45,6 +46,7 @@ const MetaTagGeneratorPage = () => {
           </div>
 
           <MetaTagGeneratorTool />
+          <ToolsCTA />
         </Container>
       </Wrapper>
     </div>

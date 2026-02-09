@@ -3,22 +3,23 @@ import Container from "@/components/global/container";
 import ToolsCTA from "@/components/marketing/tools-cta";
 import Wrapper from "@/components/global/wrapper";
 import { generateMetadata } from "@/utils";
-import JsonToXmlConverterTool from "@/components/tools/json-to-xml-converter/tool";
+import WebToMarkdownTool from "@/components/tools/web-to-markdown/tool";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = generateMetadata({
-  title: "JSON to XML Converter | Free Online Developer Tool",
+  title: "Convert Webpage to Markdown | Free Online Tool",
   description:
-    "Convert JSON object to XML format instantly. Free developer tool with syntax highlighting, copy to clipboard, and file download options. Secure client-side conversion.",
+    "Convert any webpage into clean, readable Markdown instantly. Perfect for documentation, content migration, AI workflows, and content archiving. Free to use.",
   alternates: {
-    canonical: "/tools/json-to-xml-converter",
+    canonical: "/tools/web-to-markdown",
   },
 });
 
-const JsonToXmlConverterPage = () => {
+const WebToMarkdownPage = () => {
   return (
     <div className="relative w-full py-20 overflow-hidden">
+      {/* Background Effects */}
       <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-purple-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
 
@@ -35,37 +36,38 @@ const JsonToXmlConverterPage = () => {
 
             <div className="flex flex-col gap-4 max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
-                JSON to XML Converter
+                Convert Webpage to Markdown
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Transform your JSON data into clean, formatted XML. Fast,
-                secure, and client-side only processing for developers.
+                Convert any webpage into clean, readable Markdown instantly.
+                Perfect for documentation, content migration, AI workflows, and
+                content archiving.
               </p>
             </div>
           </div>
 
-          <JsonToXmlConverterTool />
+          <WebToMarkdownTool />
 
           <div className="grid md:grid-cols-3 gap-8 pt-12 border-t border-border/40">
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Fast & Secure</h3>
+              <h3 className="text-xl font-semibold">Fast & Clean</h3>
               <p className="text-muted-foreground">
-                All conversions happen locally in your browser. Your data never
-                leaves your device, ensuring 100% privacy and security.
+                Instantly fetches HTML and converts it to clean Markdown,
+                removing unnecessary clutter like ads and navigation.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Instant Download</h3>
+              <h3 className="text-xl font-semibold">AI & LLM Ready</h3>
               <p className="text-muted-foreground">
-                Copy the formatted XML to your clipboard or download it as a
-                .xml file with a single click.
+                Perfect for feeding web content into LLMs, creating training
+                data, or archiving knowledge bases in a readable format.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Easy API Formatting</h3>
+              <h3 className="text-xl font-semibold">Privacy Focused</h3>
               <p className="text-muted-foreground">
-                Perfect for debugging API responses or converting legacy data
-                structures between JSON and XML formats.
+                Conversion logic runs client-side after fetching. We do not
+                store any URLs or content you convert.
               </p>
             </div>
           </div>
@@ -76,4 +78,4 @@ const JsonToXmlConverterPage = () => {
   );
 };
 
-export default JsonToXmlConverterPage;
+export default WebToMarkdownPage;

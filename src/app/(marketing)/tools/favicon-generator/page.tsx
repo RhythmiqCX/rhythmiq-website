@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@/components/global/container";
+import ToolsCTA from "@/components/marketing/tools-cta";
 import Wrapper from "@/components/global/wrapper";
 import { generateMetadata } from "@/utils";
 import FaviconGeneratorTool from "@/components/tools/favicon-generator/tool";
@@ -44,6 +45,7 @@ const FaviconGeneratorPage = () => {
           </div>
 
           <FaviconGeneratorTool />
+          <ToolsCTA />
         </Container>
       </Wrapper>
     </div>
