@@ -16,6 +16,8 @@ import {
   Home,
   CalendarCheck,
   Globe,
+  Mail,
+  HelpCircle,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -141,6 +143,26 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#f97316", // Orange
     gradientTo: "#ec4899", // Pink
+  },
+  {
+    title: "AI Email Response Generator",
+    description:
+      "Draft professional email replies instantly. Customize tone and intent to perfect your communication.",
+    icon: Mail,
+    href: "/tools/ai-email-response-generator",
+    comingSoon: false,
+    gradientFrom: "#3b82f6", // Blue
+    gradientTo: "#6366f1", // Indigo
+  },
+  {
+    title: "Webpage to FAQ Generator",
+    description:
+      "Turn any webpage content into a clear, structured FAQ section in seconds. Ideal for support docs and help centers.",
+    icon: HelpCircle,
+    href: "/tools/webpage-to-faq",
+    comingSoon: false,
+    gradientFrom: "#10b981", // Emerald
+    gradientTo: "#3b82f6", // Blue
   },
 ];
 
