@@ -1,6 +1,7 @@
 import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
-import { Button } from "@/components/ui/button";
+import ToolsCTA from "@/components/marketing/tools-cta";
+
 import {
   ArrowRight,
   Repeat,
@@ -10,9 +11,13 @@ import {
   FileJson,
   FileCode,
   FileText,
+  BookOpen,
   NotebookPen,
   Home,
   CalendarCheck,
+  Globe,
+  Mail,
+  HelpCircle,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -100,6 +105,26 @@ const tools = [
     gradientTo: "#8b5cf6",
   },
   {
+    title: "Web to Markdown",
+    description:
+      "Convert any webpage into clean, readable Markdown instantly. Perfect for LLMs and archiving.",
+    icon: Globe,
+    href: "/tools/web-to-markdown",
+    comingSoon: false,
+    gradientFrom: "#3b82f6",
+    gradientTo: "#8b5cf6",
+  },
+  {
+    title: "Notion to Markdown",
+    description:
+      "Convert any public Notion page into clean, readable Markdown instantly. Perfect for documentation and archiving.",
+    icon: BookOpen,
+    href: "/tools/notion-to-markdown",
+    comingSoon: false,
+    gradientFrom: "#64748b", // Slate
+    gradientTo: "#94a3b8", // Gray
+  },
+  {
     title: "AI Floor Plan Generator",
     description:
       "Generate optimized 2D floor plans instantly. Customize dimensions, rooms, and layouts based on your needs.",
@@ -118,6 +143,26 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#f97316", // Orange
     gradientTo: "#ec4899", // Pink
+  },
+  {
+    title: "AI Email Response Generator",
+    description:
+      "Draft professional email replies instantly. Customize tone and intent to perfect your communication.",
+    icon: Mail,
+    href: "/tools/ai-email-response-generator",
+    comingSoon: false,
+    gradientFrom: "#3b82f6", // Blue
+    gradientTo: "#6366f1", // Indigo
+  },
+  {
+    title: "Webpage to FAQ Generator",
+    description:
+      "Turn any webpage content into a clear, structured FAQ section in seconds. Ideal for support docs and help centers.",
+    icon: HelpCircle,
+    href: "/tools/webpage-to-faq",
+    comingSoon: false,
+    gradientFrom: "#10b981", // Emerald
+    gradientTo: "#3b82f6", // Blue
   },
 ];
 
@@ -210,28 +255,7 @@ const ToolsPage = () => {
             ))}
           </div>
 
-          <Container delay={0.4} className="mt-12">
-            <div className="relative rounded-3xl overflow-hidden border border-border/50 bg-card/30 backdrop-blur-sm p-8 md:p-16 text-center">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/5 pointer-events-none" />
-              <div className="relative z-10 flex flex-col items-center gap-6 max-w-2xl mx-auto">
-                <h3 className="text-3xl font-heading font-bold">
-                  Ready for the full experience?
-                </h3>
-                <p className="text-muted-foreground text-lg">
-                  These tools are just the beginning. Unlock the full potential
-                  of AI-driven support with Rhythmiq&apos;s complete platform.
-                </p>
-                <Link href="https://calendly.com/ray-rhythmiqcx/30min">
-                  <Button
-                    size="lg"
-                    className="rounded-full px-8 h-12 text-base shadow-xl shadow-primary/20"
-                  >
-                    Book a Demo
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </Container>
+          <ToolsCTA />
         </Container>
       </Wrapper>
     </div>

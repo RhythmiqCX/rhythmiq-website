@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@/components/global/container";
+import ToolsCTA from "@/components/marketing/tools-cta";
 import Wrapper from "@/components/global/wrapper";
 import { generateMetadata } from "@/utils";
 import ContentRepurposerTool from "@/components/tools/content-repurposer/tool";
@@ -48,6 +49,7 @@ const ContentRepurposerPage = () => {
           </div>
 
           <ContentRepurposerTool />
+          <ToolsCTA />
         </Container>
       </Wrapper>
     </div>

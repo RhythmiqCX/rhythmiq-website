@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@/components/global/container";
+import ToolsCTA from "@/components/marketing/tools-cta";
 import Wrapper from "@/components/global/wrapper";
 import { generateMetadata } from "@/utils";
 import ScheduleMakerTool from "@/components/tools/ai-schedule-maker/tool";
@@ -55,6 +56,7 @@ const AiScheduleMakerPage = () => {
           </div>
 
           <ScheduleMakerTool />
+          <ToolsCTA />
 
           <div className="grid md:grid-cols-3 gap-8 pt-12 border-t border-border/40">
             <div className="space-y-4">

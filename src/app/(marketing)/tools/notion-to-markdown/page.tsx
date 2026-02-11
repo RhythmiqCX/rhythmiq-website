@@ -3,25 +3,31 @@ import Container from "@/components/global/container";
 import ToolsCTA from "@/components/marketing/tools-cta";
 import Wrapper from "@/components/global/wrapper";
 import { generateMetadata } from "@/utils";
-import FloorPlanGeneratorTool from "@/components/tools/ai-floor-plan-generator/tool";
-import { ChevronLeft, Home, Layout, PenTool, Download } from "lucide-react";
+import NotionToMarkdownTool from "@/components/tools/notion-to-markdown/tool";
+import {
+  ChevronLeft,
+  BookOpen,
+  Repeat,
+  Database,
+  FileOutput,
+} from "lucide-react";
 import Link from "next/link";
 
 export const metadata = generateMetadata({
-  title: "AI Floor Plan Generator | Instant 2D Layouts",
+  title: "Convert Notion to Markdown | Free Online Tool",
   description:
-    "Generate optimal floor plans instantly with AI. Customize plot size, rooms, and layouts. Download as PNG/PDF.",
+    "Convert any public Notion page into clean, readable Markdown instantly. Perfect for documentation, content migration, and archiving.",
   alternates: {
-    canonical: "/tools/ai-floor-plan-generator",
+    canonical: "/tools/notion-to-markdown",
   },
 });
 
-const AiFloorPlanGeneratorPage = () => {
+const NotionToMarkdownPage = () => {
   return (
     <div className="relative w-full py-20 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-indigo-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-sky-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-slate-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-gray-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
 
       <Wrapper className="relative z-10">
         <Container className="flex flex-col gap-12">
@@ -36,54 +42,55 @@ const AiFloorPlanGeneratorPage = () => {
 
             <div className="flex flex-col gap-4 max-w-3xl">
               <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary backdrop-blur-sm w-fit">
-                <Home className="mr-2 h-4 w-4" />
-                Architectural Design
+                <BookOpen className="mr-2 h-4 w-4" />
+                Documentation Export
               </div>
               <h1 className="text-4xl md:text-5xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
-                AI Floor Plan Generator
+                Convert Notion to Markdown
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Instantly generate optimized 2D floor plans based on your plot
-                size and requirements. Perfect for homeowners, architects, and
-                real estate developers.
+                Convert any <strong>public Notion page</strong> into clean,
+                readable Markdown instantly. Perfect for documentation, content
+                migration, knowledge bases, and archiving.
               </p>
             </div>
           </div>
 
-          <FloorPlanGeneratorTool />
+          <NotionToMarkdownTool />
 
           <div className="grid md:grid-cols-3 gap-8 pt-12 border-t border-border/40">
             <div className="space-y-4">
-              <div className="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-500">
-                <Layout className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500">
+                <Repeat className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-semibold">Smart Layouts</h3>
+              <h3 className="text-xl font-semibold">Content Migration</h3>
               <p className="text-muted-foreground">
-                Our rule-based AI engine optimizes room placement for natural
-                light, ventilation, and flow.
+                Easily move your Notion content to GitHub, Obsidian, VS Code, or
+                any other Markdown-supported platform.
               </p>
             </div>
             <div className="space-y-4">
-              <div className="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-500">
-                <PenTool className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500">
+                <Database className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-semibold">Customizable</h3>
+              <h3 className="text-xl font-semibold">Knowledge Backup</h3>
               <p className="text-muted-foreground">
-                Input your exact plot dimensions and room requirements to get a
-                tailored floor plan.
+                Archive your Notion knowledge base into portable, future-proof
+                Markdown files.
               </p>
             </div>
             <div className="space-y-4">
               <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-500">
-                <Download className="w-5 h-5" />
+                <FileOutput className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-semibold">Instant Export</h3>
+              <h3 className="text-xl font-semibold">AI & LLM Training</h3>
               <p className="text-muted-foreground">
-                Download your generate floor plan as a high-quality image or PDF
-                for printing and sharing.
+                Clean data export for feeding Notion content into LLMs or vector
+                databases for RAG applications.
               </p>
             </div>
           </div>
+
           <ToolsCTA />
         </Container>
       </Wrapper>
@@ -91,4 +98,4 @@ const AiFloorPlanGeneratorPage = () => {
   );
 };
 
-export default AiFloorPlanGeneratorPage;
+export default NotionToMarkdownPage;

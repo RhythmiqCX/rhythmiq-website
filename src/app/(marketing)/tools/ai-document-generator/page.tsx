@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@/components/global/container";
+import ToolsCTA from "@/components/marketing/tools-cta";
 import Wrapper from "@/components/global/wrapper";
 import { generateMetadata } from "@/utils";
 import AiDocumentGeneratorTool from "@/components/tools/ai-document-generator/tool";
@@ -86,6 +87,7 @@ const AiDocumentGeneratorPage = () => {
               </p>
             </div>
           </div>
+          <ToolsCTA />
         </Container>
       </Wrapper>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@/components/global/container";
+import ToolsCTA from "@/components/marketing/tools-cta";
 import Wrapper from "@/components/global/wrapper";
 import { generateMetadata } from "@/utils";
 import JsonToYamlConverterTool from "@/components/tools/json-to-yaml-converter/tool";
@@ -69,6 +70,7 @@ const JsonToYamlConverterPage = () => {
               </p>
             </div>
           </div>
+          <ToolsCTA />
         </Container>
       </Wrapper>
     </div>
