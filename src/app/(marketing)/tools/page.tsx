@@ -18,6 +18,8 @@ import {
   Globe,
   Mail,
   HelpCircle,
+  Search,
+  Briefcase,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -100,9 +102,29 @@ const tools = [
       "Convert JSON object to YAML format instantly. Clean, readable output for configuration files and more.",
     icon: FileCode,
     href: "/tools/json-to-yaml-converter",
-    comingSoon: false,
+    heading: "JSON to YAML Converter",
     gradientFrom: "#ec4899",
     gradientTo: "#8b5cf6",
+  },
+  {
+    title: "JSON to PDF Converter",
+    description:
+      "Convert JSON data into clean, well-structured PDF documents. Customize layout, formatting, and more.",
+    icon: FileText,
+    href: "/tools/json-to-pdf-converter",
+    heading: "JSON to PDF Converter",
+    gradientFrom: "#ef4444",
+    gradientTo: "#f97316",
+  },
+  {
+    title: "LinkedIn Profile Builder",
+    description:
+      "Create a professional, optimized LinkedIn profile. Generate headlines, summaries, and experience points.",
+    icon: Briefcase,
+    href: "/tools/linkedin-profile-builder",
+    comingSoon: false,
+    gradientFrom: "#0077b5", // LinkedIn Blue
+    gradientTo: "#0e76a8",
   },
   {
     title: "Web to Markdown",
@@ -141,8 +163,8 @@ const tools = [
     icon: CalendarCheck,
     href: "/tools/ai-schedule-maker",
     comingSoon: false,
-    gradientFrom: "#f97316", // Orange
-    gradientTo: "#ec4899", // Pink
+    gradientFrom: "#f97316",
+    gradientTo: "#ec4899",
   },
   {
     title: "AI Email Response Generator",
@@ -151,8 +173,8 @@ const tools = [
     icon: Mail,
     href: "/tools/ai-email-response-generator",
     comingSoon: false,
-    gradientFrom: "#3b82f6", // Blue
-    gradientTo: "#6366f1", // Indigo
+    gradientFrom: "#3b82f6",
+    gradientTo: "#6366f1",
   },
   {
     title: "Webpage to FAQ Generator",
@@ -161,8 +183,38 @@ const tools = [
     icon: HelpCircle,
     href: "/tools/webpage-to-faq",
     comingSoon: false,
-    gradientFrom: "#10b981", // Emerald
-    gradientTo: "#3b82f6", // Blue
+    gradientFrom: "#10b981",
+    gradientTo: "#3b82f6",
+  },
+  {
+    title: "Domain Availability Checker",
+    description:
+      "Instantly check if your desired domain name is available. Search across popular extensions like .com, .net, and .io.",
+    icon: Globe,
+    href: "/tools/domain-availability-checker",
+    comingSoon: false,
+    gradientFrom: "#8b5cf6", // Violet
+    gradientTo: "#ec4899", // Pink
+  },
+  {
+    title: "Sitemap Validator",
+    description:
+      "Validate your XML sitemap instantly. Check for errors, broken URLs, missing tags, and formatting issues.",
+    icon: FileCode,
+    href: "/tools/sitemap-validator",
+    comingSoon: false,
+    gradientFrom: "#f59e0b", // Amber
+    gradientTo: "#ef4444", // Red
+  },
+  {
+    title: "Sitemap Finder & Checker",
+    description:
+      "Find and validate all sitemaps on any website instantly. Discover hidden sitemaps and extract URL counts.",
+    icon: Search,
+    href: "/tools/sitemap-finder",
+    comingSoon: false,
+    gradientFrom: "#3b82f6", // Blue
+    gradientTo: "#06b6d4", // Cyan
   },
 ];
 
