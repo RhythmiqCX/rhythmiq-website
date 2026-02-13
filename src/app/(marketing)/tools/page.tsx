@@ -19,6 +19,7 @@ import {
   Mail,
   HelpCircle,
   Search,
+  Briefcase,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -101,9 +102,29 @@ const tools = [
       "Convert JSON object to YAML format instantly. Clean, readable output for configuration files and more.",
     icon: FileCode,
     href: "/tools/json-to-yaml-converter",
-    comingSoon: false,
+    heading: "JSON to YAML Converter",
     gradientFrom: "#ec4899",
     gradientTo: "#8b5cf6",
+  },
+  {
+    title: "JSON to PDF Converter",
+    description:
+      "Convert JSON data into clean, well-structured PDF documents. Customize layout, formatting, and more.",
+    icon: FileText,
+    href: "/tools/json-to-pdf-converter",
+    heading: "JSON to PDF Converter",
+    gradientFrom: "#ef4444",
+    gradientTo: "#f97316",
+  },
+  {
+    title: "LinkedIn Profile Builder",
+    description:
+      "Create a professional, optimized LinkedIn profile. Generate headlines, summaries, and experience points.",
+    icon: Briefcase,
+    href: "/tools/linkedin-profile-builder",
+    comingSoon: false,
+    gradientFrom: "#0077b5", // LinkedIn Blue
+    gradientTo: "#0e76a8",
   },
   {
     title: "Web to Markdown",
