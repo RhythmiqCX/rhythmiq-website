@@ -127,6 +127,16 @@ const tools = [
     gradientTo: "#0e76a8",
   },
   {
+    title: "LinkedIn Email Finder",
+    description:
+      "Find verified professional email addresses. Enter a name and company to generate and verify email patterns instantly.",
+    icon: Search,
+    href: "/tools/linkedin-email-finder",
+    comingSoon: false,
+    gradientFrom: "#0077b5",
+    gradientTo: "#00a0dc",
+  },
+  {
     title: "Web to Markdown",
     description:
       "Convert any webpage into clean, readable Markdown instantly. Perfect for LLMs and archiving.",
@@ -215,6 +225,16 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#3b82f6", // Blue
     gradientTo: "#06b6d4", // Cyan
+  },
+  {
+    title: "AI Prompt Generator",
+    description:
+      "Create high-quality AI prompts using proven frameworks like CREATE, APE, and RACE. Optimize for ChatGPT, Claude, and Midjourney.",
+    icon: Sparkles,
+    href: "/tools/ai-prompt-generator",
+    comingSoon: false,
+    gradientFrom: "#8b5cf6", // Violet
+    gradientTo: "#d946ef", // Fuchsia
   },
 ];
 
