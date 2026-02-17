@@ -78,7 +78,7 @@ export default function VoiceVsChatbots() {
       date="2026-02-05"
       title="Voice AI vs Chatbots: Which Is Better for Customer Support?"
       excerpt="It’s not a UX debate. It’s an orchestration problem. In 2026, the 'winner' is the platform that solves for latency, state, and sentiment across both channels."
-      authors={[{ avatar: "/icons/Pv8.png", name: "PV8" }]}
+      authors={[{ avatar: "/icons/PV8.png", name: "PV8" }]}
       readingTime={12}
       heroImage={{
         src: "/images/blog/05-02-26.jpg",

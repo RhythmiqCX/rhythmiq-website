@@ -89,7 +89,7 @@ export default function VoiceAIFaqsVsExceptions() {
       date="2026-02-09"
       title="Voice AI Is Great at FAQs and Terrible at Exceptions"
       excerpt="Voice AI looks magical in demos until real life shows up. Edge cases are where automation ROI quietly goes to die. Here is how we build for the 'messy' parts."
-      authors={[{ avatar: "/icons/Pv8.png", name: "PV8" }]}
+      authors={[{ avatar: "/icons/PV8.png", name: "PV8" }]}
       readingTime={15}
       heroImage={{
         src: "/images/blog/09-02-2026.jpg",

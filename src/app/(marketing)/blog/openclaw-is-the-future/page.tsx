@@ -66,10 +66,10 @@ export default function OpenClawVsCustomerSupport() {
         href: "/blog/category/Tech",
         label: "Tech",
       }}
-      date="2026-02-11"
+      date="2026-02-14"
       title="OpenClaw Is the Future of Personal AI. Why Customer Support Can’t Copy It."
       excerpt="OpenClaw proves personal AI is becoming an operating system. Customer support AI must become accountable infrastructure and copying personal agents is how things break."
-      authors={[{ avatar: "/icons/Pv8.png", name: "PV8" }]}
+      authors={[{ avatar: "/icons/PV8.png", name: "PV8" }]}
       readingTime={9}
       heroImage={{
         src: "/images/blog/14-02-26.png",

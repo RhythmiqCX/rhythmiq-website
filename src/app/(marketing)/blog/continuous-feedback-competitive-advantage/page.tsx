@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = generateMetadata({
   title:
@@ -43,12 +44,13 @@ const SECTIONS = [
 
 const RELATED = [
   {
-    title: "OpenClaw Is the Future of Personal AI. Why Customer Support Can’t Copy It",
+    title:
+      "OpenClaw Is the Future of Personal AI. Why Customer Support Can’t Copy It",
     href: "/blog/openclaw-is-the-future",
     imageSrc: "/images/blog/14-02-26.png",
     date: "February 14, 2026",
     description:
-     "OpenClaw proves personal AI is becoming an operating system. Customer support AI can’t copy that model without breaking trust, compliance, and ROI.",
+      "OpenClaw proves personal AI is becoming an operating system. Customer support AI can’t copy that model without breaking trust, compliance, and ROI.",
   },
   {
     title: "Voice AI Is Great at FAQs and Terrible at Exceptions",
@@ -87,54 +89,52 @@ export default function ContinuousFeedbackAdvantage() {
       sections={SECTIONS}
       relatedArticles={RELATED}
     >
-    {/* INTRO */}
-<section className="mt-16">
-  {/* Text content */}
-  <div className="space-y-6">
-    <h2 className="text-4xl font-bold">
-      Feedback Is No Longer Optional
-    </h2>
+      {/* INTRO */}
+      <section className="mt-16">
+        {/* Text content */}
+        <div className="space-y-6">
+          <h2 className="text-4xl font-bold">Feedback Is No Longer Optional</h2>
 
-    <p className="text-xl text-neutral-400 italic">
-      “If feedback arrives late, it might as well never arrive at all.”
-    </p>
+          <p className="text-xl text-neutral-400 italic">
+            “If feedback arrives late, it might as well never arrive at all.”
+          </p>
 
-    <p>
-      I used to think feedback was something you worried about once you had
-      scale. Once the product was “stable.” Once the numbers justified the
-      introspection.
-    </p>
+          <p>
+            I used to think feedback was something you worried about once you
+            had scale. Once the product was “stable.” Once the numbers justified
+            the introspection.
+          </p>
 
-    <p>
-      That belief is wrong. Dangerous, even. The companies winning today
-      aren’t the biggest or the loudest, they’re the ones that let reality
-      reach them the fastest.
-    </p>
+          <p>
+            That belief is wrong. Dangerous, even. The companies winning today
+            aren’t the biggest or the loudest, they’re the ones that let reality
+            reach them the fastest.
+          </p>
 
-    <p className="mb-0">
-      Platforms like{" "}
-      <a
-        href="https://virtlx.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-500 underline font-medium"
-      >
-        VirtlX
-      </a>{" "}
-      exist because feedback is no longer a report. It’s infrastructure.
-    </p>
-  </div>
+          <p className="mb-0">
+            Platforms like{" "}
+            <a
+              href="https://virtlx.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline font-medium"
+            >
+              VirtlX
+            </a>{" "}
+            exist because feedback is no longer a report. It’s infrastructure.
+          </p>
+        </div>
 
-  {/* VirtlX Header Image */}
-  <div className="not-prose mt-4">
-    <img
-      src="/images/header-image-of-virtlx.png"
-      alt="VirtlX Continuous Feedback Platform"
-      className="w-full rounded-xl border border-neutral-800"
-    />
-  </div>
-</section>
-
+        {/* VirtlX Header Image */}
+        <div className="not-prose mt-8 relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-neutral-800">
+          <Image
+            src="/images/header-image-of-virtlx.png"
+            alt="VirtlX Continuous Feedback Platform"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </section>
 
       {/* SECTION 1 */}
       <hr className="border-white/10 my-20" />
@@ -144,11 +144,13 @@ export default function ContinuousFeedbackAdvantage() {
         </h2>
         <p>
           Dashboards look clean. Roadmaps feel reassuring. Leadership decks tell
-          comforting stories. Feedback ruins the fantasy. And that’s exactly why it matters.
+          comforting stories. Feedback ruins the fantasy. And that’s exactly why
+          it matters.
         </p>
         <p>
           VirtlX is built around the idea that employee engagement and customer
-          experience are inseparable. When one cracks, the other follows quietly, predictably, and expensively.
+          experience are inseparable. When one cracks, the other follows
+          quietly, predictably, and expensively.
         </p>
         <p>
           This is the same failure mode we described in{" "}
@@ -169,7 +171,8 @@ export default function ContinuousFeedbackAdvantage() {
         </h2>
         <p>
           The best teams don’t “respond faster” because they hustle harder. They
-          respond faster because their systems are wired to notice sooner. VirtlX turns engagement data into something alive continuously
+          respond faster because their systems are wired to notice sooner.
+          VirtlX turns engagement data into something alive continuously
           monitored, analyzed, and fed back into performance and learning
           cycles.
         </p>
@@ -189,8 +192,8 @@ export default function ContinuousFeedbackAdvantage() {
           Why Feedback Keeps AI From Becoming a Liability
         </h2>
         <p>
-          AI doesn’t hesitate. It doesn’t feel awkward. It doesn’t know when it’s
-          drifting.
+          AI doesn’t hesitate. It doesn’t feel awkward. It doesn’t know when
+          it’s drifting.
         </p>
         <p>
           That’s why feedback loops are non-negotiable especially as companies
@@ -198,8 +201,8 @@ export default function ContinuousFeedbackAdvantage() {
           across customer and employee touchpoints.
         </p>
         <p>
-          Without continuous feedback, AI becomes confidently wrong. With it,
-          AI becomes grounded. This is exactly the danger we called out in{" "}
+          Without continuous feedback, AI becomes confidently wrong. With it, AI
+          becomes grounded. This is exactly the danger we called out in{" "}
           <Link
             href="/blog/voice-ai-sounds"
             className="text-blue-500 underline"
@@ -217,9 +220,10 @@ export default function ContinuousFeedbackAdvantage() {
         </h2>
         <p>
           Feedback without learning is just noise. VirtlX closes this loop by
-          pushing insights directly into learning and development workflows. Employee feedback reshapes training. Customer feedback reshapes
-          behavior. The cycle repeats and compounds. This is how continuous improvement stops being a slogan and starts
-          being a system.
+          pushing insights directly into learning and development workflows.
+          Employee feedback reshapes training. Customer feedback reshapes
+          behavior. The cycle repeats and compounds. This is how continuous
+          improvement stops being a slogan and starts being a system.
         </p>
       </section>
 
@@ -231,9 +235,9 @@ export default function ContinuousFeedbackAdvantage() {
         <p>
           No platform can save a culture that doesn’t want to listen. Continuous
           feedback only works when leaders are willing to hear uncomfortable
-          truths and act on them. VirtlX positions itself as a partner for organizations that choose
-          reflection over denial, learning over defensiveness, and reality over
-          dashboards.
+          truths and act on them. VirtlX positions itself as a partner for
+          organizations that choose reflection over denial, learning over
+          defensiveness, and reality over dashboards.
         </p>
 
         {/* CTA */}
@@ -246,7 +250,7 @@ export default function ContinuousFeedbackAdvantage() {
             helps your people and your customers thrive in real time.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <a
+            <a
               href="https://calendly.com/ray-rhythmiqcx/30min"
               className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
             >

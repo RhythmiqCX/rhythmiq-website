@@ -37,6 +37,16 @@ export const metadata = generateMetadata({
 
 const tools = [
   {
+    title: "AI Chat with Your Website Data",
+    description:
+      "Enter any webpage URL and chat with our AI to ask any questions, generate FAQs, or extract insights and get instant, accurate answers - Free to use. No sign up required.",
+    icon: Globe,
+    href: "/tools/chat-with-website",
+    comingSoon: false,
+    gradientFrom: "#3b82f6",
+    gradientTo: "#6366f1",
+  },
+  {
     title: "AI Document Generator",
     description:
       "Create professional SOPs, Proposals, and Legal Drafts instantly. Strictly structured templates with AI-powered expansion.",

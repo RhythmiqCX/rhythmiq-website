@@ -2,39 +2,67 @@ import {
     ChartColumnBigIcon,
     DatabaseIcon,
     TrendingUpIcon,
-    WandSparklesIcon,
-    ZapIcon
+    ZapIcon,
+    GlobeIcon,
+    LayoutDashboardIcon,
+    MessageSquareIcon,
+    LinkIcon,
+    BotIcon
 } from "lucide-react";
 
 export const FEATURES = [
     {
-        title: "Enhance User Experience",
-        description: "Rhythmiq can handle your entire frontline support with a single bot and resolve queries within seconds",
-        icon: WandSparklesIcon,
+        title: "AI-Powered Automation",
+        description: "Resolve support issues instantly without human intervention.",
+        icon: BotIcon,
         image: "/images/feature-two.svg",
     },
     {
-        title: "Comprehensive Insights",
-        description: "Gain deep insights into your support and boost efficiency",
-        icon: ChartColumnBigIcon,
+        title: "Multi-Language Support",
+        description: "Provide seamless support in over 60+ languages globally.",
+        icon: GlobeIcon,
         image: "/images/feature-one.svg",
     },
     {
-        title: "Knowledge Base",
-        description: "Your custom agent can be trained to answer from any knowledge base",
-        icon: DatabaseIcon,
+        title: "Comprehensive Insights",
+        description: "Gain deep, actionable insights to boost support efficiency.",
+        icon: ChartColumnBigIcon,
         image: "/images/feature-three.svg",
     },
     {
-        title: "Real-Time Analytics",
-        description: "Track and analyze your Support performance in real-time with metrics like CSAT score, First Response Time, Sentiment Analysis etc.",
-        icon: TrendingUpIcon,
+        title: "Knowledge Base",
+        description: "Train custom AI agents to answer from your own knowledge base.",
+        icon: DatabaseIcon,
         image: "/images/feature-four.svg",
     },
     {
-        title: "Workflows",
-        description: "Build powerful AI-powered Chatbots within minutes with our no code builder",
-        icon: ZapIcon,
+        title: "Real-Time Analytics",
+        description: "Track support performance and metrics in real-time.",
+        icon: TrendingUpIcon,
         image: "/images/feature-five.svg",
+    },
+    {
+        title: "No-Code Builder",
+        description: "Build powerful AI chatbots in minutes with our visual builder.",
+        icon: ZapIcon,
+        image: "/images/feature-two.svg",
+    },
+    {
+        title: "Intelligent Dashboard",
+        description: "Gain detailed oversight of support performance and metrics.",
+        icon: LayoutDashboardIcon,
+        image: "/images/feature-one.svg",
+    },
+    {
+        title: "Chatbot Insights",
+        description: "Track campaign performance with data-driven AI insights.",
+        icon: MessageSquareIcon,
+        image: "/images/feature-three.svg",
+    },
+    {
+        title: "CRM Integrations",
+        description: "Seamlessly integrate with your existing CRM workflow instruments.",
+        icon: LinkIcon,
+        image: "/images/feature-four.svg",
     }
 ]
