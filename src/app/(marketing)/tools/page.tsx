@@ -47,6 +47,16 @@ const tools = [
     gradientTo: "#6366f1",
   },
   {
+    title: "Email Signature Generator",
+    description:
+      "Create a professional, branded email signature in minutes. Customize your name, company, social links, and layout.",
+    icon: Mail,
+    href: "/tools/email-signature-generator",
+    comingSoon: false,
+    gradientFrom: "#f472b6", // Pink
+    gradientTo: "#a855f7", // Purple
+  },
+  {
     title: "AI Document Generator",
     description:
       "Create professional SOPs, Proposals, and Legal Drafts instantly. Strictly structured templates with AI-powered expansion.",
