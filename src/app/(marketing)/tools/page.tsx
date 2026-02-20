@@ -20,6 +20,7 @@ import {
   HelpCircle,
   Search,
   Briefcase,
+  Quote,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -255,6 +256,26 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#8b5cf6", // Violet
     gradientTo: "#d946ef", // Fuchsia
+  },
+  {
+    title: "YouTube Description Quotes Generator",
+    description:
+      "Generate engaging, powerful, and viral-ready quotes for your YouTube video descriptions in seconds.",
+    icon: Quote,
+    href: "/tools/youtube-description-quotes-generator",
+    comingSoon: false,
+    gradientFrom: "#ef4444", // Red
+    gradientTo: "#f97316", // Orange
+  },
+  {
+    title: "B2B Lead Gen Email Generator",
+    description:
+      "Create high-converting cold emails and outreach templates in seconds. Designed for founders, SDRs, and agencies.",
+    icon: Mail,
+    href: "/tools/b2b-lead-gen-email-generator",
+    comingSoon: false,
+    gradientFrom: "#3b82f6", // Blue
+    gradientTo: "#6366f1", // Indigo
   },
 ];
 
