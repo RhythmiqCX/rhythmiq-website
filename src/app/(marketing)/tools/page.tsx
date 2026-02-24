@@ -21,6 +21,8 @@ import {
   Search,
   Briefcase,
   Quote,
+  Calculator,
+  Rocket,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -46,6 +48,16 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#3b82f6",
     gradientTo: "#6366f1",
+  },
+  {
+    title: "Chatbot ROI Calculator",
+    description:
+      "Instantly calculate how much money and time you could save by automating your customer support with an AI chatbot.",
+    icon: Calculator,
+    href: "/tools/chatbot-roi-calculator",
+    comingSoon: false,
+    gradientFrom: "#10b981", // Emerald
+    gradientTo: "#059669", // Emerald darker
   },
   {
     title: "Email Signature Generator",
@@ -276,6 +288,16 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#3b82f6", // Blue
     gradientTo: "#6366f1", // Indigo
+  },
+  {
+    title: "AI Sales Funnel Builder",
+    description:
+      "Generate a complete, high-converting sales funnel in seconds, including landing page copy, email sequences, ad copy, and call scripts.",
+    icon: Rocket,
+    href: "/tools/ai-sales-funnel-builder",
+    comingSoon: false,
+    gradientFrom: "#ef4444", // Red
+    gradientTo: "#f97316", // Orange
   },
 ];
 
