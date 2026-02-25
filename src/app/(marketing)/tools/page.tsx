@@ -23,6 +23,7 @@ import {
   Quote,
   Calculator,
   Rocket,
+  Volume2,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -298,6 +299,26 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#ef4444", // Red
     gradientTo: "#f97316", // Orange
+  },
+  {
+    title: "AI Hindi Voice Generator",
+    description:
+      "Transform raw Hindi text into natural, human-like spoken audio using advanced text-to-speech models.",
+    icon: Volume2,
+    href: "/tools/ai-hindi-voice-generator",
+    comingSoon: false,
+    gradientFrom: "#6366f1",
+    gradientTo: "#a855f7",
+  },
+  {
+    title: "AI Reel & Short Voice Generator",
+    description:
+      "Create viral-ready scripts and instant AI voiceovers for Reels and Shorts. Supports English and Hindi.",
+    icon: Rocket,
+    href: "/tools/ai-reel-short-video-voice-generator",
+    comingSoon: false,
+    gradientFrom: "#ec4899",
+    gradientTo: "#f43f5e",
   },
 ];
 
