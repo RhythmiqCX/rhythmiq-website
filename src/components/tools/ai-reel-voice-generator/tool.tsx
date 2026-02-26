@@ -93,7 +93,7 @@ const AiReelVoiceGeneratorTool = () => {
   const [script, setScript] = useState("");
 
   const [selectedVoice, setSelectedVoice] = useState(VOICES.English[0].id);
-  const [audioSrc, setAudioSrc] = useState("");
+  const [audioSrc, setAudioSrc] = useState<string | null>(null);
 
   const [isGeneratingScript, setIsGeneratingScript] = useState(false);
   const [isGeneratingVoice, setIsGeneratingVoice] = useState(false);
