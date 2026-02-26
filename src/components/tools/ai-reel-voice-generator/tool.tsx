@@ -107,7 +107,7 @@ const AiReelVoiceGeneratorTool = () => {
     }
 
     setIsGeneratingScript(true);
-    setAudioSrc(null);
+    setAudioSrc("");
 
     try {
       const result = await generateScriptAction(
