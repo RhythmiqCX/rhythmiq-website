@@ -24,6 +24,7 @@ import {
   Calculator,
   Rocket,
   Volume2,
+  Mic,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -319,6 +320,26 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#ec4899",
     gradientTo: "#f43f5e",
+  },
+  {
+    title: "Voice to Text Converter",
+    description:
+      "Convert your voice into accurate text instantly. Speak in any language and get automatic transcription.",
+    icon: Mic,
+    href: "/tools/voice-to-text-converter",
+    comingSoon: false,
+    gradientFrom: "#3b82f6",
+    gradientTo: "#8b5cf6",
+  },
+  {
+    title: "AI Language Translator + Voiceover",
+    description:
+      "Translate speech into another language and instantly generate a natural AI voiceover.",
+    icon: Volume2,
+    href: "/tools/language-translator-voiceover",
+    comingSoon: false,
+    gradientFrom: "#6366f1",
+    gradientTo: "#d946ef",
   },
 ];
 
