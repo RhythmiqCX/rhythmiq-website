@@ -107,7 +107,7 @@ const AiReelVoiceGeneratorTool = () => {
     }
 
     setIsGeneratingScript(true);
-    setAudioSrc(null);
+    setAudioSrc("");
 
     try {
       const result = await generateScriptAction(
@@ -145,7 +145,7 @@ const AiReelVoiceGeneratorTool = () => {
         ) || VOICES[language === "Hindi" ? "Hindi" : "English"][0];
       const result = await generateVoiceAction({
         text: script,
-        provider: voiceConfig.provider,
+        provider: voiceConfig.provider as "deepgram" | "sarvam",
         voiceModel: voiceConfig.id,
       });
 
@@ -163,7 +163,7 @@ const AiReelVoiceGeneratorTool = () => {
     }
   };
 
-  const handleLanguageChange = (value) => {
+  const handleLanguageChange = (value: string) => {
     setLanguage(value);
     setSelectedVoice(VOICES[value === "Hindi" ? "Hindi" : "English"][0].id);
   };

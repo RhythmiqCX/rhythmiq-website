@@ -46,7 +46,7 @@ const SignaturePreview = ({
 }: {
   data: SignatureData;
   layout: LayoutType;
-  previewRef: React.RefObject<HTMLDivElement>;
+  previewRef: React.RefObject<HTMLDivElement | null>;
 }) => {
   // Common styles for email compatibility
   const linkStyle = {
