@@ -3,10 +3,12 @@ import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
 
-// Initialize OpenAI client
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Lazy-initialize OpenAI client to avoid build-time errors when API key is missing
+function getOpenAIClient(): OpenAI | null {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) return null;
+  return new OpenAI({ apiKey });
+}
 
 // Function to read the knowledge base from the markdown file
 function getKnowledgeBase(): string {
@@ -21,6 +23,11 @@ function getKnowledgeBase(): string {
 
 async function generateAIResponse(userMessage: string): Promise<string> {
   try {
+    const openai = getOpenAIClient();
+    if (!openai) {
+      console.error('❌ OPENAI_API_KEY not configured');
+      return "I'm sorry, the AI service is not configured. Please contact support.";
+    }
     console.log('🔍 Generating AI response for message:', userMessage);
     const knowledgeBase = getKnowledgeBase();
     console.log('📚 Knowledge base loaded, length:', knowledgeBase.length);
