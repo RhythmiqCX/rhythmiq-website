@@ -63,7 +63,7 @@ const TranslatorVoiceoverTool = () => {
   const [isCopiedOriginal, setIsCopiedOriginal] = useState(false);
   const [isCopiedTranslated, setIsCopiedTranslated] = useState(false);
 
-  const mediaRecorderRef = useRef(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef([]);
   const timerRef = useRef(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
