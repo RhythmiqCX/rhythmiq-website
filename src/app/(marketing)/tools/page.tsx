@@ -25,6 +25,8 @@ import {
   Rocket,
   Volume2,
   Mic,
+  ScanSearch,
+  Wand2,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -340,6 +342,46 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#6366f1",
     gradientTo: "#d946ef",
+  },
+  {
+    title: "CTC Calculator",
+    description:
+      "Calculate your monthly in-hand salary from your annual CTC. Detailed breakdown of PF, tax, HRA, gratuity, and allowances.",
+    icon: Calculator,
+    href: "/tools/ctc-calculator",
+    comingSoon: false,
+    gradientFrom: "#10b981", // Emerald
+    gradientTo: "#14b8a6", // Teal
+  },
+  {
+    title: "Free Grammar Checker",
+    description:
+      "Instantly check grammar, spelling, and punctuation errors. Get readability scores, writing analysis, and one-click corrections.",
+    icon: Sparkles,
+    href: "/tools/grammar-checker",
+    comingSoon: false,
+    gradientFrom: "#8b5cf6", // Violet
+    gradientTo: "#6366f1", // Indigo
+  },
+  {
+    title: "AI Plagiarism Detector",
+    description:
+      "Detect AI-generated content and plagiarism patterns using perplexity, burstiness, and stylometric analysis. Sentence-level risk reports included.",
+    icon: ScanSearch,
+    href: "/tools/ai-plagiarism-detector",
+    comingSoon: false,
+    gradientFrom: "#ef4444", // Red
+    gradientTo: "#f97316", // Orange
+  },
+  {
+    title: "AI Humanizer",
+    description:
+      "Transform AI-generated text into natural, human-like writing. Choose tone, preserve meaning, and make your content sound authentic.",
+    icon: Wand2,
+    href: "/tools/ai-humanizer",
+    comingSoon: false,
+    gradientFrom: "#10b981", // Emerald
+    gradientTo: "#14b8a6", // Teal
   },
 ];
 

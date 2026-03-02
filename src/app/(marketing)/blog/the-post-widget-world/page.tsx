@@ -8,7 +8,7 @@ export const metadata = generateMetadata({
   description:
     "A bold, spicy, strongly opinionated takedown of outdated chat bubble UX and why screen-native AI will replace widgets entirely.",
   alternates: {
-    canonical: "/blog/post-widget-world",
+    canonical: "/blog/the-post-widget-world",
   },
   openGraph: {
     images: ["/images/blog/10-12-25.jpg"],
