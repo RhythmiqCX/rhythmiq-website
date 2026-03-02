@@ -8,7 +8,7 @@ export const metadata = generateMetadata({
   description:
     "Stop wasting time on 'freemium' login walls. Here are 25 AI tools that actually respect your time and let you get straight to work no account needed.",
   alternates: {
-    canonical: "/blog/25-free-ai-tools-no-signup",
+    canonical: "/blog/free-ai-tools",
   },
   openGraph: {
     images: ["/images/blog/27-02-26.png"],

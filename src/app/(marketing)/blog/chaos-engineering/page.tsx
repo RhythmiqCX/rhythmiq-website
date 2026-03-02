@@ -7,7 +7,7 @@ export const metadata = generateMetadata({
   description:
     "A strongly opinionated, story driven deep dive into chaos engineering for AI agents. Learn why breaking bots intentionally is the only way to prevent silent failures, trust erosion, and production disasters.",
   alternates: {
-    canonical: "/blog/chaos-engineering-ai-agents",
+    canonical: "/blog/chaos-engineering",
   },
   openGraph: {
     images: ["/images/blog/15-12-25.jpg"],
@@ -19,10 +19,17 @@ export const metadata = generateMetadata({
 
 const SECTIONS = [
   { id: "first-lie", label: "The First Time Our AI Lied to a Customer" },
-  { id: "opinions", label: "Traditional Chaos Engineering Wasn’t Built for Agents With Opinions" },
+  {
+    id: "opinions",
+    label:
+      "Traditional Chaos Engineering Wasn’t Built for Agents With Opinions",
+  },
   { id: "break-it", label: "We Started Breaking Our AI on Purpose" },
   { id: "invisible-failure", label: "The Real Enemy Is Invisible Failure" },
-  { id: "rhythmiqcx", label: "How We Think About Chaos Engineering at RhythmiqCX" },
+  {
+    id: "rhythmiqcx",
+    label: "How We Think About Chaos Engineering at RhythmiqCX",
+  },
   { id: "final", label: "My Hot Take" },
 ];
 
@@ -86,14 +93,13 @@ export default function ChaosEngineeringAIBlog() {
         </p>
 
         <p>
-          I stared at the screen thinking{" "}
-          we tested this how did this happen. That sentence
-          should be engraved above every AI team’s war room.
+          I stared at the screen thinking we tested this how did this happen.
+          That sentence should be engraved above every AI team’s war room.
         </p>
 
         <p>
-          We had tests. We had dashboards. We had evaluation scripts. What we did
-          not have was a system designed to intentionally stress the AI’s
+          We had tests. We had dashboards. We had evaluation scripts. What we
+          did not have was a system designed to intentionally stress the AI’s
           understanding of reality. We never asked what happens when context is
           incomplete or when user intent shifts mid flow.
         </p>
@@ -110,16 +116,17 @@ export default function ChaosEngineeringAIBlog() {
           AI agents are not APIs. They are behaviors. And behaviors crack under
           pressure in ways metrics will never alert you about.
         </p>
-
       </section>
 
       <section id="opinions" className="mt-24 space-y-6">
-        <h2>Traditional Chaos Engineering Wasn’t Built for Agents With Opinions</h2>
+        <h2>
+          Traditional Chaos Engineering Wasn’t Built for Agents With Opinions
+        </h2>
 
         <p>
-          Classic chaos engineering assumes failure is mechanical. Servers crash.
-          Packets drop. Databases time out. You pull a plug and observe what
-          happens.
+          Classic chaos engineering assumes failure is mechanical. Servers
+          crash. Packets drop. Databases time out. You pull a plug and observe
+          what happens.
         </p>
 
         <p>
@@ -160,8 +167,8 @@ export default function ChaosEngineeringAIBlog() {
         <p>
           We began injecting chaos directly into the agent’s perception of the
           world. Intent signals delayed. UI context removed. Conflicting user
-          actions introduced. Timing distorted by seconds that felt invisible
-          to engineers but massive to users.
+          actions introduced. Timing distorted by seconds that felt invisible to
+          engineers but massive to users.
         </p>
 
         <p>
@@ -173,10 +180,8 @@ export default function ChaosEngineeringAIBlog() {
         <p>
           This aligned perfectly with{" "}
           <Link href="/blog/over-helpful-ai">Over Helpful AI</Link> and{" "}
-          <Link href="/blog/the-great-silence">
-            The Great Silence in AI
-          </Link>
-          . Timing is not UX polish. Timing is intelligence.
+          <Link href="/blog/the-great-silence">The Great Silence in AI</Link>.
+          Timing is not UX polish. Timing is intelligence.
         </p>
 
         <p>
@@ -272,9 +277,9 @@ export default function ChaosEngineeringAIBlog() {
           <Link href="https://rhythmiqcx.com/" className="underline">
             RhythmiqCX
           </Link>
-          , we have seen this first hand. Products become calmer. Support tickets
-          drop. Users stop fighting the interface. Not because the AI got
-          smarter but because it learned when to pause.
+          , we have seen this first hand. Products become calmer. Support
+          tickets drop. Users stop fighting the interface. Not because the AI
+          got smarter but because it learned when to pause.
         </p>
 
         <p>

@@ -7,7 +7,7 @@ export const metadata = generateMetadata({
   description:
     "Why tone, humor, and microcopy are the new branding battlegrounds in automation and how brands can build identity through AI conversations.",
   alternates: {
-    canonical: "/blog/ai-brand-identity",
+    canonical: "/blog/beyond-chatbots",
   },
   openGraph: {
     images: ["/images/blog/31-10.jpg"],
@@ -44,8 +44,7 @@ const RELATED = [
       "Discover how no-code AI lets non-tech teams build smarter bots faster and why that’s changing everything.",
   },
   {
-    title:
-      "From Workflows to Worlds: Building Persistent AI Customer Journeys",
+    title: "From Workflows to Worlds: Building Persistent AI Customer Journeys",
     href: "/blog/from-workflows-to-worlds",
     imageSrc: "/images/blog/29-10.jpg",
     date: "October 29, 2025",
@@ -71,7 +70,9 @@ export default function AIBrandIdentityPage() {
       relatedArticles={RELATED}
     >
       <section id="intro" className="mt-16 scroll-mt-20">
-        <h1>Beyond Chatbots: Building Brand Identity Through AI Conversations</h1>
+        <h1>
+          Beyond Chatbots: Building Brand Identity Through AI Conversations
+        </h1>
         <p>
           Let’s be real most chatbots sound like your overly polite cousin who
           took an online “How to Talk to Humans” course. Polished, predictable,
@@ -81,8 +82,8 @@ export default function AIBrandIdentityPage() {
         <p>
           At <Link href="https://rhythmiqcx.com/">RhythmiqCX</Link>, we’ve seen
           firsthand how personality in AI transforms customer experience. This
-          isn’t about code it’s about character. Your bot’s
-          voice can make users laugh, trust you, and even remember you.
+          isn’t about code it’s about character. Your bot’s voice can make users
+          laugh, trust you, and even remember you.
         </p>
         <p>
           If our last post{" "}
@@ -99,20 +100,20 @@ export default function AIBrandIdentityPage() {
       <section id="end-of-help" className="mt-16 scroll-mt-20">
         <h2>1. The End of “How Can I Help You?”</h2>
         <p>
-          Let’s retire that phrase once and for all. Every bot starts there,
-          and every customer rolls their eyes. That line belongs to the ghost
-          of customer service past.
+          Let’s retire that phrase once and for all. Every bot starts there, and
+          every customer rolls their eyes. That line belongs to the ghost of
+          customer service past.
         </p>
         <p>
-          When we replaced “Hi! How can I help you?” with “Hey there,
-          what’s breaking today?” engagement jumped 30%. Why? Because humans
-          respond to <em>tone</em>. Your bot doesn’t need to be perfect it
-          needs to sound real.
+          When we replaced “Hi! How can I help you?” with “Hey there, what’s
+          breaking today?” engagement jumped 30%. Why? Because humans respond to{" "}
+          <em>tone</em>. Your bot doesn’t need to be perfect it needs to sound
+          real.
         </p>
         <p>
-          Think about it: your brand has a voice on Instagram, a tone in
-          emails so why should your chatbot sound like a default template?
-          Every interaction is a branding moment in disguise.
+          Think about it: your brand has a voice on Instagram, a tone in emails
+          so why should your chatbot sound like a default template? Every
+          interaction is a branding moment in disguise.
         </p>
       </section>
 
@@ -120,8 +121,8 @@ export default function AIBrandIdentityPage() {
         <h2>2. Humor: The Last Unautomated Skill</h2>
         <p>
           Humor is messy. It doesn’t always land and that’s exactly what makes
-          it human. We tested a fintech bot that joked, “Funds low? At least your
-          sense of humor’s still rich.” Customers loved it. It wasn’t about
+          it human. We tested a fintech bot that joked, “Funds low? At least
+          your sense of humor’s still rich.” Customers loved it. It wasn’t about
           comedy it was about connection.
         </p>
         <p>
@@ -161,10 +162,9 @@ export default function AIBrandIdentityPage() {
       <section id="future" className="mt-16 scroll-mt-20">
         <h2>4. Let’s Build Bots That People Actually Miss</h2>
         <p>
-          The future of CX isn’t faster bots it’s bots people actually
-          miss. Imagine finishing a support chat and thinking,
-          “That was surprisingly fun.” That’s brand magic powered by
-          conversational AI.
+          The future of CX isn’t faster bots it’s bots people actually miss.
+          Imagine finishing a support chat and thinking, “That was surprisingly
+          fun.” That’s brand magic powered by conversational AI.
         </p>
         <p>
           We’re no longer building chatbots; we’re building digital
