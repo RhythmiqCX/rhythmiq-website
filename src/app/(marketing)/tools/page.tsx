@@ -27,6 +27,7 @@ import {
   Mic,
   ScanSearch,
   Wand2,
+  PhoneCall,
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
@@ -382,6 +383,16 @@ const tools = [
     comingSoon: false,
     gradientFrom: "#10b981", // Emerald
     gradientTo: "#14b8a6", // Teal
+  },
+  {
+    title: "AI Voice Agent Script Generator",
+    description:
+      "Generate professional AI voice assistant scripts instantly. Create ready-to-use scripts for AI receptionists, voice bots, and call automation systems.",
+    icon: PhoneCall,
+    href: "/tools/ai-voice-agent-script-generator",
+    comingSoon: false,
+    gradientFrom: "#14b8a6", // Teal
+    gradientTo: "#06b6d4", // Cyan
   },
 ];
 
