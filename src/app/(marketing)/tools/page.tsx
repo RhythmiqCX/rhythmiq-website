@@ -45,6 +45,26 @@ export const metadata = generateMetadata({
 
 const tools = [
   {
+    title: "AI Receptionist Script Generator",
+    description:
+      "Generate a customized, deployment-ready call script for your AI receptionist in under 60 seconds. Specify industry, tone, and scenarios to match your brand.",
+    icon: PhoneCall,
+    href: "/tools/ai-receptionist-script-generator",
+    comingSoon: false,
+    gradientFrom: "#14b8a6", // Teal
+    gradientTo: "#0284c7", // Sky blue
+  },
+  {
+    title: "AI Hindi & English Receptionist Voice",
+    description:
+      "Generate natural-sounding AI receptionist voices in Hindi and English instantly. Perfect for IVR and call center voice scripts without hiring voice artists.",
+    icon: Volume2,
+    href: "/tools/ai-hindi-english-receptionist-voice-generator",
+    comingSoon: false,
+    gradientFrom: "#6366f1", // Indigo
+    gradientTo: "#d946ef", // Fuchsia
+  },
+  {
     title: "AI Chat with Your Website Data",
     description:
       "Enter any webpage URL and chat with our AI to ask any questions, generate FAQs, or extract insights and get instant, accurate answers - Free to use. No sign up required.",
