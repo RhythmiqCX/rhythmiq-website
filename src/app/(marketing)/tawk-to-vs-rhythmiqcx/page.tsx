@@ -1,9 +1,55 @@
 import React from "react";
 import { CheckCircle, XCircle } from "lucide-react";
+import Image from "next/image";
+import { generateMetadata } from "@/utils";
+import JsonLd from "@/components/global/JsonLd";
+
+export const metadata = generateMetadata({
+  title: "RhythmiqCX vs Tawk.to | Honest 2025 AI Chat Platform Comparison",
+  description:
+    "Compare RhythmiqCX and Tawk.to side-by-side: AI capabilities, pricing, knowledge base limits, simultaneous conversations, and support. See why RhythmiqCX delivers 5x more AI value.",
+  keywords: [
+    "RhythmiqCX vs Tawk.to",
+    "Tawk.to alternative",
+    "AI chat platform comparison",
+    "best live chat software 2025",
+    "Tawk.to competitor",
+    "AI chatbot vs live chat",
+  ],
+  alternates: {
+    canonical: "/tawk-to-vs-rhythmiqcx",
+  },
+  openGraph: {
+    images: ["/icons/white.jpeg"],
+    type: "website",
+  },
+});
+
+const comparisonSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "RhythmiqCX vs Tawk.to: Honest AI Chat Platform Comparison",
+  description:
+    "A side-by-side comparison of RhythmiqCX and Tawk.to covering AI capabilities, pricing, knowledge base limits, and support quality.",
+  url: "https://rhythmiqcx.com/tawk-to-vs-rhythmiqcx",
+  author: {
+    "@type": "Organization",
+    name: "RhythmiqCX",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "RhythmiqCX",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://rhythmiqcx.com/icons/rhythmiq-icon.png",
+    },
+  },
+};
 
 export default function RhythmiqComparison() {
   return (
     <article className="max-w-5xl mx-auto p-6 prose prose-invert prose-headings:text-white text-white bg-background/80 rounded-2xl shadow-lg">
+      <JsonLd schema={comparisonSchema} />
       {/* Header */}
       <header className="mb-8 border-b border-gray-700 pb-4 text-center">
         <h1 className="text-4xl font-bold text-white">RhythmiqCX vs Tawk.to : Honest Comparison</h1>
@@ -41,11 +87,11 @@ what sets them apart so you can choose the best fit for your growth goals.
         {/* Logos Row */}
         <div className="flex justify-center items-center gap-12 mb-4">
           <div className="flex flex-col items-center">
-            <img src="/images/tawk.png" alt="Tawk.to Logo" className="h-12 mb-2" />
+            <Image src="/images/tawk.png" alt="Tawk.to logo" width={48} height={48} className="mb-2 object-contain" />
             <span className="text-gray-300 text-sm font-medium">Tawk.to</span>
           </div>
           <div className="flex flex-col items-center">
-            <img src="/icons/rhythmiq-icon.png" alt="RhythmiqCX Logo" className="h-12 mb-2" />
+            <Image src="/icons/rhythmiq-icon.png" alt="RhythmiqCX logo" width={48} height={48} className="mb-2 object-contain" />
             <span className="text-gray-300 text-sm font-medium">RhythmiqCX</span>
           </div>
         </div>

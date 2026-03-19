@@ -4,6 +4,47 @@ import CallToAction from "./CallToAction";
 import VoiceChatDemo from "./VoiceChatDemo";
 // import VoiceAICustomerSupport from "./Features";
 import VoiceAIFeatures from "../../../components/marketing/VoiceAIFeatures";
+import { generateMetadata as genMeta } from "@/utils";
+import JsonLd from "@/components/global/JsonLd";
+
+export const metadata = genMeta({
+  title: "AI Phone Receptionist & Voice AI Agents | RhythmiqCX — From $29/mo",
+  description:
+    "Deploy AI voice agents that answer customer calls 24/7 with human-like accuracy. No-code setup, 60+ languages, smart call routing — start free from $29/mo.",
+  keywords: [
+    "AI phone receptionist",
+    "voice AI agents",
+    "AI voice customer support",
+    "AI answering service small business",
+    "conversational voice AI",
+    "no-code voice AI",
+    "AI call routing",
+    "replace IVR with AI",
+  ],
+  alternates: {
+    canonical: "/voice-ai",
+  },
+  openGraph: {
+    images: ["/icons/white.jpeg"],
+    type: "website",
+  },
+});
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "RhythmiqCX Voice AI",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://rhythmiqcx.com/voice-ai",
+  description:
+    "AI voice agents with voice cloning, neural TTS, real-time synthesis, and smart call routing for 24x7 customer support automation.",
+  offers: {
+    "@type": "Offer",
+    price: "29",
+    priceCurrency: "USD",
+  },
+};
 // Improved copy object
 
 const voiceAIItems = [
@@ -72,6 +113,7 @@ const featuresObject = [
 const VoiceAIApp = () => {
   return (
     <div className="min-h-screen w-full">
+      <JsonLd schema={softwareSchema} />
       {/* Hero Section */}
       <section id="hero">
         <Hero />

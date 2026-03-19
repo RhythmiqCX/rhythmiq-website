@@ -201,6 +201,15 @@ export default function AIChatbotROIBlog() {
           because we kept seeing businesses deploy &ldquo;AI support&rdquo; that
           neither supported customers nor acted particularly intelligent. This
           post is what I wish existed when we were figuring this out ourselves.
+          If you&apos;re specifically evaluating phone coverage, we also published
+          a dedicated guide on{" "}
+          <Link
+            href="/blog/ai-answering-service-small-business"
+            className="text-blue-400 underline"
+          >
+            AI answering services for small business
+          </Link>{" "}
+          with a full cost comparison table.
         </p>
       </section>
 

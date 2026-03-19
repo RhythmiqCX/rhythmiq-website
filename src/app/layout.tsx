@@ -4,36 +4,54 @@ import { generateMetadata } from "@/utils";
 import { base, heading } from "@/constants";
 import { Toaster } from "@/components/ui/sonner";
 import { subheading } from "@/constants/fonts";
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import JsonLd from "@/components/global/JsonLd";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "RhythmiqCX",
+  url: "https://rhythmiqcx.com",
+  logo: "https://rhythmiqcx.com/icons/rhythmiq-icon.png",
+  sameAs: [],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    availableLanguage: ["English", "Hindi"],
+    url: "https://rhythmiqcx.com/contact-us",
+  },
+  description:
+    "RhythmiqCX is an AI CX platform that transforms how companies interact with customers through AI-powered support automation, WhatsApp chatbots, and voice AI.",
+};
 
 export const metadata = generateMetadata();
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    // Access environment variables at build time
-    const reb2bKey = process.env.REB2B_KEY || '';
-    const rhythmiqWidgetToken = process.env.RHYTHMIQ_WIDGET_TOKEN || '';
+  // Access environment variables at build time
+  const reb2bKey = process.env.REB2B_KEY || "";
+  const rhythmiqWidgetToken = process.env.RHYTHMIQ_WIDGET_TOKEN || "";
 
-    return (
-        <html lang="en" suppressHydrationWarning>
-            <body
-                className={cn(
-                    "min-h-screen bg-background text-foreground antialiased font-heading overflow-x-hidden !scrollbar-hide",
-                    base.variable,
-                    heading.variable,
-                    subheading.variable,
-                )}
-            >                
-                    
-                    <Toaster richColors theme="dark" position="top-right" />
-                    {children}
-                    <Analytics />
-                    <SpeedInsights />
-                    {/* Example Chatwoot integration - tokens removed for security
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen bg-background text-foreground antialiased font-heading overflow-x-hidden !scrollbar-hide",
+          base.variable,
+          heading.variable,
+          subheading.variable,
+        )}
+      >
+        <JsonLd schema={organizationSchema} />
+        <Toaster richColors theme="dark" position="top-right" />
+        {children}
+        <Analytics />
+        <SpeedInsights />
+        {/* Example Chatwoot integration - tokens removed for security
                         <script
                             dangerouslySetInnerHTML={{
                                 __html: `
@@ -55,7 +73,7 @@ export default function RootLayout({
                             }}
                         />
                         */}
-                        {/* Example widget loader - tokens removed for security
+        {/* Example widget loader - tokens removed for security
                         <script
                             dangerouslySetInnerHTML={{
                                 __html: `
@@ -69,11 +87,11 @@ export default function RootLayout({
                             }}
                         />
                         */}
-                        {reb2bKey && (
-                            <script
-                                // eslint-disable-next-line react/no-danger
-                                dangerouslySetInnerHTML={{
-                                    __html: `
+        {reb2bKey && (
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
                                     !function(key) {
                                         if (window.reb2b) return;
                                         window.reb2b = {loaded: true};
@@ -82,15 +100,15 @@ export default function RootLayout({
                                         s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";
                                         document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);
                                     }("${reb2bKey}");
-                                    `
-                                }}
-                            />
-                        )}
-                        {rhythmiqWidgetToken && (
-                            <script
-                                // eslint-disable-next-line react/no-danger
-                                dangerouslySetInnerHTML={{
-                                    __html: `
+                                    `,
+            }}
+          />
+        )}
+        {rhythmiqWidgetToken && (
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
                                 (function(d,t){
                                 var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
                                 g.src="https://app.rhythmiqcx.com/widget/widget-loader.js?websiteToken=${rhythmiqWidgetToken}";
@@ -98,10 +116,10 @@ export default function RootLayout({
                                 s.parentNode.insertBefore(g,s);
                                 })(document,"script");
                                 `,
-                                }}
-                            />
-                        )}
-            </body>
-        </html>
-    );
-};
+            }}
+          />
+        )}
+      </body>
+    </html>
+  );
+}

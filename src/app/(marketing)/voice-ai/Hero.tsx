@@ -16,9 +16,9 @@ const Hero = () => {
       <div className="max-w-4xl w-full mx-auto flex flex-col items-center text-center space-y-8">
         {/* Main Heading */}
         <div className="space-y-4">
-          <h3 className="text-sm md:text-base text-gray-500 font-medium">
+          <p className="text-sm md:text-base text-gray-500 font-medium">
             Redefining Customer Conversations with the Power of Voice AI
-          </h3>
+          </p>
           <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
             Deploy Conversational <br /> Voice AI Agents
           </h1>

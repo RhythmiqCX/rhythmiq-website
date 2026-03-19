@@ -7,19 +7,91 @@ import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import ImageTextSection from "@/components/marketing/imagetext";
 import { generateMetadata } from "@/utils";
+import JsonLd from "@/components/global/JsonLd";
 
 export const metadata = generateMetadata({
   title: "AI Customer Support Chatbot | Omni-Channel Automation & CSAT Boost",
   description:
     "Deploy an AI-powered customer support chatbot that deflects tickets, resolves FAQs and boosts CSAT across web, WhatsApp & more. Start a free demo today.",
+  keywords: [
+    "AI customer support chatbot",
+    "customer support automation",
+    "ticket deflection AI",
+    "omnichannel chatbot",
+    "CSAT improvement",
+    "AI helpdesk",
+    "WhatsApp support bot",
+    "live agent handoff",
+  ],
   alternates: {
-    canonical: "/book-demo",
+    canonical: "/ai-customer-support",
+  },
+  openGraph: {
+    images: ["/icons/white.jpeg"],
+    type: "website",
   },
 });
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "RhythmiqCX AI Customer Support Chatbot",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://rhythmiqcx.com/ai-customer-support",
+  description:
+    "AI-powered customer support chatbot that deflects 70% of tickets, boosts CSAT by 35%, and handles web, WhatsApp & more channels 24x7.",
+  offers: {
+    "@type": "Offer",
+    price: "29",
+    priceCurrency: "USD",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Can an AI customer support chatbot handle complex queries?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. RhythmiqCX generative AI first tries to resolve the issue using your knowledge base. If confidence is low, it escalates to a live agent with a conversation summary so that nothing is lost.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does implementation take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most teams launch within 15 minutes: connect your help desk, paste the widget snippet, and you're live. WhatsApp approval typically adds 2-3 business days.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is the AI chatbot GDPR & HIPAA compliant?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Data can be kept in region (depending on country). We encrypt at rest and in transit and keep full audit logs for regulatory compliance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What languages does the chatbot support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Over 60 languages including English, Hindi, Bengali, Telugu, Tamil, Spanish, German, and French. Ideal for global products.",
+      },
+    },
+  ],
+};
 
 export default function AICustomerSupportPage() {
   return (
     <main className="flex flex-col overflow-x-hidden">
+      <JsonLd schema={softwareSchema} />
+      <JsonLd schema={faqSchema} />
       <div className="relative flex flex-col items-center justify-center w-full py-20">
         <div className="absolute flex lg:hidden size-40 rounded-full bg-blue-500 blur-[10rem] top-0 left-1/2 -translate-x-1/2 -z-10"></div>
 
