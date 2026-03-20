@@ -5,19 +5,89 @@ import { ArrowRightIcon } from 'lucide-react';
 import Link from 'next/link';
 import ImageTextSection from '@/components/marketing/imagetext';
 import { generateMetadata } from '@/utils';
+import JsonLd from '@/components/global/JsonLd';
 
 export const metadata = generateMetadata({
   title: 'WhatsApp AI Chatbot | Automate Customer Support on WhatsApp Business API',
   description:
     'Step by step 2025 guide to building a WhatsApp AI chatbot. Learn approval, pricing, templates, and launch flows that deflect tickets and drive 5x higher engagement.',
+  keywords: [
+    'WhatsApp AI chatbot',
+    'WhatsApp Business API chatbot',
+    'WhatsApp customer support automation',
+    'WhatsApp chatbot india',
+    'WhatsApp bot 2025',
+    'AI WhatsApp bot',
+  ],
   alternates: {
     canonical: '/whatsapp-ai-chatbot',
   },
+  openGraph: {
+    images: ['/icons/white.jpeg'],
+    type: 'website',
+  },
 });
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'RhythmiqCX WhatsApp AI Chatbot',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  url: 'https://rhythmiqcx.com/whatsapp-ai-chatbot',
+  description:
+    'Automate customer support on WhatsApp Business API with an AI chatbot that handles FAQs, order updates, and rich media — no code required.',
+  offers: {
+    '@type': 'Offer',
+    price: '29',
+    priceCurrency: 'USD',
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do I set up my WhatsApp number?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "After you buy a WhatsApp plan, we'll guide you through connecting your existing number or getting a new one. No extra BSP setup needed — RhythmiqCX handles everything.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I use my own BSP account?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. If you already have a WhatsApp Business API provider, simply paste your API credentials in our dashboard and we will connect you immediately.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What happens if WhatsApp changes pricing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "We pass through Meta's conversation rates without markup and adjust our overage fees accordingly. You get full visibility of any rate changes in your invoice.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a trial available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, every plan includes a 7-day trial with full WhatsApp support features — no credit card required.',
+      },
+    },
+  ],
+};
 
 export default function WhatsAppAIChatbotPage() {
   return (
     <main className="flex flex-col">
+      <JsonLd schema={softwareSchema} />
+      <JsonLd schema={faqSchema} />
       {/* ─────────────── Hero */}
       <section className="relative w-full px-4 bg-gradient-to-b from-green-600/20 to-background pt-28 pb-20 lg:py-32 text-center">
         <Container className="space-y-6">

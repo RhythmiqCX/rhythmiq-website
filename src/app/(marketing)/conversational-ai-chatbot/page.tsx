@@ -5,19 +5,90 @@ import { ArrowRightIcon } from 'lucide-react';
 import Link from 'next/link';
 import ImageTextSection from '@/components/marketing/imagetext';
 import { generateMetadata } from '@/utils';
+import JsonLd from '@/components/global/JsonLd';
 
 export const metadata = generateMetadata({
   title: 'Conversational AI Chatbot | Build Natural Dialogues that Convert',
   description:
     'Learn what conversational AI is, how chatbots use large language models, and step-by-step instructions to deploy a production ready conversational AI platform in 2025.',
+  keywords: [
+    'conversational AI chatbot',
+    'NLP chatbot',
+    'large language model chatbot',
+    'multi-turn conversation AI',
+    'AI dialogue management',
+    'chatbot platform 2025',
+    'no code chatbot builder',
+  ],
   alternates: {
     canonical: '/conversational-ai-chatbot',
   },
+  openGraph: {
+    images: ['/icons/white.jpeg'],
+    type: 'website',
+  },
 });
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'RhythmiqCX Conversational AI Chatbot',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  url: 'https://rhythmiqcx.com/conversational-ai-chatbot',
+  description:
+    'Conversational AI platform with NLP, LLMs, and dialogue management. Deploy natural multi-turn chatbots on web and WhatsApp without code.',
+  offers: {
+    '@type': 'Offer',
+    price: '29',
+    priceCurrency: 'USD',
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is conversational AI the same as a chatbot?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A chatbot is one application of conversational AI. Conversational AI includes the NLP engine, LLMs, voice processing and analytics that power the chatbot.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need a lot of Knowledge Base documents?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Start by explaining what is important, for rest of the parts if they are generic, you can have a prompt which tells how to handle certain queries in a generic manner.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What languages are supported?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Over 60 languages including Spanish, Hindi, English, Telugu, Bengali, Arabic and German.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I integrate with Zendesk or Salesforce?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, use secure webhooks to sync tickets, contacts and transcripts. Omni Plan users can also prioritize feature requests specific to them.',
+      },
+    },
+  ],
+};
 
 export default function ConversationalAIChatbotPage() {
   return (
     <main className="flex flex-col">
+      <JsonLd schema={softwareSchema} />
+      <JsonLd schema={faqSchema} />
       {/* ─────────────── Hero */}
       <section className="relative w-full px-4 bg-gradient-to-b from-cyan-600/20 to-background pt-28 pb-20 lg:py-32 text-center">
         <Container className="space-y-6">

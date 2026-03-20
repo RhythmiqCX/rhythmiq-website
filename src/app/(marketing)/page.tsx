@@ -8,10 +8,23 @@ import Integration from "@/components/marketing/integration";
 import LanguageSupport from "@/components/marketing/lang-support";
 import Pricing from "@/components/marketing/pricing";
 import { generateMetadata } from "@/utils";
+import JsonLd from "@/components/global/JsonLd";
 
 export const metadata = generateMetadata({
     title: "Rhythmiq - AI-Powered Customer Support Agent",
     description: "Rhythmiq is an AI CX platform that transforms how companies interact with Customers. Leverage AI to automate support queries, create personalized AI agents, and boost productivity. Experience smarter Customer Services today.",
+    keywords: [
+        "AI customer support",
+        "AI CX platform",
+        "customer support automation",
+        "AI chatbot",
+        "WhatsApp chatbot",
+        "voice AI",
+        "AI support agent",
+        "multilingual AI support",
+        "AI chat widget",
+        "customer service AI India",
+    ],
     alternates: {
         canonical: "/"
     },
@@ -21,10 +34,27 @@ export const metadata = generateMetadata({
     }
 });
 
+const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "RhythmiqCX",
+    url: "https://rhythmiqcx.com",
+    description: "AI CX platform that transforms customer support through automation, WhatsApp chatbots, and voice AI agents.",
+    potentialAction: {
+        "@type": "SearchAction",
+        target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://rhythmiqcx.com/blog?search={search_term_string}",
+        },
+        "query-input": "required name=search_term_string",
+    },
+};
+
 
 const HomePage = () => {
     return (
         <Wrapper className="py-20 relative">
+            <JsonLd schema={websiteSchema} />
             <Hero />
             {/* <Companies /> */}
             <Features />

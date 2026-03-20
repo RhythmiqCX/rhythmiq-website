@@ -648,7 +648,17 @@ export default function AIAnsweringServiceSmallBusiness() {
           Indian-English native voice quality (built on Sarvam&apos;s Bulbul v2
           model the only neural TTS trained specifically for Indian-English
           accents). Every competitor in this space either costs 3–12× more,
-          requires engineering to set up, or is voice-only.
+          requires engineering to set up, or is voice-only. If you&apos;re
+          running a business in India specifically, we wrote a dedicated post on{" "}
+          <Link
+            href="/blog/ai-voice-agent-india"
+            className="text-blue-400 underline"
+          >
+            how Indian businesses can use AI voice agents for 24/7 customer call
+            handling
+          </Link>
+          it covers Sarvam&apos;s Indian-English models and why they matter for
+          regional callers.
         </p>
 
         <p>
@@ -707,7 +717,6 @@ export default function AIAnsweringServiceSmallBusiness() {
         </p>
       </section>
 
-      {/* ── SECTION 7: VERDICT ───────────────────────────────────────────── */}
       <section id="verdict" className="mt-24 space-y-6">
         <h2 className="text-3xl font-semibold text-white">
           Final Verdict: Who Should Get an AI Answering Service Right Now
@@ -753,7 +762,6 @@ export default function AIAnsweringServiceSmallBusiness() {
         </p>
       </section>
 
-      {/* ── SECTION 8: FAQ ───────────────────────────────────────────────── */}
       <section id="faq" className="mt-24 space-y-8">
         <h2 className="text-3xl font-semibold text-white">
           Frequently Asked Questions

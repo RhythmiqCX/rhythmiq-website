@@ -57,7 +57,7 @@ const Hero = () => {
             <p className="max-w-xl mx-auto mt-2 text-base lg:text-lg text-center text-muted-foreground">
               {/* AI-powered automation and insights to maximize your campaigns and grow your brand. */}
               Our AI first no code agent delivers human-quality service in 60+
-              langugages. Use it on your existing platform.
+              languages. Use it on your existing platform.
             </p>
           </Container>
           <Container delay={0.25} className="z-20">
@@ -71,12 +71,12 @@ const Hero = () => {
                   <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-all duration-300" />
                 </Button>
               </Link>
-              <Link href="/voice-ai" className="flex items-center gap-2 group">
+              <Link href="/voice-ai" className="flex items-center gap-2 group" title="AI Phone Receptionist — Voice AI for Customer Support">
                 <Button
                   size="lg"
                   className="bg-black text-white hover:bg-neutral-900 dark:bg-black dark:text-white dark:hover:bg-neutral-900 transition-all duration-300 flex items-center gap-2 rounded-lg"
                 >
-                  Voice AI
+                  AI Phone Receptionist
                   <Mic className="size-4 group-hover:translate-x-1 transition-all duration-300" />
                 </Button>
               </Link>
