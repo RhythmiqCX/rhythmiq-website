@@ -16,8 +16,8 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-muted-foreground mt-4 text-sm text-start">
-              AI-powered platform that transforms your customer support workflow
-              in seconds.
+              AI phone receptionist that answers every customer call, 24/7 voice
+              AI, WhatsApp, and chat on one platform.
             </p>
           </div>
         </Container>
@@ -55,15 +55,15 @@ const Footer = () => {
               </h3>
               <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                 <li>
+                  <Link href="/voice-ai">AI Phone Receptionist</Link>
+                </li>
+                <li>
                   <Link href="/rhythmiq-ai-web-widget">
                     Rhythmiq AI Web Widget
                   </Link>
                 </li>
                 <li>
-                  <Link href="/whatsapp-ai-chatbot">Whatsapp AI Chatbot</Link>
-                </li>
-                <li>
-                  <Link href="/voice-ai">Realtime Voice AI</Link>
+                  <Link href="/whatsapp-ai-chatbot">WhatsApp AI Chatbot</Link>
                 </li>
               </ul>
             </Container>
@@ -106,8 +106,19 @@ const Footer = () => {
               </h3>
               <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                 <li>
-                  <Link href="/tawk-to-vs-rhythmiqcx">
-                    Tawk.to vs RhythmiqCX
+                  <Link href="/retell-ai-alternative">
+                    Retell AI Alternative
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/bland-ai-alternative">Bland AI Alternative</Link>
+                </li>
+                <li>
+                  <Link href="/vapi-alternative">Vapi Alternative</Link>
+                </li>
+                <li>
+                  <Link href="/synthflow-alternative">
+                    Synthflow Alternative
                   </Link>
                 </li>
               </ul>
