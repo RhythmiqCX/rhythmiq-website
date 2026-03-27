@@ -2,8 +2,11 @@ import React from "react";
 import Hero from "./Hero";
 import CallToAction from "./CallToAction";
 import VoiceChatDemo from "./VoiceChatDemo";
-// import VoiceAICustomerSupport from "./Features";
 import VoiceAIFeatures from "../../../components/marketing/VoiceAIFeatures";
+import VoiceAIFAQ from "./VoiceAIFAQ";
+import HowItWorks from "./HowItWorks";
+import PricingComparison from "./PricingComparison";
+import MarketsSection from "./MarketsSection";
 import { generateMetadata as genMeta } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
 
@@ -20,6 +23,8 @@ export const metadata = genMeta({
     "no-code voice AI",
     "AI call routing",
     "replace IVR with AI",
+    "AI receptionist India",
+    "Indian English voice AI",
   ],
   alternates: {
     canonical: "/voice-ai",
@@ -33,62 +38,78 @@ export const metadata = genMeta({
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "RhythmiqCX Voice AI",
+  name: "RhythmiqCX Voice AI — AI Phone Receptionist",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   url: "https://rhythmiqcx.com/voice-ai",
   description:
-    "AI voice agents with voice cloning, neural TTS, real-time synthesis, and smart call routing for 24x7 customer support automation.",
+    "RhythmiqCX Voice AI is a conversational AI phone receptionist platform that deploys human-like AI voice agents for 24/7 inbound and outbound call handling. Features voice cloning, neural TTS (Sarvam Bulbul v2), real-time synthesis, smart call routing, and no-code setup starting at $29/month.",
   offers: {
     "@type": "Offer",
     price: "29",
     priceCurrency: "USD",
+    priceValidUntil: "2027-01-01",
+    description: "Flat monthly pricing — no per-minute overages",
   },
+  featureList: [
+    "24/7 AI phone answering",
+    "Voice cloning",
+    "Neural TTS (Sarvam Bulbul v2)",
+    "Indian-English support",
+    "60+ language support",
+    "Smart call routing",
+    "No-code setup",
+    "WhatsApp + Chat + Voice omnichannel",
+  ],
 };
-// Improved copy object
 
-const voiceAIItems = [
-  {
-    image:
-      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm1kc3F1ZmZqNjN1ZjJndGo5NGYxdHA0aXEzM2NxZm9icjJyaTdndiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MbMBoPpI3MS44vkUTS/giphy.gif",
-    text: "Voice Cloning",
-  },
-  {
-    image:
-      "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTM1djg2b3Zja2NqeW93aDJvNW1obmw4djBrcnBlam01eTdmajdzcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MeQ0kQLyqWL5XOsNf7/giphy.gif",
-    text: "Neural TTS",
-  },
-  {
-    image:
-      "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXp1Z2dxemRuZTV5M3hnbzRldm96ZDZnNDdjYTQ0eGJ5bXgzYzN0NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LQv4IGmdZAF7TmMJEa/giphy.gif",
-    text: "Real-time Synthesis",
-  },
-  {
-    image:
-      "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHhsM2dxNm14ZnM4bXN6aHg3ejNlMDZ6M2tjdDJ6YXRjcmVpZnp4aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ToMjGpDvCkRu9lHREUE/giphy.gif",
-    text: "API Integration",
-  },
-  {
-    image:
-      "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTl3YWVxN2ZwbWdzcnZweHhmYWFrYWE2MHZ2OHhwYXE3NXc1b3ZsZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fsnTLgZFfWgHmxqQTk/giphy.gif",
-    text: "GPU Acceleration",
-  },
-  {
-    image:
-      "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzZ4cGFuMzR6dmd2eHF2dmpzeDVoMWswN2hsZGRoYjRueWphNjMzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b0HYKHINjL32qEsoJt/giphy.gif",
-    text: "Customization",
-  },
-  {
-    image:
-      "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXM4dTZjNXFrZzh5dXIyYmwwdGptNWlzYmVhZTV0c3RrbTAzaXVqaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/StcrDoMb4eSXn80J0J/giphy.gif",
-    text: "Voice Calls",
-  },
-  {
-    image:
-      "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcno2eGR6N2NxN2oxNXN6dmV6bXpldG4wYWc5YTBpeHd3OWtmNjNleSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT1Ra12a03lcpJf5C0/giphy.gif",
-    text: "Conversation AI",
-  },
-];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does an AI phone receptionist cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "RhythmiqCX Voice AI starts at $29/month — flat rate with no per-minute overages. Competitors charge $0.07–$0.31/min or $99–$349/month. At $29/mo you get 24/7 AI call handling with voice, chat, and WhatsApp included.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How realistic does the AI phone receptionist sound?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "RhythmiqCX uses Sarvam Bulbul v2 neural TTS — one of the most advanced Indian-English voice models. Callers consistently describe the voice as natural and human-like. Voice cloning is available to match your brand persona.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What languages does Voice AI support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The default model is optimised for Indian-English with native accent support. The platform covers 60+ languages. Hindi, Tamil, Telugu, and SEA language voice personas are on the roadmap.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does AI receptionist setup take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most deployments go live within one business day. Configure your AI persona, connect your phone number, and upload your knowledge base. No coding required.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can the AI handle complex customer queries?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The AI handles FAQs, bookings, and routine queries. Low-confidence calls automatically transfer to a live agent with the full transcript — customers never repeat themselves.",
+      },
+    },
+  ],
+};
+
 const featuresObject = [
   {
     section1Subheading: "Always Available",
@@ -114,18 +135,28 @@ const VoiceAIApp = () => {
   return (
     <div className="min-h-screen w-full">
       <JsonLd schema={softwareSchema} />
+      <JsonLd schema={faqSchema} />
+
       {/* Hero Section */}
       <section id="hero">
         <Hero />
       </section>
-      <br />
-      {/* VoiceChatDemo Section */}
+
+      {/* Definition paragraph for AEO / AI citation */}
+      <section className="w-full max-w-3xl mx-auto px-6 py-8 text-center">
+        <p className="text-gray-400 text-sm leading-relaxed">
+          <strong className="text-white">RhythmiqCX Voice AI</strong> is a conversational AI phone receptionist platform that deploys human-like AI voice agents for 24/7 inbound and outbound call handling. Powered by Sarvam Bulbul v2 neural TTS and real-time speech-to-text, it routes calls intelligently, supports 60+ languages, and starts at <strong className="text-white">$29/month</strong> — no per-minute fees, no developer required.
+        </p>
+      </section>
+
+      {/* How It Works */}
+      <section>
+        <HowItWorks />
+      </section>
+
+      {/* VoiceChatDemo + Features */}
       <section id="voice-demo" className="scroll-mt-16">
         <VoiceChatDemo />
-
-        {/* <div style={{ height: '600px', position: 'relative' }}>
-          <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} items={voiceAIItems}/>
-        </div> */}
 
         <VoiceAIFeatures
           section2={true}
@@ -144,8 +175,25 @@ const VoiceAIApp = () => {
           section1Subheading={featuresObject[2].section1Subheading}
           imageUrl1="images/thirdimg1-unscreen.gif"
         />
-        <CallToAction />
       </section>
+
+      {/* Markets */}
+      <section>
+        <MarketsSection />
+      </section>
+
+      {/* Pricing Comparison */}
+      <section>
+        <PricingComparison />
+      </section>
+
+      {/* FAQ */}
+      <section>
+        <VoiceAIFAQ />
+      </section>
+
+      {/* CTA */}
+      <CallToAction />
     </div>
   );
 };
