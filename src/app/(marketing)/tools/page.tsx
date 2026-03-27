@@ -414,6 +414,46 @@ const tools = [
     gradientFrom: "#14b8a6", // Teal
     gradientTo: "#06b6d4", // Cyan
   },
+  {
+    title: "Indian English AI Voice Generator",
+    description:
+      "Free Indian English voice generator powered by Sarvam Bulbul v2 — the only neural TTS built for Indian-English accents. Natural prosody, multiple voices.",
+    icon: Volume2,
+    href: "/tools/ai-indian-english-voice-generator",
+    comingSoon: false,
+    gradientFrom: "#f97316", // Orange
+    gradientTo: "#f59e0b", // Amber
+  },
+  {
+    title: "Free AI Voice Generator — Bahasa Indonesia",
+    description:
+      "Convert Bahasa Indonesia text to natural AI speech instantly. 270M Indonesian speakers, almost zero competition in AI voice tools. No sign-up required.",
+    icon: Volume2,
+    href: "/tools/ai-indonesian-voice-generator",
+    comingSoon: false,
+    gradientFrom: "#10b981", // Emerald
+    gradientTo: "#059669", // Green
+  },
+  {
+    title: "Free AI Voice Generator — Tagalog",
+    description:
+      "Convert Tagalog (Filipino) text to natural AI speech instantly. 100M+ Tagalog speakers globally — finally a voice AI that works for Filipino. No sign-up.",
+    icon: Volume2,
+    href: "/tools/ai-tagalog-voice-generator",
+    comingSoon: false,
+    gradientFrom: "#3b82f6", // Blue
+    gradientTo: "#6366f1", // Indigo
+  },
+  {
+    title: "Free Malay AI Text to Speech",
+    description:
+      "Convert Bahasa Malaysia text to natural AI voice instantly. One of the most underserved AI voice markets — near-zero competition. No sign-up required.",
+    icon: Volume2,
+    href: "/tools/ai-malay-text-to-speech",
+    comingSoon: false,
+    gradientFrom: "#eab308", // Yellow
+    gradientTo: "#f97316", // Orange
+  },
 ];
 
 const ToolsPage = () => {
