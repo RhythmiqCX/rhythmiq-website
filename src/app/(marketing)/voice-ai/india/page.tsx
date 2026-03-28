@@ -5,7 +5,8 @@ import JsonLd from "@/components/global/JsonLd";
 import { Check, X } from "lucide-react";
 
 export const metadata = genMeta({
-  title: "AI Receptionist for India — 24/7 Indian-English Voice AI from ₹2,400/mo",
+  title:
+    "AI Receptionist for India 24/7 Indian-English Voice AI from ₹2,400/mo",
   description:
     "AI phone receptionist for Indian businesses. Native Indian-English voice (Sarvam Bulbul v2), WhatsApp + voice + chat, flat ₹2,400/month. No per-minute fees.",
   keywords: [
@@ -81,11 +82,46 @@ const faqSchema = {
 };
 
 const competitors = [
-  { name: "RhythmiqCX", price: "$29/mo (₹2,400)", indianEnglish: true, whatsapp: true, noCode: true, highlight: true },
-  { name: "My AI Front Desk", price: "$99/mo", indianEnglish: false, whatsapp: false, noCode: true, highlight: false },
-  { name: "Retell AI", price: "$0.07+/min", indianEnglish: false, whatsapp: false, noCode: false, highlight: false },
-  { name: "Bland AI", price: "$0.09+/min", indianEnglish: false, whatsapp: false, noCode: false, highlight: false },
-  { name: "ElevenLabs", price: "$22/mo", indianEnglish: false, whatsapp: false, noCode: true, highlight: false },
+  {
+    name: "RhythmiqCX",
+    price: "$29/mo (₹2,400)",
+    indianEnglish: true,
+    whatsapp: true,
+    noCode: true,
+    highlight: true,
+  },
+  {
+    name: "My AI Front Desk",
+    price: "$99/mo",
+    indianEnglish: false,
+    whatsapp: false,
+    noCode: true,
+    highlight: false,
+  },
+  {
+    name: "Retell AI",
+    price: "$0.07+/min",
+    indianEnglish: false,
+    whatsapp: false,
+    noCode: false,
+    highlight: false,
+  },
+  {
+    name: "Bland AI",
+    price: "$0.09+/min",
+    indianEnglish: false,
+    whatsapp: false,
+    noCode: false,
+    highlight: false,
+  },
+  {
+    name: "ElevenLabs",
+    price: "$22/mo",
+    indianEnglish: false,
+    whatsapp: false,
+    noCode: true,
+    highlight: false,
+  },
 ];
 
 export default function VoiceAIIndiaPage() {
@@ -100,12 +136,15 @@ export default function VoiceAIIndiaPage() {
           Made for India · Sarvam Bulbul v2
         </div>
         <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-          AI Receptionist for India —<br className="hidden md:block" /> 24/7 Indian-English Voice AI
+          AI Receptionist for India —<br className="hidden md:block" /> 24/7
+          Indian-English Voice AI
         </h1>
         <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-4">
-          RhythmiqCX is the only AI phone receptionist built specifically for Indian businesses.
-          Powered by Sarvam Bulbul v2 — native Indian-English TTS that actually sounds right.
-          Flat <strong className="text-white">₹2,400/month</strong>. No per-minute charges. Voice + WhatsApp + Chat in one platform.
+          RhythmiqCX is the only AI phone receptionist built specifically for
+          Indian businesses. Powered by Sarvam Bulbul v2 native Indian-English
+          TTS that actually sounds right. Flat{" "}
+          <strong className="text-white">₹2,400/month</strong>. No per-minute
+          charges. Voice + WhatsApp + Chat in one platform.
         </p>
         <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-400 mb-10">
           <span>✓ Native Indian-English accent</span>
@@ -151,9 +190,14 @@ export default function VoiceAIIndiaPage() {
               body: "My AI Front Desk charges $99/month ($99 ≈ ₹8,200). RhythmiqCX is $29/month (₹2,400). Same 24/7 AI calls. 3.4x cheaper.",
             },
           ].map((item, i) => (
-            <div key={i} className="p-6 rounded-xl border border-slate-700 bg-slate-900/40">
+            <div
+              key={i}
+              className="p-6 rounded-xl border border-slate-700 bg-slate-900/40"
+            >
               <h3 className="font-semibold text-white mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.body}</p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {item.body}
+              </p>
             </div>
           ))}
         </div>
@@ -170,21 +214,59 @@ export default function VoiceAIIndiaPage() {
               <tr className="border-b border-slate-700 bg-slate-800/60">
                 <th className="text-left px-4 py-3 text-gray-300">Platform</th>
                 <th className="text-center px-4 py-3 text-gray-300">Price</th>
-                <th className="text-center px-4 py-3 text-gray-300">Indian English</th>
-                <th className="text-center px-4 py-3 text-gray-300">WhatsApp</th>
+                <th className="text-center px-4 py-3 text-gray-300">
+                  Indian English
+                </th>
+                <th className="text-center px-4 py-3 text-gray-300">
+                  WhatsApp
+                </th>
                 <th className="text-center px-4 py-3 text-gray-300">No-Code</th>
               </tr>
             </thead>
             <tbody>
               {competitors.map((c, i) => (
-                <tr key={i} className={`border-b border-slate-700/50 ${c.highlight ? "bg-orange-500/10 border-l-2 border-l-orange-500" : "bg-slate-900/30"}`}>
+                <tr
+                  key={i}
+                  className={`border-b border-slate-700/50 ${c.highlight ? "bg-orange-500/10 border-l-2 border-l-orange-500" : "bg-slate-900/30"}`}
+                >
                   <td className="px-4 py-3 font-semibold text-white">
-                    {c.highlight ? <span>{c.name} <span className="text-[10px] bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-full ml-1">Best for India</span></span> : c.name}
+                    {c.highlight ? (
+                      <span>
+                        {c.name}{" "}
+                        <span className="text-[10px] bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-full ml-1">
+                          Best for India
+                        </span>
+                      </span>
+                    ) : (
+                      c.name
+                    )}
                   </td>
-                  <td className={`px-4 py-3 text-center ${c.highlight ? "text-orange-400 font-semibold" : "text-gray-300"}`}>{c.price}</td>
-                  <td className="px-4 py-3 text-center">{c.indianEnglish ? <Check className="w-4 h-4 text-green-400 mx-auto" /> : <X className="w-4 h-4 text-red-400 mx-auto" />}</td>
-                  <td className="px-4 py-3 text-center">{c.whatsapp ? <Check className="w-4 h-4 text-green-400 mx-auto" /> : <X className="w-4 h-4 text-red-400 mx-auto" />}</td>
-                  <td className="px-4 py-3 text-center">{c.noCode ? <Check className="w-4 h-4 text-green-400 mx-auto" /> : <X className="w-4 h-4 text-red-400 mx-auto" />}</td>
+                  <td
+                    className={`px-4 py-3 text-center ${c.highlight ? "text-orange-400 font-semibold" : "text-gray-300"}`}
+                  >
+                    {c.price}
+                  </td>
+                  <td className="px-4 py-3 text-center">
+                    {c.indianEnglish ? (
+                      <Check className="w-4 h-4 text-green-400 mx-auto" />
+                    ) : (
+                      <X className="w-4 h-4 text-red-400 mx-auto" />
+                    )}
+                  </td>
+                  <td className="px-4 py-3 text-center">
+                    {c.whatsapp ? (
+                      <Check className="w-4 h-4 text-green-400 mx-auto" />
+                    ) : (
+                      <X className="w-4 h-4 text-red-400 mx-auto" />
+                    )}
+                  </td>
+                  <td className="px-4 py-3 text-center">
+                    {c.noCode ? (
+                      <Check className="w-4 h-4 text-green-400 mx-auto" />
+                    ) : (
+                      <X className="w-4 h-4 text-red-400 mx-auto" />
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -194,12 +276,21 @@ export default function VoiceAIIndiaPage() {
 
       {/* FAQ */}
       <section className="max-w-3xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-bold text-white text-center mb-8">FAQ — AI Receptionist for India</h2>
+        <h2 className="text-2xl font-bold text-white text-center mb-8">
+          FAQ — AI Receptionist for India
+        </h2>
         <div className="space-y-4">
           {faqSchema.mainEntity.map((item, i) => (
-            <div key={i} className="border border-slate-700 rounded-lg p-5 bg-slate-900/40">
-              <h3 className="text-white font-medium mb-2 text-sm">{item.name}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            <div
+              key={i}
+              className="border border-slate-700 rounded-lg p-5 bg-slate-900/40"
+            >
+              <h3 className="text-white font-medium mb-2 text-sm">
+                {item.name}
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {item.acceptedAnswer.text}
+              </p>
             </div>
           ))}
         </div>
@@ -211,14 +302,20 @@ export default function VoiceAIIndiaPage() {
           Ready to Deploy Your AI Receptionist?
         </h2>
         <p className="text-gray-400 mb-8 text-sm">
-          Join Indian startups and SMBs using RhythmiqCX to handle every call 24/7.
-          Start from ₹2,400/month — no contracts, no per-minute fees.
+          Join Indian startups and SMBs using RhythmiqCX to handle every call
+          24/7. Start from ₹2,400/month — no contracts, no per-minute fees.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/voice-ai" className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold px-8 py-3 rounded-lg transition-all">
+          <Link
+            href="/voice-ai"
+            className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold px-8 py-3 rounded-lg transition-all"
+          >
             Explore Voice AI →
           </Link>
-          <Link href="/tools/ai-indian-english-voice-generator" className="border border-slate-600 hover:border-orange-500 text-white px-8 py-3 rounded-lg transition-all">
+          <Link
+            href="/tools/ai-indian-english-voice-generator"
+            className="border border-slate-600 hover:border-orange-500 text-white px-8 py-3 rounded-lg transition-all"
+          >
             Try Free Indian English Voice Generator
           </Link>
         </div>

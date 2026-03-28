@@ -41,7 +41,7 @@ const RELATED = [
       "An honest look at whether AI will replace human receptionists by 2026 covering costs, capabilities, and what businesses are actually doing.",
   },
   {
-    title: "AI Phone Receptionist: Complete Guide for Small Business (2026)",
+    title: ": Complete Guide for Small Business (2026)",
     href: "/blog/ai-vs-remote-vs-in-person-receptionist",
     imageSrc: "/images/blog/14-03-26.jpg",
     date: "March 14, 2026",

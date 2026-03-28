@@ -11,7 +11,7 @@ import JsonLd from "@/components/global/JsonLd";
 export const metadata = generateMetadata({
   title: "Free AI Text to Speech Malay (Bahasa Malaysia) — RhythmiqCX",
   description:
-    "Convert Bahasa Malaysia text to natural AI speech instantly. Free Malay TTS — no sign-up required. Near-zero competition for Malay AI voice online.",
+    "Convert Bahasa Malaysia text to natural AI speech instantly. Free Malay TTS no sign-up required. Near-zero competition for Malay AI voice online.",
   keywords: [
     "AI text to speech Malay",
     "Bahasa Malaysia TTS",
@@ -46,8 +46,15 @@ export default function AiMalayTextToSpeechPage() {
       <Wrapper className="relative z-10">
         <Container className="flex flex-col gap-8 md:gap-12">
           <div className="w-full">
-            <Button asChild variant="ghost" className="group -ml-4 hover:bg-transparent">
-              <Link href="/tools" className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
+            <Button
+              asChild
+              variant="ghost"
+              className="group -ml-4 hover:bg-transparent"
+            >
+              <Link
+                href="/tools"
+                className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
+              >
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
                 Back to Tools
               </Link>
@@ -60,9 +67,9 @@ export default function AiMalayTextToSpeechPage() {
               <span className="text-yellow-400">Bahasa Malaysia</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Convert Bahasa Malaysia (Malay) text to natural-sounding AI voice in seconds.
-              One of the most underserved languages in AI voice — almost no competition.
-              No sign-up required.
+              Convert Bahasa Malaysia (Malay) text to natural-sounding AI voice
+              in seconds. One of the most underserved languages in AI voice —
+              almost no competition. No sign-up required.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <span>✓ No sign-up</span>
@@ -77,13 +84,20 @@ export default function AiMalayTextToSpeechPage() {
           </Container>
 
           <div className="max-w-3xl mx-auto w-full space-y-6 text-muted-foreground text-sm leading-relaxed border-t border-border/50 pt-10">
-            <h2 className="text-xl font-bold text-foreground">About This Malay AI Text to Speech Tool</h2>
+            <h2 className="text-xl font-bold text-foreground">
+              About This Malay AI Text to Speech Tool
+            </h2>
             <p>
-              This free Malay TTS tool converts Bahasa Malaysia text into natural AI speech.
-              Bahasa Malaysia has over 33 million native speakers in Malaysia and millions more across Brunei and Singapore.
-              Despite this, almost no AI voice platform offers high-quality Malay TTS — making this one of the most underserved AI voice markets in Southeast Asia.
+              This free Malay TTS tool converts Bahasa Malaysia text into
+              natural AI speech. Bahasa Malaysia has over 33 million native
+              speakers in Malaysia and millions more across Brunei and
+              Singapore. Despite this, almost no AI voice platform offers
+              high-quality Malay TTS making this one of the most underserved AI
+              voice markets in Southeast Asia.
             </p>
-            <h3 className="text-base font-semibold text-foreground">Use Cases</h3>
+            <h3 className="text-base font-semibold text-foreground">
+              Use Cases
+            </h3>
             <ul className="list-disc pl-5 space-y-1">
               <li>IVR greetings and automated phone responses in Malay</li>
               <li>WhatsApp voice messages for Malaysian businesses</li>
@@ -92,8 +106,15 @@ export default function AiMalayTextToSpeechPage() {
               <li>Accessibility features for Malaysian apps and websites</li>
             </ul>
             <p>
-              Malaysian businesses looking for a full AI phone receptionist with WhatsApp integration can explore{" "}
-              <Link href="/voice-ai/southeast-asia" className="text-primary hover:underline">Voice AI for Southeast Asia</Link>.
+              Malaysian businesses looking for a full AI phone receptionist with
+              WhatsApp integration can explore{" "}
+              <Link
+                href="/voice-ai/southeast-asia"
+                className="text-primary hover:underline"
+              >
+                Voice AI for Southeast Asia
+              </Link>
+              .
             </p>
           </div>
 

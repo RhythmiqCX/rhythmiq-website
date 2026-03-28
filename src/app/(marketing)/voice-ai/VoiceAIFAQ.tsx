@@ -6,7 +6,7 @@ import { cn } from "@/lib";
 const faqs = [
   {
     q: "How realistic does the AI phone receptionist sound?",
-    a: "RhythmiqCX uses Sarvam Bulbul v2 neural TTS — one of the most advanced Indian-English voice models available. Callers consistently describe the voice as natural and human-like, with configurable pitch and pace. Voice cloning is also available to match your specific brand persona.",
+    a: "RhythmiqCX uses Sarvam Bulbul v2 neural TTS one of the most advanced Indian-English voice models available. Callers consistently describe the voice as natural and human-like, with configurable pitch and pace. Voice cloning is also available to match your specific brand persona.",
   },
   {
     q: "What languages does Voice AI support?",
@@ -14,15 +14,15 @@ const faqs = [
   },
   {
     q: "How much does an AI phone receptionist cost?",
-    a: "RhythmiqCX Voice AI starts at $29/month — that's flat predictable pricing with no per-minute overages. Competitors like Retell AI charge $0.07+/min, Synthflow starts at $99/mo, and Ringly.io starts at $349/mo. At $29/mo you get 24/7 AI call handling included.",
+    a: "RhythmiqCX Voice AI starts at $29/month  that's flat predictable pricing with no per-minute overages. Competitors like Retell AI charge $0.07+/min, Synthflow starts at $99/mo, and Ringly.io starts at $349/mo. At $29/mo you get 24/7 AI call handling included.",
   },
   {
     q: "How long does setup take?",
-    a: "Most deployments go live within a day. Configure your AI persona, connect your phone number or embed the widget, and upload your knowledge base. No coding required — our no-code setup works with most telephony providers and CRM stacks.",
+    a: "Most deployments go live within a day. Configure your AI persona, connect your phone number or embed the widget, and upload your knowledge base. No coding required  our no-code setup works with most telephony providers and CRM stacks.",
   },
   {
     q: "Can the AI handle complex customer queries?",
-    a: "Yes, up to a threshold. The AI is trained on your knowledge base for FAQs, booking, and routine queries. When confidence is low, it automatically transfers the caller to a live agent — with the full transcript — so the customer never needs to repeat themselves.",
+    a: "Yes, up to a threshold. The AI is trained on your knowledge base for FAQs, booking, and routine queries. When confidence is low, it automatically transfers the caller to a live agent  with the full transcript  so the customer never needs to repeat themselves.",
   },
   {
     q: "Is call data secure and GDPR/HIPAA compliant?",
@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: "What is the difference between RhythmiqCX and a traditional IVR?",
-    a: "Traditional IVR forces callers through rigid press-1 menus. RhythmiqCX uses natural language understanding — callers simply speak their request in plain English (or Hindi, or 60+ other languages) and the AI responds conversationally. No menus, no frustration.",
+    a: "Traditional IVR forces callers through rigid press-1 menus. RhythmiqCX uses natural language understanding  callers simply speak their request in plain English (or Hindi, or 60+ other languages) and the AI responds conversationally. No menus, no frustration.",
   },
 ];
 
@@ -44,7 +44,9 @@ const VoiceAIFAQ = () => {
   return (
     <section className="w-full max-w-3xl mx-auto px-4 py-16">
       <div className="text-center mb-10">
-        <p className="text-sm font-medium text-cyan-400 uppercase tracking-widest mb-2">FAQ</p>
+        <p className="text-sm font-medium text-cyan-400 uppercase tracking-widest mb-2">
+          FAQ
+        </p>
         <h2 className="text-2xl md:text-3xl font-bold text-white">
           Common Questions About AI Phone Receptionists
         </h2>
@@ -65,7 +67,7 @@ const VoiceAIFAQ = () => {
               <ChevronDown
                 className={cn(
                   "w-4 h-4 text-gray-400 flex-shrink-0 ml-4 transition-transform duration-200",
-                  open === i && "rotate-180"
+                  open === i && "rotate-180",
                 )}
               />
             </button>

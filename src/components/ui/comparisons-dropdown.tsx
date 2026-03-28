@@ -4,7 +4,11 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
 const COMPARISON_LINKS = [
-  { name: 'Tawk.to vs Rhythmiq', href: '/tawk-to-vs-rhythmiqcx' }
+  { name: 'Retell AI Alternative', href: '/retell-ai-alternative' },
+  { name: 'Bland AI Alternative', href: '/bland-ai-alternative' },
+  { name: 'Vapi Alternative', href: '/vapi-alternative' },
+  { name: 'Synthflow Alternative', href: '/synthflow-alternative' },
+  { name: 'Tawk.to vs Rhythmiq', href: '/tawk-to-vs-rhythmiqcx' },
 ];
 
 export default function ComparisonsDropdown() {

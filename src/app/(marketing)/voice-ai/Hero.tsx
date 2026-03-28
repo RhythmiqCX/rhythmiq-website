@@ -25,7 +25,8 @@ const Hero = () => {
         </div>
 
         <p className="text-sm md:text-base text-gray-300 leading-relaxed max-w-2xl">
-          Deploy conversational AI voice agents that answer every customer call 24/7 — no hold queues, no missed leads. Human-like accuracy from $29/mo.
+          Deploy conversational AI voice agents that answer every customer call
+          24/7 no hold queues, no missed leads. Human-like accuracy from $29/mo.
         </p>
 
         {/* Stats bar */}
@@ -51,7 +52,9 @@ const Hero = () => {
         <AnimatedGradientButton />
 
         <div className="flex flex-col items-center">
-          <p className="mb-1 text-xs text-gray-400">Already running a team? See how it works.</p>
+          <p className="mb-1 text-xs text-gray-400">
+            Already running a team? See how it works.
+          </p>
           <a
             href="https://calendly.com/ray-rhythmiqcx/30min"
             target="_blank"
@@ -63,7 +66,7 @@ const Hero = () => {
             Book a Demo
           </a>
         </div>
-        </div>
+      </div>
     </section>
   );
 };

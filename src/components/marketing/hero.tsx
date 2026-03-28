@@ -8,7 +8,7 @@ import { OrbitingCircles } from "../ui/orbiting-circles";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-full py-20">
+    <div className="relative flex flex-col items-center justify-center w-full py-15">
       <div className="absolute flex lg:hidden size-40 rounded-full bg-blue-500 blur-[10rem] top-0 left-1/2 -translate-x-1/2 -z-10"></div>
 
       <div className="flex flex-col items-center justify-center gap-y-8 relative">
@@ -49,35 +49,40 @@ const Hero = () => {
           </Container>
           <Container>
             <h1 className="text-4xl md:text-4xl lg:text-7xl font-bold text-center !leading-tight max-w-4xl mx-auto">
-              Transform your <span className="">Customer Support </span>
-              with AI
+              AI Phone Receptionist{" "}
+              <span className="">Answers Every Call,</span> 24/7
             </h1>
           </Container>
           <Container delay={0.2}>
             <p className="max-w-xl mx-auto mt-2 text-base lg:text-lg text-center text-muted-foreground">
               {/* AI-powered automation and insights to maximize your campaigns and grow your brand. */}
-              Our AI first no code agent delivers human-quality service in 60+
-              languages. Use it on your existing platform.
+              Deploy human-like AI voice agents that handle inbound calls, route
+              complex queries, and never miss a lead in 60+ languages, from
+              $29/mo.
             </p>
           </Container>
           <Container delay={0.25} className="z-20">
             <div className="flex items-center justify-center mt-6 gap-x-4">
               <Link
-                href="/rhythmiq-ai-web-widget"
+                href="/voice-ai"
                 className="flex items-center gap-2 group"
+                title="AI Phone Receptionist — Voice AI for Customer Support"
               >
                 <Button size="lg">
-                  Explore
-                  <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-all duration-300" />
+                  Try Voice AI Free
+                  <Mic className="size-4 group-hover:translate-x-1 transition-all duration-300" />
                 </Button>
               </Link>
-              <Link href="/voice-ai" className="flex items-center gap-2 group" title="AI Phone Receptionist — Voice AI for Customer Support">
+              <Link
+                href="/voice-ai"
+                className="flex items-center gap-2 group"
+              >
                 <Button
                   size="lg"
                   className="bg-black text-white hover:bg-neutral-900 dark:bg-black dark:text-white dark:hover:bg-neutral-900 transition-all duration-300 flex items-center gap-2 rounded-lg"
                 >
-                  AI Phone Receptionist
-                  <Mic className="size-4 group-hover:translate-x-1 transition-all duration-300" />
+                  Explore All Products
+                  <ArrowRightIcon className="size-4 group-hover:translate-x-1 transition-all duration-300" />
                 </Button>
               </Link>
             </div>

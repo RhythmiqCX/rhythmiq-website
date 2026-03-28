@@ -80,7 +80,7 @@ const faqSchema = {
       name: "How realistic does the AI phone receptionist sound?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "RhythmiqCX uses Sarvam Bulbul v2 neural TTS — one of the most advanced Indian-English voice models. Callers consistently describe the voice as natural and human-like. Voice cloning is available to match your brand persona.",
+        text: "RhythmiqCX uses Sarvam Bulbul v2 neural TTS one of the most advanced Indian-English voice models. Callers consistently describe the voice as natural and human-like. Voice cloning is available to match your brand persona.",
       },
     },
     {
@@ -145,7 +145,13 @@ const VoiceAIApp = () => {
       {/* Definition paragraph for AEO / AI citation */}
       <section className="w-full max-w-3xl mx-auto px-6 py-8 text-center">
         <p className="text-gray-400 text-sm leading-relaxed">
-          <strong className="text-white">RhythmiqCX Voice AI</strong> is a conversational AI phone receptionist platform that deploys human-like AI voice agents for 24/7 inbound and outbound call handling. Powered by Sarvam Bulbul v2 neural TTS and real-time speech-to-text, it routes calls intelligently, supports 60+ languages, and starts at <strong className="text-white">$29/month</strong> — no per-minute fees, no developer required.
+          <strong className="text-white">RhythmiqCX Voice AI</strong> is a
+          conversational AI phone receptionist platform that deploys human-like
+          AI voice agents for 24/7 inbound and outbound call handling. Powered
+          by Sarvam Bulbul v2 neural TTS and real-time speech-to-text, it routes
+          calls intelligently, supports 60+ languages, and starts at{" "}
+          <strong className="text-white">$29/month</strong> — no per-minute
+          fees, no developer required.
         </p>
       </section>
 

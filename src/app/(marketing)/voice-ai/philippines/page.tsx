@@ -5,7 +5,8 @@ import JsonLd from "@/components/global/JsonLd";
 import { Check, X } from "lucide-react";
 
 export const metadata = genMeta({
-  title: "AI Receptionist for Philippines — 24/7 Voice AI for Philippine Businesses",
+  title:
+    "AI Receptionist for Philippines 24/7 Voice AI for Philippine Businesses",
   description:
     "AI phone receptionist for Philippine businesses and BPO sector. English-first AI voice handles inbound calls 24/7. Replace tier-1 BPO agents at $29/month.",
   keywords: [
@@ -40,7 +41,7 @@ const faqSchema = {
       name: "Can an AI receptionist replace BPO tier-1 agents in the Philippines?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes for routine queries. AI handles order status, FAQs, appointment scheduling, and account queries — the bulk of tier-1 BPO work. Complex escalations are routed to human agents with full transcripts. Philippine BPOs using AI typically reduce tier-1 headcount by 30–40%.",
+        text: "Yes for routine queries. AI handles order status, FAQs, appointment scheduling, and account queries  the bulk of tier-1 BPO work. Complex escalations are routed to human agents with full transcripts. Philippine BPOs using AI typically reduce tier-1 headcount by 30–40%.",
       },
     },
     {
@@ -73,12 +74,14 @@ export default function VoiceAIPhilippinesPage() {
           Philippines · BPO Sector · English-First
         </div>
         <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-          AI Receptionist for Philippines —<br className="hidden md:block" /> Replace Tier-1 BPO Calls with AI
+          AI Receptionist for Philippines <br className="hidden md:block" />{" "}
+          Replace Tier-1 BPO Calls with AI
         </h1>
         <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-4">
-          The Philippines BPO industry has 1.5 million+ agents. AI now handles 40% of tier-1 calls —
-          order status, FAQs, appointment scheduling — at <strong className="text-white">$29/month flat</strong>.
-          No per-minute fees. 24/7 coverage without overtime.
+          The Philippines BPO industry has 1.5 million+ agents. AI now handles
+          40% of tier-1 calls order status, FAQs, appointment scheduling at{" "}
+          <strong className="text-white">$29/month flat</strong>. No per-minute
+          fees. 24/7 coverage without overtime.
         </p>
         <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-400 mb-10">
           <span>✓ English-first voice AI</span>
@@ -87,49 +90,96 @@ export default function VoiceAIPhilippinesPage() {
           <span>✓ $29/month flat</span>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/voice-ai#voice-demo" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold px-8 py-3 rounded-lg transition-all">
+          <Link
+            href="/voice-ai#voice-demo"
+            className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold px-8 py-3 rounded-lg transition-all"
+          >
             Try Live Demo
           </Link>
-          <Link href="https://calendly.com/ray-rhythmiqcx/30min" target="_blank" rel="noopener noreferrer" className="border border-slate-600 hover:border-blue-500 text-white px-8 py-3 rounded-lg transition-all">
+          <Link
+            href="https://calendly.com/ray-rhythmiqcx/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-slate-600 hover:border-blue-500 text-white px-8 py-3 rounded-lg transition-all"
+          >
             Book a Demo
           </Link>
         </div>
       </section>
 
       <section className="max-w-5xl mx-auto px-6 py-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">Why Philippine Businesses Choose AI Receptionists</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
+          Why Philippine Businesses Choose AI Receptionists
+        </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { title: "BPO Cost Savings", body: "A single BPO agent costs $400–$600/month. RhythmiqCX is $29/month and handles 1,000+ concurrent calls. ROI is clear in the first week." },
-            { title: "24/7 Without Overtime", body: "Philippine BPOs struggle with after-hours coverage. AI answers every call at 2 AM, on holidays, during typhoon season — without overtime pay." },
-            { title: "English-First, Tagalog Coming", body: "Philippine English is world-class English. Our AI recognises Filipino accents accurately. Tagalog voice support is on the roadmap for 2026." },
+            {
+              title: "BPO Cost Savings",
+              body: "A single BPO agent costs $400–$600/month. RhythmiqCX is $29/month and handles 1,000+ concurrent calls. ROI is clear in the first week.",
+            },
+            {
+              title: "24/7 Without Overtime",
+              body: "Philippine BPOs struggle with after-hours coverage. AI answers every call at 2 AM, on holidays, during typhoon season  without overtime pay.",
+            },
+            {
+              title: "English-First, Tagalog Coming",
+              body: "Philippine English is world-class English. Our AI recognises Filipino accents accurately. Tagalog voice support is on the roadmap for 2026.",
+            },
           ].map((item, i) => (
-            <div key={i} className="p-6 rounded-xl border border-slate-700 bg-slate-900/40">
+            <div
+              key={i}
+              className="p-6 rounded-xl border border-slate-700 bg-slate-900/40"
+            >
               <h3 className="font-semibold text-white mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.body}</p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {item.body}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="max-w-3xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-bold text-white text-center mb-8">FAQ — AI Receptionist Philippines</h2>
+        <h2 className="text-2xl font-bold text-white text-center mb-8">
+          FAQ AI Receptionist Philippines
+        </h2>
         <div className="space-y-4">
           {faqSchema.mainEntity.map((item, i) => (
-            <div key={i} className="border border-slate-700 rounded-lg p-5 bg-slate-900/40">
-              <h3 className="text-white font-medium mb-2 text-sm">{item.name}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.acceptedAnswer.text}</p>
+            <div
+              key={i}
+              className="border border-slate-700 rounded-lg p-5 bg-slate-900/40"
+            >
+              <h3 className="text-white font-medium mb-2 text-sm">
+                {item.name}
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {item.acceptedAnswer.text}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="max-w-3xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Start Automating Philippine Call Handling</h2>
-        <p className="text-gray-400 mb-8 text-sm">$29/month flat. No contracts. No per-minute fees. Deploy in a day.</p>
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          Start Automating Philippine Call Handling
+        </h2>
+        <p className="text-gray-400 mb-8 text-sm">
+          $29/month flat. No contracts. No per-minute fees. Deploy in a day.
+        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/voice-ai" className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-8 py-3 rounded-lg">Explore Voice AI →</Link>
-          <Link href="/tools/ai-tagalog-voice-generator" className="border border-slate-600 hover:border-blue-500 text-white px-8 py-3 rounded-lg">Try Free Tagalog Voice Generator</Link>
+          <Link
+            href="/voice-ai"
+            className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-8 py-3 rounded-lg"
+          >
+            Explore Voice AI →
+          </Link>
+          <Link
+            href="/tools/ai-tagalog-voice-generator"
+            className="border border-slate-600 hover:border-blue-500 text-white px-8 py-3 rounded-lg"
+          >
+            Try Free Tagalog Voice Generator
+          </Link>
         </div>
       </section>
     </div>

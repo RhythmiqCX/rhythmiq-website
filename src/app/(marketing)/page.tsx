@@ -11,8 +11,8 @@ import { generateMetadata } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
 
 export const metadata = generateMetadata({
-    title: "Rhythmiq - AI-Powered Customer Support Agent",
-    description: "Rhythmiq is an AI CX platform that transforms how companies interact with Customers. Leverage AI to automate support queries, create personalized AI agents, and boost productivity. Experience smarter Customer Services today.",
+    title: "AI Phone Receptionist & Voice AI Agents | RhythmiqCX — From $29/mo",
+    description: "Deploy AI voice agents that answer every customer call 24/7 with human-like accuracy. No-code setup, 60+ languages, smart call routing — start free from $29/mo.",
     keywords: [
         "AI customer support",
         "AI CX platform",
