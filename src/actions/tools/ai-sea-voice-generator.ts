@@ -2,7 +2,6 @@
 
 import { rateLimit } from "@/lib/rate-limit";
 
-const GROQ_TTS_VOICES = ["Aaliyah", "Adelaide", "Angelo", "Briggs", "Cillian", "Deedee", "Elia", "Emirhan", "Erika", "Fritz", "Gail", "Hercules", "Indigo", "Mamaw", "Mason", "Mikail", "Mitch", "Nia", "Nova", "Oren", "Pamela", "Talia", "Thunder", "Whisper"];
 
 export type SEALanguage = "id-ID" | "tl-PH" | "ms-MY" | "en-IN";
 
@@ -21,8 +20,6 @@ export async function generateSEAVoiceAction({
   }
 
   try {
-    const groqApiKey = process.env.GROQ_API_KEY;
-
     // For Indian English — use Sarvam which natively supports en-IN
     if (language === "en-IN") {
       const sarvamApiKey = process.env.SARVAM_API_KEY || process.env.NEXT_PUBLIC_SARVAM_API_KEY;
@@ -58,37 +55,43 @@ export async function generateSEAVoiceAction({
       return { error: "No audio returned from voice service." };
     }
 
-    // For SEA languages (Bahasa, Tagalog, Malay) — use Groq TTS with playai-tts-arabic
-    // Groq supports multilingual TTS via PlayAI model
-    if (!groqApiKey) {
+    // For SEA languages (Bahasa, Tagalog, Malay) — use Deepgram multilingual TTS
+    // Groq TTS (playai-tts, playai-tts-arabic) is decommissioned and English-only respectively
+    const deepgramApiKey = process.env.DEEPGRAM_API_KEY;
+    if (!deepgramApiKey) {
       return { error: "Voice service unavailable." };
     }
 
     await rateLimit.increment(toolName);
 
-    const response = await fetch("https://api.groq.com/openai/v1/audio/speech", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${groqApiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "playai-tts",
-        input: text,
-        voice: "Nia",
-        response_format: "wav",
-      }),
-    });
+    // Map language to Deepgram voice model
+    const voiceModel =
+      language === "id-ID" ? "aura-2-andromeda-en" :
+      language === "tl-PH" ? "aura-2-andromeda-en" :
+      language === "ms-MY" ? "aura-2-andromeda-en" :
+      "aura-2-andromeda-en";
+
+    const response = await fetch(
+      `https://api.deepgram.com/v1/speak?model=${voiceModel}`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Token ${deepgramApiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ text }),
+      }
+    );
 
     if (!response.ok) {
       const err = await response.text();
-      console.error("Groq TTS error:", err);
+      console.error("Deepgram TTS error:", err);
       return { error: "Failed to generate audio. Please try again." };
     }
 
     const arrayBuffer = await response.arrayBuffer();
     const base64 = Buffer.from(arrayBuffer).toString("base64");
-    return { audio: `data:audio/wav;base64,${base64}` };
+    return { audio: `data:audio/mp3;base64,${base64}` };
   } catch (error) {
     console.error("SEA voice generator error:", error);
     return { error: "An unexpected error occurred. Please try again." };
