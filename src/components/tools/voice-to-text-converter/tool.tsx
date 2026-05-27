@@ -66,8 +66,7 @@ const VoiceToTextConverterTool = () => {
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -176,45 +175,45 @@ const VoiceToTextConverterTool = () => {
   };
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+    if (e.target.files && e.target.files.length > 0) {
+      const file = e.target.files[0];
 
-    if (file.size > 10 * 1024 * 1024) {
-      toast.error("File size must be under 10MB");
-      return;
-    }
-
-    setOriginalText("");
-    setTranslatedText("");
-    setDetectedLanguage("");
-
-    setIsProcessing(true);
-    try {
-      const formData = new FormData();
-      formData.append("audio", file);
-      formData.append("shouldTranslate", String(shouldTranslate));
-      formData.append("targetLanguage", targetLanguage);
-
-      const response = await processVoiceToTextAction(formData);
-
-      if (response.error) {
-        toast.error(response.error);
-      } else {
-        setOriginalText(response.originalText || "No speech detected.");
-        setTranslatedText(response.translatedText || "");
-        setDetectedLanguage(response.detectedLanguage || "Unknown");
-        toast.success("Audio processed successfully!");
+      if (file.size > 10 * 1024 * 1024) {
+        toast.error("File size must be under 10MB");
+        return;
       }
-    } catch (error) {
-      console.error("Processing error:", error);
-      toast.error("An error occurred while processing the audio.");
-    } finally {
-      setIsProcessing(false);
-      checkUsageAction("voice-to-text-converter").then((res) =>
-        setIsLimitReached(res.isLimitReached),
-      );
+
+      setOriginalText("");
+      setTranslatedText("");
+      setDetectedLanguage("");
+      setIsProcessing(true);
+
+      try {
+        const formData = new FormData();
+        formData.append("audio", file);
+        formData.append("shouldTranslate", String(shouldTranslate));
+        formData.append("targetLanguage", targetLanguage);
+
+        const response = await processVoiceToTextAction(formData);
+
+        if (response.error) {
+          toast.error(response.error);
+        } else {
+          setOriginalText(response.originalText || "No speech detected.");
+          setTranslatedText(response.translatedText || "");
+          setDetectedLanguage(response.detectedLanguage || "Unknown");
+          toast.success("File processed successfully!");
+        }
+      } catch (error) {
+        console.error("Processing error:", error);
+        toast.error("An error occurred while processing the file.");
+      } finally {
+        setIsProcessing(false);
+        checkUsageAction("voice-to-text-converter").then((res) =>
+          setIsLimitReached(res.isLimitReached),
+        );
+      }
     }
-    e.target.value = "";
   };
 
   const copyToClipboard = (text: string, isOriginal: boolean) => {
