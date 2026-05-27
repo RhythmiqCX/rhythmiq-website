@@ -12,7 +12,7 @@ export const metadata = generateMetadata({
   openGraph: {
     images: ["/images/blog/02-04-26.jpg"],
     type: "article",
-    publishedTime: "2026-04-02",
+    publishedTime: "2026-05-26",
     authors: ["PV8"],
   },
 });
@@ -283,12 +283,12 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
   return (
     <BlogLayout
       category={{
-        href: "/blog/category/Voice AI",
+        href: "/blog/category/voice-ai",
         label: "Voice AI",
       }}
-      date="2026-04-02"
+      date="2026-05-26"
       title="AI Phone Receptionist for Small Business: The Complete 2026 Guide"
-      excerpt="Every small business owner knows the feeling: you're in a meeting, a client calls, and you can't answer. That call is gone. Here's how to fix it permanently  without hiring anyone."
+      excerpt="Every small business owner knows the feeling: you're in a meeting, a client calls, and you can't answer. That call is gone. Here's how to fix it permanently without hiring anyone."
       authors={[{ avatar: "/icons/PV8.png", name: "PV8" }]}
       readingTime={11}
       heroImage={{
