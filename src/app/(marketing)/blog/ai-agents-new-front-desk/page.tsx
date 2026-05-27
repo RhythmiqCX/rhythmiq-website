@@ -11,9 +11,9 @@ export const metadata = generateMetadata({
     canonical: "/blog/ai-agents-new-front-desk",
   },
   openGraph: {
-    images: ["/images/blog/25-05-26.jpg"],
+    images: ["/images/blog/27-05-26.jpg"],
     type: "article",
-    publishedTime: "2026-05-25",
+    publishedTime: "2026-05-27",
     authors: ["HS6"],
   },
 });
@@ -47,7 +47,7 @@ const RELATED = [
       "AI Phone Receptionist for Small Business: The Complete 2026 Guide",
     href: "/blog/ai-phone-receptionist-small-business",
     imageSrc: "/images/blog/02-04-26.jpg",
-    date: "April 2, 2026",
+    date: "May 26, 2026",
     description:
       "Everything small businesses need to know about AI phone receptionist systems, pricing, setup, and the features that actually matter in real-world workflows.",
   },
@@ -56,7 +56,7 @@ const RELATED = [
       "What Is an AI Voice Receptionist and How a Voice AI Generator Makes Setup Instant",
     href: "/blog/what-is-ai-voice-receptionist-voice-generator",
     imageSrc: "/images/blog/01-04-26.jpg",
-    date: "April 1, 2026",
+    date: "May 25, 2026",
     description:
       "Understand how AI voice receptionist systems, AI voice generators, and Voice AI tools create natural customer conversations instantly.",
   },
@@ -65,7 +65,7 @@ const RELATED = [
       "AI Receptionist for Dental Offices: Complete Guide (2026)",
     href: "/blog/ai-receptionist-dental-office",
     imageSrc: "/images/blog/31-03-26.jpg",
-    date: "March 31, 2026",
+    date: "May 24, 2026",
     description:
       "How dental clinics use AI receptionists, Voice AI, and autonomous customer support systems to automate appointment booking and patient communication.",
   },
@@ -78,13 +78,13 @@ export default function AIAgentsFrontDesk() {
         href: "/blog/category/Customer Support",
         label: "Customer Support",
       }}
-      date="2026-05-25"
+      date="2026-05-27"
       title="Why AI Agents Are Becoming the New Front Desk for Modern Businesses"
       excerpt="AI agents, AI receptionists, Voice AI, and autonomous customer support systems are replacing traditional front desks because customers no longer tolerate friction."
       authors={[{ avatar: "/icons/HS6.png", name: "HS6" }]}
       readingTime={16}
       heroImage={{
-        src: "/images/blog/25-05-26.jpg",
+        src: "/images/blog/27-05-26.jpg",
         alt: "AI receptionist and Voice AI system handling customer support conversations",
       }}
       sections={SECTIONS}
@@ -155,7 +155,7 @@ export default function AIAgentsFrontDesk() {
 
         <div className="not-prose mt-4">
           <img
-            src="/images/blog/25-05-26.jpg"
+            src="/images/blog/27-05-26.jpg"
             alt="AI voice assistant and AI receptionist system"
             className="w-full rounded-xl border border-neutral-800"
           />
