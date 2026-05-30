@@ -5,15 +5,15 @@ import Link from "next/link";
 export const metadata = generateMetadata({
   title: "AI Receptionist for Dental Offices: Complete Guide (2026)",
   description:
-    "How dental offices are using AI receptionists to handle appointment booking, patient reminders, after-hours calls, and FAQs  without extra staff. HIPAA-aligned, from $29/mo.",
+    "How dental offices are using AI receptionists to handle appointment booking, patient reminders, after-hours calls, and FAQs without extra staff. HIPAA-aligned, from $29/mo.",
   alternates: {
     canonical: "/blog/ai-receptionist-dental-office",
   },
   openGraph: {
     images: ["/images/blog/31-03-26.jpg"],
     type: "article",
-    publishedTime: "2026-03-31",
-    authors: ["Kat"],
+    publishedTime: "2026-05-24",
+    authors: ["PV8"],
   },
 });
 
@@ -72,9 +72,9 @@ export default function AIReceptionistDentalOfficePage() {
         href: "/blog/category/voice-ai",
         label: "Voice AI",
       }}
-      date="2026-03-31"
+      date="2026-05-24"
       title="AI Receptionist for Dental Offices: Complete Guide (2026)"
-      excerpt="Your front desk misses calls, forgets reminders, and clocks out at 5 PM. Here's how AI receptionists are fixing that  without adding headcount."
+      excerpt="Your front desk misses calls, forgets reminders, and clocks out at 5 PM. Here's how AI receptionists are fixing that without adding headcount."
       authors={[{ avatar: "/icons/PV8.png", name: "PV8" }]}
       readingTime={8}
       heroImage={{

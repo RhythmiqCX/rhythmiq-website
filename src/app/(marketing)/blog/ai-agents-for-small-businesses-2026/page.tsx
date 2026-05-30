@@ -75,7 +75,7 @@ export default function AIAgentsForSmallBusinesses2026() {
   return (
     <BlogLayout
       category={{
-        href: "/blog/category/Customer Support",
+        href: "/blog/category/customer-support",
         label: "Customer Support",
       }}
       date="2026-05-28"
