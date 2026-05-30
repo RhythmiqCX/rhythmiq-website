@@ -4,16 +4,16 @@ import Link from "next/link";
 
 export const metadata = generateMetadata({
   title:
-    "What Is an AI Voice Receptionist and How a Voice AI Generator Makes Setup Instant",
+    "What Is an AI Voice Receptionist  and How a Voice AI Generator Makes Setup Instant",
   description:
-    "Understand what an AI voice receptionist is, how it works, and how a voice AI generator tool lets small businesses create professional call greetings in minutes without a recording studio or developer.",
+    "Understand what an AI voice receptionist is, how it works, and how a voice AI generator tool lets small businesses create professional call greetings in minutes  without a recording studio or developer.",
   alternates: {
     canonical: "/blog/what-is-ai-voice-receptionist-voice-generator",
   },
   openGraph: {
     images: ["/images/blog/01-04-26.jpg"],
     type: "article",
-    publishedTime: "2026-05-25",
+    publishedTime: "2026-04-01",
     authors: ["PV8"],
   },
 });
@@ -66,12 +66,12 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
   return (
     <BlogLayout
       category={{
-        href: "/blog/category/voice-ai",
+        href: "/blog/category/Voice AI",
         label: "Voice AI",
       }}
-      date="2026-05-25"
-      title="What Is an AI Voice Receptionist and How a Voice AI Generator Makes Setup Instant"
-      excerpt="Every missed call is a missed sale. An AI voice receptionist fixes that and a voice AI generator means you can set one up in an afternoon, not a quarter."
+      date="2026-04-01"
+      title="What Is an AI Voice Receptionist  and How a Voice AI Generator Makes Setup Instant"
+      excerpt="Every missed call is a missed sale. An AI voice receptionist fixes that  and a voice AI generator means you can set one up in an afternoon, not a quarter."
       authors={[{ avatar: "/icons/PV8.png", name: "PV8" }]}
       readingTime={9}
       heroImage={{

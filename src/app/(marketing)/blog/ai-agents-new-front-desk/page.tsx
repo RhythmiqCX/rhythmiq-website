@@ -75,7 +75,7 @@ export default function AIAgentsFrontDesk() {
   return (
     <BlogLayout
       category={{
-        href: "/blog/category/customer-support",
+        href: "/blog/category/Customer Support",
         label: "Customer Support",
       }}
       date="2026-05-27"
