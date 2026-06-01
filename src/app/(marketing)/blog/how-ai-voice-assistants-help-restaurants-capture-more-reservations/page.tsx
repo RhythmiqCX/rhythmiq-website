@@ -76,7 +76,7 @@ export default function RestaurantVoiceAIBookings() {
   return (
     <BlogLayout
       category={{
-        href: "/blog/category/Voice AI",
+        href: "/blog/category/voice-ai",
         label: "Voice AI",
       }}
       date="2026-05-31"
