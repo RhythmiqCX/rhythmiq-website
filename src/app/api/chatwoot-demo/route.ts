@@ -5,7 +5,7 @@ import path from 'path';
 
 // Initialize OpenAI client
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY || 'mock-key-for-build',
 });
 
 // Function to read the knowledge base from the markdown file
