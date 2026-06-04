@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title:
@@ -86,7 +87,7 @@ export default function FreeAIToolsBlog() {
           about{" "}
           <Link
             href="/blog/the-productivity-illusion"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             The Productivity Illusion
           </Link>
@@ -106,14 +107,14 @@ export default function FreeAIToolsBlog() {
       </section>
 
       <section id="instant-gratification" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The "Instant-Gratification" Stack: Zero Friction, All Fire
         </h2>
         <p>
           If a tool has a "waitlist," it’s dead to me. In the world of{" "}
           <Link
             href="/blog/rise-of-autonomous-support"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             autonomous support
           </Link>
@@ -142,7 +143,7 @@ export default function FreeAIToolsBlog() {
       </section>
 
       <section id="single-purpose-bias" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Why I’m Biased Toward "Single-Purpose" Tools
         </h2>
         <p>
@@ -151,7 +152,7 @@ export default function FreeAIToolsBlog() {
           I’ve realized that{" "}
           <Link
             href="/blog/ai-tools-save-hours"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI tools that actually save you hours
           </Link>{" "}
@@ -165,7 +166,7 @@ export default function FreeAIToolsBlog() {
           do everything, it’s probably failing at the{" "}
           <Link
             href="/blog/the-hidden-state-problem-in-voice-ai"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             hidden state problem
           </Link>
@@ -174,7 +175,7 @@ export default function FreeAIToolsBlog() {
       </section>
 
       <section id="hidden-cost" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Hidden Cost of "Free"
         </h2>
         <p>
@@ -194,7 +195,7 @@ export default function FreeAIToolsBlog() {
       </section>
 
       <section id="hall-of-fame" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The "No-Signup" Hall of Fame (The Top 25 Round-up)
         </h2>
         <p>
@@ -202,40 +203,40 @@ export default function FreeAIToolsBlog() {
           so here’s the lightning round of the best zero-signup tools of 2026:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-4 border border-white/10 rounded-xl bg-white/5">
+          <div className="p-4 border border-ink/10 rounded-xl bg-white">
             <strong>1. AI Chat with Your Website:</strong> Direct
             URL-to-insights chat without a login wall.
           </div>
-          <div className="p-4 border border-white/10 rounded-xl bg-white/5">
+          <div className="p-4 border border-ink/10 rounded-xl bg-white">
             <strong>2. Chatbot ROI Calculator:</strong> Instantly see how much
             support time you’re wasting.
           </div>
-          <div className="p-4 border border-white/10 rounded-xl bg-white/5">
+          <div className="p-4 border border-ink/10 rounded-xl bg-white">
             <strong>3. LinkedIn Profile Builder:</strong> Generate headlines and
             experience points without an account.
           </div>
-          <div className="p-4 border border-white/10 rounded-xl bg-white/5">
+          <div className="p-4 border border-ink/10 rounded-xl bg-white">
             <strong>4. Web to Markdown:</strong> Clean, LLM-ready data from any
             site.
           </div>
-          <div className="p-4 border border-white/10 rounded-xl bg-white/5">
+          <div className="p-4 border border-ink/10 rounded-xl bg-white">
             <strong>5. Email Signature Generator:</strong> Professional, branded
             signatures in minutes.
           </div>
-          <div className="p-4 border border-white/10 rounded-xl bg-white/5">
+          <div className="p-4 border border-ink/10 rounded-xl bg-white">
             <strong>6. LinkedIn Email Finder:</strong> Find verified
             professional addresses instantly.
           </div>
-          <div className="p-4 border border-white/10 rounded-xl bg-white/5">
+          <div className="p-4 border border-ink/10 rounded-xl bg-white">
             <strong>7. JSON to PDF Converter:</strong> Clean formatting for raw
             data structures.
           </div>
-          <div className="p-4 border border-white/10 rounded-xl bg-white/5">
+          <div className="p-4 border border-ink/10 rounded-xl bg-white">
             <strong>8. AI Document Generator:</strong> Draft SOPs and proposals
             through strictly structured templates.
           </div>
 
-          <div className="p-4 border border-white/10 rounded-xl bg-white/5 col-span-1 md:col-span-2 text-center italic">
+          <div className="p-4 border border-ink/10 rounded-xl bg-white col-span-1 md:col-span-2 text-center italic">
             Check the full stack at{" "}
             <a href="https://rhythmiqcx.com/tools" className="underline">
               rhythmiqcx.com/tools
@@ -249,7 +250,7 @@ export default function FreeAIToolsBlog() {
       </section>
 
       <section id="build-vs-buy" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Build vs. Buy in 2026
         </h2>
         <p>
@@ -270,7 +271,7 @@ export default function FreeAIToolsBlog() {
       </section>
 
       <section id="efficiency-mindset" className="mt-24 space-y-6 pb-20">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Final Hot Take: Efficiency is a Mindset, Not a Subscription
         </h2>
         <p>
@@ -278,7 +279,7 @@ export default function FreeAIToolsBlog() {
           superpower. We’re moving toward a world where{" "}
           <Link
             href="/blog/openclaw-is-the-future"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             OpenClaw and personal AI
           </Link>{" "}
@@ -296,30 +297,14 @@ export default function FreeAIToolsBlog() {
           for newsletters you won&apos;t read.
         </p>
 
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Tired of tools that promise &quot;automation&quot; but deliver
-            &quot;more work&quot;?
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            We built RhythmicCX for the founders who hate friction as much as we
-            do. Stop managing bots and start managing outcomes.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-            <Link
-              href="/tools"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore All Tools
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title={'Tired of tools that promise "automation" but deliver "more work"?'}
+          description="We built RhythmicCX for the founders who hate friction as much as we do. Stop managing bots and start managing outcomes."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore All Tools"
+          secondaryHref="/tools"
+        />
       </section>
     </BlogLayout>
   );

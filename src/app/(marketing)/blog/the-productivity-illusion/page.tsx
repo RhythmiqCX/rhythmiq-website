@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title:
@@ -76,7 +77,7 @@ export default function ProductivityIllusion() {
       <section className="mt-16 space-y-6">
         <h2 className="text-4xl font-bold">The Productivity Illusion</h2>
 
-        <p className="text-xl italic text-neutral-400">
+        <p className="text-xl italic text-ink2">
           “We thought AI would give us time back. Instead, it gave us more
           tabs.”
         </p>
@@ -95,7 +96,7 @@ export default function ProductivityIllusion() {
       </section>
 
       <section id="faster-output" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Faster Output Created More Work
         </h2>
 
@@ -115,7 +116,7 @@ export default function ProductivityIllusion() {
           As we explained in{" "}
           <Link
             href="/blog/voice-ai-is-great"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI Is Great at FAQs and Terrible at Exceptions
           </Link>
@@ -128,7 +129,7 @@ export default function ProductivityIllusion() {
       </section>
 
       <section id="context-switching" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Real Cost Is Context Switching
         </h2>
 
@@ -146,7 +147,7 @@ export default function ProductivityIllusion() {
           This is the same trap we described in{" "}
           <Link
             href="/blog/over-helpful-ai"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Over Helpful AI: How Too Many Suggestions Are Killing UX
           </Link>
@@ -159,7 +160,7 @@ export default function ProductivityIllusion() {
         </p>
       </section>
       <section id="speed-without-state" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Speed Without State Creates Rework
         </h2>
 
@@ -178,7 +179,7 @@ export default function ProductivityIllusion() {
           That’s why{" "}
           <Link
             href="/blog/state-management-in-voice-ai"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             State Management in Voice AI Is a Nightmare
           </Link>{" "}
@@ -187,7 +188,7 @@ export default function ProductivityIllusion() {
           like{" "}
           <Link
             href="/blog/healthcare-ai-fails-on-context"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Healthcare AI
           </Link>
@@ -199,7 +200,7 @@ export default function ProductivityIllusion() {
       </section>
 
       <section id="false-confidence" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The False Confidence Problem
         </h2>
 
@@ -218,7 +219,7 @@ export default function ProductivityIllusion() {
           We covered this brutally in{" "}
           <Link
             href="/blog/voice-ai-sounds"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Why Voice AI Sounds Confident Even When It Should Hesitate
           </Link>
@@ -233,7 +234,7 @@ export default function ProductivityIllusion() {
 
       {/* SECTION 5 */}
       <section id="real-productivity" className="mt-24 space-y-6 pb-20">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Real Productivity Is Subtraction
         </h2>
 
@@ -255,7 +256,7 @@ export default function ProductivityIllusion() {
           behind{" "}
           <Link
             href="/blog/continuous-feedback-competitive-advantage"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Why Continuous Feedback Is Becoming a Competitive Advantage
           </Link>
@@ -263,30 +264,14 @@ export default function ProductivityIllusion() {
           noise of your own tools.
         </p>
 
-        {/* CTA SECTION */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to remove friction instead of adding AI noise?
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            See how RhythmiqCX builds AI systems that subtract work instead of
-            multiplying it.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Ready to remove friction instead of adding AI noise?"
+          description="See how RhythmiqCX builds AI systems that subtract work instead of multiplying it."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title: "Does an AI Receptionist Sound Real? We Made 50 Test Calls",
@@ -59,7 +60,7 @@ const TRANSCRIPT_SAMPLES = [
   {
     label: "Call #4  New client inquiry, dental practice",
     verdict: "Undetected",
-    verdictColor: "text-green-400",
+    verdictColor: "text-[#1F7A4D]",
     lines: [
       {
         speaker: "Caller",
@@ -89,7 +90,7 @@ const TRANSCRIPT_SAMPLES = [
   {
     label: "Call #17  Frustrated returning customer, plumbing company",
     verdict: "Undetected",
-    verdictColor: "text-green-400",
+    verdictColor: "text-[#1F7A4D]",
     lines: [
       {
         speaker: "Caller",
@@ -178,7 +179,7 @@ export default function DoesAIReceptionistSoundRealPage() {
           afterward.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           I called it 10 times as a new client and couldn&apos;t tell it was AI
           on 8 of them. The 2 times it sounded off here&apos;s exactly what went
           wrong.
@@ -200,12 +201,12 @@ export default function DoesAIReceptionistSoundRealPage() {
           ].map(({ num, label }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+              className="rounded-2xl border border-ink/10 bg-white p-5 text-center"
             >
-              <span className="font-mono text-3xl font-bold text-yellow-400 block leading-none">
+              <span className="font-mono text-3xl font-bold text-coral block leading-none">
                 {num}
               </span>
-              <span className="text-neutral-500 text-xs mt-2 block leading-snug">
+              <span className="text-ink3 text-xs mt-2 block leading-snug">
                 {label}
               </span>
             </div>
@@ -215,7 +216,7 @@ export default function DoesAIReceptionistSoundRealPage() {
 
       {/* SECTION 2  How We Tested */}
       <section id="how-we-tested" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How We Designed the Test (So It Actually Meant Something)
         </h2>
 
@@ -262,14 +263,14 @@ export default function DoesAIReceptionistSoundRealPage() {
           ].map(({ persona, desc, count }, i) => (
             <div
               key={i}
-              className="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-5"
+              className="flex gap-4 rounded-xl border border-ink/10 bg-white p-5"
             >
-              <span className="font-mono text-xs text-neutral-500 shrink-0 mt-5 w-16 text-right">
+              <span className="font-mono text-xs text-ink3 shrink-0 mt-5 w-16 text-right">
                 {count}
               </span>
               <div>
-                <p className="text-white font-semibold text-sm">{persona}</p>
-                <p className="text-neutral-400 text-sm mt-1">{desc}</p>
+                <p className="text-ink font-semibold text-sm">{persona}</p>
+                <p className="text-ink2 text-sm mt-1">{desc}</p>
               </div>
             </div>
           ))}
@@ -291,7 +292,7 @@ export default function DoesAIReceptionistSoundRealPage() {
           you&apos;ve read our{" "}
           <Link
             href="/blog/ai-phone-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             complete guide to AI phone receptionists
           </Link>
@@ -302,7 +303,7 @@ export default function DoesAIReceptionistSoundRealPage() {
 
       {/* SECTION 3  Transcripts */}
       <section id="call-transcripts" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What the Transcripts Actually Showed
         </h2>
 
@@ -323,10 +324,10 @@ export default function DoesAIReceptionistSoundRealPage() {
           ({ label, verdict, verdictColor, lines, reaction }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden"
+              className="rounded-2xl border border-ink/10 bg-white overflow-hidden"
             >
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-white/[0.03]">
-                <span className="text-sm font-mono text-neutral-400">
+              <div className="flex items-center justify-between px-6 py-4 border-b border-ink/10 bg-white">
+                <span className="text-sm font-mono text-ink2">
                   {label}
                 </span>
                 <span
@@ -341,20 +342,20 @@ export default function DoesAIReceptionistSoundRealPage() {
                     <span
                       className={`text-xs font-mono shrink-0 w-12 pt-0.5 ${
                         speaker === "AI"
-                          ? "text-yellow-400"
-                          : "text-neutral-500"
+                          ? "text-coral"
+                          : "text-ink3"
                       }`}
                     >
                       {speaker}
                     </span>
-                    <p className="text-sm text-neutral-300 leading-relaxed">
+                    <p className="text-sm text-ink2 leading-relaxed">
                       {text}
                     </p>
                   </div>
                 ))}
               </div>
-              <div className="px-6 py-4 border-t border-white/10 bg-white/[0.02]">
-                <p className="text-sm italic text-neutral-400">{reaction}</p>
+              <div className="px-6 py-4 border-t border-ink/10 bg-white">
+                <p className="text-sm italic text-ink2">{reaction}</p>
               </div>
             </div>
           ),
@@ -367,7 +368,7 @@ export default function DoesAIReceptionistSoundRealPage() {
           our piece on{" "}
           <Link
             href="/blog/ai-virtual-receptionist-vs-human-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI vs human receptionists
           </Link>
@@ -378,7 +379,7 @@ export default function DoesAIReceptionistSoundRealPage() {
 
       {/* SECTION 4  The 8 out of 10 */}
       <section id="8-out-of-10" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The 8 Out of 10: What Made Them Work
         </h2>
 
@@ -417,12 +418,12 @@ export default function DoesAIReceptionistSoundRealPage() {
           ].map(({ title, desc }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="rounded-2xl border border-ink/10 bg-white p-6"
             >
-              <h3 className="text-white font-semibold text-base mb-2">
+              <h3 className="text-ink font-semibold text-base mb-2">
                 {title}
               </h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{desc}</p>
+              <p className="text-ink2 text-sm leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
@@ -438,18 +439,18 @@ export default function DoesAIReceptionistSoundRealPage() {
           piece on{" "}
           <Link
             href="/blog/ai-voice-reception"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             why IVR systems are dying
           </Link>
           .
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           &ldquo;I interrupted it three times on purpose. It just kept up with
           me. At that point I stopped testing it and just asked my actual
           question.&rdquo;
-          <span className="block text-sm text-neutral-500 mt-2 not-italic">
+          <span className="block text-sm text-ink3 mt-2 not-italic">
             Tester, Call #22 (interrupting caller persona)
           </span>
         </blockquote>
@@ -457,7 +458,7 @@ export default function DoesAIReceptionistSoundRealPage() {
 
       {/* SECTION 5  The 2 That Gave It Away */}
       <section id="the-2-that-gave-it-away" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The 2 That Gave It Away And Exactly What to Fix
         </h2>
 
@@ -489,34 +490,34 @@ export default function DoesAIReceptionistSoundRealPage() {
             ) => (
               <div
                 key={i}
-                className="rounded-2xl border border-red-500/20 bg-red-500/5 overflow-hidden"
+                className="rounded-2xl border border-ink/10 bg-white overflow-hidden"
               >
-                <div className="px-6 py-4 border-b border-red-500/20 flex items-center justify-between">
-                  <span className="font-mono text-sm text-red-400">{num}</span>
-                  <span className="text-xs text-neutral-500">{scenario}</span>
+                <div className="px-6 py-4 border-b border-ink/10 flex items-center justify-between">
+                  <span className="font-mono text-sm text-[#C9461F]">{num}</span>
+                  <span className="text-xs text-ink3">{scenario}</span>
                 </div>
                 <div className="px-6 py-5 space-y-4">
                   <div>
-                    <p className="text-xs font-mono text-red-300 uppercase tracking-widest mb-2">
+                    <p className="text-xs font-mono text-[#C9461F] uppercase tracking-widest mb-2">
                       What gave it away
                     </p>
-                    <p className="text-sm text-neutral-400 leading-relaxed">
-                      <strong className="text-red-300">{issue}:</strong>{" "}
+                    <p className="text-sm text-ink2 leading-relaxed">
+                      <strong className="text-[#C9461F]">{issue}:</strong>{" "}
                       {detail}
                     </p>
                   </div>
-                  <div className="border-t border-white/10 pt-4">
-                    <p className="text-xs font-mono text-green-400 uppercase tracking-widest mb-2">
+                  <div className="border-t border-ink/10 pt-4">
+                    <p className="text-xs font-mono text-[#1F7A4D] uppercase tracking-widest mb-2">
                       The fix
                     </p>
-                    <p className="text-sm text-neutral-300 leading-relaxed">
+                    <p className="text-sm text-ink2 leading-relaxed">
                       {fix}
                       {linkText && linkHref && (
                         <>
                           {" "}
                           <Link
                             href={linkHref}
-                            className="text-blue-400 underline"
+                            className="text-coral underline"
                           >
                             {linkText}
                           </Link>
@@ -531,9 +532,9 @@ export default function DoesAIReceptionistSoundRealPage() {
           )}
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p className="text-sm text-neutral-300 leading-relaxed">
-            <strong className="text-white">The honest takeaway:</strong> Both
+        <div className="rounded-2xl border border-ink/10 bg-white p-6">
+          <p className="text-sm text-ink2 leading-relaxed">
+            <strong className="text-ink">The honest takeaway:</strong> Both
             failures were configuration issues, not model failures. The
             underlying voice AI produced natural-sounding speech in both cases.
             What broke the illusion was deployment decisions pause thresholds
@@ -542,7 +543,7 @@ export default function DoesAIReceptionistSoundRealPage() {
             specifically, our{" "}
             <Link
               href="/blog/how-to-set-up-ai-phone-receptionist"
-              className="text-blue-400 underline"
+              className="text-coral underline"
             >
               step-by-step setup guide
             </Link>{" "}
@@ -553,7 +554,7 @@ export default function DoesAIReceptionistSoundRealPage() {
 
       {/* SECTION 6  What Makes It Sound Real */}
       <section id="what-makes-it-sound-real" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Actually Makes an AI Phone Receptionist Sound Real
         </h2>
 
@@ -597,16 +598,16 @@ export default function DoesAIReceptionistSoundRealPage() {
           ].map(({ rank, factor, why }, i) => (
             <div
               key={i}
-              className="flex gap-6 rounded-xl border border-white/10 bg-white/5 p-5"
+              className="flex gap-6 rounded-xl border border-ink/10 bg-white p-5"
             >
               <span className="font-mono text-2xl font-bold text-neutral-700 shrink-0 leading-none mt-12">
                 {rank}
               </span>
               <div>
-                <h3 className="text-white font-semibold text-sm mb-1">
+                <h3 className="text-ink font-semibold text-sm mb-1">
                   {factor}
                 </h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <p className="text-ink2 text-sm leading-relaxed">
                   {why}
                 </p>
               </div>
@@ -620,7 +621,7 @@ export default function DoesAIReceptionistSoundRealPage() {
           framework for this in our guide on{" "}
           <Link
             href="/blog/will-ai-replace-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             whether AI will replace receptionists
           </Link>
@@ -633,7 +634,7 @@ export default function DoesAIReceptionistSoundRealPage() {
           increasingly the wrong frame. As we explored in our analysis of{" "}
           <Link
             href="/blog/voice-ai-sounds"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             why voice AI sounds confident even when it should hesitate
           </Link>
@@ -645,14 +646,14 @@ export default function DoesAIReceptionistSoundRealPage() {
 
       {/* SECTION 7  The Verdict */}
       <section id="the-verdict" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Verdict: Yes. With Two Caveats.
         </h2>
 
         <p>
           Does an AI phone receptionist sound real? Based on 50 test calls
           across 6 caller personas and 6 industries:{" "}
-          <strong className="text-white">yes, 84% of the time</strong>, with a
+          <strong className="text-ink">yes, 84% of the time</strong>, with a
           properly configured deployment.
         </p>
 
@@ -666,11 +667,11 @@ export default function DoesAIReceptionistSoundRealPage() {
         <p>The two caveats that matter:</p>
 
         <div className="space-y-4">
-          <div className="rounded-xl border border-yellow-500/20 bg-yellow-500/5 p-5">
-            <p className="text-yellow-300 text-sm font-semibold mb-1">
+          <div className="rounded-xl border border-ink/10 bg-white p-5">
+            <p className="text-coral text-sm font-semibold mb-1">
               Caveat 1: Default settings are not optimized settings.
             </p>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Every deployment we tested that sounded natural had been
               deliberately configured pause thresholds, tone instructions,
               context handling. The out-of-box defaults work, but they leave
@@ -678,11 +679,11 @@ export default function DoesAIReceptionistSoundRealPage() {
               before launch, not after.
             </p>
           </div>
-          <div className="rounded-xl border border-yellow-500/20 bg-yellow-500/5 p-5">
-            <p className="text-yellow-300 text-sm font-semibold mb-1">
+          <div className="rounded-xl border border-ink/10 bg-white p-5">
+            <p className="text-coral text-sm font-semibold mb-1">
               Caveat 2: High-empathy contexts require additional configuration.
             </p>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Medical, mental health, legal, and crisis-adjacent use cases need
               specific tone calibration that goes beyond the standard service
               persona. An AI that sounds perfect on a dental appointment booking
@@ -701,7 +702,7 @@ export default function DoesAIReceptionistSoundRealPage() {
           into launch. As the{" "}
           <Link
             href="/blog/voice-ai-pricing-compared"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             voice AI pricing landscape
           </Link>{" "}
@@ -709,41 +710,21 @@ export default function DoesAIReceptionistSoundRealPage() {
           differentiator.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The best AI receptionist isn&apos;t the one with the most impressive
           voice demo. It&apos;s the one your callers stop thinking about because
           it just works.
         </blockquote>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Hear It for Yourself Live Call Demo
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Book a demo and we&apos;ll put a live RhythmiqCX AI receptionist on
-            a call from your actual business number. No slide deck. No rehearsed
-            scenario. Ask it anything hostile, off-script, multi-language,
-            whatever you throw at it.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Demo
-            </a>
-            <Link
-              href="/voice-ai"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore Voice AI →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Hear It for Yourself Live Call Demo"
+        description="Book a demo and we'll put a live RhythmiqCX AI receptionist on a call from your actual business number. No slide deck. No rehearsed scenario. Ask it anything hostile, off-script, multi-language, whatever you throw at it."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore Voice AI"
+        secondaryHref="/voice-ai"
+      />
     </BlogLayout>
   );
 }

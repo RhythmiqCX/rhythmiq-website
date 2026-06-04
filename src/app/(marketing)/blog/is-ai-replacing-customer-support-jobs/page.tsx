@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -98,7 +99,7 @@ export default function AIReplacingSupportJobs() {
       </section>
 
       <section id="replacing-some-roles" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Yes, AI Is Replacing Some Roles
         </h2>
         <p>
@@ -107,7 +108,7 @@ export default function AIReplacingSupportJobs() {
           effectively obsolete. We’ve reached a point where{" "}
           <Link
             href="/blog/voice-ai-is-great"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI handles FAQs
           </Link>{" "}
@@ -128,14 +129,14 @@ export default function AIReplacingSupportJobs() {
       </section>
 
       <section id="decision-engine" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Support Isn’t Talking. It’s Deciding.
         </h2>
         <p>
           We have to shift our perspective:{" "}
           <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Customer support is a decision engine
           </Link>{" "}
@@ -158,7 +159,7 @@ export default function AIReplacingSupportJobs() {
       </section>
 
       <section id="jobs-evolving" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Jobs Are Evolving
         </h2>
         <p>
@@ -168,7 +169,7 @@ export default function AIReplacingSupportJobs() {
           for hallucination, and handling the 5% of calls that{" "}
           <Link
             href="/blog/rise-of-autonomous-support"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             autonomous support agents
           </Link>{" "}
@@ -188,7 +189,7 @@ export default function AIReplacingSupportJobs() {
       </section>
 
       <section id="skill-decay" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Real Risk: Skill Decay
         </h2>
         <p>
@@ -205,7 +206,7 @@ export default function AIReplacingSupportJobs() {
           To fight this, we need to lean into{" "}
           <Link
             href="/blog/continuous-feedback-competitive-advantage"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             continuous feedback loops
           </Link>{" "}
@@ -219,7 +220,7 @@ export default function AIReplacingSupportJobs() {
       </section>
 
       <section id="real-answer" className="mt-24 space-y-6 pb-20">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           So Is AI Replacing Customer Support Jobs?
         </h2>
         <p>
@@ -229,7 +230,7 @@ export default function AIReplacingSupportJobs() {
           ever just to fix the reputation damage caused by{" "}
           <Link
             href="/blog/voice-ai-sounds"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             overconfident, hallucinating bots
           </Link>
@@ -248,29 +249,14 @@ export default function AIReplacingSupportJobs() {
         </p>
 
         {/* FINAL CALL TO ACTION: RhythmicCX Demo Signup */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Want AI that strengthens your support team instead of replacing it?
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            See how RhythmiqCX builds decision-driven AI systems that handle
-            complexity without breaking trust.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Want AI that strengthens your support team instead of replacing it?"
+          description="See how RhythmiqCX builds decision-driven AI systems that handle complexity without breaking trust."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -92,7 +93,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
 
       <p>
         In 2026, there's a different answer: an{" "}
-        <Link href="/voice-ai" className="text-blue-500 underline">
+        <Link href="/voice-ai" className="text-coral underline">
           AI voice receptionist
         </Link>
         . And the reason more businesses are adopting it now, rather than two
@@ -184,7 +185,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
 
       {/* Section 2 */}
       <section id="what-voice-ai-generator-does" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What a Voice AI Generator Actually Does
         </h2>
 
@@ -214,7 +215,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
           RhythmiqCX's{" "}
           <Link
             href="/tools/ai-receptionist-script-generator"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI Receptionist Script Generator
           </Link>{" "}
@@ -228,7 +229,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
           The{" "}
           <Link
             href="/tools/ai-hindi-english-receptionist-voice-generator"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI Hindi-English Receptionist Voice Generator
           </Link>{" "}
@@ -246,7 +247,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
 
       {/* Section 3 */}
       <section id="why-small-businesses-switching" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Why Small Businesses Are Switching Now
         </h2>
 
@@ -296,7 +297,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
 
       {/* Section 4 */}
       <section id="what-it-can-handle" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What an AI Voice Receptionist Can Handle Right Now
         </h2>
 
@@ -338,7 +339,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
           We wrote about this dynamic in more depth in{" "}
           <Link
             href="/blog/voice-ai-is-great"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI Is Great at FAQs and Terrible at Exceptions
           </Link>
@@ -349,7 +350,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
 
       {/* Section 5 */}
       <section id="setup-in-an-afternoon" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How to Set Up an AI Voice Receptionist in an Afternoon
         </h2>
 
@@ -371,7 +372,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
             <strong>Generate your receptionist script.</strong> Use the{" "}
             <Link
               href="/tools/ai-receptionist-script-generator"
-              className="text-blue-500 underline"
+              className="text-coral underline"
             >
               AI Receptionist Script Generator
             </Link>{" "}
@@ -383,7 +384,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
             <strong>Choose and preview your voice.</strong> Use the{" "}
             <Link
               href="/tools/ai-hindi-english-receptionist-voice-generator"
-              className="text-blue-500 underline"
+              className="text-coral underline"
             >
               AI Hindi-English Receptionist Voice Generator
             </Link>{" "}
@@ -411,7 +412,7 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
 
       {/* Section 6  FAQ */}
       <section id="faq" className="mt-24 space-y-8">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Questions Businesses Ask Before Deploying
         </h2>
 
@@ -479,32 +480,14 @@ export default function WhatIsAIVoiceReceptionistVoiceGenerator() {
       </section>
 
       {/* Final CTA */}
-      <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">
-          Hear Your AI Receptionist Before You Deploy It
-        </h2>
-        <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-          Use the free voice generator to preview exactly what your callers will
-          hear in Indian English, in your tone, with your business name. No
-          sign-up required to try it.
-        </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <Link
-            href="/tools/ai-hindi-english-receptionist-voice-generator"
-            className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-          >
-            Try Voice Generator Free
-          </Link>
-
-          <a
-            href="https://calendly.com/ray-rhythmiqcx/30min"
-            className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-          >
-            Book a Demo
-          </a>
-        </div>
-      </div>
+      <BlogCTA
+        title="Hear Your AI Receptionist Before You Deploy It"
+        description="Use the free voice generator to preview exactly what your callers will hear in Indian English, in your tone, with your business name. No sign-up required to try it."
+        primaryLabel="Try Voice Generator Free"
+        primaryHref="/tools/ai-hindi-english-receptionist-voice-generator"
+        secondaryLabel="Book a Demo"
+        secondaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+      />
     </BlogLayout>
   );
 }

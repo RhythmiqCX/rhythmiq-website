@@ -13,7 +13,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "RhythmiqCX",
   url: "https://rhythmiqcx.com",
-  logo: "https://rhythmiqcx.com/icons/rhythmiq-icon.png",
+  logo: "https://rhythmiqcx.com/icons/rhythmiq-mark-512.png",
   sameAs: [],
   contactPoint: {
     "@type": "ContactPoint",

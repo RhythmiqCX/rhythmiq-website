@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -113,7 +114,7 @@ export default function AIVirtualReceptionBlog() {
           every handoff. If you&apos;ve read{" "}
           <Link
             href="/blog/the-first-second"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             The First 3 Seconds of a Voice Call Decide Customer Trust
           </Link>
@@ -125,7 +126,7 @@ export default function AIVirtualReceptionBlog() {
 
       {/* SECTION 2 */}
       <section id="human-strengths" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Human Receptionists Are Actually Great At
         </h2>
 
@@ -149,7 +150,7 @@ export default function AIVirtualReceptionBlog() {
           explained in{" "}
           <Link
             href="/blog/is-ai-replacing-customer-support-jobs"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Is AI Replacing Customer Support Jobs in 2026?
           </Link>
@@ -161,7 +162,7 @@ export default function AIVirtualReceptionBlog() {
 
       {/* SECTION 3 */}
       <section id="ai-advantages" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Where AI Virtual Receptionists Absolutely Destroy the Old Model
         </h2>
 
@@ -183,7 +184,7 @@ export default function AIVirtualReceptionBlog() {
           our article{" "}
           <Link
             href="/blog/ai-voice-reception"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Best AI Voice for Handling Virtual Reception Tasks
           </Link>
@@ -195,7 +196,7 @@ export default function AIVirtualReceptionBlog() {
 
       {/* SECTION 4 */}
       <section id="autonomous-support" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Real Secret: Autonomous Customer Support Systems
         </h2>
 
@@ -215,7 +216,7 @@ export default function AIVirtualReceptionBlog() {
           or browse help pages repeatedly. This concept ties directly into{" "}
           <Link
             href="/blog/autonomous-customer-support"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Autonomous Customer Support
           </Link>{" "}
@@ -228,7 +229,7 @@ export default function AIVirtualReceptionBlog() {
 
       {/* SECTION 5 */}
       <section id="future" className="mt-24 space-y-6 pb-20">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           My Very Biased Take: The Future Isn&apos;t Human vs AI
         </h2>
 
@@ -254,33 +255,14 @@ export default function AIVirtualReceptionBlog() {
         </p>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Transform Your Reception Experience?
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            See how RhythmiqCX Voice AI and Web Widgets handle customer
-            interactions instantly without hold queues, without scripts, and
-            without burning out your team.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Ready to Transform Your Reception Experience?"
+        description="See how RhythmiqCX Voice AI and Web Widgets handle customer interactions instantly without hold queues, without scripts, and without burning out your team."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
     </BlogLayout>
   );
 }

@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -179,7 +180,7 @@ export default function AIvsRemotevsInPersonBlog() {
           they are, and an{" "}
           <Link
             href="/blog/ai-phone-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI phone receptionist
           </Link>{" "}
@@ -188,7 +189,7 @@ export default function AIvsRemotevsInPersonBlog() {
           which one actually <em>works</em> and for <em>whom</em>.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The best receptionist for your business isn&apos;t the most human one.
           It&apos;s the one that doesn&apos;t drop the ball at 6:47 PM on a
           Friday.
@@ -215,16 +216,16 @@ export default function AIvsRemotevsInPersonBlog() {
           of hidden bronze.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           What you&apos;re actually paying for
         </h3>
 
         <p>
           A full-time receptionist in the US runs you anywhere from{" "}
-          <strong className="text-white">$35,000–$55,000/yr</strong> in salary
+          <strong className="text-ink">$35,000–$55,000/yr</strong> in salary
           alone. Add benefits, payroll taxes, PTO, sick leave, and the
           occasional &ldquo;I quit, effective immediately&rdquo; and you&apos;re
-          closer to <strong className="text-white">$60,000–$75,000/yr</strong>{" "}
+          closer to <strong className="text-ink">$60,000–$75,000/yr</strong>{" "}
           all-in. For a solo practice or a bootstrapped startup, that&apos;s not
           a hire. That&apos;s a bet.
         </p>
@@ -234,7 +235,7 @@ export default function AIvsRemotevsInPersonBlog() {
           outside those hours goes to voicemail and we&apos;ve{" "}
           <Link
             href="/blog/the-first-second"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             already established what happens in the first second of a missed
             call
@@ -242,18 +243,18 @@ export default function AIvsRemotevsInPersonBlog() {
           . Spoiler: it&apos;s not good.
         </p>
 
-        <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/5 p-6 space-y-1">
-          <span className="text-xs font-mono text-yellow-400 uppercase tracking-widest font-semibold">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-1">
+          <span className="text-xs font-mono text-coral uppercase tracking-widest font-semibold">
             Reality Check
           </span>
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-ink2 text-sm leading-relaxed">
             The average small business misses 62% of calls that come in outside
             core business hours. An in-person receptionist doesn&apos;t solve
             that. It just gives you someone to blame.
           </p>
         </div>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           Where in-person genuinely wins
         </h3>
 
@@ -297,7 +298,7 @@ export default function AIvsRemotevsInPersonBlog() {
         </p>
         <p>In practice? Let me walk you through what actually happens.</p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           The handoff problem nobody talks about
         </h3>
 
@@ -319,31 +320,31 @@ export default function AIvsRemotevsInPersonBlog() {
           callers pay the price.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           The billing model will surprise you
         </h3>
 
         <p>
           Most remote receptionist services charge by the minute, starting
-          around <strong className="text-white">$1–$3/min</strong>. A busy month
+          around <strong className="text-ink">$1–$3/min</strong>. A busy month
           with 200 calls averaging 3 minutes each? That&apos;s $600–$1,800
           before you&apos;ve even looked at what the calls were actually about.
           And a significant chunk of those calls? FAQs. Directions. Hours of
           operation. Stuff that, as we covered in{" "}
           <Link
             href="/blog/voice-ai-is-quietly-killing"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             How Voice AI Is Quietly Killing FAQ Pages
           </Link>
           , an AI handles flawlessly at a fraction of the cost.
         </p>
 
-        <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/5 p-6 space-y-1">
-          <span className="text-xs font-mono text-yellow-400 uppercase tracking-widest font-semibold">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-1">
+          <span className="text-xs font-mono text-coral uppercase tracking-widest font-semibold">
             The Math That Stings
           </span>
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-ink2 text-sm leading-relaxed">
             A growing SMB spending $1,200/month on remote receptionist services
             is spending $14,400/year to answer questions that an AI could handle
             for under $200/month. That&apos;s not a feature gap. That&apos;s a
@@ -351,7 +352,7 @@ export default function AIvsRemotevsInPersonBlog() {
           </p>
         </div>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           Where remote receptionists genuinely shine
         </h3>
         <p>
@@ -379,7 +380,7 @@ export default function AIvsRemotevsInPersonBlog() {
           something that doesn&apos;t fit. So here&apos;s the real picture.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           What an AI receptionist actually does well
         </h3>
 
@@ -398,7 +399,7 @@ export default function AIvsRemotevsInPersonBlog() {
           <em>the phone got answered.</em>
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           The tradeoffs I won&apos;t hide from you
         </h3>
 
@@ -409,7 +410,7 @@ export default function AIvsRemotevsInPersonBlog() {
           stop.{" "}
           <Link
             href="/blog/voice-ai-vs-chatbots"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             Voice AI can handle a lot, but empathy on demand is still its
             ceiling
@@ -424,11 +425,11 @@ export default function AIvsRemotevsInPersonBlog() {
           live.
         </p>
 
-        <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/5 p-6 space-y-1">
-          <span className="text-xs font-mono text-yellow-400 uppercase tracking-widest font-semibold">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-1">
+          <span className="text-xs font-mono text-coral uppercase tracking-widest font-semibold">
             Honest Caveat
           </span>
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-ink2 text-sm leading-relaxed">
             If your business model depends on deeply empathetic, bespoke
             conversations for every caller healthcare triage, crisis counseling,
             high-stakes legal intake AI is a support layer, not a replacement.
@@ -436,13 +437,13 @@ export default function AIvsRemotevsInPersonBlog() {
           </p>
         </div>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           The ROI case is genuinely compelling
         </h3>
 
         <p>
           We ran the full numbers in our{" "}
-          <Link href="/blog/ai-chatbot-roi" className="text-blue-400 underline">
+          <Link href="/blog/ai-chatbot-roi" className="text-coral underline">
             AI Chatbot ROI breakdown
           </Link>
           . The short version: most small businesses see a payback period under
@@ -450,7 +451,7 @@ export default function AIvsRemotevsInPersonBlog() {
           with AI. The math gets even better when you factor in{" "}
           <Link
             href="/blog/how-ai-save-time"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             time saved on repetitive call handling
           </Link>{" "}
@@ -482,30 +483,30 @@ export default function AIvsRemotevsInPersonBlog() {
               name: "In-Person",
               score: "6.5",
               tag: "Situational",
-              tagClass: "bg-neutral-700/60 text-neutral-300",
+              tagClass: "bg-white border border-ink/10 text-ink2",
             },
             {
               name: "Remote",
               score: "6.8",
               tag: "Useful Layer",
-              tagClass: "bg-neutral-700/60 text-neutral-300",
+              tagClass: "bg-white border border-ink/10 text-ink2",
             },
             {
               name: "AI",
               score: "8.9",
               tag: "Best Default",
-              tagClass: "bg-green-500/10 text-green-400",
+              tagClass: "bg-white border border-ink/10 text-[#1F7A4D]",
             },
           ].map(({ name, score, tag, tagClass }) => (
             <div
               key={name}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center space-y-3"
+              className="rounded-2xl border border-ink/10 bg-white p-6 text-center space-y-3"
             >
-              <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
+              <span className="text-xs font-mono text-ink3 uppercase tracking-widest">
                 Overall Score
               </span>
-              <p className="text-white font-bold text-lg">{name}</p>
-              <p className="font-mono text-5xl font-bold text-white italic leading-none">
+              <p className="text-ink font-bold text-lg">{name}</p>
+              <p className="font-mono text-5xl font-bold text-ink italic leading-none">
                 {score}
               </p>
               <span
@@ -518,20 +519,20 @@ export default function AIvsRemotevsInPersonBlog() {
         </div>
 
         {/* Comparison Table */}
-        <div className="overflow-x-auto rounded-2xl border border-white/10">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10">
           <table className="w-full text-sm">
             <thead>
-              <tr className="bg-white/5 border-b border-white/10">
-                <th className="text-left px-8 py-6 font-mono text-xs text-neutral-400 uppercase tracking-widest">
+              <tr className="bg-white border-b border-ink/10">
+                <th className="text-left px-8 py-6 font-mono text-xs text-ink2 uppercase tracking-widest">
                   Criteria
                 </th>
-                <th className="text-left px-8 py-6 font-mono text-xs text-neutral-400 uppercase tracking-widest">
+                <th className="text-left px-8 py-6 font-mono text-xs text-ink2 uppercase tracking-widest">
                   In-Person
                 </th>
-                <th className="text-left px-8 py-6 font-mono text-xs text-neutral-400 uppercase tracking-widest">
+                <th className="text-left px-8 py-6 font-mono text-xs text-ink2 uppercase tracking-widest">
                   Remote
                 </th>
-                <th className="text-left px-8 py-6 font-mono text-xs text-neutral-400 uppercase tracking-widest">
+                <th className="text-left px-8 py-6 font-mono text-xs text-ink2 uppercase tracking-widest">
                   AI (RhythmiqCX)
                 </th>
               </tr>
@@ -541,19 +542,19 @@ export default function AIvsRemotevsInPersonBlog() {
                 ({ criteria, inPerson, remote, ai, winner }, i) => (
                   <tr
                     key={criteria}
-                    className={`border-b border-white/5 ${i % 2 === 0 ? "" : "bg-white/[0.02]"}`}
+                    className={`border-b border-ink/10 ${i % 2 === 0 ? "" : "bg-white"}`}
                   >
-                    <td className="px-8 py-6 text-white font-medium">
+                    <td className="px-8 py-6 text-ink font-medium">
                       {criteria}
                     </td>
                     <td
-                      className={`px-8 py-6 ${winner === "inPerson" || winner === "tie-ip-ai" ? "text-green-400 font-semibold" : "text-neutral-500"}`}
+                      className={`px-8 py-6 ${winner === "inPerson" || winner === "tie-ip-ai" ? "text-[#1F7A4D] font-semibold" : "text-ink3"}`}
                     >
                       {inPerson}
                     </td>
-                    <td className="px-8 py-6 text-neutral-500">{remote}</td>
+                    <td className="px-8 py-6 text-ink3">{remote}</td>
                     <td
-                      className={`px-8 py-6 ${winner === "ai" || winner === "tie-ip-ai" ? "text-green-400 font-semibold" : "text-neutral-400"}`}
+                      className={`px-8 py-6 ${winner === "ai" || winner === "tie-ip-ai" ? "text-[#1F7A4D] font-semibold" : "text-ink2"}`}
                     >
                       {ai}
                     </td>
@@ -588,14 +589,14 @@ export default function AIvsRemotevsInPersonBlog() {
           {DECISION_QUESTIONS.map(({ q, hint }, i) => (
             <div
               key={i}
-              className="flex gap-5 rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="flex gap-5 rounded-2xl border border-ink/10 bg-white p-6"
             >
-              <span className="shrink-0 font-mono text-2xl font-bold text-green-400 mt-6">
+              <span className="shrink-0 font-mono text-2xl font-bold text-coral mt-6">
                 {i + 1}.
               </span>
               <div className="space-y-1">
-                <p className="text-white font-semibold">{q}</p>
-                <p className="text-neutral-500 text-sm leading-relaxed">
+                <p className="text-ink font-semibold">{q}</p>
+                <p className="text-ink3 text-sm leading-relaxed">
                   {hint}
                 </p>
               </div>
@@ -623,7 +624,7 @@ export default function AIvsRemotevsInPersonBlog() {
           hybrid looks like in practice, the{" "}
           <Link
             href="/blog/ai-virtual-receptionist-vs-human-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI vs Human Receptionist deep-dive
           </Link>{" "}
@@ -632,7 +633,7 @@ export default function AIvsRemotevsInPersonBlog() {
           competitor is growing faster.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The future of front desk isn&apos;t human vs machine. It&apos;s
           knowing which calls need a heartbeat and which ones just need an
           answer.
@@ -644,7 +645,7 @@ export default function AIvsRemotevsInPersonBlog() {
           in the{" "}
           <Link
             href="/blog/autonomous-customer-support"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             autonomous customer support piece
           </Link>
@@ -655,39 +656,14 @@ export default function AIvsRemotevsInPersonBlog() {
         </p>
       </section>
 
-      {/* ── FINAL CTA ── */}
-      {/* INSERT CTA COMPONENT HERE
-          Suggested copy: "Stop Losing Calls to Voicemail. Start With RhythmiqCX.
-          Takes minutes to set up. Handles calls from day one.
-          No scripts, no shifts, no surprises."
-          CTA Button: "Book Your Free Demo" → https://calendly.com/ray-rhythmiqcx/30min
-          Secondary: "Explore RhythmiqCX →" → /
-      */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Stop Losing Calls to Voicemail. Start With RhythmiqCX.
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Takes minutes to set up. Handles calls from day one. No scripts, no
-            shifts, no surprises.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book Your Free Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore RhythmiqCX →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Stop Losing Calls to Voicemail. Start With RhythmiqCX."
+        description="Takes minutes to set up. Handles calls from day one. No scripts, no shifts, no surprises."
+        primaryLabel="Book Your Free Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore RhythmiqCX"
+        secondaryHref="/"
+      />
     </BlogLayout>
   );
 }

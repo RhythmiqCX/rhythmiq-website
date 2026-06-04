@@ -23,10 +23,10 @@ const WorldClassAgent = () => {
               <circle cx="26" cy="60" r="6" fill="#E8643C" />
             </svg>
             <span className="eyebrow justify-center">Designed for hospitality</span>
-            <h2 className="h-section mt-3.5">A world-class voice agent</h2>
+            <h2 className="h-section mt-3.5">A voice guests actually trust</h2>
             <p className="lede max-w-[40ch] mx-auto mt-4 mb-[22px]">
-              Natural turn-taking, graceful interruptions, real warmth. Rhythmiq sounds like the person
-              you&rsquo;d want greeting every guest — at 3pm or 11pm, in any language.
+              Natural turn taking, graceful interruptions, real warmth. Rhythmiq sounds like the
+              person you want greeting every guest, at 3pm or 11pm, in any language.
             </p>
             <Link href={DEMO_URL} className="btn btn-dark self-center">
               Hear it for yourself
@@ -52,8 +52,8 @@ const WorldClassAgent = () => {
               >
                 Caller · transferred to host
               </small>
-              I just called to change my reservation and it actually understood me — sorted it in ten
-              seconds. Didn&rsquo;t realize it wasn&rsquo;t a person.
+              I just called to change my reservation and it actually understood me. Sorted it in ten
+              seconds. I didn&rsquo;t realize it wasn&rsquo;t a person.
             </div>
           </div>
         </Reveal>

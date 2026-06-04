@@ -10,7 +10,7 @@ export const metadata = generateMetadata({
   description:
     "Actionable guides, comparisons, and ideas on voice AI, AI phone receptionists, reservations, and automating front-of-house for restaurants and small businesses.",
   alternates: { canonical: "/blog" },
-  openGraph: { images: ['/icons/white.jpeg'], type: 'website' },
+  openGraph: { images: ['/icons/og-default.png'], type: 'website' },
 });
 
 export default async function BlogListingPage() {

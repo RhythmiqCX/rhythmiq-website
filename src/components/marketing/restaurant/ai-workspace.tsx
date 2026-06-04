@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Reveal from "./reveal";
-import Placeholder from "./placeholder";
+import { WorkspaceUI } from "./visuals";
 import { DEMO_URL } from "@/constants/links";
 
 const AIWorkspace = () => {
@@ -21,7 +21,7 @@ const AIWorkspace = () => {
           </Link>
         </Reveal>
         <Reveal delay={0.12} className="frame frame-light p-5">
-          <Placeholder tint="sky" tag="workspace screenshot" className="aspect-[16/9]" />
+          <WorkspaceUI className="aspect-[16/9] rounded-[10px]" />
         </Reveal>
       </div>
     </section>

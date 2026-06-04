@@ -8,8 +8,9 @@ const FOOTER_COLUMNS: { title: string; links: { name: string; href: string }[] }
     links: [
       { name: "AI Phone Host", href: "/voice-ai" },
       { name: "How it works", href: "/voice-ai#how-it-works" },
-      { name: "Integrations", href: "/#integrations" },
-      { name: "Free tools", href: "/tools" },
+      { name: "Live demo", href: "/demo" },
+      { name: "Integrations", href: "/integrations" },
+      { name: "Pricing", href: "/pricing" },
     ],
   },
   {

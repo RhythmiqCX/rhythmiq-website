@@ -28,6 +28,14 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  images: {
+    // Serve modern formats; Next picks AVIF first, falls back to WebP, then original.
+    formats: ["image/avif", "image/webp"],
+    // Device widths used for responsive `sizes` on next/image.
+    deviceSizes: [360, 480, 640, 768, 1024, 1280, 1536, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 2678400, // 31 days
+  },
   async redirects() {
     // statusCode 301 (not `permanent: true`, which emits 308) to match the
     // conventional "301 Moved Permanently" for retired GET pages.

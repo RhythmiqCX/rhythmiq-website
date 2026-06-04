@@ -60,7 +60,7 @@ function CallsPanel() {
           <small>Caller</small>Hi, do you have a table for four tonight around 7:30?
         </div>
         <div className="bubble ai">
-          <small>Rhythmiq</small>Let me check — we have <span className="hl">7:15 or 8:00</span> for a party
+          <small>Rhythmiq</small>Let me check. We have <span className="hl">7:15 or 8:00</span> for a party
           of four. Which works better?
         </div>
         <div className="bubble caller">

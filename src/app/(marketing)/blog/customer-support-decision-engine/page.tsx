@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title: "Customer Support Is a Decision Engine Disguised as a Conversation",
@@ -100,7 +101,7 @@ export default function CustomerSupportDecisionEngine() {
           “Refund please” → evaluate policy.
           That’s not conversation. That’s a state machine. We already made this
           argument bluntly in{" "}
-          <Link href= "/blog/cx-not-conversations" className="text-blue-600">
+          <Link href= "/blog/cx-not-conversations" className="text-coral">
             CX Is Not Conversations It Is Micro Decisions
           </Link>
           . Support has always been decisions pretending to be empathy.
@@ -116,9 +117,9 @@ export default function CustomerSupportDecisionEngine() {
 
         <p>Which is exactly how a decision engine works. And the moment your system forgets context, everything collapses. Users
           repeat themselves. Agents guess. Trust dies. That’s the whole thesis
-          behind <Link href="/blog/the-hidden-state-problem-in-voice-ai" className="text-blue-600">
+          behind <Link href="/blog/the-hidden-state-problem-in-voice-ai" className="text-coral">
             "The Hidden State Problem in Voice AI Conversations"
-          </Link>  and  <Link href="/blog/state-management-in-voice-ai" className="text-blue-600"> 
+          </Link>  and  <Link href="/blog/state-management-in-voice-ai" className="text-coral"> 
               State Management in Voice AI Is a Nightmare
           </Link>. Not AI problems. Memory problems.
         </p>
@@ -136,7 +137,7 @@ export default function CustomerSupportDecisionEngine() {
         <p>
           Humans should handle nuance. Machines should handle repetition. That’s
           just common sense engineering.And honestly, CSAT is fake happy nonsense. Outcomes matter. That’s why
-          we replaced it with decision success in  <Link href= "/blog/support-metrics" className="text-blue-600">
+          we replaced it with decision success in  <Link href= "/blog/support-metrics" className="text-coral">
             Support Metrics Are Broken Replace CSAT With Decision Success Rate
           </Link>. If the right decision fired instantly, you won. Everything else is
           theater.
@@ -154,7 +155,7 @@ export default function CustomerSupportDecisionEngine() {
         <p>
           It’s not one AI. It’s ASR, LLM, TTS, memory, orchestration duct taped
           together. We explain this mess in{" "}
-          <Link href="/blog/voice-ai-is-distributed" className="text-blue-600">
+          <Link href="/blog/voice-ai-is-distributed" className="text-coral">
             Voice AI Is a Distributed System Wearing a Human Mask
           </Link>
           . Miss one beat and users feel it instantly.
@@ -162,9 +163,9 @@ export default function CustomerSupportDecisionEngine() {
 
         <p>
           Hallucinations are worse too. You can’t scroll back. You just trust
-          whatever the system says. That’s why{" "}  <Link href="/blog/voice-ai-hallucinations" className="text-blue-600">
+          whatever the system says. That’s why{" "}  <Link href="/blog/voice-ai-hallucinations" className="text-coral">
              Voice AI Hallucinations Are More Dangerous Than Text Ones
-           </Link>  and   <Link href="/blog/voice-ai-needs" className="text-blue-600">
+           </Link>  and   <Link href="/blog/voice-ai-needs" className="text-coral">
             Why Voice AI Needs Fewer Words Than Chat AI  </Link>   both exist. Fast and short beats smart and chatty.
         </p>
       </section>
@@ -181,48 +182,26 @@ export default function CustomerSupportDecisionEngine() {
           Model intents. Define states. Map decisions. Treat it like backend
           architecture. And don’t ignore infra reality. AI doesn’t fail because it’s dumb. It
           fails because memory explodes and latency kills trust. We ranted about
-          this in  <Link  href="/blog/ai-models-eat-memory" className="text-blue-600">  AI Models Eat Memory for Breakfast   </Link>  Intelligence is cheap. Plumbing is expensive.
+          this in  <Link  href="/blog/ai-models-eat-memory" className="text-coral">  AI Models Eat Memory for Breakfast   </Link>  Intelligence is cheap. Plumbing is expensive.
         </p>
 
         <p>
           Honestly, the best systems talk less and finish faster. That philosophy
-          shaped <Link href="/blog/ai-that-knows" className="text-blue-600">
+          shaped <Link href="/blog/ai-that-knows" className="text-coral">
             AI That Knows When to Quit
-          </Link> and why <Link href="/blog/always-available-ai" className="text-blue-600">
+          </Link> and why <Link href="/blog/always-available-ai" className="text-coral">
             The Problem With Always Available AI: Why 24/7 Bots Are Burning User Trust
           </Link>. Silence is sometimes the smartest UX.
         </p>
 
-        {/* CTA */}
-        <div className="mt-14 rounded-3xl border-2 border-white/10 bg-background px-10 py-12">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              Support should feel instant
-            </h2>
-
-            <p className="text-neutral-300 mb-6 leading-relaxed">
-              We design support stacks like decision engines first then layer
-              chat and voice on top. Faster resolutions, fewer escalations, and
-              conversations that actually feel human.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://calendly.com/ray-rhythmiqcx/30min"
-                className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-medium text-black hover:bg-neutral-200 transition"
-              >
-                Book a live demo
-              </a>
-
-              <Link
-                href="https://rhythmiqcx.com"
-                className="inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-medium text-white hover:border-white hover:bg-white/5 transition"
-              >
-                Explore the product
-              </Link>
-            </div>
-          </div>
-        </div>
+        <BlogCTA
+          title="Support should feel instant"
+          description="We design support stacks like decision engines first then layer chat and voice on top. Faster resolutions, fewer escalations, and conversations that actually feel human."
+          primaryLabel="Book a live demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the product"
+          secondaryHref="https://rhythmiqcx.com"
+        />
       </section>
     </BlogLayout>
   );

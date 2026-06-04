@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps) {
     title: `${decoded} Articles | Rhythmiq Blog`,
     description: `Browse ${decoded} posts and insights on the Rhythmiq Blog.`,
     alternates: { canonical: `/blog/category/${encodeURIComponent(tag)}` },
-    openGraph: { images: ['/icons/white.jpeg'], type: 'website' },
+    openGraph: { images: ['/icons/og-default.png'], type: 'website' },
   });
 }
 

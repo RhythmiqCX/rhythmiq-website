@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { cn } from "@/lib";
+import { LogoMark } from "./logo";
 
 /**
- * Rhythmiq wordmark + CSS brand-mark (the two coral "equalizer" bars in a rounded
- * ink square). `onDark` swaps the mark base to white for the dark footer.
- * The real logo is still TBD — this is the interim brand per the design handoff.
+ * Rhythmiq wordmark + logo mark (a calligraphic "R" with a coral beat dot in a
+ * rounded square). `onDark` inverts the mark for the dark footer.
  */
 const Brand = ({
   className,
@@ -25,7 +25,7 @@ const Brand = ({
         className,
       )}
     >
-      <span className="brand-mark" style={onDark ? { background: "#fff" } : undefined} />
+      <LogoMark size={24} onDark={onDark} />
       {label}
     </Link>
   );

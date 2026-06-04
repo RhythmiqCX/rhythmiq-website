@@ -29,7 +29,7 @@ export const metadata = genMeta({
     canonical: "/voice-ai",
   },
   openGraph: {
-    images: ["/icons/white.jpeg"],
+    images: ["/icons/og-default.png"],
     type: "website",
   },
 });
@@ -155,7 +155,7 @@ const VoiceAIApp = () => {
       </section>
 
       {/* How It Works */}
-      <section>
+      <section id="how-it-works" className="scroll-mt-16">
         <HowItWorks />
       </section>
 
@@ -183,7 +183,7 @@ const VoiceAIApp = () => {
       </section>
 
       {/* Pricing Comparison */}
-      <section>
+      <section id="pricing" className="scroll-mt-16">
         <PricingComparison />
       </section>
 

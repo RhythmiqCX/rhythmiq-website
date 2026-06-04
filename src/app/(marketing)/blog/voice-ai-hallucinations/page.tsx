@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title: "Voice AI Hallucinations Are More Dangerous Than Text Ones",
@@ -102,7 +103,7 @@ export default function VoiceAIHallucinations() {
         <p>
           Voice hallucinations don’t feel like software bugs; they feel like an
           authority figure lying to your face. This is the emotional cousin of{" "}
-          <Link href="/blog/real-cost-of-voice-ai" className="text-blue-600">
+          <Link href="/blog/real-cost-of-voice-ai" className="text-coral">
             latency destroying trust
           </Link>
           . Voice collapses time, memory, and verification into a single fragile
@@ -125,7 +126,7 @@ export default function VoiceAIHallucinations() {
 
         <p>
           This permanence issue ties directly to{" "}
-          <Link href="/blog/voice-ai-needs" className="text-blue-600">
+          <Link href="/blog/voice-ai-needs" className="text-coral">
             Why Voice AI Needs Fewer Words Than Chat AI
           </Link>
           . Every extra sentence a voice agent speaks isn't just filler it is
@@ -149,7 +150,7 @@ export default function VoiceAIHallucinations() {
 
         <p>
           This creates a dangerous illusion of competence. As we warned in{" "}
-          <Link href="/blog/ai-that-knows" className="text-blue-600">
+          <Link href="/blog/ai-that-knows" className="text-coral">
             AI That Knows When to Quit
           </Link>
           , confidence without boundaries isn’t intelligence it’s a performance.
@@ -172,7 +173,7 @@ export default function VoiceAIHallucinations() {
 
         <p>
           This is exactly what we meant in{" "}
-          <Link href="/blog/cx-not-conversations" className="text-blue-600">
+          <Link href="/blog/cx-not-conversations" className="text-coral">
             CX Is Not Conversations It Is Micro Decisions
           </Link>
           . Voice hallucinations fail in tiny, invisible moments that accumulate
@@ -201,37 +202,16 @@ export default function VoiceAIHallucinations() {
         </p>
 
         {/* WEBSITE-STYLE CTA SECTION */}
-        <div className="mt-14 rounded-3xl border-2 border-white/10 bg-background px-10 py-12">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              Voice AI breaks when it starts lying
-            </h2>
+        <BlogCTA
+          title="Voice AI breaks when it starts lying"
+          description="RhythmiqCX is built to prevent hallucinations by design. We prioritize strict state management, low-latency interruptions, and concise answers that build trust rather than destroy it."
+          primaryLabel="Book a live demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the product"
+          secondaryHref="https://rhythmiqcx.com"
+        />
 
-            <p className="text-neutral-300 mb-6 leading-relaxed">
-              RhythmiqCX is built to prevent hallucinations by design. We
-              prioritize strict state management, low-latency interruptions, and
-              concise answers that build trust rather than destroy it.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://calendly.com/ray-rhythmiqcx/30min"
-                className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-medium text-black hover:bg-neutral-200 transition"
-              >
-                Book a live demo
-              </a>
-
-              <Link
-                href="https://rhythmiqcx.com"
-                className="inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-medium text-white hover:border-white hover:bg-white/5 transition"
-              >
-                Explore the product
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <p className="text-gray-500 italic mt-10">
+        <p className="text-ink3 italic mt-10">
           <strong>Team RhythmiqCX</strong>
           <br />
           Building voice AI that survives the real world.

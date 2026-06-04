@@ -1,20 +1,18 @@
 import Link from "next/link";
 import Reveal from "./reveal";
-import Placeholder from "./placeholder";
+import { GuestTextUI, InsightsUI } from "./visuals";
 import { DEMO_URL } from "@/constants/links";
 
 const CARDS = [
   {
-    tag: "guest texting confirmation",
-    tint: "sand" as const,
-    title: "A seamless experience for guests and staff",
-    body: "Callers get a warm, natural conversation — no menus to press. Your team gets every booking, note, and order pushed straight into the tools they already use.",
+    Art: GuestTextUI,
+    title: "Easy for guests, less work for your team",
+    body: "Callers get a warm, natural conversation with no menus to press. Your team gets every booking, note, and order pushed straight into the tools they already use.",
   },
   {
-    tag: "insights dashboard",
-    tint: "default" as const,
+    Art: InsightsUI,
     title: "Insights from across every call",
-    body: "See what guests ask for most, when you're missing covers, and which nights need more staff — summarized from thousands of real conversations.",
+    body: "See what guests ask for most, when you are missing covers, and which nights need more hands, all pulled from thousands of real calls.",
   },
 ];
 
@@ -24,11 +22,7 @@ const TwoUpCards = () => {
       <div className="wrap grid md:grid-cols-2 gap-6 lg:gap-9">
         {CARDS.map((card, i) => (
           <Reveal key={card.title} delay={i * 0.12}>
-            <Placeholder
-              tint={card.tint}
-              tag={card.tag}
-              className="aspect-[16/10] rounded-[14px] mb-5"
-            />
+            <card.Art className="aspect-[16/10] rounded-[14px] mb-5" />
             <h3 className="h-feature mb-2">{card.title}</h3>
             <p className="text-ink2 text-[15.5px] mb-3.5 max-w-[44ch]">{card.body}</p>
             <Link href={DEMO_URL} className="link-arrow">

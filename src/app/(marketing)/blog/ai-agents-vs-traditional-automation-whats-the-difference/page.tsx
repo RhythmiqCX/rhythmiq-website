@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -99,7 +100,7 @@ export default function AIAgentsVsTraditionalAutomation() {
           Traditional Automation Is A Fancy To-Do List. AI Agents Actually Think.
         </h2>
 
-        <p className="text-xl text-neutral-400 italic">
+        <p className="text-xl text-ink2 italic">
           "The biggest mistake businesses make is assuming automation and AI agents are the same thing. They aren't even playing the same game."
         </p>
 
@@ -119,7 +120,7 @@ export default function AIAgentsVsTraditionalAutomation() {
           We touched on this shift in{" "}
           <Link
             href="/blog/ai-agents-for-small-businesses-2026"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI Agents for Small Businesses: What Actually Matters in 2026
           </Link>
@@ -127,11 +128,11 @@ export default function AIAgentsVsTraditionalAutomation() {
         </p>
       </section>
 
-      <hr className="border-white/10 my-20" />
+      <hr className="border-ink/10 my-20" />
 
       {/* SECTION 1 */}
       <section id="automation-is-rules" className="space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Automation Follows Rules. AI Agents Adapt.
         </h2>
 
@@ -164,18 +165,18 @@ export default function AIAgentsVsTraditionalAutomation() {
         id="rules-vs-outcomes"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Traditional Automation Follows Rules. AI Agents Chase Outcomes.
         </h2>
 
    <p>
   This might be the simplest way to explain the difference between the two
   technologies. Traditional automation asks,{" "}
-  <span className="italic text-neutral-300">
+  <span className="italic text-ink2">
     “What rule should I execute next?”
   </span>{" "}
   while AI agents ask,{" "}
-  <span className="italic text-neutral-300">
+  <span className="italic text-ink2">
     “What outcome is this customer trying to achieve?”
   </span>
   . That distinction changes everything.
@@ -207,7 +208,7 @@ export default function AIAgentsVsTraditionalAutomation() {
           We discussed similar ideas in{" "}
           <Link
             href="/blog/autonomous-customer-support"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Autonomous Customer Support: How AI Is Replacing Traditional Support Teams
           </Link>
@@ -227,7 +228,7 @@ export default function AIAgentsVsTraditionalAutomation() {
   id="future-of-automation"
   className="mt-24 space-y-6 pb-20"
 >
-  <h2 className="text-3xl font-semibold text-white">
+  <h2 className="text-3xl font-semibold text-ink">
     Automation Isn't Dying. It's Becoming The Foundation Beneath AI Agents.
   </h2>
 
@@ -247,39 +248,19 @@ export default function AIAgentsVsTraditionalAutomation() {
     We're already seeing this evolution across customer support automation, Voice AI, AI receptionists, AI voice assistants, and autonomous support systems. The companies delivering the best customer experiences aren't necessarily building the biggest workflow diagrams anymore. They're building systems that can understand customer intent, adapt when conversations go off script, and still leverage reliable automation behind the scenes to execute tasks quickly and accurately.
   </p>
 
-  <p className="text-xl italic text-neutral-300">
+  <p className="text-xl italic text-ink2">
     The best automation follows instructions. The best AI agents understand intentions.
   </p>
 
         {/* FINAL CTA */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Stop Building Bigger Workflows. Start Building Smarter Customer Experiences.
-          </h2>
-
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Discover how RhythmiqCX combines AI agents, AI voice assistants,
-            Voice AI, and autonomous customer support to help businesses move
-            beyond rigid automation and create customer experiences that
-            actually adapt in real time.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Stop Building Bigger Workflows. Start Building Smarter Customer Experiences."
+          description="Discover how RhythmiqCX combines AI agents, AI voice assistants, Voice AI, and autonomous customer support to help businesses move beyond rigid automation and create customer experiences that actually adapt in real time."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

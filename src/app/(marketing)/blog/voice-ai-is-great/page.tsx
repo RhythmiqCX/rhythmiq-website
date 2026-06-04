@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -101,7 +102,7 @@ export default function VoiceAIFaqsVsExceptions() {
       {/* INTRO */}
       <section className="mt-16 space-y-6">
         <h2 className="text-4xl font-bold">The Demo Trap</h2>
-        <p className="italic text-neutral-400 text-lg">
+        <p className="italic text-ink2 text-lg">
           "Exceptions are where automation ROI quietly goes to die."
         </p>
 
@@ -110,7 +111,7 @@ export default function VoiceAIFaqsVsExceptions() {
           magical for the{" "}
           <Link
             href="/blog/the-first-second"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             first few minutes
           </Link>
@@ -136,7 +137,7 @@ export default function VoiceAIFaqsVsExceptions() {
 
       {/* SECTION 1: FAQs vs Real Life */}
       <section id="faqs-vs-life" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Entropy of Voice: FAQs vs. Real Life
         </h2>
         <p>
@@ -146,7 +147,7 @@ export default function VoiceAIFaqsVsExceptions() {
           specific history, the{" "}
           <Link
             href="/blog/state-management-in-voice-ai"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             current system state
           </Link>
@@ -166,7 +167,7 @@ export default function VoiceAIFaqsVsExceptions() {
           entropy the measure of disorder in a{" "}
           <Link
             href="/blog/voice-ai-is-distributed"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             distributed system
           </Link>
@@ -178,7 +179,7 @@ export default function VoiceAIFaqsVsExceptions() {
 
       {/* SECTION 2: Customers Aren't Clean Inputs */}
       <section id="customers-not-clean" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Clean Data vs. Messy Humans
         </h2>
         <p>
@@ -205,7 +206,7 @@ export default function VoiceAIFaqsVsExceptions() {
 
       {/* SECTION 3: ROI */}
       <section id="edge-cases-roi" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Hidden Cost of the 'Happy Path'
         </h2>
         <p>
@@ -219,7 +220,7 @@ export default function VoiceAIFaqsVsExceptions() {
           Automating the "Happy Path" (FAQs), like{" "}
           <Link
             href="/blog/voice-ai-vs-chatbots"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             chatbots
           </Link>
@@ -232,7 +233,7 @@ export default function VoiceAIFaqsVsExceptions() {
           This "Negative ROI" is why we argue that{" "}
           <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             customer support is a decision engine
           </Link>
@@ -244,7 +245,7 @@ export default function VoiceAIFaqsVsExceptions() {
 
       {/* SECTION 4: Failure Modes Table */}
       <section id="four-failure-modes" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The 4 Failure Modes of Automation
         </h2>
         <p>
@@ -255,15 +256,15 @@ export default function VoiceAIFaqsVsExceptions() {
           {FAILURE_MODES.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col h-full rounded-2xl border border-white/10 bg-white/5 p-8 transition-all hover:bg-white/10"
+              className="flex flex-col h-full rounded-2xl border border-ink/10 bg-white p-8 transition-all hover:bg-white"
             >
-              <h3 className="text-xl font-bold text-white mb-3">{item.mode}</h3>
-              <p className="text-neutral-400 mb-6 flex-grow">{item.symptom}</p>
+              <h3 className="text-xl font-bold text-ink mb-3">{item.mode}</h3>
+              <p className="text-ink2 mb-6 flex-grow">{item.symptom}</p>
               <div className="mt-auto">
-                <span className="text-xs uppercase tracking-wider text-neutral-500 font-semibold">
+                <span className="text-xs uppercase tracking-wider text-ink3 font-semibold">
                   The RhythmiqCX Fix
                 </span>
-                <p className="text-blue-400 font-medium text-lg mt-1">
+                <p className="text-coral font-medium text-lg mt-1">
                   {item.fix}
                 </p>
               </div>
@@ -274,7 +275,7 @@ export default function VoiceAIFaqsVsExceptions() {
 
       {/* SECTION 5: Resilience Engineering */}
       <section id="design-for-exceptions" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Engineering for Resilience First
         </h2>
         <p>
@@ -297,36 +298,19 @@ export default function VoiceAIFaqsVsExceptions() {
           listening, not just matching patterns in a database.
         </p>
 
-        {/* CTA SECTION */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Stop Automating the Easy Parts.
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            RhythmiqCX is built for the "Actually..." and the "Wait, but..."
-            moments. Don't just solve FAQs; solve the exceptions that keep your
-            human agents up at night.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Technical Deep Dive
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              See the Decision Engine
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Stop Automating the Easy Parts."
+          description={`RhythmiqCX is built for the "Actually..." and the "Wait, but..." moments. Don't just solve FAQs; solve the exceptions that keep your human agents up at night.`}
+          primaryLabel="Book a Technical Deep Dive"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="See the Decision Engine"
+          secondaryHref="/"
+        />
       </section>
 
       {/* OUTRO */}
-      <section className="mt-24 space-y-4 border-t border-white/10 pt-10">
-        <p className="italic text-neutral-400">
+      <section className="mt-24 space-y-4 border-t border-ink/10 pt-10">
+        <p className="italic text-ink2">
           Automating FAQs saves money on paper. Designing for exceptions saves
           your business in reality.
         </p>

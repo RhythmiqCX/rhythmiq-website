@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
 import Link from "next/link";
@@ -270,7 +271,7 @@ export default function AIAnsweringServiceSmallBusiness() {
           what&apos;s possible, our{" "}
           <Link
             href="/blog/ai-phone-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             complete AI phone receptionist guide for small businesses
           </Link>{" "}
@@ -301,12 +302,12 @@ export default function AIAnsweringServiceSmallBusiness() {
           ].map(({ num, label }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+              className="rounded-2xl border border-ink/10 bg-white p-5 text-center"
             >
-              <span className="font-mono text-2xl font-bold text-yellow-400 block leading-none">
+              <span className="font-mono text-2xl font-bold text-coral block leading-none">
                 {num}
               </span>
-              <span className="text-neutral-500 text-xs mt-2 block leading-snug">
+              <span className="text-ink3 text-xs mt-2 block leading-snug">
                 {label}
               </span>
             </div>
@@ -316,7 +317,7 @@ export default function AIAnsweringServiceSmallBusiness() {
 
       {/* ── SECTION 2: WHAT IS IT ─────────────────────────────────────────── */}
       <section id="what-is-it" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Is an AI Answering Service? (It&apos;s Not What You Think)
         </h2>
 
@@ -346,15 +347,15 @@ export default function AIAnsweringServiceSmallBusiness() {
           complete transcript so the caller never has to repeat themselves.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p className="text-neutral-300 text-sm leading-relaxed">
-            <strong className="text-white">What it replaces:</strong> Voicemail
+        <div className="rounded-2xl border border-ink/10 bg-white p-6">
+          <p className="text-ink2 text-sm leading-relaxed">
+            <strong className="text-ink">What it replaces:</strong> Voicemail
             for missed calls. IVR for call routing. The &ldquo;just a second,
             let me check that&rdquo; pause for FAQ answers. After-hours silence.
             The need to hire specifically to answer the phone.
           </p>
-          <p className="text-neutral-300 text-sm leading-relaxed mt-3">
-            <strong className="text-white">
+          <p className="text-ink2 text-sm leading-relaxed mt-3">
+            <strong className="text-ink">
               What it doesn&apos;t replace:
             </strong>{" "}
             Complex conversations requiring judgment, emotional support, or
@@ -366,7 +367,7 @@ export default function AIAnsweringServiceSmallBusiness() {
 
       {/* ── SECTION 3: FIVE SIGNS ─────────────────────────────────────────── */}
       <section id="five-signs" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           5 Signs Your Small Business Needs an AI Answering Service
         </h2>
 
@@ -380,14 +381,14 @@ export default function AIAnsweringServiceSmallBusiness() {
           {SIGNS.map(({ num, title, body }) => (
             <div
               key={num}
-              className="flex gap-6 rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-6"
             >
-              <span className="font-mono text-3xl font-bold text-neutral-700 shrink-0 leading-none pt-1">
+              <span className="font-mono text-3xl font-bold text-ink3 shrink-0 leading-none pt-1">
                 {num}
               </span>
               <div className="space-y-2">
-                <h3 className="text-white font-semibold text-base">{title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <h3 className="text-ink font-semibold text-base">{title}</h3>
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
               </div>
@@ -400,7 +401,7 @@ export default function AIAnsweringServiceSmallBusiness() {
           context on the{" "}
           <Link
             href="/blog/will-ai-replace-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             broader question of where AI fits into a small business front desk
           </Link>
@@ -410,7 +411,7 @@ export default function AIAnsweringServiceSmallBusiness() {
 
       {/* ── SECTION 4: WHAT TO LOOK FOR ──────────────────────────────────── */}
       <section id="what-to-look-for" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What to Look For Before You Buy (And What&apos;s Just Marketing)
         </h2>
 
@@ -425,13 +426,13 @@ export default function AIAnsweringServiceSmallBusiness() {
           {CRITERIA.map(({ icon, label, body }) => (
             <div
               key={label}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors"
+              className="rounded-2xl border border-ink/10 bg-white p-6 hover:border-ink/20 transition-colors"
             >
               <span className="text-2xl block mb-3">{icon}</span>
-              <h3 className="text-white font-semibold text-base mb-2">
+              <h3 className="text-ink font-semibold text-base mb-2">
                 {label}
               </h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{body}</p>
+              <p className="text-ink2 text-sm leading-relaxed">{body}</p>
             </div>
           ))}
         </div>
@@ -440,7 +441,7 @@ export default function AIAnsweringServiceSmallBusiness() {
           We dug into the{" "}
           <Link
             href="/blog/ai-virtual-receptionist-vs-human-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI virtual receptionist vs human receptionist comparison
           </Link>{" "}
@@ -450,11 +451,11 @@ export default function AIAnsweringServiceSmallBusiness() {
           doing anyway and hands off the rest cleanly.
         </p>
 
-        <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/5 p-6">
-          <p className="text-xs font-mono text-yellow-400 uppercase tracking-widest font-semibold mb-2">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6">
+          <p className="text-xs font-mono text-coral uppercase tracking-widest font-semibold mb-2">
             The Demo Test
           </p>
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-ink2 text-sm leading-relaxed">
             Before you sign anything, run this test: call the vendor&apos;s demo
             line. Start in the middle of a sentence. Interrupt. Change what you
             said. Ask a question the vendor didn&apos;t expect. Ask to
@@ -467,7 +468,7 @@ export default function AIAnsweringServiceSmallBusiness() {
 
       {/* ── SECTION 5: REAL COST ─────────────────────────────────────────── */}
       <section id="real-cost" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What an AI Answering Service Actually Costs in 2026
         </h2>
 
@@ -477,10 +478,10 @@ export default function AIAnsweringServiceSmallBusiness() {
           actual monthly bill. Here&apos;s what the market actually looks like.
         </p>
 
-        <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.02]">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10 bg-white">
           <table className="w-full text-sm text-left">
-            <thead className="text-neutral-400 uppercase tracking-widest text-xs font-mono">
-              <tr className="bg-white/5">
+            <thead className="text-ink2 uppercase tracking-widest text-xs font-mono">
+              <tr className="bg-white">
                 <th className="px-5 py-4 rounded-tl-xl">Service</th>
                 <th className="px-5 py-4">Starting Price</th>
                 <th className="px-5 py-4">Model</th>
@@ -489,7 +490,7 @@ export default function AIAnsweringServiceSmallBusiness() {
                 <th className="px-5 py-4 rounded-tr-xl">Channels</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5">
+            <tbody className="divide-y divide-ink/10">
               {COST_DATA.map(
                 ({
                   name,
@@ -502,15 +503,15 @@ export default function AIAnsweringServiceSmallBusiness() {
                 }) => (
                   <tr
                     key={name}
-                    className={`hover:bg-white/[0.03] transition-colors ${
-                      highlight ? "bg-white/[0.04]" : ""
+                    className={`hover:bg-white transition-colors ${
+                      highlight ? "bg-white" : ""
                     }`}
                   >
-                    <td className="px-5 py-4 font-semibold text-white">
+                    <td className="px-5 py-4 font-semibold text-ink">
                       {highlight ? (
                         <span className="flex items-center gap-2">
                           {name}{" "}
-                          <span className="text-[10px] font-mono bg-green-500/20 text-green-400 px-2 py-0.5 rounded uppercase tracking-widest">
+                          <span className="text-[10px] font-mono bg-white border border-ink/10 text-[#1F7A4D] px-2 py-0.5 rounded uppercase tracking-widest">
                             Best Value
                           </span>
                         </span>
@@ -521,26 +522,26 @@ export default function AIAnsweringServiceSmallBusiness() {
                     <td
                       className={`px-5 py-4 font-mono ${
                         highlight
-                          ? "text-green-400 font-bold"
-                          : "text-neutral-300"
+                          ? "text-[#1F7A4D] font-bold"
+                          : "text-ink2"
                       }`}
                     >
                       {price}
                     </td>
-                    <td className="px-5 py-4 text-neutral-400">{model}</td>
-                    <td className="px-5 py-4 text-neutral-400">{includes}</td>
+                    <td className="px-5 py-4 text-ink2">{model}</td>
+                    <td className="px-5 py-4 text-ink2">{includes}</td>
                     <td
                       className={`px-5 py-4 ${
                         overage.includes("0.48")
-                          ? "text-red-400 font-semibold"
-                          : "text-neutral-400"
+                          ? "text-[#C9461F] font-semibold"
+                          : "text-ink2"
                       }`}
                     >
                       {overage}
                     </td>
                     <td
                       className={`px-5 py-4 ${
-                        highlight ? "text-green-400" : "text-neutral-400"
+                        highlight ? "text-[#1F7A4D]" : "text-ink2"
                       }`}
                     >
                       {channels}
@@ -556,7 +557,7 @@ export default function AIAnsweringServiceSmallBusiness() {
           The Dialzara comparison is worth calling out explicitly. On paper,
           Dialzara and RhythmiqCX look identical both $29/mo. But Dialzara gives
           you 60 minutes at that price, then charges{" "}
-          <strong className="text-white">$0.48/min in overage</strong>. That is
+          <strong className="text-ink">$0.48/min in overage</strong>. That is
           one of the highest overage rates in the market. A busy Monday with 30
           extra minutes of calls adds $14.40 to your bill without warning. For a
           small business running on tight margins, that&apos;s not a pricing
@@ -568,7 +569,7 @@ export default function AIAnsweringServiceSmallBusiness() {
           different call volumes, the{" "}
           <Link
             href="/blog/real-cost-of-voice-ai"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             real cost of voice AI breakdown
           </Link>{" "}
@@ -576,8 +577,8 @@ export default function AIAnsweringServiceSmallBusiness() {
           volume above 60 minutes, flat-rate wins.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
-          <p className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-3">
+          <p className="text-xs font-mono text-ink2 uppercase tracking-widest">
             True Cost at 500 min/mo (3 min avg call × 167 calls/mo)
           </p>
           <div className="space-y-2 text-sm">
@@ -610,12 +611,12 @@ export default function AIAnsweringServiceSmallBusiness() {
             ].map(({ name, cost, note }) => (
               <div
                 key={name}
-                className="flex items-baseline justify-between gap-4 border-b border-white/5 pb-2 last:border-0 last:pb-0"
+                className="flex items-baseline justify-between gap-4 border-b border-ink/10 pb-2 last:border-0 last:pb-0"
               >
-                <span className="text-white font-medium">{name}</span>
+                <span className="text-ink font-medium">{name}</span>
                 <span className="text-right">
-                  <span className="text-neutral-200 font-mono">{cost}</span>
-                  <span className="text-neutral-500 text-xs ml-2">
+                  <span className="text-ink2 font-mono">{cost}</span>
+                  <span className="text-ink3 text-xs ml-2">
                     ({note})
                   </span>
                 </span>
@@ -627,13 +628,13 @@ export default function AIAnsweringServiceSmallBusiness() {
 
       {/* ── SECTION 6: RHYTHMIQCX COMPARISON ─────────────────────────────── */}
       <section id="rhythmiqcx" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How RhythmiqCX Compares to Other AI Answering Services
         </h2>
 
         <p>
           I&apos;ll be direct about where{" "}
-          <Link href="/voice-ai" className="text-blue-400 underline">
+          <Link href="/voice-ai" className="text-coral underline">
             RhythmiqCX Voice AI
           </Link>{" "}
           sits in this market and where it doesn&apos;t. We&apos;re not the
@@ -652,7 +653,7 @@ export default function AIAnsweringServiceSmallBusiness() {
           running a business in India specifically, we wrote a dedicated post on{" "}
           <Link
             href="/blog/ai-voice-agent-india"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             how Indian businesses can use AI voice agents for 24/7 customer call
             handling
@@ -672,8 +673,8 @@ export default function AIAnsweringServiceSmallBusiness() {
           that&apos;s what we built.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-4">
-          <p className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-4">
+          <p className="text-xs font-mono text-ink2 uppercase tracking-widest">
             RhythmiqCX at a glance
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -686,8 +687,8 @@ export default function AIAnsweringServiceSmallBusiness() {
               { label: "Free trial", value: "7 days, no credit card" },
             ].map(({ label, value }) => (
               <div key={label} className="space-y-1">
-                <p className="text-neutral-500 text-xs">{label}</p>
-                <p className="text-white text-sm font-semibold">{value}</p>
+                <p className="text-ink3 text-xs">{label}</p>
+                <p className="text-ink text-sm font-semibold">{value}</p>
               </div>
             ))}
           </div>
@@ -695,7 +696,7 @@ export default function AIAnsweringServiceSmallBusiness() {
 
         <p>
           The ROI math is straightforward. We walked through it in detail in our{" "}
-          <Link href="/blog/ai-chatbot-roi" className="text-blue-400 underline">
+          <Link href="/blog/ai-chatbot-roi" className="text-coral underline">
             AI chatbot ROI breakdown for small businesses
           </Link>
           : a business getting 15 after-hours calls per week, converting 20% of
@@ -707,7 +708,7 @@ export default function AIAnsweringServiceSmallBusiness() {
 
         <p>
           If you want to see the{" "}
-          <Link href="/ai-chatbot-pricing" className="text-blue-400 underline">
+          <Link href="/ai-chatbot-pricing" className="text-coral underline">
             full RhythmiqCX pricing tiers including what&apos;s included at each
             plan level
           </Link>
@@ -718,7 +719,7 @@ export default function AIAnsweringServiceSmallBusiness() {
       </section>
 
       <section id="verdict" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Final Verdict: Who Should Get an AI Answering Service Right Now
         </h2>
 
@@ -742,7 +743,7 @@ export default function AIAnsweringServiceSmallBusiness() {
           reason to wait is if you&apos;re not yet ready to test it.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The businesses winning in 2026 are not the ones with the smartest AI
           strategies. They&apos;re the ones who stopped letting voicemail be
           their after-hours sales team.
@@ -754,7 +755,7 @@ export default function AIAnsweringServiceSmallBusiness() {
           been comparing tools and want the full list, our{" "}
           <Link
             href="/blog/best-ai-customer-support-tools-under-50"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             roundup of the best AI customer support tools under $50/month
           </Link>{" "}
@@ -763,16 +764,16 @@ export default function AIAnsweringServiceSmallBusiness() {
       </section>
 
       <section id="faq" className="mt-24 space-y-8">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-6">
           <div className="space-y-2">
-            <h3 className="text-white font-semibold text-base">
+            <h3 className="text-ink font-semibold text-base">
               What is an AI answering service for small business?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               An AI answering service for small business is a software system
               that answers inbound phone calls using conversational AI. It
               handles FAQs, books appointments, routes complex calls to humans,
@@ -781,11 +782,11 @@ export default function AIAnsweringServiceSmallBusiness() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               How much does an AI answering service cost?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Prices range from $29/mo (RhythmiqCX flat-rate, Dialzara 60-min
               plan) to $99/mo (My AI Front Desk, Synthflow) to $349/mo
               (Ringly.io). Per-minute platforms like Retell AI start cheaper but
@@ -794,11 +795,11 @@ export default function AIAnsweringServiceSmallBusiness() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               What is the best AI answering service for small business?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               The best AI answering services for small businesses in 2026 are
               RhythmiqCX ($29/mo flat, voice + chat + WhatsApp), Dialzara
               ($29/mo, 60 min included), and My AI Front Desk ($99/mo).
@@ -807,11 +808,11 @@ export default function AIAnsweringServiceSmallBusiness() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               Can AI really answer my business phone calls?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Yes. Modern AI answering services handle natural conversation not
               press-1 menus. They answer in under one second, understand caller
               intent, book appointments, answer FAQs, and route complex calls to
@@ -820,11 +821,11 @@ export default function AIAnsweringServiceSmallBusiness() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               How is an AI answering service different from voicemail?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Voicemail records a message and waits for you to call back. An AI
               answering service answers in real time, understands what the
               caller needs, takes action, and resolves the call or transfers to
@@ -833,11 +834,11 @@ export default function AIAnsweringServiceSmallBusiness() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               How long does it take to set up an AI answering service?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Most AI answering services for small businesses deploy in under a
               day. You configure the AI persona, connect your phone number,
               upload your FAQ or knowledge base, and the AI is live. No
@@ -848,33 +849,14 @@ export default function AIAnsweringServiceSmallBusiness() {
         </div>
       </section>
 
-      {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Start Answering Every Call 7-Day Free Trial, No Credit Card
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            RhythmiqCX Voice AI takes calls from day one. No engineering. No
-            scripts to write from scratch. Just upload your FAQ, connect your
-            number, and your AI answering service is live 24/7, from $29/mo.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link
-              href="/voice-ai"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Try Voice AI Free
-            </Link>
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Book a Live Demo →
-            </a>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Start Answering Every Call 7-Day Free Trial, No Credit Card"
+        description="RhythmiqCX Voice AI takes calls from day one. No engineering. No scripts to write from scratch. Just upload your FAQ, connect your number, and your AI answering service is live 24/7, from $29/mo."
+        primaryLabel="Try Voice AI Free"
+        primaryHref="/voice-ai"
+        secondaryLabel="Book a Live Demo"
+        secondaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+      />
     </BlogLayout>
   );
 }

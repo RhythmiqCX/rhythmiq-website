@@ -11,14 +11,14 @@ const AnnouncementBar = () => {
         New
       </span>
       <span className="hidden sm:inline">
-        Introducing Rhythmiq&nbsp;2 — your AI host now answers in 12 languages.
+        See how restaurants book more tables with an AI phone host that never misses a call.
       </span>
-      <span className="sm:hidden">Rhythmiq&nbsp;2 — now in 12 languages.</span>
+      <span className="sm:hidden">Book more tables with an AI phone host.</span>
       <Link
-        href="/blog"
+        href="/blog/how-ai-voice-assistants-help-restaurants-capture-more-reservations"
         className="text-white underline underline-offset-2 font-semibold whitespace-nowrap"
       >
-        Read the update →
+        Read the guide →
       </Link>
     </div>
   );

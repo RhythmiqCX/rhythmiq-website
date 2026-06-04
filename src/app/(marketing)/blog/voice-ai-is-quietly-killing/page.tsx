@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -78,7 +79,7 @@ export default function VoiceAIKillingFAQs() {
         </p>
         <p>
           As we detailed in{" "}
-          <Link href="/blog/the-end-of-faq" className="text-blue-600">
+          <Link href="/blog/the-end-of-faq" className="text-coral">
             The End of FAQs
           </Link>
           , people don’t want documentation; they want outcomes. When a user
@@ -114,7 +115,7 @@ export default function VoiceAIKillingFAQs() {
           In high-stakes moments like service outages or payment failures, the
           latency of finding an FAQ is a dealbreaker. Trust is won or lost in
           the{" "}
-          <Link href="/blog/the-first-second" className="text-blue-600">
+          <Link href="/blog/the-first-second" className="text-coral">
             first three seconds
           </Link>{" "}
           of an interaction a window that a static page can never hit regardless
@@ -165,32 +166,14 @@ export default function VoiceAIKillingFAQs() {
           customer interaction is fast, fluid, and focused on results.
         </p>
 
-        <div className="mt-14 rounded-3xl border-2 border-white/10 bg-background px-10 py-12">
-          <div className="max-w-2xl">
-            <h3 className="text-2xl font-semibold text-white mb-4">
-              Stop making your customers read
-            </h3>
-            <p className="text-neutral-300 mb-6 leading-relaxed">
-              Ready to turn your documentation into a voice-first powerhouse?
-              Book a demo to see how RhythmiqCX can transform your support
-              experience.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://calendly.com/ray-rhythmiqcx/30min"
-                className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-medium text-black hover:bg-neutral-200 transition"
-              >
-                Book a live demo
-              </a>
-              <Link
-                href="https://rhythmiqcx.com"
-                className="inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-medium text-white hover:border-white hover:bg-white/5 transition"
-              >
-                Explore the product
-              </Link>
-            </div>
-          </div>
-        </div>
+        <BlogCTA
+          title="Stop making your customers read"
+          description="Ready to turn your documentation into a voice-first powerhouse? Book a demo to see how RhythmiqCX can transform your support experience."
+          primaryLabel="Book a live demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the product"
+          secondaryHref="https://rhythmiqcx.com"
+        />
       </section>
     </BlogLayout>
   );

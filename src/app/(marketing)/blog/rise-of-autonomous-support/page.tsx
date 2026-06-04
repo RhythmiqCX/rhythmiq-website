@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title:
@@ -82,7 +83,7 @@ export default function AutonomousSupport() {
       <section className="mt-16 space-y-6">
         <h2 className="text-4xl font-bold">The Rise of Autonomous Support</h2>
 
-        <p className="text-xl italic text-neutral-400">
+        <p className="text-xl italic text-ink2">
           “We automated the easy stuff. Now the hard stuff is staring back at
           us.”
         </p>
@@ -104,7 +105,7 @@ export default function AutonomousSupport() {
       </section>
 
       <section id="ai-crushes-faqs" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           We Already Know AI Crushes FAQs
         </h2>
 
@@ -120,7 +121,7 @@ export default function AutonomousSupport() {
           But as we broke down in{" "}
           <Link
             href="/blog/voice-ai-is-great"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI Is Great at FAQs and Terrible at Exceptions
           </Link>
@@ -131,7 +132,7 @@ export default function AutonomousSupport() {
         </p>
       </section>
       <section id="decision-infrastructure" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Autonomous Support Is Decision Infrastructure
         </h2>
 
@@ -140,7 +141,7 @@ export default function AutonomousSupport() {
           them as logic gates. As we argued in{" "}
           <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Customer Support Is a Decision Engine Disguised as a Conversation
           </Link>
@@ -158,7 +159,7 @@ export default function AutonomousSupport() {
       </section>
 
       <section id="complexity-breaks-systems" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Complexity Breaks Weak Systems
         </h2>
 
@@ -167,7 +168,7 @@ export default function AutonomousSupport() {
           in{" "}
           <Link
             href="/blog/voice-ai-sounds"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Why Voice AI Sounds Confident Even When It Should Hesitate
           </Link>
@@ -180,7 +181,7 @@ export default function AutonomousSupport() {
           This is why{" "}
           <Link
             href="/blog/state-management-in-voice-ai"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             State Management in Voice AI Is a Nightmare
           </Link>{" "}
@@ -192,7 +193,7 @@ export default function AutonomousSupport() {
       </section>
 
       <section id="what-autonomy-requires" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Real Autonomous Support Requires
         </h2>
 
@@ -214,7 +215,7 @@ export default function AutonomousSupport() {
       </section>
 
       <section id="can-ai-handle-complexity" className="mt-24 space-y-6 pb-20">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Can AI Handle Complex Issues?
         </h2>
 
@@ -234,29 +235,14 @@ export default function AutonomousSupport() {
           about removing the human error from the logic of support.
         </p>
 
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Want to see autonomous support done right?
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            See how RhythmiqCX builds decision-first voice AI that handles
-            complexity without breaking trust.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Want to see autonomous support done right?"
+          description="See how RhythmiqCX builds decision-first voice AI that handles complexity without breaking trust."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

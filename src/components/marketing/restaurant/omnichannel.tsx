@@ -1,5 +1,5 @@
 import Reveal from "./reveal";
-import Placeholder from "./placeholder";
+import { InboxUI } from "./visuals";
 
 const CHANNELS: { name: string; icon: React.JSX.Element }[] = [
   {
@@ -61,8 +61,8 @@ const Omnichannel = () => {
           <span className="eyebrow">One host, every channel</span>
           <h2 className="h-section my-3.5">Meet guests wherever they reach you</h2>
           <p className="lede max-w-[46ch]">
-            Phone, SMS, web chat, WhatsApp, and your booking widget — Rhythmiq answers across all of them
-            with one consistent voice and one shared memory.
+            Phone, SMS, web chat, WhatsApp, and your booking widget. Rhythmiq answers on all of them
+            with one voice and one shared memory.
           </p>
           <div className="flex flex-wrap gap-3 mt-7">
             {CHANNELS.map((ch) => (
@@ -78,7 +78,7 @@ const Omnichannel = () => {
           </div>
         </Reveal>
         <Reveal delay={0.12} className="frame frame-light p-5">
-          <Placeholder tag="unified inbox screenshot" className="aspect-[16/9]" />
+          <InboxUI className="aspect-[16/9] rounded-[10px]" />
         </Reveal>
       </div>
     </section>

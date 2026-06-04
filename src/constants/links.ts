@@ -8,7 +8,8 @@ export type NavItem = { name: string; href: string; description?: string };
 export const PRODUCT_LINKS: NavItem[] = [
     { name: "AI Phone Host", href: "/voice-ai", description: "Answers every call, 24/7" },
     { name: "How it works", href: "/voice-ai#how-it-works", description: "From ring to booking" },
-    { name: "Integrations", href: "/#integrations", description: "POS, reservations, CRM" },
+    { name: "Live demo", href: "/demo", description: "See it take a call" },
+    { name: "Integrations", href: "/integrations", description: "POS, reservations, CRM" },
 ];
 
 export const COMPARE_LINKS: NavItem[] = [
@@ -34,11 +35,14 @@ export const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
 
 // Simple (non-dropdown) top-level links.
 export const NAV_LINKS: NavItem[] = [
-    { name: "Pricing", href: "/voice-ai#pricing" },
+    { name: "Pricing", href: "/pricing" },
 ];
 
 // Action / CTA destinations.
 export const APP_LOGIN_URL = "https://app.rhythmiqcx.com";
 export const BOOK_DEMO_URL = "https://calendly.com/ray-rhythmiqcx/30min";
 export const CONTACT_URL = "/contact-us";
-export const DEMO_URL = "/voice-ai";
+// Interactive product demo (scenario → restaurant info → sign-up gate).
+export const DEMO_URL = "/demo";
+// Dedicated integrations page (the homepage also has a /#integrations section).
+export const INTEGRATIONS_URL = "/integrations";

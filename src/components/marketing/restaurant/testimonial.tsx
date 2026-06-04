@@ -1,5 +1,5 @@
 import Reveal from "./reveal";
-import Placeholder from "./placeholder";
+import { PortraitArt } from "./visuals";
 
 const Testimonial = () => {
   return (
@@ -17,7 +17,9 @@ const Testimonial = () => {
             bookings went up the week we switched on. It pays for itself before the first service.&rdquo;
           </blockquote>
           <div className="flex items-center gap-3.5">
-            <span className="w-[46px] h-[46px] rounded-full bg-paper3 flex-none overflow-hidden ph" />
+            <span className="w-[46px] h-[46px] rounded-full bg-coral text-white flex-none grid place-items-center font-semibold text-[15px]">
+              MV
+            </span>
             <div>
               <b className="text-[15px] block">Mara Velez</b>
               <span className="text-[13.5px] text-ink2">Director of Operations, Saltwater</span>
@@ -25,7 +27,7 @@ const Testimonial = () => {
           </div>
         </Reveal>
         <Reveal delay={0.12}>
-          <Placeholder tint="sand" tag="portrait" className="aspect-[4/5] rounded-[14px]" />
+          <PortraitArt className="aspect-[4/5] rounded-[14px]" />
         </Reveal>
       </div>
     </section>

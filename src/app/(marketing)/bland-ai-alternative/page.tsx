@@ -22,7 +22,7 @@ export const metadata = generateMetadata({
     canonical: "/bland-ai-alternative",
   },
   openGraph: {
-    images: ["/icons/white.jpeg"],
+    images: ["/icons/og-default.png"],
     type: "website",
   },
 });
@@ -40,7 +40,7 @@ const schema = {
     name: "RhythmiqCX",
     logo: {
       "@type": "ImageObject",
-      url: "https://rhythmiqcx.com/icons/rhythmiq-icon.png",
+      url: "https://rhythmiqcx.com/icons/rhythmiq-mark-512.png",
     },
   },
 };

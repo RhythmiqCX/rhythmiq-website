@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title:
@@ -74,7 +75,7 @@ const ENGINES = [
     rank: "01",
     name: "Sarvam Bulbul v2",
     badge: "Best for Indian English",
-    badgeColor: "bg-green-500/20 text-green-400 border-green-500/30",
+    badgeColor: "bg-white text-coral border-ink/10",
     body: "Built specifically for Indian English  not adapted, built from the ground up. Handles Indian cadence, intonation, and pronunciation natively. Callers in Mumbai or Bengaluru hear a voice that sounds like someone they'd meet in a real office. Sub-second latency in production. This is the default voice engine in RhythmiqCX Voice AI.",
     bestFor: "Any Indian business whose callers speak Indian English.",
     latency: "Sub-second",
@@ -84,7 +85,7 @@ const ENGINES = [
     rank: "02",
     name: "ElevenLabs",
     badge: "Best US/UK Naturalness",
-    badgeColor: "bg-blue-500/20 text-blue-400 border-blue-500/30",
+    badgeColor: "bg-white text-coral border-ink/10",
     body: "Produces the most natural-sounding US and UK English on the market. Prosody is genuinely convincing  most US English speakers couldn't tell it was AI on the first pass. The problem: it was built for Western English. An ElevenLabs voice answering calls from Indian callers sounds slightly off, the same way a British receptionist sounds unexpected if you're calling a local restaurant in Chennai.",
     bestFor: "Businesses with predominantly US or UK customer bases.",
     latency: "Moderate",
@@ -94,7 +95,7 @@ const ENGINES = [
     rank: "03",
     name: "Deepgram Aura",
     badge: "Best for Speed",
-    badgeColor: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
+    badgeColor: "bg-white text-coral border-ink/10",
     body: "Built specifically for real-time voice applications. Not the most natural-sounding voice in isolation, but in a live phone call  where latency is as important as quality  it outperforms more 'beautiful' but slower engines. Works well as a real-time fallback in hybrid setups.",
     bestFor: "High-volume call scenarios where speed matters most.",
     latency: "Under 200ms",
@@ -104,7 +105,7 @@ const ENGINES = [
     rank: "04",
     name: "Google Cloud TTS (Journey)",
     badge: "Most Consistent",
-    badgeColor: "bg-neutral-500/20 text-neutral-400 border-neutral-500/30",
+    badgeColor: "bg-white text-ink2 border-ink/10",
     body: "Reliable and inoffensive. No sudden oddities in pronunciation, no jarring pauses on unusual names. The limitation: feels safe rather than warm. A caller interacting with a Google Journey voice feels like they're talking to a very competent automated system  which they are. The 'human' quality isn't quite there.",
     bestFor: "Enterprises that need consistency across global languages.",
     latency: "Good",
@@ -114,7 +115,7 @@ const ENGINES = [
     rank: "05",
     name: "Microsoft Azure Neural TTS",
     badge: "Best Multilingual Coverage",
-    badgeColor: "bg-neutral-500/20 text-neutral-400 border-neutral-500/30",
+    badgeColor: "bg-white text-ink2 border-ink/10",
     body: "Covers an impressive range of languages and voices. For async content generation (IVR prompts, on-hold messages) it performs well. In real-time call contexts, latency adds up. Hindi support is better here than most Western alternatives  though still not as natural as Sarvam for Indian English.",
     bestFor: "Businesses needing multilingual coverage across many languages.",
     latency: "High in real-time",
@@ -124,7 +125,7 @@ const ENGINES = [
     rank: "06",
     name: "Amazon Polly (Neural)",
     badge: "Functional but Dated",
-    badgeColor: "bg-red-500/20 text-red-400 border-red-500/30",
+    badgeColor: "bg-white text-coral border-ink/10",
     body: "Amazon Polly's neural voices are competent but noticeably behind the current generation. For businesses already deep in the AWS ecosystem, it's a reasonable choice for basic IVR prompts. As a primary AI receptionist voice in 2026, it shows its age against modern alternatives.",
     bestFor: "Basic IVR prompt generation inside existing AWS infrastructure.",
     latency: "Good",
@@ -134,7 +135,7 @@ const ENGINES = [
     rank: "07",
     name: "Coqui TTS (Open Source)",
     badge: "For Developers Only",
-    badgeColor: "bg-red-500/20 text-red-400 border-red-500/30",
+    badgeColor: "bg-white text-coral border-ink/10",
     body: "Open-source and highly customizable. In practice, getting it to sound natural in a production phone system requires significant engineering  model fine-tuning, hosting, latency optimization. For a solo professional or small business that needs an AI receptionist running this week, Coqui is the wrong starting point.",
     bestFor: "Developer teams building custom voice AI with time to invest.",
     latency: "Depends on setup",
@@ -234,7 +235,7 @@ export default function BestAIVoiceGeneratorBlog() {
           number. It didn&apos;t sound like an Indian firm.&rdquo;
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The voice your AI receptionist uses is the first thing your clients
           judge. It signals who you are before a single word of content is
           delivered.
@@ -261,12 +262,12 @@ export default function BestAIVoiceGeneratorBlog() {
           ].map(({ num, label }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+              className="rounded-2xl border border-ink/10 bg-white p-5 text-center"
             >
-              <span className="font-mono text-3xl font-bold text-yellow-400 block leading-none">
+              <span className="font-mono text-3xl font-bold text-coral block leading-none">
                 {num}
               </span>
-              <span className="text-neutral-500 text-xs mt-2 block leading-snug">
+              <span className="text-ink3 text-xs mt-2 block leading-snug">
                 {label}
               </span>
             </div>
@@ -276,7 +277,7 @@ export default function BestAIVoiceGeneratorBlog() {
 
       {/* SECTION 2  What We Tested */}
       <section id="what-we-tested" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What We Tested and How
         </h2>
 
@@ -291,16 +292,16 @@ export default function BestAIVoiceGeneratorBlog() {
           {CRITERIA.map(({ num, label, desc }) => (
             <div
               key={num}
-              className="flex gap-6 rounded-2xl border border-white/10 bg-white/5 p-5"
+              className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-5"
             >
-              <span className="font-mono text-xl font-bold text-neutral-600 shrink-0 leading-none pt-0.5">
+              <span className="font-mono text-xl font-bold text-ink3 shrink-0 leading-none pt-0.5">
                 {num}
               </span>
               <div>
-                <span className="text-white font-semibold text-sm block">
+                <span className="text-ink font-semibold text-sm block">
                   {label}
                 </span>
-                <span className="text-neutral-400 text-sm">{desc}</span>
+                <span className="text-ink2 text-sm">{desc}</span>
               </div>
             </div>
           ))}
@@ -312,9 +313,9 @@ export default function BestAIVoiceGeneratorBlog() {
           Neural TTS, and Coqui TTS (open source).
         </p>
 
-        <div className="rounded-2xl bg-neutral-900 border border-white/10 p-6">
-          <p className="text-neutral-300 text-sm leading-relaxed">
-            <strong className="text-white">Why this matters for India:</strong>{" "}
+        <div className="rounded-2xl bg-white border border-ink/10 p-6">
+          <p className="text-ink2 text-sm leading-relaxed">
+            <strong className="text-ink">Why this matters for India:</strong>{" "}
             Nearly every major AI voice benchmark is run by Western researchers
             testing Western English speakers. The results are not transferable.
             We specifically tested Indian English speech recognition accuracy
@@ -326,7 +327,7 @@ export default function BestAIVoiceGeneratorBlog() {
 
       {/* SECTION 3  The Rankings */}
       <section id="the-rankings" className="mt-24 space-y-8">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Rankings: 7 AI Voice Generators for Business Receptionists
         </h2>
 
@@ -351,14 +352,14 @@ export default function BestAIVoiceGeneratorBlog() {
             }) => (
               <div
                 key={rank}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-7 space-y-4"
+                className="rounded-2xl border border-ink/10 bg-white p-7 space-y-4"
               >
                 <div className="flex items-start justify-between gap-4 flex-wrap">
                   <div className="flex items-center gap-4">
                     <span className="font-mono text-3xl font-bold text-neutral-700 leading-none">
                       {rank}
                     </span>
-                    <h3 className="text-white font-bold text-xl">{name}</h3>
+                    <h3 className="text-ink font-bold text-xl">{name}</h3>
                   </div>
                   <span
                     className={`inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full border ${badgeColor}`}
@@ -367,30 +368,30 @@ export default function BestAIVoiceGeneratorBlog() {
                   </span>
                 </div>
 
-                <p className="text-neutral-300 text-sm leading-relaxed">
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
 
                 <div className="grid grid-cols-3 gap-3 pt-2">
-                  <div className="rounded-xl bg-white/5 p-3">
-                    <span className="text-neutral-500 text-xs block font-mono uppercase tracking-wider mb-1">
+                  <div className="rounded-xl bg-white p-3">
+                    <span className="text-ink3 text-xs block font-mono uppercase tracking-wider mb-1">
                       Best For
                     </span>
-                    <span className="text-neutral-300 text-xs leading-snug">
+                    <span className="text-ink2 text-xs leading-snug">
                       {bestFor}
                     </span>
                   </div>
-                  <div className="rounded-xl bg-white/5 p-3">
-                    <span className="text-neutral-500 text-xs block font-mono uppercase tracking-wider mb-1">
+                  <div className="rounded-xl bg-white p-3">
+                    <span className="text-ink3 text-xs block font-mono uppercase tracking-wider mb-1">
                       Latency
                     </span>
-                    <span className="text-neutral-300 text-xs">{latency}</span>
+                    <span className="text-ink2 text-xs">{latency}</span>
                   </div>
-                  <div className="rounded-xl bg-white/5 p-3">
-                    <span className="text-neutral-500 text-xs block font-mono uppercase tracking-wider mb-1">
+                  <div className="rounded-xl bg-white p-3">
+                    <span className="text-ink3 text-xs block font-mono uppercase tracking-wider mb-1">
                       India Score
                     </span>
-                    <span className="text-neutral-300 text-xs">
+                    <span className="text-ink2 text-xs">
                       {indiaScore}
                     </span>
                   </div>
@@ -403,7 +404,7 @@ export default function BestAIVoiceGeneratorBlog() {
 
       {/* SECTION 4  Silence Handling */}
       <section id="silence-handling" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Feature That Separates Good from Great: Silence Handling
         </h2>
 
@@ -420,7 +421,7 @@ export default function BestAIVoiceGeneratorBlog() {
           how technically impressive the voice itself sounds. As we covered in{" "}
           <Link
             href="/blog/the-hidden-state-problem-in-voice-ai"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             The Hidden State Problem in Voice AI Conversations
           </Link>
@@ -428,33 +429,33 @@ export default function BestAIVoiceGeneratorBlog() {
           maintains conversational context across interruptions and dead air.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 space-y-5">
-          <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-8 space-y-5">
+          <p className="text-sm font-mono text-ink2 uppercase tracking-widest">
             How to Test Silence Handling Before You Buy
           </p>
           <div className="space-y-4">
             {[
               {
                 icon: "✓",
-                color: "text-green-400",
+                color: "text-coral",
                 title: "Trail off mid-question",
                 desc: 'Ask "How much does your service..." and stop. Does the AI wait intelligently or cut in with "Sorry, I didn\'t catch that"?',
               },
               {
                 icon: "✓",
-                color: "text-green-400",
+                color: "text-coral",
                 title: "Pause before answering",
                 desc: "After the AI asks a question, wait 4 seconds before responding. Does it handle the silence gracefully or restart the conversation?",
               },
               {
                 icon: "✓",
-                color: "text-green-400",
+                color: "text-coral",
                 title: "Interrupt mid-sentence",
                 desc: "Start speaking while the AI is still talking. Does it stop and re-engage, or finish its sentence and then address yours?",
               },
               {
                 icon: "✓",
-                color: "text-green-400",
+                color: "text-coral",
                 title: "Give ambiguous input",
                 desc: 'Say just "yeah" after a complex question. How does the AI interpret and recover?',
               },
@@ -464,8 +465,8 @@ export default function BestAIVoiceGeneratorBlog() {
                   {icon}
                 </span>
                 <div>
-                  <p className="text-white text-sm font-semibold">{title}</p>
-                  <p className="text-neutral-400 text-sm leading-relaxed">
+                  <p className="text-ink text-sm font-semibold">{title}</p>
+                  <p className="text-ink2 text-sm leading-relaxed">
                     {desc}
                   </p>
                 </div>
@@ -482,7 +483,7 @@ export default function BestAIVoiceGeneratorBlog() {
           demo skips, and it&apos;s the test that reveals the most.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           Test every AI voice with a trailing-off question before you go live.
           That&apos;s where quality reveals itself not in a polished demo
           script.
@@ -491,7 +492,7 @@ export default function BestAIVoiceGeneratorBlog() {
 
       {/* SECTION 5  Choosing the Right Voice */}
       <section id="choosing-right-voice" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Choosing the Right Voice Generator for Your Business
         </h2>
 
@@ -502,31 +503,31 @@ export default function BestAIVoiceGeneratorBlog() {
             {
               scenario: "Your callers are primarily Indian English speakers",
               rec: "Sarvam Bulbul v2. Nothing else was built for this. Everything else is a compromise.",
-              color: "border-green-500/30 bg-green-500/5",
+              color: "border-ink/10 bg-white",
               tag: "Recommended",
-              tagColor: "bg-green-500/20 text-green-400",
+              tagColor: "bg-white text-coral",
             },
             {
               scenario: "Your callers are primarily US or UK English speakers",
               rec: "ElevenLabs for the most natural experience  but manage the latency in live call contexts, or use Deepgram Aura for volume.",
-              color: "border-blue-500/30 bg-blue-500/5",
+              color: "border-ink/10 bg-white",
               tag: "Recommended",
-              tagColor: "bg-blue-500/20 text-blue-400",
+              tagColor: "bg-white text-coral",
             },
             {
               scenario: "You need multilingual coverage across many languages",
               rec: "Azure Neural TTS for breadth. Accept that depth (true naturalness) will be lower than a purpose-built engine.",
-              color: "border-neutral-500/30 bg-neutral-500/5",
+              color: "border-ink/10 bg-white",
               tag: "Situational",
-              tagColor: "bg-neutral-500/20 text-neutral-400",
+              tagColor: "bg-white text-ink2",
             },
             {
               scenario:
                 "You want maximum speed and volume at the cost of voice quality",
               rec: "Deepgram Aura. Sub-200ms latency, reliable, purpose-built for real-time.",
-              color: "border-yellow-500/30 bg-yellow-500/5",
+              color: "border-ink/10 bg-white",
               tag: "Situational",
-              tagColor: "bg-yellow-500/20 text-yellow-400",
+              tagColor: "bg-white text-coral",
             },
           ].map(({ scenario, rec, color, tag, tagColor }, i) => (
             <div
@@ -534,21 +535,21 @@ export default function BestAIVoiceGeneratorBlog() {
               className={`rounded-2xl border p-6 ${color} space-y-2`}
             >
               <div className="flex items-center justify-between gap-3 flex-wrap">
-                <p className="text-white font-semibold text-sm">{scenario}</p>
+                <p className="text-ink font-semibold text-sm">{scenario}</p>
                 <span
                   className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${tagColor}`}
                 >
                   {tag}
                 </span>
               </div>
-              <p className="text-neutral-300 text-sm leading-relaxed">{rec}</p>
+              <p className="text-ink2 text-sm leading-relaxed">{rec}</p>
             </div>
           ))}
         </div>
 
         <p>
           For most small and mid-sized businesses that want to set up an{" "}
-          <Link href="/voice-ai" className="text-blue-400 underline">
+          <Link href="/voice-ai" className="text-coral underline">
             AI phone receptionist
           </Link>{" "}
           without spending weeks evaluating TTS engines, the practical answer
@@ -562,7 +563,7 @@ export default function BestAIVoiceGeneratorBlog() {
           If you&apos;re still comparing options on cost, our breakdown of{" "}
           <Link
             href="/blog/voice-ai-pricing-compared"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             Voice AI pricing compared
           </Link>{" "}
@@ -570,7 +571,7 @@ export default function BestAIVoiceGeneratorBlog() {
           the numbers are more dramatic than most vendors advertise.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           In 2026, an AI receptionist that sounds robotic isn&apos;t just a
           product quality problem it actively damages your credibility with
           callers. The right voice generator makes the difference between a
@@ -581,7 +582,7 @@ export default function BestAIVoiceGeneratorBlog() {
 
       {/* FAQ Section */}
       <section className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Frequently Asked Questions
         </h2>
 
@@ -589,42 +590,23 @@ export default function BestAIVoiceGeneratorBlog() {
           {FAQ.map(({ q, a }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 space-y-2"
+              className="rounded-2xl border border-ink/10 bg-white p-6 space-y-2"
             >
-              <h3 className="text-white font-semibold text-base">{q}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{a}</p>
+              <h3 className="text-ink font-semibold text-base">{q}</h3>
+              <p className="text-ink2 text-sm leading-relaxed">{a}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Hear the Difference Before You Decide
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Try the RhythmiqCX voice demo and hear Sarvam Bulbul v2 handle a
-            real receptionist scenario in Indian English. No slide deck, no
-            curated script just the voice, live.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link
-              href="/voice-ai#voice-demo"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Try the Live Voice Demo
-            </Link>
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Book a Demo Call
-            </a>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Hear the Difference Before You Decide"
+        description="Try the RhythmiqCX voice demo and hear Sarvam Bulbul v2 handle a real receptionist scenario in Indian English. No slide deck, no curated script just the voice, live."
+        primaryLabel="Try the Live Voice Demo"
+        primaryHref="/voice-ai#voice-demo"
+        secondaryLabel="Book a Demo Call"
+        secondaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+      />
     </BlogLayout>
   );
 }

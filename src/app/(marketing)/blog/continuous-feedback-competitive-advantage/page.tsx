@@ -2,6 +2,7 @@ import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 import Image from "next/image";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title:
@@ -95,7 +96,7 @@ export default function ContinuousFeedbackAdvantage() {
         <div className="space-y-6">
           <h2 className="text-4xl font-bold">Feedback Is No Longer Optional</h2>
 
-          <p className="text-xl text-neutral-400 italic">
+          <p className="text-xl text-ink2 italic">
             “If feedback arrives late, it might as well never arrive at all.”
           </p>
 
@@ -117,7 +118,7 @@ export default function ContinuousFeedbackAdvantage() {
               href="https://virtlx.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 underline font-medium"
+              className="text-coral underline font-medium"
             >
               VirtlX
             </a>{" "}
@@ -126,7 +127,7 @@ export default function ContinuousFeedbackAdvantage() {
         </div>
 
         {/* VirtlX Header Image */}
-        <div className="not-prose mt-8 relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-neutral-800">
+        <div className="not-prose mt-8 relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-ink/10">
           <Image
             src="/images/header-image-of-virtlx.png"
             alt="VirtlX Continuous Feedback Platform"
@@ -137,9 +138,9 @@ export default function ContinuousFeedbackAdvantage() {
       </section>
 
       {/* SECTION 1 */}
-      <hr className="border-white/10 my-20" />
+      <hr className="border-ink/10 my-20" />
       <section id="feedback-truth" className="space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Feedback Is the Only Thing That Tells You the Truth
         </h2>
         <p>
@@ -156,7 +157,7 @@ export default function ContinuousFeedbackAdvantage() {
           This is the same failure mode we described in{" "}
           <Link
             href="/blog/cx-not-conversations"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             CX Is Not Conversations It Is Micro Decisions
           </Link>
@@ -166,7 +167,7 @@ export default function ContinuousFeedbackAdvantage() {
 
       {/* SECTION 2 */}
       <section id="organizational-reflexes" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           From Feedback to Organizational Reflexes
         </h2>
         <p>
@@ -181,14 +182,14 @@ export default function ContinuousFeedbackAdvantage() {
           Leaders course-correct before churn. Problems surface while they’re
           still cheap.
         </p>
-        <blockquote className="border-l-4 border-white/20 pl-6 italic text-neutral-400">
+        <blockquote className="border-l-4 border-ink/20 pl-6 italic text-ink2">
           “Speed of learning beats size of company. Every single time.”
         </blockquote>
       </section>
 
       {/* SECTION 3 */}
       <section id="ai-liability" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Why Feedback Keeps AI From Becoming a Liability
         </h2>
         <p>
@@ -205,7 +206,7 @@ export default function ContinuousFeedbackAdvantage() {
           becomes grounded. This is exactly the danger we called out in{" "}
           <Link
             href="/blog/voice-ai-sounds"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Why Voice AI Sounds Confident Even When It Should Hesitate
           </Link>
@@ -215,7 +216,7 @@ export default function ContinuousFeedbackAdvantage() {
 
       {/* SECTION 4 */}
       <section id="learning-flywheel" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Turning Feedback Into a Learning Flywheel
         </h2>
         <p>
@@ -229,7 +230,7 @@ export default function ContinuousFeedbackAdvantage() {
 
       {/* SECTION 5 */}
       <section id="leadership-choice" className="mt-24 space-y-6 pb-20">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Continuous Feedback Is a Leadership Choice
         </h2>
         <p>
@@ -240,30 +241,14 @@ export default function ContinuousFeedbackAdvantage() {
           defensiveness, and reality over dashboards.
         </p>
 
-        {/* CTA */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Want to see continuous feedback in action?
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Don’t rely on annual surveys. Build a living feedback system that
-            helps your people and your customers thrive in real time.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title={"Want to see continuous feedback in action?"}
+          description="Don’t rely on annual surveys. Build a living feedback system that helps your people and your customers thrive in real time."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

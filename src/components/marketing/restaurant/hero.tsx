@@ -1,5 +1,13 @@
 import Link from "next/link";
-import Placeholder from "./placeholder";
+import {
+  HeroDining,
+  HeroChef,
+  HeroPhone,
+  HeroRings,
+  HeroHost,
+  HeroGuests,
+  HeroNight,
+} from "./visuals";
 import { BOOK_DEMO_URL, DEMO_URL } from "@/constants/links";
 
 const Hero = () => {
@@ -15,8 +23,8 @@ const Hero = () => {
           </h1>
           <div className="pb-2">
             <p className="text-ink2 text-base mb-[22px] max-w-[38ch]">
-              Rhythmiq is the AI phone host for restaurants — answering every call, booking tables,
-              taking orders, and sounding exactly like your best maître d&rsquo;.
+              Rhythmiq is the AI phone host for restaurants. It answers every call, books your
+              tables, takes your orders, and sounds just like your best maître d&rsquo;.
             </p>
             <div className="flex flex-wrap gap-2.5">
               <Link href={BOOK_DEMO_URL} className="btn btn-dark">
@@ -31,13 +39,13 @@ const Hero = () => {
 
         {/* Eclectic image strip */}
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-3.5 mt-8 lg:mt-12">
-          <Placeholder tint="sand" tag="dining room" className="aspect-[3/2.4] self-end" />
-          <Placeholder tag="chef plating" className="aspect-[3/3.4]" />
-          <Placeholder tint="sky" tag="phone ringing" className="aspect-[3/3.4]" />
-          <Placeholder tint="coral" tag="illustration" className="aspect-[3/4]" />
-          <Placeholder tag="host stand" className="aspect-[3/3.4]" />
-          <Placeholder tint="sand" tag="guests" className="aspect-[3/2.6] self-end" />
-          <Placeholder tint="ink" tag="night service" className="aspect-[3/3.4]" />
+          <HeroDining className="aspect-[3/2.4] self-end rounded-lg" />
+          <HeroChef className="aspect-[3/3.4] rounded-lg" />
+          <HeroPhone className="aspect-[3/3.4] rounded-lg" />
+          <HeroRings className="aspect-[3/4] rounded-lg" />
+          <HeroHost className="aspect-[3/3.4] rounded-lg" />
+          <HeroGuests className="aspect-[3/2.6] self-end rounded-lg" />
+          <HeroNight className="aspect-[3/3.4] rounded-lg" />
         </div>
       </div>
     </section>

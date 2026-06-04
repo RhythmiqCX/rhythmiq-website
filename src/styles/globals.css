@@ -149,10 +149,6 @@ img { user-select: none; }
   .ph-ink .ph-tag { @apply text-onDark2; background: rgba(20, 18, 16, 0.6); border-color: var(--line-dark); }
 
   /* Brand mark */
-  .brand-mark { @apply w-6 h-6 rounded-[7px] bg-ink relative flex-none; }
-  .brand-mark::before, .brand-mark::after { content: ""; @apply absolute rounded-full bg-coral; }
-  .brand-mark::before { width: 3px; height: 9px;  left: 7px;  top: 7.5px; }
-  .brand-mark::after  { width: 3px; height: 13px; left: 12px; top: 5.5px; box-shadow: 5px 2px 0 0 var(--paper, #FAF8F3); }
 
   .pill-cta { @apply inline-flex items-center gap-2 bg-ink text-paper rounded-full font-semibold text-[14.5px] whitespace-nowrap; padding: 8px 8px 8px 15px; }
   .pill-cta .dot { @apply w-[22px] h-[22px] rounded-full bg-coral grid place-items-center; }

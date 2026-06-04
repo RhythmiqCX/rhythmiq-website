@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title: "The First 3 Seconds of a Voice Call Decide Customer Trust",
@@ -118,7 +119,7 @@ export default function FirstThreeSecondsVoiceAI() {
 
         <p>
           We broke this down deeply in{" "}
-          <Link href="/blog/real-cost-of-voice-ai" className="text-blue-600">
+          <Link href="/blog/real-cost-of-voice-ai" className="text-coral">
             The Real Cost of Voice AI
           </Link>
           . The takeaway is simple: In voice, latency is not a performance metric. It is a trust metric. Every millisecond of silence drains the user's willingness to forgive the mistakes you will inevitably make later.
@@ -147,7 +148,7 @@ export default function FirstThreeSecondsVoiceAI() {
 
         <p>
           This lesson became the core of{" "}
-          <Link href="/blog/voice-ai-needs" className="text-blue-600">
+          <Link href="/blog/voice-ai-needs" className="text-coral">
             Why Voice AI Needs Fewer Words Than Chat AI
           </Link>
           . Confidence in voice doesn't come from explaining who you are; it
@@ -180,7 +181,7 @@ export default function FirstThreeSecondsVoiceAI() {
           This is why{" "}
           <Link
             href="/blog/state-management-in-voice-ai"
-            className="text-blue-600"
+            className="text-coral"
           >
             State Management in Voice AI Is a Nightmare
           </Link>{" "}
@@ -210,36 +211,16 @@ export default function FirstThreeSecondsVoiceAI() {
           to prove you are capable of solving it.
         </p>
 
-        <div className="mt-14 rounded-3xl border border-white/10 bg-background px-10 py-12">
-          <div className="max-w-2xl">
-            <h3 className="text-2xl font-semibold mb-4">
-              Voice AI breaks when timing is ignored
-            </h3>
+        <BlogCTA
+          title="Voice AI breaks when timing is ignored"
+          description="RhythmiqCX is built for real conversations. Interruptions. Pauses. Silence. Recovery. We optimize for trust before cleverness."
+          primaryLabel="Book a live demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the product"
+          secondaryHref="https://rhythmiqcx.com"
+        />
 
-            <p className="text-neutral-400 mb-6">
-              RhythmiqCX is built for real conversations. Interruptions. Pauses.
-              Silence. Recovery. We optimize for trust before cleverness.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://calendly.com/ray-rhythmiqcx/30min"
-                className="rounded-xl bg-white px-6 py-3 font-medium text-black hover:bg-neutral-200 transition"
-              >
-                Book a live demo
-              </a>
-
-              <Link
-                href="https://rhythmiqcx.com"
-                className="rounded-xl border border-white/30 px-6 py-3 font-medium hover:bg-white/5 transition"
-              >
-                Explore the product
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <p className="text-gray-500 italic mt-10">
+        <p className="text-ink3 italic mt-10">
           <strong>Team RhythmiqCX</strong>
           <br />
           Building voice AI that survives the real world.

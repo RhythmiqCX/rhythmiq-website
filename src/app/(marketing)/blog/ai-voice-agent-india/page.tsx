@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
 import Link from "next/link";
@@ -229,7 +230,7 @@ export default function AIVoiceAgentIndia() {
           stack, our{" "}
           <Link
             href="/blog/ai-phone-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             complete AI phone receptionist guide
           </Link>{" "}
@@ -261,12 +262,12 @@ export default function AIVoiceAgentIndia() {
           ].map(({ num, label }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+              className="rounded-2xl border border-ink/10 bg-white p-5 text-center"
             >
-              <span className="font-mono text-2xl font-bold text-yellow-400 block leading-none">
+              <span className="font-mono text-2xl font-bold text-coral block leading-none">
                 {num}
               </span>
-              <span className="text-neutral-500 text-xs mt-2 block leading-snug">
+              <span className="text-ink3 text-xs mt-2 block leading-snug">
                 {label}
               </span>
             </div>
@@ -276,7 +277,7 @@ export default function AIVoiceAgentIndia() {
 
       {/* ── SECTION 2: WHY VOICE AI ───────────────────────────────────────── */}
       <section id="why-voice-ai" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Why Voice AI Is Uniquely Suited to the Indian Market
         </h2>
 
@@ -311,11 +312,11 @@ export default function AIVoiceAgentIndia() {
           caller switches languages mid-sentence.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
-          <p className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-3">
+          <p className="text-xs font-mono text-ink2 uppercase tracking-widest">
             Why This Matters for India Specifically
           </p>
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-ink2 text-sm leading-relaxed">
             Tier-2 and tier-3 city callers who represent the fastest-growing
             segment of Indian e-commerce and fintech often have stronger
             regional accents. When a US-market TTS system mispronounces their
@@ -329,7 +330,7 @@ export default function AIVoiceAgentIndia() {
 
       {/* ── SECTION 3: HOW IT WORKS ───────────────────────────────────────── */}
       <section id="how-it-works" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How AI Voice Agents Work: The Pipeline Explained
         </h2>
 
@@ -363,7 +364,7 @@ export default function AIVoiceAgentIndia() {
           destroys it. We covered{" "}
           <Link
             href="/blog/ai-virtual-receptionist-vs-human-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             how AI and human receptionists should divide responsibilities
           </Link>{" "}
@@ -373,7 +374,7 @@ export default function AIVoiceAgentIndia() {
 
       {/* ── SECTION 4: USE CASES ─────────────────────────────────────────── */}
       <section id="use-cases" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           5 Ways Indian Businesses Are Using Voice AI Right Now
         </h2>
 
@@ -389,14 +390,14 @@ export default function AIVoiceAgentIndia() {
           {USE_CASES.map(({ num, title, body }) => (
             <div
               key={num}
-              className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-2"
+              className="flex gap-4 rounded-2xl border border-ink/10 bg-white p-2"
             >
-              <span className="font-mono text-3xl font-bold text-neutral-700 shrink-0 leading-none pt-12">
+              <span className="font-mono text-3xl font-bold text-ink3 shrink-0 leading-none pt-12">
                 {num}
               </span>
               <div className="space-y-2">
-                <h3 className="text-white font-semibold text-base">{title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <h3 className="text-ink font-semibold text-base">{title}</h3>
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
               </div>
@@ -413,7 +414,7 @@ export default function AIVoiceAgentIndia() {
           explored in{" "}
           <Link
             href="/blog/ai-answering-service-small-business"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             our breakdown of AI answering services for small businesses
           </Link>
@@ -425,7 +426,7 @@ export default function AIVoiceAgentIndia() {
 
       {/* ── SECTION 5: SARVAM ADVANTAGE ──────────────────────────────────── */}
       <section id="sarvam-advantage" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Indian-English Advantage: Why the Model Stack Matters
         </h2>
 
@@ -449,7 +450,7 @@ export default function AIVoiceAgentIndia() {
           is critical for caller trust, our post on{" "}
           <Link
             href="/blog/how-to-choose-the-best-ai-voice-for-virtual-receptionists"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             choosing the best AI voice for virtual receptionists
           </Link>{" "}
@@ -466,8 +467,8 @@ export default function AIVoiceAgentIndia() {
           roadmap.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
-          <p className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-3">
+          <p className="text-xs font-mono text-ink2 uppercase tracking-widest">
             Sarvam Stack at a Glance
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
@@ -489,9 +490,9 @@ export default function AIVoiceAgentIndia() {
               },
             ].map(({ label, value, note }) => (
               <div key={label} className="space-y-1">
-                <p className="text-neutral-500 text-xs">{label}</p>
-                <p className="text-white font-semibold">{value}</p>
-                <p className="text-neutral-500 text-xs">{note}</p>
+                <p className="text-ink3 text-xs">{label}</p>
+                <p className="text-ink font-semibold">{value}</p>
+                <p className="text-ink3 text-xs">{note}</p>
               </div>
             ))}
           </div>
@@ -500,13 +501,13 @@ export default function AIVoiceAgentIndia() {
 
       {/* ── SECTION 6: COMPARISON ─────────────────────────────────────────── */}
       <section id="comparison" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How RhythmiqCX Compares to Other Voice AI Platforms for India
         </h2>
 
         <p>
           I&apos;ll be direct about where{" "}
-          <Link href="/voice-ai" className="text-blue-400 underline">
+          <Link href="/voice-ai" className="text-coral underline">
             RhythmiqCX Voice AI
           </Link>{" "}
           sits in this market and what we&apos;re not. We&apos;re not a
@@ -516,10 +517,10 @@ export default function AIVoiceAgentIndia() {
           an engineering team.
         </p>
 
-        <div className="overflow-x-auto rounded-2xl border bg-white/[0.02] p-2">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10 bg-white p-2">
           <table className="w-full text-sm text-center">
-            <thead className="text-neutral-400 uppercase tracking-widest text-xs font-mono">
-              <tr className="bg-white/5">
+            <thead className="text-ink2 uppercase tracking-widest text-xs font-mono">
+              <tr className="bg-white">
                 <th className="px-5 py-4 rounded-tl-xl">Platform</th>
                 <th className="px-5 py-4">India-Ready Voice</th>
                 <th className="px-5 py-4">Price</th>
@@ -531,15 +532,15 @@ export default function AIVoiceAgentIndia() {
                 ({ name, voice, price, channels, highlight }) => (
                   <tr
                     key={name}
-                    className={`hover:bg-white/[0.03] transition-colors ${
-                      highlight ? "bg-white/[0.04]" : ""
+                    className={`hover:bg-white transition-colors ${
+                      highlight ? "bg-white" : ""
                     }`}
                   >
-                    <td className="px-5 py-4 font-semibold text-white">
+                    <td className="px-5 py-4 font-semibold text-ink">
                       {highlight ? (
                         <span className="flex items-center gap-2">
                           {name}{" "}
-                          <span className="text-[10px] font-mono bg-green-500/20 text-green-400 px-6 py-0.5 rounded uppercase tracking-widest">
+                          <span className="text-[10px] font-mono bg-white border border-ink/10 text-[#1F7A4D] px-6 py-0.5 rounded uppercase tracking-widest">
                             Best for India
                           </span>
                         </span>
@@ -550,8 +551,8 @@ export default function AIVoiceAgentIndia() {
                     <td
                       className={`px-5 py-4 ${
                         highlight
-                          ? "text-green-400 font-semibold"
-                          : "text-neutral-400"
+                          ? "text-[#1F7A4D] font-semibold"
+                          : "text-ink2"
                       }`}
                     >
                       {voice}
@@ -559,15 +560,15 @@ export default function AIVoiceAgentIndia() {
                     <td
                       className={`px-5 py-4 font-mono ${
                         highlight
-                          ? "text-green-400 font-bold"
-                          : "text-neutral-300"
+                          ? "text-[#1F7A4D] font-bold"
+                          : "text-ink2"
                       }`}
                     >
                       {price}
                     </td>
                     <td
                       className={`px-5 py-4 ${
-                        highlight ? "text-green-400" : "text-neutral-400"
+                        highlight ? "text-[#1F7A4D]" : "text-ink2"
                       }`}
                     >
                       {channels}
@@ -594,7 +595,7 @@ export default function AIVoiceAgentIndia() {
           different Indian call volumes, the{" "}
           <Link
             href="/blog/real-cost-of-voice-ai"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             real cost of voice AI infrastructure
           </Link>{" "}
@@ -605,7 +606,7 @@ export default function AIVoiceAgentIndia() {
 
         <p>
           See the complete{" "}
-          <Link href="/ai-chatbot-pricing" className="text-blue-400 underline">
+          <Link href="/ai-chatbot-pricing" className="text-coral underline">
             RhythmiqCX pricing tiers and what&apos;s included at each plan
           </Link>{" "}
           the 7-day free trial requires no credit card, which means you can test
@@ -615,7 +616,7 @@ export default function AIVoiceAgentIndia() {
 
       {/* ── SECTION 7: VERDICT ───────────────────────────────────────────── */}
       <section id="verdict" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Final Verdict: The India Voice AI Opportunity Is Now
         </h2>
 
@@ -635,7 +636,7 @@ export default function AIVoiceAgentIndia() {
           should handle at ₹2,400/month.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The Indian businesses winning in 2026 are not the ones with the most
           agents on shift. They&apos;re the ones who stopped letting 6 PM be the
           end of their customer service day.
@@ -652,16 +653,16 @@ export default function AIVoiceAgentIndia() {
 
       {/* ── SECTION 8: FAQ ───────────────────────────────────────────────── */}
       <section id="faq" className="mt-24 space-y-8">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-6">
           <div className="space-y-2">
-            <h3 className="text-white font-semibold text-base">
+            <h3 className="text-ink font-semibold text-base">
               What is an AI voice agent for Indian businesses?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               An AI voice agent for Indian businesses is conversational AI
               software that handles inbound and outbound phone calls in
               Indian-English and regional languages. It uses Sarvam&apos;s
@@ -671,11 +672,11 @@ export default function AIVoiceAgentIndia() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               How does voice AI handle Indian languages and accents?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Platforms built on Sarvam AI&apos;s stack handle Indian-English
               natively, including regional accent variation and Hindi-English
               code-switching within the same call. Saarika v2.5 (STT) and Bulbul
@@ -685,11 +686,11 @@ export default function AIVoiceAgentIndia() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               What is the cost of AI voice agents for Indian businesses?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               AI voice agents for Indian businesses start at $29/month flat with
               RhythmiqCX no per-minute billing, no surprise invoices at month
               end. Per-minute platforms like Retell AI and Vapi cost
@@ -698,11 +699,11 @@ export default function AIVoiceAgentIndia() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               Can AI voice agents handle mixed Hindi-English calls?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Yes, with the right platform. Sarvam&apos;s Saarika model handles
               code-switching between Hindi and English within the same call.
               Text-level multilingual NLP covers 60+ languages. Voice output
@@ -711,11 +712,11 @@ export default function AIVoiceAgentIndia() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               How long does it take to deploy an AI voice agent in India?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Most deployments go live within a day. Configure your AI persona,
               connect your phone number or telephony provider, upload your
               knowledge base, and the AI is live and taking calls. No
@@ -726,34 +727,14 @@ export default function AIVoiceAgentIndia() {
         </div>
       </section>
 
-      {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Handle Every Indian Customer Call 24/7 7-Day Free Trial
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            RhythmiqCX Voice AI is built on Sarvam&apos;s Indian-English models.
-            Upload your FAQ, connect your number, and your AI voice agent is
-            live answering real calls in Indian-English, 24/7, from $29/mo. No
-            credit card required.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link
-              href="/voice-ai"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Try Voice AI Free
-            </Link>
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Book a Live Demo →
-            </a>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Handle Every Indian Customer Call 24/7 7-Day Free Trial"
+        description="RhythmiqCX Voice AI is built on Sarvam's Indian-English models. Upload your FAQ, connect your number, and your AI voice agent is live answering real calls in Indian-English, 24/7, from $29/mo. No credit card required."
+        primaryLabel="Try Voice AI Free"
+        primaryHref="/voice-ai"
+        secondaryLabel="Book a Live Demo"
+        secondaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+      />
     </BlogLayout>
   );
 }

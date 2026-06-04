@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -111,7 +112,7 @@ export default function VoiceAIDistributedSystem() {
 
         <p>
           This disconnect is why{" "}
-          <Link href="/blog/voice-ai-hallucinations" className="text-blue-600">
+          <Link href="/blog/voice-ai-hallucinations" className="text-coral">
             voice AI hallucinations feel more dangerous
           </Link>{" "}
           than text ones. In a text chat, you can scroll back to verify what was
@@ -141,7 +142,7 @@ export default function VoiceAIDistributedSystem() {
           This internal conflict is exactly why{" "}
           <Link
             href="/blog/state-management-in-voice-ai"
-            className="text-blue-600"
+            className="text-coral"
           >
             State Management in Voice AI Is a Nightmare
           </Link>
@@ -171,7 +172,7 @@ export default function VoiceAIDistributedSystem() {
 
         <p>
           This psychological reality connects directly to why{" "}
-          <Link href="/blog/the-first-second" className="text-blue-600">
+          <Link href="/blog/the-first-second" className="text-coral">
             The First 3 Seconds of a Voice Call Decide Customer Trust
           </Link>
           . Voice interfaces have zero buffer and no visual grace period; you
@@ -199,7 +200,7 @@ export default function VoiceAIDistributedSystem() {
 
         <p>
           This failure mode is why{" "}
-          <Link href="/blog/always-available-ai" className="text-blue-600">
+          <Link href="/blog/always-available-ai" className="text-coral">
             The Problem With Always Available AI
           </Link>{" "}
           still heavily shapes our current architecture. A distributed system
@@ -227,48 +228,26 @@ export default function VoiceAIDistributedSystem() {
 
         <p>
           This philosophy connects everything we’ve written from{" "}
-          <Link href="/blog/ai-that-knows" className="text-blue-600">
+          <Link href="/blog/ai-that-knows" className="text-coral">
             AI That Knows When to Quit
           </Link>{" "}
           to{" "}
-          <Link href="/blog/cx-not-conversations" className="text-blue-600">
+          <Link href="/blog/cx-not-conversations" className="text-coral">
             CX Is Not Conversations It Is Micro Decisions
           </Link>
           .
         </p>
 
-        {/* WEBSITE-STYLE CTA SECTION */}
-        <div className="mt-14 rounded-3xl border-2 border-white/10 bg-background px-10 py-12">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              Voice AI breaks when it starts lying
-            </h2>
+        <BlogCTA
+          title="Voice AI breaks when it starts lying"
+          description="RhythmiqCX is built to prevent hallucinations by design. We prioritize strict state management, low-latency interruptions, and concise answers that build trust rather than destroy it."
+          primaryLabel="Book a live demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the product"
+          secondaryHref="https://rhythmiqcx.com"
+        />
 
-            <p className="text-neutral-300 mb-6 leading-relaxed">
-              RhythmiqCX is built to prevent hallucinations by design. We
-              prioritize strict state management, low-latency interruptions, and
-              concise answers that build trust rather than destroy it.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://calendly.com/ray-rhythmiqcx/30min"
-                className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-medium text-black hover:bg-neutral-200 transition"
-              >
-                Book a live demo
-              </a>
-
-              <Link
-                href="https://rhythmiqcx.com"
-                className="inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-medium text-white hover:border-white hover:bg-white/5 transition"
-              >
-                Explore the product
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <p className="text-gray-500 italic mt-10">
+        <p className="text-ink3 italic mt-10">
           <strong>Team RhythmiqCX</strong>
           <br />
           Building voice AI that survives the real world.

@@ -16,7 +16,7 @@ export const metadata = generateMetadata({
     canonical: "/about-us"
   },
   openGraph: {
-    images: ["/icons/white.jpeg"],
+    images: ["/icons/og-default.png"],
     type: "website",
   },
 });

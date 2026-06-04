@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -90,7 +91,7 @@ export default function VoiceVsChatbots() {
       {/* INTRO */}
       <section className="mt-16 space-y-6">
         <h2 className="text-4xl font-bold">The Great Convergence of 2026</h2>
-        <p className="text-xl text-neutral-400 italic">
+        <p className="text-xl text-ink2 italic">
           "Short answer? Neither. And both. If you are choosing between them,
           you’ve already lost the customer."
         </p>
@@ -105,7 +106,7 @@ export default function VoiceVsChatbots() {
           At <strong>RhythmiqCX</strong>, we believe{" "}
           <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Customer Support is a Decision Engine disguised as a conversation
           </Link>
@@ -115,9 +116,9 @@ export default function VoiceVsChatbots() {
       </section>
 
       {/* SECTION 1 */}
-      <hr className="border-white/10 my-20" />
+      <hr className="border-ink/10 my-20" />
       <section id="the-trust-asymmetry" className="space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Trust Asymmetry: Receipts vs. Authority
         </h2>
         <p>
@@ -126,21 +127,21 @@ export default function VoiceVsChatbots() {
           that luxury. As we’ve argued before,{" "}
           <Link
             href="/blog/voice-ai-hallucinations"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI hallucinations are far more dangerous than text ones
           </Link>{" "}
           because users cannot scroll back to verify spoken assertions in real
           time.
         </p>
-        <div className="bg-neutral-900 border-l-4 border-blue-500 p-6 my-8">
-          <h4 className="font-bold text-white mb-2">Technical Insight</h4>
+        <div className="bg-white border-l-4 border-coral p-6 my-8">
+          <h4 className="font-bold text-ink mb-2">Technical Insight</h4>
           <p className="text-sm">
             This is why we focus on <strong>Topical Authority</strong>. In a
             world where{" "}
             <Link
               href="/blog/voice-ai-is-quietly-killing"
-              className="text-blue-500 underline"
+              className="text-coral underline"
             >
               Voice AI is quietly killing FAQ pages
             </Link>
@@ -152,7 +153,7 @@ export default function VoiceVsChatbots() {
 
       {/* SECTION 2 */}
       <section id="physics-of-conversation" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Physics of Latency: Why 500ms is the &apos;Uncanny Valley&apos;
         </h2>
         <p>
@@ -161,7 +162,7 @@ export default function VoiceVsChatbots() {
           disconnect. This happens because{" "}
           <Link
             href="/blog/voice-ai-is-distributed"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI is a distributed system wearing a human mask
           </Link>
@@ -173,13 +174,13 @@ export default function VoiceVsChatbots() {
 
       {/* SECTION 3 - SENTIMENT */}
       <section id="sentiment-prosody" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Beyond Words: Prosody and Sentiment
         </h2>
         <p>
           Voice AI listens to <strong>Prosody</strong> the rhythm and pitch of
           the speaker. This level of awareness allows us to build{" "}
-          <Link href="/blog/ai-that-knows" className="text-blue-500 underline">
+          <Link href="/blog/ai-that-knows" className="text-coral underline">
             AI that knows when to quit
           </Link>{" "}
           or escalate, rather than engaging in endless, frustrating loops with
@@ -189,7 +190,7 @@ export default function VoiceVsChatbots() {
 
       {/* SECTION 4 - MEMORY */}
       <section id="hidden-state-problem" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Hidden State Problem: Memory in Voice
         </h2>
         <p>
@@ -197,7 +198,7 @@ export default function VoiceVsChatbots() {
           because of the{" "}
           <Link
             href="/blog/the-hidden-state-problem-in-voice-ai"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Hidden State Problem
           </Link>
@@ -205,7 +206,7 @@ export default function VoiceVsChatbots() {
           RhythmiqCX, our backend maintains a single &quot;State Object&quot;
           across all modalities.
         </p>
-        <blockquote className="border-l-4 border-white/20 pl-6 italic text-neutral-400">
+        <blockquote className="border-l-4 border-ink/20 pl-6 italic text-ink2">
           &quot;A conversation is just the UI. The real value is in the decision
           engine behind it.&quot;
         </blockquote>
@@ -213,7 +214,7 @@ export default function VoiceVsChatbots() {
 
       {/* SECTION 5 - ROI */}
       <section id="roi-framework" className="mt-24 space-y-6 pb-20">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The 2026 ROI Framework: Shifting the KPIs
         </h2>
         <p>
@@ -222,31 +223,14 @@ export default function VoiceVsChatbots() {
           design for decision success, the CSAT follows naturally.
         </p>
 
-        {/* CTA BOX */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to see Agentic Voice AI in action?
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Don&apos;t build a chatbot. Build a decision engine that speaks.
-            Join the top 1% of CX teams moving to unified AI support with
-            RhythmiqCX.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Ready to see Agentic Voice AI in action?"
+          description="Don't build a chatbot. Build a decision engine that speaks. Join the top 1% of CX teams moving to unified AI support with RhythmiqCX."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

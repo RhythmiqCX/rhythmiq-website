@@ -29,8 +29,8 @@ const GuestIntelligence = () => {
           <span className="eyebrow !text-onDark2">Live guest intelligence</span>
           <h2 className="h-section my-3.5 text-onDark">Know your guests before they walk in</h2>
           <p className="lede !text-onDark2">
-            Rhythmiq remembers regulars, allergies, favorite tables, and last visit — so every call feels
-            personal and every service runs smoother.
+            Rhythmiq remembers regulars, allergies, favorite tables, and last visit, so every call
+            feels personal and every service runs smoother.
           </p>
         </Reveal>
         <Reveal delay={0.12} className="kpi-grid frame frame-light">

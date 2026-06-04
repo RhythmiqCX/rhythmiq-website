@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
 import Link from "next/link";
@@ -162,7 +163,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
           providers, the{" "}
           <Link
             href="/blog/ai-answering-service-small-business"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             full AI answering service cost breakdown
           </Link>{" "}
@@ -173,7 +174,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
 
       {/* ── SECTION 2: THE PROBLEM ────────────────────────────────────────── */}
       <section id="the-problem" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Deep Work Dilemma Nobody Talks About
         </h2>
 
@@ -220,12 +221,12 @@ export default function AIPhoneAnsweringAppOnePerson() {
           ].map(({ num, label }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+              className="rounded-2xl border border-ink/10 bg-white p-5 text-center"
             >
-              <span className="font-mono text-2xl font-bold text-yellow-400 block leading-none">
+              <span className="font-mono text-2xl font-bold text-coral block leading-none">
                 {num}
               </span>
-              <span className="text-neutral-500 text-xs mt-2 block leading-snug">
+              <span className="text-ink3 text-xs mt-2 block leading-snug">
                 {label}
               </span>
             </div>
@@ -235,13 +236,13 @@ export default function AIPhoneAnsweringAppOnePerson() {
 
       {/* ── SECTION 3: WHAT HAPPENS NOW ──────────────────────────────────── */}
       <section id="what-happens-now" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Actually Happens When Someone Calls Me Now
         </h2>
 
         <p>
           I&apos;ve been using{" "}
-          <Link href="/voice-ai" className="text-blue-400 underline">
+          <Link href="/voice-ai" className="text-coral underline">
             RhythmiqCX Voice AI
           </Link>{" "}
           for the past few months. Here is what the experience looks like when
@@ -282,7 +283,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
 
       {/* ── SECTION 4: CALLER WALKTHROUGH ────────────────────────────────── */}
       <section id="caller-walkthrough" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Caller Experience: Step by Step
         </h2>
 
@@ -292,31 +293,31 @@ export default function AIPhoneAnsweringAppOnePerson() {
           while I was in a meeting.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-4 font-mono text-sm">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-4 font-mono text-sm">
           <div className="space-y-1">
-            <p className="text-neutral-500 text-xs uppercase tracking-widest">
+            <p className="text-ink3 text-xs uppercase tracking-widest">
               Incoming call 14:37
             </p>
           </div>
           <div className="space-y-3">
             <p>
-              <span className="text-blue-400 font-semibold">AI:</span>{" "}
-              <span className="text-neutral-300">
+              <span className="text-coral font-semibold">AI:</span>{" "}
+              <span className="text-ink2">
                 &ldquo;Hi, you&apos;ve reached [name]&apos;s studio [name] is in
                 a session right now. I&apos;m their assistant. How can I help
                 you today?&rdquo;
               </span>
             </p>
             <p>
-              <span className="text-green-400 font-semibold">Caller:</span>{" "}
-              <span className="text-neutral-300">
+              <span className="text-ink font-semibold">Caller:</span>{" "}
+              <span className="text-ink2">
                 &ldquo;Hi, I was looking for a product designer for a mobile app
                 project a 3-month engagement starting next month.&rdquo;
               </span>
             </p>
             <p>
-              <span className="text-blue-400 font-semibold">AI:</span>{" "}
-              <span className="text-neutral-300">
+              <span className="text-coral font-semibold">AI:</span>{" "}
+              <span className="text-ink2">
                 &ldquo;That sounds like a great fit [name] specializes in mobile
                 product design and typically takes on 1–2 engagements per
                 quarter. Can I ask a bit more about the project so [name] has
@@ -324,21 +325,21 @@ export default function AIPhoneAnsweringAppOnePerson() {
               </span>
             </p>
             <p>
-              <span className="text-green-400 font-semibold">Caller:</span>{" "}
-              <span className="text-neutral-300">
+              <span className="text-ink font-semibold">Caller:</span>{" "}
+              <span className="text-ink2">
                 &ldquo;Sure it&apos;s a fintech app, early-stage startup,
                 seed-funded. Needs end-to-end UX from scratch.&rdquo;
               </span>
             </p>
             <p>
-              <span className="text-blue-400 font-semibold">AI:</span>{" "}
-              <span className="text-neutral-300">
+              <span className="text-coral font-semibold">AI:</span>{" "}
+              <span className="text-ink2">
                 &ldquo;Got it. What&apos;s the best number to reach you, and
                 what&apos;s a good time for [name] to call back today?&rdquo;
               </span>
             </p>
           </div>
-          <p className="text-neutral-500 text-xs pt-2 border-t border-white/5">
+          <p className="text-ink3 text-xs pt-2 border-t border-ink/10">
             Call summary delivered to me 47 seconds after the call ended.
           </p>
         </div>
@@ -352,7 +353,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
 
       {/* ── SECTION 5: SETUP ─────────────────────────────────────────────── */}
       <section id="setup" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Setup: 10 Minutes, No Tech Skills
         </h2>
 
@@ -386,14 +387,14 @@ export default function AIPhoneAnsweringAppOnePerson() {
           ].map(({ step, title, body }) => (
             <div
               key={step}
-              className="flex gap-5 rounded-2xl border border-white/10 bg-white/5 p-5"
+              className="flex gap-5 rounded-2xl border border-ink/10 bg-white p-5"
             >
-              <span className="font-mono text-2xl font-bold text-neutral-700 shrink-0 leading-none pt-1">
+              <span className="font-mono text-2xl font-bold text-ink3 shrink-0 leading-none pt-1">
                 {step}
               </span>
               <div className="space-y-1">
-                <h3 className="text-white font-semibold text-sm">{title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <h3 className="text-ink font-semibold text-sm">{title}</h3>
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
               </div>
@@ -409,7 +410,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
 
       {/* ── SECTION 6: COMPARISON ─────────────────────────────────────────── */}
       <section id="comparison" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How RhythmiqCX Compares for One-Person Use
         </h2>
 
@@ -420,10 +421,10 @@ export default function AIPhoneAnsweringAppOnePerson() {
           works today.
         </p>
 
-        <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.02]">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10 bg-white">
           <table className="w-full text-sm text-left">
-            <thead className="text-neutral-400 uppercase tracking-widest text-xs font-mono">
-              <tr className="bg-white/5">
+            <thead className="text-ink2 uppercase tracking-widest text-xs font-mono">
+              <tr className="bg-white">
                 <th className="px-5 py-4 rounded-tl-xl">App</th>
                 <th className="px-5 py-4">Price</th>
                 <th className="px-5 py-4">Indian English</th>
@@ -431,7 +432,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
                 <th className="px-5 py-4 rounded-tr-xl">Setup</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5">
+            <tbody className="divide-y divide-ink/10">
               {[
                 {
                   name: "RhythmiqCX",
@@ -468,15 +469,15 @@ export default function AIPhoneAnsweringAppOnePerson() {
               ].map(({ name, price, indian, whatsapp, setup, highlight }) => (
                 <tr
                   key={name}
-                  className={`hover:bg-white/[0.03] transition-colors ${
-                    highlight ? "bg-white/[0.04]" : ""
+                  className={`hover:bg-white transition-colors ${
+                    highlight ? "bg-white" : ""
                   }`}
                 >
-                  <td className="px-5 py-4 font-semibold text-white">
+                  <td className="px-5 py-4 font-semibold text-ink">
                     {highlight ? (
                       <span className="flex items-center gap-2">
                         {name}{" "}
-                        <span className="text-[10px] font-mono bg-green-500/20 text-green-400 px-2 py-0.5 rounded uppercase tracking-widest">
+                        <span className="text-[10px] font-mono bg-white border border-ink/10 text-[#1F7A4D] px-2 py-0.5 rounded uppercase tracking-widest">
                           Best Value
                         </span>
                       </span>
@@ -487,27 +488,27 @@ export default function AIPhoneAnsweringAppOnePerson() {
                   <td
                     className={`px-5 py-4 font-mono ${
                       highlight
-                        ? "text-green-400 font-bold"
-                        : "text-neutral-300"
+                        ? "text-[#1F7A4D] font-bold"
+                        : "text-ink2"
                     }`}
                   >
                     {price}
                   </td>
                   <td
                     className={`px-5 py-4 ${
-                      highlight ? "text-green-400" : "text-neutral-400"
+                      highlight ? "text-[#1F7A4D]" : "text-ink2"
                     }`}
                   >
                     {indian}
                   </td>
                   <td
                     className={`px-5 py-4 ${
-                      highlight ? "text-green-400" : "text-neutral-400"
+                      highlight ? "text-[#1F7A4D]" : "text-ink2"
                     }`}
                   >
                     {whatsapp}
                   </td>
-                  <td className="px-5 py-4 text-neutral-400">{setup}</td>
+                  <td className="px-5 py-4 text-ink2">{setup}</td>
                 </tr>
               ))}
             </tbody>
@@ -522,7 +523,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
           volumes, see the{" "}
           <Link
             href="/blog/real-cost-of-voice-ai"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             real cost of voice AI infrastructure
           </Link>{" "}
@@ -538,7 +539,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
           handles them natively. The{" "}
           <Link
             href="/blog/ai-answering-service-small-business"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             complete AI answering service cost comparison
           </Link>{" "}
@@ -549,7 +550,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
 
       {/* ── SECTION 7: VERDICT ───────────────────────────────────────────── */}
       <section id="verdict" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">Final Verdict</h2>
+        <h2 className="text-3xl font-semibold text-ink">Final Verdict</h2>
 
         <p>
           If you are a freelancer, consultant, or one-person business getting
@@ -567,7 +568,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
           hadn&apos;t spoken to a human assistant first.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The best business tool I&apos;ve added this year isn&apos;t the one
           that made me more productive. It&apos;s the one that made sure my
           productivity didn&apos;t cost me clients.
@@ -576,7 +577,7 @@ export default function AIPhoneAnsweringAppOnePerson() {
         <p>
           Start the 7-day free trial no credit card required. Set it up this
           afternoon.{" "}
-          <Link href="/ai-chatbot-pricing" className="text-blue-400 underline">
+          <Link href="/ai-chatbot-pricing" className="text-coral underline">
             See the full RhythmiqCX pricing plans here
           </Link>
           .
@@ -585,16 +586,16 @@ export default function AIPhoneAnsweringAppOnePerson() {
 
       {/* ── SECTION 8: FAQ ───────────────────────────────────────────────── */}
       <section id="faq" className="mt-24 space-y-8">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-6">
           <div className="space-y-2">
-            <h3 className="text-white font-semibold text-base">
+            <h3 className="text-ink font-semibold text-base">
               Will my clients know they&apos;re talking to an AI?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Most won&apos;t. RhythmiqCX uses neural TTS (Sarvam Bulbul v2)
               that sounds natural and conversational. The AI identifies itself
               as your assistant which is accurate, just digital. In tests,
@@ -603,11 +604,11 @@ export default function AIPhoneAnsweringAppOnePerson() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               What if the AI doesn&apos;t know the answer?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               The AI is trained on your FAQ. For questions outside that scope,
               it says something like &ldquo;[Name] will be able to answer that
               directly can I take your number for a callback?&rdquo; It never
@@ -616,33 +617,33 @@ export default function AIPhoneAnsweringAppOnePerson() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               Does it work outside my business hours?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Yes, 24/7. A client calling at midnight gets the same professional
               response as one calling at noon. This is especially useful for
               freelancers with international clients calling across time zones.
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               Can I use my existing phone number?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Yes. You forward your existing number to RhythmiqCX when you want
               AI coverage, and unforward it when you want calls to ring through
               directly. No new SIM, no porting, no hardware changes required.
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               How much does an AI phone answering app cost for one person?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               RhythmiqCX starts at $29/month flat no per-minute billing, no
               per-call fees. At that price, recovering one missed client lead
               per month pays for the entire year. Most freelancers recover the
@@ -652,33 +653,14 @@ export default function AIPhoneAnsweringAppOnePerson() {
         </div>
       </section>
 
-      {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Never Miss a Client Call Again 7-Day Free Trial
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Set up your AI assistant this afternoon. Upload your FAQ, forward
-            your number, and the next call you can&apos;t pick up gets answered
-            professionally. No credit card required.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link
-              href="/voice-ai"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Try Voice AI Free
-            </Link>
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Book a Live Demo →
-            </a>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Never Miss a Client Call Again 7-Day Free Trial"
+        description="Set up your AI assistant this afternoon. Upload your FAQ, forward your number, and the next call you can't pick up gets answered professionally. No credit card required."
+        primaryLabel="Try Voice AI Free"
+        primaryHref="/voice-ai"
+        secondaryLabel="Book a Live Demo"
+        secondaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+      />
     </BlogLayout>
   );
 }

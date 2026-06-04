@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -84,7 +85,7 @@ export default function OpenClawVsCustomerSupport() {
           OpenClaw Is the Future of Personal AI. Why Customer Support Can’t Copy
           It.
         </h2>
-        <p className="italic text-neutral-400">
+        <p className="italic text-ink2">
           And pretending otherwise is how you ship chaos into production.
         </p>
 
@@ -111,7 +112,7 @@ export default function OpenClawVsCustomerSupport() {
 
       {/* SECTION 1 */}
       <section id="personal-ai-chaos" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Personal AI Thrives on Chaos. Customer Support Cannot.
         </h2>
 
@@ -127,7 +128,7 @@ export default function OpenClawVsCustomerSupport() {
           saw how fragile this gets in{" "}
           <Link
             href="/blog/voice-ai-sounds"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             why voice AI sounds confident even when it should hesitate
           </Link>
@@ -137,7 +138,7 @@ export default function OpenClawVsCustomerSupport() {
 
       {/* SECTION 2 */}
       <section id="personal-os-vs-decision-engine" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           OpenClaw Is a Personal OS. Support Is a Decision Engine.
         </h2>
 
@@ -152,7 +153,7 @@ export default function OpenClawVsCustomerSupport() {
           accuracy. As we’ve argued before,{" "}
           <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             customer support is a decision engine disguised as a conversation
           </Link>
@@ -163,7 +164,7 @@ export default function OpenClawVsCustomerSupport() {
 
       {/* SECTION 3 */}
       <section id="edge-cases" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Edge Cases Destroy Copycat Dreams
         </h2>
 
@@ -173,7 +174,7 @@ export default function OpenClawVsCustomerSupport() {
           We’ve already seen that{" "}
           <Link
             href="/blog/voice-ai-is-great"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             voice AI is great at FAQs and terrible at exceptions
           </Link>
@@ -186,7 +187,7 @@ export default function OpenClawVsCustomerSupport() {
 
       {/* SECTION 4 */}
       <section id="context-divider" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Context Is the Real Divider
         </h2>
 
@@ -199,7 +200,7 @@ export default function OpenClawVsCustomerSupport() {
           But we’ve already learned that{" "}
           <Link
             href="/blog/healthcare-ai-fails-on-context"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI doesn’t fail on accuracy. It fails on context
           </Link>
@@ -210,7 +211,7 @@ export default function OpenClawVsCustomerSupport() {
 
       {/* SECTION 5 */}
       <section id="what-support-should-learn" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Support Should Learn (Without Copying)
         </h2>
 
@@ -229,7 +230,7 @@ export default function OpenClawVsCustomerSupport() {
           in{" "}
           <Link
             href="/blog/voice-ai-vs-chatbots"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI vs Chatbots
           </Link>{" "}
@@ -237,35 +238,19 @@ export default function OpenClawVsCustomerSupport() {
         </p>
 
         {/* CTA BOX */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to see Agentic Voice AI in action?
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Don&apos;t build a chatbot. Build a decision engine that speaks.
-            Join the top 1% of CX teams moving to unified AI support with
-            RhythmiqCX.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Ready to see Agentic Voice AI in action?"
+          description="Don't build a chatbot. Build a decision engine that speaks. Join the top 1% of CX teams moving to unified AI support with RhythmiqCX."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
 
       {/* OUTRO */}
-      <section className="mt-24 space-y-4 border-t border-white/10 pt-10">
-        <p className="italic text-neutral-400">
+      <section className="mt-24 space-y-4 border-t border-ink/10 pt-10">
+        <p className="italic text-ink2">
           OpenClaw proves personal AI is becoming an operating system. Customer
           support proves AI must become accountable infrastructure.
         </p>

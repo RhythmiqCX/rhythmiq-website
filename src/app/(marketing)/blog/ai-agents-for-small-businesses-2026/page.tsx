@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -96,7 +97,7 @@ export default function AIAgentsForSmallBusinesses2026() {
           Small Businesses Don’t Need AI Magic
         </h2>
 
-        <p className="text-xl text-neutral-400 italic">
+        <p className="text-xl text-ink2 italic">
           “Customers don’t care about your AI architecture. They care whether somebody answered the phone.”
         </p>
 
@@ -118,10 +119,10 @@ export default function AIAgentsForSmallBusinesses2026() {
       </section>
 
       {/* SECTION 1 */}
-      <hr className="border-white/10 my-20" />
+      <hr className="border-ink/10 my-20" />
 
       <section id="fewer-missed-calls" className="space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Small Businesses Don’t Need “AI Magic.” They Need Fewer Missed Calls.
         </h2>
 
@@ -141,7 +142,7 @@ export default function AIAgentsForSmallBusinesses2026() {
           We touched on this earlier in{" "}
           <Link
             href="/blog/how-ai-save-time"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             How AI Saves You 10+ Hours a Week
           </Link>
@@ -154,7 +155,7 @@ export default function AIAgentsForSmallBusinesses2026() {
         id="voice-agents-still-sound-weird"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Most AI Agents Still Sound Like Customer Support Managers Trapped Inside a Microwave
         </h2>
 
@@ -182,7 +183,7 @@ export default function AIAgentsForSmallBusinesses2026() {
           We talked about this before in{" "}
           <Link
             href="/blog/voice-ai-needs"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Why Voice AI Needs Fewer Words Than Chat AI
           </Link>
@@ -191,35 +192,18 @@ export default function AIAgentsForSmallBusinesses2026() {
       </section>
 
       {/* CTA */}
-      <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">
-          Want AI That Actually Helps Your Business Instead of Just Looking Impressive?
-        </h2>
-
-        <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-          See how RhythmiqCX helps small businesses automate calls, capture leads, and stay responsive 24/7 without sounding robotic.
-        </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <a
-            href="https://calendly.com/ray-rhythmiqcx/30min"
-            className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-          >
-            Book a Live Demo
-          </a>
-
-          <Link
-            href="/"
-            className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-          >
-            Explore the Platform
-          </Link>
-        </div>
-      </div>
+      <BlogCTA
+        title="Want AI That Actually Helps Your Business Instead of Just Looking Impressive?"
+        description="See how RhythmiqCX helps small businesses automate calls, capture leads, and stay responsive 24/7 without sounding robotic."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
 
       {/* SECTION 3 */}
       <section id="replacing-bottlenecks" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Biggest SMB AI Trend Isn’t Replacing Humans. It’s Replacing Bottlenecks.
         </h2>
 
@@ -247,7 +231,7 @@ export default function AIAgentsForSmallBusinesses2026() {
           We saw this trend coming earlier in{" "}
           <Link
             href="/blog/ai-phone-receptionist"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI Phone Receptionist: Complete Guide for Small Business (2026)
           </Link>
@@ -257,7 +241,7 @@ export default function AIAgentsForSmallBusinesses2026() {
 
       {/* SECTION 4 */}
       <section id="ai-knows-when-to-stop" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Real Winner in 2026 Is AI That Knows When to Shut Up
         </h2>
 
@@ -281,7 +265,7 @@ export default function AIAgentsForSmallBusinesses2026() {
           We explored this deeply in{" "}
           <Link
             href="/blog/the-hidden-state-problem-in-voice-ai"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             The Hidden State Problem in Voice AI Conversations
           </Link>
@@ -294,7 +278,7 @@ export default function AIAgentsForSmallBusinesses2026() {
         id="enterprise-tools-for-smbs"
         className="mt-24 space-y-6 pb-20"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Small Businesses Finally Have Enterprise-Level Customer Experience Tools
         </h2>
 
@@ -314,36 +298,19 @@ export default function AIAgentsForSmallBusinesses2026() {
           The businesses winning in 2026 are often not the biggest companies anymore. They’re the businesses that respond fastest and remove friction better than competitors.
         </p>
 
-        <p className="text-xl italic text-neutral-300">
+        <p className="text-xl italic text-ink2">
           Meanwhile, the phone keeps ringing.
         </p>
 
         {/* FINAL CTA */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Stop Missing Customers While You’re Busy Running the Business
-          </h2>
-
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            RhythmiqCX helps small businesses automate conversations, answer calls instantly, and stay available 24/7 without hiring a full support team.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Stop Missing Customers While You’re Busy Running the Business"
+          description="RhythmiqCX helps small businesses automate conversations, answer calls instantly, and stay available 24/7 without hiring a full support team."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

@@ -298,7 +298,7 @@ export default function FreelancerAIReceptionist2026() {
 
         <p>
           In 2026, the fix is obvious: an{" "}
-          <Link href="/voice-ai" className="text-blue-400 underline">
+          <Link href="/voice-ai" className="text-coral underline">
             AI phone receptionist
           </Link>{" "}
           that answers your calls while you work, captures the details, and lets
@@ -331,12 +331,12 @@ export default function FreelancerAIReceptionist2026() {
           ].map(({ num, label }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+              className="rounded-2xl border border-ink/10 bg-white p-5 text-center"
             >
-              <span className="font-mono text-2xl font-bold text-yellow-400 block leading-none">
+              <span className="font-mono text-2xl font-bold text-coral block leading-none">
                 {num}
               </span>
-              <span className="text-neutral-500 text-xs mt-2 block leading-snug">
+              <span className="text-ink3 text-xs mt-2 block leading-snug">
                 {label}
               </span>
             </div>
@@ -346,7 +346,7 @@ export default function FreelancerAIReceptionist2026() {
 
       {/* ── SECTION 2: THE PROBLEM ────────────────────────────────────────── */}
       <section id="problem" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Freelancer&apos;s Unique Phone Problem
         </h2>
 
@@ -356,7 +356,7 @@ export default function FreelancerAIReceptionist2026() {
           try to manage with sheer willpower and lose.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           You can&apos;t be available 24/7 and productive at the same time
         </h3>
 
@@ -375,7 +375,7 @@ export default function FreelancerAIReceptionist2026() {
           system that handles one of them for you.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           Clients don&apos;t leave voicemails
         </h3>
 
@@ -394,7 +394,7 @@ export default function FreelancerAIReceptionist2026() {
           picked up.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           The math on missed calls is brutal
         </h3>
 
@@ -404,12 +404,12 @@ export default function FreelancerAIReceptionist2026() {
           introductory call can mean a three-month project lost.
         </p>
 
-        <div className="rounded-2xl border border-yellow-400/20 bg-yellow-400/5 p-6">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6">
           <p className="text-neutral-200 text-sm leading-relaxed">
-            <strong className="text-yellow-400">The math:</strong> If you miss 2
+            <strong className="text-coral">The math:</strong> If you miss 2
             qualified leads per month at an average project value of $2,500
             each, you&apos;re leaving{" "}
-            <strong className="text-white">
+            <strong className="text-ink">
               $60,000 on the table per year.
             </strong>{" "}
             An AI receptionist at $29/month costs $348 a year to fix that. The
@@ -420,7 +420,7 @@ export default function FreelancerAIReceptionist2026() {
 
       {/* ── SECTION 3: WHAT IT DOES ───────────────────────────────────────── */}
       <section id="what-it-does" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What an AI Receptionist Actually Does for Freelancers
         </h2>
 
@@ -452,17 +452,17 @@ export default function FreelancerAIReceptionist2026() {
           ].map(({ title, body }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-2"
+              className="rounded-2xl border border-ink/10 bg-white p-6 space-y-2"
             >
-              <h3 className="text-white font-semibold">{title}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{body}</p>
+              <h3 className="text-ink font-semibold">{title}</h3>
+              <p className="text-ink2 text-sm leading-relaxed">{body}</p>
             </div>
           ))}
         </div>
 
         <p>
           You can{" "}
-          <Link href="/voice-ai#voice-demo" className="text-blue-400 underline">
+          <Link href="/voice-ai#voice-demo" className="text-coral underline">
             try the live voice demo
           </Link>{" "}
           to hear exactly what your callers would experience.
@@ -471,7 +471,7 @@ export default function FreelancerAIReceptionist2026() {
 
       {/* ── SECTION 4: FIVE SIGNS ─────────────────────────────────────────── */}
       <section id="five-signs" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           5 Signs You Need an AI Receptionist as a Freelancer
         </h2>
 
@@ -484,14 +484,14 @@ export default function FreelancerAIReceptionist2026() {
           {SIGNS.map(({ num, title, body }) => (
             <div
               key={num}
-              className="flex gap-6 rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-6"
             >
               <span className="font-mono text-3xl font-bold text-neutral-700 shrink-0 leading-none pt-1">
                 {num}
               </span>
               <div className="space-y-2">
-                <h3 className="text-white font-semibold text-base">{title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <h3 className="text-ink font-semibold text-base">{title}</h3>
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
               </div>
@@ -502,7 +502,7 @@ export default function FreelancerAIReceptionist2026() {
 
       {/* ── SECTION 5: WHAT TO LOOK FOR ───────────────────────────────────── */}
       <section id="what-to-look-for" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What to Look for in an AI Receptionist as a Freelancer
         </h2>
 
@@ -515,18 +515,18 @@ export default function FreelancerAIReceptionist2026() {
           {CRITERIA.map(({ icon, label, body }) => (
             <div
               key={label}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-2"
+              className="rounded-2xl border border-ink/10 bg-white p-6 space-y-2"
             >
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{icon}</span>
-                <h3 className="text-white font-semibold">{label}</h3>
+                <h3 className="text-ink font-semibold">{label}</h3>
               </div>
-              <p className="text-neutral-400 text-sm leading-relaxed">{body}</p>
+              <p className="text-ink2 text-sm leading-relaxed">{body}</p>
             </div>
           ))}
         </div>
 
-        <h3 className="text-xl font-semibold text-white pt-4">
+        <h3 className="text-xl font-semibold text-ink pt-4">
           How the main options compare
         </h3>
 
@@ -537,33 +537,33 @@ export default function FreelancerAIReceptionist2026() {
           clients, the native Indian English support in RhythmiqCX is the
           difference between an AI that works and one that frustrates your
           callers. You can see{" "}
-          <Link href="/ai-chatbot-pricing" className="text-blue-400 underline">
+          <Link href="/ai-chatbot-pricing" className="text-coral underline">
             individual pricing plans
           </Link>{" "}
           and compare what&apos;s included at each tier.
         </p>
 
         {/* Comparison table */}
-        <div className="overflow-x-auto rounded-2xl border border-white/10">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-white/10 bg-white/5">
-                <th className="text-left px-5 py-3 text-neutral-400 font-medium">
+              <tr className="border-b border-ink/10 bg-white">
+                <th className="text-left px-5 py-3 text-ink2 font-medium">
                   Tool
                 </th>
-                <th className="text-left px-5 py-3 text-neutral-400 font-medium">
+                <th className="text-left px-5 py-3 text-ink2 font-medium">
                   Price
                 </th>
-                <th className="text-left px-5 py-3 text-neutral-400 font-medium">
+                <th className="text-left px-5 py-3 text-ink2 font-medium">
                   Indian English
                 </th>
-                <th className="text-left px-5 py-3 text-neutral-400 font-medium">
+                <th className="text-left px-5 py-3 text-ink2 font-medium">
                   Setup
                 </th>
-                <th className="text-left px-5 py-3 text-neutral-400 font-medium">
+                <th className="text-left px-5 py-3 text-ink2 font-medium">
                   Flat Rate
                 </th>
-                <th className="text-left px-5 py-3 text-neutral-400 font-medium">
+                <th className="text-left px-5 py-3 text-ink2 font-medium">
                   WhatsApp
                 </th>
               </tr>
@@ -581,34 +581,34 @@ export default function FreelancerAIReceptionist2026() {
                 }) => (
                   <tr
                     key={name}
-                    className={`border-b border-white/10 last:border-0 ${
-                      highlight ? "bg-yellow-400/5" : ""
+                    className={`border-b border-ink/10 last:border-0 ${
+                      highlight ? "bg-white" : ""
                     }`}
                   >
                     <td
-                      className={`px-5 py-3 font-medium ${highlight ? "text-yellow-400" : "text-white"}`}
+                      className={`px-5 py-3 font-medium ${highlight ? "text-coral" : "text-ink"}`}
                     >
                       {name}
                       {highlight && (
-                        <span className="ml-2 text-[10px] bg-yellow-400/20 text-yellow-400 rounded px-1 py-0.5">
+                        <span className="ml-2 text-[10px] bg-white text-coral rounded px-1 py-0.5">
                           ← us
                         </span>
                       )}
                     </td>
-                    <td className="px-5 py-3 text-neutral-300">{price}</td>
+                    <td className="px-5 py-3 text-ink2">{price}</td>
                     <td
-                      className={`px-5 py-3 font-medium ${indianEnglish.startsWith("Yes") ? "text-green-400" : "text-neutral-500"}`}
+                      className={`px-5 py-3 font-medium ${indianEnglish.startsWith("Yes") ? "text-[#1F7A4D]" : "text-ink3"}`}
                     >
                       {indianEnglish}
                     </td>
-                    <td className="px-5 py-3 text-neutral-400">{setup}</td>
+                    <td className="px-5 py-3 text-ink2">{setup}</td>
                     <td
-                      className={`px-5 py-3 ${flatRate === "Yes" ? "text-green-400" : "text-red-400"}`}
+                      className={`px-5 py-3 ${flatRate === "Yes" ? "text-[#1F7A4D]" : "text-[#C9461F]"}`}
                     >
                       {flatRate}
                     </td>
                     <td
-                      className={`px-5 py-3 ${whatsApp === "Yes" ? "text-green-400" : "text-neutral-500"}`}
+                      className={`px-5 py-3 ${whatsApp === "Yes" ? "text-[#1F7A4D]" : "text-ink3"}`}
                     >
                       {whatsApp}
                     </td>
@@ -622,7 +622,7 @@ export default function FreelancerAIReceptionist2026() {
 
       {/* ── SECTION 6: SETUP ─────────────────────────────────────────────── */}
       <section id="setup" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How to Set Up Your AI Receptionist in Under an Hour
         </h2>
 
@@ -635,19 +635,19 @@ export default function FreelancerAIReceptionist2026() {
           {STEPS.map(({ num, time, title, body }) => (
             <div
               key={num}
-              className="flex gap-6 rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-6"
             >
               <div className="shrink-0 text-center">
                 <span className="font-mono text-2xl font-bold text-neutral-700 block leading-none">
                   {num}
                 </span>
-                <span className="text-[11px] text-neutral-600 block mt-1">
+                <span className="text-[11px] text-ink3 block mt-1">
                   {time}
                 </span>
               </div>
               <div className="space-y-2">
-                <h3 className="text-white font-semibold text-base">{title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <h3 className="text-ink font-semibold text-base">{title}</h3>
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
               </div>
@@ -658,7 +658,7 @@ export default function FreelancerAIReceptionist2026() {
 
       {/* ── SECTION 7: FAQ ────────────────────────────────────────────────── */}
       <section id="faq" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Frequently Asked Questions
         </h2>
 
@@ -691,10 +691,10 @@ export default function FreelancerAIReceptionist2026() {
           ].map(({ q, a }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-2"
+              className="rounded-2xl border border-ink/10 bg-white p-6 space-y-2"
             >
-              <h3 className="text-white font-semibold text-base">{q}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{a}</p>
+              <h3 className="text-ink font-semibold text-base">{q}</h3>
+              <p className="text-ink2 text-sm leading-relaxed">{a}</p>
             </div>
           ))}
         </div>
@@ -702,7 +702,7 @@ export default function FreelancerAIReceptionist2026() {
 
       {/* ── CONCLUSION + CTA ─────────────────────────────────────────────── */}
       <section className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">The Bottom Line</h2>
+        <h2 className="text-3xl font-semibold text-ink">The Bottom Line</h2>
 
         <p>
           Every freelancer is losing money to missed calls. Some know it because
@@ -721,17 +721,17 @@ export default function FreelancerAIReceptionist2026() {
           is handled. You&apos;re just working.
         </p>
 
-        <div className="rounded-2xl border border-yellow-400/20 bg-yellow-400/5 p-8 text-center space-y-4">
-          <p className="text-white font-semibold text-lg">
+        <div className="rounded-2xl border border-ink/10 bg-white p-8 text-center space-y-4">
+          <p className="text-ink font-semibold text-lg">
             Try RhythmiqCX free no credit card needed.
           </p>
-          <p className="text-neutral-400 text-sm">
+          <p className="text-ink2 text-sm">
             Set it up this afternoon. The next call you miss could be the one
             you didn&apos;t have to.
           </p>
           <Link
             href="/voice-ai/freelancers"
-            className="inline-block rounded-full bg-yellow-400 text-black font-semibold px-8 py-3 text-sm hover:bg-yellow-300 transition-colors"
+            className="inline-block rounded-full bg-coral text-white font-semibold px-8 py-3 text-sm hover:bg-coral2 transition-colors"
           >
             Start Free No Card Needed
           </Link>
