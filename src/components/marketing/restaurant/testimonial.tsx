@@ -1,5 +1,5 @@
 import Reveal from "./reveal";
-import { PortraitArt } from "./visuals";
+import { WineGlassArt } from "./art";
 
 const Testimonial = () => {
   return (
@@ -27,7 +27,7 @@ const Testimonial = () => {
           </div>
         </Reveal>
         <Reveal delay={0.12}>
-          <PortraitArt className="aspect-[4/5] rounded-[14px]" />
+          <WineGlassArt className="aspect-[4/5] rounded-[14px]" />
         </Reveal>
       </div>
     </section>

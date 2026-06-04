@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Reveal from "./reveal";
+import { PlugBoardArt } from "./art";
 import { INTEGRATIONS_URL } from "@/constants/links";
-
-const TILES = ["POS", "Reservations", "CRM", "Delivery", "Payments", "Calendar", "SMS", "Analytics"];
 
 const Integrations = () => {
   return (
@@ -19,15 +18,8 @@ const Integrations = () => {
             Browse integrations <span className="arrow">→</span>
           </Link>
         </Reveal>
-        <Reveal delay={0.12} className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {TILES.map((tile) => (
-            <div className="tile" key={tile}>
-              <span className="gl">
-                <span />
-              </span>
-              <small>{tile}</small>
-            </div>
-          ))}
+        <Reveal delay={0.12} className="frame frame-light p-[24px]">
+          <PlugBoardArt className="aspect-[5/4] rounded-[14px]" />
         </Reveal>
       </div>
     </section>

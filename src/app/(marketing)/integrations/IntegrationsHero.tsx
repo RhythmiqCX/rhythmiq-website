@@ -4,7 +4,7 @@ import { BOOK_DEMO_URL, DEMO_URL } from "@/constants/links";
 
 const IntegrationsHero = () => {
   return (
-    <section className="section pb-0 text-center" aria-label="Integrations">
+    <section className="section text-center" aria-label="Integrations">
       <div className="wrap">
         <span className="eyebrow justify-center">Apps &amp; integrations</span>
         <h1 className="h-display mt-[18px] max-w-[16ch] mx-auto">

@@ -39,10 +39,13 @@ causes the "Missing required error components" loop). Visit http://localhost:301
   `src/app/(marketing)/demo/DemoFlow.tsx` (the `APP_LOGIN_URL` anchor) using the
   existing Resend setup. Scenarios/copy: `src/constants/demo-scenarios.ts`.
 
-- [ ] **Real photography (optional).** You chose SVG illustrations everywhere
-  (`src/components/marketing/restaurant/visuals.tsx`). If you later want real
-  restaurant photos, each slot can become a `next/image`; needs the actual image
-  files (or a Pexels/Unsplash API key) and AVIF/WebP optimization.
+- [ ] **Real photography (optional).** Imagery is now handcrafted SVG + CSS:
+  editorial ink illustrations + warm gradient-mesh tiles in
+  `src/components/marketing/restaurant/art.tsx`, and real HTML/CSS product
+  "screenshots" in `src/components/marketing/restaurant/mockups.tsx` (the old
+  crude `visuals.tsx` was removed). If you later want real restaurant photos for
+  the atmospheric slots, each art tile can become a `next/image`; needs the actual
+  image files (or a Pexels/Unsplash API key) and AVIF/WebP optimization.
 
 ---
 

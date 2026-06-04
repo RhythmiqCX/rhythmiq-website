@@ -1,14 +1,19 @@
 import Link from "next/link";
-import {
-  HeroDining,
-  HeroChef,
-  HeroPhone,
-  HeroRings,
-  HeroHost,
-  HeroGuests,
-  HeroNight,
-} from "./visuals";
+import Image from "next/image";
+import { cn } from "@/lib";
 import { BOOK_DEMO_URL, DEMO_URL } from "@/constants/links";
+
+const HeroPhoto = ({ src, alt, className }: { src: string; alt: string; className?: string }) => (
+  <div className={cn("relative overflow-hidden bg-paper2", className)}>
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      sizes="(max-width:640px) 33vw, (max-width:1024px) 25vw, 14vw"
+      className="object-cover"
+    />
+  </div>
+);
 
 const Hero = () => {
   return (
@@ -37,15 +42,15 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Eclectic image strip */}
+        {/* Eclectic photo strip */}
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-3.5 mt-8 lg:mt-12">
-          <HeroDining className="aspect-[3/2.4] self-end rounded-lg" />
-          <HeroChef className="aspect-[3/3.4] rounded-lg" />
-          <HeroPhone className="aspect-[3/3.4] rounded-lg" />
-          <HeroRings className="aspect-[3/4] rounded-lg" />
-          <HeroHost className="aspect-[3/3.4] rounded-lg" />
-          <HeroGuests className="aspect-[3/2.6] self-end rounded-lg" />
-          <HeroNight className="aspect-[3/3.4] rounded-lg" />
+          <HeroPhoto src="/images/hero/dine-05.webp" alt="Warm restaurant dining room" className="aspect-[3/2.4] self-end rounded-lg" />
+          <HeroPhoto src="/images/hero/night-10.webp" alt="Restaurant glowing at night" className="aspect-[3/3.4] rounded-lg" />
+          <HeroPhoto src="/images/hero/table-08.webp" alt="Table set for dinner service" className="aspect-[3/3.4] rounded-lg" />
+          <HeroPhoto src="/images/hero/drink-01.webp" alt="Wine being poured at a table" className="aspect-[3/4] rounded-lg" />
+          <HeroPhoto src="/images/hero/serve-03.webp" alt="A server greeting guests" className="aspect-[3/3.4] rounded-lg" />
+          <HeroPhoto src="/images/hero/chef-11.webp" alt="Chef plating a dish in the kitchen" className="aspect-[3/2.6] self-end rounded-lg" />
+          <HeroPhoto src="/images/hero/food-02.webp" alt="A plated dish, close up" className="aspect-[3/3.4] rounded-lg" />
         </div>
       </div>
     </section>

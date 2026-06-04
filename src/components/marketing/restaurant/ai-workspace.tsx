@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Reveal from "./reveal";
-import { WorkspaceUI } from "./visuals";
+import { KnowledgeMockup } from "./mockups";
 import { DEMO_URL } from "@/constants/links";
 
 const AIWorkspace = () => {
@@ -20,8 +20,8 @@ const AIWorkspace = () => {
             See how it learns <span className="arrow">→</span>
           </Link>
         </Reveal>
-        <Reveal delay={0.12} className="frame frame-light p-5">
-          <WorkspaceUI className="aspect-[16/9] rounded-[10px]" />
+        <Reveal delay={0.12}>
+          <KnowledgeMockup />
         </Reveal>
       </div>
     </section>

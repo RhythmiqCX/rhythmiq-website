@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Brand from "./restaurant/brand";
-import { BOOK_DEMO_URL } from "@/constants/links";
+import { BOOK_DEMO_URL, COMPARE_LINKS } from "@/constants/links";
 
 const FOOTER_COLUMNS: { title: string; links: { name: string; href: string }[] }[] = [
   {
@@ -14,27 +14,16 @@ const FOOTER_COLUMNS: { title: string; links: { name: string; href: string }[] }
     ],
   },
   {
-    title: "Solutions",
-    links: [
-      { name: "AI Phone Host", href: "/voice-ai" },
-      { name: "Compare Rhythmiq", href: "/retell-ai-alternative" },
-      { name: "Free tools", href: "/tools" },
-      { name: "Blog", href: "/blog" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { name: "Blog", href: "/blog" },
-      { name: "Compare Rhythmiq", href: "/retell-ai-alternative" },
-      { name: "About us", href: "/about-us" },
-      { name: "Contact", href: "/contact-us" },
-    ],
+    title: "Compare",
+    // Reuse the four real comparison pages (drop the "Rhythmiq " prefix for the footer).
+    links: COMPARE_LINKS.map((l) => ({ name: l.name.replace("Rhythmiq ", ""), href: l.href })),
   },
   {
     title: "Company",
     links: [
-      { name: "About", href: "/about-us" },
+      { name: "Blog", href: "/blog" },
+      { name: "Free tools", href: "/tools" },
+      { name: "About us", href: "/about-us" },
       { name: "Contact", href: "/contact-us" },
       { name: "Privacy", href: "/privacy-policy" },
       { name: "Terms", href: "/terms-and-conditions" },
@@ -46,7 +35,7 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-onDark2 pt-14 lg:pt-[90px] pb-9 font-sans">
       <div className="wrap">
-        <div className="grid grid-cols-2 lg:grid-cols-[1.6fr_repeat(4,1fr)] gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.6fr_repeat(3,1fr)] gap-8">
           <div>
             <Brand onDark className="mb-4" />
             <p className="text-sm max-w-[30ch] leading-[1.55] mb-[18px]">

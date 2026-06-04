@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Reveal from "./reveal";
-import { FlockArt } from "./visuals";
+import { FlockArt } from "./art";
 import { BOOK_DEMO_URL, DEMO_URL } from "@/constants/links";
 
 const FullyFeatured = () => {

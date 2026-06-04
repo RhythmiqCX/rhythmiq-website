@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Reveal from "./reveal";
-import { AbstractRings } from "./visuals";
+import { PlaceSettingArt } from "./art";
 import { BOOK_DEMO_URL, DEMO_URL } from "@/constants/links";
 
 const CompleteSolution = () => {
@@ -27,7 +27,7 @@ const CompleteSolution = () => {
           </div>
         </Reveal>
         <Reveal delay={0.12} className="frame frame-light p-[30px]">
-          <AbstractRings className="aspect-square rounded-[14px]" />
+          <PlaceSettingArt className="aspect-square rounded-[14px]" />
         </Reveal>
       </div>
     </section>

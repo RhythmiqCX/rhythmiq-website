@@ -1,5 +1,5 @@
 import Reveal from "./reveal";
-import { InboxUI } from "./visuals";
+import { InboxMockup } from "./mockups";
 
 const CHANNELS: { name: string; icon: React.JSX.Element }[] = [
   {
@@ -77,8 +77,8 @@ const Omnichannel = () => {
             ))}
           </div>
         </Reveal>
-        <Reveal delay={0.12} className="frame frame-light p-5">
-          <InboxUI className="aspect-[16/9] rounded-[10px]" />
+        <Reveal delay={0.12}>
+          <InboxMockup />
         </Reveal>
       </div>
     </section>

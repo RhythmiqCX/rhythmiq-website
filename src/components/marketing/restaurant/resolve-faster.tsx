@@ -1,5 +1,5 @@
 import Reveal from "./reveal";
-import { CallComposerUI } from "./visuals";
+import { CallComposerMockup } from "./mockups";
 
 const ResolveFaster = () => {
   return (
@@ -11,8 +11,8 @@ const ResolveFaster = () => {
             Answer every guest in seconds, day or night
           </h2>
         </Reveal>
-        <Reveal delay={0.1} className="frame frame-light p-6">
-          <CallComposerUI className="aspect-[16/9] rounded-[10px]" />
+        <Reveal delay={0.1}>
+          <CallComposerMockup className="max-w-[880px] mx-auto w-full" />
         </Reveal>
       </div>
     </section>

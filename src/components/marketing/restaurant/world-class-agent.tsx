@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal from "./reveal";
+import { MeshTile } from "./art";
 import { DEMO_URL } from "@/constants/links";
 
 const WorldClassAgent = () => {
@@ -32,10 +33,8 @@ const WorldClassAgent = () => {
               Hear it for yourself
             </Link>
           </div>
-          <div
-            className="relative rounded-[22px] overflow-hidden min-h-[380px]"
-            style={{ background: "linear-gradient(135deg,#F0A47E,#E8643C 55%,#C9461F)" }}
-          >
+          <div className="relative rounded-[22px] overflow-hidden min-h-[380px]">
+            <MeshTile uid="wca" variant="coral" className="absolute inset-0" />
             <span
               className="ph-tag absolute top-0 left-0 text-white border-transparent"
               style={{ background: "rgba(20,16,13,.4)" }}

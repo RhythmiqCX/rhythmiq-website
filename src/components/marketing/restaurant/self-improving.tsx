@@ -1,12 +1,12 @@
 import Reveal from "./reveal";
-import { AnalyticsUI } from "./visuals";
+import { AnalyticsMockup } from "./mockups";
 
 const SelfImproving = () => {
   return (
     <section className="section bg-paper3" aria-label="Self-improving">
       <div className="wrap">
-        <Reveal className="frame frame-light p-6 mb-7">
-          <AnalyticsUI className="aspect-[16/9] rounded-[10px]" />
+        <Reveal className="mb-7">
+          <AnalyticsMockup className="max-w-[880px] mx-auto w-full" />
         </Reveal>
         <Reveal className="max-w-[52ch]">
           <h3 className="h-feature mb-2.5">A system that gets sharper every shift</h3>
