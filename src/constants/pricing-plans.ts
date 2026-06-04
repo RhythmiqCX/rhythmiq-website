@@ -2,7 +2,7 @@
 //
 // NOTE: these numbers are PROVISIONAL. They are modelled on the restaurant
 // voice-AI market (budget band ~$25–65/mo, flat band ~$149–299/mo, premium
-// ~$349+/mo — e.g. Slang.ai ~$450–600, Loman/Hostie ~$199–299) while keeping
+// ~$349+/mo, e.g. Slang.ai ~$450–600, Loman/Hostie ~$199–299) while keeping
 // Rhythmiq's existing $29 entry anchor so the "$29 vs $99/$349 competitors"
 // story still holds. Swap freely once real pricing is set.
 

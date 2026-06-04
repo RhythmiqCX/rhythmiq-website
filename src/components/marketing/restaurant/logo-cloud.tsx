@@ -27,7 +27,7 @@ const LogoCloud = () => {
       <div className="flex flex-col gap-5">
         <div className={`overflow-hidden ${fadeMask}`}>
           {/* Each visible "half" must be wider than the viewport for the
-              translateX(-50%) loop to be seamless — repeat the set 4×. */}
+              translateX(-50%) loop to be seamless, repeat the set 4×. */}
           <div className="marquee">
             {[...ROW_ONE, ...ROW_ONE, ...ROW_ONE, ...ROW_ONE].map((item, i) => (
               <span key={i} className={item.cls}>

@@ -5,7 +5,7 @@ import { cn } from "@/lib";
  * Real HTML/CSS product mockups (replacing the old SVG "screenshots"). They are
  * composed from the same paper primitives the live ProductShowcase window uses
  * (`.win`, `.transcript`, `.bubble`, `.tagpill`, `.stats`, `.bars`, `.wave`) so
- * everything reads as one product. Server components — no client JS; the only
+ * everything reads as one product. Server components, no client JS; the only
  * motion is the CSS `.wave`/`.live` pulse already defined in globals.css.
  */
 
