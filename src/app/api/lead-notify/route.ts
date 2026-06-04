@@ -1,10 +1,19 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY || 're_mock_key_for_build');
-
 export async function POST(request: Request) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return NextResponse.json(
+        { error: 'Email service is not configured' },
+        { status: 500 }
+      );
+    }
+    // Instantiated per-request (not at module scope) so a missing key fails this
+    // route at runtime instead of breaking the entire production build.
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     const payload = await request.json();
 
     // Validate required fields

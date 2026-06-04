@@ -2,7 +2,8 @@
 
 import Groq from "groq-sdk";
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+// Lazy getter so a missing key fails at call time, never at module load / build.
+const getGroq = () => new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export async function enhancePromptWithAI(
     draftPrompt: string,
@@ -26,7 +27,7 @@ export async function enhancePromptWithAI(
       5. Output ONLY the enhanced prompt. No conversational filler.
     `;
 
-        const completion = await groq.chat.completions.create({
+        const completion = await getGroq().chat.completions.create({
             messages: [
                 { role: "system", content: systemPrompt },
                 { role: "user", content: draftPrompt },

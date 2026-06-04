@@ -3,10 +3,11 @@ import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
 
-// Initialize OpenAI client
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || 'mock-key-for-build',
-});
+// Instantiated lazily (not at module scope) so a missing key fails this route at
+// runtime instead of breaking the entire production build.
+function getOpenAI(): OpenAI {
+  return new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+}
 
 // Function to read the knowledge base from the markdown file
 function getKnowledgeBase(): string {
@@ -24,8 +25,8 @@ async function generateAIResponse(userMessage: string): Promise<string> {
     console.log('🔍 Generating AI response for message:', userMessage);
     const knowledgeBase = getKnowledgeBase();
     console.log('📚 Knowledge base loaded, length:', knowledgeBase.length);
-    
-    const completion = await openai.chat.completions.create({
+
+    const completion = await getOpenAI().chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
         {

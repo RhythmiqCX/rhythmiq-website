@@ -2,6 +2,17 @@ import Image from "next/image";
 import Container from "@/components/global/container";
 import Link from "next/link";
 import { ReactNode } from "react";
+import JsonLd from "@/components/global/JsonLd";
+
+const SITE_URL = "https://rhythmiqcx.com";
+
+const abs = (p: string) => (p.startsWith("http") ? p : `${SITE_URL}${p.startsWith("/") ? "" : "/"}${p}`);
+
+// Parse the human/ISO date string into an ISO date; returns undefined if unparseable.
+function toIsoDate(date: string): string | undefined {
+  const t = Date.parse(date);
+  return Number.isNaN(t) ? undefined : new Date(t).toISOString();
+}
 
 type Section = { id: string; label: string };
 
@@ -40,8 +51,40 @@ export default function BlogLayout({
   children,
   relatedArticles,
 }: BlogLayoutProps) {
+  const publishedIso = toIsoDate(date);
+
+  // BlogPosting + BreadcrumbList structured data — emitted for every post so search
+  // engines and LLMs get rich, grounded metadata (headline, author, date, image).
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description: excerpt,
+    image: [abs(heroImage.src)],
+    ...(publishedIso ? { datePublished: publishedIso, dateModified: publishedIso } : {}),
+    author: authors.map((a) => ({ "@type": "Person", name: a.name })),
+    publisher: {
+      "@type": "Organization",
+      name: "RhythmiqCX",
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/icons/rhythmiq-mark-512.png` },
+    },
+    inLanguage: "en",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+      { "@type": "ListItem", position: 3, name: category.label, item: abs(category.href) },
+      { "@type": "ListItem", position: 4, name: title },
+    ],
+  };
+
   return (
     <main className="paper-surface bg-paper text-ink font-sans flex flex-col">
+      <JsonLd schema={[blogPostingSchema, breadcrumbSchema]} />
       {/* Hero header — not animation-gated so it paints immediately (LCP) */}
       <section className="section-tight text-center px-4">
         <div className="max-w-4xl mx-auto space-y-6">

@@ -2,9 +2,8 @@
 
 import Groq from "groq-sdk";
 
-const groq = new Groq({
-    apiKey: process.env.GROQ_API_KEY,
-});
+// Lazy getter so a missing key fails at call time, never at module load / build.
+const getGroq = () => new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export type RoomType =
     | "bedroom"
@@ -113,7 +112,7 @@ export async function generateFloorPlanAction(data: FloorPlanRequest): Promise<F
             Generate the optimal layout JSON.
         `;
 
-        const completion = await groq.chat.completions.create({
+        const completion = await getGroq().chat.completions.create({
             messages: [
                 { role: "system", content: systemPrompt },
                 { role: "user", content: userPrompt },

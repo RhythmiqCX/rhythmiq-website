@@ -1,13 +1,19 @@
 import { createClient } from '@supabase/supabase-js';
 import { NextResponse } from 'next/server';
 
-const supabase = createClient(
-  process.env.SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
-
 export async function POST(request: Request) {
   try {
+    if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+      console.error('Supabase env vars are not configured');
+      return NextResponse.json({ error: 'Server not configured' }, { status: 500 });
+    }
+    // Instantiated per-request (not at module scope) so missing env vars fail this
+    // route at runtime instead of breaking the entire production build.
+    const supabase = createClient(
+      process.env.SUPABASE_URL,
+      process.env.SUPABASE_SERVICE_ROLE_KEY
+    );
+
     const payload = await request.json();
 
     // basic required-field guard
