@@ -317,8 +317,8 @@ export default function JsonToPdfConverterTool() {
         {/* Input Section - Spans 2 columns on large screens */}
         <div className="lg:col-span-2 flex flex-col gap-4 h-[600px]">
           <div className="flex items-center justify-between">
-            <Label className="text-base font-semibold flex items-center gap-2">
-              <FileJson className="w-5 h-5 text-yellow-500" />
+            <Label className="text-base font-semibold flex items-center gap-2 text-ink">
+              <FileJson className="w-5 h-5 text-coral" />
               Input JSON
             </Label>
             <div className="flex gap-2">
@@ -354,22 +354,22 @@ export default function JsonToPdfConverterTool() {
 
           <div
             className={cn(
-              "relative flex-1 rounded-xl border-2 transition-all bg-card overflow-hidden",
+              "relative flex-1 rounded-xl border-2 transition-all bg-white overflow-hidden",
               error
-                ? "border-destructive/50"
-                : "border-border hover:border-border/80 focus-within:border-primary/50",
+                ? "border-[#C9461F]/50"
+                : "border-ink/10 hover:border-ink/20 focus-within:border-coral/50",
             )}
           >
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Paste your JSON here..."
-              className="w-full h-full p-4 md:p-6 bg-transparent resize-none focus:outline-none font-mono text-sm leading-relaxed scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
+              className="w-full h-full p-4 md:p-6 bg-transparent resize-none focus:outline-none font-mono text-sm leading-relaxed text-ink scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
               spellCheck={false}
             />
           </div>
           {error && (
-            <div className="flex items-center gap-2 text-destructive text-sm font-medium animate-in slide-in-from-top-2 fade-in bg-destructive/10 p-3 rounded-lg border border-destructive/20">
+            <div className="flex items-center gap-2 text-[#C9461F] text-sm font-medium animate-in slide-in-from-top-2 fade-in bg-[#C9461F]/10 p-3 rounded-lg border border-[#C9461F]/20">
               <AlertCircle className="w-4 h-4" />
               {error}
             </div>
@@ -378,9 +378,9 @@ export default function JsonToPdfConverterTool() {
 
         {/* Settings Section */}
         <div className="flex flex-col gap-6 h-full">
-          <div className="flex items-center gap-2 pb-2 border-b border-border/50">
-            <Settings className="w-5 h-5 text-primary" />
-            <h2 className="text-lg font-semibold">PDF Settings</h2>
+          <div className="flex items-center gap-2 pb-2 border-b border-ink/10">
+            <Settings className="w-5 h-5 text-coral" />
+            <h2 className="text-lg font-semibold text-ink">PDF Settings</h2>
           </div>
 
           <div className="space-y-4">
@@ -479,7 +479,7 @@ export default function JsonToPdfConverterTool() {
           <div className="mt-auto pt-6">
             <Button
               size="lg"
-              className="w-full bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 text-lg py-6"
+              className="btn btn-accent w-full shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] text-lg py-6"
               onClick={handleConvert}
             >
               <FileText className="w-5 h-5 mr-2" />

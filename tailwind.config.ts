@@ -59,7 +59,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// --- Restaurant redesign "paper" palette (additive; coexists with the
+				// legacy dark/shadcn tokens above during incremental rollout). The brand
+				// coral is namespaced as `coral*` to avoid clobbering shadcn's `accent`. ---
+				paper: '#FAF8F3',
+				paper2: '#F1ECE2',
+				paper3: '#EAE2D4',
+				ink: '#191814',
+				ink2: '#57534B',
+				ink3: '#8B847A',
+				coral: '#E8643C',
+				coral2: '#C9461F',
+				coralSoft: '#F7D9C9',
+				dark: '#1A1714',
+				dark2: '#262019',
+				onDark: '#F4EFE6',
+				onDark2: '#A89F90',
+			},
+			maxWidth: {
+				content: '1240px',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -162,6 +181,8 @@ export default {
 				heading: ['var(--font-heading)'],
 				subheading: ['var(--font-subheading)'],
 				base: ['var(--font-base)'],
+				sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
 			},
 		}
 	},

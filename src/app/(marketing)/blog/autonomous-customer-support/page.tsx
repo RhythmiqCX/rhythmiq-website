@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -109,7 +110,7 @@ export default function AutonomousSupportBlog() {
           If you&apos;ve read our piece on{" "}
           <Link
             href="/blog/is-ai-replacing-customer-support-jobs"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Is AI Replacing Customer Support Jobs in 2026?
           </Link>
@@ -122,7 +123,7 @@ export default function AutonomousSupportBlog() {
         </p>
       </section>
       <section id="what-autonomous-support-means" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Autonomous Customer Support Actually Means in 2026
         </h2>
         <p>
@@ -134,7 +135,7 @@ export default function AutonomousSupportBlog() {
           end-to-end no scripts required. As we explained in{" "}
           <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Customer Support Is a Decision Engine
           </Link>
@@ -158,7 +159,7 @@ export default function AutonomousSupportBlog() {
 
       {/* AI Agents vs Chatbots */}
       <section id="ai-agents-vs-chatbots" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           AI Agents vs Chatbots: Why 2026 Demands Agentic AI
         </h2>
         <p>
@@ -167,7 +168,7 @@ export default function AutonomousSupportBlog() {
           explored this in{" "}
           <Link
             href="/blog/voice-ai-is-great"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI Is Great at FAQs and Terrible at Exceptions
           </Link>
@@ -190,7 +191,7 @@ export default function AutonomousSupportBlog() {
 
       {/* Voice AI and Web Widgets */}
       <section id="voice-ai-and-widget" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Leveraging Voice AI and Proactive Web Widgets for Total Coverage
         </h2>
         <p>
@@ -204,7 +205,7 @@ export default function AutonomousSupportBlog() {
           you&apos;ve read{" "}
           <Link
             href="/blog/ai-voice-reception"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Best AI Voice for Virtual Reception
           </Link>
@@ -217,7 +218,7 @@ export default function AutonomousSupportBlog() {
           button and intervenes with a relevant solution. As we showed in{" "}
           <Link
             href="/blog/rhythmiqcx-for-ecommerce"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             RhythmiqCX for E-commerce
           </Link>
@@ -231,7 +232,7 @@ export default function AutonomousSupportBlog() {
 
       {/* Future of AI Customer Service */}
       <section id="future-support" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Future of AI Customer Service: Proactive, Not Reactive
         </h2>
         <p>
@@ -259,33 +260,14 @@ export default function AutonomousSupportBlog() {
         </p>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Make Your Support Autonomous?
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Experience how RhythmiqCX Voice AI and Web Widgets resolve customer
-            issues end-to-end without scripts, without hold queues, and without
-            burning out your team.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Ready to Make Your Support Autonomous?"
+        description="Experience how RhythmiqCX Voice AI and Web Widgets resolve customer issues end-to-end without scripts, without hold queues, and without burning out your team."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
     </BlogLayout>
   );
 }

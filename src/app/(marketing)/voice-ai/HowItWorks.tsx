@@ -27,16 +27,14 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="w-full py-16 px-4">
+    <section className="w-full py-16 px-4 bg-paper2">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-sm font-medium text-cyan-400 uppercase tracking-widest mb-2">
-            How It Works
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-white">
+          <span className="eyebrow justify-center">How It Works</span>
+          <h2 className="h-feature text-ink mt-3">
             Set Up Your AI Phone Receptionist in 3 Steps
           </h2>
-          <p className="text-gray-400 mt-3 max-w-xl mx-auto text-sm">
+          <p className="text-ink2 mt-3 max-w-xl mx-auto text-sm">
             Most businesses go live within one business day. No ML team, no developer required.
           </p>
         </div>
@@ -45,18 +43,19 @@ const HowItWorks = () => {
           {steps.map((step, i) => (
             <div
               key={i}
-              className="relative flex flex-col items-start gap-4 p-6 rounded-xl border border-slate-700 bg-slate-900/40"
+              className="relative flex flex-col items-start gap-4 p-6 rounded-xl bg-white"
+              style={{ border: "1px solid var(--line-soft)" }}
             >
               <div className="flex items-center gap-3">
-                <span className="text-4xl font-bold text-slate-700 font-mono leading-none">
+                <span className="text-4xl font-bold text-ink3 font-mono leading-none">
                   {step.step}
                 </span>
-                <div className="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20">
-                  <step.icon className="w-5 h-5 text-cyan-400" />
+                <div className="p-2 rounded-lg bg-coral/10 border border-coral/20">
+                  <step.icon className="w-5 h-5 text-coral" />
                 </div>
               </div>
-              <h3 className="text-white font-semibold text-base">{step.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
+              <h3 className="text-ink font-semibold text-base">{step.title}</h3>
+              <p className="text-ink2 text-sm leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>

@@ -2,6 +2,7 @@ import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title: "AI Receptionist for Freelancers in LATAM: The Complete 2026 Guide",
@@ -220,7 +221,7 @@ export default function AIReceptionistFreelancersLATAM() {
           covered the five clearest warning signs in our post{" "}
           <Link
             href="/blog/freelancer-ai-receptionist-2026"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             Why Every Freelancer Needs an AI Receptionist in 2026
           </Link>{" "}
@@ -258,12 +259,12 @@ export default function AIReceptionistFreelancersLATAM() {
           ].map(({ num, label }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+              className="rounded-2xl border border-ink/10 bg-white p-5 text-center"
             >
-              <span className="font-mono text-2xl font-bold text-yellow-400 block leading-none">
+              <span className="font-mono text-2xl font-bold text-coral block leading-none">
                 {num}
               </span>
-              <span className="text-neutral-500 text-xs mt-2 block leading-snug">
+              <span className="text-ink3 text-xs mt-2 block leading-snug">
                 {label}
               </span>
             </div>
@@ -273,7 +274,7 @@ export default function AIReceptionistFreelancersLATAM() {
 
       {/* ── SECTION 2: WHAT IS IT ─────────────────────────────────────────── */}
       <section id="what-is-it" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Is an AI Receptionist and What Does It Actually Do?
         </h2>
 
@@ -289,7 +290,7 @@ export default function AIReceptionistFreelancersLATAM() {
           support&rdquo;). That&apos;s a 1990s IVR system{" "}
           <Link
             href="/blog/ai-voice-reception"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             and IVR is dying fast
           </Link>
@@ -299,11 +300,11 @@ export default function AIReceptionistFreelancersLATAM() {
           working.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-4">
-          <p className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-4">
+          <p className="text-xs font-mono text-ink2 uppercase tracking-widest">
             What it can do for a LATAM freelancer
           </p>
-          <ul className="space-y-2 text-sm text-neutral-300">
+          <ul className="space-y-2 text-sm text-ink2">
             {[
               "Answer calls while you're in a meeting, asleep, or traveling",
               "Respond to questions about your rates, availability, and services",
@@ -313,7 +314,7 @@ export default function AIReceptionistFreelancersLATAM() {
               "Operate in Spanish, English, or detect the language automatically",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3">
-                <span className="text-green-400 mt-0.5 shrink-0">✓</span>
+                <span className="text-coral mt-0.5 shrink-0">✓</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -325,14 +326,14 @@ export default function AIReceptionistFreelancersLATAM() {
           posing as real clients and published the full results in{" "}
           <Link
             href="/blog/does-ai-receptionist-sound-real"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             Does an AI Receptionist Sound Real?
           </Link>{" "}
           For the full technical picture, our{" "}
           <Link
             href="/blog/ai-phone-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             complete AI phone receptionist guide for small businesses
           </Link>{" "}
@@ -343,17 +344,17 @@ export default function AIReceptionistFreelancersLATAM() {
 
       {/* ── SECTION 3: LATAM CONTEXT ──────────────────────────────────────── */}
       <section id="latam-context" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Why This Matters Specifically for LATAM Freelancers
         </h2>
 
         <div className="space-y-5">
           {/* WhatsApp */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
-            <h3 className="text-white font-semibold text-base">
+          <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-3">
+            <h3 className="text-ink font-semibold text-base">
               WhatsApp doesn&apos;t replace a first-contact call
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               LATAM has the highest WhatsApp adoption rate in the world 89% of
               internet users in the region use it as their primary channel. But
               there&apos;s an important difference between staying in touch with
@@ -368,11 +369,11 @@ export default function AIReceptionistFreelancersLATAM() {
           </div>
 
           {/* Freelance market */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
-            <h3 className="text-white font-semibold text-base">
+          <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-3">
+            <h3 className="text-ink font-semibold text-base">
               The LATAM freelance market grew but the infrastructure didn&apos;t
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               According to Workana data, the Latin American freelance market
               grew 37% between 2022 and 2025. Mexico, Colombia, Argentina, and
               Brazil account for 70% of that growth. These are mature markets
@@ -386,11 +387,11 @@ export default function AIReceptionistFreelancersLATAM() {
           </div>
 
           {/* International clients */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
-            <h3 className="text-white font-semibold text-base">
+          <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-3">
+            <h3 className="text-ink font-semibold text-base">
               International clients expect it
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               If you work with clients in the United States, Spain, or any
               English-speaking market, they&apos;re accustomed to calls being
               answered professionally. A Colombian, Mexican, or Argentine
@@ -401,7 +402,7 @@ export default function AIReceptionistFreelancersLATAM() {
               impression, see our piece on{" "}
               <Link
                 href="/blog/voice-ai-agents"
-                className="text-blue-400 underline"
+                className="text-coral underline"
               >
                 AI Voice Agents &amp; Virtual Receptionists: Redefining First
                 Impressions
@@ -411,14 +412,14 @@ export default function AIReceptionistFreelancersLATAM() {
           </div>
         </div>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           You don&apos;t need to have an office. You need to sound like you do.
         </blockquote>
       </section>
 
       {/* ── SECTION 4: WHO BENEFITS ───────────────────────────────────────── */}
       <section id="who-benefits" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Who Benefits Most From This in LATAM?
         </h2>
 
@@ -432,13 +433,13 @@ export default function AIReceptionistFreelancersLATAM() {
           {PERSONAS.map(({ icon, title, body }) => (
             <div
               key={title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors"
+              className="rounded-2xl border border-ink/10 bg-white p-6 hover:border-ink/20 transition-colors"
             >
               <span className="text-3xl block mb-3">{icon}</span>
-              <h3 className="text-white font-semibold text-base mb-2">
+              <h3 className="text-ink font-semibold text-base mb-2">
                 {title}
               </h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{body}</p>
+              <p className="text-ink2 text-sm leading-relaxed">{body}</p>
             </div>
           ))}
         </div>
@@ -446,40 +447,40 @@ export default function AIReceptionistFreelancersLATAM() {
 
       {/* ── SECTION 5: PRICING ────────────────────────────────────────────── */}
       <section id="pricing" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What It Costs and Whether the Math Works
         </h2>
 
         <p>
-          <Link href="/voice-ai" className="text-blue-400 underline">
+          <Link href="/voice-ai" className="text-coral underline">
             RhythmiqCX
           </Link>{" "}
-          starts at <strong className="text-white">$29 USD per month</strong>.
+          starts at <strong className="text-ink">$29 USD per month</strong>.
           In practical terms across LATAM:
         </p>
 
-        <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.02]">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10 bg-white">
           <table className="w-full text-sm text-left">
-            <thead className="text-neutral-400 uppercase tracking-widest text-xs font-mono">
-              <tr className="bg-white/5">
+            <thead className="text-ink2 uppercase tracking-widest text-xs font-mono">
+              <tr className="bg-white">
                 <th className="px-5 py-4 rounded-tl-xl">Country</th>
                 <th className="px-5 py-4">Currency</th>
                 <th className="px-5 py-4 rounded-tr-xl">Approx. equivalent</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5">
+            <tbody className="divide-y divide-ink/10">
               {PRICING_LATAM.map(({ country, currency, amount }) => (
                 <tr
                   key={country}
-                  className="hover:bg-white/[0.03] transition-colors"
+                  className="hover:bg-paper2 transition-colors"
                 >
-                  <td className="px-5 py-4 font-semibold text-white">
+                  <td className="px-5 py-4 font-semibold text-ink">
                     {country}
                   </td>
-                  <td className="px-5 py-4 font-mono text-neutral-400">
+                  <td className="px-5 py-4 font-mono text-ink2">
                     {currency}
                   </td>
-                  <td className="px-5 py-4 font-mono text-green-400 font-semibold">
+                  <td className="px-5 py-4 font-mono text-coral font-semibold">
                     {amount}
                   </td>
                 </tr>
@@ -488,11 +489,11 @@ export default function AIReceptionistFreelancersLATAM() {
           </table>
         </div>
 
-        <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/5 p-6 space-y-3">
-          <p className="text-xs font-mono text-yellow-400 uppercase tracking-widest font-semibold">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-3">
+          <p className="text-xs font-mono text-coral uppercase tracking-widest font-semibold">
             The real math
           </p>
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-ink2 text-sm leading-relaxed">
             A part-time human receptionist in Mexico costs between MXN 4,000 and
             6,000 per month. The AI costs 10% of that. If the AI receptionist
             saves even one project opportunity per month that you would have
@@ -507,7 +508,7 @@ export default function AIReceptionistFreelancersLATAM() {
           No contracts. No onboarding fees. Cancel any time. For a full
           breakdown of plan tiers and what&apos;s included at each level, see
           the{" "}
-          <Link href="/ai-chatbot-pricing" className="text-blue-400 underline">
+          <Link href="/ai-chatbot-pricing" className="text-coral underline">
             RhythmiqCX pricing page
           </Link>
           .
@@ -516,7 +517,7 @@ export default function AIReceptionistFreelancersLATAM() {
 
       {/* ── SECTION 6: SETUP ──────────────────────────────────────────────── */}
       <section id="setup" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How to Set It Up in Under an Hour
         </h2>
 
@@ -526,7 +527,7 @@ export default function AIReceptionistFreelancersLATAM() {
           want a step-by-step walkthrough with screenshots,{" "}
           <Link
             href="/blog/how-to-set-up-ai-phone-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             How to Set Up an AI Phone Receptionist in Under an Hour
           </Link>{" "}
@@ -537,14 +538,14 @@ export default function AIReceptionistFreelancersLATAM() {
           {STEPS.map(({ num, title, body }) => (
             <div
               key={num}
-              className="flex gap-6 rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-6"
             >
-              <span className="font-mono text-3xl font-bold text-neutral-700 shrink-0 leading-none pt-1">
+              <span className="font-mono text-3xl font-bold text-ink3 shrink-0 leading-none pt-1">
                 {num}
               </span>
               <div className="space-y-2">
-                <h3 className="text-white font-semibold text-base">{title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <h3 className="text-ink font-semibold text-base">{title}</h3>
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
               </div>
@@ -554,7 +555,7 @@ export default function AIReceptionistFreelancersLATAM() {
 
         <p>
           To hear the agent in action before you configure anything, try the{" "}
-          <Link href="/voice-ai#voice-demo" className="text-blue-400 underline">
+          <Link href="/voice-ai#voice-demo" className="text-coral underline">
             live voice AI demo
           </Link>{" "}
           directly on the site.
@@ -563,17 +564,17 @@ export default function AIReceptionistFreelancersLATAM() {
 
       {/* ── SECTION 7: FAQ ────────────────────────────────────────────────── */}
       <section id="faq" className="mt-24 space-y-8">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-6">
           <div className="space-y-2">
-            <h3 className="text-white font-semibold text-base">
+            <h3 className="text-ink font-semibold text-base">
               Does the AI understand Latin American Spanish with regional
               variations?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Yes. RhythmiqCX handles neutral Spanish and understands regional
               variations from Mexico, Colombia, Argentina, and other LATAM
               countries. The language model is trained on conversational Spanish
@@ -581,11 +582,11 @@ export default function AIReceptionistFreelancersLATAM() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               What about calls from English-speaking clients?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               You can configure the agent to operate in English, Spanish, or
               auto-detect the language. If you have clients in LATAM and in the
               United States, the agent handles both languages from the same
@@ -593,17 +594,17 @@ export default function AIReceptionistFreelancersLATAM() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               Does it integrate with WhatsApp?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Yes. RhythmiqCX supports voice, web chat, and WhatsApp on the same
               platform. If a prospect calls and wants to continue via WhatsApp,
               the handoff is seamless. See more on the{" "}
               <Link
                 href="/whatsapp-ai-chatbot"
-                className="text-blue-400 underline"
+                className="text-coral underline"
               >
                 WhatsApp AI page
               </Link>
@@ -611,22 +612,22 @@ export default function AIReceptionistFreelancersLATAM() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               What information do I receive after each call?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               You get a summary with: caller&apos;s name (if provided), phone
               number, reason for the call, questions asked, and any pending
               follow-up items. Delivered by email or WhatsApp, your choice.
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               How much does an AI receptionist cost for freelancers in LATAM?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               RhythmiqCX starts at $29 USD per month roughly MXN 580, COP
               118,000, or CLP 27,000. No contracts, no onboarding fees. A
               part-time human receptionist in LATAM costs $400–$800 USD/month;
@@ -634,11 +635,11 @@ export default function AIReceptionistFreelancersLATAM() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               Is there a free trial?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Yes. You can try RhythmiqCX without a credit card. Individual
               plans start at $29/month after the trial period. Cancel any time
               no retention calls, no emails required.
@@ -649,7 +650,7 @@ export default function AIReceptionistFreelancersLATAM() {
 
       {/* ── PERCEPTION SECTION ────────────────────────────────────────────── */}
       <section className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Shift Nobody Talks About: What Happens in the Prospect&apos;s Mind
         </h2>
 
@@ -676,7 +677,7 @@ export default function AIReceptionistFreelancersLATAM() {
           clickbait headlines claim,{" "}
           <Link
             href="/blog/will-ai-replace-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI isn&apos;t replacing receptionists
           </Link>{" "}
@@ -684,9 +685,9 @@ export default function AIReceptionistFreelancersLATAM() {
           companies could afford before.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p className="text-neutral-300 text-sm leading-relaxed">
-            <strong className="text-white">The comparison that matters:</strong>{" "}
+        <div className="rounded-2xl border border-ink/10 bg-white p-6">
+          <p className="text-ink2 text-sm leading-relaxed">
+            <strong className="text-ink">The comparison that matters:</strong>{" "}
             When someone calls an agency and no one answers, they wait. When
             someone calls a freelancer and no one answers, they call the next
             person on the list. An AI receptionist closes that gap at a fraction
@@ -696,37 +697,14 @@ export default function AIReceptionistFreelancersLATAM() {
         </div>
       </section>
 
-      {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Stop Losing Leads While You Work
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            RhythmiqCX answers your calls from day one. No code, no contracts.
-            Set it up in under an hour in Spanish, English, or both for clients
-            in LATAM and anywhere in the world.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link
-              href="/voice-ai"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Try Free No Credit Card
-            </Link>
-            <Link
-              href="/voice-ai#voice-demo"
-              className="border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:border-white/40 transition"
-            >
-              Watch Live Demo
-            </Link>
-          </div>
-          <p className="text-neutral-600 text-xs mt-6">
-            From $29 USD/month · Cancel any time · Spanish + English · 60+
-            languages
-          </p>
-        </div>
-      </section>
+      <BlogCTA
+        title="Stop Losing Leads While You Work"
+        description="RhythmiqCX answers your calls from day one. No code, no contracts. Set it up in under an hour in Spanish, English, or both for clients in LATAM and anywhere in the world."
+        primaryLabel="Try Free No Credit Card"
+        primaryHref="/voice-ai"
+        secondaryLabel="Watch Live Demo"
+        secondaryHref="/voice-ai#voice-demo"
+      />
     </BlogLayout>
   );
 }

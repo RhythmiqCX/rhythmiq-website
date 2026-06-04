@@ -1,5 +1,22 @@
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Inter, DM_Sans, Instrument_Serif, Schibsted_Grotesk, JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
+
+// --- Restaurant redesign type system (paper aesthetic) ---
+// Schibsted Grotesk = display + body sans; JetBrains Mono = eyebrows, labels, figures.
+// Added alongside the legacy Satoshi/Inter/Instrument fonts during incremental rollout.
+export const sans = Schibsted_Grotesk({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800", "900"],
+    variable: "--font-sans",
+    display: "swap",
+});
+
+export const mono = JetBrains_Mono({
+    subsets: ["latin"],
+    weight: ["400", "500"],
+    variable: "--font-mono",
+    display: "swap",
+});
 
 export const heading = localFont({
     src: [

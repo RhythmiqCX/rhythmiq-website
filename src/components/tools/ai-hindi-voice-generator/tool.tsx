@@ -95,10 +95,10 @@ const AiHindiVoiceGeneratorTool = () => {
 
   return (
     <div className="flex flex-col gap-8 max-w-4xl mx-auto">
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-xl">
+      <Card className="border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
         <CardHeader>
           <CardTitle className="flex flex-row items-center gap-2">
-            <Volume2 className="w-5 h-5 text-indigo-500" />
+            <Volume2 className="w-5 h-5 text-coral" />
             Text Configuration
           </CardTitle>
           <CardDescription>
@@ -143,7 +143,7 @@ const AiHindiVoiceGeneratorTool = () => {
               <Button
                 variant="default"
                 size="lg"
-                className="w-full gap-2 bg-gradient-to-r from-indigo-500 to-primary hover:from-indigo-600 hover:to-primary/90 text-white border-0 shadow-md"
+                className="w-full gap-2 btn btn-accent justify-center"
                 onClick={handleGenerate}
                 disabled={isGenerating || isLimitReached}
               >
@@ -162,7 +162,7 @@ const AiHindiVoiceGeneratorTool = () => {
             </div>
           </div>
           {isLimitReached && (
-            <p className="text-sm text-red-500 text-center font-medium mt-2">
+            <p className="text-sm text-[#C9461F] text-center font-medium mt-2">
               You have reached your daily limit of 5 generations for this tool.
             </p>
           )}
@@ -171,8 +171,8 @@ const AiHindiVoiceGeneratorTool = () => {
 
       {audioSrc && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden border-indigo-500/20 shadow-xl">
-            <CardHeader className="bg-indigo-500/5 py-4 border-b border-indigo-500/10">
+          <Card className="bg-white overflow-hidden border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+            <CardHeader className="bg-coralSoft py-4 border-b border-ink/10">
               <CardTitle className="text-lg flex items-center justify-between">
                 <span>Resulting Audio</span>
                 <Button
@@ -187,7 +187,7 @@ const AiHindiVoiceGeneratorTool = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
-              <div className="flex flex-col items-center justify-center p-6 bg-background/50 rounded-xl border border-border/50 gap-4">
+              <div className="flex flex-col items-center justify-center p-6 bg-paper rounded-xl border border-ink/10 gap-4">
                 <audio
                   ref={audioRef}
                   controls

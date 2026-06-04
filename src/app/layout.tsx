@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { cn } from "@/lib";
 import { generateMetadata } from "@/utils";
-import { base, heading } from "@/constants";
+import { base, heading, sans, mono } from "@/constants";
 import { Toaster } from "@/components/ui/sonner";
 import { subheading } from "@/constants/fonts";
 import { Analytics } from "@vercel/analytics/react";
@@ -13,7 +13,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "RhythmiqCX",
   url: "https://rhythmiqcx.com",
-  logo: "https://rhythmiqcx.com/icons/rhythmiq-icon.png",
+  logo: "https://rhythmiqcx.com/icons/rhythmiq-mark-512.png",
   sameAs: [],
   contactPoint: {
     "@type": "ContactPoint",
@@ -40,14 +40,16 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background text-foreground antialiased font-heading overflow-x-hidden !scrollbar-hide",
+          "min-h-screen bg-paper text-ink antialiased font-sans overflow-x-hidden !scrollbar-hide",
           base.variable,
           heading.variable,
           subheading.variable,
+          sans.variable,
+          mono.variable,
         )}
       >
         <JsonLd schema={organizationSchema} />
-        <Toaster richColors theme="dark" position="top-right" />
+        <Toaster richColors theme="light" position="top-right" />
         {children}
         <Analytics />
         <SpeedInsights />

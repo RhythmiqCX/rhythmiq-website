@@ -411,7 +411,7 @@ export default function AiDocumentGeneratorTool() {
             </div>
 
             <Button
-              className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90"
+              className="w-full mt-4 btn btn-accent justify-center"
               size="lg"
               disabled={isGenerating || isLimitReached}
               onClick={handleGenerate}
@@ -431,7 +431,7 @@ export default function AiDocumentGeneratorTool() {
               )}
             </Button>
             {isLimitReached && (
-              <p className="text-xs text-red-500 text-center mt-2">
+              <p className="text-xs text-[#C9461F] text-center mt-2">
                 You have reached your daily limit of 5 generations for this
                 tool.
               </p>
@@ -462,7 +462,7 @@ export default function AiDocumentGeneratorTool() {
             >
               {hasCopied ? (
                 <>
-                  <Check className="w-4 h-4 mr-2 text-green-500" />
+                  <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                   Copied
                 </>
               ) : (
@@ -477,7 +477,7 @@ export default function AiDocumentGeneratorTool() {
 
         <Card className="flex-1 border-border/50 bg-card overflow-hidden min-h-[500px] flex flex-col">
           {generatedDoc ? (
-            <div className="flex-1 p-8 overflow-y-auto max-h-[700px] prose prose-sm md:prose-base dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-foreground/90 prose-li:text-foreground/90 prose-strong:text-foreground prose-code:text-blue-300 prose-code:bg-blue-950/30 prose-code:px-1 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-pre:bg-secondary/50 prose-pre:text-blue-300">
+            <div className="flex-1 p-8 overflow-y-auto max-h-[700px] prose prose-sm md:prose-base max-w-none prose-headings:text-ink prose-p:text-ink2 prose-li:text-ink2 prose-strong:text-ink prose-code:text-coral prose-code:bg-coralSoft prose-code:px-1 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-pre:bg-paper2 prose-pre:text-ink">
               <div dangerouslySetInnerHTML={{ __html: generatedDoc.content }} />
             </div>
           ) : (

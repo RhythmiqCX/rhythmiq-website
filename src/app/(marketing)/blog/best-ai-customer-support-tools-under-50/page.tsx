@@ -2,6 +2,7 @@ import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title: "Best AI Customer Support Tools Under $50/Month in 2026",
@@ -128,7 +129,7 @@ export default function BestAICustomerSupportToolsPage() {
           dramatically. In 2026, you can deploy a fully capable{" "}
           <Link
             href="/blog/conversational-ai-vs-traditional-chatbots"
-            className="text-indigo-400"
+            className="text-coral"
           >
             conversational AI support agent
           </Link>{" "}
@@ -147,7 +148,7 @@ export default function BestAICustomerSupportToolsPage() {
           competing with newcomers charging $29.{" "}
           <Link
             href="/blog/ai-chatbot-pricing-how-much-should-you-really-budget"
-            className="text-indigo-400"
+            className="text-coral"
           >
             Here&apos;s a full breakdown of how to budget for AI chatbot pricing
           </Link>{" "}
@@ -326,7 +327,7 @@ export default function BestAICustomerSupportToolsPage() {
           <strong>Bottom line:</strong> If you want the most AI value per dollar
           under $50/month, RhythmiqCX is the clear choice. Start your free trial
           at{" "}
-          <a href="https://rhythmiqcx.com" className="text-indigo-400">
+          <a href="https://rhythmiqcx.com" className="text-coral">
             rhythmiqcx.com
           </a>
           .
@@ -631,32 +632,14 @@ export default function BestAICustomerSupportToolsPage() {
         </p>
       </section>
 
-      {/* ── FINAL CTA ── */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            The best value under $50/month. Try it free.
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            No per-message fees. No seat limits. 60+ languages. Start your 7-day
-            free trial of RhythmiqCX today no credit card required.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://rhythmiqcx.com/ai-chatbot-pricing"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Start Free Trial
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore RhythmiqCX →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="The best value under $50/month. Try it free."
+        description="No per-message fees. No seat limits. 60+ languages. Start your 7-day free trial of RhythmiqCX today no credit card required."
+        primaryLabel="Start Free Trial"
+        primaryHref="https://rhythmiqcx.com/ai-chatbot-pricing"
+        secondaryLabel="Explore RhythmiqCX"
+        secondaryHref="/"
+      />
     </BlogLayout>
   );
 }

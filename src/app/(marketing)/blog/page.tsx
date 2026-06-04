@@ -6,11 +6,11 @@ import { generateMetadata } from '@/utils';
 import BlogListSection, { PostMeta } from './BlogListSection';
 
 export const metadata = generateMetadata({
-  title: "Rhythmiq Blog | AI Chatbot Pricing, Customer Support Automation & Conversational AI",
+  title: "Rhythmiq Blog | Voice AI, AI Phone Hosts & Restaurant Automation",
   description:
-    "Actionable guides, ROI studies and comparisons on AI chatbots, WhatsApp automation and customer service.",
+    "Actionable guides, comparisons, and ideas on voice AI, AI phone receptionists, reservations, and automating front-of-house for restaurants and small businesses.",
   alternates: { canonical: "/blog" },
-  openGraph: { images: ['/icons/white.jpeg'], type: 'website' },
+  openGraph: { images: ['/icons/og-default.png'], type: 'website' },
 });
 
 export default async function BlogListingPage() {
@@ -34,12 +34,14 @@ export default async function BlogListingPage() {
   }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <main>
-      <section className="py-20 bg-gradient-to-b from-indigo-600/20 to-background text-center px-4">
-        <Container className="space-y-4">
-          <h1 className="text-5xl font-bold">The Rhythmiq Blog</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Thoughts on Conversational AI, CX automation, and Customer experience.
+    <main className="paper-surface bg-paper text-ink font-sans">
+      <section className="section-tight text-center">
+        <Container className="wrap">
+          <span className="eyebrow justify-center">The Rhythmiq Blog</span>
+          <h1 className="h-display mt-4">Notes on voice AI &amp; hospitality</h1>
+          <p className="lede max-w-2xl mx-auto mt-4">
+            Guides, comparisons, and ideas on AI phone hosts, reservations, and running a
+            front-of-house that never misses a call.
           </p>
         </Container>
       </section>

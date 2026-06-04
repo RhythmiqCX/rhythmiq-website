@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -184,7 +185,7 @@ export default function AIChatbotROIBlog() {
           actually pay for itself before their next rent cycle.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           I&apos;m going to skip the theater. Let&apos;s talk real math, real
           failure modes, and what &ldquo;ROI&rdquo; actually means when
           you&apos;re not a Fortune 500 company with a 200-person support team.
@@ -194,7 +195,7 @@ export default function AIChatbotROIBlog() {
           Quick context: we built{" "}
           <Link
             href="https://rhythmiqcx.com"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             RhythmiqCX
           </Link>{" "}
@@ -205,7 +206,7 @@ export default function AIChatbotROIBlog() {
           a dedicated guide on{" "}
           <Link
             href="/blog/ai-answering-service-small-business"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI answering services for small business
           </Link>{" "}
@@ -215,7 +216,7 @@ export default function AIChatbotROIBlog() {
 
       {/* ── SECTION 2: THE REAL MATH ── */}
       <section id="real-math" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Real Math Stop Guessing, Start Counting
         </h2>
 
@@ -225,7 +226,7 @@ export default function AIChatbotROIBlog() {
           actual formula from scratch.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 font-mono text-sm text-green-400">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 font-mono text-sm text-coral">
           ROI = (Money Saved + Money Earned Cost of Tool) ÷ Cost of Tool × 100
         </div>
 
@@ -237,7 +238,7 @@ export default function AIChatbotROIBlog() {
           threw away half the food you bought.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-4">
+        <h3 className="text-xl font-semibold text-ink pt-4">
           Where the Real Savings Come From
         </h3>
 
@@ -246,7 +247,7 @@ export default function AIChatbotROIBlog() {
           what actually shifts when you deploy a properly-built AI chatbot or{" "}
           <Link
             href="/blog/ai-phone-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI phone receptionist
           </Link>
@@ -264,7 +265,7 @@ export default function AIChatbotROIBlog() {
                   accept XYZ insurance?&rdquo;, &ldquo;Can I reschedule?&rdquo;
                   and an AI handles 70% of those, you just freed up roughly 2
                   hours/day. At $15/hr, that&apos;s{" "}
-                  <strong className="text-white">
+                  <strong className="text-ink">
                     $1,200/month in recovered capacity
                   </strong>
                   . Not saved salary recovered capacity. That person can now do
@@ -282,7 +283,7 @@ export default function AIChatbotROIBlog() {
                   having an AI handle the initial response. For a business
                   closing $500 average deals, even 3 recovered leads/month =
                   $1,500.{" "}
-                  <strong className="text-white">
+                  <strong className="text-ink">
                     Your chatbot just paid for itself 5× over.
                   </strong>
                 </>
@@ -296,7 +297,7 @@ export default function AIChatbotROIBlog() {
                   well-designed AI one that actually understands{" "}
                   <Link
                     href="/blog/customer-support-decision-engine"
-                    className="text-blue-400 underline"
+                    className="text-coral underline"
                   >
                     customer decisions, not just customer questions
                   </Link>{" "}
@@ -307,17 +308,17 @@ export default function AIChatbotROIBlog() {
           ].map(({ tag, text }, i) => (
             <div
               key={i}
-              className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-5"
+              className="flex gap-4 rounded-2xl border border-ink/10 bg-white p-5"
             >
-              <span className="shrink-0 rounded-full bg-green-400/10 text-green-400 text-xs font-mono font-semibold px-3 py-1 h-fit mt-0.5">
+              <span className="shrink-0 rounded-full bg-white border border-ink/10 text-[#1F7A4D] text-xs font-mono font-semibold px-3 py-1 h-fit mt-0.5">
                 {tag}
               </span>
-              <p className="text-neutral-300 text-sm leading-relaxed">{text}</p>
+              <p className="text-ink2 text-sm leading-relaxed">{text}</p>
             </div>
           ))}
         </div>
 
-        <h3 className="text-xl font-semibold text-white pt-4">
+        <h3 className="text-xl font-semibold text-ink pt-4">
           The Number Most Calculators Miss: Conversion Lift
         </h3>
 
@@ -329,10 +330,10 @@ export default function AIChatbotROIBlog() {
           <strong>It&apos;s a sales tool.</strong>
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p className="text-sm text-neutral-400 leading-relaxed">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6">
+          <p className="text-sm text-ink2 leading-relaxed">
             We consistently see{" "}
-            <strong className="text-white">10–18% conversion lift</strong> when
+            <strong className="text-ink">10–18% conversion lift</strong> when
             response time drops from &ldquo;next business day&rdquo; to
             &ldquo;within 30 seconds.&rdquo; That&apos;s not a chatbot ROI
             number. That&apos;s a revenue acceleration number. And almost zero
@@ -350,15 +351,16 @@ export default function AIChatbotROIBlog() {
       </section>
 
       {/* ── CTA 1 ── */}
-      {/* INSERT CTA COMPONENT HERE
-          Suggested copy: "Want to see what real chatbot ROI looks like for YOUR business?
-          Book a 30-min demo with RhythmiqCX  we'll run the actual numbers with you, live."
-          CTA Button: "Book Free Demo" → https://calendly.com/ray-rhythmiqcx/30min
-      */}
+      <BlogCTA
+        title="Want to see what real chatbot ROI looks like for YOUR business?"
+        description="Book a 30-min demo with RhythmiqCX  we'll run the actual numbers with you, live."
+        primaryLabel="Book Free Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+      />
 
       {/* ── SECTION 3: WHERE ROI DIES ── */}
       <section id="where-roi-dies" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Where Chatbot ROI Goes to Die
         </h2>
 
@@ -372,11 +374,11 @@ export default function AIChatbotROIBlog() {
 
         <div className="space-y-4">
           {/* Failure 1 */}
-          <div className="rounded-2xl border border-red-500/20 bg-red-500/5 p-6 space-y-2">
-            <h3 className="text-white font-semibold text-base">
+          <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-2">
+            <h3 className="text-ink font-semibold text-base">
               ① The FAQ Bot Trap
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               Most chatbots deployed today are glorified FAQ pages with a chat
               bubble on top. They answer questions that were already answered on
               the website. They don&apos;t capture intent, don&apos;t route
@@ -384,7 +386,7 @@ export default function AIChatbotROIBlog() {
               dug into this in{" "}
               <Link
                 href="/blog/voice-ai-is-quietly-killing"
-                className="text-blue-400 underline"
+                className="text-coral underline"
               >
                 How Voice AI Is Quietly Killing FAQ Pages
               </Link>{" "}
@@ -395,17 +397,17 @@ export default function AIChatbotROIBlog() {
           </div>
 
           {/* Failure 2 */}
-          <div className="rounded-2xl border border-red-500/20 bg-red-500/5 p-6 space-y-2">
-            <h3 className="text-white font-semibold text-base">
+          <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-2">
+            <h3 className="text-ink font-semibold text-base">
               ② The Zero-State Problem
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               A customer asks a question. The chatbot answers. The customer asks
               a follow-up. The chatbot treats it like a brand new conversation.
               Sound familiar? This is the{" "}
               <Link
                 href="/blog/the-hidden-state-problem-in-voice-ai"
-                className="text-blue-400 underline"
+                className="text-coral underline"
               >
                 hidden state problem in AI conversations
               </Link>{" "}
@@ -418,13 +420,13 @@ export default function AIChatbotROIBlog() {
           </div>
 
           {/* Failure 3 */}
-          <div className="rounded-2xl border border-red-500/20 bg-red-500/5 p-6 space-y-2">
-            <h3 className="text-white font-semibold text-base">
+          <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-2">
+            <h3 className="text-ink font-semibold text-base">
               ③ Deploying AI to Save Money Instead of Serve Customers
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               This is the big one. And I&apos;ll be blunt:{" "}
-              <strong className="text-white">
+              <strong className="text-ink">
                 if you&apos;re deploying a chatbot primarily to cut headcount,
                 you will fail.
               </strong>{" "}
@@ -436,7 +438,7 @@ export default function AIChatbotROIBlog() {
               team. The ones where{" "}
               <Link
                 href="/blog/is-ai-replacing-customer-support-jobs"
-                className="text-blue-400 underline"
+                className="text-coral underline"
               >
                 AI and humans work together
               </Link>{" "}
@@ -448,7 +450,7 @@ export default function AIChatbotROIBlog() {
 
       {/* ── SECTION 4: REAL SCENARIOS ── */}
       <section id="real-scenarios" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Real Numbers, Real Scenarios (No Company Names, Real Math)
         </h2>
 
@@ -465,43 +467,43 @@ export default function AIChatbotROIBlog() {
             ) => (
               <div
                 key={i}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-4 hover:border-white/20 transition-colors"
+                className="rounded-2xl border border-ink/10 bg-white p-6 space-y-4 hover:border-ink/20 transition-colors"
               >
                 <div className="flex items-start justify-between gap-4 flex-wrap">
                   <div>
-                    <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
+                    <span className="text-xs font-mono text-ink3 uppercase tracking-widest">
                       {label}
                     </span>
-                    <h3 className="text-white font-semibold mt-0.5">
+                    <h3 className="text-ink font-semibold mt-0.5">
                       {business}
                     </h3>
                   </div>
                   <div className="text-right shrink-0">
-                    <span className="font-mono text-3xl font-bold text-green-400">
+                    <span className="font-mono text-3xl font-bold text-coral">
                       {roi}
                     </span>
-                    <span className="block text-xs text-neutral-500 mt-0.5">
+                    <span className="block text-xs text-ink3 mt-0.5">
                       {roiLabel}
                     </span>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-xl bg-red-500/5 border border-red-500/10 p-3">
-                    <span className="text-xs font-mono text-red-400 uppercase tracking-widest block mb-1">
+                  <div className="rounded-xl bg-white border border-ink/10 p-3">
+                    <span className="text-xs font-mono text-[#C9461F] uppercase tracking-widest block mb-1">
                       Before
                     </span>
-                    <p className="text-neutral-400 leading-relaxed">{before}</p>
+                    <p className="text-ink2 leading-relaxed">{before}</p>
                   </div>
-                  <div className="rounded-xl bg-green-500/5 border border-green-500/10 p-3">
-                    <span className="text-xs font-mono text-green-400 uppercase tracking-widest block mb-1">
+                  <div className="rounded-xl bg-white border border-ink/10 p-3">
+                    <span className="text-xs font-mono text-[#1F7A4D] uppercase tracking-widest block mb-1">
                       After
                     </span>
-                    <p className="text-neutral-400 leading-relaxed">{after}</p>
+                    <p className="text-ink2 leading-relaxed">{after}</p>
                   </div>
                 </div>
 
-                <p className="text-neutral-500 text-xs leading-relaxed border-t border-white/5 pt-3">
+                <p className="text-ink3 text-xs leading-relaxed border-t border-ink/10 pt-3">
                   {detail} {cost}
                 </p>
               </div>
@@ -509,7 +511,7 @@ export default function AIChatbotROIBlog() {
           )}
         </div>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The ROI wasn&apos;t from the chatbot doing more. It was from the
           chatbot doing the right things so humans could do what only humans can
           do.
@@ -517,17 +519,18 @@ export default function AIChatbotROIBlog() {
       </section>
 
       {/* ── CTA 2 ── */}
-      {/* INSERT CTA COMPONENT HERE
-          Suggested copy: "Stop guessing your chatbot ROI.
-          Book a free 30-minute session with RhythmiqCX 
-          we'll calculate your actual ROI potential together, live, using your numbers."
-          CTA Button: "Book My Free Demo" → https://calendly.com/ray-rhythmiqcx/30min
-          Secondary link: "See how RhythmiqCX works →" → /product or /demo
-      */}
+      <BlogCTA
+        title="Stop guessing your chatbot ROI."
+        description="Book a free 30-minute session with RhythmiqCX  we'll calculate your actual ROI potential together, live, using your numbers."
+        primaryLabel="Book My Free Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="See how RhythmiqCX works"
+        secondaryHref="/"
+      />
 
       {/* ── SECTION 5: THE VERDICT ── */}
       <section id="the-verdict" className="mt-24 space-y-6 pb-4">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Verdict Are You Actually Ready for AI Chatbot ROI?
         </h2>
 
@@ -551,7 +554,7 @@ export default function AIChatbotROIBlog() {
           don&apos;t have an AI layer in place.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           3 Questions to Ask Before You Buy Anything
         </h3>
 
@@ -559,14 +562,14 @@ export default function AIChatbotROIBlog() {
           {QUALIFYING_QUESTIONS.map(({ q, hint }, i) => (
             <div
               key={i}
-              className="flex gap-5 rounded-2xl border border-white/10 bg-white/5 p-5"
+              className="flex gap-5 rounded-2xl border border-ink/10 bg-white p-5"
             >
-              <span className="shrink-0 font-mono text-lg font-bold text-green-400 mt-0.5">
+              <span className="shrink-0 font-mono text-lg font-bold text-coral mt-0.5">
                 {i + 1}.
               </span>
               <div className="space-y-1">
-                <p className="text-white font-semibold text-sm">{q}</p>
-                <p className="text-neutral-500 text-xs leading-relaxed">
+                <p className="text-ink font-semibold text-sm">{q}</p>
+                <p className="text-ink3 text-xs leading-relaxed">
                   {hint}
                 </p>
               </div>
@@ -586,7 +589,7 @@ export default function AIChatbotROIBlog() {
           you a{" "}
           <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             decision engine disguised as a conversation
           </Link>{" "}
@@ -594,7 +597,7 @@ export default function AIChatbotROIBlog() {
           correctly, and makes your team look brilliant in the process.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The businesses winning with AI right now aren&apos;t the ones with the
           biggest budgets. They&apos;re the ones who stopped asking &ldquo;is AI
           worth it?&rdquo; and started asking{" "}
@@ -611,33 +614,14 @@ export default function AIChatbotROIBlog() {
         </p>
       </section>
 
-      {/* ── FINAL CTA ── */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Stop Guessing. Start Calculating.
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Book a free 30-minute session with RhythmiqCX. We&apos;ll calculate
-            your actual ROI potential together live, using your numbers. No
-            decks, no theater.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book My Free Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore RhythmiqCX →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Stop Guessing. Start Calculating."
+        description="Book a free 30-minute session with RhythmiqCX. We'll calculate your actual ROI potential together live, using your numbers. No decks, no theater."
+        primaryLabel="Book My Free Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore RhythmiqCX"
+        secondaryHref="/"
+      />
     </BlogLayout>
   );
 }

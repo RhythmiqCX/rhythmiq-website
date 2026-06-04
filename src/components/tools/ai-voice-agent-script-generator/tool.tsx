@@ -165,35 +165,35 @@ const AIVoiceAgentScriptGeneratorTool = () => {
             label: "Greeting",
             icon: <Phone className="w-4 h-4" />,
             content: result.greeting,
-            color: "text-emerald-500",
+            color: "text-coral",
           },
           {
             id: "intent",
             label: "Intent Recognition",
             icon: <User className="w-4 h-4" />,
             content: result.intentRecognition,
-            color: "text-blue-500",
+            color: "text-coral",
           },
           {
             id: "response",
             label: "Information Response",
             icon: <MessageCircle className="w-4 h-4" />,
             content: result.informationResponse,
-            color: "text-violet-500",
+            color: "text-coral",
           },
           {
             id: "routing",
             label: "Call Routing",
             icon: <Route className="w-4 h-4" />,
             content: result.callRouting,
-            color: "text-amber-500",
+            color: "text-coral",
           },
           {
             id: "closing",
             label: "Closing",
             icon: <PhoneOff className="w-4 h-4" />,
             content: result.closing,
-            color: "text-rose-500",
+            color: "text-coral",
           },
         ];
         setScriptSections(sections);
@@ -214,10 +214,10 @@ const AIVoiceAgentScriptGeneratorTool = () => {
   return (
     <div className="flex flex-col gap-8">
       {/* Input Section */}
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+      <Card className="border border-ink/10 bg-white">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Phone className="w-5 h-5 text-teal-500" />
+            <Phone className="w-5 h-5 text-coral" />
             Script Details
           </CardTitle>
           <CardDescription>
@@ -264,7 +264,7 @@ const AIVoiceAgentScriptGeneratorTool = () => {
             />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-border/50">
+          <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-ink/10">
             <div className="space-y-2">
               <Label>Language</Label>
               <Select value={language} onValueChange={setLanguage}>
@@ -300,9 +300,8 @@ const AIVoiceAgentScriptGeneratorTool = () => {
           <div className="pt-4">
             <Button
               id="generate-script-button"
-              variant="default"
               size="lg"
-              className="w-full gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white border-0"
+              className="btn btn-accent w-full gap-2"
               onClick={handleGenerate}
               disabled={isGenerating || isLimitReached}
             >
@@ -320,7 +319,7 @@ const AIVoiceAgentScriptGeneratorTool = () => {
               )}
             </Button>
             {isLimitReached && (
-              <p className="text-xs text-red-500 text-center mt-2">
+              <p className="text-xs text-[#C9461F] text-center mt-2">
                 You have used all your free generations for today.
               </p>
             )}
@@ -332,11 +331,11 @@ const AIVoiceAgentScriptGeneratorTool = () => {
       {scriptSections && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6">
           {/* Structured Script Sections */}
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
-            <CardHeader className="border-b border-border/50">
+          <Card className="border border-ink/10 bg-white overflow-hidden">
+            <CardHeader className="border-b border-ink/10">
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
-                  <Phone className="w-5 h-5 text-teal-500" />
+                  <Phone className="w-5 h-5 text-coral" />
                   Generated Voice Script
                 </CardTitle>
                 <Button
@@ -347,7 +346,7 @@ const AIVoiceAgentScriptGeneratorTool = () => {
                   onClick={() => handleCopy(fullScript, "full")}
                 >
                   {copiedState === "full" ? (
-                    <Check className="w-3 h-3 text-green-500" />
+                    <Check className="w-3 h-3 text-[#1F7A4D]" />
                   ) : (
                     <Copy className="w-3 h-3" />
                   )}
@@ -363,7 +362,7 @@ const AIVoiceAgentScriptGeneratorTool = () => {
               {scriptSections.map((section, index) => (
                 <div
                   key={section.id}
-                  className={`border-b border-border/30 last:border-b-0 transition-colors hover:bg-muted/20`}
+                  className={`border-b border-ink/10 last:border-b-0 transition-colors hover:bg-paper2`}
                 >
                   <button
                     onClick={() => toggleSection(section.id)}
@@ -371,15 +370,15 @@ const AIVoiceAgentScriptGeneratorTool = () => {
                   >
                     <div className="flex items-center gap-3">
                       <div
-                        className={`flex items-center justify-center w-8 h-8 rounded-lg bg-muted/50 ${section.color}`}
+                        className={`flex items-center justify-center w-8 h-8 rounded-lg bg-coralSoft ${section.color}`}
                       >
                         {section.icon}
                       </div>
                       <div>
-                        <span className="text-xs text-muted-foreground uppercase tracking-wider font-medium">
+                        <span className="text-xs text-ink3 uppercase tracking-wider font-medium">
                           Step {index + 1}
                         </span>
-                        <h4 className="font-semibold text-sm md:text-base">
+                        <h4 className="font-semibold text-sm md:text-base text-ink">
                           {section.label}
                         </h4>
                       </div>
@@ -395,21 +394,21 @@ const AIVoiceAgentScriptGeneratorTool = () => {
                         }}
                       >
                         {copiedState === section.id ? (
-                          <Check className="w-3.5 h-3.5 text-green-500" />
+                          <Check className="w-3.5 h-3.5 text-[#1F7A4D]" />
                         ) : (
                           <Copy className="w-3.5 h-3.5" />
                         )}
                       </Button>
                       {expandedSections.has(section.id) ? (
-                        <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                        <ChevronUp className="w-4 h-4 text-ink3" />
                       ) : (
-                        <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                        <ChevronDown className="w-4 h-4 text-ink3" />
                       )}
                     </div>
                   </button>
                   {expandedSections.has(section.id) && (
                     <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0">
-                      <div className="bg-muted/30 rounded-lg p-4 text-sm leading-relaxed text-foreground/90 border border-border/30">
+                      <div className="bg-paper2 rounded-lg p-4 text-sm leading-relaxed text-ink border border-ink/10">
                         {section.content}
                       </div>
                     </div>
@@ -420,7 +419,7 @@ const AIVoiceAgentScriptGeneratorTool = () => {
           </Card>
 
           {/* Full Script Preview */}
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+          <Card className="border border-ink/10 bg-white">
             <CardHeader>
               <CardTitle className="text-base">Full Script Preview</CardTitle>
               <CardDescription>
@@ -434,7 +433,7 @@ const AIVoiceAgentScriptGeneratorTool = () => {
                   id="full-script-preview"
                   readOnly
                   value={fullScript}
-                  className="min-h-[250px] bg-background/50 font-sans text-sm leading-relaxed p-4 resize-none"
+                  className="min-h-[250px] bg-paper2 font-sans text-sm leading-relaxed p-4 resize-none"
                 />
                 <Button
                   size="sm"

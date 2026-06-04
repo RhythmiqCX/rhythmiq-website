@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -313,7 +314,7 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
 
       <p>
         An{" "}
-        <Link href="/voice-ai" className="text-blue-500 underline">
+        <Link href="/voice-ai" className="text-coral underline">
           AI phone receptionist
         </Link>{" "}
         is the first solution that is actually affordable, fast to set up, and
@@ -355,18 +356,18 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
           {PAIN_POINTS.map(({ icon, title, desc }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="rounded-2xl border border-ink/10 bg-white p-6"
             >
               <span className="text-2xl block mb-3">{icon}</span>
-              <h3 className="text-white font-semibold text-base mb-1">
+              <h3 className="text-ink font-semibold text-base mb-1">
                 {title}
               </h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{desc}</p>
+              <p className="text-ink2 text-sm leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           62% of callers won&apos;t call back after one missed call. They move
           on to the next result in their search list usually a competitor who
           picked up.
@@ -382,7 +383,7 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
 
       {/* Section 2 */}
       <section id="what-it-does-for-small-business" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What an AI Phone Receptionist Actually Does for a Small Business
         </h2>
 
@@ -396,14 +397,14 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
           {WHAT_IT_DOES.map(({ num, title, body }, i) => (
             <div
               key={i}
-              className="flex gap-6 rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-6"
             >
-              <span className="font-mono text-3xl font-bold text-neutral-700 shrink-0 leading-none pt-1">
+              <span className="font-mono text-3xl font-bold text-ink3 shrink-0 leading-none pt-1">
                 {num}
               </span>
               <div className="space-y-2">
-                <h3 className="text-white font-semibold text-base">{title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <h3 className="text-ink font-semibold text-base">{title}</h3>
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
               </div>
@@ -419,7 +420,7 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
           this dynamic in detail in{" "}
           <Link
             href="/blog/voice-ai-is-great"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI Is Great at FAQs and Terrible at Exceptions
           </Link>
@@ -429,7 +430,7 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
 
       {/* Section 3  Cost Reality */}
       <section id="cost-reality" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Cost Reality: AI Phone Receptionist vs Human for Small Business
         </h2>
 
@@ -438,26 +439,26 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
           see where the AI wins and where it still needs a human in the loop.
         </p>
 
-        <div className="overflow-x-auto rounded-2xl border border-white/10 p-2 sm:p-6 bg-white/[0.02]">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10 p-2 sm:p-6 bg-white">
           <table className="w-full text-sm text-left">
-            <thead className="text-neutral-400 uppercase tracking-widest text-xs font-mono">
-              <tr className="bg-white/5">
+            <thead className="text-ink2 uppercase tracking-widest text-xs font-mono">
+              <tr className="bg-white">
                 <th className="px-5 py-4 rounded-l-xl">Factor</th>
                 <th className="px-5 py-4">Human Receptionist</th>
                 <th className="px-5 py-4 rounded-r-xl">AI Receptionist</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5">
+            <tbody className="divide-y divide-ink/10">
               {PRICING_ROWS.map(({ item, human, ai, winner }, i) => (
-                <tr key={i} className="hover:bg-white/[0.03] transition-colors">
-                  <td className="px-5 py-4 text-white font-medium">{item}</td>
+                <tr key={i} className="hover:bg-white transition-colors">
+                  <td className="px-5 py-4 text-ink font-medium">{item}</td>
                   <td
-                    className={`px-5 py-4 text-sm ${winner === "human" ? "text-green-400 font-semibold" : "text-neutral-400"}`}
+                    className={`px-5 py-4 text-sm ${winner === "human" ? "text-[#1F7A4D] font-semibold" : "text-ink2"}`}
                   >
                     {human}
                   </td>
                   <td
-                    className={`px-5 py-4 text-sm ${winner === "ai" ? "text-green-400 font-semibold" : "text-neutral-400"}`}
+                    className={`px-5 py-4 text-sm ${winner === "ai" ? "text-[#1F7A4D] font-semibold" : "text-ink2"}`}
                   >
                     {ai}
                   </td>
@@ -467,19 +468,19 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
           </table>
         </div>
 
-        <div className="rounded-2xl bg-neutral-900 border border-white/10 p-6 space-y-3">
-          <p className="text-sm text-neutral-400">
-            <strong className="text-white">The right model:</strong> AI handles
+        <div className="rounded-2xl bg-white border border-ink/10 p-6 space-y-3">
+          <p className="text-sm text-ink2">
+            <strong className="text-ink">The right model:</strong> AI handles
             the volume. Humans handle the nuance. A small business running both
             gets coverage that neither delivers alone at a fraction of the cost
             of a full human hire.
           </p>
-          <p className="text-sm text-neutral-400">
+          <p className="text-sm text-ink2">
             See the full pricing breakdown across AI receptionist platforms
             including per-minute vs flat-rate at real call volumes in our{" "}
             <Link
               href="/blog/voice-ai-pricing-compared"
-              className="text-blue-500 underline"
+              className="text-coral underline"
             >
               voice AI pricing comparison
             </Link>
@@ -502,12 +503,12 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
           ].map(({ num, label }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+              className="rounded-2xl border border-ink/10 bg-white p-5 text-center"
             >
-              <span className="font-mono text-2xl font-bold text-yellow-400 block leading-none">
+              <span className="font-mono text-2xl font-bold text-coral block leading-none">
                 {num}
               </span>
-              <span className="text-neutral-500 text-xs mt-2 block leading-snug">
+              <span className="text-ink3 text-xs mt-2 block leading-snug">
                 {label}
               </span>
             </div>
@@ -517,7 +518,7 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
 
       {/* Section 4  What to Look For */}
       <section id="what-to-look-for" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What to Look for in an AI Phone Receptionist (Small Business
           Buyer&apos;s Guide)
         </h2>
@@ -532,22 +533,22 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
         <div className="space-y-6">
           {WHAT_TO_LOOK_FOR.map(({ heading, body }, i) => (
             <div key={i} className="space-y-2">
-              <h3 className="text-xl font-semibold text-white">{heading}</h3>
-              <p className="text-neutral-400 leading-relaxed">{body}</p>
+              <h3 className="text-xl font-semibold text-ink">{heading}</h3>
+              <p className="text-ink2 leading-relaxed">{body}</p>
             </div>
           ))}
         </div>
 
-        <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6 mt-4">
-          <p className="text-amber-300 text-sm leading-relaxed">
-            <strong className="text-amber-400">Watch out for:</strong> Platforms
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 mt-4">
+          <p className="text-ink2 text-sm leading-relaxed">
+            <strong className="text-coral">Watch out for:</strong> Platforms
             that advertise a $29/month plan but require a $99+/month tier to
             unlock WhatsApp, API integrations, or multilingual support. Read
             what&apos;s included at each tier before comparing headline prices.
             See our full{" "}
             <Link
               href="/ai-chatbot-pricing"
-              className="text-amber-300 underline"
+              className="text-coral underline"
             >
               AI chatbot and voice pricing guide
             </Link>{" "}
@@ -559,7 +560,7 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
 
       {/* Section 5  RhythmiqCX Walkthrough */}
       <section id="rhythmiqcx-walkthrough" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           RhythmiqCX for Small Business: Feature Walkthrough
         </h2>
 
@@ -569,20 +570,20 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
           and pricing that doesn&apos;t require a procurement process.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
+        <div className="rounded-2xl border border-ink/10 bg-white overflow-hidden">
           {FEATURES_WALKTHROUGH.map(({ label, value }, i) => (
             <div
               key={i}
               className={`flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 px-6 py-5 ${
                 i !== FEATURES_WALKTHROUGH.length - 1
-                  ? "border-b border-white/5"
+                  ? "border-b border-ink/10"
                   : ""
               }`}
             >
-              <span className="text-neutral-500 text-sm font-mono uppercase tracking-widest shrink-0 sm:w-44 pt-0.5">
+              <span className="text-ink3 text-sm font-mono uppercase tracking-widest shrink-0 sm:w-44 pt-0.5">
                 {label}
               </span>
-              <span className="text-neutral-200 text-sm leading-relaxed">
+              <span className="text-ink2 text-sm leading-relaxed">
                 {value}
               </span>
             </div>
@@ -601,7 +602,7 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
           If you want to hear what your callers will hear before you deploy, the{" "}
           <Link
             href="/tools/ai-hindi-english-receptionist-voice-generator"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI Hindi-English Receptionist Voice Generator
           </Link>{" "}
@@ -609,7 +610,7 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
           no sign-up required.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           For most small businesses, the question isn&apos;t whether AI handles
           calls as well as a human it&apos;s whether it handles the{" "}
           <em>right</em> calls well enough. The answer, for tier-1 queries, is
@@ -621,7 +622,7 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
           published a step-by-step walkthrough in{" "}
           <Link
             href="/blog/how-to-set-up-ai-phone-receptionist"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             How to Set Up an AI Phone Receptionist
           </Link>
@@ -631,47 +632,28 @@ export default function AIPhoneReceptionistSmallBusinessBlog() {
 
       {/* Section 6  FAQ */}
       <section id="faq" className="mt-24 space-y-8">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-6">
           {FAQ.map(({ q, a }, i) => (
             <div key={i} className="space-y-2">
-              <h3 className="text-xl font-semibold text-white">{q}</h3>
-              <p className="text-neutral-400 leading-relaxed">{a}</p>
+              <h3 className="text-xl font-semibold text-ink">{q}</h3>
+              <p className="text-ink2 leading-relaxed">{a}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Final CTA */}
-      <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">
-          Set Up Your AI Receptionist This Week
-        </h2>
-        <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-          Start with the free trial no credit card required. If you can write
-          down the 10 questions your callers ask most often, you can go live in
-          an afternoon.
-        </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <Link
-            href="/voice-ai"
-            className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-          >
-            Try Free From $29/Month
-          </Link>
-
-          <a
-            href="https://calendly.com/ray-rhythmiqcx/30min"
-            className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-          >
-            Book a Live Demo
-          </a>
-        </div>
-      </div>
+      <BlogCTA
+        title="Set Up Your AI Receptionist This Week"
+        description="Start with the free trial no credit card required. If you can write down the 10 questions your callers ask most often, you can go live in an afternoon."
+        primaryLabel="Try Free From $29/Month"
+        primaryHref="/voice-ai"
+        secondaryLabel="Book a Live Demo"
+        secondaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+      />
     </BlogLayout>
   );
 }

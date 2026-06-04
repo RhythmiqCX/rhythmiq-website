@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -115,7 +116,7 @@ export default function AIVoiceReceptionistBlog() {
           </strong>
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           A receptionist&apos;s job isn&apos;t to sound impressive. It&apos;s to
           make the person on the other end feel like they called the right
           place.
@@ -126,7 +127,7 @@ export default function AIVoiceReceptionistBlog() {
           vibe check, gut call, done. If you&apos;ve read{" "}
           <Link
             href="/blog/the-first-second"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             The First 3 Seconds of a Voice Call Decide Customer Trust
           </Link>
@@ -136,7 +137,7 @@ export default function AIVoiceReceptionistBlog() {
       </section>
 
       <section id="three-dimensions" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The 3 Dimensions Nobody Benchmarks (But Everyone Should)
         </h2>
 
@@ -147,13 +148,13 @@ export default function AIVoiceReceptionistBlog() {
           actually separates good from great:
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 space-y-6">
+        <div className="rounded-2xl border border-ink/10 bg-white p-8 space-y-6">
           <div className="space-y-2">
-            <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest">
+            <p className="text-sm font-mono text-ink2 uppercase tracking-widest">
               Dimension 01
             </p>
-            <h3 className="text-xl font-semibold text-white">Tonal Range</h3>
-            <p className="text-neutral-300">
+            <h3 className="text-xl font-semibold text-ink">Tonal Range</h3>
+            <p className="text-ink2">
               Can it shift from warm to efficient without sounding bipolar? A
               great AI receptionist voice has dynamic range, not just one
               &ldquo;professional&rdquo; setting baked in forever.
@@ -161,13 +162,13 @@ export default function AIVoiceReceptionistBlog() {
           </div>
 
           <div className="space-y-2">
-            <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest">
+            <p className="text-sm font-mono text-ink2 uppercase tracking-widest">
               Dimension 02
             </p>
-            <h3 className="text-xl font-semibold text-white">
+            <h3 className="text-xl font-semibold text-ink">
               Pause Intelligence
             </h3>
-            <p className="text-neutral-300">
+            <p className="text-ink2">
               Does it know when to breathe? Awkward pauses or zero pauses both
               feel wrong. The best systems know silence is part of language —
               and they use it intentionally.
@@ -175,19 +176,19 @@ export default function AIVoiceReceptionistBlog() {
           </div>
 
           <div className="space-y-2">
-            <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest">
+            <p className="text-sm font-mono text-ink2 uppercase tracking-widest">
               Dimension 03
             </p>
-            <h3 className="text-xl font-semibold text-white">
+            <h3 className="text-xl font-semibold text-ink">
               Error Recovery Grace
             </h3>
-            <p className="text-neutral-300">
+            <p className="text-ink2">
               When it mishears something (and it will), does it recover like a
               confident human or panic like a broken IVR? Traditional phone
               trees fail exactly here it&apos;s the core reason{" "}
               <Link
                 href="/blog/ai-voice-reception"
-                className="text-blue-400 underline"
+                className="text-coral underline"
               >
                 IVR systems are dying
               </Link>{" "}
@@ -202,7 +203,7 @@ export default function AIVoiceReceptionistBlog() {
           and finance callers want authoritative with zero filler words. Our{" "}
           <Link
             href="/blog/rhythmiqcx-for-ecommerce"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             e-commerce breakdown
           </Link>{" "}
@@ -210,7 +211,7 @@ export default function AIVoiceReceptionistBlog() {
           that&apos;s before you even pick up the phone.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           Hot take: &ldquo;Natural-sounding&rdquo; is not a feature. It&apos;s
           the floor. If that&apos;s the highest praise in a demo, walk away.
         </blockquote>
@@ -219,7 +220,7 @@ export default function AIVoiceReceptionistBlog() {
       <section className="mt-16"></section>
 
       <section id="voice-tier-list" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Voice Tier List Nobody Asked For But Everyone Needs
         </h2>
 
@@ -230,9 +231,9 @@ export default function AIVoiceReceptionistBlog() {
           calls. Real people. Real drop-offs.
         </p>
 
-        <div className="overflow-x-auto rounded-2xl border border-white/5">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10">
           <table className="w-full text-sm text-left border-collapse">
-            <thead className="bg-white/5 text-neutral-400 uppercase tracking-widest text-xs font-mono border-b border-white/5">
+            <thead className="bg-white text-ink2 uppercase tracking-widest text-xs font-mono border-b border-ink/10">
               <tr>
                 <th className="px-6 py-6 sm:px-8">Voice Type</th>
                 <th className="px-6 py-6 sm:px-8">Best For</th>
@@ -240,34 +241,34 @@ export default function AIVoiceReceptionistBlog() {
                 <th className="px-6 py-6 sm:px-8">Verdict</th>
               </tr>
             </thead>
-            <tbody className="text-neutral-300">
-              <tr className="hover:bg-white/[0.03] transition-colors">
+            <tbody className="text-ink2">
+              <tr className="hover:bg-paper transition-colors">
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="font-semibold text-white block">
+                  <span className="font-semibold text-ink block">
                     Neural TTS (Generic)
                   </span>
-                  <span className="text-xs text-neutral-500">
+                  <span className="text-xs text-ink3">
                     Most &ldquo;starter&rdquo; plans
                   </span>
                 </td>
                 <td className="px-6 py-6 sm:px-8">Basic FAQ routing</td>
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-red-500/10 text-red-400 border border-red-500/20">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white text-[#C9461F] border border-ink/10">
                     Low
                   </span>
                 </td>
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-red-500/10 text-red-400 border border-red-500/20">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white text-[#C9461F] border border-ink/10">
                     Skip it
                   </span>
                 </td>
               </tr>
-              <tr className="hover:bg-white/[0.03] transition-colors">
+              <tr className="hover:bg-paper transition-colors">
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="font-semibold text-white">
+                  <span className="font-semibold text-ink">
                     Cloned / Branded Voice
                   </span>
-                  <span className="text-xs text-neutral-500">
+                  <span className="text-xs text-ink3">
                     Custom trained on real samples
                   </span>
                 </td>
@@ -275,22 +276,22 @@ export default function AIVoiceReceptionistBlog() {
                   High-trust industries (legal, medical)
                 </td>
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-500/10 text-green-400 border border-green-500/20">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white text-[#1F7A4D] border border-ink/10">
                     High
                   </span>
                 </td>
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-500/10 text-green-400 border border-green-500/20">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white text-[#1F7A4D] border border-ink/10">
                     Strong pick
                   </span>
                 </td>
               </tr>
-              <tr className="hover:bg-white/[0.03] transition-colors">
+              <tr className="hover:bg-paper transition-colors">
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="font-semibold text-white block">
+                  <span className="font-semibold text-ink block">
                     Adaptive Emotional Voice
                   </span>
-                  <span className="text-xs text-neutral-500">
+                  <span className="text-xs text-ink3">
                     Adjusts tone contextually
                   </span>
                 </td>
@@ -298,22 +299,22 @@ export default function AIVoiceReceptionistBlog() {
                   Complex multi-intent calls
                 </td>
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-500/10 text-green-400 border border-green-500/20">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white text-[#1F7A4D] border border-ink/10">
                     Highest
                   </span>
                 </td>
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-500/10 text-green-400 border border-green-500/20">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white text-[#1F7A4D] border border-ink/10">
                     Best in class
                   </span>
                 </td>
               </tr>
-              <tr className="hover:bg-white/[0.03] transition-colors">
+              <tr className="hover:bg-paper transition-colors">
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="font-semibold text-white block">
+                  <span className="font-semibold text-ink block">
                     Speed-Optimized Voice
                   </span>
-                  <span className="text-xs text-neutral-500">
+                  <span className="text-xs text-ink3">
                     Sub-300ms response latency
                   </span>
                 </td>
@@ -321,12 +322,12 @@ export default function AIVoiceReceptionistBlog() {
                   High-volume e-commerce &amp; scheduling
                 </td>
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white text-coral border border-ink/10">
                     Medium-High
                   </span>
                 </td>
                 <td className="px-6 py-6 sm:px-8">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white text-coral border border-ink/10">
                     Depends on use case
                   </span>
                 </td>
@@ -339,7 +340,7 @@ export default function AIVoiceReceptionistBlog() {
           The category everyone ignores is latency.{" "}
           <Link
             href="/blog/voice-ai-vs-chatbots"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             Voice AI vs Chatbots
           </Link>{" "}
@@ -350,14 +351,14 @@ export default function AIVoiceReceptionistBlog() {
           broken?&rdquo;
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           Speed is not a UX feature. In voice AI, speed IS the personality. A
           slow voice sounds dumb, no matter how well it speaks.
         </blockquote>
       </section>
 
       <section id="demo-vs-reality" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Is It Actually the Best AI Voice for Virtual Receptionists Or Just the
           Best Demo?
         </h2>
@@ -382,21 +383,21 @@ export default function AIVoiceReceptionistBlog() {
           meeting room and embarrassing on live calls.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 space-y-5">
-          <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-8 space-y-5">
+          <p className="text-sm font-mono text-ink2 uppercase tracking-widest">
             The Demo vs. Reality Checklist
           </p>
 
           <div className="space-y-4">
             <div className="flex gap-4">
-              <span className="text-green-400 font-bold mt-0.5">✓</span>
-              <p className="text-neutral-300">
-                <strong className="text-white">Test with interruptions</strong>{" "}
+              <span className="text-coral font-bold mt-0.5">✓</span>
+              <p className="text-ink2">
+                <strong className="text-ink">Test with interruptions</strong>{" "}
                 Start talking mid-sentence and see what happens. Does it hold
                 state? Most don&apos;t. Read{" "}
                 <Link
                   href="/blog/the-hidden-state-problem-in-voice-ai"
-                  className="text-blue-400 underline"
+                  className="text-coral underline"
                 >
                   The Hidden State Problem in Voice AI Conversations
                 </Link>{" "}
@@ -404,22 +405,22 @@ export default function AIVoiceReceptionistBlog() {
               </p>
             </div>
             <div className="flex gap-4">
-              <span className="text-green-400 font-bold mt-0.5">✓</span>
-              <p className="text-neutral-300">
-                <strong className="text-white">Test with noise</strong> —
+              <span className="text-coral font-bold mt-0.5">✓</span>
+              <p className="text-ink2">
+                <strong className="text-ink">Test with noise</strong> —
                 Background TV, street noise, bad cell signal. The voice is only
                 part of the stack. ASR quality matters enormously.
               </p>
             </div>
             <div className="flex gap-4">
-              <span className="text-green-400 font-bold mt-0.5">✓</span>
-              <p className="text-neutral-300">
-                <strong className="text-white">Test emotional mismatch</strong>{" "}
+              <span className="text-coral font-bold mt-0.5">✓</span>
+              <p className="text-ink2">
+                <strong className="text-ink">Test emotional mismatch</strong>{" "}
                 Send a frustrated caller. An angry one. A confused one. Does the
                 voice adapt, or stay relentlessly cheerful?{" "}
                 <Link
                   href="/blog/voice-ai-is-great"
-                  className="text-blue-400 underline"
+                  className="text-coral underline"
                 >
                   Voice AI is great at FAQs and terrible at exceptions
                 </Link>{" "}
@@ -427,9 +428,9 @@ export default function AIVoiceReceptionistBlog() {
               </p>
             </div>
             <div className="flex gap-4">
-              <span className="text-green-400 font-bold mt-0.5">✓</span>
-              <p className="text-neutral-300">
-                <strong className="text-white">Test long calls</strong> After 90
+              <span className="text-coral font-bold mt-0.5">✓</span>
+              <p className="text-ink2">
+                <strong className="text-ink">Test long calls</strong> After 90
                 seconds, does it still feel natural? Or does the rhythm feel
                 mechanical and exhausting?
               </p>
@@ -445,7 +446,7 @@ export default function AIVoiceReceptionistBlog() {
           your job to demand it.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           Rule of thumb: if you can&apos;t test a voice with a genuinely annoyed
           caller in under an hour, the vendor isn&apos;t confident in their
           product.
@@ -455,7 +456,7 @@ export default function AIVoiceReceptionistBlog() {
       <section className="mt-16"></section>
 
       <section id="framework" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Our Actual Framework for Picking the Right Voice (Steal It)
         </h2>
 
@@ -493,7 +494,7 @@ export default function AIVoiceReceptionistBlog() {
                   it. This is where{" "}
                   <Link
                     href="/blog/autonomous-customer-support"
-                    className="text-blue-400 underline"
+                    className="text-coral underline"
                   >
                     autonomous customer support design
                   </Link>{" "}
@@ -509,14 +510,14 @@ export default function AIVoiceReceptionistBlog() {
           ].map(({ step, title, body }) => (
             <div
               key={step}
-              className="flex gap-6 rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-6"
             >
-              <span className="font-mono text-3xl font-bold text-neutral-600 shrink-0 leading-none pt-1">
+              <span className="font-mono text-3xl font-bold text-ink3 shrink-0 leading-none pt-1">
                 {step}
               </span>
               <div className="space-y-2">
-                <h3 className="text-white font-semibold text-lg">{title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <h3 className="text-ink font-semibold text-lg">{title}</h3>
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
               </div>
@@ -538,47 +539,28 @@ export default function AIVoiceReceptionistBlog() {
           IVR to AI voice is irreversible,{" "}
           <Link
             href="/blog/ai-voice-reception"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             our post on why IVR systems are dying
           </Link>{" "}
           lays out the structural reasons in full.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The best AI receptionist voice isn&apos;t the one that sounds the most
           human. It&apos;s the one your callers stop noticing because the
           conversation just works.
         </blockquote>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Hear a Voice That Actually Works?
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            See how RhythmiqCX handles real calls not demo calls. Hostile
-            callers, background noise, ambiguous questions, and all. Book a live
-            session and test it yourself.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Ready to Hear a Voice That Actually Works?"
+        description="See how RhythmiqCX handles real calls not demo calls. Hostile callers, background noise, ambiguous questions, and all. Book a live session and test it yourself."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
     </BlogLayout>
   );
 }

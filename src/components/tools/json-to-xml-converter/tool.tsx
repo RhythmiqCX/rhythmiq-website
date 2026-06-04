@@ -134,8 +134,8 @@ export default function JsonToXmlConverterTool() {
         {/* Input Section */}
         <div className="flex flex-col gap-4 h-full">
           <div className="flex items-center justify-between">
-            <Label className="text-base font-semibold flex items-center gap-2">
-              <FileJson className="w-5 h-5 text-yellow-500" />
+            <Label className="text-base font-semibold flex items-center gap-2 text-ink">
+              <FileJson className="w-5 h-5 text-coral" />
               Input JSON
             </Label>
             <div className="flex gap-2">
@@ -143,7 +143,7 @@ export default function JsonToXmlConverterTool() {
                 variant="ghost"
                 size="sm"
                 onClick={() => setInput("")}
-                className="text-muted-foreground hover:text-destructive"
+                className="text-ink3 hover:text-[#C9461F]"
               >
                 <Trash2 className="w-4 h-4 mr-2" />
                 Clear
@@ -156,22 +156,22 @@ export default function JsonToXmlConverterTool() {
 
           <div
             className={cn(
-              "relative flex-1 rounded-xl border-2 transition-all bg-card overflow-hidden",
+              "relative flex-1 rounded-xl border transition-all bg-white overflow-hidden",
               error
-                ? "border-destructive/50"
-                : "border-border hover:border-border/80 focus-within:border-primary/50",
+                ? "border-[#C9461F]/50"
+                : "border-ink/10 hover:border-ink/20 focus-within:border-coral/50",
             )}
           >
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Paste your JSON here..."
-              className="w-full h-full p-4 md:p-6 bg-transparent resize-none focus:outline-none font-mono text-sm leading-relaxed scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
+              className="w-full h-full p-4 md:p-6 bg-transparent resize-none focus:outline-none font-mono text-sm leading-relaxed text-ink scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
               spellCheck={false}
             />
           </div>
           {error && (
-            <div className="flex items-center gap-2 text-destructive text-sm font-medium animate-in slide-in-from-top-2 fade-in bg-destructive/10 p-3 rounded-lg border border-destructive/20">
+            <div className="flex items-center gap-2 text-[#C9461F] text-sm font-medium animate-in slide-in-from-top-2 fade-in bg-[#C9461F]/10 p-3 rounded-lg border border-[#C9461F]/20">
               <AlertCircle className="w-4 h-4" />
               {error}
             </div>
@@ -182,7 +182,7 @@ export default function JsonToXmlConverterTool() {
         <div className="lg:hidden">
           <Button
             size="lg"
-            className="w-full bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20"
+            className="btn btn-accent w-full"
             onClick={handleConvert}
           >
             Convert JSON to XML
@@ -193,8 +193,8 @@ export default function JsonToXmlConverterTool() {
         {/* Output Section */}
         <div className="flex flex-col gap-4 h-full">
           <div className="flex items-center justify-between">
-            <Label className="text-base font-semibold flex items-center gap-2">
-              <FileCode className="w-5 h-5 text-blue-500" />
+            <Label className="text-base font-semibold flex items-center gap-2 text-ink">
+              <FileCode className="w-5 h-5 text-coral" />
               Output XML
             </Label>
             <div className="flex gap-2">
@@ -203,7 +203,7 @@ export default function JsonToXmlConverterTool() {
                   <Button variant="outline" size="sm" onClick={handleCopy}>
                     {copied ? (
                       <>
-                        <Check className="w-4 h-4 mr-2 text-green-500" />
+                        <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                         Copied
                       </>
                     ) : (
@@ -216,7 +216,7 @@ export default function JsonToXmlConverterTool() {
                   <Button
                     size="sm"
                     onClick={handleDownload}
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    className="btn btn-accent"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download
@@ -226,9 +226,9 @@ export default function JsonToXmlConverterTool() {
             </div>
           </div>
 
-          <div className="relative flex-1 rounded-xl border-2 border-border/50 bg-muted/30 overflow-hidden group">
+          <div className="relative flex-1 rounded-xl border border-ink/10 bg-paper2 overflow-hidden group">
             {!output ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground p-6 text-center">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-ink3 p-6 text-center">
                 <ArrowRight className="w-12 h-12 mb-4 opacity-20 hidden lg:block" />
                 <p>Click &quot;Convert&quot; to see the XML result here</p>
               </div>
@@ -236,7 +236,7 @@ export default function JsonToXmlConverterTool() {
               <textarea
                 readOnly
                 value={output}
-                className="w-full h-full p-4 md:p-6 bg-transparent resize-none focus:outline-none font-mono text-sm leading-relaxed text-foreground/90 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
+                className="w-full h-full p-4 md:p-6 bg-transparent resize-none focus:outline-none font-mono text-sm leading-relaxed text-ink scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
               />
             )}
           </div>
@@ -251,7 +251,7 @@ export default function JsonToXmlConverterTool() {
       <div className="hidden lg:flex justify-center">
         <Button
           size="lg"
-          className="min-w-[200px] bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 text-lg py-6"
+          className="btn btn-accent min-w-[200px] text-lg py-6"
           onClick={handleConvert}
         >
           Convert to XML

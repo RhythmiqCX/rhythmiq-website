@@ -1,6 +1,6 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
-import Link from "next/link";
 
 export const metadata = generateMetadata({
   title: "AI Tools That Actually Save You Hours Every Week",
@@ -76,7 +76,7 @@ export default function AIToolsSaveHours() {
           Not AI Hype. Real, Boring Time Savings.
         </h2>
 
-        <p className="italic text-neutral-400 text-lg">
+        <p className="italic text-ink2 text-lg">
           “If it doesn’t save hours every week, it’s decoration.”
         </p>
 
@@ -98,7 +98,7 @@ export default function AIToolsSaveHours() {
             href="https://rhythmiqcx.com/tools"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             RhythmiqCX Tools
           </a>{" "}
@@ -108,7 +108,7 @@ export default function AIToolsSaveHours() {
       </section>
 
       <section id="time-slices" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The 5-Minute Tasks That Steal Your Life
         </h2>
 
@@ -127,7 +127,7 @@ export default function AIToolsSaveHours() {
           primary mission.
         </p>
 
-        <ul className="list-disc list-inside text-neutral-300 space-y-2">
+        <ul className="list-disc list-inside text-ink2 space-y-2">
           <li>Convert JSON to readable formats.</li>
           <li>Formatting data for reports.</li>
           <li>Generating repetitive email responses.</li>
@@ -135,7 +135,7 @@ export default function AIToolsSaveHours() {
       </section>
 
       <section id="remove-thinking" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Remove Steps. Remove Thinking.
         </h2>
 
@@ -158,7 +158,7 @@ export default function AIToolsSaveHours() {
       </section>
 
       <section id="speed-matters" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Intelligence Is Cheap. Speed Wins.
         </h2>
 
@@ -180,7 +180,7 @@ export default function AIToolsSaveHours() {
       </section>
 
       <section id="feedback-loop" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Continuous Feedback Tightens Everything
         </h2>
 
@@ -203,7 +203,7 @@ export default function AIToolsSaveHours() {
       </section>
 
       <section id="real-stack" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Real Productivity Stack
         </h2>
 
@@ -223,21 +223,12 @@ export default function AIToolsSaveHours() {
           extra day of life every single month.
         </p>
 
-        <div className="mt-12 p-8 bg-neutral-900 border border-neutral-800 rounded-2xl">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to cut the friction?
-          </h3>
-          <p className="mb-6">
-            Explore our internal suite of tools designed to handle the boring
-            stuff so you can focus on building.
-          </p>
-          <Link
-            href="/tools"
-            className="inline-block bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-neutral-200 transition-colors"
-          >
-            Try RhythmiqCX Tools
-          </Link>
-        </div>
+        <BlogCTA
+          title="Ready to cut the friction?"
+          description="Explore our internal suite of tools designed to handle the boring stuff so you can focus on building."
+          primaryLabel="Try RhythmiqCX Tools"
+          primaryHref="/tools"
+        />
       </section>
     </BlogLayout>
   );

@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -93,7 +94,7 @@ export default function AIModelsEatMemory() {
         <p>
           Large models aren’t just predicting tokens in a vacuum; they are juggling context, embeddings, system prompts, tool outputs, and conversation state all at once.
           This gets brutal in voice systems where you don't just run one model, but a{" "}
-          <Link href="/blog/voice-ai-is-distributed" className="text-blue-600 hover:text-blue-500">
+          <Link href="/blog/voice-ai-is-distributed" className="text-coral hover:text-coral/80">
              Distributed System Wearing a Human Mask
           </Link>
            {" "}a fragile choreography of ASR streaming audio, LLMs holding history, TTS caching audio, and VAD monitoring silence.
@@ -110,7 +111,7 @@ export default function AIModelsEatMemory() {
 
         <p>
           Everyone loves the idea of infinite context windows until they see the invoice or study{" "}
-          <Link href="/blog/real-cost-of-voice-ai" className="text-blue-600 hover:text-blue-500">
+          <Link href="/blog/real-cost-of-voice-ai" className="text-coral hover:text-coral/80">
             The Real Cost of Voice AI Infra
           </Link>.
           The marketing promises "128k context," but the engineering reality is that keeping those tokens accessible via the KV Cache costs memory linearly and sometimes quadratically with every second the conversation continues.
@@ -118,7 +119,7 @@ export default function AIModelsEatMemory() {
 
         <p>
           This turns{" "}
-          <Link href="/blog/state-management-in-voice-ai" className="text-blue-600 hover:text-blue-500">
+          <Link href="/blog/state-management-in-voice-ai" className="text-coral hover:text-coral/80">
             State Management into a Nightmare
           </Link>{" "}
           of physics rather than logic.
@@ -137,7 +138,7 @@ export default function AIModelsEatMemory() {
         <p>
           When memory bandwidth runs thin, systems start cutting corners implicitly by aggressively trimming context or skipping complex guardrails.
           This is often how{" "}
-          <Link href="/blog/voice-ai-hallucinations" className="text-blue-600 hover:text-blue-500">
+          <Link href="/blog/voice-ai-hallucinations" className="text-coral hover:text-coral/80">
             Voice AI Hallucinations
           </Link>{" "}
           sneak in the model doesn't get dumber because it lacks training, it gets reckless because it is starving for the data it needs to make a safe decision.
@@ -149,7 +150,7 @@ export default function AIModelsEatMemory() {
 
         <p>
           "Always-on" sounds magical in a pitch deck, but in production,{" "}
-          <Link href="/blog/always-available-ai" className="text-blue-600 hover:text-blue-500">
+          <Link href="/blog/always-available-ai" className="text-coral hover:text-coral/80">
             Always Available AI
           </Link>{" "}
           is a slow-motion disaster for memory management.
@@ -175,37 +176,16 @@ export default function AIModelsEatMemory() {
           Companies that master the art of "forgetting" irrelevant data will run circles around those trying to brute-force "remembering" everything.
         </p>
 
-        <div className="mt-14 rounded-3xl border-2 border-white/10 bg-background px-10 py-12">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              AI systems fail quietly when memory is ignored
-            </h2>
+        <BlogCTA
+          title="AI systems fail quietly when memory is ignored"
+          description="RhythmiqCX is built with memory discipline at its core bounded context, recovery-first design, and real-time systems that respect physics, budgets, and human trust."
+          primaryLabel="Book a live demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the product"
+          secondaryHref="https://rhythmiqcx.com"
+        />
 
-            <p className="text-neutral-300 mb-6 leading-relaxed">
-              RhythmiqCX is built with memory discipline at its core bounded
-              context, recovery-first design, and real-time systems that respect
-              physics, budgets, and human trust.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://calendly.com/ray-rhythmiqcx/30min"
-                className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-medium text-black hover:bg-neutral-200 transition"
-              >
-                Book a live demo
-              </a>
-
-              <Link
-                href="https://rhythmiqcx.com"
-                className="inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-medium text-white hover:border-white hover:bg-white/5 transition"
-              >
-                Explore the product
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <p className="text-gray-500 italic mt-10">
+        <p className="text-ink3 italic mt-10">
           <strong>Team RhythmiqCX</strong>
           <br />
           Building AI systems that respect memory, timing, and trust.

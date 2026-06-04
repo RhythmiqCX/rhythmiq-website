@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 import Script from "next/script";
@@ -191,7 +192,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
       {/* Section 2 */}
       <section id="how-it-works" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How an AI Voice Receptionist Actually Works
         </h2>
 
@@ -204,7 +205,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
           <li>
             <strong>Speech-to-Text (STT)</strong> The caller speaks. The system
             converts their voice to text in real time. Modern STT engines like{" "}
-            <Link href="/voice-ai" className="text-blue-500 underline">
+            <Link href="/voice-ai" className="text-coral underline">
               Sarvam Saarika v2.5
             </Link>{" "}
             handle Indian English accents with high accuracy, including
@@ -240,7 +241,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
           smart-sounding IVR menus. As we covered in{" "}
           <Link
             href="/blog/voice-ai-is-distributed"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI Is a Distributed System Wearing a Human Mask
           </Link>
@@ -251,7 +252,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
       {/* Section 3 */}
       <section id="voice-ai-generator" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Is a Voice AI Generator And How Is It Different?
         </h2>
 
@@ -294,7 +295,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
           A voice AI generator eliminates all of that. RhythmiqCX's free{" "}
           <Link
             href="/tools/ai-hindi-english-receptionist-voice-generator"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI Hindi / English Receptionist Voice Generator
           </Link>{" "}
@@ -303,15 +304,15 @@ export default function AIReceptionistVoiceGeneratorBlog() {
           editing software.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-3">
-          <p className="text-sm font-semibold text-neutral-400 uppercase tracking-wider">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-3">
+          <p className="text-sm font-semibold text-ink2 uppercase tracking-wider">
             Example Generated in under 5 seconds
           </p>
-          <p className="text-lg italic text-neutral-300">
+          <p className="text-lg italic text-ink2">
             "Namaste! Aapka swagat hai RhythmiqCX mein. Apni bhasha mein baat
             karne ke liye 1 dabayein. For English, please press 2."
           </p>
-          <p className="text-sm text-neutral-500">
+          <p className="text-sm text-ink3">
             Natural Indian English + Hindi. No recording studio required.
           </p>
         </div>
@@ -326,7 +327,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
       {/* Section 4 */}
       <section id="why-small-businesses-switching" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Why Small Businesses Are Switching to AI Voice Receptionists in 2026
         </h2>
 
@@ -341,7 +342,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
         <p>
           An{" "}
-          <Link href="/voice-ai" className="text-blue-500 underline">
+          <Link href="/voice-ai" className="text-coral underline">
             AI voice receptionist
           </Link>{" "}
           costs $29/month (approximately ₹2,450), answers calls 24/7, handles
@@ -387,7 +388,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
       {/* Section 5 */}
       <section id="ivr-vs-ai-receptionist" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           IVR vs AI Receptionist: Why the Difference Matters
         </h2>
 
@@ -400,14 +401,14 @@ export default function AIReceptionistVoiceGeneratorBlog() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
-              <tr className="border-b border-white/10">
-                <th className="text-left py-3 pr-6 text-neutral-400 font-semibold">
+              <tr className="border-b border-ink/10">
+                <th className="text-left py-3 pr-6 text-ink2 font-semibold">
                   Feature
                 </th>
-                <th className="text-left py-3 pr-6 text-neutral-400 font-semibold">
+                <th className="text-left py-3 pr-6 text-ink2 font-semibold">
                   Traditional IVR
                 </th>
-                <th className="text-left py-3 text-neutral-400 font-semibold">
+                <th className="text-left py-3 text-ink2 font-semibold">
                   AI Voice Receptionist
                 </th>
               </tr>
@@ -450,12 +451,12 @@ export default function AIReceptionistVoiceGeneratorBlog() {
                   "Natural, human-like",
                 ],
               ].map(([feature, ivr, ai]) => (
-                <tr key={feature} className="border-b border-white/5">
-                  <td className="py-3 pr-6 font-medium text-neutral-300">
+                <tr key={feature} className="border-b border-ink/10">
+                  <td className="py-3 pr-6 font-medium text-ink2">
                     {feature}
                   </td>
-                  <td className="py-3 pr-6 text-neutral-500">{ivr}</td>
-                  <td className="py-3 text-emerald-400">{ai}</td>
+                  <td className="py-3 pr-6 text-ink3">{ivr}</td>
+                  <td className="py-3 text-[#1F7A4D]">{ai}</td>
                 </tr>
               ))}
             </tbody>
@@ -474,7 +475,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
           We wrote about why this threshold matters in{" "}
           <Link
             href="/blog/the-first-second"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             The First 3 Seconds of a Voice Call Decide Customer Trust
           </Link>
@@ -485,14 +486,14 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
       {/* Section 6 */}
       <section id="setup-in-minutes" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How to Set Up an AI Voice Receptionist in Under a Day
         </h2>
 
         <p>
           Most businesses assume setting up an AI phone system is a multi-week
           IT project. With{" "}
-          <Link href="/voice-ai" className="text-blue-500 underline">
+          <Link href="/voice-ai" className="text-coral underline">
             RhythmiqCX Voice AI
           </Link>
           , the actual setup takes under a day and generating your audio is the
@@ -502,11 +503,11 @@ export default function AIReceptionistVoiceGeneratorBlog() {
         <ol className="list-decimal pl-6 space-y-6">
           <li>
             <strong>Generate your greetings with the Voice AI Generator</strong>
-            <p className="mt-2 text-neutral-400">
+            <p className="mt-2 text-ink2">
               Go to the free{" "}
               <Link
                 href="/tools/ai-hindi-english-receptionist-voice-generator"
-                className="text-blue-500 underline"
+                className="text-coral underline"
               >
                 AI Hindi / English Receptionist Voice Generator
               </Link>
@@ -519,7 +520,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
           <li>
             <strong>Build your AI knowledge base</strong>
-            <p className="mt-2 text-neutral-400">
+            <p className="mt-2 text-ink2">
               Write down the 10–15 questions your callers ask most often hours,
               pricing, location, services, booking process. This becomes the
               knowledge base your AI pulls from. The more specific and accurate
@@ -529,7 +530,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
           <li>
             <strong>Configure your AI persona</strong>
-            <p className="mt-2 text-neutral-400">
+            <p className="mt-2 text-ink2">
               Set your AI's name, greeting style, and escalation rules. Decide
               which query types should route to a human and which the AI should
               handle fully. This is a settings screen no coding required.
@@ -538,7 +539,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
           <li>
             <strong>Connect your phone number</strong>
-            <p className="mt-2 text-neutral-400">
+            <p className="mt-2 text-ink2">
               Forward your existing business number to RhythmiqCX, or provision
               a new number. The AI answers calls on that number. Your physical
               phone still rings for escalated calls.
@@ -547,7 +548,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
           <li>
             <strong>Test by calling yourself</strong>
-            <p className="mt-2 text-neutral-400">
+            <p className="mt-2 text-ink2">
               Call your number from another phone. Run through the most common
               caller scenarios. Adjust any answers that sound unnatural. This
               testing phase typically takes 20–30 minutes.
@@ -564,7 +565,7 @@ export default function AIReceptionistVoiceGeneratorBlog() {
 
       {/* FAQ Section */}
       <section id="faq" className="mt-24 space-y-8">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Frequently Asked Questions
         </h2>
 
@@ -600,49 +601,22 @@ export default function AIReceptionistVoiceGeneratorBlog() {
         ].map(({ q, a }) => (
           <div
             key={q}
-            className="rounded-xl border border-white/10 bg-white/[0.02] p-6 space-y-3"
+            className="rounded-xl border border-ink/10 bg-white p-6 space-y-3"
           >
-            <h3 className="font-semibold text-lg text-white">{q}</h3>
-            <p className="text-neutral-400 leading-relaxed">{a}</p>
+            <h3 className="font-semibold text-lg text-ink">{q}</h3>
+            <p className="text-ink2 leading-relaxed">{a}</p>
           </div>
         ))}
       </section>
 
-      {/* Final CTA */}
-      <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-        <h2 className="text-3xl font-bold text-white mb-4">
-          Try the Voice AI Generator Free
-        </h2>
-        <p className="text-lg text-neutral-400 mb-4 max-w-2xl mx-auto">
-          Generate professional Hindi and English receptionist audio in under a
-          minute no credit card, no recording studio, no voice artist.
-        </p>
-        <p className="text-neutral-500 mb-10 max-w-xl mx-auto text-sm">
-          Then deploy RhythmiqCX Voice AI for live 24/7 call handling from
-          $29/month.
-        </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link
-            href="/tools/ai-hindi-english-receptionist-voice-generator"
-            className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-          >
-            Try Voice AI Generator Free
-          </Link>
-          <a
-            href="https://calendly.com/ray-rhythmiqcx/30min"
-            className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-          >
-            Book a Demo
-          </a>
-          <Link
-            href="/voice-ai"
-            className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-          >
-            Explore Voice AI
-          </Link>
-        </div>
-      </div>
+      <BlogCTA
+        title="Try the Voice AI Generator Free"
+        description="Generate professional Hindi and English receptionist audio in under a minute no credit card, no recording studio, no voice artist. Then deploy RhythmiqCX Voice AI for live 24/7 call handling from $29/month."
+        primaryLabel="Try Voice AI Generator Free"
+        primaryHref="/tools/ai-hindi-english-receptionist-voice-generator"
+        secondaryLabel="Explore Voice AI"
+        secondaryHref="/voice-ai"
+      />
     </BlogLayout>
   );
 }

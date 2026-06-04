@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -582,34 +583,14 @@ export default function VoiceAIPricingComparedPage() {
           material quality difference, not just a feature checkbox.
         </p>
       </div>
-      {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Stop Paying Per Minute Flat $29/Month, No Overages
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            RhythmiqCX Voice AI answers every inbound call 24/7 at a flat rate
-            that never changes with volume. No per-minute surprises. No overage
-            invoices. Voice + chat + WhatsApp from one subscription, from
-            $29/mo.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link
-              href="/voice-ai"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Try Voice AI Free
-            </Link>
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Book a Live Demo →
-            </a>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Stop Paying Per Minute Flat $29/Month, No Overages"
+        description="RhythmiqCX Voice AI answers every inbound call 24/7 at a flat rate that never changes with volume. No per-minute surprises. No overage invoices. Voice + chat + WhatsApp from one subscription, from $29/mo."
+        primaryLabel="Try Voice AI Free"
+        primaryHref="/voice-ai"
+        secondaryLabel="Book a Live Demo"
+        secondaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+      />
     </BlogLayout>
   );
 }

@@ -688,10 +688,10 @@ export default function EmailSignatureTool() {
                       key={l}
                       onClick={() => setLayout(l)}
                       className={cn(
-                        "cursor-pointer border-2 rounded-lg p-3 text-center capitalize hover:bg-muted transition-all",
+                        "cursor-pointer border-2 rounded-lg p-3 text-center capitalize hover:bg-paper2 transition-all",
                         layout === l
-                          ? "border-primary bg-primary/5 text-primary"
-                          : "border-transparent bg-muted/50",
+                          ? "border-coral bg-coralSoft text-coral"
+                          : "border-transparent bg-paper2 text-ink",
                       )}
                     >
                       {l}
@@ -747,7 +747,7 @@ export default function EmailSignatureTool() {
                       className={cn(
                         "w-8 h-8 rounded-full border-2",
                         data.color === c
-                          ? "border-foreground ring-2 ring-primary/20"
+                          ? "border-ink ring-2 ring-coral/20"
                           : "border-transparent",
                       )}
                       style={{ backgroundColor: c }}
@@ -814,13 +814,13 @@ export default function EmailSignatureTool() {
       <div className="space-y-6">
         <div className="sticky top-24 space-y-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold font-heading">Live Preview</h2>
+            <h2 className="text-2xl font-bold font-heading text-ink">Live Preview</h2>
             <span className="text-sm text-muted-foreground">
               Updates instantly
             </span>
           </div>
 
-          <Card className="overflow-hidden border-2 border-dashed border-primary/20">
+          <Card className="overflow-hidden border-2 border-dashed border-coral/20">
             <CardContent className="p-8 bg-white min-h-[300px] flex items-center justify-center">
               <SignaturePreview
                 data={data}
@@ -828,11 +828,11 @@ export default function EmailSignatureTool() {
                 previewRef={previewRef}
               />
             </CardContent>
-            <div className="bg-muted/50 p-4 border-t flex justify-between items-center">
+            <div className="bg-paper2 p-4 border-t border-ink/10 flex justify-between items-center">
               <p className="text-xs text-muted-foreground">
                 HTML Signature Preview
               </p>
-              <Button onClick={handleCopy} className="gap-2">
+              <Button onClick={handleCopy} className="btn btn-accent gap-2">
                 {copied ? (
                   <Check className="w-4 h-4" />
                 ) : (

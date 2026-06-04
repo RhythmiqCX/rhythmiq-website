@@ -41,95 +41,93 @@ export default function BlogLayout({
   relatedArticles,
 }: BlogLayoutProps) {
   return (
-    <main className="flex flex-col">
-      {/* Hero header */}
-      <section className="py-20 bg-gradient-to-b from-indigo-600/20 to-background text-center px-4">
-        <Container className="max-w-4xl mx-auto space-y-6">
-          <div className="flex justify-center items-center gap-4 text-sm text-indigo-400">
-            <Link
-              href={category.href}
-              className="uppercase tracking-wide font-medium hover:text-indigo-600"
-            >
+    <main className="paper-surface bg-paper text-ink font-sans flex flex-col">
+      {/* Hero header — not animation-gated so it paints immediately (LCP) */}
+      <section className="section-tight text-center px-4">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <div className="flex justify-center items-center gap-4 text-sm">
+            <Link href={category.href} className="eyebrow no-underline">
               {category.label}
             </Link>
-            <span className="text-muted-foreground hidden sm:inline">·</span>
-            <time
-              dateTime={date}
-              className="text-muted-foreground hidden sm:inline"
-            >
+            <span className="text-ink3 hidden sm:inline">·</span>
+            <time dateTime={date} className="font-mono text-[12px] text-ink3 hidden sm:inline">
               {date}
             </time>
           </div>
-          <h1 className="text-4xl/tight md:text-5xl font-bold">{title}</h1>
-          <p className="text-lg text-muted-foreground mx-auto max-w-prose">
-            {excerpt}
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-4 text-indigo-400">
+          <h1 className="h-section md:h-display !leading-[1.05]">{title}</h1>
+          <p className="lede mx-auto max-w-[60ch]">{excerpt}</p>
+          <div className="flex flex-wrap justify-center items-center gap-4">
             {authors.map((author) => (
-              <Author
-                key={author.name}
-                avatar={author.avatar}
-                name={author.name}
-              />
+              <Author key={author.name} avatar={author.avatar} name={author.name} />
             ))}
             <ReadingTime minutes={readingTime} />
           </div>
-          <div className="relative w-11/12 max-w-md mx-auto h-56 sm:h-72 md:h-[420px] md:w-full md:max-w-none rounded-2xl overflow-hidden">
-            <Image
-              sizes="(max-width: 640px) 100vw,
-         (max-width: 1024px) 80vw,
-         50vw"
-              src={heroImage.src}
-              alt={heroImage.alt}
-              fill
-              className="object-cover"
-            />
+          <div className="frame frame-light p-2 sm:p-3 mt-4">
+            <div className="relative w-full h-56 sm:h-72 md:h-[440px] rounded-[12px] overflow-hidden ph">
+              <Image
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 50vw"
+                src={heroImage.src}
+                alt={heroImage.alt}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* Content + sidebar */}
-      <section className="flex flex-col lg:flex-row py-12 px-4 lg:px-12">
-        <aside className="hidden lg:block">
-          <nav className="sticky top-28">
-            <h2 className="font-semibold mb-4">Contents</h2>
-            <ul className="space-y-2 text-sm">
-              {sections.map((s) => (
-                <li key={s.id}>
-                  <a href={`#${s.id}`} className="hover:text-indigo-600">
-                    {s.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </aside>
-        <Container className="mx-auto max-w-4xl px-4">
-          <article className="prose prose-lg lg:prose-xl dark:prose-invert [&_*]:text-gray-300 [&_a]:text-blue-500 [&_a]:no-underline [&_section]:scroll-mt-28">
-            {children}
-          </article>
-        </Container>
+      <section className="flex flex-col lg:flex-row gap-10 py-8 lg:py-12 wrap">
+        {sections.length > 0 && (
+          <aside className="hidden lg:block lg:w-56 shrink-0">
+            <nav className="sticky top-28">
+              <h2 className="font-mono text-[11px] tracking-[0.12em] uppercase text-ink3 mb-4">
+                Contents
+              </h2>
+              <ul className="space-y-2.5 text-sm">
+                {sections.map((s) => (
+                  <li key={s.id}>
+                    <a href={`#${s.id}`} className="text-ink2 hover:text-coral transition-colors">
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </aside>
+        )}
+        <article
+          className="mx-auto max-w-3xl w-full prose prose-lg max-w-none
+            prose-headings:font-sans prose-headings:text-ink prose-headings:font-semibold prose-headings:tracking-[-0.02em]
+            prose-p:text-ink2 prose-li:text-ink2 prose-strong:text-ink
+            prose-a:text-coral prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+            prose-blockquote:border-l-coral prose-blockquote:text-ink prose-blockquote:font-medium
+            prose-code:text-ink prose-img:rounded-[14px] prose-hr:border-ink/10
+            [&_section]:scroll-mt-28"
+        >
+          {children}
+        </article>
       </section>
 
       {/* Related articles */}
-      <section className="py-16 bg-gradient-to-b from-background to-indigo-600/10">
-        <Container className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-semibold">Related articles</h2>
-            <Link
-              href="/blog"
-              className="text-indigo-400 hover:text-indigo-600"
-            >
-              Browse all →
-            </Link>
-          </div>
-          <div className="grid gap-12 md:grid-cols-3">
-            {relatedArticles.map((ra) => (
-              <RelatedCard key={ra.href} {...ra} />
-            ))}
-          </div>
-        </Container>
-      </section>
+      {relatedArticles.length > 0 && (
+        <section className="section-tight bg-paper2">
+          <Container className="wrap space-y-8">
+            <div className="flex items-center justify-between">
+              <h2 className="h-feature">Related articles</h2>
+              <Link href="/blog" className="link-arrow">
+                Browse all <span className="arrow">→</span>
+              </Link>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {relatedArticles.map((ra) => (
+                <RelatedCard key={ra.href} {...ra} />
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
     </main>
   );
 }
@@ -137,14 +135,8 @@ export default function BlogLayout({
 // Inline helpers
 function Author({ avatar, name }: { avatar: string; name: string }) {
   return (
-    <div className="flex items-center gap-2 text-sm text-muted-foreground ">
-      <Image
-        src={avatar}
-        alt={name}
-        width={28}
-        height={28}
-        className="rounded-full"
-      />
+    <div className="flex items-center gap-2 text-sm text-ink2">
+      <Image src={avatar} alt={name} width={28} height={28} className="rounded-full" />
       <span>{name}</span>
     </div>
   );
@@ -152,14 +144,8 @@ function Author({ avatar, name }: { avatar: string; name: string }) {
 
 function ReadingTime({ minutes }: { minutes: number }) {
   return (
-    <span className="flex items-center gap-1 text-sm text-muted-foreground">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        width="18"
-        height="18"
-        aria-hidden="true"
-      >
+    <span className="flex items-center gap-1.5 font-mono text-[12px] text-ink3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
         <path
           fill="currentColor"
           d="M18.462 0H5.539A1.846 1.846 0 0 0 3.692 1.846V6a1.85 1.85 0 0 0 .739 1.477L10.462 12l-6.031 4.523A1.85 1.85 0 0 0 3.692 18v4.154A1.846 1.846 0 0 0 5.54 24h12.923a1.846 1.846 0 0 0 1.846-1.846V18.04a1.86 1.86 0 0 0-.733-1.473L13.531 12l6.044-4.57a1.85 1.85 0 0 0 .733-1.472V1.846A1.846 1.846 0 0 0 18.462 0Z"
@@ -170,34 +156,23 @@ function ReadingTime({ minutes }: { minutes: number }) {
   );
 }
 
-function RelatedCard({
-  title,
-  href,
-  imageSrc,
-  date,
-  description,
-}: RelatedArticle) {
+function RelatedCard({ title, href, imageSrc, date, description }: RelatedArticle) {
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-      <Link href={href}>
-        <Image
-          src={imageSrc}
-          alt={title}
-          width={320}
-          height={149}
-          className="w-full h-44 object-cover"
-        />
+    <div
+      className="bg-paper rounded-[14px] overflow-hidden transition-all duration-200 hover:-translate-y-[3px] hover:shadow-[0_14px_24px_-16px_rgba(25,24,20,0.4)]"
+      style={{ border: "1px solid var(--line-soft)" }}
+    >
+      <Link href={href} className="block relative h-44 ph">
+        <Image src={imageSrc} alt={title} fill sizes="320px" className="object-cover" />
       </Link>
       <div className="p-4">
-        <p className="text-xs text-muted-foreground">Published {date}</p>
-        <h3 className="text-lg font-semibold leading-snug">
-          <Link href={href} className="hover:text-indigo-400">
+        <p className="font-mono text-[11px] text-ink3 mb-1.5">Published {date}</p>
+        <h3 className="text-[17px] font-semibold leading-snug tracking-[-0.01em] mb-1.5">
+          <Link href={href} className="hover:text-coral transition-colors">
             {title}
           </Link>
         </h3>
-        <p className="text-sm text-muted-foreground line-clamp-2">
-          {description}
-        </p>
+        <p className="text-sm text-ink2 line-clamp-2">{description}</p>
       </div>
     </div>
   );

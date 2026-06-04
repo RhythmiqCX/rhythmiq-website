@@ -240,7 +240,7 @@ export default function FloorPlanGeneratorTool() {
         </CardContent>
         <CardFooter className="flex-col gap-2">
           <Button
-            className="w-full"
+            className="w-full btn btn-accent justify-center"
             size="lg"
             onClick={handleGenerate}
             disabled={isGenerating || isLimitReached}
@@ -258,7 +258,7 @@ export default function FloorPlanGeneratorTool() {
             )}
           </Button>
           {isLimitReached && (
-            <p className="text-xs text-red-500 text-center">
+            <p className="text-xs text-[#C9461F] text-center">
               You have reached your daily limit of 5 generations for this tool.
             </p>
           )}
@@ -290,7 +290,7 @@ export default function FloorPlanGeneratorTool() {
             <div className="text-center text-muted-foreground flex flex-col items-center gap-3">
               {isGenerating ? (
                 <div className="flex flex-col items-center animate-pulse">
-                  <Wand2 className="h-12 w-12 text-primary opacity-50 mb-2" />
+                  <Wand2 className="h-12 w-12 text-coral opacity-50 mb-2" />
                   <p>Consulting AI Architect...</p>
                 </div>
               ) : (
@@ -301,7 +301,7 @@ export default function FloorPlanGeneratorTool() {
               )}
             </div>
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-white shadow-lg border border-border/50 rounded-lg p-4 relative">
+            <div className="w-full h-full flex items-center justify-center bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] border border-ink/10 rounded-lg p-4 relative">
               <svg
                 ref={svgRef}
                 width="100%"

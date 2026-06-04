@@ -1,6 +1,7 @@
 import Footer from "@/components/marketing/footer";
 import Navbar from "@/components/marketing/navbar";
-import LeadCapturePopup from "@/components/marketing/LeadCapturePopup";
+import AnnouncementBar from "@/components/marketing/announcement-bar";
+import SmoothScroll from "@/components/global/smooth-scroll";
 import React from 'react';
 
 interface Props {
@@ -10,14 +11,13 @@ interface Props {
 const MarketingLayout = ({ children }: Props) => {
     return (
         <>
+            <SmoothScroll />
+            <AnnouncementBar />
             <Navbar />
             <main className="mx-auto w-full z-40 relative">
                 {children}
             </main>
             <Footer />
-            
-            {/* Lead Capture Popup - Shows on all marketing pages */}
-            <LeadCapturePopup trigger="auto" delay={10} source="marketing" />
         </>
     );
 };

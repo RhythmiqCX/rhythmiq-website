@@ -244,10 +244,10 @@ const VoiceToTextConverterTool = () => {
 
   return (
     <div className="flex flex-col gap-8 max-w-4xl mx-auto">
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-xl">
+      <Card className="border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
         <CardHeader>
-          <CardTitle className="flex flex-row items-center gap-2">
-            <Mic className="w-5 h-5 text-blue-500" />
+          <CardTitle className="flex flex-row items-center gap-2 text-ink">
+            <Mic className="w-5 h-5 text-coral" />
             Voice Recording
           </CardTitle>
           <CardDescription>
@@ -256,12 +256,12 @@ const VoiceToTextConverterTool = () => {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-6 rounded-2xl bg-muted/30 border border-border/50">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-6 rounded-2xl bg-paper2 border border-ink/10">
             <div className="flex items-center gap-4 w-full md:w-auto">
               {!isRecording ? (
                 <Button
                   size="lg"
-                  className="rounded-full w-16 h-16 p-0 bg-blue-500 hover:bg-blue-600 shadow-lg shadow-blue-500/20"
+                  className="rounded-full w-16 h-16 p-0 bg-coral hover:bg-coral2 shadow-lg shadow-coral/20"
                   onClick={startRecording}
                   disabled={isProcessing || isLimitReached}
                 >
@@ -281,7 +281,7 @@ const VoiceToTextConverterTool = () => {
                 <span
                   className={cn(
                     "text-2xl font-mono font-medium tracking-wider",
-                    isRecording ? "text-red-500" : "text-foreground",
+                    isRecording ? "text-[#C9461F]" : "text-ink",
                   )}
                 >
                   {formatTime(recordingTime)}
@@ -297,8 +297,8 @@ const VoiceToTextConverterTool = () => {
             </div>
 
             <div className="hidden md:flex flex-col items-center justify-center -translate-y-2 opacity-50 px-4">
-              <div className="h-10 border-l border-border" />
-              <span className="text-xs uppercase bg-background px-2 py-1 relative z-10 -translate-y-2 rounded">
+              <div className="h-10 border-l border-ink/10" />
+              <span className="text-xs uppercase bg-paper px-2 py-1 relative z-10 -translate-y-2 rounded">
                 Or
               </span>
             </div>
@@ -314,7 +314,7 @@ const VoiceToTextConverterTool = () => {
               />
               <Button
                 variant="outline"
-                className="gap-2 h-12 px-6 border-blue-500/30 hover:bg-blue-500/10 hover:text-blue-500"
+                className="gap-2 h-12 px-6 border-coral/30 hover:bg-coralSoft hover:text-coral"
                 onClick={() => fileInputRef.current?.click()}
                 disabled={isRecording || isProcessing || isLimitReached}
               >
@@ -322,7 +322,7 @@ const VoiceToTextConverterTool = () => {
               </Button>
             </div>
 
-            <div className="w-full md:w-auto flex flex-col sm:flex-row items-center gap-4 bg-background p-4 rounded-xl border border-border/50">
+            <div className="w-full md:w-auto flex flex-col sm:flex-row items-center gap-4 bg-white p-4 rounded-xl border border-ink/10">
               <div className="flex items-center gap-2">
                 <Switch
                   id="translate"
@@ -363,8 +363,8 @@ const VoiceToTextConverterTool = () => {
           {isProcessing && (
             <div className="flex flex-col items-center justify-center p-8 gap-4 text-center animate-in fade-in duration-500">
               <div className="relative">
-                <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-xl animate-pulse" />
-                <Loader2 className="w-10 h-10 text-blue-500 animate-spin relative z-10" />
+                <div className="absolute inset-0 bg-coral/20 rounded-full blur-xl animate-pulse" />
+                <Loader2 className="w-10 h-10 text-coral animate-spin relative z-10" />
               </div>
               <p className="text-muted-foreground font-medium animate-pulse">
                 Running AI models to transcribe your audio...
@@ -373,7 +373,7 @@ const VoiceToTextConverterTool = () => {
           )}
 
           {isLimitReached && (
-            <p className="text-sm text-red-500 text-center font-medium">
+            <p className="text-sm text-[#C9461F] text-center font-medium">
               You have reached your daily limit of 5 generations for this tool.
             </p>
           )}
@@ -383,14 +383,14 @@ const VoiceToTextConverterTool = () => {
       {(originalText || translatedText) && (
         <div className="grid md:grid-cols-2 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
           {/* Original Text */}
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-lg flex flex-col">
-            <CardHeader className="bg-muted/20 py-4 border-b border-border/50">
+          <Card className="border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] flex flex-col">
+            <CardHeader className="bg-paper2 py-4 border-b border-ink/10">
               <div className="flex items-center justify-between">
-                <CardTitle className="text-base flex items-center gap-2">
+                <CardTitle className="text-base flex items-center gap-2 text-ink">
                   <Mic className="w-4 h-4 text-muted-foreground" />
                   Transcription
                   {detectedLanguage && detectedLanguage !== "Unknown" && (
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-500 font-medium ml-2">
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-coralSoft text-coral font-medium ml-2">
                       Detected:{" "}
                       {detectedLanguage.charAt(0).toUpperCase() +
                         detectedLanguage.slice(1)}
@@ -406,7 +406,7 @@ const VoiceToTextConverterTool = () => {
                     title="Copy Text"
                   >
                     {isCopiedOriginal ? (
-                      <Check className="w-4 h-4 text-green-500" />
+                      <Check className="w-4 h-4 text-[#1F7A4D]" />
                     ) : (
                       <Copy className="w-4 h-4" />
                     )}
@@ -437,13 +437,13 @@ const VoiceToTextConverterTool = () => {
 
           {/* Translated Text if selected */}
           {shouldTranslate && translatedText && (
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-lg flex flex-col border-blue-500/20">
-              <CardHeader className="bg-blue-500/5 py-4 border-b border-blue-500/10">
+            <Card className="bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] flex flex-col border border-coral/20">
+              <CardHeader className="bg-coralSoft/40 py-4 border-b border-coral/10">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-base flex items-center gap-2 text-foreground">
-                    <Languages className="w-4 h-4 text-blue-500" />
+                  <CardTitle className="text-base flex items-center gap-2 text-ink">
+                    <Languages className="w-4 h-4 text-coral" />
                     Translation
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-500 font-medium ml-2">
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-coralSoft text-coral font-medium ml-2">
                       {targetLanguage}
                     </span>
                   </CardTitle>
@@ -456,7 +456,7 @@ const VoiceToTextConverterTool = () => {
                       title="Copy Text"
                     >
                       {isCopiedTranslated ? (
-                        <Check className="w-4 h-4 text-green-500" />
+                        <Check className="w-4 h-4 text-[#1F7A4D]" />
                       ) : (
                         <Copy className="w-4 h-4" />
                       )}
@@ -490,7 +490,7 @@ const VoiceToTextConverterTool = () => {
           )}
 
           {shouldTranslate && !translatedText && !isProcessing && (
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-lg flex flex-col items-center justify-center p-8 text-center text-muted-foreground h-full min-h-[300px]">
+            <Card className="border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] flex flex-col items-center justify-center p-8 text-center text-muted-foreground h-full min-h-[300px]">
               <Languages className="w-12 h-12 mb-4 opacity-20" />
               <p>Translation will appear here after recording</p>
             </Card>
@@ -499,10 +499,10 @@ const VoiceToTextConverterTool = () => {
       )}
 
       {!originalText && !isProcessing && (
-        <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-sm overflow-hidden mt-4">
-          <div className="bg-muted/30 p-6 md:p-8">
-            <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
-              <Check className="w-5 h-5 text-blue-500" />
+        <Card className="border-ink/10 bg-white shadow-sm overflow-hidden mt-4">
+          <div className="bg-paper2 p-6 md:p-8">
+            <h3 className="font-semibold text-lg mb-4 flex items-center gap-2 text-ink">
+              <Check className="w-5 h-5 text-coral" />
               How It Works
             </h3>
             <ol className="space-y-4 text-muted-foreground list-decimal list-inside ml-2">

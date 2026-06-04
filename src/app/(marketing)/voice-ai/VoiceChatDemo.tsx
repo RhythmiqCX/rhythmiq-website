@@ -357,21 +357,22 @@ const VoiceChatDemo = () => {
   };
 
   return (
-    <div className="min-h-[70vh] max-h-[70vh] overflow-y-auto bg-background-80 flex flex-col px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+    <div className="min-h-[70vh] max-h-[70vh] overflow-y-auto bg-paper flex flex-col px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
       <div className="max-w-4xl mx-auto w-full flex flex-col h-full min-h-0">
         {/* Header */}
         <div className="scroll-mt-16 text-center mb-6 sm:mb-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-3 sm:mb-4">
+          <span className="eyebrow">Live demo</span>
+          <h2 className="h-section mt-3 mb-3 sm:mb-4">
             Voice AI Demo
           </h2>
-          <p className="text-sm sm:text-base text-gray-300 px-2">
+          <p className="lede mx-auto max-w-2xl px-2">
             Experience conversations with our advanced voice AI assistant. Tap
             to record, tap again to send.
           </p>
         </div>
 
         {/* Chat Container */}
-        <div className="flex-1 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden min-h-0">
+        <div className="flex-1 bg-white border border-ink/10 rounded-2xl sm:rounded-3xl shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] flex flex-col overflow-hidden min-h-0">
           {/* Chat Messages */}
           <div
             ref={messagesContainerRef}
@@ -388,13 +389,13 @@ const VoiceChatDemo = () => {
                 <div
                   className={`max-w-[85%] sm:max-w-[75%] ${
                     message.type === "user"
-                      ? "bg-gradient-to-r from-cyan-500 to-blue-600"
-                      : "bg-white/10 backdrop-blur-sm border border-white/20"
-                  } rounded-2xl px-4 sm:px-6 py-3 sm:py-4 shadow-lg`}
+                      ? "bg-paper2 text-ink"
+                      : "bg-ink text-onDark"
+                  } rounded-2xl px-4 sm:px-6 py-3 sm:py-4 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]`}
                 >
                   {message.type === "ai" && (
                     <div className="flex items-center mb-2">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full flex items-center justify-center mr-2 sm:mr-3">
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-coral rounded-full flex items-center justify-center mr-2 sm:mr-3">
                         <svg
                           className="w-3 h-3 sm:w-4 sm:h-4 text-white"
                           fill="currentColor"
@@ -403,16 +404,20 @@ const VoiceChatDemo = () => {
                           <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
-                      <span className="text-xs sm:text-sm font-medium text-cyan-300">
+                      <span className="text-xs sm:text-sm font-medium text-coral">
                         AI Assistant
                       </span>
                     </div>
                   )}
 
-                  <p className="text-white text-sm sm:text-base leading-relaxed mb-2">
+                  <p className="text-sm sm:text-base leading-relaxed mb-2">
                     {message.text}
                   </p>
-                  <p className="text-xs text-gray-400 text-right">
+                  <p
+                    className={`text-xs text-right ${
+                      message.type === "user" ? "text-ink3" : "text-onDark2"
+                    }`}
+                  >
                     {formatTime(message.timestamp)}
                   </p>
                 </div>
@@ -421,20 +426,20 @@ const VoiceChatDemo = () => {
 
             {(isListening || isProcessing) && (
               <div className="flex justify-start animate-fade-in">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 sm:px-6 py-3 sm:py-4 shadow-lg w-fit max-w-[80%]">
+                <div className="bg-ink text-onDark rounded-2xl px-4 sm:px-6 py-3 sm:py-4 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] w-fit max-w-[80%]">
                   <div className="flex items-center space-x-3 mb-2">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-coral rounded-full animate-bounce"></div>
                       <div
-                        className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-coral rounded-full animate-bounce"
                         style={{ animationDelay: "0.1s" }}
                       ></div>
                       <div
-                        className="w-2 h-2 bg-purple-400 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-coral rounded-full animate-bounce"
                         style={{ animationDelay: "0.2s" }}
                       ></div>
                     </div>
-                    <span className="text-sm text-gray-300">
+                    <span className="text-sm text-onDark2">
                       {isListening ? "Listening..." : "Processing..."}
                     </span>
                   </div>
@@ -448,7 +453,7 @@ const VoiceChatDemo = () => {
             {showScrollDown && (
               <button
                 onClick={scrollToBottom}
-                className="fixed bottom-32 right-4 sm:right-6 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white p-3 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 z-10"
+                className="fixed bottom-32 right-4 sm:right-6 bg-coral hover:bg-coral2 text-white p-3 rounded-full shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] transition-all duration-300 transform hover:scale-105 z-10"
               >
                 <svg
                   className="w-5 h-5"
@@ -468,16 +473,16 @@ const VoiceChatDemo = () => {
           </div>
 
           {/* Voice Input Controls */}
-          <div className="p-2 sm:p-2 border-t border-white/10 bg-white/5 relative">
+          <div className="p-2 sm:p-2 border-t border-ink/10 bg-paper2 relative">
             <div className="flex items-center justify-center">
               {/* Microphone Controls */}
               <button
                 onClick={handleVoiceInput}
                 disabled={isProcessing}
-                className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-xl ${
+                className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] ${
                   isListening
-                    ? "bg-red-500 hover:bg-red-600 animate-pulse"
-                    : "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500"
+                    ? "bg-[#C9461F] hover:bg-[#b03d1b] animate-pulse"
+                    : "bg-coral hover:bg-coral2"
                 }`}
               >
                 {isListening ? (
@@ -496,21 +501,21 @@ const VoiceChatDemo = () => {
                   </svg>
                 )}
                 {isListening && (
-                  <div className="absolute inset-0 rounded-full border-2 border-red-300 animate-ping"></div>
+                  <div className="absolute inset-0 rounded-full border-2 border-[#C9461F]/40 animate-ping"></div>
                 )}
               </button>
             </div>
 
             {/* Status text */}
             <div className="text-center mt-1">
-              <p className="text-sm sm:text-base text-white font-medium">
+              <p className="text-sm sm:text-base text-ink font-medium">
                 {isListening
                   ? "Tap to Stop & Send"
                   : isProcessing
                   ? "Processing..."
                   : "Tap to Speak"}
               </p>
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-ink3">
                 {isListening ? "Recording..." : "Start a new message"}
               </p>
             </div>
@@ -518,7 +523,7 @@ const VoiceChatDemo = () => {
             {/* Mute Button - smaller, bottom left */}
             <button
               onClick={() => setMuted(!muted)}
-              className="absolute bottom-2 left-2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-lg transition-colors duration-200 flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9"
+              className="absolute bottom-2 left-2 bg-white hover:bg-paper3 text-ink border border-ink/10 p-2 rounded-lg transition-colors duration-200 flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9"
             >
               <div className="relative w-5 h-5 sm:w-6 sm:h-6">
                 {/* Speaker Icon */}

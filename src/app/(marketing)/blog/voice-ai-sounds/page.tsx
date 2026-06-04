@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -113,7 +114,7 @@ export default function VoiceAIOverconfidence() {
           be trusted, yet too authoritative to be doubted.
         </p>
 
-        <ul className="list-disc pl-5 space-y-2 text-neutral-300">
+        <ul className="list-disc pl-5 space-y-2 text-ink2">
           <li>
             <strong>The smooth lie:</strong> An AI will invent a flight
             cancellation policy with the same gravity it uses to tell you the
@@ -130,7 +131,7 @@ export default function VoiceAIOverconfidence() {
           dangerous. As we explored in{" "}
           <Link
             href="/blog/voice-ai-hallucinations"
-            className="text-blue-600 hover:text-blue-400 transition-colors"
+            className="text-coral"
           >
             Voice AI Hallucinations Are More Dangerous Than Text Ones
           </Link>
@@ -160,7 +161,7 @@ export default function VoiceAIOverconfidence() {
           This connects directly to{" "}
           <Link
             href="/blog/the-first-second"
-            className="text-blue-600 hover:text-blue-400 transition-colors"
+            className="text-coral"
           >
             The First 3 Seconds of a Voice Call Decide Customer Trust
           </Link>
@@ -179,7 +180,7 @@ export default function VoiceAIOverconfidence() {
           money. To build a system that knows when it doesn't know, you need:
         </p>
 
-        <ul className="list-disc pl-5 space-y-2 text-neutral-300">
+        <ul className="list-disc pl-5 space-y-2 text-ink2">
           <li>
             <strong>Verification layers:</strong> A second model pass to
             fact-check the output.
@@ -203,7 +204,7 @@ export default function VoiceAIOverconfidence() {
           But as we outlined in{" "}
           <Link
             href="/blog/real-cost-of-voice-ai"
-            className="text-blue-600 hover:text-blue-400 transition-colors"
+            className="text-coral"
           >
             The Real Cost of Voice AI Infra, Latency, QA
           </Link>
@@ -235,7 +236,7 @@ export default function VoiceAIOverconfidence() {
           This ties back to{" "}
           <Link
             href="/blog/state-management-in-voice-ai"
-            className="text-blue-600 hover:text-blue-400 transition-colors"
+            className="text-coral"
           >
             State Management in Voice AI Is a Nightmare
           </Link>
@@ -260,7 +261,7 @@ export default function VoiceAIOverconfidence() {
           to shift tone:
         </p>
 
-        <blockquote className="border-l-4 border-blue-500 pl-4 py-2 italic text-neutral-400 my-6">
+        <blockquote className="border-l-4 border-coral pl-4 py-2 italic text-ink2 my-6">
           "I'm looking at the policy now, and it seems to imply X, but let me
           double-check that specifically for your region..."
         </blockquote>
@@ -269,14 +270,14 @@ export default function VoiceAIOverconfidence() {
           This philosophy connects everything we’ve written from{" "}
           <Link
             href="/blog/voice-ai-needs"
-            className="text-blue-600 hover:text-blue-400 transition-colors"
+            className="text-coral"
           >
             Why Voice AI Needs Fewer Words Than Chat AI
           </Link>{" "}
           to{" "}
           <Link
             href="/blog/ai-that-knows"
-            className="text-blue-600 hover:text-blue-400 transition-colors"
+            className="text-coral"
           >
             AI That Knows When to Quit
           </Link>
@@ -284,38 +285,16 @@ export default function VoiceAIOverconfidence() {
           real conversations without lying by accident.
         </p>
 
-        {/* CTA BORDER SECTION */}
-        <div className="mt-14 rounded-3xl border-2 border-white/10 bg-background px-10 py-12">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              Voice AI shouldn’t sound confident by default
-            </h2>
+        <BlogCTA
+          title="Voice AI shouldn’t sound confident by default"
+          description="RhythmiqCX is built with hesitation, recovery, and restraint by design because trust in voice is fragile, and confidence should be earned per moment."
+          primaryLabel="Book a live demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the product"
+          secondaryHref="https://rhythmiqcx.com"
+        />
 
-            <p className="text-neutral-300 mb-6 leading-relaxed">
-              RhythmiqCX is built with hesitation, recovery, and restraint by
-              design because trust in voice is fragile, and confidence should be
-              earned per moment.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://calendly.com/ray-rhythmiqcx/30min"
-                className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-medium text-black hover:bg-neutral-200 transition"
-              >
-                Book a live demo
-              </a>
-
-              <Link
-                href="https://rhythmiqcx.com"
-                className="inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-medium text-white hover:border-white hover:bg-white/5 transition"
-              >
-                Explore the product
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <p className="text-gray-500 italic mt-10">
+        <p className="text-ink3 italic mt-10">
           <strong>Team RhythmiqCX</strong>
           <br />
           Building voice AI that knows when to slow down.

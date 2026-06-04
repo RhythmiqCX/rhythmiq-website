@@ -114,7 +114,7 @@ export default function AIChatbotBlogPage() {
   <p>
     But here’s the rub: the second people saw AI art winning competitions, 
     or AI text showing up in published books, the lawyers came knocking.  
-    <Link href="/blog/multimodal-ai-models" className="text-blue-500"> AI-generated content is a goldmine</Link>, but also a legal nightmare.  
+    <Link href="/blog/multimodal-ai-models" className="text-coral"> AI-generated content is a goldmine</Link>, but also a legal nightmare.
     Who owns that MidJourney masterpiece  the user, the company, or the 
     countless artists whose work was fed into the training set?  
   </p>
@@ -141,7 +141,7 @@ export default function AIChatbotBlogPage() {
      fair use  to train on mountains of publicly available 
     text, images, and music. But creators (like the 
     <em>New York Times</em>, or the group of artists suing Stability AI) 
-    say it’s daylight robbery  scraping their life’s work to build <Link href="/ai-customer-support" className="text-blue-500 no-underline">billion-dollar products</Link> without consent or compensation.  
+    say it’s daylight robbery  scraping their life’s work to build <Link href="/ai-customer-support" className="text-coral no-underline">billion-dollar products</Link> without consent or compensation.  
   </p>
   <p>
     Courts are stuck in the mud trying to define 
@@ -193,7 +193,7 @@ export default function AIChatbotBlogPage() {
     corporations  while independent artists get crumbs.  
   </p>
   <p>
-    Bottom line: the “<Link href="/blog/ai-vs-human-support" className="text-blue-500 no-underline">AI vs human creativity</Link>” debate isn’t just academic.  
+    Bottom line: the “<Link href="/blog/ai-vs-human-support" className="text-coral no-underline">AI vs human creativity</Link>” debate isn’t just academic.  
     For many, it’s about survival. And unless regulators step in, 
     the copyright battlefield could turn into a graveyard 
     for creative industries.  
@@ -242,7 +242,7 @@ export default function AIChatbotBlogPage() {
       </h2>
       <div>
         <p>
-    The fight over  <Link href="/blog/open-source-vs-closed-ai" className="text-blue-500 no-underline">AI content ownership</Link>  is far from settled.  
+    The fight over  <Link href="/blog/open-source-vs-closed-ai" className="text-coral no-underline">AI content ownership</Link>  is far from settled.  
     As courts and governments scramble to catch up, new 
      copyright frameworks  are almost inevitable.  
     One possibility: licensing systems where AI companies pay 

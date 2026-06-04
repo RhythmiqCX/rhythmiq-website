@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -167,7 +168,7 @@ export default function AISavesTimeWeekBlog() {
           was <em>what</em> I was working on.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           I was spending 3 hours a day on tasks that exist purely because
           systems aren&apos;t talking to each other. Not real work.
           Infrastructure tax.
@@ -194,7 +195,7 @@ export default function AISavesTimeWeekBlog() {
           That&apos;s the productivity illusion we explored in{" "}
           <Link
             href="/blog/the-productivity-illusion"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             The Productivity Illusion: Why AI Isn&apos;t Saving As Much Time As
             You Think
@@ -206,7 +207,7 @@ export default function AISavesTimeWeekBlog() {
 
       {/* SECTION 2 The Exact Hours */}
       <section id="exact-hours" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Exact Hours Where They&apos;re Hiding in Your Week
         </h2>
 
@@ -221,34 +222,34 @@ export default function AISavesTimeWeekBlog() {
           {TIME_ITEMS.map(({ hours, title, body }, i) => (
             <div
               key={i}
-              className="flex gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors"
+              className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-6 hover:border-ink/20 transition-colors"
             >
               <div className="shrink-0 min-w-[72px]">
-                <span className="font-mono text-2xl font-semibold text-green-400 leading-none block">
+                <span className="font-mono text-2xl font-semibold text-coral leading-none block">
                   {hours}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-500 mt-1 block">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-ink3 mt-1 block">
                   / week
                 </span>
               </div>
               <div className="space-y-1">
-                <h3 className="text-white font-semibold text-base">{title}</h3>
+                <h3 className="text-ink font-semibold text-base">{title}</h3>
                 {i === 2 ? (
-                  <p className="text-neutral-400 text-sm leading-relaxed">
+                  <p className="text-ink2 text-sm leading-relaxed">
                     Questions your customers ask that are already answered
                     somewhere on your site but they didn&apos;t find it. A web
                     widget intercepts these in real time before they become
                     tickets. We dug into this in{" "}
                     <Link
                       href="/blog/voice-ai-is-quietly-killing"
-                      className="text-blue-400 underline"
+                      className="text-coral underline"
                     >
                       How Voice AI Is Quietly Killing FAQ Pages
                     </Link>
                     .
                   </p>
                 ) : (
-                  <p className="text-neutral-400 text-sm leading-relaxed">
+                  <p className="text-ink2 text-sm leading-relaxed">
                     {body}
                   </p>
                 )}
@@ -257,7 +258,7 @@ export default function AISavesTimeWeekBlog() {
           ))}
 
           {/* Total bar */}
-          <div className="flex justify-between items-center rounded-2xl bg-green-400 text-black px-6 py-5 mt-2">
+          <div className="flex justify-between items-center rounded-2xl bg-coral text-white px-6 py-5 mt-2">
             <span className="font-semibold text-sm tracking-wide">
               Total Recoverable Hours / Week
             </span>
@@ -277,7 +278,7 @@ export default function AISavesTimeWeekBlog() {
 
       {/* SECTION 3 Phone Calls */}
       <section id="phone-calls" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The One Category That Surprised Me Most: Phone Calls
         </h2>
 
@@ -290,9 +291,9 @@ export default function AISavesTimeWeekBlog() {
           answered by the website or a 30-second chatbot interaction.
         </p>
 
-        <div className="rounded-2xl border border-red-500/20 bg-red-500/5 p-6">
-          <p className="text-red-300 text-sm leading-relaxed">
-            <strong className="text-red-400">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6">
+          <p className="text-ink2 text-sm leading-relaxed">
+            <strong className="text-[#C9461F]">
               Real stat from our own data:
             </strong>{" "}
             68% of inbound calls to small business phone lines are tier-1
@@ -312,7 +313,7 @@ export default function AISavesTimeWeekBlog() {
           This is exactly why the{" "}
           <Link
             href="/blog/ai-virtual-receptionist-vs-human-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI Virtual Receptionist vs Human Receptionist
           </Link>{" "}
@@ -321,7 +322,7 @@ export default function AISavesTimeWeekBlog() {
           team&apos;s day so the humans can do the work only humans can do.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The best AI receptionist doesn&apos;t just answer calls. It gives your
           team back the ability to think in long, uninterrupted stretches.
           That&apos;s where real work happens.
@@ -333,7 +334,7 @@ export default function AISavesTimeWeekBlog() {
           yourself three times. If you&apos;ve read our breakdown of{" "}
           <Link
             href="/blog/the-first-second"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             why the first 3 seconds of a voice call decide trust
           </Link>
@@ -343,13 +344,13 @@ export default function AISavesTimeWeekBlog() {
 
       {/* SECTION 4 Tools That Work */}
       <section id="tools-that-work" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Tools That Actually Do It (Not the Ones That Promise It)
         </h2>
 
         <p>
           We published{" "}
-          <Link href="/blog/free-ai-tools" className="text-blue-400 underline">
+          <Link href="/blog/free-ai-tools" className="text-coral underline">
             25 Free AI Tools That Actually Save You Hours in 2026
           </Link>{" "}
           and the response was huge because people are exhausted by tools that
@@ -357,8 +358,8 @@ export default function AISavesTimeWeekBlog() {
           actual shortlist. The ones we use. The ones with teeth.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 space-y-6">
-          <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-8 space-y-6">
+          <p className="text-sm font-mono text-ink2 uppercase tracking-widest">
             The Real Production Stack
           </p>
 
@@ -384,7 +385,7 @@ export default function AISavesTimeWeekBlog() {
                     or submit a ticket.{" "}
                     <Link
                       href="/blog/rhythmiqcx-for-ecommerce"
-                      className="text-blue-400 underline"
+                      className="text-coral underline"
                     >
                       Our e-commerce case study
                     </Link>{" "}
@@ -406,11 +407,11 @@ export default function AISavesTimeWeekBlog() {
               },
             ].map(({ name, desc }, i) => (
               <div key={i} className="flex gap-4">
-                <span className="text-green-400 font-bold mt-0.5 shrink-0">
+                <span className="text-coral font-bold mt-0.5 shrink-0">
                   ✓
                 </span>
-                <p className="text-neutral-300 text-sm leading-relaxed">
-                  <strong className="text-white">{name}</strong> {desc}
+                <p className="text-ink2 text-sm leading-relaxed">
+                  <strong className="text-ink">{name}</strong> {desc}
                 </p>
               </div>
             ))}
@@ -430,7 +431,7 @@ export default function AISavesTimeWeekBlog() {
           we&apos;ve argued in{" "}
           <Link
             href="/blog/autonomous-customer-support"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             Autonomous Customer Support: How AI is Replacing Traditional Support
             Teams
@@ -445,7 +446,7 @@ export default function AISavesTimeWeekBlog() {
 
       {/* SECTION 5 What You Do With 10 Hours */}
       <section id="what-you-do-with-it" className="mt-24 space-y-6 pb-4">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What You Actually Do With 10 Extra Hours (This Is the Real ROI)
         </h2>
 
@@ -463,7 +464,7 @@ export default function AISavesTimeWeekBlog() {
           reactive to proactive. From defensive to offensive.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           10 hours a week is 40 hours a month. That&apos;s a full extra work
           week every single month that you can pour into sales, product,
           strategy, or just thinking clearly for the first time in years.
@@ -474,7 +475,7 @@ export default function AISavesTimeWeekBlog() {
           that was never supposed to land on your desk in the first place. The{" "}
           <Link
             href="/blog/is-ai-replacing-customer-support-jobs"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             question isn&apos;t whether AI replaces jobs
           </Link>
@@ -484,17 +485,17 @@ export default function AISavesTimeWeekBlog() {
         </p>
 
         {/* Start this week checklist */}
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-          <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-4">
+          <p className="text-sm font-mono text-ink2 uppercase tracking-widest">
             How to Actually Start This Week
           </p>
           <div className="space-y-1">
             {FRAMEWORK_STEPS.map(({ day, action }, i) => (
               <div key={i} className="flex gap-4">
-                <span className="font-mono text-xs font-semibold text-green-400 uppercase tracking-widest shrink-0 mt-5 min-w-[80px]">
+                <span className="font-mono text-xs font-semibold text-coral uppercase tracking-widest shrink-0 mt-5 min-w-[80px]">
                   {day}
                 </span>
-                <p className="text-neutral-300 text-sm leading-relaxed">
+                <p className="text-ink2 text-sm leading-relaxed">
                   {action}
                 </p>
               </div>
@@ -512,40 +513,21 @@ export default function AISavesTimeWeekBlog() {
           hours.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           10 hours a week sounds modest. Compounded over a year, it&apos;s 520
           hours 13 full 40-hour work weeks handed back to you. What would your
           company look like if you had 13 extra weeks this year?
         </blockquote>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Start Recovering Your Hours Today
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            See how RhythmiqCX handles your inbound calls and support
-            interactions automatically while your team focuses on work that
-            actually moves the needle.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Start Recovering Your Hours Today"
+        description="See how RhythmiqCX handles your inbound calls and support interactions automatically while your team focuses on work that actually moves the needle."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
     </BlogLayout>
   );
 }

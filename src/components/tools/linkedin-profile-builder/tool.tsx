@@ -121,7 +121,7 @@ export default function LinkedInProfileBuilderTool() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <User className="w-5 h-5 text-primary" />
+                <User className="w-5 h-5 text-coral" />
                 Personal & Professional Details
               </CardTitle>
               <CardDescription>
@@ -208,7 +208,7 @@ export default function LinkedInProfileBuilderTool() {
                   value={formData.skills}
                   onChange={handleInputChange}
                 />
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-ink2">
                   Highlights your achievements and skills in a format that
                   hiring managers and recruiters prefer.
                 </p>
@@ -221,7 +221,7 @@ export default function LinkedInProfileBuilderTool() {
                   disabled={
                     loading === "all" || !formData.role || !formData.skills
                   }
-                  className="bg-primary hover:bg-primary/90"
+                  className="btn btn-accent"
                 >
                   {loading === "all" ? (
                     <>
@@ -246,7 +246,7 @@ export default function LinkedInProfileBuilderTool() {
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <div className="space-y-1">
                 <CardTitle className="text-xl flex items-center gap-2">
-                  <Lightbulb className="w-5 h-5 text-yellow-500" />
+                  <Lightbulb className="w-5 h-5 text-coral" />
                   Professional Headline
                 </CardTitle>
                 <CardDescription>
@@ -268,8 +268,8 @@ export default function LinkedInProfileBuilderTool() {
               </Button>
             </CardHeader>
             <CardContent>
-              <div className="relative mt-2 p-4 bg-muted/40 rounded-lg border border-border/50">
-                <p className="text-lg font-medium text-foreground">
+              <div className="relative mt-2 p-4 bg-paper2 rounded-lg border border-ink/10">
+                <p className="text-lg font-medium text-ink">
                   {generatedContent.headline ||
                     "Your headline will appear here..."}
                 </p>
@@ -283,9 +283,9 @@ export default function LinkedInProfileBuilderTool() {
                     }
                   >
                     {copied === "headline" ? (
-                      <Check className="w-4 h-4 text-green-500" />
+                      <Check className="w-4 h-4 text-[#1F7A4D]" />
                     ) : (
-                      <Copy className="w-4 h-4 text-muted-foreground" />
+                      <Copy className="w-4 h-4 text-ink3" />
                     )}
                   </Button>
                 )}
@@ -298,7 +298,7 @@ export default function LinkedInProfileBuilderTool() {
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <div className="space-y-1">
                 <CardTitle className="text-xl flex items-center gap-2">
-                  <User className="w-5 h-5 text-blue-500" />
+                  <User className="w-5 h-5 text-coral" />
                   About Section (Summary)
                 </CardTitle>
                 <CardDescription>
@@ -319,8 +319,8 @@ export default function LinkedInProfileBuilderTool() {
               </Button>
             </CardHeader>
             <CardContent>
-              <div className="relative mt-2 p-4 bg-muted/40 rounded-lg border border-border/50 min-h-[100px]">
-                <p className="text-base leading-relaxed text-foreground whitespace-pre-wrap">
+              <div className="relative mt-2 p-4 bg-paper2 rounded-lg border border-ink/10 min-h-[100px]">
+                <p className="text-base leading-relaxed text-ink whitespace-pre-wrap">
                   {generatedContent.summary ||
                     "Your summary will appear here..."}
                 </p>
@@ -334,9 +334,9 @@ export default function LinkedInProfileBuilderTool() {
                     }
                   >
                     {copied === "summary" ? (
-                      <Check className="w-4 h-4 text-green-500" />
+                      <Check className="w-4 h-4 text-[#1F7A4D]" />
                     ) : (
-                      <Copy className="w-4 h-4 text-muted-foreground" />
+                      <Copy className="w-4 h-4 text-ink3" />
                     )}
                   </Button>
                 )}
@@ -349,7 +349,7 @@ export default function LinkedInProfileBuilderTool() {
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <div className="space-y-1">
                 <CardTitle className="text-xl flex items-center gap-2">
-                  <Briefcase className="w-5 h-5 text-purple-500" />
+                  <Briefcase className="w-5 h-5 text-coral" />
                   Experience Descriptions
                 </CardTitle>
                 <CardDescription>
@@ -370,8 +370,8 @@ export default function LinkedInProfileBuilderTool() {
               </Button>
             </CardHeader>
             <CardContent>
-              <div className="relative mt-2 p-4 bg-muted/40 rounded-lg border border-border/50 min-h-[100px]">
-                <p className="text-base leading-relaxed text-foreground whitespace-pre-wrap font-mono text-sm">
+              <div className="relative mt-2 p-4 bg-paper2 rounded-lg border border-ink/10 min-h-[100px]">
+                <p className="text-base leading-relaxed text-ink whitespace-pre-wrap font-mono text-sm">
                   {generatedContent.experience ||
                     "Your experience bullets will appear here..."}
                 </p>
@@ -385,9 +385,9 @@ export default function LinkedInProfileBuilderTool() {
                     }
                   >
                     {copied === "experience" ? (
-                      <Check className="w-4 h-4 text-green-500" />
+                      <Check className="w-4 h-4 text-[#1F7A4D]" />
                     ) : (
-                      <Copy className="w-4 h-4 text-muted-foreground" />
+                      <Copy className="w-4 h-4 text-ink3" />
                     )}
                   </Button>
                 )}

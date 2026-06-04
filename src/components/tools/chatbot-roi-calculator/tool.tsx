@@ -68,15 +68,15 @@ export default function ChatbotROICalculatorTool() {
       <div className="grid lg:grid-cols-2 gap-8">
         {/* Left Column: Inputs */}
         <MagicCard
-          className="p-8 border-border/50 shadow-2xl h-full"
-          gradientColor="rgba(16, 185, 129, 0.05)" // Emerald tint
+          className="p-8 bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] h-full"
+          gradientColor="rgba(232, 100, 60, 0.05)"
         >
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="p-2.5 bg-emerald-500/10 rounded-xl text-emerald-500">
+              <div className="p-2.5 bg-coralSoft rounded-xl text-coral">
                 <Calculator className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl font-bold">Support Data</h2>
+              <h2 className="text-2xl font-bold text-ink">Support Data</h2>
             </div>
 
             <p className="text-muted-foreground text-sm">
@@ -91,10 +91,10 @@ export default function ChatbotROICalculatorTool() {
                     htmlFor="hourlyCost"
                     className="flex items-center gap-2"
                   >
-                    <DollarSign className="w-4 h-4 text-emerald-500" />
+                    <DollarSign className="w-4 h-4 text-coral" />
                     Agent Cost Per Hour
                   </Label>
-                  <span className="font-semibold">
+                  <span className="font-semibold text-ink">
                     {formatCurrency(hourlyCost)}
                   </span>
                 </div>
@@ -105,7 +105,7 @@ export default function ChatbotROICalculatorTool() {
                   step={1}
                   value={[hourlyCost]}
                   onValueChange={(val) => setHourlyCost(val[0])}
-                  className="[&>.bg-primary]:bg-emerald-500"
+                  className="[&>.bg-primary]:bg-coral"
                 />
               </div>
 
@@ -115,10 +115,10 @@ export default function ChatbotROICalculatorTool() {
                     htmlFor="monthlyTickets"
                     className="flex items-center gap-2"
                   >
-                    <Ticket className="w-4 h-4 text-blue-500" />
+                    <Ticket className="w-4 h-4 text-coral" />
                     Monthly Support Tickets
                   </Label>
-                  <span className="font-semibold">
+                  <span className="font-semibold text-ink">
                     {formatNumber(monthlyTickets)}
                   </span>
                 </div>
@@ -129,7 +129,7 @@ export default function ChatbotROICalculatorTool() {
                   step={100}
                   value={[monthlyTickets]}
                   onValueChange={(val) => setMonthlyTickets(val[0])}
-                  className="[&>.bg-primary]:bg-blue-500"
+                  className="[&>.bg-primary]:bg-coral"
                 />
               </div>
 
@@ -139,10 +139,10 @@ export default function ChatbotROICalculatorTool() {
                     htmlFor="timePerTicket"
                     className="flex items-center gap-2"
                   >
-                    <Clock className="w-4 h-4 text-orange-500" />
+                    <Clock className="w-4 h-4 text-coral" />
                     Mins to Resolve Ticket
                   </Label>
-                  <span className="font-semibold">
+                  <span className="font-semibold text-ink">
                     {formatNumber(timePerTicket)} mins
                   </span>
                 </div>
@@ -153,7 +153,7 @@ export default function ChatbotROICalculatorTool() {
                   step={1}
                   value={[timePerTicket]}
                   onValueChange={(val) => setTimePerTicket(val[0])}
-                  className="[&>.bg-primary]:bg-orange-500"
+                  className="[&>.bg-primary]:bg-coral"
                 />
               </div>
 
@@ -163,9 +163,9 @@ export default function ChatbotROICalculatorTool() {
                     htmlFor="automationPercent"
                     className="flex items-center gap-2"
                   >
-                    <Bot className="w-4 h-4 text-indigo-500" />% Automated by AI
+                    <Bot className="w-4 h-4 text-coral" />% Automated by AI
                   </Label>
-                  <span className="font-semibold">{automationPercent}%</span>
+                  <span className="font-semibold text-ink">{automationPercent}%</span>
                 </div>
                 <Slider
                   id="automationPercent"
@@ -174,11 +174,11 @@ export default function ChatbotROICalculatorTool() {
                   step={5}
                   value={[automationPercent]}
                   onValueChange={(val) => setAutomationPercent(val[0])}
-                  className="[&>.bg-primary]:bg-indigo-500"
+                  className="[&>.bg-primary]:bg-coral"
                 />
               </div>
 
-              <div className="space-y-4 pt-4 border-t border-border/50">
+              <div className="space-y-4 pt-4 border-t border-ink/10">
                 <Label
                   htmlFor="aiCost"
                   className="flex items-center gap-2 text-muted-foreground"
@@ -190,7 +190,7 @@ export default function ChatbotROICalculatorTool() {
                   type="number"
                   value={aiCost}
                   onChange={(e) => setAiCost(Number(e.target.value) || 0)}
-                  className="bg-background/50 text-muted-foreground"
+                  className="bg-white text-ink"
                 />
               </div>
             </div>
@@ -199,30 +199,30 @@ export default function ChatbotROICalculatorTool() {
 
         {/* Right Column: Results */}
         <div className="space-y-6 flex flex-col justify-start">
-          <Card className="border-emerald-500/20 shadow-lg shadow-emerald-500/10 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-bl-full -z-10" />
+          <Card className="bg-white border border-[#1F7A4D]/20 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#E2F1E8] rounded-bl-full -z-10" />
             <CardContent className="p-8">
               <div className="flex items-start justify-between">
                 <div className="space-y-2">
                   <p className="text-sm font-medium text-muted-foreground">
                     Total Yearly Savings
                   </p>
-                  <h3 className="text-5xl font-bold text-emerald-500 tracking-tight">
+                  <h3 className="text-5xl font-bold text-[#1F7A4D] tracking-tight">
                     {formatCurrency(results.totalSavings)}
                   </h3>
                 </div>
-                <div className="p-3 bg-emerald-500/10 rounded-xl text-emerald-500">
+                <div className="p-3 bg-[#E2F1E8] rounded-xl text-[#1F7A4D]">
                   <TrendingUp className="w-8 h-8" />
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-border/50 shadow-lg shadow-blue-500/5">
+          <Card className="bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <p className="text-muted-foreground">Hours Saved Per Year</p>
-                <span className="text-2xl font-bold">
+                <span className="text-2xl font-bold text-ink">
                   {formatNumber(results.hoursSaved)}{" "}
                   <span className="text-sm font-normal text-muted-foreground">
                     hrs
@@ -232,11 +232,11 @@ export default function ChatbotROICalculatorTool() {
             </CardContent>
           </Card>
 
-          <Card className="border-border/50 shadow-lg shadow-indigo-500/5">
+          <Card className="bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <p className="text-muted-foreground">Annual ROI</p>
-                <span className="text-3xl font-bold text-indigo-500">
+                <span className="text-3xl font-bold text-coral">
                   {formatNumber(results.roi)}%
                 </span>
               </div>
@@ -244,19 +244,19 @@ export default function ChatbotROICalculatorTool() {
           </Card>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="p-5 rounded-xl border border-border/50 bg-muted/20">
+            <div className="p-5 rounded-xl border border-ink/10 bg-paper2">
               <p className="text-sm text-muted-foreground mb-1">
                 Manual Support Cost
               </p>
-              <p className="text-xl font-semibold line-through text-muted-foreground/50">
+              <p className="text-xl font-semibold line-through text-ink3">
                 {formatCurrency(results.manualCost)}
               </p>
             </div>
-            <div className="p-5 rounded-xl border border-border/50 bg-muted/20">
+            <div className="p-5 rounded-xl border border-ink/10 bg-paper2">
               <p className="text-sm text-muted-foreground mb-1">
                 Cost After Automation
               </p>
-              <p className="text-xl font-semibold text-foreground">
+              <p className="text-xl font-semibold text-ink">
                 {formatCurrency(results.costAfterAI)}
               </p>
             </div>

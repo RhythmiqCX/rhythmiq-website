@@ -221,25 +221,25 @@ export default function ScheduleMakerTool() {
                   {tasks.map((task) => (
                     <div
                       key={task.id}
-                      className="flex items-center justify-between p-2 rounded-md border bg-muted/40 hover:bg-muted/60 transition-colors"
+                      className="flex items-center justify-between p-2 rounded-md border border-ink/10 bg-paper2 hover:bg-paper3 transition-colors"
                     >
                       <div className="flex flex-col gap-0.5">
-                        <span className="text-sm font-medium">{task.name}</span>
-                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <span className="text-sm font-medium text-ink">{task.name}</span>
+                        <div className="flex items-center gap-2 text-xs text-ink2">
                           <span
                             className={`px-1.5 py-0.5 rounded-full text-[10px] items-center ${
                               task.priority === "High"
-                                ? "bg-red-100 text-red-700"
+                                ? "bg-[#F7D9C9] text-[#C9461F]"
                                 : task.priority === "Medium"
-                                  ? "bg-yellow-100 text-yellow-700"
-                                  : "bg-blue-100 text-blue-700"
+                                  ? "bg-paper3 text-ink2"
+                                  : "bg-[#E2F1E8] text-[#1F7A4D]"
                             }`}
                           >
                             {task.priority}
                           </span>
                           <span>{task.duration} min</span>
                           {task.specificTime && (
-                            <span className="bg-purple-100 text-purple-700 px-1.5 py-0.5 rounded-full text-[10px]">
+                            <span className="bg-coralSoft text-coral px-1.5 py-0.5 rounded-full text-[10px]">
                               @{task.specificTime}
                             </span>
                           )}
@@ -279,7 +279,7 @@ export default function ScheduleMakerTool() {
                 )}
               </Button>
               {isLimitReached && (
-                <p className="text-xs text-red-500 text-center mt-2">
+                <p className="text-xs text-[#C9461F] text-center mt-2">
                   You have reached your daily limit of 5 generations for this
                   tool.
                 </p>
@@ -294,7 +294,7 @@ export default function ScheduleMakerTool() {
         <Card className="min-h-[600px] flex flex-col h-full">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <CalendarClock className="w-5 h-5 text-primary" />
+              <CalendarClock className="w-5 h-5 text-coral" />
               Your Optimized Schedule
             </CardTitle>
             <CardDescription>
@@ -308,35 +308,35 @@ export default function ScheduleMakerTool() {
                 <p>Add tasks and generate your schedule to see it here.</p>
               </div>
             ) : (
-              <div className="relative border-l-2 border-primary/20 ml-4 pl-8 space-y-8 my-6">
+              <div className="relative border-l-2 border-ink/10 ml-4 pl-8 space-y-8 my-6">
                 {schedule.map((item, idx) => (
                   <div key={idx} className="relative">
                     {/* Timeline Dot */}
                     <div
-                      className={`absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-background ${
-                        item.type === "break" ? "bg-green-500" : "bg-primary"
+                      className={`absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-paper ${
+                        item.type === "break" ? "bg-[#1F7A4D]" : "bg-coral"
                       }`}
                     />
 
                     <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
-                      <span className="text-sm font-mono font-medium text-muted-foreground flex-shrink-0 w-16">
+                      <span className="text-sm font-mono font-medium text-ink2 flex-shrink-0 w-16">
                         {item.time}
                       </span>
 
                       <div
                         className={`flex-1 p-4 rounded-xl border ${
                           item.type === "break"
-                            ? "bg-green-50/50 border-green-100 text-green-900 border-dashed"
-                            : "bg-card border-border shadow-sm"
+                            ? "bg-[#E2F1E8] border-[#1F7A4D]/20 text-[#1F7A4D] border-dashed"
+                            : "bg-white border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
                           <h4
-                            className={`font-semibold ${item.type === "break" ? "text-green-700" : ""}`}
+                            className={`font-semibold ${item.type === "break" ? "text-[#1F7A4D]" : "text-ink"}`}
                           >
                             {item.taskName}
                           </h4>
-                          <span className="text-xs text-muted-foreground bg-background/50 px-2 py-1 rounded">
+                          <span className="text-xs text-ink2 bg-paper2 px-2 py-1 rounded">
                             {item.duration} min
                           </span>
                         </div>
@@ -346,8 +346,8 @@ export default function ScheduleMakerTool() {
                 ))}
                 {/* End Marker */}
                 <div className="relative">
-                  <div className="absolute -left-[37px] top-1 h-3 w-3 rounded-full bg-border" />
-                  <span className="text-sm text-muted-foreground ml-0 pl-0">
+                  <div className="absolute -left-[37px] top-1 h-3 w-3 rounded-full bg-ink/20" />
+                  <span className="text-sm text-ink2 ml-0 pl-0">
                     End of Day
                   </span>
                 </div>

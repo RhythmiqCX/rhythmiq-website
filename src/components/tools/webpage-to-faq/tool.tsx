@@ -191,7 +191,7 @@ export default function WebpageToFaqTool() {
         <div className="lg:col-span-5 flex flex-col gap-6">
           <div className="flex items-center justify-between">
             <Label className="text-base font-semibold flex items-center gap-2">
-              <Settings2 className="w-5 h-5 text-blue-500" />
+              <Settings2 className="w-5 h-5 text-coral" />
               Configuration
             </Label>
             <Button
@@ -205,7 +205,7 @@ export default function WebpageToFaqTool() {
             </Button>
           </div>
 
-          <div className="space-y-4 p-6 bg-card rounded-xl border border-border shadow-sm">
+          <div className="space-y-4 p-6 bg-white rounded-xl border border-ink/10 shadow-sm">
             <div className="space-y-2">
               <Label htmlFor="url-input">Webpage URL</Label>
               <Input
@@ -270,7 +270,7 @@ export default function WebpageToFaqTool() {
             <Button
               size="lg"
               onClick={handleGenerate}
-              className="w-full font-semibold mt-2"
+              className="btn btn-accent w-full justify-center mt-2"
               disabled={loading}
             >
               {loading ? (
@@ -299,7 +299,7 @@ export default function WebpageToFaqTool() {
         <div className="lg:col-span-7 flex flex-col gap-6 h-full min-h-[500px]">
           <div className="flex items-center justify-between">
             <Label className="text-base font-semibold flex items-center gap-2">
-              <MessageSquare className="w-5 h-5 text-green-500" />
+              <MessageSquare className="w-5 h-5 text-coral" />
               Generated FAQs
             </Label>
 
@@ -308,7 +308,7 @@ export default function WebpageToFaqTool() {
                 <Button variant="outline" size="sm" onClick={handleCopy}>
                   {copied ? (
                     <>
-                      <Check className="w-4 h-4 mr-2 text-green-500" />
+                      <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                       Copied
                     </>
                   ) : (
@@ -326,13 +326,13 @@ export default function WebpageToFaqTool() {
             )}
           </div>
 
-          <div className="flex-1 rounded-xl border border-border bg-card/50 overflow-hidden relative">
+          <div className="flex-1 rounded-xl border border-ink/10 bg-white overflow-hidden relative">
             {faqs.length === 0 ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground p-8 text-center bg-muted/20">
-                <div className="w-16 h-16 rounded-full bg-background border-2 border-dashed border-muted-foreground/20 flex items-center justify-center mb-4">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-ink3 p-8 text-center bg-paper2">
+                <div className="w-16 h-16 rounded-full bg-white border-2 border-dashed border-ink/15 flex items-center justify-center mb-4">
                   <MessageSquare className="w-8 h-8 opacity-20" />
                 </div>
-                <h3 className="font-semibold text-lg text-foreground mb-1">
+                <h3 className="font-semibold text-lg text-ink mb-1">
                   No FAQs generated yet
                 </h3>
                 <p className="text-sm max-w-sm mx-auto">
@@ -351,15 +351,15 @@ export default function WebpageToFaqTool() {
                     <AccordionItem
                       key={index}
                       value={`item-${index}`}
-                      className="border border-border rounded-lg bg-card px-4 shadow-sm"
+                      className="border border-ink/10 rounded-lg bg-white px-4 shadow-sm"
                     >
-                      <AccordionTrigger className="text-left font-medium hover:no-underline py-4">
-                        <span className="mr-2 text-primary font-bold">
+                      <AccordionTrigger className="text-left font-medium hover:no-underline py-4 text-ink">
+                        <span className="mr-2 text-coral font-bold">
                           Q{index + 1}.
                         </span>
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground pb-4 pl-8 leading-relaxed">
+                      <AccordionContent className="text-ink2 pb-4 pl-8 leading-relaxed">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>

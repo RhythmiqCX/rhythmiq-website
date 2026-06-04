@@ -181,10 +181,10 @@ const AiReelVoiceGeneratorTool = () => {
   return (
     <div className="flex flex-col gap-8 max-w-4xl mx-auto">
       {/* Script Generation Card */}
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-xl">
+      <Card className="border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
         <CardHeader>
-          <CardTitle className="flex flex-row items-center gap-2">
-            <PenLine className="w-5 h-5 text-indigo-500" />
+          <CardTitle className="flex flex-row items-center gap-2 text-ink">
+            <PenLine className="w-5 h-5 text-coral" />
             1. Generate Script
           </CardTitle>
           <CardDescription>
@@ -268,10 +268,10 @@ const AiReelVoiceGeneratorTool = () => {
       </Card>
 
       {/* Voice Generation Card */}
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-xl">
+      <Card className="border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
         <CardHeader>
-          <CardTitle className="flex flex-row items-center gap-2">
-            <Volume2 className="w-5 h-5 text-indigo-500" />
+          <CardTitle className="flex flex-row items-center gap-2 text-ink">
+            <Volume2 className="w-5 h-5 text-coral" />
             2. AI Voiceover
           </CardTitle>
           <CardDescription>
@@ -313,7 +313,7 @@ const AiReelVoiceGeneratorTool = () => {
             <div className="flex items-end">
               <Button
                 size="lg"
-                className="w-full gap-2 bg-gradient-to-r from-indigo-500 to-primary hover:from-indigo-600 hover:to-primary/90 text-white border-0 shadow-md"
+                className="w-full gap-2 bg-coral hover:bg-coral2 text-white border-0 shadow-md"
                 onClick={handleGenerateVoice}
                 disabled={isGeneratingVoice || !script.trim()}
               >
@@ -336,9 +336,9 @@ const AiReelVoiceGeneratorTool = () => {
       {/* Result Card */}
       {audioSrc && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden border-indigo-500/20 shadow-xl">
-            <CardHeader className="bg-indigo-500/5 py-4 border-b border-indigo-500/10">
-              <CardTitle className="text-lg flex items-center justify-between">
+          <Card className="border border-ink/10 bg-white overflow-hidden shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+            <CardHeader className="bg-paper2 py-4 border-b border-ink/10">
+              <CardTitle className="text-lg flex items-center justify-between text-ink">
                 <span>Resulting Voiceover</span>
                 <Button
                   variant="outline"
@@ -352,7 +352,7 @@ const AiReelVoiceGeneratorTool = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
-              <div className="flex flex-col items-center justify-center p-6 bg-background/50 rounded-xl border border-border/50 gap-4">
+              <div className="flex flex-col items-center justify-center p-6 bg-paper2 rounded-xl border border-ink/10 gap-4">
                 <audio
                   ref={audioRef}
                   controls
@@ -362,7 +362,7 @@ const AiReelVoiceGeneratorTool = () => {
                 >
                   Your browser does not support the audio element.
                 </audio>
-                <p className="text-sm text-muted-foreground text-center">
+                <p className="text-sm text-ink2 text-center">
                   Click play to review the voiceover. If you need changes, edit
                   the script above and regenerate.
                 </p>

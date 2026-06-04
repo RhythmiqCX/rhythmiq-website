@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -198,9 +199,9 @@ const ONBOARDING_ITEMS = [
 ];
 
 const levelClass = (level: string) => {
-  if (level === "good") return "text-green-400 font-semibold";
-  if (level === "bad") return "text-red-400 font-semibold";
-  return "text-yellow-400 font-semibold";
+  if (level === "good") return "text-[#1F7A4D] font-semibold";
+  if (level === "bad") return "text-[#C9461F] font-semibold";
+  return "text-coral font-semibold";
 };
 
 export default function AIPhoneReceptionistGuideBlog() {
@@ -249,7 +250,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           competitor&apos;s &ldquo;receptionist&rdquo; was an AI.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           In 2026, the business that answers fastest wins. Not the one with the
           best product. The one that picks up.
         </blockquote>
@@ -266,7 +267,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           If you&apos;ve read our breakdown of{" "}
           <Link
             href="/blog/the-first-second"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             why the first 3 seconds of a voice call decide customer trust
           </Link>
@@ -288,12 +289,12 @@ export default function AIPhoneReceptionistGuideBlog() {
           ].map(({ num, label }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+              className="rounded-2xl border border-ink/10 bg-white p-5 text-center"
             >
-              <span className="font-mono text-3xl font-bold text-yellow-400 block leading-none">
+              <span className="font-mono text-3xl font-bold text-coral block leading-none">
                 {num}
               </span>
-              <span className="text-neutral-500 text-xs mt-2 block leading-snug">
+              <span className="text-ink3 text-xs mt-2 block leading-snug">
                 {label}
               </span>
             </div>
@@ -303,7 +304,7 @@ export default function AIPhoneReceptionistGuideBlog() {
 
       {/* SECTION 2  What It Actually Does */}
       <section id="what-it-actually-does" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What an AI Phone Receptionist Actually Does (vs. What You Think It
           Does)
         </h2>
@@ -320,7 +321,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           and responds conversationally. We wrote an entire piece on{" "}
           <Link
             href="/blog/ai-voice-reception"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             why IVR systems are dying
           </Link>{" "}
@@ -334,20 +335,20 @@ export default function AIPhoneReceptionistGuideBlog() {
           {FEATURES.map(({ icon, title, desc }, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors"
+              className="rounded-2xl border border-ink/10 bg-white p-6 hover:border-ink/20 transition-colors"
             >
               <span className="text-2xl block mb-3">{icon}</span>
-              <h3 className="text-white font-semibold text-base mb-1">
+              <h3 className="text-ink font-semibold text-base mb-1">
                 {title}
               </h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{desc}</p>
+              <p className="text-ink2 text-sm leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="rounded-2xl bg-neutral-900 border border-white/10 p-7 mt-2">
-          <p className="text-neutral-300 text-sm leading-relaxed">
-            <strong className="text-white">The RhythmiqCX difference:</strong>{" "}
+        <div className="rounded-2xl bg-white border border-ink/10 p-7 mt-2">
+          <p className="text-ink2 text-sm leading-relaxed">
+            <strong className="text-ink">The RhythmiqCX difference:</strong>{" "}
             Most AI receptionists are glorified voicemail systems with a voice.
             RhythmiqCX is a full Voice AI layer it doesn&apos;t just answer, it{" "}
             <em>resolves</em>. It handles the entire tier-1 call flow so your
@@ -361,7 +362,7 @@ export default function AIPhoneReceptionistGuideBlog() {
 
       {/* SECTION 3  Honest Comparison */}
       <section id="honest-comparison" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           AI Phone Receptionist vs Human vs Old IVR The Honest Comparison
         </h2>
 
@@ -373,20 +374,20 @@ export default function AIPhoneReceptionistGuideBlog() {
           setup.
         </p>
 
-        <div className="overflow-x-auto rounded-2xl border border-white/10 p-2 sm:p-6 bg-white/[0.02]">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10 p-2 sm:p-6 bg-white">
           <table className="w-full text-sm text-left">
-            <thead className="text-neutral-400 uppercase tracking-widest text-xs font-mono">
-              <tr className="bg-white/5">
+            <thead className="text-ink2 uppercase tracking-widest text-xs font-mono">
+              <tr className="bg-white">
                 <th className="px-6 py-5 rounded-l-xl">Capability</th>
                 <th className="px-6 py-5">Human</th>
                 <th className="px-6 py-5">Old IVR</th>
                 <th className="px-6 py-5 rounded-r-xl">RhythmiqCX AI</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5">
+            <tbody className="divide-y divide-ink/10">
               {COMPARE_ROWS.map(({ capability, human, ivr, ai }, i) => (
-                <tr key={i} className="hover:bg-white/[0.03] transition-colors">
-                  <td className="px-6 py-5 text-white font-medium">
+                <tr key={i} className="hover:bg-white transition-colors">
+                  <td className="px-6 py-5 text-ink font-medium">
                     {capability}
                   </td>
                   <td className={`px-6 py-5 ${levelClass(human.level)}`}>
@@ -408,7 +409,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           The{" "}
           <Link
             href="/blog/ai-virtual-receptionist-vs-human-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI vs Human receptionist debate
           </Link>{" "}
@@ -417,9 +418,9 @@ export default function AIPhoneReceptionistGuideBlog() {
           Together, you get coverage and quality that neither delivers alone.
         </p>
 
-        <div className="rounded-2xl border border-red-500/20 bg-red-500/5 p-6">
-          <p className="text-red-300 text-sm leading-relaxed">
-            <strong className="text-red-400">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6">
+          <p className="text-ink2 text-sm leading-relaxed">
+            <strong className="text-[#C9461F]">
               Where AI receptionists still struggle:
             </strong>{" "}
             Complex emotional calls a patient in distress, a customer with a
@@ -427,7 +428,7 @@ export default function AIPhoneReceptionistGuideBlog() {
             listen. The right setup escalates these to humans immediately.{" "}
             <Link
               href="/blog/voice-ai-is-great"
-              className="text-red-300 underline"
+              className="text-coral underline"
             >
               Voice AI is great at FAQs and terrible at exceptions
             </Link>{" "}
@@ -439,14 +440,14 @@ export default function AIPhoneReceptionistGuideBlog() {
 
       {/* SECTION 4  Hindi Voice AI */}
       <section id="hindi-voice-ai" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Hindi Voice AI Opportunity Nobody Is Talking About
         </h2>
 
         <p>
           Here&apos;s something that showed up in our search data this week that
           I can&apos;t stop thinking about:{" "}
-          <strong className="text-white">&ldquo;hindi voice ai&rdquo;</strong>{" "}
+          <strong className="text-ink">&ldquo;hindi voice ai&rdquo;</strong>{" "}
           is a growing query and there is almost zero content targeting it.
         </p>
 
@@ -457,7 +458,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           their callers&apos; language naturally.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           An AI receptionist that switches to Hindi mid-sentence isn&apos;t a
           feature. For an Indian SMB, it&apos;s the difference between a caller
           feeling served and a caller feeling rejected.
@@ -473,7 +474,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           healthcare, fintech, and IVR replacement — see our guide on{" "}
           <Link
             href="/blog/ai-voice-agent-india"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             using AI voice agents for 24/7 customer calls in India
           </Link>
@@ -486,14 +487,14 @@ export default function AIPhoneReceptionistGuideBlog() {
               key={lang}
               className={`inline-block font-mono text-xs uppercase tracking-widest px-3 py-1.5 rounded ${
                 lang === "Hindi"
-                  ? "bg-orange-500 text-white"
-                  : "bg-neutral-800 text-neutral-300"
+                  ? "bg-coral text-white"
+                  : "bg-white border border-ink/10 text-ink2"
               }`}
             >
               {lang}
             </span>
           ))}
-          <span className="inline-block font-mono text-xs uppercase tracking-widest px-3 py-1.5 rounded bg-neutral-800/50 text-neutral-500">
+          <span className="inline-block font-mono text-xs uppercase tracking-widest px-3 py-1.5 rounded bg-white border border-ink/10 text-ink3">
             + More in development
           </span>
         </div>
@@ -505,7 +506,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           language. The{" "}
           <Link
             href="/blog/healthcare-ai-fails-on-context"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             Healthcare AI context
           </Link>{" "}
@@ -521,7 +522,7 @@ export default function AIPhoneReceptionistGuideBlog() {
 
       {/* SECTION 5  Setup That Works */}
       <section id="setup-that-works" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           How to Set Up an AI Phone Receptionist That Actually Works (Not Just
           in the Demo)
         </h2>
@@ -544,29 +545,29 @@ export default function AIPhoneReceptionistGuideBlog() {
           {SETUP_STEPS.map(({ num, title, body }, i) => (
             <div
               key={i}
-              className="flex gap-6 rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-6"
             >
-              <span className="font-mono text-3xl font-bold text-neutral-700 shrink-0 leading-none pt-1">
+              <span className="font-mono text-3xl font-bold text-ink3 shrink-0 leading-none pt-1">
                 {num}
               </span>
               <div className="space-y-2">
-                <h3 className="text-white font-semibold text-base">{title}</h3>
+                <h3 className="text-ink font-semibold text-base">{title}</h3>
                 {i === 2 ? (
-                  <p className="text-neutral-400 text-sm leading-relaxed">
+                  <p className="text-ink2 text-sm leading-relaxed">
                     Have someone call in frustrated, interrupt mid-sentence, ask
                     ambiguous questions, and give wrong information. See how the
                     AI recovers. If it breaks here, it will break in production.
                     We covered this in depth in{" "}
                     <Link
                       href="/blog/how-to-choose-the-best-ai-voice-for-virtual-receptionists"
-                      className="text-blue-400 underline"
+                      className="text-coral underline"
                     >
                       our guide on choosing the right AI voice
                     </Link>
                     .
                   </p>
                 ) : (
-                  <p className="text-neutral-400 text-sm leading-relaxed">
+                  <p className="text-ink2 text-sm leading-relaxed">
                     {body}
                   </p>
                 )}
@@ -576,17 +577,17 @@ export default function AIPhoneReceptionistGuideBlog() {
         </div>
 
         {/* Onboarding checklist */}
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 space-y-4 mt-4">
-          <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-8 space-y-4 mt-4">
+          <p className="text-sm font-mono text-ink2 uppercase tracking-widest">
             What RhythmiqCX Does in Your First 30 Days
           </p>
           <div className="space-y-3">
             {ONBOARDING_ITEMS.map((item, i) => (
               <div key={i} className="flex gap-4">
-                <span className="text-green-400 font-bold shrink-0 mt-0.5">
+                <span className="text-[#1F7A4D] font-bold shrink-0 mt-0.5">
                   ✓
                 </span>
-                <p className="text-neutral-300 text-sm leading-relaxed">
+                <p className="text-ink2 text-sm leading-relaxed">
                   {item}
                 </p>
               </div>
@@ -600,7 +601,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           days, the system runs itself and as we covered in{" "}
           <Link
             href="/blog/autonomous-customer-support"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             Autonomous Customer Support: How AI is Replacing Traditional Support
             Teams
@@ -614,7 +615,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           specific call scenarios the{" "}
           <Link
             href="/blog/voice-ai-vs-chatbots"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             engineering behind modern voice AI
           </Link>{" "}
@@ -628,7 +629,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           If you&apos;re still comparing options on cost, our breakdown of{" "}
           <Link
             href="/blog/ai-answering-service-small-business"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI answering service pricing for small businesses
           </Link>{" "}
@@ -636,7 +637,7 @@ export default function AIPhoneReceptionistGuideBlog() {
           the numbers are more dramatic than most vendors advertise.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The best AI phone receptionist you&apos;ll ever deploy is the one your
           callers never realize is AI. The conversation just works. That&apos;s
           the standard we build to at RhythmiqCX and we&apos;ll prove it on a
@@ -644,33 +645,14 @@ export default function AIPhoneReceptionistGuideBlog() {
         </blockquote>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Book a Live Demo We&apos;ll Answer a Real Call From Your Business
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            See RhythmiqCX handle inbound calls live hostile callers,
-            multilingual callers, ambiguous questions and all. No slide deck. A
-            real call on your actual phone number.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Book a Live Demo We'll Answer a Real Call From Your Business"
+        description="See RhythmiqCX handle inbound calls live hostile callers, multilingual callers, ambiguous questions and all. No slide deck. A real call on your actual phone number."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
     </BlogLayout>
   );
 }

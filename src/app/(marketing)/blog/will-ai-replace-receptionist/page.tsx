@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -192,7 +193,7 @@ export default function WillAIReplaceReceptionistsBlog() {
           replacing.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           AI isn&apos;t replacing good receptionists. It&apos;s replacing the
           parts of the job that were quietly making everyone miserable including
           the receptionist.
@@ -202,12 +203,12 @@ export default function WillAIReplaceReceptionistsBlog() {
           We&apos;ve covered a lot of this territory in our{" "}
           <Link
             href="/blog/ai-phone-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             complete guide to AI phone receptionists
           </Link>{" "}
           and the raw numbers behind{" "}
-          <Link href="/blog/ai-chatbot-roi" className="text-blue-400 underline">
+          <Link href="/blog/ai-chatbot-roi" className="text-coral underline">
             AI chatbot ROI for small businesses
           </Link>
           . This post goes deeper on the question nobody wants to ask out loud.
@@ -244,9 +245,9 @@ export default function WillAIReplaceReceptionistsBlog() {
           ].map((item, i) => (
             <div
               key={i}
-              className="flex gap-3 items-start text-neutral-300 text-sm leading-relaxed"
+              className="flex gap-3 items-start text-ink2 text-sm leading-relaxed"
             >
-              <span className="text-red-400 font-bold mt-4 shrink-0"></span>
+              <span className="text-coral font-bold mt-4 shrink-0"></span>
               <p className="m-0">{item}</p>
             </div>
           ))}
@@ -264,11 +265,11 @@ export default function WillAIReplaceReceptionistsBlog() {
           no automation is bleeding leads every single night.
         </p>
 
-        <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/5 p-6 space-y-2">
-          <span className="text-xs font-mono text-yellow-400 uppercase tracking-widest font-semibold">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-2">
+          <span className="text-xs font-mono text-coral uppercase tracking-widest font-semibold">
             The Real Answer
           </span>
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-ink2 text-sm leading-relaxed">
             AI replaces the <em>tasks</em>. Humans own the <em>relationship</em>
             . The businesses winning right now are the ones who figured out
             which is which and stopped paying human rates for robot work.
@@ -315,14 +316,14 @@ export default function WillAIReplaceReceptionistsBlog() {
           every day. And it&apos;s also exactly what we laid out in our{" "}
           <Link
             href="/blog/ai-phone-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             complete AI phone receptionist guide
           </Link>{" "}
           the setup, the configuration, the stuff that actually matters.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           What it does NOT do (and I&apos;d rather you heard this from me)
         </h3>
 
@@ -335,16 +336,16 @@ export default function WillAIReplaceReceptionistsBlog() {
           the lane. Stay in it.
         </p>
 
-        <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/5 p-6 space-y-2">
-          <span className="text-xs font-mono text-yellow-400 uppercase tracking-widest font-semibold">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-2">
+          <span className="text-xs font-mono text-coral uppercase tracking-widest font-semibold">
             The 80/20 of Reception Calls
           </span>
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-ink2 text-sm leading-relaxed">
             In our data across hundreds of businesses: roughly{" "}
-            <strong className="text-white">78% of inbound calls</strong> are
+            <strong className="text-ink">78% of inbound calls</strong> are
             fully handleable by AI scheduling, FAQs, directions, pricing, status
             updates, rescheduling. The other 22% benefit from a human.{" "}
-            <strong className="text-white">
+            <strong className="text-ink">
               Stop paying human rates for the 78%.
             </strong>
           </p>
@@ -370,7 +371,7 @@ export default function WillAIReplaceReceptionistsBlog() {
           up in demos:
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           Latency The thing that kills trust before a word is spoken
         </h3>
         <p>
@@ -381,14 +382,14 @@ export default function WillAIReplaceReceptionistsBlog() {
           laid out{" "}
           <Link
             href="/blog/ai-phone-receptionist"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             exactly what to look for in latency benchmarks
           </Link>{" "}
           worth reading before you sign anything.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           Tonal Range Does it sound like a person or a voicemail?
         </h3>
         <p>
@@ -402,7 +403,7 @@ export default function WillAIReplaceReceptionistsBlog() {
           also-rans.
         </p>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           Context Memory Does it remember what was said 30 seconds ago?
         </h3>
         <p>
@@ -414,7 +415,7 @@ export default function WillAIReplaceReceptionistsBlog() {
           State loss. Trust gone. Caller annoyed. We&apos;ve written about how{" "}
           <Link
             href="/blog/how-ai-save-time"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             this hidden friction quietly kills hours of recovered productivity
           </Link>{" "}
@@ -426,19 +427,19 @@ export default function WillAIReplaceReceptionistsBlog() {
           {VOICE_SCORES.map(({ name, score, tag, variant, desc }) => (
             <div
               key={name}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-3"
+              className="rounded-2xl border border-ink/10 bg-white p-5 space-y-3"
             >
-              <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest block">
+              <span className="text-xs font-mono text-ink3 uppercase tracking-widest block">
                 Score
               </span>
-              <p className="text-white font-bold">{name}</p>
+              <p className="text-ink font-bold">{name}</p>
               <p
                 className={`font-mono text-4xl font-bold italic leading-none ${
                   variant === "win"
-                    ? "text-green-400"
+                    ? "text-[#1F7A4D]"
                     : variant === "lose"
-                      ? "text-red-400"
-                      : "text-neutral-400"
+                      ? "text-[#C9461F]"
+                      : "text-ink2"
                 }`}
               >
                 {score}
@@ -446,15 +447,15 @@ export default function WillAIReplaceReceptionistsBlog() {
               <span
                 className={`text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full inline-block ${
                   variant === "win"
-                    ? "bg-green-500/10 text-green-400"
+                    ? "bg-white border border-ink/10 text-[#1F7A4D]"
                     : variant === "lose"
-                      ? "bg-red-500/10 text-red-400"
-                      : "bg-white/10 text-neutral-400"
+                      ? "bg-white border border-ink/10 text-[#C9461F]"
+                      : "bg-white border border-ink/10 text-ink2"
                 }`}
               >
                 {tag}
               </span>
-              <p className="text-neutral-500 text-xs leading-relaxed">{desc}</p>
+              <p className="text-ink3 text-xs leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
@@ -464,7 +465,7 @@ export default function WillAIReplaceReceptionistsBlog() {
           the demo illusion is in our{" "}
           <Link
             href="/blog/how-to-choose-the-best-ai-voice-for-virtual-receptionists"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             How to Choose the Best AI Voice for Virtual Receptionists
           </Link>{" "}
@@ -482,7 +483,7 @@ export default function WillAIReplaceReceptionistsBlog() {
           Here&apos;s the comparison every business owner needs to see not the
           one in the vendor deck, but the one built from real numbers. And since
           we just published the{" "}
-          <Link href="/blog/ai-chatbot-roi" className="text-blue-400 underline">
+          <Link href="/blog/ai-chatbot-roi" className="text-coral underline">
             definitive AI chatbot ROI breakdown for small businesses
           </Link>
           , I&apos;ll spare you the full math lesson and just give you the table
@@ -490,17 +491,17 @@ export default function WillAIReplaceReceptionistsBlog() {
         </p>
 
         {/* Cost Comparison Table */}
-        <div className="overflow-x-auto px-4 rounded-2xl border border-white/10">
+        <div className="overflow-x-auto px-4 rounded-2xl border border-ink/10">
           <table className="w-full text-sm">
             <thead>
-              <tr className="bg-white/5 border-b border-white/10">
-                <th className="text-left p-4 font-mono text-xs text-neutral-400 uppercase tracking-widest">
+              <tr className="bg-white border-b border-ink/10">
+                <th className="text-left p-4 font-mono text-xs text-ink2 uppercase tracking-widest">
                   Criteria
                 </th>
-                <th className="text-left p-4 font-mono text-xs text-neutral-400 uppercase tracking-widest">
+                <th className="text-left p-4 font-mono text-xs text-ink2 uppercase tracking-widest">
                   Human Receptionist
                 </th>
-                <th className="text-left p-4 font-mono text-xs text-neutral-400 uppercase tracking-widest">
+                <th className="text-left p-4 font-mono text-xs text-ink2 uppercase tracking-widest">
                   AI Receptionist
                 </th>
               </tr>
@@ -509,16 +510,16 @@ export default function WillAIReplaceReceptionistsBlog() {
               {COST_ROWS.map(({ criteria, human, ai, winner }, i) => (
                 <tr
                   key={criteria}
-                  className={`border-b border-white/5 ${
-                    i % 2 === 0 ? "" : "bg-white/[0.02]"
+                  className={`border-b border-ink/10 ${
+                    i % 2 === 0 ? "" : "bg-white"
                   }`}
                 >
-                  <td className="p-4 text-white font-medium">{criteria}</td>
+                  <td className="p-4 text-ink font-medium">{criteria}</td>
                   <td
                     className={`p-4 ${
                       winner === "human"
-                        ? "text-green-400 font-semibold"
-                        : "text-red-400"
+                        ? "text-[#1F7A4D] font-semibold"
+                        : "text-[#C9461F]"
                     }`}
                   >
                     {human}
@@ -526,8 +527,8 @@ export default function WillAIReplaceReceptionistsBlog() {
                   <td
                     className={`p-4 ${
                       winner === "ai"
-                        ? "text-green-400 font-semibold"
-                        : "text-neutral-500"
+                        ? "text-[#1F7A4D] font-semibold"
+                        : "text-ink3"
                     }`}
                   >
                     {ai}
@@ -544,7 +545,7 @@ export default function WillAIReplaceReceptionistsBlog() {
           also ran the time-saving math in our{" "}
           <Link
             href="/blog/how-ai-save-time"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI saves 10+ hours a week breakdown
           </Link>{" "}
@@ -552,14 +553,14 @@ export default function WillAIReplaceReceptionistsBlog() {
           week one.
         </p>
 
-        <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/5 p-6 space-y-2">
-          <span className="text-xs font-mono text-yellow-400 uppercase tracking-widest font-semibold">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-2">
+          <span className="text-xs font-mono text-coral uppercase tracking-widest font-semibold">
             The Number That Changes Everything
           </span>
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-ink2 text-sm leading-relaxed">
             If your business gets 15 after-hours calls a week and converts even
             20% of them, at an average deal value of $400 that&apos;s{" "}
-            <strong className="text-white">
+            <strong className="text-ink">
               $624 in recovered revenue per month
             </strong>
             . An AI receptionist at $200/month just paid for itself 3× over.
@@ -608,15 +609,15 @@ export default function WillAIReplaceReceptionistsBlog() {
           ].map(({ q, a, verdict }) => (
             <div
               key={q}
-              className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-5"
+              className="flex gap-4 rounded-2xl border border-ink/10 bg-white p-5"
             >
               <span
                 className={`shrink-0 font-mono text-xs font-bold uppercase tracking-widest px-2 py-1 rounded h-fit mt-4 ${
                   verdict === "yes"
-                    ? "bg-green-500/10 text-green-400"
+                    ? "bg-white border border-ink/10 text-[#1F7A4D]"
                     : verdict === "no"
-                      ? "bg-red-500/10 text-red-400"
-                      : "bg-yellow-500/10 text-yellow-400"
+                      ? "bg-white border border-ink/10 text-[#C9461F]"
+                      : "bg-white border border-ink/10 text-coral"
                 }`}
               >
                 {verdict === "yes"
@@ -626,8 +627,8 @@ export default function WillAIReplaceReceptionistsBlog() {
                     : "Depends"}
               </span>
               <div className="space-y-1">
-                <p className="text-white font-semibold text-sm">{q}</p>
-                <p className="text-neutral-500 text-xs leading-relaxed">{a}</p>
+                <p className="text-ink font-semibold text-sm">{q}</p>
+                <p className="text-ink3 text-xs leading-relaxed">{a}</p>
               </div>
             </div>
           ))}
@@ -641,13 +642,13 @@ export default function WillAIReplaceReceptionistsBlog() {
           you obsolete. They make the version of you that uses them unstoppable.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The future of the front desk isn&apos;t AI or human. It&apos;s an AI
           that handles the volume and a human who handles the moments that
           matter.
         </blockquote>
 
-        <h3 className="text-xl font-semibold text-white pt-2">
+        <h3 className="text-xl font-semibold text-ink pt-2">
           The 3-question test before you make any decision
         </h3>
 
@@ -655,11 +656,11 @@ export default function WillAIReplaceReceptionistsBlog() {
           {DECISION_QUESTIONS.map(({ q, hint }, i) => (
             <div
               key={i}
-              className="flex gap-5 rounded-2xl border border-white/10 bg-white/5 p-5"
+              className="flex gap-5 rounded-2xl border border-ink/10 bg-white p-5"
             >
               <div className="space-y-1">
-                <p className="text-white font-semibold text-sm">{q}</p>
-                <p className="text-neutral-500 text-xs leading-relaxed">
+                <p className="text-ink font-semibold text-sm">{q}</p>
+                <p className="text-ink3 text-xs leading-relaxed">
                   {hint}
                 </p>
               </div>
@@ -682,7 +683,7 @@ export default function WillAIReplaceReceptionistsBlog() {
           one conversation away.
         </p>
 
-        <blockquote className="border-l-4 border-white/30 pl-6 italic text-neutral-300 text-xl leading-relaxed">
+        <blockquote className="border-l-4 border-coral pl-6 italic text-ink2 text-xl leading-relaxed">
           The businesses winning in 2026 aren&apos;t the ones with the biggest
           AI budgets. They&apos;re the ones who stopped paying human rates for
           work that was always meant to be automated.
@@ -696,32 +697,14 @@ export default function WillAIReplaceReceptionistsBlog() {
           CTA Button: "Book Your Free Demo" → https://calendly.com/ray-rhythmiqcx/30min
           Secondary: "See How RhythmiqCX Works →" → /
       */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Your AI Receptionist Is 30 Minutes Away From Being Live
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Stop losing calls to voicemail. RhythmiqCX takes hours to set up,
-            not weeks and handles calls from day one. No scripts, no shifts, no
-            surprises.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book Your Free Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore RhythmiqCX →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Your AI Receptionist Is 30 Minutes Away From Being Live"
+        description="Stop losing calls to voicemail. RhythmiqCX takes hours to set up, not weeks and handles calls from day one. No scripts, no shifts, no surprises."
+        primaryLabel="Book Your Free Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore RhythmiqCX"
+        secondaryHref="/"
+      />
     </BlogLayout>
   );
 }

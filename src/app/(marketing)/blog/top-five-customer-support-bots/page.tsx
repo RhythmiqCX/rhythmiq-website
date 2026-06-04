@@ -105,7 +105,7 @@ export default function AIChatbotBlogPage() {
       <div>
         <h3>1. RhythmiqCX</h3>
         <p>
-          If 2025 belongs to any chatbot, it’s <Link href="/ai-customer-support" className="text-blue-500">RhythmiqCX</Link>. This
+          If 2025 belongs to any chatbot, it’s <Link href="/ai-customer-support" className="text-coral">RhythmiqCX</Link>. This
           isn’t just another conversational tool  it’s the
           gold standard for AI customer support. While most
           bots still rely on rigid scripts or delayed training cycles,
@@ -115,7 +115,7 @@ export default function AIChatbotBlogPage() {
           adaptive AI chatbot of the year.
         </p>
         <p>
-          The <Link href="/rhythmiq-ai-web-widget" className="text-blue-500">web widget</Link> experience is where RhythmiqCX really shines:
+          The <Link href="/rhythmiq-ai-web-widget" className="text-coral">web widget</Link> experience is where RhythmiqCX really shines:
           lightweight, lightning-fast, and completely customizable to match your
           brand. Whether your customers are on desktop or mobile, the widget
           blends in seamlessly without slowing down their journey.
@@ -156,7 +156,7 @@ export default function AIChatbotBlogPage() {
             Visit{" "}
               <a
                 href="https://rhythmiqcx.com"
-                className="text-blue-500 font-bold"
+                className="text-coral font-bold"
               >
              RhythmiqCX 
             </a>{" "}
@@ -169,7 +169,7 @@ export default function AIChatbotBlogPage() {
         <h3>2. Intercom Fin AI</h3>
   <p>
     Intercom has long been a giant in B2B customer communication, 
-    and its latest evolution, <Link href="https://fin.ai/" className="text-blue-500">Fin AI</Link>, doubles down on 
+    and its latest evolution, <Link href="https://fin.ai/" className="text-coral">Fin AI</Link>, doubles down on 
     delivering analytics-heavy support.  
     Fin isn’t just about answering questions — it’s about pulling data 
     from across your systems to give reps and customers 
@@ -206,7 +206,7 @@ export default function AIChatbotBlogPage() {
   <p>
     The bot excels at engaging prospects in real time, 
     nurturing them through conversational playbooks, 
-    and syncing with <Link href="/blog/ai-in-crm" className="text-blue-500">sales CRMs</Link>.  
+    and syncing with <Link href="/blog/ai-in-crm" className="text-coral">sales CRMs</Link>.  
     If your biggest pain point is abandoned carts or 
     low conversion rates, Drift’s AI bot will give you a boost.  
   </p>
@@ -224,7 +224,7 @@ export default function AIChatbotBlogPage() {
   </p>
   <h3>4. Zendesk AI Bot</h3>
   <p>
-    When it comes to <Link href="https://shorturl.at/uwCYf" className="text-blue-500">enterprise-grade workflows</Link>, 
+    When it comes to <Link href="https://shorturl.at/uwCYf" className="text-coral">enterprise-grade workflows</Link>, 
     Zendesk AI Bot is a natural fit.  
     Since it’s baked right into Zendesk’s already robust 
     ticketing system, it offers deep automation for teams 

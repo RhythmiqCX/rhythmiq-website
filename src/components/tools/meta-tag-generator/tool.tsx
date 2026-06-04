@@ -151,7 +151,7 @@ ${twitterImage ? `<meta property="twitter:image" content="${twitterImage}">` : "
     <div className="grid lg:grid-cols-2 gap-8">
       <div className="space-y-6">
         {/* Basic SEO */}
-        <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+        <Card className="bg-white border border-ink/10">
           <CardHeader>
             <CardTitle>Basic SEO Meta Tags</CardTitle>
             <CardDescription>
@@ -169,7 +169,7 @@ ${twitterImage ? `<meta property="twitter:image" content="${twitterImage}">` : "
                 onChange={handleChange}
                 maxLength={60}
               />
-              <p className="text-xs text-muted-foreground text-right">
+              <p className="text-xs text-ink3 text-right">
                 {values.title.length}/60 recommended
               </p>
             </div>
@@ -185,7 +185,7 @@ ${twitterImage ? `<meta property="twitter:image" content="${twitterImage}">` : "
                 maxLength={160}
                 className="resize-none h-24"
               />
-              <p className="text-xs text-muted-foreground text-right">
+              <p className="text-xs text-ink3 text-right">
                 {values.description.length}/160 recommended
               </p>
             </div>
@@ -204,7 +204,7 @@ ${twitterImage ? `<meta property="twitter:image" content="${twitterImage}">` : "
         </Card>
 
         {/* Open Graph */}
-        <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+        <Card className="bg-white border border-ink/10">
           <CardHeader>
             <CardTitle>Open Graph (Facebook, LinkedIn)</CardTitle>
             <CardDescription>
@@ -278,7 +278,7 @@ ${twitterImage ? `<meta property="twitter:image" content="${twitterImage}">` : "
         </Card>
 
         {/* Twitter */}
-        <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+        <Card className="bg-white border border-ink/10">
           <CardHeader>
             <CardTitle>Twitter Card</CardTitle>
             <CardDescription>
@@ -344,8 +344,8 @@ ${twitterImage ? `<meta property="twitter:image" content="${twitterImage}">` : "
       {/* Output Section */}
       <div className="space-y-6">
         <div className="sticky top-24">
-          <Card className="border-primary/20 bg-primary/5 backdrop-blur-sm overflow-hidden h-fit">
-            <CardHeader className="border-b border-border/10 bg-muted/20">
+          <Card className="bg-white border border-ink/10 overflow-hidden h-fit">
+            <CardHeader className="border-b border-ink/10 bg-paper2">
               <div className="flex items-center justify-between">
                 <CardTitle>Generated Code</CardTitle>
                 <div className="flex gap-2">
@@ -353,7 +353,7 @@ ${twitterImage ? `<meta property="twitter:image" content="${twitterImage}">` : "
                     variant="ghost"
                     size="icon"
                     onClick={resetForm}
-                    className="h-8 w-8 text-muted-foreground hover:text-foreground"
+                    className="h-8 w-8 text-ink3 hover:text-ink"
                     title="Reset Form"
                   >
                     <RefreshCw className="h-4 w-4" />
@@ -375,17 +375,17 @@ ${twitterImage ? `<meta property="twitter:image" content="${twitterImage}">` : "
               </div>
             </CardHeader>
             <CardContent className="p-0">
-              <pre className="p-6 overflow-x-auto text-sm font-mono text-muted-foreground bg-[#0f1117]">
+              <pre className="p-6 overflow-x-auto text-sm font-mono text-ink bg-paper2 border-t border-ink/10">
                 <code>{generatedCode}</code>
               </pre>
             </CardContent>
           </Card>
 
-          <div className="mt-8 p-6 rounded-xl border border-blue-500/20 bg-blue-500/5">
-            <h3 className="flex items-center gap-2 font-semibold text-blue-500 mb-2">
+          <div className="mt-8 p-6 rounded-xl border border-coral/20 bg-coralSoft">
+            <h3 className="flex items-center gap-2 font-semibold text-coral mb-2">
               ℹ️ SEO Tips
             </h3>
-            <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-4">
+            <ul className="space-y-2 text-sm text-ink2 list-disc pl-4">
               <li>Title should be unique and max 60 characters.</li>
               <li>
                 Meta description interacts with click-through rates (CTR). Keep

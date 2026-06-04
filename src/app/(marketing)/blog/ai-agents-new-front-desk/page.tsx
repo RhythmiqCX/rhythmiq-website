@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -98,7 +99,7 @@ export default function AIAgentsFrontDesk() {
             The Front Desk Is Quietly Becoming Software
           </h2>
 
-          <p className="text-xl text-neutral-400 italic">
+          <p className="text-xl text-ink2 italic">
             “Customers stopped tolerating friction long before businesses noticed.”
           </p>
 
@@ -143,7 +144,7 @@ export default function AIAgentsFrontDesk() {
               href="https://rhythmiqcx.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 underline font-medium"
+              className="text-coral underline font-medium"
             >
               RhythmiqCX
             </a>{" "}
@@ -157,16 +158,16 @@ export default function AIAgentsFrontDesk() {
           <img
             src="/images/blog/27-05-26.jpg"
             alt="AI voice assistant and AI receptionist system"
-            className="w-full rounded-xl border border-neutral-800"
+            className="w-full rounded-xl border border-ink/10"
           />
         </div>
       </section>
 
       {/* SECTION 1 */}
-      <hr className="border-white/10 my-20" />
+      <hr className="border-ink/10 my-20" />
 
       <section id="front-desk-dying" className="space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Front Desk Is Quietly Dying
         </h2>
 
@@ -200,7 +201,7 @@ export default function AIAgentsFrontDesk() {
           We talked about this earlier in{" "}
           <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Customer Support Is a Decision Engine Disguised as a Conversation
           </Link>
@@ -214,7 +215,7 @@ export default function AIAgentsFrontDesk() {
         id="customers-care-about-speed"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Customers Care About Speed, Not Tradition
         </h2>
 
@@ -252,7 +253,7 @@ export default function AIAgentsFrontDesk() {
   We explored this shift earlier in{" "}
   <Link
     href="/blog/what-is-ai-voice-receptionist-voice-generator"
-    className="text-blue-500 underline"
+    className="text-coral underline"
   >
     What Is an AI Voice Receptionist and How a Voice AI Generator Makes Setup Instant
   </Link>
@@ -260,33 +261,14 @@ export default function AIAgentsFrontDesk() {
 </p>
 
         {/* CTA */}
-        <div className="mt-16 rounded-3xl border border-white/10 bg-neutral-900/60 p-10">
-          <h3 className="text-2xl font-bold mb-4">
-            Want an AI receptionist that actually sounds natural?
-          </h3>
-
-          <p className="text-neutral-400 text-lg mb-8">
-            RhythmiqCX combines AI customer support, Voice AI, AI virtual
-            receptionist systems, and AI support agents into one intelligent
-            business automation platform.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-6 py-4 rounded-xl font-semibold hover:bg-neutral-200 transition"
-            >
-              Book a Live Demo
-            </a>
-
-            <Link
-              href="/"
-              className="border border-white/20 px-6 py-4 rounded-xl font-semibold hover:bg-white/5 transition"
-            >
-              Explore Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Want an AI receptionist that actually sounds natural?"
+          description="RhythmiqCX combines AI customer support, Voice AI, AI virtual receptionist systems, and AI support agents into one intelligent business automation platform."
+          primaryLabel="Book a Live Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore Platform"
+          secondaryHref="/"
+        />
       </section>
 
       {/* SECTION 3 */}
@@ -294,7 +276,7 @@ export default function AIAgentsFrontDesk() {
         id="voice-ai-infrastructure"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Voice AI Is Becoming Infrastructure
         </h2>
 
@@ -332,7 +314,7 @@ export default function AIAgentsFrontDesk() {
           We explored this earlier in{" "}
           <Link
             href="/blog/voice-ai-is-distributed"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI Is a Distributed System Wearing a Human Mask
           </Link>
@@ -347,7 +329,7 @@ export default function AIAgentsFrontDesk() {
         id="autonomous-support"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Autonomous Support Is Replacing Operational Chaos
         </h2>
 
@@ -385,7 +367,7 @@ export default function AIAgentsFrontDesk() {
           We explored this deeply in{" "}
           <Link
             href="/blog/rise-of-autonomous-support"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             The Rise of Autonomous Support
           </Link>
@@ -394,32 +376,14 @@ export default function AIAgentsFrontDesk() {
         </p>
 
         {/* CTA */}
-        <div className="mt-16 rounded-3xl border border-white/10 bg-neutral-900/60 p-10">
-          <h3 className="text-2xl font-bold mb-4">
-            Replace repetitive support work with AI agents
-          </h3>
-
-          <p className="text-neutral-400 text-lg mb-8">
-            Automate customer conversations, appointment booking, lead
-            qualification, and Voice AI workflows using RhythmiqCX.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-6 py-4 rounded-xl font-semibold hover:bg-neutral-200 transition"
-            >
-              Schedule a Demo
-            </a>
-
-            <Link
-              href="/"
-              className="border border-white/20 px-6 py-4 rounded-xl font-semibold hover:bg-white/5 transition"
-            >
-              Explore Features
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Replace repetitive support work with AI agents"
+          description="Automate customer conversations, appointment booking, lead qualification, and Voice AI workflows using RhythmiqCX."
+          primaryLabel="Schedule a Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore Features"
+          secondaryHref="/"
+        />
       </section>
 
       {/* SECTION 5 */}
@@ -427,7 +391,7 @@ export default function AIAgentsFrontDesk() {
         id="future-front-desk"
         className="mt-24 space-y-6 pb-20"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Future Front Desk Feels Invisible
         </h2>
 
@@ -464,33 +428,14 @@ export default function AIAgentsFrontDesk() {
         </p>
 
         {/* FINAL CTA */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Build an AI Front Desk Customers Actually Enjoy Using
-          </h2>
-
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            RhythmiqCX combines AI agents, AI receptionists, Voice AI, AI voice
-            assistants, AI support agents, and customer experience automation
-            into one intelligent customer communication platform.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Build an AI Front Desk Customers Actually Enjoy Using"
+          description="RhythmiqCX combines AI agents, AI receptionists, Voice AI, AI voice assistants, AI support agents, and customer experience automation into one intelligent customer communication platform."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

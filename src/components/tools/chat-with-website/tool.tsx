@@ -156,21 +156,21 @@ export default function ChatWithWebsiteTool() {
     <div className="w-full max-w-5xl mx-auto space-y-8">
       {!websiteContent ? (
         <MagicCard
-          className="p-8 md:p-12 border-2 border-border/50 transition-all duration-300 group"
-          gradientColor="rgba(59, 130, 246, 0.05)"
+          className="p-8 md:p-12 bg-white border border-ink/10 transition-all duration-300 group"
+          gradientColor="rgba(232, 100, 60, 0.05)"
         >
           <div className="flex flex-col gap-6 max-w-2xl mx-auto">
             <div className="text-center space-y-2">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Globe className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 rounded-full bg-coralSoft flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Globe className="w-8 h-8 text-coral" />
               </div>
-              <h3 className="text-2xl font-bold">Chat with any website</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-ink">Chat with any website</h3>
+              <p className="text-ink2">
                 Enter a URL below to start chatting with its content.
               </p>
             </div>
 
-            <div className="space-y-4 bg-card/50 p-6 rounded-xl border border-border/50">
+            <div className="space-y-4 bg-paper2 p-6 rounded-xl border border-ink/10">
               <div className="space-y-2">
                 <Label htmlFor="url-input">Website URL</Label>
                 <div className="relative">
@@ -184,7 +184,7 @@ export default function ChatWithWebsiteTool() {
                       if (e.key === "Enter") handleFetch();
                     }}
                   />
-                  <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                  <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink3" />
                 </div>
               </div>
 
@@ -200,7 +200,7 @@ export default function ChatWithWebsiteTool() {
                 <Button
                   onClick={handleFetch}
                   disabled={!url || isFetching}
-                  className="flex-[2] font-semibold"
+                  className="btn btn-accent flex-[2] font-semibold"
                   size="lg"
                 >
                   {isFetching ? (
@@ -253,11 +253,11 @@ export default function ChatWithWebsiteTool() {
         <div className="grid lg:grid-cols-[300px_1fr] gap-6 h-[600px]">
           {/* Sidebar / Info */}
           <div className="space-y-4 h-full flex flex-col">
-            <Card className="p-4 border-border/50 bg-secondary/20 backdrop-blur-sm">
+            <Card className="p-4 border border-ink/10 bg-white">
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3 overflow-hidden">
-                  <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex-shrink-0 flex items-center justify-center">
-                    <Globe className="w-5 h-5 text-blue-500" />
+                  <div className="w-10 h-10 rounded-lg bg-coralSoft flex-shrink-0 flex items-center justify-center">
+                    <Globe className="w-5 h-5 text-coral" />
                   </div>
                   <div className="overflow-hidden">
                     <p className="font-medium truncate text-sm" title={url}>
@@ -280,8 +280,8 @@ export default function ChatWithWebsiteTool() {
               </Button>
             </Card>
 
-            <div className="bg-primary/5 border border-primary/10 rounded-xl p-4 flex-1">
-              <h4 className="font-semibold text-primary flex items-center gap-2 mb-3">
+            <div className="bg-coralSoft border border-coral/10 rounded-xl p-4 flex-1">
+              <h4 className="font-semibold text-coral flex items-center gap-2 mb-3">
                 <Sparkles className="w-4 h-4" />
                 Suggested Questions
               </h4>
@@ -297,7 +297,7 @@ export default function ChatWithWebsiteTool() {
                     onClick={() => {
                       setInput(q);
                     }}
-                    className="text-left text-sm p-2 rounded-md hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
+                    className="text-left text-sm p-2 rounded-md hover:bg-white text-ink2 hover:text-coral transition-colors"
                   >
                     {q}
                   </button>
@@ -307,7 +307,7 @@ export default function ChatWithWebsiteTool() {
           </div>
 
           {/* Chat Interface */}
-          <Card className="flex flex-col border-border/50 shadow-xl overflow-hidden bg-background/50 backdrop-blur-md">
+          <Card className="flex flex-col border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] overflow-hidden bg-white">
             <ScrollArea className="flex-1 p-4">
               <div className="space-y-6">
                 {messages.map((m, i) => (
@@ -319,8 +319,8 @@ export default function ChatWithWebsiteTool() {
                     )}
                   >
                     {m.role === "assistant" && (
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                        <Bot className="w-4 h-4 text-primary" />
+                      <div className="w-8 h-8 rounded-full bg-coralSoft flex items-center justify-center flex-shrink-0 mt-1">
+                        <Bot className="w-4 h-4 text-coral" />
                       </div>
                     )}
 
@@ -328,8 +328,8 @@ export default function ChatWithWebsiteTool() {
                       className={cn(
                         "max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed",
                         m.role === "user"
-                          ? "bg-primary text-primary-foreground rounded-tr-sm"
-                          : "bg-muted/50 border border-border/50 rounded-tl-sm",
+                          ? "bg-coral text-white rounded-tr-sm"
+                          : "bg-paper2 border border-ink/10 text-ink rounded-tl-sm",
                       )}
                     >
                       <div className="markdown-content whitespace-pre-wrap">
@@ -347,13 +347,13 @@ export default function ChatWithWebsiteTool() {
 
                 {isGenerating && (
                   <div className="flex gap-3 justify-start">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                      <Bot className="w-4 h-4 text-primary" />
+                    <div className="w-8 h-8 rounded-full bg-coralSoft flex items-center justify-center flex-shrink-0 mt-1">
+                      <Bot className="w-4 h-4 text-coral" />
                     </div>
-                    <div className="bg-muted/50 border border-border/50 rounded-2xl rounded-tl-sm px-4 py-3 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-primary/50 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-                      <span className="w-1.5 h-1.5 bg-primary/50 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-                      <span className="w-1.5 h-1.5 bg-primary/50 rounded-full animate-bounce"></span>
+                    <div className="bg-paper2 border border-ink/10 rounded-2xl rounded-tl-sm px-4 py-3 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-coral/50 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                      <span className="w-1.5 h-1.5 bg-coral/50 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                      <span className="w-1.5 h-1.5 bg-coral/50 rounded-full animate-bounce"></span>
                     </div>
                   </div>
                 )}
@@ -361,19 +361,19 @@ export default function ChatWithWebsiteTool() {
               </div>
             </ScrollArea>
 
-            <div className="p-4 bg-background border-t border-border/50">
+            <div className="p-4 bg-white border-t border-ink/10">
               <div className="relative">
                 <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Ask a question about the website..."
-                  className="pr-12 py-6 bg-secondary/30 border-border/50 focus:bg-background transition-all"
+                  className="pr-12 py-6 bg-paper2 border-ink/10 focus:bg-white transition-all"
                   disabled={isGenerating}
                 />
                 <Button
                   size="icon"
-                  className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8"
+                  className="btn btn-accent absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8"
                   onClick={sendMessage}
                   disabled={!input.trim() || isGenerating}
                 >

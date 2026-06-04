@@ -16,19 +16,20 @@ export const metadata = generateMetadata({
     canonical: "/about-us"
   },
   openGraph: {
-    images: ["/icons/white.jpeg"],
+    images: ["/icons/og-default.png"],
     type: "website",
   },
 });
 
 export default function AboutUs() {
   return (
-    <main className="flex flex-col">
-      {/* Hero section with gradient */}
-      <section className="py-20 bg-gradient-to-b from-blue-500/20 to-background text-center px-4">
-        <div className="max-w-7xl mx-auto space-y-4">
-          <h1 className="text-5xl font-bold text-gray-200">About RhythmiqCX</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+    <div className="paper-surface bg-paper text-ink font-sans flex flex-col">
+      {/* Hero section */}
+      <section className="section-tight text-center px-4">
+        <div className="max-w-4xl mx-auto">
+          <span className="eyebrow justify-center">About us</span>
+          <h1 className="h-section mt-3">About RhythmiqCX</h1>
+          <p className="lede mt-3 max-w-2xl mx-auto">
             Helping businesses deliver world-class customer support through AI-powered automation.
           </p>
         </div>
@@ -37,7 +38,7 @@ export default function AboutUs() {
       {/* Content section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="prose prose-invert max-w-none">
+          <div className="prose prose-lg max-w-none prose-headings:font-sans prose-headings:text-ink prose-p:text-ink2 prose-li:text-ink2 prose-a:text-coral prose-a:no-underline hover:prose-a:underline">
             <p>
               At RhythmiqCX, we believe world-class customer support is the foundation of lasting business success.
               Our mission is helping organizations of all sizes deliver experiences that delight customers and
@@ -60,54 +61,49 @@ export default function AboutUs() {
       </section>
 
       {/* Internal links to products */}
-      <section className="py-16 px-4 bg-muted/5">
+      <section className="py-16 px-4 bg-paper2">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center">Our Products</h2>
+          <h2 className="h-feature mb-8 text-center text-ink">Our Products</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                href: "/ai-customer-support",
-                title: "AI Customer Support",
-                desc: "Automate tickets and boost CSAT across web, WhatsApp & more.",
-              },
-              {
-                href: "/rhythmiq-ai-web-widget",
-                title: "AI Web Widget",
-                desc: "Embed smart customer support on any website in 60 seconds.",
-              },
-              {
-                href: "/whatsapp-ai-chatbot",
-                title: "WhatsApp AI Chatbot",
-                desc: "Handle customer queries on WhatsApp Business API with AI.",
-              },
-              {
                 href: "/voice-ai",
-                title: "Voice AI Agents",
-                desc: "Deploy conversational voice agents for 24x7 support.",
+                title: "AI Phone Host",
+                desc: "Answer every call, book tables, and take orders 24/7.",
               },
               {
-                href: "/conversational-ai-chatbot",
-                title: "Conversational AI",
-                desc: "Build natural multi-turn chatbots powered by LLMs.",
+                href: "/retell-ai-alternative",
+                title: "Compare Rhythmiq",
+                desc: "See how Rhythmiq stacks up against other voice AI platforms.",
               },
               {
-                href: "/ai-chatbot-pricing",
-                title: "Pricing",
-                desc: "Simple, transparent plans. No hidden fees.",
+                href: "/contact-us",
+                title: "Talk to Sales",
+                desc: "See a live demo and find the right plan for your venue.",
+              },
+              {
+                href: "/tools",
+                title: "Free Tools",
+                desc: "Calculators and generators for AI receptionists and more.",
+              },
+              {
+                href: "/blog",
+                title: "Blog",
+                desc: "Guides and ideas on voice AI and front-of-house automation.",
               },
             ].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="block space-y-2 border p-5 rounded-xl hover:shadow-lg transition-shadow no-underline"
+                className="group block space-y-2 bg-white border border-ink/10 p-5 rounded-xl hover:shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] transition-all no-underline"
               >
-                <h3 className="font-semibold text-foreground">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
+                <h3 className="font-semibold text-ink group-hover:text-coral transition-colors">{item.title}</h3>
+                <p className="text-sm text-ink2">{item.desc}</p>
               </Link>
             ))}
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

@@ -222,15 +222,15 @@ export default function NotionToMarkdownTool() {
         {/* Input Section */}
         <div className="flex flex-col gap-4 h-full">
           <div className="flex items-center justify-between">
-            <Label className="text-base font-semibold flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-gray-800 dark:text-gray-200" />
+            <Label className="text-base font-semibold flex items-center gap-2 text-ink">
+              <BookOpen className="w-5 h-5 text-coral" />
               Notion Page URL
             </Label>
             <Button
               variant="ghost"
               size="sm"
               onClick={handleClear}
-              className="text-muted-foreground hover:text-destructive"
+              className="text-ink3 hover:text-[#C9461F]"
             >
               <Trash2 className="w-4 h-4 mr-2" />
               Clear
@@ -239,10 +239,10 @@ export default function NotionToMarkdownTool() {
 
           <div
             className={cn(
-              "relative flex-none rounded-xl border-2 transition-all bg-card overflow-hidden p-6 gap-4 flex flex-col",
+              "relative flex-none rounded-xl border transition-all bg-white overflow-hidden p-6 gap-4 flex flex-col",
               error
-                ? "border-destructive/50"
-                : "border-border hover:border-border/80 focus-within:border-primary/50",
+                ? "border-[#C9461F]/50"
+                : "border-ink/10 hover:border-ink/20 focus-within:border-coral/50",
             )}
           >
             <Label htmlFor="url-input" className="sr-only">
@@ -261,7 +261,7 @@ export default function NotionToMarkdownTool() {
             <Button
               size="lg"
               onClick={handleConvert}
-              className="w-full font-semibold"
+              className="btn btn-accent w-full font-semibold"
               disabled={loading}
             >
               {loading ? (
@@ -279,7 +279,7 @@ export default function NotionToMarkdownTool() {
           </div>
 
           {/* Info/Instructions when empty */}
-          <div className="flex-1 rounded-xl border border-dashed border-border/50 bg-muted/20 p-6 flex items-center justify-center text-muted-foreground text-center">
+          <div className="flex-1 rounded-xl border border-dashed border-ink/10 bg-paper2 p-6 flex items-center justify-center text-ink3 text-center">
             <div className="max-w-xs space-y-2">
               <BookOpen className="w-8 h-8 mx-auto opacity-50 mb-2" />
               <p className="text-sm">
@@ -290,7 +290,7 @@ export default function NotionToMarkdownTool() {
           </div>
 
           {error && (
-            <div className="flex items-center gap-2 text-destructive text-sm font-medium animate-in slide-in-from-top-2 fade-in bg-destructive/10 p-3 rounded-lg border border-destructive/20 mt-auto">
+            <div className="flex items-center gap-2 text-[#C9461F] text-sm font-medium animate-in slide-in-from-top-2 fade-in bg-[#C9461F]/10 p-3 rounded-lg border border-[#C9461F]/20 mt-auto">
               <AlertCircle className="w-4 h-4" />
               {error}
             </div>
@@ -300,8 +300,8 @@ export default function NotionToMarkdownTool() {
         {/* Output Section */}
         <div className="flex flex-col gap-4 h-full">
           <div className="flex items-center justify-between">
-            <Label className="text-base font-semibold flex items-center gap-2">
-              <FileText className="w-5 h-5 text-green-500" />
+            <Label className="text-base font-semibold flex items-center gap-2 text-ink">
+              <FileText className="w-5 h-5 text-coral" />
               Markdown Output
             </Label>
             <div className="flex gap-2">
@@ -310,7 +310,7 @@ export default function NotionToMarkdownTool() {
                   <Button variant="outline" size="sm" onClick={handleCopy}>
                     {copied ? (
                       <>
-                        <Check className="w-4 h-4 mr-2 text-green-500" />
+                        <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                         Copied
                       </>
                     ) : (
@@ -323,7 +323,7 @@ export default function NotionToMarkdownTool() {
                   <Button
                     size="sm"
                     onClick={handleDownload}
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    className="btn btn-accent"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download
@@ -333,9 +333,9 @@ export default function NotionToMarkdownTool() {
             </div>
           </div>
 
-          <div className="relative flex-1 rounded-xl border-2 border-border/50 bg-muted/30 overflow-hidden group">
+          <div className="relative flex-1 rounded-xl border border-ink/10 bg-paper2 overflow-hidden group">
             {!output ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground p-6 text-center">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-ink3 p-6 text-center">
                 <FileText className="w-12 h-12 mb-4 opacity-20 hidden lg:block" />
                 <p>Markdown content will appear here</p>
               </div>
@@ -343,7 +343,7 @@ export default function NotionToMarkdownTool() {
               <textarea
                 readOnly
                 value={output}
-                className="w-full h-full p-4 md:p-6 bg-transparent resize-none focus:outline-none font-mono text-sm leading-relaxed text-foreground/90 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
+                className="w-full h-full p-4 md:p-6 bg-transparent resize-none focus:outline-none font-mono text-sm leading-relaxed text-ink scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
               />
             )}
           </div>

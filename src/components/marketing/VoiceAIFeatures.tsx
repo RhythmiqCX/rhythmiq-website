@@ -24,37 +24,37 @@ export default function VoiceAIFeatures({
   return (
     <>
       {/* Section 1 */}
-      <section className="w-full px-6 py-16 md:py-24 bg-background/80 flex justify-center">
+      <section className="w-full px-6 py-16 md:py-24 bg-paper flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-          
+
           {/* Left Image */}
           <div className="flex justify-center items-center shrink-0">
             <img
               src={imageUrl1}
               alt="Feature Image"
-              className="rounded-2xl shadow-xl w-full max-w-[400px] h-auto"
+              className="rounded-2xl shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] w-full max-w-[400px] h-auto"
             />
           </div>
 
           {/* Right Text */}
           <div className="flex flex-col justify-center gap-4 md:items-start text-center md:text-left">
-            <p className="text-sm text-white/70 font-medium">{section1Subheading}</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">{section1Heading}</h2>
-            <p className="text-base text-white/80 max-w-lg">{section1Content}</p>
+            <p className="text-sm text-ink2 font-medium">{section1Subheading}</p>
+            <h2 className="h-feature text-ink">{section1Heading}</h2>
+            <p className="text-base text-ink2 max-w-lg">{section1Content}</p>
           </div>
         </div>
       </section>
 
       {/* Section 2 */}
       {section2 && (
-        <section className="w-full px-6 py-16 md:py-24 bg-background/80 flex justify-center">
+        <section className="w-full px-6 py-16 md:py-24 bg-paper2 flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-            
+
             {/* Left Text */}
             <div className="flex flex-col justify-center gap-4 text-center md:text-left md:order-1">
-              <p className="text-sm text-white/70 font-medium">{section2Subheading}</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white">{section2Heading}</h2>
-              <p className="text-base text-white/80 max-w-lg">{section2Content}</p>
+              <p className="text-sm text-ink2 font-medium">{section2Subheading}</p>
+              <h2 className="h-feature text-ink">{section2Heading}</h2>
+              <p className="text-base text-ink2 max-w-lg">{section2Content}</p>
             </div>
 
             {/* Right Image */}
@@ -62,7 +62,7 @@ export default function VoiceAIFeatures({
               <img
                 src={imageUrl2}
                 alt="Feature Image"
-                className="rounded-2xl shadow-xl w-full max-w-[400px] h-auto"
+                className="rounded-2xl shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] w-full max-w-[400px] h-auto"
               />
             </div>
           </div>

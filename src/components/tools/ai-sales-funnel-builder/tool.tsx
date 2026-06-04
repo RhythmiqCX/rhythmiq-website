@@ -101,15 +101,15 @@ export default function AISalesFunnelBuilderTool() {
   return (
     <div className="w-full max-w-6xl mx-auto space-y-8">
       <MagicCard
-        className="p-8 border-border/50 shadow-2xl"
-        gradientColor="rgba(239, 68, 68, 0.05)"
+        className="p-8 bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
+        gradientColor="rgba(232, 100, 60, 0.05)"
       >
         <div className="space-y-8">
           <div className="text-center md:text-left">
-            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500">
+            <h2 className="text-3xl font-bold text-ink">
               Build Your Funnel
             </h2>
-            <p className="text-muted-foreground mt-2">
+            <p className="text-ink2 mt-2">
               Enter your product details to generate a complete, high-converting
               sales funnel.
             </p>
@@ -124,7 +124,7 @@ export default function AISalesFunnelBuilderTool() {
                 placeholder="e.g., SaaS, E-commerce, Real Estate"
                 value={formData.industry}
                 onChange={handleInputChange}
-                className="bg-background/50"
+                className="bg-white"
               />
             </div>
 
@@ -136,7 +136,7 @@ export default function AISalesFunnelBuilderTool() {
                   setFormData((prev) => ({ ...prev, tone: val }))
                 }
               >
-                <SelectTrigger className="bg-background/50">
+                <SelectTrigger className="bg-white">
                   <SelectValue placeholder="Select tone" />
                 </SelectTrigger>
                 <SelectContent>
@@ -151,7 +151,7 @@ export default function AISalesFunnelBuilderTool() {
 
             <div className="space-y-2 md:col-span-2">
               <Label htmlFor="targetAudience">
-                Target Audience <span className="text-red-500">*</span>
+                Target Audience <span className="text-coral">*</span>
               </Label>
               <Input
                 id="targetAudience"
@@ -159,14 +159,14 @@ export default function AISalesFunnelBuilderTool() {
                 placeholder="e.g., Head of Customer Support at mid-size SaaS companies"
                 value={formData.targetAudience}
                 onChange={handleInputChange}
-                className="bg-background/50"
+                className="bg-white"
               />
             </div>
 
             <div className="space-y-2 md:col-span-2">
               <Label htmlFor="productDescription">
                 Product or Service Description{" "}
-                <span className="text-red-500">*</span>
+                <span className="text-coral">*</span>
               </Label>
               <Textarea
                 id="productDescription"
@@ -174,7 +174,7 @@ export default function AISalesFunnelBuilderTool() {
                 placeholder="e.g., AI customer support automation platform that resolves 50% of tickets."
                 value={formData.productDescription}
                 onChange={handleInputChange}
-                className="min-h-[100px] bg-background/50 resize-none"
+                className="min-h-[100px] bg-white resize-none"
               />
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function AISalesFunnelBuilderTool() {
           <Button
             onClick={handleGenerate}
             disabled={loading}
-            className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-red-500/20"
+            className="btn btn-accent w-full h-14 text-lg font-semibold"
           >
             {loading ? (
               <>
@@ -201,7 +201,7 @@ export default function AISalesFunnelBuilderTool() {
       {generatedContent && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-8">
           <Tabs defaultValue="landing" className="w-full space-y-6">
-            <TabsList className="grid grid-cols-2 md:grid-cols-6 bg-muted/50 p-1 min-h-[48px] h-auto">
+            <TabsList className="grid grid-cols-2 md:grid-cols-6 bg-paper2 p-1 min-h-[48px] h-auto">
               <TabsTrigger value="landing" className="flex items-center gap-2">
                 <Home className="w-4 h-4" /> Landing
               </TabsTrigger>
@@ -228,7 +228,7 @@ export default function AISalesFunnelBuilderTool() {
             {/* Landing Page Copy */}
             <TabsContent value="landing">
               {generatedContent.landingPage && (
-                <Card className="border-border/50 shadow-lg bg-background/50 backdrop-blur-sm">
+                <Card className="border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] bg-white">
                   <CardHeader className="flex flex-row items-center justify-between">
                     <div>
                       <CardTitle className="text-xl">
@@ -249,7 +249,7 @@ export default function AISalesFunnelBuilderTool() {
                       }
                     >
                       {copiedKey === "landingPage" ? (
-                        <Check className="w-4 h-4 mr-2 text-green-500" />
+                        <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                       ) : (
                         <Copy className="w-4 h-4 mr-2" />
                       )}
@@ -257,7 +257,7 @@ export default function AISalesFunnelBuilderTool() {
                     </Button>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <div className="space-y-2 text-center p-8 bg-muted/20 border-b border-border/50 rounded-t-lg">
+                    <div className="space-y-2 text-center p-8 bg-paper2 border-b border-ink/10 rounded-t-lg">
                       <h1 className="text-4xl md:text-5xl font-black">
                         {generatedContent.landingPage.headline}
                       </h1>
@@ -267,7 +267,7 @@ export default function AISalesFunnelBuilderTool() {
                     </div>
                     <div className="grid md:grid-cols-2 gap-8 pt-4">
                       <div className="space-y-4">
-                        <h3 className="text-lg font-bold text-red-500">
+                        <h3 className="text-lg font-bold text-coral">
                           Value Proposition
                         </h3>
                         <p className="text-lg font-medium leading-relaxed">
@@ -275,14 +275,14 @@ export default function AISalesFunnelBuilderTool() {
                         </p>
                       </div>
                       <div className="space-y-4">
-                        <h3 className="text-lg font-bold text-orange-500">
+                        <h3 className="text-lg font-bold text-coral">
                           Key Benefits
                         </h3>
                         <ul className="space-y-2">
                           {generatedContent.landingPage.benefits.map(
                             (benefit, idx) => (
                               <li key={idx} className="flex items-start gap-2">
-                                <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                                <Check className="w-5 h-5 text-[#1F7A4D] shrink-0 mt-0.5" />
                                 <span className="leading-relaxed">
                                   {benefit}
                                 </span>
@@ -292,8 +292,8 @@ export default function AISalesFunnelBuilderTool() {
                         </ul>
                       </div>
                     </div>
-                    <div className="pt-6 border-t border-border/50 text-center">
-                      <div className="inline-block px-8 py-4 bg-red-500 text-white font-bold text-lg rounded-lg shadow-xl shadow-red-500/20">
+                    <div className="pt-6 border-t border-ink/10 text-center">
+                      <div className="inline-block px-8 py-4 bg-coral text-white font-bold text-lg rounded-lg shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
                         {generatedContent.landingPage.cta}
                       </div>
                     </div>
@@ -306,8 +306,8 @@ export default function AISalesFunnelBuilderTool() {
             <TabsContent value="emails">
               <div className="space-y-6">
                 {generatedContent.emailSequence?.map((email, idx) => (
-                  <Card key={idx} className="border-border/50 shadow-md">
-                    <CardHeader className="flex flex-row items-center justify-between py-3 bg-muted/30 border-b border-border/50">
+                  <Card key={idx} className="border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+                    <CardHeader className="flex flex-row items-center justify-between py-3 bg-paper2 border-b border-ink/10">
                       <CardTitle className="text-base font-semibold">
                         {email.type}
                       </CardTitle>
@@ -322,7 +322,7 @@ export default function AISalesFunnelBuilderTool() {
                         }
                       >
                         {copiedKey === `email-${idx}` ? (
-                          <Check className="w-4 h-4 mr-2 text-green-500" />
+                          <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                         ) : (
                           <Copy className="w-4 h-4 mr-2" />
                         )}
@@ -330,7 +330,7 @@ export default function AISalesFunnelBuilderTool() {
                       </Button>
                     </CardHeader>
                     <CardContent className="pt-4 space-y-4">
-                      <div className="p-3 bg-muted/20 rounded-md border border-border/50">
+                      <div className="p-3 bg-paper2 rounded-md border border-ink/10">
                         <span className="font-semibold text-muted-foreground mr-2">
                           Subject:
                         </span>
@@ -351,8 +351,8 @@ export default function AISalesFunnelBuilderTool() {
             <TabsContent value="ads">
               <div className="space-y-6">
                 {generatedContent.adCopy?.map((ad, idx) => (
-                  <Card key={idx} className="border-border/50 shadow-md">
-                    <CardHeader className="flex flex-row items-center justify-between py-3 bg-muted/30 border-b border-border/50">
+                  <Card key={idx} className="border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+                    <CardHeader className="flex flex-row items-center justify-between py-3 bg-paper2 border-b border-ink/10">
                       <CardTitle className="text-base font-semibold">
                         {ad.type}
                       </CardTitle>
@@ -362,7 +362,7 @@ export default function AISalesFunnelBuilderTool() {
                         onClick={() => handleCopy(ad.copy, `ad-${idx}`)}
                       >
                         {copiedKey === `ad-${idx}` ? (
-                          <Check className="w-4 h-4 mr-2 text-green-500" />
+                          <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                         ) : (
                           <Copy className="w-4 h-4 mr-2" />
                         )}
@@ -370,7 +370,7 @@ export default function AISalesFunnelBuilderTool() {
                       </Button>
                     </CardHeader>
                     <CardContent className="pt-4">
-                      <div className="whitespace-pre-wrap leading-relaxed p-4 bg-muted/10 rounded-lg border border-border/50 text-sm md:text-base">
+                      <div className="whitespace-pre-wrap leading-relaxed p-4 bg-paper2 rounded-lg border border-ink/10 text-sm md:text-base">
                         {ad.copy}
                       </div>
                     </CardContent>
@@ -381,7 +381,7 @@ export default function AISalesFunnelBuilderTool() {
 
             {/* LinkedIn */}
             <TabsContent value="linkedin">
-              <Card className="border-border/50 shadow-lg">
+              <Card className="border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
                 <CardHeader className="flex flex-row items-center justify-between">
                   <div className="space-y-1">
                     <CardTitle className="text-xl">
@@ -399,7 +399,7 @@ export default function AISalesFunnelBuilderTool() {
                     }
                   >
                     {copiedKey === "linkedinMsg" ? (
-                      <Check className="w-4 h-4 mr-2 text-green-500" />
+                      <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                     ) : (
                       <Copy className="w-4 h-4 mr-2" />
                     )}
@@ -407,7 +407,7 @@ export default function AISalesFunnelBuilderTool() {
                   </Button>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-muted/20 p-6 rounded-lg whitespace-pre-wrap leading-relaxed border border-border/50 text-base font-medium shadow-inner">
+                  <div className="bg-paper2 p-6 rounded-lg whitespace-pre-wrap leading-relaxed border border-ink/10 text-base font-medium">
                     {generatedContent.linkedIn}
                   </div>
                 </CardContent>
@@ -416,7 +416,7 @@ export default function AISalesFunnelBuilderTool() {
 
             {/* Call Script */}
             <TabsContent value="call">
-              <Card className="border-border/50 shadow-lg">
+              <Card className="border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
                 <CardHeader className="flex flex-row items-center justify-between">
                   <div className="space-y-1">
                     <CardTitle className="text-xl">Sales Call Script</CardTitle>
@@ -435,7 +435,7 @@ export default function AISalesFunnelBuilderTool() {
                     }
                   >
                     {copiedKey === "callScript" ? (
-                      <Check className="w-4 h-4 mr-2 text-green-500" />
+                      <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                     ) : (
                       <Copy className="w-4 h-4 mr-2" />
                     )}
@@ -443,7 +443,7 @@ export default function AISalesFunnelBuilderTool() {
                   </Button>
                 </CardHeader>
                 <CardContent>
-                  <article className="prose prose-sm md:prose-base dark:prose-invert max-w-none p-6 bg-muted/10 rounded-lg border border-border/50 whitespace-pre-wrap">
+                  <article className="prose prose-sm md:prose-base prose max-w-none p-6 bg-paper2 rounded-lg border border-ink/10 whitespace-pre-wrap">
                     {generatedContent.callScript}
                   </article>
                 </CardContent>
@@ -454,9 +454,9 @@ export default function AISalesFunnelBuilderTool() {
             <TabsContent value="objections">
               <div className="grid md:grid-cols-2 gap-6">
                 {generatedContent.objectionHandling?.map((obj, idx) => (
-                  <Card key={idx} className="border-border/50 shadow-md">
-                    <CardHeader className="pb-3 border-b border-border/50">
-                      <CardTitle className="text-base text-red-500 flex items-center gap-2">
+                  <Card key={idx} className="border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+                    <CardHeader className="pb-3 border-b border-ink/10">
+                      <CardTitle className="text-base text-coral flex items-center gap-2">
                         <ShieldAlert className="w-4 h-4" />
                         {obj.objection}
                       </CardTitle>
@@ -472,7 +472,7 @@ export default function AISalesFunnelBuilderTool() {
                         onClick={() => handleCopy(obj.response, `obj-${idx}`)}
                       >
                         {copiedKey === `obj-${idx}` ? (
-                          <Check className="w-4 h-4 text-green-500" />
+                          <Check className="w-4 h-4 text-[#1F7A4D]" />
                         ) : (
                           <Copy className="w-4 h-4" />
                         )}

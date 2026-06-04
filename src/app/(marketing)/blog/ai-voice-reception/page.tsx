@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -102,7 +103,7 @@ export default function VirtualReceptionAI() {
           We talked about this in{" "}
           <Link
             href="/blog/the-first-second"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             The First 3 Seconds of a Voice Call Decide Customer Trust
           </Link>
@@ -120,7 +121,7 @@ export default function VirtualReceptionAI() {
 
       {/* Section 2 */}
       <section id="good-ai-receptionist" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Makes an AI Voice Receptionist Actually Good
         </h2>
 
@@ -142,7 +143,7 @@ export default function VirtualReceptionAI() {
           We covered this exact problem in{" "}
           <Link
             href="/blog/voice-ai-is-great"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI Is Great at FAQs and Terrible at Exceptions
           </Link>
@@ -167,7 +168,7 @@ export default function VirtualReceptionAI() {
 
       {/* Section 3 */}
       <section id="voice-context" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Voice AI Needs Context, Not Just Speech
         </h2>
 
@@ -190,7 +191,7 @@ export default function VirtualReceptionAI() {
           We explained this in{" "}
           <Link
             href="/blog/healthcare-ai-fails-on-context"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Healthcare AI Doesn't Fail on Accuracy. It Fails on Context
           </Link>
@@ -208,7 +209,7 @@ export default function VirtualReceptionAI() {
           overconfident AI is exactly what we warned about in{" "}
           <Link
             href="/blog/voice-ai-sounds"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Why Voice AI Sounds Confident Even When It Should Hesitate
           </Link>
@@ -219,7 +220,7 @@ export default function VirtualReceptionAI() {
 
       {/* Section 4 */}
       <section id="ai-replacing-frontdesk" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Why AI Voice Receptionists Are Replacing Front Desks
         </h2>
 
@@ -253,7 +254,7 @@ export default function VirtualReceptionAI() {
           Which connects to something we strongly believe:{" "}
           <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Customer Support Is a Decision Engine Disguised as a Conversation
           </Link>
@@ -270,7 +271,7 @@ export default function VirtualReceptionAI() {
 
       {/* Section 5 */}
       <section id="future-ai-reception" className="mt-24 space-y-6 pb-20">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           My Very Biased Take on the Future of AI Reception
         </h2>
 
@@ -285,7 +286,7 @@ export default function VirtualReceptionAI() {
           As we explained in{" "}
           <Link
             href="/blog/voice-ai-is-distributed"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI Is a Distributed System Wearing a Human Mask
           </Link>
@@ -314,33 +315,14 @@ export default function VirtualReceptionAI() {
           you’ve already lost them.
         </p>
 
-        {/* FINAL CTA */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            See AI Reception in Action
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            Discover how RhythmiqCX voice AI can handle calls, route customers,
-            and run your front desk automatically. Stop making your customers
-            wait in legacy IVR hell.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Demo
-            </a>
-
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="See AI Reception in Action"
+          description="Discover how RhythmiqCX voice AI can handle calls, route customers, and run your front desk automatically. Stop making your customers wait in legacy IVR hell."
+          primaryLabel="Book a Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

@@ -208,19 +208,19 @@ export default function AIReceptionistScriptGenerator() {
             key={i}
             className={`flex items-center gap-2 whitespace-nowrap ${
               step === i + 1
-                ? "text-primary"
+                ? "text-coral"
                 : step > i + 1
-                  ? "text-primary/70"
-                  : "text-muted-foreground"
+                  ? "text-coral/70"
+                  : "text-ink3"
             }`}
           >
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${
                 step === i + 1
-                  ? "border-primary bg-primary/10"
+                  ? "border-coral bg-coralSoft"
                   : step > i + 1
-                    ? "border-primary/50 bg-primary/5"
-                    : "border-muted"
+                    ? "border-coral/50 bg-coralSoft/50"
+                    : "border-ink/15"
               }`}
             >
               <s.icon className="w-4 h-4" />
@@ -232,9 +232,9 @@ export default function AIReceptionistScriptGenerator() {
         ))}
       </div>
 
-      <Card className="border-border/50 bg-card/40 backdrop-blur-sm shadow-xl">
-        <CardHeader className="border-b border-border/50 pb-6">
-          <CardTitle className="text-2xl flex items-center gap-2">
+      <Card className="border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+        <CardHeader className="border-b border-ink/10 pb-6">
+          <CardTitle className="text-2xl flex items-center gap-2 text-ink">
             {step === 1 && "Step 1: Business Profile"}
             {step === 2 && "Step 2: Key Call Scenarios"}
             {step === 3 && "Step 3: Tone & Personality"}
@@ -265,7 +265,7 @@ export default function AIReceptionistScriptGenerator() {
               </div>
               <div className="space-y-2">
                 <Label>
-                  Industry <span className="text-red-500">*</span>
+                  Industry <span className="text-coral">*</span>
                 </Label>
                 <Select
                   value={formData.industry}
@@ -328,7 +328,7 @@ export default function AIReceptionistScriptGenerator() {
                 {SCENARIO_OPTIONS.map((sce) => (
                   <div
                     key={sce.id}
-                    className="flex items-start space-x-3 p-3 rounded-lg border border-border/50 bg-muted/20 hover:bg-muted/40 transition-colors"
+                    className="flex items-start space-x-3 p-3 rounded-lg border border-ink/10 bg-paper2 hover:bg-paper3 transition-colors"
                   >
                     <Checkbox
                       id={`sce-${sce.id}`}
@@ -345,7 +345,7 @@ export default function AIReceptionistScriptGenerator() {
                   </div>
                 ))}
               </div>
-              <div className="space-y-2 pt-4 border-t border-border/50">
+              <div className="space-y-2 pt-4 border-t border-ink/10">
                 <Label>Custom Scenario (Optional)</Label>
                 <Textarea
                   placeholder="Describe a specific scenario your AI needs to handle..."
@@ -401,7 +401,7 @@ export default function AIReceptionistScriptGenerator() {
                   ].map((t) => (
                     <div
                       key={t.v}
-                      className="flex items-start space-x-3 p-4 rounded-lg border border-border/50 bg-muted/10 relative"
+                      className="flex items-start space-x-3 p-4 rounded-lg border border-ink/10 bg-paper2 relative"
                     >
                       <RadioGroupItem
                         value={t.v}
@@ -424,7 +424,7 @@ export default function AIReceptionistScriptGenerator() {
                 </RadioGroup>
               </div>
 
-              <div className="space-y-4 pt-4 border-t border-border/50">
+              <div className="space-y-4 pt-4 border-t border-ink/10">
                 <Label className="text-base">Conversational Pace</Label>
                 <Select
                   value={formData.pace}
@@ -443,7 +443,7 @@ export default function AIReceptionistScriptGenerator() {
                 </Select>
               </div>
 
-              <div className="flex items-center justify-between p-4 rounded-lg bg-muted/20 border border-border/50">
+              <div className="flex items-center justify-between p-4 rounded-lg bg-paper2 border border-ink/10">
                 <div className="space-y-0.5">
                   <Label>Include Filler Phrases</Label>
                   <p className="text-xs text-muted-foreground">
@@ -530,8 +530,8 @@ export default function AIReceptionistScriptGenerator() {
                 </div>
               </div>
 
-              <div className="space-y-4 pt-4 border-t border-border/50">
-                <div className="flex items-center justify-between p-4 rounded-lg bg-muted/20 border border-border/50 hover:bg-muted/30 transition-colors">
+              <div className="space-y-4 pt-4 border-t border-ink/10">
+                <div className="flex items-center justify-between p-4 rounded-lg bg-paper2 border border-ink/10 hover:bg-paper3 transition-colors">
                   <div className="space-y-0.5 pr-4">
                     <Label className="font-semibold text-sm">
                       Add Interruption Handling
@@ -548,7 +548,7 @@ export default function AIReceptionistScriptGenerator() {
                     }
                   />
                 </div>
-                <div className="flex items-center justify-between p-4 rounded-lg bg-muted/20 border border-border/50 hover:bg-muted/30 transition-colors">
+                <div className="flex items-center justify-between p-4 rounded-lg bg-paper2 border border-ink/10 hover:bg-paper3 transition-colors">
                   <div className="space-y-0.5 pr-4">
                     <Label className="font-semibold text-sm">
                       Add Compliance Disclaimer
@@ -575,14 +575,13 @@ export default function AIReceptionistScriptGenerator() {
               {isGenerating ? (
                 <div className="flex flex-col items-center justify-center py-20 space-y-6">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full animate-pulse" />
-                    <Loader2 className="w-12 h-12 text-primary animate-spin relative z-10" />
+                    <Loader2 className="w-12 h-12 text-coral animate-spin relative z-10" />
                   </div>
                   <div className="text-center space-y-2">
-                    <h3 className="text-xl font-semibold">
+                    <h3 className="text-xl font-semibold text-ink">
                       Crafting your script...
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-ink2">
                       Tailoring vocabulary to{" "}
                       {formData.industry || "your industry"}
                     </p>
@@ -591,36 +590,36 @@ export default function AIReceptionistScriptGenerator() {
               ) : result ? (
                 <div className="space-y-8">
                   {/* Stats Banner */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-coralSoft border border-coral/20">
                     <div className="space-y-1">
-                      <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+                      <span className="text-xs text-ink3 uppercase tracking-wider font-semibold">
                         Blocks
                       </span>
-                      <p className="font-medium">
+                      <p className="font-medium text-ink">
                         {result.blocks?.length || 0} Scenarios
                       </p>
                     </div>
                     <div className="space-y-1">
-                      <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+                      <span className="text-xs text-ink3 uppercase tracking-wider font-semibold">
                         Avg Duration
                       </span>
-                      <p className="font-medium text-emerald-500">
+                      <p className="font-medium text-[#1F7A4D]">
                         {result.usageNotes.estimatedAvgCallDuration}
                       </p>
                     </div>
                     <div className="space-y-1">
-                      <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+                      <span className="text-xs text-ink3 uppercase tracking-wider font-semibold">
                         Tone
                       </span>
-                      <p className="font-medium capitalize">
+                      <p className="font-medium capitalize text-ink">
                         {result.usageNotes.recommendedTone}
                       </p>
                     </div>
                     <div className="space-y-1">
-                      <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+                      <span className="text-xs text-ink3 uppercase tracking-wider font-semibold">
                         Status
                       </span>
-                      <p className="font-medium text-blue-500 flex items-center gap-1">
+                      <p className="font-medium text-[#1F7A4D] flex items-center gap-1">
                         <Check className="w-3.5 h-3.5" /> Deployment Ready
                       </p>
                     </div>
@@ -633,11 +632,11 @@ export default function AIReceptionistScriptGenerator() {
                       (block: any, idx: number) => (
                         <div
                           key={idx}
-                          className="rounded-xl border border-border/50 bg-card overflow-hidden"
+                          className="rounded-xl border border-ink/10 bg-white overflow-hidden"
                         >
-                          <div className="flex items-center justify-between p-4 bg-muted/30 border-b border-border/50">
-                            <h4 className="font-semibold text-foreground flex items-center gap-2">
-                              <span className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/20 text-primary text-xs font-bold">
+                          <div className="flex items-center justify-between p-4 bg-paper2 border-b border-ink/10">
+                            <h4 className="font-semibold text-ink flex items-center gap-2">
+                              <span className="flex items-center justify-center w-6 h-6 rounded-md bg-coralSoft text-coral text-xs font-bold">
                                 {idx + 1}
                               </span>
                               {block.scenarioLabel}
@@ -645,19 +644,19 @@ export default function AIReceptionistScriptGenerator() {
                             <Button
                               variant="ghost"
                               size="sm"
-                              className="h-8 hover:bg-background"
+                              className="h-8 hover:bg-paper2"
                               onClick={() =>
                                 handleCopy(block.content, block.scenarioId)
                               }
                             >
                               {copiedState === block.scenarioId ? (
-                                <Check className="w-4 h-4 text-green-500" />
+                                <Check className="w-4 h-4 text-[#1F7A4D]" />
                               ) : (
                                 <Copy className="w-4 h-4" />
                               )}
                             </Button>
                           </div>
-                          <div className="p-5 font-mono text-sm leading-relaxed whitespace-pre-wrap text-muted-foreground">
+                          <div className="p-5 font-mono text-sm leading-relaxed whitespace-pre-wrap text-ink2">
                             {block.content}
                           </div>
                         </div>
@@ -676,7 +675,7 @@ export default function AIReceptionistScriptGenerator() {
                         onClick={() => handleCopy(result.fullScript, "full")}
                       >
                         {copiedState === "full" ? (
-                          <Check className="w-4 h-4 text-green-500" />
+                          <Check className="w-4 h-4 text-[#1F7A4D]" />
                         ) : (
                           <Copy className="w-4 h-4" />
                         )}
@@ -686,7 +685,7 @@ export default function AIReceptionistScriptGenerator() {
                     <Textarea
                       value={result.fullScript}
                       readOnly
-                      className="min-h-[300px] font-mono text-sm leading-relaxed bg-muted/10 resize-y"
+                      className="min-h-[300px] font-mono text-sm leading-relaxed bg-paper2 resize-y"
                     />
                   </div>
                 </div>
@@ -695,7 +694,7 @@ export default function AIReceptionistScriptGenerator() {
           )}
         </CardContent>
 
-        <CardFooter className="flex justify-between border-t border-border/50 p-6 bg-muted/10 rounded-b-xl">
+        <CardFooter className="flex justify-between border-t border-ink/10 p-6 bg-paper2 rounded-b-xl">
           {step > 1 && step < 5 && (
             <Button variant="outline" onClick={() => setStep((s) => s - 1)}>
               <ChevronLeft className="w-4 h-4 mr-2" /> Back
@@ -709,7 +708,7 @@ export default function AIReceptionistScriptGenerator() {
           )}
           {step === 4 && (
             <Button
-              className="ml-auto bg-gradient-to-r from-primary to-indigo-600 border-0 text-white"
+              className="ml-auto bg-coral hover:bg-coral2 border-0 text-white"
               onClick={handleGenerate}
             >
               <Sparkles className="w-4 h-4 mr-2" /> Generate Script
@@ -725,18 +724,18 @@ export default function AIReceptionistScriptGenerator() {
 
       {/* Post Gen CTA */}
       {step === 5 && !isGenerating && result && (
-        <div className="mt-8 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/10 to-transparent p-8 text-center animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70 mb-3">
+        <div className="mt-8 rounded-2xl border border-ink/10 bg-coralSoft p-8 text-center animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <h2 className="text-2xl font-bold text-ink mb-3">
             Your script is ready. Now deploy it.
           </h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+          <p className="text-ink2 mb-8 max-w-xl mx-auto">
             RhythmiqCX can run this exact script on real calls — with a
             human-like voice, sub-500ms latency, and zero hold queues.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-coral text-white hover:bg-coral2"
               asChild
             >
               <a
@@ -750,7 +749,7 @@ export default function AIReceptionistScriptGenerator() {
             <Button
               size="lg"
               variant="outline"
-              className="border-border/50"
+              className="border-ink/10"
               onClick={() => setStep(1)}
             >
               <Layers className="w-4 h-4 mr-2" /> Start Over

@@ -260,7 +260,7 @@ ${result.issues.map((i) => `[${i.type.toUpperCase()}] ${i.message}`).join("\n")}
       <div className="flex flex-col gap-6">
         <div className="flex items-center justify-between">
           <Label className="text-base font-semibold flex items-center gap-2">
-            <Search className="w-5 h-5 text-blue-500" />
+            <Search className="w-5 h-5 text-coral" />
             Validate Sitemap
           </Label>
           <Button
@@ -274,7 +274,7 @@ ${result.issues.map((i) => `[${i.type.toUpperCase()}] ${i.message}`).join("\n")}
           </Button>
         </div>
 
-        <div className="bg-card rounded-xl border border-border shadow-sm p-6">
+        <div className="bg-white rounded-xl border border-ink/10 shadow-sm p-6">
           <Tabs
             defaultValue="url"
             onValueChange={setActiveTab}
@@ -351,8 +351,8 @@ ${result.issues.map((i) => `[${i.type.toUpperCase()}] ${i.message}`).join("\n")}
       {result && (
         <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-green-500" />
+            <h2 className="text-xl font-semibold flex items-center gap-2 text-ink">
+              <CheckCircle2 className="w-5 h-5 text-[#1F7A4D]" />
               Validation Results
             </h2>
             <Button variant="outline" size="sm" onClick={handleDownloadReport}>
@@ -363,7 +363,7 @@ ${result.issues.map((i) => `[${i.type.toUpperCase()}] ${i.message}`).join("\n")}
 
           <div className="grid md:grid-cols-3 gap-4">
             <div
-              className={`p-4 rounded-lg border flex flex-col items-center justify-center text-center gap-2 ${result.valid ? "bg-green-500/10 border-green-500/20 text-green-700 dark:text-green-400" : "bg-red-500/10 border-red-500/20 text-red-700 dark:text-red-400"}`}
+              className={`p-4 rounded-lg border flex flex-col items-center justify-center text-center gap-2 ${result.valid ? "bg-[#E2F1E8] border-ink/10 text-[#1F7A4D]" : "bg-[#FBE6DD] border-ink/10 text-[#C9461F]"}`}
             >
               {result.valid ? (
                 <CheckCircle2 className="w-8 h-8" />
@@ -374,33 +374,33 @@ ${result.issues.map((i) => `[${i.type.toUpperCase()}] ${i.message}`).join("\n")}
                 {result.valid ? "Valid Sitemap" : "Issues Found"}
               </div>
             </div>
-            <div className="p-4 rounded-lg border bg-card flex flex-col items-center justify-center text-center gap-1">
-              <div className="text-sm text-muted-foreground uppercase tracking-wide font-semibold">
+            <div className="p-4 rounded-lg border border-ink/10 bg-white flex flex-col items-center justify-center text-center gap-1">
+              <div className="text-sm text-ink3 uppercase tracking-wide font-semibold">
                 Type
               </div>
-              <div className="text-2xl font-bold capitalize">
+              <div className="text-2xl font-bold capitalize text-ink">
                 {result.sitemapType}
               </div>
             </div>
-            <div className="p-4 rounded-lg border bg-card flex flex-col items-center justify-center text-center gap-1">
-              <div className="text-sm text-muted-foreground uppercase tracking-wide font-semibold">
+            <div className="p-4 rounded-lg border border-ink/10 bg-white flex flex-col items-center justify-center text-center gap-1">
+              <div className="text-sm text-ink3 uppercase tracking-wide font-semibold">
                 URLs Found
               </div>
-              <div className="text-2xl font-bold">
+              <div className="text-2xl font-bold text-ink">
                 {result.urlCount.toLocaleString()}
               </div>
             </div>
           </div>
 
-          <div className="border border-border rounded-xl overflow-hidden bg-card">
-            <div className="p-4 bg-muted/30 border-b border-border font-semibold flex items-center gap-2">
+          <div className="border border-ink/10 rounded-xl overflow-hidden bg-white">
+            <div className="p-4 bg-paper2 border-b border-ink/10 font-semibold flex items-center gap-2 text-ink">
               <FileCode className="w-4 h-4" />
               Detailed Analysis
             </div>
             <div className="p-6 space-y-4">
               {result.issues.length === 0 ? (
-                <div className="text-center py-8 text-muted-foreground flex flex-col items-center gap-3">
-                  <CheckCircle2 className="w-12 h-12 text-green-500/20" />
+                <div className="text-center py-8 text-ink3 flex flex-col items-center gap-3">
+                  <CheckCircle2 className="w-12 h-12 text-[#1F7A4D]/30" />
                   <p>
                     No issues found! Your sitemap follows standard guidelines.
                   </p>
@@ -410,7 +410,7 @@ ${result.issues.map((i) => `[${i.type.toUpperCase()}] ${i.message}`).join("\n")}
                   {result.issues.map((issue, idx) => (
                     <div
                       key={idx}
-                      className={`p-3 rounded-lg border text-sm flex items-start gap-3 ${issue.type === "error" ? "bg-red-500/5 border-red-500/20 text-red-600 dark:text-red-400" : "bg-yellow-500/5 border-yellow-500/20 text-yellow-600 dark:text-yellow-400"}`}
+                      className={`p-3 rounded-lg border border-ink/10 text-sm flex items-start gap-3 ${issue.type === "error" ? "bg-[#FBE6DD] text-[#C9461F]" : "bg-paper2 text-ink2"}`}
                     >
                       {issue.type === "error" ? (
                         <XCircle className="w-5 h-5 shrink-0 mt-0.5" />
@@ -424,23 +424,23 @@ ${result.issues.map((i) => `[${i.type.toUpperCase()}] ${i.message}`).join("\n")}
               )}
             </div>
 
-            <div className="bg-muted/30 border-t border-border p-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs text-muted-foreground">
+            <div className="bg-paper2 border-t border-ink/10 p-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs text-ink2">
               <div className="flex flex-col gap-1">
-                <span className="font-semibold text-foreground">Format</span>
+                <span className="font-semibold text-ink">Format</span>
                 <span>XML 1.0</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="font-semibold text-foreground">Encoding</span>
+                <span className="font-semibold text-ink">Encoding</span>
                 <span>UTF-8</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="font-semibold text-foreground">
+                <span className="font-semibold text-ink">
                   Priority Tags
                 </span>
                 <span>{result.priorityCount} found</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="font-semibold text-foreground">
+                <span className="font-semibold text-ink">
                   LastMod Tags
                 </span>
                 <span>{result.lastModCount} found</span>

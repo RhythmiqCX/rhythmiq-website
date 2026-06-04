@@ -66,10 +66,10 @@ const AiTagalogVoiceGeneratorTool = () => {
 
   return (
     <div className="flex flex-col gap-8 max-w-4xl mx-auto">
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-xl">
+      <Card className="border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Volume2 className="w-5 h-5 text-blue-500" />
+            <Volume2 className="w-5 h-5 text-coral" />
             Tagalog AI Voice Generator
           </CardTitle>
           <CardDescription>
@@ -87,13 +87,12 @@ const AiTagalogVoiceGeneratorTool = () => {
               onChange={(e) => setText(e.target.value)}
               maxLength={500}
             />
-            <div className="text-right text-xs text-muted-foreground">{text.length} / 500</div>
+            <div className="text-right text-xs text-ink3">{text.length} / 500</div>
           </div>
 
           <Button
-            variant="default"
             size="lg"
-            className="w-full gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white border-0 shadow-md"
+            className="btn btn-accent w-full gap-2"
             onClick={handleGenerate}
             disabled={isGenerating || isLimitReached}
           >
@@ -107,7 +106,7 @@ const AiTagalogVoiceGeneratorTool = () => {
           </Button>
 
           {isLimitReached && (
-            <p className="text-sm text-red-500 text-center">
+            <p className="text-sm text-[#C9461F] text-center">
               Daily limit of 5 free generations reached. Sign up for unlimited access.
             </p>
           )}
@@ -116,8 +115,8 @@ const AiTagalogVoiceGeneratorTool = () => {
 
       {audioSrc && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <Card className="border-blue-500/20 bg-card/50 backdrop-blur-sm shadow-xl">
-            <CardHeader className="bg-blue-500/5 py-4 border-b border-blue-500/10">
+          <Card className="border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+            <CardHeader className="bg-coralSoft py-4 border-b border-ink/10">
               <CardTitle className="text-lg flex items-center justify-between">
                 <span>Generated Audio</span>
                 <Button variant="outline" size="sm" onClick={handleDownload} className="gap-2 h-8">
@@ -126,11 +125,11 @@ const AiTagalogVoiceGeneratorTool = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
-              <div className="flex flex-col items-center p-6 bg-background/50 rounded-xl border border-border/50 gap-4">
+              <div className="flex flex-col items-center p-6 bg-paper2 rounded-xl border border-ink/10 gap-4">
                 <audio ref={audioRef} controls className="w-full max-w-md h-12" src={audioSrc} autoPlay>
                   Your browser does not support the audio element.
                 </audio>
-                <p className="text-sm text-muted-foreground text-center">
+                <p className="text-sm text-ink2 text-center">
                   AI-generated Tagalog voice. Download as .wav for use in your projects.
                 </p>
               </div>

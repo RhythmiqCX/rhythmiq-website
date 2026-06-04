@@ -21,67 +21,27 @@ interface MetadataProps {
     modifiedTime?: string;
 }
 
+const DEFAULT_OG_IMAGE = "/icons/og-default.png";
+
 export const generateMetadata = ({
-    title = `Rhythmiq - AI-Powered Customer Support Agent`,
-    description = `Rhythmiq is an AI CX platform that transforms how companies interact with Customers. Leverage AI to automate support queries, create personalized AI agents, and boost productivity. Experience smarter Customer Services today.`,
+    title = `Rhythmiq: The AI Phone Host for Restaurants`,
+    description = `Rhythmiq is the AI phone host for restaurants. It answers every call, books tables, takes orders, and sounds like your best maitre d, 24/7. Flat pricing from $29 a month.`,
     icons = [
-        // Use square icon everywhere
-        {
-            rel: "icon",
-            url: "/icons/rhythmiq-icon.png",
-            sizes: "32x32",
-            type: "image/png",
-        },
-        {
-            rel: "icon",
-            url: "/icons/rhythmiq-icon.png",
-            sizes: "192x192",
-            type: "image/png",
-        },
-        {
-            rel: "icon",
-            url: "/icons/rhythmiq-icon.png",
-            sizes: "512x512",
-            type: "image/png",
-        },
-        // Apple touch icon
-        {
-            rel: "apple-touch-icon",
-            url: "/icons/rhythmiq-icon.png",
-            sizes: "180x180",
-        },
-        {
-            rel: "icon",
-            url: "/icons/rhythmiq-icon.png",
-            sizes: "16x16",
-            type: "image/png",
-        },
-        // Apple touch icon
-        {
-            rel: "apple-touch-icon",
-            url: "/icons/rhythmiq-icon.png",
-            sizes: "180x180",
-        },
-        // Android icons
-        {
-            rel: "icon",
-            url: "/icons/rhythmiq-icon.png",
-            sizes: "192x192",
-            type: "image/png",
-        },
+        { rel: "icon", url: "/icons/rhythmiq-mark-32.png", sizes: "32x32", type: "image/png" },
+        { rel: "icon", url: "/icons/rhythmiq-mark-16.png", sizes: "16x16", type: "image/png" },
+        { rel: "icon", url: "/icons/rhythmiq-mark-192.png", sizes: "192x192", type: "image/png" },
+        { rel: "icon", url: "/icons/rhythmiq-mark-512.png", sizes: "512x512", type: "image/png" },
+        { rel: "apple-touch-icon", url: "/icons/rhythmiq-mark-180.png", sizes: "180x180" },
     ],
     noIndex = false,
     keywords = [
-        "AI customer support",
-        "whatsapp customer support",
-        "whatsapp chatbot india",
-        "AI chat bot",
-        "AI chatbot india",
-        "customer service bot",
-        "AI bot for customer support",
-        "marketing workflow",
-        "AI customer service",
-        "AI bot providers india"
+        "AI phone host for restaurants",
+        "restaurant voice AI",
+        "AI receptionist for restaurants",
+        "AI answering service restaurant",
+        "restaurant reservation AI",
+        "AI phone answering restaurant",
+        "voice AI for restaurants",
     ],
     author = process.env.NEXT_PUBLIC_AUTHOR_NAME || "Rhythmiq",
     type = "website",
@@ -89,32 +49,52 @@ export const generateMetadata = ({
     openGraph,
 }: MetadataProps = {}): Metadata => {
     const metadataBase = new URL(process.env.SITE_URL || "https://rhythmiqcx.com");
+    const siteName = process.env.NEXT_PUBLIC_APP_NAME || "Rhythmiq";
+
+    const canonical = alternates?.canonical
+        ? new URL(alternates.canonical, metadataBase).toString()
+        : undefined;
+
+    const ogImages = (openGraph?.images ?? [DEFAULT_OG_IMAGE]).map((img) =>
+        new URL(img, metadataBase).toString(),
+    );
 
     return {
         metadataBase,
         title: {
-            template: `%s | ${process.env.NEXT_PUBLIC_APP_NAME || "Rhythmiq"}`,
-            default: title
+            template: `%s | ${siteName}`,
+            default: title,
         },
         description,
         keywords,
         authors: [{ name: author }],
         creator: author,
-        publisher: process.env.NEXT_PUBLIC_APP_NAME || "Rhythmiq",
+        publisher: siteName,
         formatDetection: {
             email: false,
             address: false,
             telephone: false,
         },
         icons,
-        alternates: alternates ? {
-            canonical: alternates.canonical ? new URL(alternates.canonical, metadataBase).toString() : undefined
-        } : undefined,
-        openGraph: openGraph ? {
-            images: openGraph.images?.map(img => new URL(img, metadataBase).toString()),
-            type: openGraph.type as "website" | "article" | "profile",
-            publishedTime: openGraph.publishedTime,
-            authors: openGraph.authors,
-        } : undefined,
+        robots: noIndex
+            ? { index: false, follow: false }
+            : { index: true, follow: true },
+        alternates: canonical ? { canonical } : undefined,
+        openGraph: {
+            title,
+            description,
+            siteName,
+            url: canonical ?? metadataBase.toString(),
+            type: (openGraph?.type as "website" | "article" | "profile") ?? type,
+            images: ogImages,
+            publishedTime: openGraph?.publishedTime,
+            authors: openGraph?.authors,
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: ogImages,
+        },
     };
 };

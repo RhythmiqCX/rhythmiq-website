@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title: "Healthcare AI Doesn’t Fail on Accuracy. It Fails on Context.",
@@ -120,7 +121,7 @@ export default function HealthcareAIContextBlog() {
         illusion apart in{" "}
         <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Customer Support is a Decision Engine disguised as a conversation
           </Link>.
@@ -148,7 +149,7 @@ export default function HealthcareAIContextBlog() {
       <p>We already broke this down in{" "}
          <Link
              href="/blog/the-hidden-state-problem-in-voice-ai"
-          className="text-blue-600 hover:text-blue-400 transition-colors">
+          className="text-coral hover:text-coral transition-colors">
             The Hidden State Problem in Voice AI Conversations
           </Link>
   
@@ -175,13 +176,13 @@ export default function HealthcareAIContextBlog() {
         That’s why voice hallucinations are so dangerous especially in
         healthcare. We warned about this in{" "}
          <Link href="/blog/voice-ai-hallucinations"
-          className="text-blue-600 hover:text-blue-400 transition-colors">
+          className="text-coral hover:text-coral transition-colors">
             Voice AI Hallucinations Are More Dangerous Than Text Ones{" "}
           </Link>
         and earlier when we explained why{" "}
         <Link
           href="/blog/voice-ai-sounds"
-          className="text-blue-500 underline"
+          className="text-coral underline"
         >
           Voice AI Sounds Confident Even When It Should Hesitate
         </Link>
@@ -230,43 +231,22 @@ export default function HealthcareAIContextBlog() {
         more intentional, and willing to stop. We’ve said this before in{" "}
 
          <Link href="/blog/ai-that-knows"
-          className="text-blue-600 hover:text-blue-400 transition-colors">
+          className="text-coral hover:text-coral transition-colors">
             AI That Knows When to Quit
           </Link>
         
       </p>
 
-      <div className="mt-14 rounded-3xl border-2 border-white/10 bg-background px-10 py-12">
-        <div className="max-w-2xl">
-          <h2 className="text-2xl font-semibold text-white mb-4">
-            Voice AI breaks when it starts lying
-          </h2>
+      <BlogCTA
+        title="Voice AI breaks when it starts lying"
+        description="RhythmiqCX is built to prevent hallucinations by design. We prioritize strict state management, low-latency interruptions, and concise answers that build trust rather than destroy it."
+        primaryLabel="Book a live demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the product"
+        secondaryHref="https://rhythmiqcx.com"
+      />
 
-          <p className="text-neutral-300 mb-6 leading-relaxed">
-            RhythmiqCX is built to prevent hallucinations by design. We prioritize
-            strict state management, low-latency interruptions, and concise
-            answers that build trust rather than destroy it.
-          </p>
-
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-medium text-black hover:bg-neutral-200 transition"
-            >
-              Book a live demo
-            </a>
-
-            <Link
-              href="https://rhythmiqcx.com"
-              className="inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-medium text-white hover:border-white hover:bg-white/5 transition"
-            >
-              Explore the product
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <p className="text-gray-500 italic mt-10">
+      <p className="text-ink3 italic mt-10">
         <strong>Team RhythmiqCX</strong>
         <br />
         Building voice AI that survives the real world.

@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -97,7 +98,7 @@ export default function RestaurantVoiceAIBookings() {
           Restaurants Don't Have A Reservation Problem. They Have A Missed Call Problem.
         </h2>
 
-        <p className="text-xl text-neutral-400 italic">
+        <p className="text-xl text-ink2 italic">
           "The phone rings during dinner rush. Nobody answers. A reservation disappears."
         </p>
 
@@ -137,7 +138,7 @@ export default function RestaurantVoiceAIBookings() {
           We recently discussed a similar idea in{" "}
           <Link
             href="/blog/how-ai-agents-help-small-businesses-compete-with-larger-companies"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             How AI Agents Help Small Businesses Compete With Larger Companies
           </Link>
@@ -152,11 +153,11 @@ export default function RestaurantVoiceAIBookings() {
         </p>
       </section>
 
-      <hr className="border-white/10 my-20" />
+      <hr className="border-ink/10 my-20" />
 
       {/* SECTION 1 */}
       <section id="missed-call-problem" className="space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Every Missed Call Is Potentially A Lost Table.
         </h2>
 
@@ -193,7 +194,7 @@ export default function RestaurantVoiceAIBookings() {
           We've seen the same pattern across small businesses in{" "}
           <Link
             href="/blog/ai-agents-for-small-businesses-2026"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI Agents for Small Businesses: What Actually Matters in 2026
           </Link>
@@ -201,41 +202,21 @@ export default function RestaurantVoiceAIBookings() {
           that answer first increasingly win.
         </p>
       </section>
-            {/* CTA */}
-      <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">
-          How Many Reservations Are You Missing Right Now?
-        </h2>
-
-        <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-          See how RhythmiqCX helps restaurants answer every call, capture more
-          reservations, and stay available 24/7 with AI voice assistants that
-          never miss an opportunity.
-        </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <a
-            href="https://calendly.com/ray-rhythmiqcx/30min"
-            className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-          >
-            Book a Live Demo
-          </a>
-
-          <Link
-            href="/"
-            className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-          >
-            Explore the Platform
-          </Link>
-        </div>
-      </div>
+      <BlogCTA
+        title="How Many Reservations Are You Missing Right Now?"
+        description="See how RhythmiqCX helps restaurants answer every call, capture more reservations, and stay available 24/7 with AI voice assistants that never miss an opportunity."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
 
       {/* SECTION 2 */}
       <section
         id="hiring-doesnt-scale"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Hiring More Staff Doesn't Actually Solve The Problem.
         </h2>
 
@@ -264,7 +245,7 @@ export default function RestaurantVoiceAIBookings() {
           discussed a similar idea in{" "}
           <Link
             href="/blog/ai-agents-vs-traditional-automation-whats-the-difference"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI Agents vs Traditional Automation: What's the Difference?
           </Link>
@@ -279,7 +260,7 @@ export default function RestaurantVoiceAIBookings() {
         id="voice-ai-captures-bookings"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Voice AI Captures Reservations Even When Nobody Can Answer.
         </h2>
 
@@ -335,7 +316,7 @@ export default function RestaurantVoiceAIBookings() {
         id="restaurant-leverage"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           More Reservations Come From Better Availability, Not Bigger Teams.
         </h2>
 
@@ -371,7 +352,7 @@ export default function RestaurantVoiceAIBookings() {
           We explored a similar theme in{" "}
           <Link
             href="/blog/how-ai-agents-help-small-businesses-compete-with-larger-companies"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             How AI Agents Help Small Businesses Compete With Larger Companies
           </Link>
@@ -391,7 +372,7 @@ export default function RestaurantVoiceAIBookings() {
         id="future-of-restaurant-bookings"
         className="mt-24 space-y-6 pb-20"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Future Of Restaurant Reservations Is Immediate Response.
         </h2>
 
@@ -437,39 +418,19 @@ export default function RestaurantVoiceAIBookings() {
           not later.
         </p>
 
-        <p className="text-xl italic text-neutral-300">
+        <p className="text-xl italic text-ink2">
           The restaurants that answer first will increasingly be the restaurants
           that fill tables first.
         </p>
 
-        {/* FINAL CTA */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Never Miss Another Reservation Opportunity
-          </h2>
-
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            See how RhythmiqCX helps restaurants answer calls instantly, capture
-            reservations automatically, and deliver exceptional customer
-            experiences with AI voice assistants and Voice AI technology.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Never Miss Another Reservation Opportunity"
+          description="See how RhythmiqCX helps restaurants answer calls instantly, capture reservations automatically, and deliver exceptional customer experiences with AI voice assistants and Voice AI technology."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

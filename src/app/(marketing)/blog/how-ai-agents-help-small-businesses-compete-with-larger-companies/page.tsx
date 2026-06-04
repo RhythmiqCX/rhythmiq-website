@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -99,7 +100,7 @@ export default function HowAIAgentsHelpSmallBusinessesCompete() {
           Small Businesses Have Been Fighting With One Hand Tied Behind Their Back
         </h2>
 
-        <p className="text-xl text-neutral-400 italic">
+        <p className="text-xl text-ink2 italic">
           "For the first time in a long time, small businesses have access to the same responsiveness advantage that used to belong only to large enterprises."
         </p>
 
@@ -134,7 +135,7 @@ export default function HowAIAgentsHelpSmallBusinessesCompete() {
           We recently discussed this in{" "}
           <Link
             href="/blog/ai-agents-new-front-desk"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Why AI Agents Are Becoming the New Front Desk for Modern Businesses
           </Link>
@@ -152,11 +153,11 @@ export default function HowAIAgentsHelpSmallBusinessesCompete() {
         </p>
       </section>
 
-      <hr className="border-white/10 my-20" />
+      <hr className="border-ink/10 my-20" />
 
       {/* SECTION 1 */}
       <section id="unfair-advantage" className="space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Large Companies Had Scale. Small Businesses Had To Work Harder.
         </h2>
 
@@ -198,41 +199,21 @@ export default function HowAIAgentsHelpSmallBusinessesCompete() {
           happening in business right now.
         </p>
       </section>
-            {/* CTA */}
-      <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">
-          What If Every Customer Got An Immediate Response?
-        </h2>
-
-        <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-          See how RhythmiqCX helps small businesses answer calls, qualify leads,
-          and stay responsive 24/7 with AI voice assistants and intelligent AI
-          agents.
-        </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <a
-            href="https://calendly.com/ray-rhythmiqcx/30min"
-            className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-          >
-            Book a Live Demo
-          </a>
-
-          <Link
-            href="/"
-            className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-          >
-            Explore the Platform
-          </Link>
-        </div>
-      </div>
+      <BlogCTA
+        title="What If Every Customer Got An Immediate Response?"
+        description="See how RhythmiqCX helps small businesses answer calls, qualify leads, and stay responsive 24/7 with AI voice assistants and intelligent AI agents."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
 
       {/* SECTION 2 */}
       <section
         id="responsiveness"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Responsiveness Is Becoming the Ultimate Competitive Advantage
         </h2>
 
@@ -281,7 +262,7 @@ export default function HowAIAgentsHelpSmallBusinessesCompete() {
           We touched on this idea earlier in{" "}
           <Link
             href="/blog/how-ai-save-time"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             How AI Saves You 10+ Hours a Week
           </Link>
@@ -295,7 +276,7 @@ export default function HowAIAgentsHelpSmallBusinessesCompete() {
         id="voice-ai-force-multiplier"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Voice AI Has Quietly Become a Force Multiplier
         </h2>
 
@@ -354,7 +335,7 @@ export default function HowAIAgentsHelpSmallBusinessesCompete() {
         id="leverage-not-scale"
         className="mt-24 space-y-6"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Large Companies Have Scale. Small Businesses Now Have Leverage.
         </h2>
 
@@ -404,14 +385,14 @@ export default function HowAIAgentsHelpSmallBusinessesCompete() {
           We've seen similar patterns in{" "}
           <Link
             href="/blog/ai-chatbot-roi"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             AI Chatbot ROI for Small Businesses
           </Link>{" "}
           and{" "}
           <Link
             href="/blog/autonomous-customer-support"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Autonomous Customer Support
           </Link>
@@ -426,7 +407,7 @@ export default function HowAIAgentsHelpSmallBusinessesCompete() {
         id="future-belongs-to-fast"
         className="mt-24 space-y-6 pb-20"
       >
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Future Belongs To Businesses That Respond First
         </h2>
 
@@ -478,41 +459,20 @@ export default function HowAIAgentsHelpSmallBusinessesCompete() {
           the direction of travel is becoming increasingly clear.
         </p>
 
-        <p className="text-xl italic text-neutral-300">
+        <p className="text-xl italic text-ink2">
           The future won't belong to the biggest businesses. It will belong to
           the businesses that respond fastest, remove friction best, and stay
           available when customers need them most.
         </p>
 
-        {/* FINAL CTA */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Compete Like A Bigger Company Without Hiring A Bigger Team
-          </h2>
-
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            See how RhythmiqCX helps small businesses answer calls instantly,
-            qualify leads automatically, and deliver enterprise-level customer
-            experiences using AI voice assistants, Voice AI, and autonomous AI
-            agents.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Technical Demo
-            </a>
-
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Compete Like A Bigger Company Without Hiring A Bigger Team"
+          description="See how RhythmiqCX helps small businesses answer calls instantly, qualify leads automatically, and deliver enterprise-level customer experiences using AI voice assistants, Voice AI, and autonomous AI agents."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

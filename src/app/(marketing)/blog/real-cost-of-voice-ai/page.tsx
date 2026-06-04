@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
 
@@ -128,7 +129,7 @@ export default function RealCostOfVoiceAI() {
 
         <p>
           If you’ve read{" "}
-          <Link href="/blog/voice-ai-needs" className="text-blue-600">
+          <Link href="/blog/voice-ai-needs" className="text-coral">
             Why Voice AI Needs Fewer Words Than Chat AI
           </Link>,
           you already know this truth: latency over voice feels personal. The
@@ -161,7 +162,7 @@ export default function RealCostOfVoiceAI() {
 
         <p>
           This connects directly to{" "}
-          <Link href="/blog/state-management-in-voice-ai" className="text-blue-600">
+          <Link href="/blog/state-management-in-voice-ai" className="text-coral">
             State Management in Voice AI Is a Nightmare
           </Link>.
           Most failures don’t show up in logs as errors. They show up as
@@ -189,7 +190,7 @@ export default function RealCostOfVoiceAI() {
 
         <p>
           This is exactly why{" "}
-          <Link href="/blog/always-available-ai" className="text-blue-600">
+          <Link href="/blog/always-available-ai" className="text-coral">
             The Problem With Always Available AI
           </Link>{" "}
           still shapes how we build. Every second your AI is "awake" without
@@ -218,11 +219,11 @@ export default function RealCostOfVoiceAI() {
 
   <p>
     Lessons from{" "}
-    <Link href="/blog/ai-that-knows" className="text-blue-600">
+    <Link href="/blog/ai-that-knows" className="text-coral">
       AI That Knows When to Quit
     </Link>{" "}
     and{" "}
-    <Link href="/blog/cx-not-conversations" className="text-blue-600">
+    <Link href="/blog/cx-not-conversations" className="text-coral">
       CX Is Not Conversations It Is Micro Decisions
     </Link>{" "}
     changed how we build.
@@ -231,37 +232,16 @@ export default function RealCostOfVoiceAI() {
   </p>
 
   {/* WEBSITE-STYLE CTA SECTION */}
- <div className="mt-14 rounded-3xl border border-white/10 bg-background from-neutral-900 to-neutral-800 px-10 py-12">
-  <div className="max-w-2xl">
-    <h3 className="text-2xl font-semibold text-white mb-4">
-      Voice AI breaks when design ignores reality
-    </h3>
+  <BlogCTA
+    title="Voice AI breaks when design ignores reality"
+    description="RhythmiqCX is built for real conversations where users interrupt, pause, change their minds, and stay silent. We optimize for cost control, low-latency decisions, and graceful failure."
+    primaryLabel="Book a live demo"
+    primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+    secondaryLabel="Explore the product"
+    secondaryHref="https://rhythmiqcx.com"
+  />
 
-    <p className="text-neutral-300 mb-6 leading-relaxed">
-      RhythmiqCX is built for real conversations where users interrupt,
-      pause, change their minds, and stay silent.
-      We optimize for cost control, low-latency decisions, and graceful failure.
-    </p>
-
-    <div className="flex flex-wrap gap-4">
-      <a
-        href="https://calendly.com/ray-rhythmiqcx/30min"
-        className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-medium text-black hover:bg-neutral-200 transition"
-      >
-        Book a live demo
-      </a>
-
-      <Link
-        href="https://rhythmiqcx.com"
-        className="inline-flex items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-medium text-white hover:border-white hover:bg-white/5 transition"
-      >
-        Explore the product
-      </Link>
-    </div>
-  </div>
-</div>
-
-  <p className="text-gray-500 italic mt-10">
+  <p className="text-ink3 italic mt-10">
     <strong>Team RhythmiqCX</strong>
     <br />
     Building voice AI that survives the real world.

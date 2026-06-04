@@ -1,0 +1,15 @@
+export { default as Hero } from "./hero";
+export { default as ProductShowcase } from "./product-showcase";
+export { default as LogoCloud } from "./logo-cloud";
+export { default as CompleteSolution } from "./complete-solution";
+export { default as AIWorkspace } from "./ai-workspace";
+export { default as TwoUpCards } from "./two-up-cards";
+export { default as SelfImproving } from "./self-improving";
+export { default as WorldClassAgent } from "./world-class-agent";
+export { default as Testimonial } from "./testimonial";
+export { default as FullyFeatured } from "./fully-featured";
+export { default as ResolveFaster } from "./resolve-faster";
+export { default as Omnichannel } from "./omnichannel";
+export { default as GuestIntelligence } from "./guest-intelligence";
+export { default as Integrations } from "./integrations";
+export { default as FinalCTA } from "./final-cta";

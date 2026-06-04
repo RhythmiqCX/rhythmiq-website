@@ -171,9 +171,9 @@ export default function AiNotesGeneratorTool() {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full min-h-[600px]">
       {/* LEFT: Input Area */}
       <div className="flex flex-col gap-6">
-        <Card className="border-border/50 shadow-sm h-full flex flex-col">
+        <Card className="border border-ink/10 bg-white shadow-sm h-full flex flex-col">
           <CardHeader>
-            <CardTitle className="text-xl">Content Input</CardTitle>
+            <CardTitle className="text-xl text-ink">Content Input</CardTitle>
             <CardDescription>
               Paste your lecture, transcript, or raw text here.
             </CardDescription>
@@ -216,7 +216,7 @@ export default function AiNotesGeneratorTool() {
             </div>
 
             <Button
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+              className="w-full bg-coral text-white hover:bg-coral2"
               size="lg"
               disabled={isGenerating || content.length < 50 || isLimitReached}
               onClick={handleGenerate}
@@ -236,7 +236,7 @@ export default function AiNotesGeneratorTool() {
               )}
             </Button>
             {isLimitReached && (
-              <p className="text-xs text-red-500 text-center mt-2">
+              <p className="text-xs text-[#C9461F] text-center mt-2">
                 You have reached your daily limit of 5 generations for this
                 tool.
               </p>
@@ -248,7 +248,7 @@ export default function AiNotesGeneratorTool() {
       {/* RIGHT: Output Area */}
       <div className="flex flex-col gap-6">
         <div className="flex items-center justify-between">
-          <h3 className="text-xl font-heading font-semibold">Your Notes</h3>
+          <h3 className="text-xl font-heading font-semibold text-ink">Your Notes</h3>
           <div className="flex gap-2">
             <Button
               variant="outline"
@@ -267,7 +267,7 @@ export default function AiNotesGeneratorTool() {
             >
               {hasCopied ? (
                 <>
-                  <Check className="w-4 h-4 mr-2 text-green-500" />
+                  <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                   Copied
                 </>
               ) : (
@@ -280,20 +280,20 @@ export default function AiNotesGeneratorTool() {
           </div>
         </div>
 
-        <Card className="flex-1 border-border/50 bg-card overflow-hidden min-h-[500px] flex flex-col">
+        <Card className="flex-1 border border-ink/10 bg-white overflow-hidden min-h-[500px] flex flex-col">
           {generatedNotes ? (
-            <div className="flex-1 p-8 overflow-y-auto max-h-[700px] prose prose-sm md:prose-base dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-foreground/90 prose-li:text-foreground/90 prose-strong:text-foreground prose-strong:font-bold">
+            <div className="flex-1 p-8 overflow-y-auto max-h-[700px] prose prose-sm md:prose-base max-w-none prose-headings:text-ink prose-p:text-ink2 prose-li:text-ink2 prose-strong:text-ink prose-strong:font-bold">
               <div
                 dangerouslySetInnerHTML={{ __html: generatedNotes.content }}
               />
             </div>
           ) : (
-            <div className="flex-1 flex flex-col items-center justify-center text-muted-foreground bg-muted/10 p-8 text-center">
-              <NotebookPen className="w-16 h-16 mb-4 opacity-20 text-foreground" />
-              <h4 className="text-lg font-semibold mb-2 text-foreground">
+            <div className="flex-1 flex flex-col items-center justify-center text-ink3 bg-paper2 p-8 text-center">
+              <NotebookPen className="w-16 h-16 mb-4 opacity-20 text-ink" />
+              <h4 className="text-lg font-semibold mb-2 text-ink">
                 No Notes Yet
               </h4>
-              <p className="max-w-[300px] text-muted-foreground/80">
+              <p className="max-w-[300px] text-ink3">
                 Paste your content on the left and select a style to generate
                 clear, structured notes.
               </p>

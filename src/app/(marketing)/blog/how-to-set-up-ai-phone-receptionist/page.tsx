@@ -1,4 +1,5 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
+import BlogCTA from "@/components/marketing/blog-cta";
 import { generateMetadata } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
 import Link from "next/link";
@@ -207,7 +208,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
           <strong>AI phone receptionist setup</strong> process honest time
           estimates for each, and what you&apos;ll have at the end. We&apos;re
           using{" "}
-          <Link href="/voice-ai" className="text-blue-400 underline">
+          <Link href="/voice-ai" className="text-coral underline">
             RhythmiqCX Voice AI
           </Link>{" "}
           as the example throughout because it is the only platform with
@@ -225,12 +226,12 @@ export default function HowToSetUpAIPhoneReceptionist() {
           ].map(({ num, label }) => (
             <div
               key={label}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center"
+              className="rounded-2xl border border-ink/10 bg-white p-5 text-center"
             >
-              <span className="font-mono text-2xl font-bold text-yellow-400 block leading-none">
+              <span className="font-mono text-2xl font-bold text-coral block leading-none">
                 {num}
               </span>
-              <span className="text-neutral-500 text-xs mt-2 block leading-snug">
+              <span className="text-ink3 text-xs mt-2 block leading-snug">
                 {label}
               </span>
             </div>
@@ -239,9 +240,9 @@ export default function HowToSetUpAIPhoneReceptionist() {
       </section>
 
       <section id="prerequisites" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Before You Start{" "}
-          <span className="text-neutral-500 font-normal text-lg ml-2">
+          <span className="text-ink3 font-normal text-lg ml-2">
             ~5 min
           </span>
         </h2>
@@ -276,12 +277,12 @@ export default function HowToSetUpAIPhoneReceptionist() {
           ].map(({ icon, title, body }) => (
             <div
               key={title}
-              className="flex gap-2 rounded-2xl border border-white/10 bg-white/5 p-2"
+              className="flex gap-2 rounded-2xl border border-ink/10 bg-white p-2"
             >
               <span className="text-2xl shrink-0 mt-12">{icon}</span>
               <div className="space-y-1">
-                <h3 className="text-white font-semibold text-sm">{title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <h3 className="text-ink font-semibold text-sm">{title}</h3>
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
               </div>
@@ -294,9 +295,9 @@ export default function HowToSetUpAIPhoneReceptionist() {
       <section id="choose-platform" className="mt-24 space-y-6">
         <div className="flex items-center gap-3">
           <div>
-            <h2 className="text-3xl font-semibold text-white">
+            <h2 className="text-3xl font-semibold text-ink">
               Choose Your Platform{" "}
-              <span className="text-neutral-500 font-normal text-lg ml-2">
+              <span className="text-ink3 font-normal text-lg ml-2">
                 ~10 min
               </span>
             </h2>
@@ -323,8 +324,8 @@ export default function HowToSetUpAIPhoneReceptionist() {
             "A knowledge base upload system  not just a static script",
             "Smart escalation  captures callbacks when the AI doesn't know an answer",
           ].map((item) => (
-            <li key={item} className="flex gap-3 text-neutral-300 text-sm">
-              <span className="text-green-400 shrink-0 mt-0.5">✓</span>
+            <li key={item} className="flex gap-3 text-ink2 text-sm">
+              <span className="text-coral shrink-0 mt-0.5">✓</span>
               {item}
             </li>
           ))}
@@ -332,7 +333,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
 
         <p>
           Go to{" "}
-          <Link href="/voice-ai" className="text-blue-400 underline">
+          <Link href="/voice-ai" className="text-coral underline">
             rhythmiqcx.com/voice-ai
           </Link>{" "}
           and create your account. The signup flow takes under 3 minutes.
@@ -343,7 +344,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
           natively trained on Indian-English phonetics.
         </p>
 
-        <p className="text-neutral-500 text-sm">
+        <p className="text-ink3 text-sm">
           ⏱ Time check: You should be inside the dashboard within 10 minutes of
           starting Step 1.
         </p>
@@ -353,9 +354,9 @@ export default function HowToSetUpAIPhoneReceptionist() {
       <section id="configure-persona" className="mt-24 space-y-6">
         <div className="flex items-center gap-3">
           <div>
-            <h2 className="text-3xl font-semibold text-white">
+            <h2 className="text-3xl font-semibold text-ink">
               Configure Your AI Persona &amp; Greeting{" "}
-              <span className="text-neutral-500 font-normal text-lg ml-2">
+              <span className="text-ink3 font-normal text-lg ml-2">
                 ~10 min
               </span>
             </h2>
@@ -371,9 +372,9 @@ export default function HowToSetUpAIPhoneReceptionist() {
         <p>Three things to configure at this stage:</p>
 
         <div className="space-y-4">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-2">
-            <h3 className="text-white font-semibold">AI Name &amp; Identity</h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+          <div className="rounded-2xl border border-ink/10 bg-white p-5 space-y-2">
+            <h3 className="text-ink font-semibold">AI Name &amp; Identity</h3>
+            <p className="text-ink2 text-sm leading-relaxed">
               Give the AI a name not a robotic designation, a real-sounding
               name. Something like &ldquo;Priya&rdquo; or &ldquo;Sam&rdquo; or
               whatever fits your brand tone. The AI introduces itself by this
@@ -381,9 +382,9 @@ export default function HowToSetUpAIPhoneReceptionist() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-2">
-            <h3 className="text-white font-semibold">Opening Greeting</h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+          <div className="rounded-2xl border border-ink/10 bg-white p-5 space-y-2">
+            <h3 className="text-ink font-semibold">Opening Greeting</h3>
+            <p className="text-ink2 text-sm leading-relaxed">
               Write your greeting script in plain English. A good template:{" "}
               <em>
                 &ldquo;Hi, you&apos;ve reached [Business Name]. [AI Name] here
@@ -394,9 +395,9 @@ export default function HowToSetUpAIPhoneReceptionist() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-2">
-            <h3 className="text-white font-semibold">Tone &amp; Pace</h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+          <div className="rounded-2xl border border-ink/10 bg-white p-5 space-y-2">
+            <h3 className="text-ink font-semibold">Tone &amp; Pace</h3>
+            <p className="text-ink2 text-sm leading-relaxed">
               Choose a tone that matches your business warm and conversational
               for a service business, professional and direct for a financial or
               legal firm. RhythmiqCX lets you set pace (words per minute) and
@@ -406,7 +407,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
           </div>
         </div>
 
-        <p className="text-neutral-500 text-sm">
+        <p className="text-ink3 text-sm">
           ⏱ Time check: Persona configuration should take no more than 10
           minutes. If you&apos;re spending more time than that, you&apos;re
           over-engineering the greeting callers care about speed and
@@ -418,9 +419,9 @@ export default function HowToSetUpAIPhoneReceptionist() {
       <section id="build-knowledge-base" className="mt-24 space-y-6">
         <div className="flex items-center gap-3">
           <div>
-            <h2 className="text-3xl font-semibold text-white">
+            <h2 className="text-3xl font-semibold text-ink">
               Build Your Knowledge Base{" "}
-              <span className="text-neutral-500 font-normal text-lg ml-2">
+              <span className="text-ink3 font-normal text-lg ml-2">
                 ~15 min
               </span>
             </h2>
@@ -439,15 +440,15 @@ export default function HowToSetUpAIPhoneReceptionist() {
           categories below. Aim for 10–15 Q&amp;As total at minimum.
         </p>
 
-        <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.02]">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10 bg-white">
           <table className="w-full text-sm text-left">
-            <thead className="text-neutral-400 uppercase tracking-widest text-xs font-mono">
-              <tr className="bg-white/5">
+            <thead className="text-ink2 uppercase tracking-widest text-xs font-mono">
+              <tr className="bg-white">
                 <th className="px-5 py-4 rounded-tl-xl">Category</th>
                 <th className="px-5 py-4">Example Questions to Cover</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5">
+            <tbody className="divide-y divide-ink/10">
               {[
                 {
                   category: "What you do",
@@ -487,12 +488,12 @@ export default function HowToSetUpAIPhoneReceptionist() {
               ].map(({ category, examples }) => (
                 <tr
                   key={category}
-                  className="hover:bg-white/[0.03] transition-colors"
+                  className="hover:bg-paper transition-colors"
                 >
-                  <td className="px-5 py-4 font-semibold text-white whitespace-nowrap">
+                  <td className="px-5 py-4 font-semibold text-ink whitespace-nowrap">
                     {category}
                   </td>
-                  <td className="px-5 py-4 text-neutral-400">{examples}</td>
+                  <td className="px-5 py-4 text-ink2">{examples}</td>
                 </tr>
               ))}
             </tbody>
@@ -505,11 +506,11 @@ export default function HowToSetUpAIPhoneReceptionist() {
           your FAQ sounds like a terms-of-service document, the AI will too.
         </p>
 
-        <div className="rounded-2xl border border-yellow-400/20 bg-yellow-400/5 p-5 space-y-2">
-          <p className="text-yellow-400 text-sm font-semibold">
+        <div className="rounded-2xl border border-ink/10 bg-white p-5 space-y-2">
+          <p className="text-coral text-sm font-semibold">
             Pro tip: Add a callback instruction
           </p>
-          <p className="text-neutral-400 text-sm leading-relaxed">
+          <p className="text-ink2 text-sm leading-relaxed">
             Include a specific instruction for what the AI should do when it
             doesn&apos;t know the answer: &ldquo;If unsure, say: &apos;[Owner
             Name] will be able to answer that directly can I take your number
@@ -519,7 +520,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
           </p>
         </div>
 
-        <p className="text-neutral-500 text-sm">
+        <p className="text-ink3 text-sm">
           ⏱ Time check: 15 minutes with your FAQ draft already written. If you
           have nothing written yet, budget 25–30 minutes. The FAQ is the highest
           leverage investment in this entire setup.
@@ -530,9 +531,9 @@ export default function HowToSetUpAIPhoneReceptionist() {
       <section id="connect-phone-number" className="mt-24 space-y-6">
         <div className="flex items-center gap-3">
           <div>
-            <h2 className="text-3xl font-semibold text-white">
+            <h2 className="text-3xl font-semibold text-ink">
               Connect Your Phone Number{" "}
-              <span className="text-neutral-500 font-normal text-lg ml-2">
+              <span className="text-ink3 font-normal text-lg ml-2">
                 ~5 min
               </span>
             </h2>
@@ -563,11 +564,11 @@ export default function HowToSetUpAIPhoneReceptionist() {
           ].map(({ title, body }) => (
             <div
               key={title}
-              className="flex gap-5 rounded-2xl border border-white/10 bg-white/5 p-5"
+              className="flex gap-5 rounded-2xl border border-ink/10 bg-white p-5"
             >
               <div className="space-y-1">
-                <h3 className="text-white font-semibold text-sm">{title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <h3 className="text-ink font-semibold text-sm">{title}</h3>
+                <p className="text-ink2 text-sm leading-relaxed">
                   {body}
                 </p>
               </div>
@@ -575,7 +576,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
           ))}
         </div>
 
-        <p className="text-neutral-500 text-sm">
+        <p className="text-ink3 text-sm">
           ⏱ Time check: 5 minutes maximum. The only delay is finding the call
           forwarding menu on your specific phone model or carrier a quick search
           of &ldquo;[phone model] call forwarding settings&rdquo; resolves this
@@ -587,9 +588,9 @@ export default function HowToSetUpAIPhoneReceptionist() {
       <section id="test-go-live" className="mt-24 space-y-6">
         <div className="flex items-center gap-3">
           <div>
-            <h2 className="text-3xl font-semibold text-white">
+            <h2 className="text-3xl font-semibold text-ink">
               Test &amp; Go Live{" "}
-              <span className="text-neutral-500 font-normal text-lg ml-2">
+              <span className="text-ink3 font-normal text-lg ml-2">
                 ~10 min
               </span>
             </h2>
@@ -602,8 +603,8 @@ export default function HowToSetUpAIPhoneReceptionist() {
           ask, not softballs you know the AI will ace.
         </p>
 
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-4 font-mono text-sm">
-          <p className="text-neutral-500 text-xs uppercase tracking-widest">
+        <div className="rounded-2xl border border-ink/10 bg-white p-6 space-y-4 font-mono text-sm">
+          <p className="text-ink3 text-xs uppercase tracking-widest">
             Test call checklist
           </p>
           <div className="space-y-3">
@@ -616,8 +617,8 @@ export default function HowToSetUpAIPhoneReceptionist() {
               "Did you receive a call summary notification within 2 minutes of hanging up?",
             ].map((item) => (
               <div key={item} className="flex gap-4 items-start">
-                <span className="text-green-400 shrink-0 mt-0.5">✓</span>
-                <span className="text-neutral-300">{item}</span>
+                <span className="text-coral shrink-0 mt-0.5">✓</span>
+                <span className="text-ink2">{item}</span>
               </div>
             ))}
           </div>
@@ -630,7 +631,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
           call. By the second test call, you&apos;re live.
         </p>
 
-        <p className="text-neutral-500 text-sm">
+        <p className="text-ink3 text-sm">
           ⏱ Total time: Approximately 50–55 minutes from zero to live. Most
           users complete it faster once they have their FAQ ready going in.
         </p>
@@ -638,7 +639,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
 
       {/* ── SECTION: AFTER SETUP ─────────────────────────────────────────── */}
       <section id="after-setup" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           What Happens After Setup
         </h2>
 
@@ -667,10 +668,10 @@ export default function HowToSetUpAIPhoneReceptionist() {
           ].map(({ title, body }) => (
             <div
               key={title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 space-y-2"
+              className="rounded-2xl border border-ink/10 bg-white p-5 space-y-2"
             >
-              <h3 className="text-white font-semibold text-sm">{title}</h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">{body}</p>
+              <h3 className="text-ink font-semibold text-sm">{title}</h3>
+              <p className="text-ink2 text-sm leading-relaxed">{body}</p>
             </div>
           ))}
         </div>
@@ -681,7 +682,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
           to justify the cost see the{" "}
           <Link
             href="/blog/ai-answering-service-small-business"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             AI answering service cost breakdown
           </Link>
@@ -692,7 +693,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
 
       {/* ── SECTION: COMPARISON ──────────────────────────────────────────── */}
       <section id="comparison" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Platform Comparison: Which AI Receptionist Is Easiest to Set Up?
         </h2>
 
@@ -702,10 +703,10 @@ export default function HowToSetUpAIPhoneReceptionist() {
           metrics that matter for small business setup:
         </p>
 
-        <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.02]">
+        <div className="overflow-x-auto rounded-2xl border border-ink/10 bg-white">
           <table className="w-full text-sm text-left">
-            <thead className="text-neutral-400 uppercase tracking-widest text-xs font-mono">
-              <tr className="bg-white/5">
+            <thead className="text-ink2 uppercase tracking-widest text-xs font-mono">
+              <tr className="bg-white">
                 <th className="px-5 py-4 rounded-tl-xl">Platform</th>
                 <th className="px-5 py-4">Price</th>
                 <th className="px-5 py-4">Setup Time</th>
@@ -713,7 +714,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
                 <th className="px-5 py-4 rounded-tr-xl">Indian English</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5">
+            <tbody className="divide-y divide-ink/10">
               {[
                 {
                   name: "RhythmiqCX",
@@ -758,13 +759,13 @@ export default function HowToSetUpAIPhoneReceptionist() {
               ].map(({ name, price, setup, noCode, indianEn, highlight }) => (
                 <tr
                   key={name}
-                  className={`hover:bg-white/[0.03] transition-colors ${highlight ? "bg-white/[0.04]" : ""}`}
+                  className={`hover:bg-paper transition-colors ${highlight ? "bg-paper" : ""}`}
                 >
-                  <td className="px-5 py-4 font-semibold text-white">
+                  <td className="px-5 py-4 font-semibold text-ink">
                     {highlight ? (
                       <span className="flex items-center gap-2">
                         {name}{" "}
-                        <span className="text-[10px] font-mono bg-green-500/20 text-green-400 px-2 py-0.5 rounded uppercase tracking-widest">
+                        <span className="text-[10px] font-mono bg-white text-[#1F7A4D] border border-ink/10 px-2 py-0.5 rounded uppercase tracking-widest">
                           Recommended
                         </span>
                       </span>
@@ -773,18 +774,18 @@ export default function HowToSetUpAIPhoneReceptionist() {
                     )}
                   </td>
                   <td
-                    className={`px-5 py-4 font-mono ${highlight ? "text-green-400 font-bold" : "text-neutral-300"}`}
+                    className={`px-5 py-4 font-mono ${highlight ? "text-[#1F7A4D] font-bold" : "text-ink2"}`}
                   >
                     {price}
                   </td>
-                  <td className="px-5 py-4 text-neutral-400">{setup}</td>
+                  <td className="px-5 py-4 text-ink2">{setup}</td>
                   <td
-                    className={`px-5 py-4 ${highlight ? "text-green-400" : "text-neutral-400"}`}
+                    className={`px-5 py-4 ${highlight ? "text-[#1F7A4D]" : "text-ink2"}`}
                   >
                     {noCode}
                   </td>
                   <td
-                    className={`px-5 py-4 ${highlight ? "text-green-400" : "text-neutral-400"}`}
+                    className={`px-5 py-4 ${highlight ? "text-[#1F7A4D]" : "text-ink2"}`}
                   >
                     {indianEn}
                   </td>
@@ -802,7 +803,7 @@ export default function HowToSetUpAIPhoneReceptionist() {
           breakdown including per-minute vs flat-rate math, see the{" "}
           <Link
             href="/blog/real-cost-of-voice-ai"
-            className="text-blue-400 underline"
+            className="text-coral underline"
           >
             real cost of voice AI
           </Link>
@@ -812,16 +813,16 @@ export default function HowToSetUpAIPhoneReceptionist() {
 
       {/* ── SECTION: FAQ ─────────────────────────────────────────────────── */}
       <section id="faq" className="mt-24 space-y-8">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-6">
           <div className="space-y-2">
-            <h3 className="text-white font-semibold text-base">
+            <h3 className="text-ink font-semibold text-base">
               How long does it actually take to set up an AI phone receptionist?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               With a no-code platform like RhythmiqCX, the full setup account
               creation, AI persona configuration, knowledge base upload, phone
               number forwarding, and test call takes 45–60 minutes for most
@@ -830,11 +831,11 @@ export default function HowToSetUpAIPhoneReceptionist() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               Do I need to buy a new phone number?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               No. You forward your existing business number to your AI
               receptionist platform. When you want the AI to handle calls,
               activate call forwarding. When you want calls to ring through to
@@ -843,11 +844,11 @@ export default function HowToSetUpAIPhoneReceptionist() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               What information does the AI need to answer calls?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               At minimum: your business name, what you do, your hours, how to
               book or contact you, and answers to the 8–10 questions you hear
               most often. This becomes the AI&apos;s knowledge base. The more
@@ -855,11 +856,11 @@ export default function HowToSetUpAIPhoneReceptionist() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               Can the AI handle calls in Hindi or Indian-English?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               RhythmiqCX uses Sarvam&apos;s Bulbul v2 neural TTS and Saarika
               v2.5 speech-to-text, both optimised for Indian-English accents.
               The AI understands and responds naturally to callers with Indian
@@ -867,12 +868,12 @@ export default function HowToSetUpAIPhoneReceptionist() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               What happens when a caller asks something the AI doesn&apos;t
               know?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               The AI is trained to say something like &ldquo;I&apos;ll make sure
               [Name] gets back to you on that can I take your number for a
               callback?&rdquo; It never guesses or makes up answers.
@@ -881,18 +882,18 @@ export default function HowToSetUpAIPhoneReceptionist() {
             </p>
           </div>
 
-          <div className="space-y-2 border-t border-white/5 pt-6">
-            <h3 className="text-white font-semibold text-base">
+          <div className="space-y-2 border-t border-ink/10 pt-6">
+            <h3 className="text-ink font-semibold text-base">
               How much does an AI phone receptionist cost?
             </h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-ink2 text-sm leading-relaxed">
               RhythmiqCX starts at $29/month flat no per-minute billing, no
               per-call fees. Competitors like My AI Front Desk and Synthflow
               charge $99/month. Retell AI and Bland AI charge per-minute, which
               adds up fast at real call volumes.{" "}
               <Link
                 href="/ai-chatbot-pricing"
-                className="text-blue-400 underline"
+                className="text-coral underline"
               >
                 See full pricing plans here.
               </Link>
@@ -902,32 +903,14 @@ export default function HowToSetUpAIPhoneReceptionist() {
       </section>
 
       {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section className="mt-24 pb-20">
-        <div className="rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Set Up Your AI Receptionist This Afternoon
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            You now have the exact steps. RhythmiqCX starts at $29/month with a
-            7-day free trial no credit card required. Go from zero to live in
-            under an hour.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link
-              href="/voice-ai"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Start Free Trial
-            </Link>
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Book a Live Demo →
-            </a>
-          </div>
-        </div>
-      </section>
+      <BlogCTA
+        title="Set Up Your AI Receptionist This Afternoon"
+        description="You now have the exact steps. RhythmiqCX starts at $29/month with a 7-day free trial no credit card required. Go from zero to live in under an hour."
+        primaryLabel="Start Free Trial"
+        primaryHref="/voice-ai"
+        secondaryLabel="Book a Live Demo"
+        secondaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+      />
     </BlogLayout>
   );
 }

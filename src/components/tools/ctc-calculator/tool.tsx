@@ -319,15 +319,15 @@ export default function CTCCalculatorTool() {
         {/* Left Column: Inputs — 3 cols */}
         <div className="lg:col-span-3 space-y-6">
           <MagicCard
-            className="p-8 border-border/50 shadow-2xl"
-            gradientColor="rgba(99, 102, 241, 0.05)"
+            className="p-8 bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
+            gradientColor="rgba(232, 93, 47, 0.05)"
           >
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-indigo-500/10 rounded-xl text-indigo-500">
+                <div className="p-2.5 bg-coralSoft rounded-xl text-coral">
                   <Calculator className="w-6 h-6" />
                 </div>
-                <h2 className="text-2xl font-bold">Salary Details</h2>
+                <h2 className="text-2xl font-bold text-ink">Salary Details</h2>
               </div>
 
               <p className="text-muted-foreground text-sm">
@@ -341,12 +341,12 @@ export default function CTCCalculatorTool() {
                   <div className="flex justify-between items-center">
                     <Label
                       htmlFor="annualCTC"
-                      className="flex items-center gap-2 text-base"
+                      className="flex items-center gap-2 text-base text-ink"
                     >
-                      <IndianRupee className="w-4 h-4 text-emerald-500" />
+                      <IndianRupee className="w-4 h-4 text-coral" />
                       Annual CTC
                     </Label>
-                    <span className="font-bold text-emerald-500 text-lg">
+                    <span className="font-bold text-coral text-lg">
                       {formatINR(annualCTC)}
                     </span>
                   </div>
@@ -358,7 +358,7 @@ export default function CTCCalculatorTool() {
                     onChange={(e) =>
                       setAnnualCTC(Math.max(0, Number(e.target.value) || 0))
                     }
-                    className="bg-background/50"
+                    className="bg-white"
                     placeholder="e.g. 1200000"
                   />
                 </div>
@@ -370,10 +370,10 @@ export default function CTCCalculatorTool() {
                       htmlFor="basicPercent"
                       className="flex items-center gap-2"
                     >
-                      <Percent className="w-4 h-4 text-blue-500" />
+                      <Percent className="w-4 h-4 text-coral" />
                       Basic Salary %
                     </Label>
-                    <span className="font-semibold">{basicPercent}%</span>
+                    <span className="font-semibold text-ink">{basicPercent}%</span>
                   </div>
                   <Slider
                     id="basicPercent"
@@ -392,10 +392,10 @@ export default function CTCCalculatorTool() {
                       htmlFor="hraPercent"
                       className="flex items-center gap-2"
                     >
-                      <Building2 className="w-4 h-4 text-orange-500" />
+                      <Building2 className="w-4 h-4 text-coral" />
                       HRA (% of Basic)
                     </Label>
-                    <span className="font-semibold">{hraPercent}%</span>
+                    <span className="font-semibold text-ink">{hraPercent}%</span>
                   </div>
                   <Slider
                     id="hraPercent"
@@ -414,10 +414,10 @@ export default function CTCCalculatorTool() {
                       htmlFor="bonusPercent"
                       className="flex items-center gap-2"
                     >
-                      <Award className="w-4 h-4 text-amber-500" />
+                      <Award className="w-4 h-4 text-coral" />
                       Bonus (% of CTC)
                     </Label>
-                    <span className="font-semibold">{bonusPercent}%</span>
+                    <span className="font-semibold text-ink">{bonusPercent}%</span>
                   </div>
                   <Slider
                     id="bonusPercent"
@@ -435,7 +435,7 @@ export default function CTCCalculatorTool() {
                     htmlFor="otherAllowances"
                     className="flex items-center gap-2"
                   >
-                    <Wallet className="w-4 h-4 text-violet-500" />
+                    <Wallet className="w-4 h-4 text-coral" />
                     Other Annual Allowances (₹)
                   </Label>
                   <Input
@@ -448,7 +448,7 @@ export default function CTCCalculatorTool() {
                         Math.max(0, Number(e.target.value) || 0),
                       )
                     }
-                    className="bg-background/50"
+                    className="bg-white"
                     placeholder="e.g. 50000"
                   />
                 </div>
@@ -456,7 +456,7 @@ export default function CTCCalculatorTool() {
                 {/* Tax Regime */}
                 <div className="space-y-3">
                   <Label className="flex items-center gap-2">
-                    <Landmark className="w-4 h-4 text-cyan-500" />
+                    <Landmark className="w-4 h-4 text-coral" />
                     Tax Regime
                   </Label>
                   <Tabs
@@ -477,7 +477,7 @@ export default function CTCCalculatorTool() {
               {/* Advanced Options Toggle */}
               <button
                 onClick={() => setShowAdvanced(!showAdvanced)}
-                className="flex items-center gap-2 text-sm font-medium text-indigo-500 hover:text-indigo-400 transition-colors pt-2"
+                className="flex items-center gap-2 text-sm font-medium text-coral hover:text-coral2 transition-colors pt-2"
               >
                 {showAdvanced ? (
                   <ChevronUp className="w-4 h-4" />
@@ -488,15 +488,15 @@ export default function CTCCalculatorTool() {
               </button>
 
               {showAdvanced && (
-                <div className="space-y-6 pt-4 border-t border-border/40 animate-in slide-in-from-top-2 duration-300">
+                <div className="space-y-6 pt-4 border-t border-ink/10 animate-in slide-in-from-top-2 duration-300">
                   {/* State */}
                   <div className="space-y-3">
                     <Label className="flex items-center gap-2">
-                      <Building2 className="w-4 h-4 text-teal-500" />
+                      <Building2 className="w-4 h-4 text-coral" />
                       State (Professional Tax)
                     </Label>
                     <Select value={state} onValueChange={setState}>
-                      <SelectTrigger className="bg-background/50">
+                      <SelectTrigger className="bg-white">
                         <SelectValue placeholder="Select state" />
                       </SelectTrigger>
                       <SelectContent>
@@ -513,11 +513,11 @@ export default function CTCCalculatorTool() {
                   {taxRegime === "old" && (
                     <div className="space-y-3">
                       <Label className="flex items-center gap-2">
-                        <Info className="w-4 h-4 text-sky-500" />
+                        <Info className="w-4 h-4 text-coral" />
                         Age Group
                       </Label>
                       <Select value={ageGroup} onValueChange={setAgeGroup}>
-                        <SelectTrigger className="bg-background/50">
+                        <SelectTrigger className="bg-white">
                           <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
@@ -534,7 +534,7 @@ export default function CTCCalculatorTool() {
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <Label className="flex items-center gap-2">
-                          <Shield className="w-4 h-4 text-green-500" />
+                          <Shield className="w-4 h-4 text-coral" />
                           Investment under 80C (₹)
                         </Label>
                         <span className="text-sm text-muted-foreground">
@@ -554,7 +554,7 @@ export default function CTCCalculatorTool() {
                             ),
                           )
                         }
-                        className="bg-background/50"
+                        className="bg-white"
                       />
                     </div>
                   )}
@@ -564,7 +564,7 @@ export default function CTCCalculatorTool() {
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <Label className="flex items-center gap-2">
-                          <Shield className="w-4 h-4 text-pink-500" />
+                          <Shield className="w-4 h-4 text-coral" />
                           Health Insurance Premium 80D (₹)
                         </Label>
                         <span className="text-sm text-muted-foreground">
@@ -584,7 +584,7 @@ export default function CTCCalculatorTool() {
                             ),
                           )
                         }
-                        className="bg-background/50"
+                        className="bg-white"
                       />
                     </div>
                   )}
@@ -593,10 +593,10 @@ export default function CTCCalculatorTool() {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <Label className="flex items-center gap-2">
-                        <Award className="w-4 h-4 text-amber-500" />
+                        <Award className="w-4 h-4 text-coral" />
                         Years of Experience
                       </Label>
-                      <span className="font-semibold">{yearsOfExp} yrs</span>
+                      <span className="font-semibold text-ink">{yearsOfExp} yrs</span>
                     </div>
                     <Slider
                       min={0}
@@ -618,15 +618,13 @@ export default function CTCCalculatorTool() {
         {/* Right Column: Results — 2 cols */}
         <div className="lg:col-span-2 space-y-6">
           {/* Hero: Monthly In-Hand */}
-          <Card className="border-emerald-500/20 shadow-lg shadow-emerald-500/10 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-emerald-500/10 rounded-bl-full -z-10" />
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-emerald-500/5 rounded-tr-full -z-10" />
+          <Card className="bg-white border border-[#1F7A4D]/20 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] overflow-hidden relative">
             <CardContent className="p-8">
               <div className="space-y-1">
                 <p className="text-sm font-medium text-muted-foreground">
                   Monthly In-Hand Salary
                 </p>
-                <h3 className="text-4xl md:text-5xl font-bold text-emerald-500 tracking-tight">
+                <h3 className="text-4xl md:text-5xl font-bold text-[#1F7A4D] tracking-tight">
                   {formatINR(Math.max(0, results.monthlyInHand))}
                 </h3>
                 <p className="text-xs text-muted-foreground pt-1">
@@ -637,16 +635,16 @@ export default function CTCCalculatorTool() {
           </Card>
 
           {/* Monthly Gross */}
-          <Card className="border-border/50 shadow-lg shadow-blue-500/5">
+          <Card className="bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-blue-500/10 rounded-lg text-blue-500">
+                  <div className="p-2 bg-coralSoft rounded-lg text-coral">
                     <Wallet className="w-5 h-5" />
                   </div>
                   <p className="text-muted-foreground">Monthly Gross</p>
                 </div>
-                <span className="text-2xl font-bold">
+                <span className="text-2xl font-bold text-ink">
                   {formatINR(results.monthlyGross)}
                 </span>
               </div>
@@ -654,19 +652,19 @@ export default function CTCCalculatorTool() {
           </Card>
 
           {/* Deductions Summary */}
-          <Card className="border-border/50 shadow-lg shadow-red-500/5">
+          <Card className="bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-red-500/10 rounded-lg text-red-500">
+                <div className="p-2 bg-[#C9461F]/10 rounded-lg text-[#C9461F]">
                   <TrendingDown className="w-5 h-5" />
                 </div>
-                <p className="font-semibold">Monthly Deductions</p>
+                <p className="font-semibold text-ink">Monthly Deductions</p>
               </div>
 
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Employee PF</span>
-                  <span className="font-medium text-red-400">
+                  <span className="font-medium text-[#C9461F]">
                     −{formatINR(results.employeePFMonthly)}
                   </span>
                 </div>
@@ -674,7 +672,7 @@ export default function CTCCalculatorTool() {
                   <span className="text-muted-foreground">
                     Professional Tax
                   </span>
-                  <span className="font-medium text-red-400">
+                  <span className="font-medium text-[#C9461F]">
                     −{formatINR(results.monthlyPT)}
                   </span>
                 </div>
@@ -682,13 +680,13 @@ export default function CTCCalculatorTool() {
                   <span className="text-muted-foreground">
                     Income Tax (Est.)
                   </span>
-                  <span className="font-medium text-red-400">
+                  <span className="font-medium text-[#C9461F]">
                     −{formatINR(results.monthlyTax)}
                   </span>
                 </div>
-                <div className="border-t border-border/40 pt-3 flex justify-between font-semibold">
+                <div className="border-t border-ink/10 pt-3 flex justify-between font-semibold text-ink">
                   <span>Total Deductions</span>
-                  <span className="text-red-500">
+                  <span className="text-[#C9461F]">
                     −
                     {formatINR(
                       results.employeePFMonthly +
@@ -702,18 +700,18 @@ export default function CTCCalculatorTool() {
           </Card>
 
           {/* Employer Contributions */}
-          <Card className="border-border/50 shadow-lg shadow-indigo-500/5">
+          <Card className="bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-indigo-500/10 rounded-lg text-indigo-500">
+                <div className="p-2 bg-coralSoft rounded-lg text-coral">
                   <Receipt className="w-5 h-5" />
                 </div>
-                <p className="font-semibold">Employer Contributions</p>
+                <p className="font-semibold text-ink">Employer Contributions</p>
               </div>
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Employer PF</span>
-                  <span className="font-medium">
+                  <span className="font-medium text-ink">
                     {formatINR(results.employerPFAnnual / 12)}
                     <span className="text-muted-foreground text-xs ml-1">
                       /mo
@@ -727,7 +725,7 @@ export default function CTCCalculatorTool() {
                       <span className="text-xs">(need 5 yrs)</span>
                     )}
                   </span>
-                  <span className="font-medium">
+                  <span className="font-medium text-ink">
                     {formatINR(results.gratuityAnnual / 12)}
                     <span className="text-muted-foreground text-xs ml-1">
                       /mo
@@ -740,17 +738,17 @@ export default function CTCCalculatorTool() {
 
           {/* Taxable Income */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="p-5 rounded-xl border border-border/50 bg-muted/20">
+            <div className="p-5 rounded-xl border border-ink/10 bg-white">
               <p className="text-sm text-muted-foreground mb-1">
                 Taxable Income
               </p>
-              <p className="text-lg font-semibold">
+              <p className="text-lg font-semibold text-ink">
                 {formatINR(results.taxableIncome)}
               </p>
             </div>
-            <div className="p-5 rounded-xl border border-border/50 bg-muted/20">
+            <div className="p-5 rounded-xl border border-ink/10 bg-white">
               <p className="text-sm text-muted-foreground mb-1">Annual Tax</p>
-              <p className="text-lg font-semibold text-red-400">
+              <p className="text-lg font-semibold text-[#C9461F]">
                 {formatINR(results.annualTax)}
               </p>
             </div>
@@ -760,19 +758,19 @@ export default function CTCCalculatorTool() {
 
       {/* Detailed Breakdown Table */}
       <MagicCard
-        className="p-8 border-border/50 shadow-2xl"
-        gradientColor="rgba(99, 102, 241, 0.03)"
+        className="p-8 bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
+        gradientColor="rgba(232, 93, 47, 0.03)"
       >
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold flex items-center gap-3">
-            <Receipt className="w-6 h-6 text-indigo-500" />
+          <h2 className="text-2xl font-bold flex items-center gap-3 text-ink">
+            <Receipt className="w-6 h-6 text-coral" />
             Detailed Salary Breakdown
           </h2>
 
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-border/60">
+                <tr className="border-b border-ink/10">
                   <th className="text-left py-3 px-4 font-semibold text-muted-foreground">
                     Component
                   </th>
@@ -789,7 +787,7 @@ export default function CTCCalculatorTool() {
                 <tr>
                   <td
                     colSpan={3}
-                    className="py-3 px-4 font-semibold text-emerald-500 text-xs uppercase tracking-wider"
+                    className="py-3 px-4 font-semibold text-[#1F7A4D] text-xs uppercase tracking-wider"
                   >
                     Earnings
                   </td>
@@ -799,20 +797,20 @@ export default function CTCCalculatorTool() {
                   .map((row) => (
                     <tr
                       key={row.label}
-                      className="border-b border-border/20 hover:bg-muted/30 transition-colors"
+                      className="border-b border-ink/10 hover:bg-paper2 transition-colors"
                     >
-                      <td className="py-3 px-4">{row.label}</td>
-                      <td className="py-3 px-4 text-right font-medium">
+                      <td className="py-3 px-4 text-ink">{row.label}</td>
+                      <td className="py-3 px-4 text-right font-medium text-ink">
                         {formatNumber(row.monthly)}
                       </td>
-                      <td className="py-3 px-4 text-right font-medium">
+                      <td className="py-3 px-4 text-right font-medium text-ink">
                         {formatNumber(row.annual)}
                       </td>
                     </tr>
                   ))}
 
                 {/* Gross */}
-                <tr className="bg-muted/30 font-semibold">
+                <tr className="bg-paper2 font-semibold text-ink">
                   <td className="py-3 px-4">Gross Salary</td>
                   <td className="py-3 px-4 text-right">
                     {formatNumber(results.monthlyGross)}
@@ -826,7 +824,7 @@ export default function CTCCalculatorTool() {
                 <tr>
                   <td
                     colSpan={3}
-                    className="py-3 px-4 font-semibold text-red-400 text-xs uppercase tracking-wider pt-5"
+                    className="py-3 px-4 font-semibold text-[#C9461F] text-xs uppercase tracking-wider pt-5"
                   >
                     Deductions
                   </td>
@@ -836,22 +834,22 @@ export default function CTCCalculatorTool() {
                   .map((row) => (
                     <tr
                       key={row.label}
-                      className="border-b border-border/20 hover:bg-muted/30 transition-colors"
+                      className="border-b border-ink/10 hover:bg-paper2 transition-colors"
                     >
-                      <td className="py-3 px-4">{row.label}</td>
-                      <td className="py-3 px-4 text-right font-medium text-red-400">
+                      <td className="py-3 px-4 text-ink">{row.label}</td>
+                      <td className="py-3 px-4 text-right font-medium text-[#C9461F]">
                         {row.monthly > 0
                           ? `−${formatNumber(row.monthly)}`
                           : "0"}
                       </td>
-                      <td className="py-3 px-4 text-right font-medium text-red-400">
+                      <td className="py-3 px-4 text-right font-medium text-[#C9461F]">
                         {row.annual > 0 ? `−${formatNumber(row.annual)}` : "0"}
                       </td>
                     </tr>
                   ))}
 
                 {/* In-Hand */}
-                <tr className="bg-emerald-500/10 font-bold text-emerald-500">
+                <tr className="bg-[#E2F1E8] font-bold text-[#1F7A4D]">
                   <td className="py-4 px-4 text-base">Net In-Hand Salary</td>
                   <td className="py-4 px-4 text-right text-base">
                     {formatNumber(Math.max(0, results.monthlyInHand))}

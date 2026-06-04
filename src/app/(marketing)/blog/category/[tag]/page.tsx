@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps) {
     title: `${decoded} Articles | Rhythmiq Blog`,
     description: `Browse ${decoded} posts and insights on the Rhythmiq Blog.`,
     alternates: { canonical: `/blog/category/${encodeURIComponent(tag)}` },
-    openGraph: { images: ['/icons/white.jpeg'], type: 'website' },
+    openGraph: { images: ['/icons/og-default.png'], type: 'website' },
   });
 }
 
@@ -55,11 +55,12 @@ export default async function CategoryPage({ params }: PageProps) {
   if (!filtered.length) notFound();
 
   return (
-    <main>
-      <section className="py-20 bg-gradient-to-b from-indigo-600/20 to-background text-center px-4">
-        <Container className="space-y-4">
-          <h1 className="text-5xl font-bold capitalize">{decodedTag}</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+    <main className="paper-surface bg-paper text-ink font-sans">
+      <section className="section-tight text-center">
+        <Container className="wrap">
+          <span className="eyebrow justify-center">Category</span>
+          <h1 className="h-display mt-4 capitalize">{decodedTag}</h1>
+          <p className="lede max-w-2xl mx-auto mt-4">
             Explore articles related to {decodedTag}.
           </p>
         </Container>

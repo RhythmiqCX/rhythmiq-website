@@ -1,6 +1,7 @@
 import BlogLayout from "@/components/marketing/BlogLayout";
 import { generateMetadata } from "@/utils";
 import Link from "next/link";
+import BlogCTA from "@/components/marketing/blog-cta";
 
 export const metadata = generateMetadata({
   title:
@@ -86,7 +87,7 @@ export default function RhythmiqEcommerce() {
           before that{" "}
           <Link
             href="/blog/customer-support-decision-engine"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             customer support is a decision engine disguised as a conversation
           </Link>
@@ -106,7 +107,7 @@ export default function RhythmiqEcommerce() {
 
       {/* Voice AI Section */}
       <section id="voice-ai-loop" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Voice AI That Actually Closes the Loop
         </h2>
         <p>
@@ -114,7 +115,7 @@ export default function RhythmiqEcommerce() {
           already broken this down in{" "}
           <Link
             href="/blog/voice-ai-is-great"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Voice AI Is Great at FAQs and Terrible at Exceptions
           </Link>
@@ -125,7 +126,7 @@ export default function RhythmiqEcommerce() {
           in{" "}
           <Link
             href="/blog/state-management-in-voice-ai"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             State Management in Voice AI Is a Nightmare
           </Link>
@@ -134,7 +135,7 @@ export default function RhythmiqEcommerce() {
         <p>
           It knows if the order is dispatched. It knows if the refund is
           initiated. And it speaks clearly no fluff. Because as we argued in{" "}
-          <Link href="/blog/voice-ai-needs" className="text-blue-500 underline">
+          <Link href="/blog/voice-ai-needs" className="text-coral underline">
             Voice AI Needs Fewer Words Than Chat AI
           </Link>
           , clarity builds trust faster than over-explaining ever will. When a
@@ -146,7 +147,7 @@ export default function RhythmiqEcommerce() {
 
       {/* Web Widget Section */}
       <section id="web-widget" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           The Web Widget That Doesn't Annoy
         </h2>
         <p>
@@ -154,7 +155,7 @@ export default function RhythmiqEcommerce() {
           out in{" "}
           <Link
             href="/blog/the-post-widget-world"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             The Post Widget World
           </Link>
@@ -173,7 +174,7 @@ export default function RhythmiqEcommerce() {
 
       {/* Metrics Section */}
       <section id="metrics" className="mt-24 space-y-6">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Support Metrics Are Broken. Revenue Isn't.
         </h2>
         <p>
@@ -181,7 +182,7 @@ export default function RhythmiqEcommerce() {
           that in{" "}
           <Link
             href="/blog/support-metrics"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             Support Metrics Are Broken
           </Link>
@@ -201,7 +202,7 @@ export default function RhythmiqEcommerce() {
 
       {/* Future Section */}
       <section id="future" className="mt-24 space-y-6 pb-20">
-        <h2 className="text-3xl font-semibold text-white">
+        <h2 className="text-3xl font-semibold text-ink">
           Why I'm Bullish on Voice + Widget
         </h2>
         <p>
@@ -216,7 +217,7 @@ export default function RhythmiqEcommerce() {
           We've talked about{" "}
           <Link
             href="/blog/the-first-second"
-            className="text-blue-500 underline"
+            className="text-coral underline"
           >
             The First 3 Seconds of a Voice Call
           </Link>{" "}
@@ -227,30 +228,14 @@ export default function RhythmiqEcommerce() {
           buy.
         </p>
 
-        {/* FINAL CTA */}
-        <div className="mt-20 rounded-3xl border-2 border-white/10 bg-gradient-to-br from-neutral-900 to-black p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Turn Your Support Into a Revenue Engine
-          </h2>
-          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
-            See how RhythmiqCX Voice AI and Web Widget reduce cart abandonment,
-            resolve delivery anxiety, and increase completed decisions.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a
-              href="https://calendly.com/ray-rhythmiqcx/30min"
-              className="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-neutral-200 transition"
-            >
-              Book a Live Demo
-            </a>
-            <Link
-              href="/"
-              className="border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition"
-            >
-              Explore the Platform
-            </Link>
-          </div>
-        </div>
+        <BlogCTA
+          title="Turn Your Support Into a Revenue Engine"
+          description="See how RhythmiqCX Voice AI and Web Widget reduce cart abandonment, resolve delivery anxiety, and increase completed decisions."
+          primaryLabel="Book a Live Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
       </section>
     </BlogLayout>
   );

@@ -35,10 +35,11 @@ const AnimatedGradientButton = () => {
       const row = Math.floor(i / gridSize);
       const col = i % gridSize;
 
-      const hue1 = (time * 30 + row * 10 + col * 15) % 360;
-      const hue2 = (time * 40 + row * 20 + col * 10 + 180) % 360;
-      const saturation = 70 + Math.sin(time + i * 0.1) * 20;
-      const lightness = 50 + Math.sin(time * 2 + i * 0.2) * 15;
+      // Coral-family hues (warm reds/oranges) to match the paper brand accent
+      const hue1 = 8 + (Math.sin(time + row * 0.4 + col * 0.3) * 0.5 + 0.5) * 26;
+      const hue2 = 14 + (Math.sin(time + row * 0.3 + col * 0.5) * 0.5 + 0.5) * 24;
+      const saturation = 62 + Math.sin(time + i * 0.1) * 10;
+      const lightness = 60 + Math.sin(time * 2 + i * 0.2) * 10;
 
       pixels.push(
         <div
@@ -49,10 +50,10 @@ const AnimatedGradientButton = () => {
             top: `${(row / gridSize) * 100}%`,
             width: `${100 / gridSize}%`,
             height: `${100 / gridSize}%`,
-            background: `linear-gradient(${45 + time * 10}deg, 
-              hsl(${hue1}, ${saturation}%, ${lightness}%), 
-              hsl(${hue2}, ${saturation + 10}%, ${lightness + 10}%))`,
-            opacity: buttonHovered ? 0.9 : 0.8,
+            background: `linear-gradient(${45 + time * 10}deg,
+              hsl(${hue1}, ${saturation}%, ${lightness}%),
+              hsl(${hue2}, ${saturation + 6}%, ${lightness + 8}%))`,
+            opacity: buttonHovered ? 0.85 : 0.7,
             transform: `scale(${buttonHovered ? 1.05 : 1})`,
           }}
         />
@@ -63,17 +64,17 @@ const AnimatedGradientButton = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="relative w-full min-w-[800px] max-w-[1000px] h-[400px] md:w-[400px] overflow-hidden rounded-2xl shadow-2xl">
-        
+      <div className="relative w-full min-w-[800px] max-w-[1000px] h-[400px] md:w-[400px] overflow-hidden rounded-2xl border border-ink/10 bg-paper shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+
         <div className="absolute inset-0">{mounted && generatePixels()}</div>
 
-        {/* Subtle vignette */}
+        {/* Soft light wash to keep the surface on-brand and readable */}
         <div
           className="absolute inset-0"
           style={{
-            background: `radial-gradient(circle at center, 
-              transparent 0%, 
-              rgba(0,0,0,0.25) 100%)`,
+            background: `radial-gradient(circle at center,
+              rgba(250,248,243,0.35) 0%,
+              rgba(250,248,243,0.55) 100%)`,
           }}
         />
 
@@ -85,32 +86,17 @@ const AnimatedGradientButton = () => {
             onMouseLeave={() => setButtonHovered(false)}
             className="group relative px-12 py-6 rounded-full transition-all duration-500 transform hover:scale-105 active:scale-95"
             style={{
-              background: buttonHovered
-                ? "linear-gradient(135deg, #ffffff, #f5f5f5)"
-                : "#ffffff",
+              background: buttonHovered ? "#C9461F" : "#E8643C",
               boxShadow: buttonHovered
-                ? "0 0 35px rgba(255,255,255,0.7), 0 0 70px rgba(0,0,0,0.5)"
-                : "0 6px 20px rgba(0,0,0,0.25)",
+                ? "0 18px 40px -18px rgba(232,100,60,0.7)"
+                : "0 10px 24px -14px rgba(25,24,20,0.35)",
               transition: "all 0.6s ease-in-out",
             }}
           >
-            {/* Mirrored Glow (only outside) */}
-            <div
-              className="absolute -inset-1 rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-              style={{
-                background: `linear-gradient(135deg, 
-                  hsl(${((time * (buttonHovered ? 120 : 40)) + 180) % 360}, 75%, 60%), 
-                  hsl(${((time * (buttonHovered ? 120 : 40)) + 300) % 360}, 75%, 60%)
-                )`,
-                filter: "blur(20px)",
-                zIndex: -1,
-                transition: "all 0.6s ease-in-out",
-              }}
-            />
             <span
               className="relative z-10 text-lg font-semibold tracking-wide"
               style={{
-                color: "#000000",
+                color: "#ffffff",
                 letterSpacing: buttonHovered ? "0.1em" : "0.05em",
                 transition: "all 0.3s ease-in-out",
               }}

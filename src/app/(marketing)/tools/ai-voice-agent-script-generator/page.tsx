@@ -29,29 +29,25 @@ export const metadata = generateMetadata({
 const AIVoiceAgentScriptGeneratorPage = () => {
   return (
     <div className="relative w-full py-20 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-teal-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
-
       <Wrapper className="relative z-10">
         <Container className="flex flex-col gap-12">
           <div className="flex flex-col items-start gap-6">
             <Link
               href="/tools"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-2 text-sm text-ink3 hover:text-ink transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
               Back to Tools
             </Link>
 
-            <div className="flex flex-col gap-4 max-w-3xl">
-              <div className="inline-flex items-center rounded-full border border-teal-500/20 bg-teal-500/10 px-3 py-1 text-sm font-medium text-teal-500 backdrop-blur-sm w-fit">
+            <div className="flex flex-col gap-3 max-w-3xl">
+              <div className="inline-flex items-center rounded-full border border-coral/20 bg-coralSoft px-3 py-1 text-sm font-medium text-coral w-fit">
                 ✨ Free AI Tool
               </div>
-              <h1 className="text-4xl md:text-5xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
+              <h1 className="h-section">
                 AI Voice Agent Script Generator
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="lede max-w-2xl">
                 Create professional, ready-to-use scripts for AI voice
                 assistants, AI receptionists, and automated call center systems.
                 Simply enter your business type and customer scenario to
@@ -63,21 +59,21 @@ const AIVoiceAgentScriptGeneratorPage = () => {
           <AIVoiceAgentScriptGeneratorTool />
 
           {/* Features Section */}
-          <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-border/40">
+          <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-ink/10">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold flex items-center gap-2">
-                  <Zap className="w-6 h-6 text-yellow-500" />
+                <h2 className="text-2xl font-bold text-ink flex items-center gap-2">
+                  <Zap className="w-6 h-6 text-coral" />
                   What This Tool Does
                 </h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-ink2 leading-relaxed">
                   The AI Voice Agent Script Generator creates structured,
                   natural-sounding scripts for AI voice systems. Each script
                   includes a greeting, intent recognition, information response,
                   call routing, and closing — designed to sound professional
                   when spoken by text-to-speech systems.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-ink2 leading-relaxed">
                   Scripts are tailored to your specific industry and customer
                   scenario, ensuring relevant terminology, appropriate tone, and
                   actionable next steps that feel natural in a phone
@@ -86,11 +82,11 @@ const AIVoiceAgentScriptGeneratorPage = () => {
               </div>
 
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold flex items-center gap-2">
-                  <Clock className="w-6 h-6 text-green-500" />
+                <h2 className="text-2xl font-bold text-ink flex items-center gap-2">
+                  <Clock className="w-6 h-6 text-coral" />
                   How It Works
                 </h2>
-                <ul className="space-y-3 text-muted-foreground list-decimal list-inside">
+                <ul className="space-y-3 text-ink2 list-decimal list-inside">
                   <li>Select your business type or industry</li>
                   <li>Enter your business name (optional)</li>
                   <li>Describe the customer query or scenario</li>
@@ -105,8 +101,8 @@ const AIVoiceAgentScriptGeneratorPage = () => {
 
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold flex items-center gap-2">
-                  <Headphones className="w-6 h-6 text-blue-500" />
+                <h2 className="text-2xl font-bold text-ink flex items-center gap-2">
+                  <Headphones className="w-6 h-6 text-coral" />
                   Perfect For
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -122,9 +118,9 @@ const AIVoiceAgentScriptGeneratorPage = () => {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-2 p-3 rounded-lg border border-border bg-card/50 text-sm"
+                      className="flex items-center gap-2 p-3 rounded-lg border border-ink/10 bg-white text-sm text-ink"
                     >
-                      <PhoneCall className="w-4 h-4 text-primary/50" />
+                      <PhoneCall className="w-4 h-4 text-coral" />
                       {item}
                     </div>
                   ))}
@@ -132,32 +128,32 @@ const AIVoiceAgentScriptGeneratorPage = () => {
               </div>
 
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold flex items-center gap-2">
-                  <BarChart3 className="w-6 h-6 text-violet-500" />
+                <h2 className="text-2xl font-bold text-ink flex items-center gap-2">
+                  <BarChart3 className="w-6 h-6 text-coral" />
                   Why Use AI Voice Scripts?
                 </h2>
                 <div className="grid gap-3">
                   {[
                     {
-                      icon: <Mic className="w-4 h-4 text-teal-500" />,
+                      icon: <Mic className="w-4 h-4 text-coral" />,
                       text: "Faster customer support responses",
                     },
                     {
-                      icon: <BarChart3 className="w-4 h-4 text-emerald-500" />,
+                      icon: <BarChart3 className="w-4 h-4 text-coral" />,
                       text: "Reduced operational costs",
                     },
                     {
-                      icon: <Clock className="w-4 h-4 text-blue-500" />,
+                      icon: <Clock className="w-4 h-4 text-coral" />,
                       text: "24/7 automated customer assistance",
                     },
                     {
-                      icon: <Users className="w-4 h-4 text-violet-500" />,
+                      icon: <Users className="w-4 h-4 text-coral" />,
                       text: "Consistent, professional communication",
                     },
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-3 p-3 rounded-lg border border-border bg-card/50 text-sm"
+                      className="flex items-center gap-3 p-3 rounded-lg border border-ink/10 bg-white text-sm text-ink"
                     >
                       {item.icon}
                       {item.text}
@@ -166,9 +162,9 @@ const AIVoiceAgentScriptGeneratorPage = () => {
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl border border-border bg-muted/20">
-                <h3 className="font-semibold mb-2">Did you know?</h3>
-                <p className="text-sm text-muted-foreground">
+              <div className="p-6 rounded-xl border border-ink/10 bg-white">
+                <h3 className="font-semibold mb-2 text-ink">Did you know?</h3>
+                <p className="text-sm text-ink2">
                   Businesses using AI voice agents can handle up to 80% of
                   routine customer inquiries without human intervention,
                   reducing wait times and improving customer satisfaction scores
@@ -179,8 +175,8 @@ const AIVoiceAgentScriptGeneratorPage = () => {
           </div>
 
           {/* FAQ Section */}
-          <div className="pt-12 border-t border-border/40">
-            <h2 className="text-2xl font-bold mb-8">
+          <div className="pt-12 border-t border-ink/10">
+            <h2 className="text-2xl font-bold mb-8 text-ink">
               Frequently Asked Questions
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -204,10 +200,10 @@ const AIVoiceAgentScriptGeneratorPage = () => {
               ].map((faq, i) => (
                 <div
                   key={i}
-                  className="p-5 rounded-xl border border-border bg-card/50 space-y-2"
+                  className="p-5 rounded-xl border border-ink/10 bg-white space-y-2"
                 >
-                  <h3 className="font-semibold text-sm">{faq.q}</h3>
-                  <p className="text-sm text-muted-foreground">{faq.a}</p>
+                  <h3 className="font-semibold text-sm text-ink">{faq.q}</h3>
+                  <p className="text-sm text-ink2">{faq.a}</p>
                 </div>
               ))}
             </div>

@@ -74,12 +74,12 @@ export default function YouTubeQuotesGeneratorTool() {
   return (
     <div className="w-full max-w-4xl mx-auto space-y-8">
       <MagicCard
-        className="p-8 border-border/50 shadow-2xl"
-        gradientColor="rgba(255, 0, 0, 0.05)" // Red tint for YouTube
+        className="p-8 border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
+        gradientColor="rgba(232, 100, 60, 0.06)" // Coral tint
       >
         <div className="space-y-6">
           <div className="text-center md:text-left">
-            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500">
+            <h2 className="text-3xl font-bold text-ink">
               YouTube Description Quotes
             </h2>
             <p className="text-muted-foreground mt-2">
@@ -95,14 +95,14 @@ export default function YouTubeQuotesGeneratorTool() {
                 placeholder="e.g., How to stay disciplined, Minecraft survival tips..."
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)}
-                className="bg-background/50 focus:bg-background transition-colors"
+                className="bg-paper2 focus:bg-white transition-colors"
               />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="tone">Tone</Label>
               <Select value={tone} onValueChange={setTone}>
-                <SelectTrigger className="bg-background/50">
+                <SelectTrigger className="bg-paper2">
                   <SelectValue placeholder="Select tone" />
                 </SelectTrigger>
                 <SelectContent>
@@ -118,7 +118,7 @@ export default function YouTubeQuotesGeneratorTool() {
             <div className="space-y-2">
               <Label htmlFor="style">Quote Style</Label>
               <Select value={style} onValueChange={setStyle}>
-                <SelectTrigger className="bg-background/50">
+                <SelectTrigger className="bg-paper2">
                   <SelectValue placeholder="Select style" />
                 </SelectTrigger>
                 <SelectContent>
@@ -135,7 +135,7 @@ export default function YouTubeQuotesGeneratorTool() {
           <Button
             onClick={handleGenerate}
             disabled={loading}
-            className="w-full h-12 text-lg font-semibold bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-red-500/20"
+            className="btn btn-accent w-full justify-center h-12 text-lg"
           >
             {loading ? (
               <>
@@ -155,18 +155,18 @@ export default function YouTubeQuotesGeneratorTool() {
       {/* Generaiton Results */}
       {quotes.length > 0 && (
         <div className="grid gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <h3 className="text-xl font-semibold flex items-center gap-2">
-            <Quote className="w-5 h-5 text-red-500" />
+          <h3 className="text-xl font-semibold flex items-center gap-2 text-ink">
+            <Quote className="w-5 h-5 text-coral" />
             Generated Quotes
           </h3>
           <div className="grid gap-4">
             {quotes.map((quote, index) => (
               <Card
                 key={index}
-                className="group hover:border-red-500/50 transition-colors border-border/50"
+                className="group hover:border-coral/50 transition-colors border border-ink/10 bg-white"
               >
                 <CardContent className="p-6 flex items-start gap-4 justify-between">
-                  <p className="text-lg font-medium leading-relaxed italic text-foreground/90">
+                  <p className="text-lg font-medium leading-relaxed italic text-ink">
                     &quot;{quote}&quot;
                   </p>
                   <Button
@@ -176,7 +176,7 @@ export default function YouTubeQuotesGeneratorTool() {
                     className="shrink-0 text-muted-foreground hover:text-foreground"
                   >
                     {copiedIndex === index ? (
-                      <Check className="w-5 h-5 text-green-500" />
+                      <Check className="w-5 h-5 text-[#1F7A4D]" />
                     ) : (
                       <Copy className="w-5 h-5" />
                     )}
