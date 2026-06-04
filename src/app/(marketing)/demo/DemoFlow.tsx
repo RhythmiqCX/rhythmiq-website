@@ -100,7 +100,7 @@ const DemoFlow = () => {
           </ol>
 
           <div key={step} className="mt-8 animate-[fade_0.35s_ease]">
-            {/* STEP 1 — pick a scenario */}
+            {/* STEP 1: pick a scenario */}
             {step === "scenario" && (
               <div>
                 <div className="text-center mb-6">
@@ -160,7 +160,7 @@ const DemoFlow = () => {
               </div>
             )}
 
-            {/* STEP 2 — restaurant details */}
+            {/* STEP 2: restaurant details */}
             {step === "details" && (
               <div className="max-w-xl mx-auto">
                 <div className="text-center mb-6">
@@ -234,7 +234,7 @@ const DemoFlow = () => {
               </div>
             )}
 
-            {/* STEP 3 — preview + sign-up gate */}
+            {/* STEP 3: preview + sign-up gate */}
             {step === "preview" && scenario && (
               <div>
                 <div className="text-center mb-6">

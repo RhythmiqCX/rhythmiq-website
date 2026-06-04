@@ -2,7 +2,7 @@ import { cn } from "@/lib";
 
 /**
  * Editorial art for the landing page: hand-built ink line-illustrations and warm
- * gradient-mesh "art tiles" (the silk/sculpture-style panels). All inline SVG —
+ * gradient-mesh "art tiles" (the silk/sculpture-style panels). All inline SVG:
  * zero network cost, crisp at any size, in the paper palette with a single coral
  * accent. The procedural pieces (flock, sprig, waveform, arcs) are computed once
  * at module load (server-side) into static element lists, so there is no runtime

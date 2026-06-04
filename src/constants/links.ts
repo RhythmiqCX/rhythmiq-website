@@ -20,7 +20,6 @@ export const COMPARE_LINKS: NavItem[] = [
 ];
 
 export const RESOURCE_LINKS: NavItem[] = [
-    { name: "Blog", href: "/blog", description: "Guides & ideas" },
     { name: "Free tools", href: "/tools", description: "Calculators & generators" },
     { name: "About us", href: "/about-us" },
     { name: "Contact", href: "/contact-us" },
@@ -36,6 +35,7 @@ export const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
 // Simple (non-dropdown) top-level links.
 export const NAV_LINKS: NavItem[] = [
     { name: "Pricing", href: "/pricing" },
+    { name: "Blog", href: "/blog" },
 ];
 
 // Action / CTA destinations.

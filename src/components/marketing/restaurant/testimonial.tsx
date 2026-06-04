@@ -13,7 +13,7 @@ const Testimonial = () => {
             className="font-medium leading-[1.25] tracking-[-0.02em] mb-6"
             style={{ fontSize: "clamp(22px,2.6vw,33px)", textWrap: "balance" }}
           >
-            &ldquo;We were missing one in three calls at peak. Rhythmiq took that to zero — and our
+            &ldquo;We were missing one in three calls at peak. Rhythmiq took that to zero, and our
             bookings went up the week we switched on. It pays for itself before the first service.&rdquo;
           </blockquote>
           <div className="flex items-center gap-3.5">

@@ -19,9 +19,9 @@ import {
 } from "@/components/marketing/restaurant";
 
 export const metadata = generateMetadata({
-  title: "Rhythmiq — The AI Phone Host for Restaurants | Never Miss a Call",
+  title: "Rhythmiq: The AI Phone Host for Restaurants | Never Miss a Call",
   description:
-    "Rhythmiq is the AI phone host for restaurants — answering every call 24/7, booking tables, taking orders, and answering guest questions in 12+ languages. Start free.",
+    "Rhythmiq is the AI phone host for restaurants, answering every call 24/7, booking tables, taking orders, and answering guest questions in 12+ languages. Start free.",
   keywords: [
     "AI phone host for restaurants",
     "restaurant phone answering service",
@@ -49,7 +49,7 @@ const websiteSchema = {
   name: "Rhythmiq",
   url: "https://rhythmiqcx.com",
   description:
-    "The AI phone host for restaurants — answers every call, books tables, takes orders, and answers guest questions, 24/7 in 12+ languages.",
+    "The AI phone host for restaurants that answers every call, books tables, takes orders, and answers guest questions, 24/7 in 12+ languages.",
   potentialAction: {
     "@type": "SearchAction",
     target: {
