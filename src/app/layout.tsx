@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { cn } from "@/lib";
 import { generateMetadata } from "@/utils";
-import { base, heading, sans, mono } from "@/constants";
+import { heading, sans, mono } from "@/constants";
 import { Toaster } from "@/components/ui/sonner";
 import { subheading } from "@/constants/fonts";
 import { Analytics } from "@vercel/analytics/react";
@@ -41,7 +41,6 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-paper text-ink antialiased font-sans overflow-x-hidden !scrollbar-hide",
-          base.variable,
           heading.variable,
           subheading.variable,
           sans.variable,

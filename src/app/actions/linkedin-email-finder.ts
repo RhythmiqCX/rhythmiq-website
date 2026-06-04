@@ -2,7 +2,8 @@
 
 import Groq from "groq-sdk";
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+// Lazy getter so a missing key fails at call time, never at module load / build.
+const getGroq = () => new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export async function generateAIEmails(
     firstName: string,
@@ -39,7 +40,7 @@ export async function generateAIEmails(
       }
     `;
 
-        const chatCompletion = await groq.chat.completions.create({
+        const chatCompletion = await getGroq().chat.completions.create({
             messages: [
                 {
                     role: "system",

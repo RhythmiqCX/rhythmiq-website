@@ -3,9 +3,8 @@
 import Groq from "groq-sdk";
 import { rateLimit } from "@/lib/rate-limit";
 
-const groq = new Groq({
-    apiKey: process.env.GROQ_API_KEY,
-});
+// Lazy getter so a missing key fails at call time, never at module load / build.
+const getGroq = () => new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export interface ReceptionistScriptRequest {
     businessName: string;
@@ -143,7 +142,7 @@ Return ONLY a valid JSON object. Do not include markdown or preamble.
 }
 `;
 
-        const completion = await groq.chat.completions.create({
+        const completion = await getGroq().chat.completions.create({
             messages: [
                 { role: "system", content: systemPrompt },
                 {

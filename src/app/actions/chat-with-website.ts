@@ -2,7 +2,8 @@
 
 import Groq from "groq-sdk";
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+// Lazy getter so a missing key fails at call time, never at module load / build.
+const getGroq = () => new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 
 export async function chatWithWebsite(websiteText: string, messages: { role: string; content: string }[]) {
@@ -32,7 +33,7 @@ export async function chatWithWebsite(websiteText: string, messages: { role: str
         // Take the last 5 messages to preserve context but save tokens
         const recentMessages = messages.slice(-5);
 
-        const completion = await groq.chat.completions.create({
+        const completion = await getGroq().chat.completions.create({
             messages: [
                 { role: "system", content: systemPrompt },
                 ...recentMessages.map(m => ({ role: m.role as "user" | "assistant", content: m.content })),

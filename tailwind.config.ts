@@ -180,7 +180,6 @@ export default {
 			fontFamily: {
 				heading: ['var(--font-heading)'],
 				subheading: ['var(--font-subheading)'],
-				base: ['var(--font-base)'],
 				sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 				mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
 			},
