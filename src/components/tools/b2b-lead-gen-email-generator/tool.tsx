@@ -97,15 +97,15 @@ export default function B2BEmailGeneratorTool() {
   return (
     <div className="w-full max-w-5xl mx-auto space-y-8">
       <MagicCard
-        className="p-8 border-border/50 shadow-2xl"
-        gradientColor="rgba(59, 130, 246, 0.05)" // Blue tint for professional/B2B feel
+        className="p-8 bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
+        gradientColor="rgba(232, 100, 60, 0.05)"
       >
         <div className="space-y-6">
           <div className="text-center md:text-left">
-            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-500">
+            <h2 className="text-3xl font-bold text-ink">
               B2B Lead Generation Tool
             </h2>
-            <p className="text-muted-foreground mt-2">
+            <p className="text-ink2 mt-2">
               Create personalized cold outreach emails that get opened and
               convert.
             </p>
@@ -120,7 +120,7 @@ export default function B2BEmailGeneratorTool() {
                 placeholder="e.g., SaaS, Healthcare, Real Estate"
                 value={formData.industry}
                 onChange={handleInputChange}
-                className="bg-background/50"
+                className="bg-white"
               />
             </div>
 
@@ -132,7 +132,7 @@ export default function B2BEmailGeneratorTool() {
                 placeholder="e.g., CTO, VP of Marketing"
                 value={formData.jobTitle}
                 onChange={handleInputChange}
-                className="bg-background/50"
+                className="bg-white"
               />
             </div>
 
@@ -144,7 +144,7 @@ export default function B2BEmailGeneratorTool() {
                 placeholder="e.g., Struggling with high support ticket volume and slow response times."
                 value={formData.painPoint}
                 onChange={handleInputChange}
-                className="min-h-[80px] bg-background/50 resize-none"
+                className="min-h-[80px] bg-white resize-none"
               />
             </div>
 
@@ -156,7 +156,7 @@ export default function B2BEmailGeneratorTool() {
                 placeholder="e.g., AI-powered voice agents that automate customer support calls."
                 value={formData.productDescription}
                 onChange={handleInputChange}
-                className="min-h-[80px] bg-background/50 resize-none"
+                className="min-h-[80px] bg-white resize-none"
               />
             </div>
 
@@ -168,7 +168,7 @@ export default function B2BEmailGeneratorTool() {
                   setFormData((prev) => ({ ...prev, tone: val }))
                 }
               >
-                <SelectTrigger className="bg-background/50">
+                <SelectTrigger className="bg-white">
                   <SelectValue placeholder="Select tone" />
                 </SelectTrigger>
                 <SelectContent>
@@ -185,7 +185,7 @@ export default function B2BEmailGeneratorTool() {
           <Button
             onClick={handleGenerate}
             disabled={loading}
-            className="w-full h-12 text-lg font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/20"
+            className="btn btn-accent w-full h-12 text-lg font-semibold"
           >
             {loading ? (
               <>
@@ -205,7 +205,7 @@ export default function B2BEmailGeneratorTool() {
       {generatedContent && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
           <Tabs defaultValue="email" className="w-full space-y-4">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 bg-muted/50 p-1">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 bg-paper2 p-1">
               <TabsTrigger value="email">Main Email</TabsTrigger>
               <TabsTrigger value="subjects">Subject Lines</TabsTrigger>
               <TabsTrigger value="followups">Follow-Ups</TabsTrigger>
@@ -214,7 +214,7 @@ export default function B2BEmailGeneratorTool() {
             </TabsList>
 
             <TabsContent value="email">
-              <Card className="border-border/50 shadow-lg">
+              <Card className="border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <div className="space-y-1">
                     <CardTitle className="text-xl">
@@ -232,7 +232,7 @@ export default function B2BEmailGeneratorTool() {
                     }
                   >
                     {copiedKey === "mainEmail" ? (
-                      <Check className="w-4 h-4 mr-2 text-green-500" />
+                      <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                     ) : (
                       <Copy className="w-4 h-4 mr-2" />
                     )}
@@ -240,7 +240,7 @@ export default function B2BEmailGeneratorTool() {
                   </Button>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-muted p-4 rounded-lg whitespace-pre-wrap leading-relaxed border border-border/50 text-sm md:text-base">
+                  <div className="bg-paper2 p-4 rounded-lg whitespace-pre-wrap leading-relaxed border border-ink/10 text-sm md:text-base">
                     {generatedContent.mainEmail}
                   </div>
                 </CardContent>
@@ -248,7 +248,7 @@ export default function B2BEmailGeneratorTool() {
             </TabsContent>
 
             <TabsContent value="subjects">
-              <Card className="border-border/50 shadow-lg">
+              <Card className="border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
                 <CardHeader>
                   <CardTitle>Subject Lines</CardTitle>
                   <CardDescription>
@@ -262,7 +262,7 @@ export default function B2BEmailGeneratorTool() {
                       (subject: string, idx: number) => (
                         <div
                           key={idx}
-                          className="flex items-center justify-between p-3 bg-muted/50 rounded-lg border border-border/50 group hover:border-blue-500/50 transition-colors"
+                          className="flex items-center justify-between p-3 bg-paper2 rounded-lg border border-ink/10 group hover:border-coral/50 transition-colors"
                         >
                           <span className="font-medium text-sm md:text-base">
                             {subject}
@@ -276,7 +276,7 @@ export default function B2BEmailGeneratorTool() {
                             }
                           >
                             {copiedKey === `subject-${idx}` ? (
-                              <Check className="w-4 h-4 text-green-500" />
+                              <Check className="w-4 h-4 text-[#1F7A4D]" />
                             ) : (
                               <Copy className="w-4 h-4" />
                             )}
@@ -285,7 +285,7 @@ export default function B2BEmailGeneratorTool() {
                       ),
                     )
                   ) : (
-                    <p className="text-red-500">
+                    <p className="text-[#C9461F]">
                       Error displaying subject lines.
                     </p>
                   )}
@@ -298,8 +298,8 @@ export default function B2BEmailGeneratorTool() {
                 {Array.isArray(generatedContent.followUps) &&
                   generatedContent.followUps.map(
                     (followUp: string, idx: number) => (
-                      <Card key={idx} className="border-border/50 shadow-lg">
-                        <CardHeader className="flex flex-row items-center justify-between py-3 bg-muted/30 border-b border-border/50">
+                      <Card key={idx} className="border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+                        <CardHeader className="flex flex-row items-center justify-between py-3 bg-paper2 border-b border-ink/10">
                           <CardTitle className="text-base font-semibold">
                             Follow-Up Email #{idx + 1}
                           </CardTitle>
@@ -312,7 +312,7 @@ export default function B2BEmailGeneratorTool() {
                             }
                           >
                             {copiedKey === `followup-${idx}` ? (
-                              <Check className="w-4 h-4 mr-1 text-green-500" />
+                              <Check className="w-4 h-4 mr-1 text-[#1F7A4D]" />
                             ) : (
                               <Copy className="w-4 h-4 mr-1" />
                             )}
@@ -331,7 +331,7 @@ export default function B2BEmailGeneratorTool() {
             </TabsContent>
 
             <TabsContent value="linkedin">
-              <Card className="border-border/50 shadow-lg">
+              <Card className="border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <div className="space-y-1">
                     <CardTitle>LinkedIn Message</CardTitle>
@@ -347,7 +347,7 @@ export default function B2BEmailGeneratorTool() {
                     }
                   >
                     {copiedKey === "linkedin" ? (
-                      <Check className="w-4 h-4 mr-2 text-green-500" />
+                      <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                     ) : (
                       <Copy className="w-4 h-4 mr-2" />
                     )}
@@ -355,7 +355,7 @@ export default function B2BEmailGeneratorTool() {
                   </Button>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-muted p-4 rounded-lg whitespace-pre-wrap leading-relaxed border border-border/50 text-sm md:text-base">
+                  <div className="bg-paper2 p-4 rounded-lg whitespace-pre-wrap leading-relaxed border border-ink/10 text-sm md:text-base">
                     {generatedContent.linkedIn}
                   </div>
                 </CardContent>
@@ -363,7 +363,7 @@ export default function B2BEmailGeneratorTool() {
             </TabsContent>
 
             <TabsContent value="pitch">
-              <Card className="border-border/50 shadow-lg">
+              <Card className="border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
                 <CardHeader className="flex flex-row items-center justify-between pb-2">
                   <div className="space-y-1">
                     <CardTitle>Elevator Pitch</CardTitle>
@@ -379,7 +379,7 @@ export default function B2BEmailGeneratorTool() {
                     }
                   >
                     {copiedKey === "pitch" ? (
-                      <Check className="w-4 h-4 mr-2 text-green-500" />
+                      <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                     ) : (
                       <Copy className="w-4 h-4 mr-2" />
                     )}
@@ -387,7 +387,7 @@ export default function B2BEmailGeneratorTool() {
                   </Button>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-muted p-4 rounded-lg whitespace-pre-wrap leading-relaxed border border-border/50 text-sm md:text-base font-medium">
+                  <div className="bg-paper2 p-4 rounded-lg whitespace-pre-wrap leading-relaxed border border-ink/10 text-sm md:text-base font-medium">
                     {generatedContent.shortPitch}
                   </div>
                 </CardContent>

@@ -206,16 +206,16 @@ export default function AIPromptGeneratorTool() {
   return (
     <div className="w-full max-w-5xl mx-auto space-y-8">
       <MagicCard
-        className="p-8 border-border/50 shadow-2xl"
-        gradientColor="rgba(124, 58, 237, 0.05)"
+        className="p-8 border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
+        gradientColor="rgba(255, 90, 60, 0.05)"
       >
         <div className="space-y-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div>
-              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500">
+              <h2 className="text-3xl font-bold text-ink">
                 AI Prompt Generator
               </h2>
-              <p className="text-muted-foreground mt-2">
+              <p className="text-ink2 mt-2">
                 Create high-quality AI prompts using proven frameworks like
                 CREATE, APE, and RACE.
               </p>
@@ -241,11 +241,11 @@ export default function AIPromptGeneratorTool() {
             </Select>
           </div>
 
-          <div className="bg-muted/30 p-4 rounded-lg border border-border/50">
-            <h3 className="font-semibold text-primary mb-1">
+          <div className="bg-paper2 p-4 rounded-lg border border-ink/10">
+            <h3 className="font-semibold text-coral mb-1">
               About {frameworks[framework].name}
             </h3>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-ink2">
               {frameworks[framework].description}
             </p>
           </div>
@@ -272,7 +272,7 @@ export default function AIPromptGeneratorTool() {
           <div className="flex gap-4 pt-4">
             <Button
               onClick={generatePrompt}
-              className="flex-1 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700"
+              className="flex-1 bg-coral text-white hover:bg-coral2"
             >
               <Wand2 className="w-4 h-4 mr-2" />
               Generate Prompt
@@ -286,10 +286,10 @@ export default function AIPromptGeneratorTool() {
       </MagicCard>
 
       {generatedPrompt && (
-        <Card className="border-border/50 shadow-lg animate-in fade-in slide-in-from-bottom-4">
+        <Card className="border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] animate-in fade-in slide-in-from-bottom-4">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <div className="space-y-1">
-              <CardTitle>Generated Prompt</CardTitle>
+              <CardTitle className="text-ink">Generated Prompt</CardTitle>
               <CardDescription>
                 Ready to copy and paste into ChatGPT, Claude, or Midjourney.
               </CardDescription>
@@ -300,7 +300,7 @@ export default function AIPromptGeneratorTool() {
                 size="sm"
                 onClick={handleEnhance}
                 disabled={enhancing}
-                className="bg-blue-500/10 text-blue-600 border-blue-200 hover:bg-blue-500/20 hover:text-blue-700 dark:border-blue-800 dark:text-blue-400"
+                className="bg-coralSoft text-coral border-coral/20 hover:bg-coral/10 hover:text-coral2"
               >
                 {enhancing ? (
                   <Loader2 className="w-3 h-3 mr-2 animate-spin" />
@@ -312,7 +312,7 @@ export default function AIPromptGeneratorTool() {
               <Button variant="ghost" size="sm" onClick={copyToClipboard}>
                 {copied ? (
                   <>
-                    <Check className="w-4 h-4 mr-2 text-green-500" />
+                    <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                     Copied
                   </>
                 ) : (
@@ -325,7 +325,7 @@ export default function AIPromptGeneratorTool() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="bg-muted p-4 rounded-lg font-mono text-sm whitespace-pre-wrap leading-relaxed border border-border/50">
+            <div className="bg-paper2 p-4 rounded-lg font-mono text-sm whitespace-pre-wrap leading-relaxed border border-ink/10 text-ink">
               {generatedPrompt}
             </div>
           </CardContent>

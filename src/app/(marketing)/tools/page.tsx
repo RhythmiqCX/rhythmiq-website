@@ -31,7 +31,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { generateMetadata } from "@/utils";
-import { MagicCard } from "@/components/ui/magic-card";
 import { cn } from "@/lib";
 
 export const metadata = generateMetadata({
@@ -458,23 +457,16 @@ const tools = [
 
 const ToolsPage = () => {
   return (
-    <div className="relative w-full py-20 overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-blue-500/20 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
-
+    <div className="paper-surface bg-paper text-ink font-sans relative w-full py-20 overflow-hidden">
       <Wrapper className="relative z-10">
         <Container className="flex flex-col gap-16">
           <div className="flex flex-col items-center text-center gap-6 max-w-3xl mx-auto pt-10">
-            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary backdrop-blur-sm">
-              <Sparkles className="mr-2 h-4 w-4" />
-              Free Resources
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/70 leading-tight">
+            <span className="eyebrow justify-center">Free Resources</span>
+            <h1 className="h-display">
               Free AI Tools for <br />
-              <span className="font-subheading italic text-primary">
-                The Community
-              </span>
+              <span className="text-coral">The Community</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+            <p className="lede max-w-2xl">
               A curated collection of free AI-powered tools designed to help you
               analyze, optimize, and supercharge your customer experience.
             </p>
@@ -490,21 +482,15 @@ const ToolsPage = () => {
                 <Link
                   href={tool.href}
                   className={cn(
-                    "block h-full",
+                    "group block h-full",
                     tool.comingSoon && "cursor-default",
                   )}
                 >
-                  <MagicCard
-                    gradientFrom={tool.gradientFrom}
-                    gradientTo={tool.gradientTo}
-                    className="p-7 min-h-[350px] h-full flex flex-col items-start gap-6 border-border/50 hover:border-border/100 transition-all duration-300"
-                    gradientColor="rgba(255,255,255,0.05)"
+                  <div
+                    className="p-7 min-h-[350px] h-full flex flex-col items-start gap-6 rounded-xl bg-white border border-ink/10 hover:shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] transition-all duration-300"
                   >
                     <div
-                      className={cn(
-                        "px-3 py-2 rounded-xl bg-gradient-to-br text-white shadow-lg my-2",
-                        `from-[${tool.gradientFrom}] to-[${tool.gradientTo}]`,
-                      )}
+                      className="px-3 py-2 rounded-xl text-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] my-2"
                       style={{
                         background: `linear-gradient(135deg, ${tool.gradientFrom}, ${tool.gradientTo})`,
                       }}
@@ -513,33 +499,33 @@ const ToolsPage = () => {
                     </div>
 
                     <div className="space-y-3 flex-1">
-                      <h3 className="text-2xl font-bold font-heading">
+                      <h3 className="text-2xl font-bold text-ink group-hover:text-coral transition-colors">
                         {tool.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-ink2 leading-relaxed">
                         {tool.description}
                       </p>
                     </div>
 
-                    <div className="mt-8 pt-4 w-full flex items-center justify-between border-t border-border/50 pt-6">
+                    <div className="mt-8 pt-6 w-full flex items-center justify-between border-t border-ink/10">
                       <span
                         className={cn(
                           "text-sm font-semibold flex items-center gap-2",
                           tool.comingSoon
-                            ? "text-muted-foreground"
-                            : "text-primary group-hover:gap-3 transition-all",
+                            ? "text-ink3"
+                            : "text-coral group-hover:gap-3 transition-all",
                         )}
                       >
                         {tool.comingSoon ? "Coming Soon" : "Try Tool"}
                         {!tool.comingSoon && <ArrowRight className="w-4 h-4" />}
                       </span>
                       {tool.comingSoon && (
-                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-muted text-muted-foreground border border-border">
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-paper2 text-ink3 border border-ink/10">
                           Planned
                         </span>
                       )}
                     </div>
-                  </MagicCard>
+                  </div>
                 </Link>
               </Container>
             ))}

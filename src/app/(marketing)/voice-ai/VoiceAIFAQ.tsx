@@ -44,10 +44,8 @@ const VoiceAIFAQ = () => {
   return (
     <section className="w-full max-w-3xl mx-auto px-4 py-16">
       <div className="text-center mb-10">
-        <p className="text-sm font-medium text-cyan-400 uppercase tracking-widest mb-2">
-          FAQ
-        </p>
-        <h2 className="text-2xl md:text-3xl font-bold text-white">
+        <span className="eyebrow justify-center">FAQ</span>
+        <h2 className="h-feature text-ink mt-3">
           Common Questions About AI Phone Receptionists
         </h2>
       </div>
@@ -56,23 +54,23 @@ const VoiceAIFAQ = () => {
         {faqs.map((faq, i) => (
           <div
             key={i}
-            className="border border-slate-700 rounded-lg overflow-hidden bg-slate-900/50"
+            className="border border-ink/10 rounded-lg overflow-hidden bg-white"
           >
             <button
-              className="w-full flex items-center justify-between px-5 py-4 text-left text-white font-medium text-sm md:text-base hover:bg-slate-800/50 transition-colors"
+              className="w-full flex items-center justify-between px-5 py-4 text-left text-ink font-medium text-sm md:text-base hover:bg-paper2 transition-colors"
               onClick={() => setOpen(open === i ? null : i)}
               aria-expanded={open === i}
             >
               <span>{faq.q}</span>
               <ChevronDown
                 className={cn(
-                  "w-4 h-4 text-gray-400 flex-shrink-0 ml-4 transition-transform duration-200",
+                  "w-4 h-4 text-ink2 flex-shrink-0 ml-4 transition-transform duration-200",
                   open === i && "rotate-180",
                 )}
               />
             </button>
             {open === i && (
-              <div className="px-5 pb-5 text-gray-300 text-sm leading-relaxed border-t border-slate-700 pt-4">
+              <div className="px-5 pb-5 text-ink2 text-sm leading-relaxed border-t border-ink/10 pt-4">
                 {faq.a}
               </div>
             )}

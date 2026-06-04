@@ -1,70 +1,86 @@
-import Wrapper from "@/components/global/wrapper";
-import Analysis from "@/components/marketing/analysis";
-import Companies from "@/components/marketing/companies";
-import CTA from "@/components/marketing/cta";
-import Features from "@/components/marketing/features";
-import Hero from "@/components/marketing/hero";
-import Integration from "@/components/marketing/integration";
-import LanguageSupport from "@/components/marketing/lang-support";
-import Pricing from "@/components/marketing/pricing";
 import { generateMetadata } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
+import {
+  Hero,
+  ProductShowcase,
+  LogoCloud,
+  CompleteSolution,
+  AIWorkspace,
+  TwoUpCards,
+  SelfImproving,
+  WorldClassAgent,
+  Testimonial,
+  FullyFeatured,
+  ResolveFaster,
+  Omnichannel,
+  GuestIntelligence,
+  Integrations,
+  FinalCTA,
+} from "@/components/marketing/restaurant";
 
 export const metadata = generateMetadata({
-    title: "AI Phone Receptionist & Voice AI Agents | RhythmiqCX — From $29/mo",
-    description: "Deploy AI voice agents that answer every customer call 24/7 with human-like accuracy. No-code setup, 60+ languages, smart call routing — start free from $29/mo.",
-    keywords: [
-        "AI customer support",
-        "AI CX platform",
-        "customer support automation",
-        "AI chatbot",
-        "WhatsApp chatbot",
-        "voice AI",
-        "AI support agent",
-        "multilingual AI support",
-        "AI chat widget",
-        "customer service AI India",
-    ],
-    alternates: {
-        canonical: "/"
-    },
-    openGraph: {
-        images: ['/icons/white.jpeg'],
-        type: 'website',
-    }
+  title: "Rhythmiq — The AI Phone Host for Restaurants | Never Miss a Call",
+  description:
+    "Rhythmiq is the AI phone host for restaurants — answering every call 24/7, booking tables, taking orders, and answering guest questions in 12+ languages. Start free.",
+  keywords: [
+    "AI phone host for restaurants",
+    "restaurant phone answering service",
+    "AI reservations",
+    "restaurant voice AI",
+    "AI host restaurant",
+    "automated restaurant phone",
+    "take restaurant orders by phone AI",
+    "restaurant booking AI",
+    "never miss a call restaurant",
+    "AI maitre d",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    images: ["/icons/white.jpeg"],
+    type: "website",
+  },
 });
 
 const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "RhythmiqCX",
-    url: "https://rhythmiqcx.com",
-    description: "AI CX platform that transforms customer support through automation, WhatsApp chatbots, and voice AI agents.",
-    potentialAction: {
-        "@type": "SearchAction",
-        target: {
-            "@type": "EntryPoint",
-            urlTemplate: "https://rhythmiqcx.com/blog?search={search_term_string}",
-        },
-        "query-input": "required name=search_term_string",
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Rhythmiq",
+  url: "https://rhythmiqcx.com",
+  description:
+    "The AI phone host for restaurants — answers every call, books tables, takes orders, and answers guest questions, 24/7 in 12+ languages.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://rhythmiqcx.com/blog?search={search_term_string}",
     },
+    "query-input": "required name=search_term_string",
+  },
 };
-
 
 const HomePage = () => {
-    return (
-        <Wrapper className="py-20 relative">
-            <JsonLd schema={websiteSchema} />
-            <Hero />
-            {/* <Companies /> */}
-            <Features />
-            <Analysis />
-            <Integration />
-            {/* <Pricing /> */}
-            <LanguageSupport />
-            <CTA/>
-        </Wrapper>
-    )
+  return (
+    <div className="paper-surface bg-paper text-ink font-sans">
+      <JsonLd schema={websiteSchema} />
+      <Hero />
+      <ProductShowcase />
+      <LogoCloud />
+      <CompleteSolution />
+      <AIWorkspace />
+      <TwoUpCards />
+      <SelfImproving />
+      <WorldClassAgent />
+      <Testimonial />
+      <FullyFeatured />
+      <ResolveFaster />
+      <Omnichannel />
+      <GuestIntelligence />
+      <Integrations />
+      <FinalCTA />
+    </div>
+  );
 };
 
-export default HomePage
+export default HomePage;

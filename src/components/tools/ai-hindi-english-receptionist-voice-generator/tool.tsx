@@ -158,12 +158,12 @@ export default function AIReceptionistVoiceGeneratorTool() {
 
   return (
     <div className="flex flex-col gap-6 max-w-4xl mx-auto w-full">
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-xl">
-        <CardHeader className="border-b border-border/50 pb-6">
+      <Card className="border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+        <CardHeader className="border-b border-ink/10 pb-6">
           <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-4">
             <div>
               <CardTitle className="flex items-center gap-2 text-2xl">
-                <Wand2 className="w-5 h-5 text-indigo-500" />
+                <Wand2 className="w-5 h-5 text-coral" />
                 Script to Speech Generator
               </CardTitle>
               <CardDescription className="mt-1">
@@ -171,7 +171,7 @@ export default function AIReceptionistVoiceGeneratorTool() {
               </CardDescription>
             </div>
             {isLimitReached && (
-              <div className="text-xs bg-red-500/10 text-red-500 px-3 py-1 rounded-full border border-red-500/20 font-medium">
+              <div className="text-xs bg-[#F6DCD2] text-[#C9461F] px-3 py-1 rounded-full border border-[#C9461F]/20 font-medium">
                 Daily Limit Reached
               </div>
             )}
@@ -188,8 +188,8 @@ export default function AIReceptionistVoiceGeneratorTool() {
                 onClick={() => handlePresetSelect(preset)}
                 className={`text-left text-sm p-3 rounded-xl border transition-all ${
                   text === preset.text
-                    ? "border-indigo-500 bg-indigo-500/5 text-indigo-400 font-medium"
-                    : "border-border/50 bg-muted/20 hover:bg-muted/40 text-muted-foreground"
+                    ? "border-coral bg-coralSoft text-coral font-medium"
+                    : "border-ink/10 bg-white hover:bg-paper2 text-ink2"
                 }`}
               >
                 <span className="block mb-1">{preset.label}</span>
@@ -200,7 +200,7 @@ export default function AIReceptionistVoiceGeneratorTool() {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 p-4 rounded-xl border border-border/50 bg-background/50">
+          <div className="grid md:grid-cols-2 gap-6 p-4 rounded-xl border border-ink/10 bg-paper">
             <div className="space-y-2">
               <Label>Target Language</Label>
               <Select
@@ -240,10 +240,10 @@ export default function AIReceptionistVoiceGeneratorTool() {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <Label htmlFor="scriptText">
-                Call Script Text <span className="text-red-500">*</span>
+                Call Script Text <span className="text-[#C9461F]">*</span>
               </Label>
               <span
-                className={`text-xs ${text.length > 300 ? "text-red-500" : "text-muted-foreground"}`}
+                className={`text-xs ${text.length > 300 ? "text-[#C9461F]" : "text-muted-foreground"}`}
               >
                 {text.length} / 300 chars
               </span>
@@ -259,7 +259,7 @@ export default function AIReceptionistVoiceGeneratorTool() {
           </div>
         </CardContent>
 
-        <CardFooter className="border-t border-border/50 p-6 bg-muted/5 flex items-center justify-between rounded-b-xl gap-4 flex-wrap">
+        <CardFooter className="border-t border-ink/10 p-6 bg-paper flex items-center justify-between rounded-b-xl gap-4 flex-wrap">
           <Button
             variant="ghost"
             size="sm"
@@ -267,14 +267,14 @@ export default function AIReceptionistVoiceGeneratorTool() {
               setText("");
               setAudioSrc(null);
             }}
-            className="text-muted-foreground"
+            className="text-ink3"
           >
             <RefreshCcw className="w-4 h-4 mr-2" /> Clear
           </Button>
 
           <Button
             size="lg"
-            className="w-full sm:w-auto min-w-[200px] gap-2 bg-gradient-to-r from-indigo-500 to-primary hover:from-indigo-600 hover:to-primary/90"
+            className="w-full sm:w-auto min-w-[200px] gap-2 btn btn-accent justify-center"
             onClick={handleGenerate}
             disabled={isGenerating || isLimitReached || text.length === 0}
           >
@@ -293,17 +293,17 @@ export default function AIReceptionistVoiceGeneratorTool() {
 
       {audioSrc && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 mt-2">
-          <Card className="border border-indigo-500/30 bg-card backdrop-blur-sm overflow-hidden shadow-2xl shadow-indigo-500/10">
-            <div className="bg-gradient-to-r from-indigo-500/10 to-transparent p-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-indigo-500/20">
+          <Card className="border border-ink/10 bg-white overflow-hidden shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+            <div className="bg-coralSoft p-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-ink/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center">
-                  <Volume2 className="w-5 h-5 text-indigo-400" />
+                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                  <Volume2 className="w-5 h-5 text-coral" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg leading-tight text-white">
+                  <h4 className="font-semibold text-lg leading-tight text-ink">
                     Generated Voice Prompt
                   </h4>
-                  <p className="text-xs text-muted-foreground uppercase tracking-widest mt-0.5">
+                  <p className="text-xs text-ink3 uppercase tracking-widest mt-0.5">
                     Ready for Deployment
                   </p>
                 </div>
@@ -311,7 +311,7 @@ export default function AIReceptionistVoiceGeneratorTool() {
               <Button
                 size="sm"
                 onClick={handleDownload}
-                className="gap-2 sm:w-auto w-full bg-indigo-600 hover:bg-indigo-700 text-white"
+                className="gap-2 sm:w-auto w-full btn btn-accent justify-center"
               >
                 <Download className="w-4 h-4" />
                 Download WAV
@@ -321,7 +321,7 @@ export default function AIReceptionistVoiceGeneratorTool() {
             <CardContent className="p-6">
               <div className="flex flex-col gap-6">
                 {/* Audio Player Wrapper */}
-                <div className="bg-background rounded-xl p-4 border border-border shadow-inner">
+                <div className="bg-paper rounded-xl p-4 border border-ink/10">
                   <audio
                     ref={audioRef}
                     controls
@@ -334,7 +334,7 @@ export default function AIReceptionistVoiceGeneratorTool() {
                 </div>
 
                 {/* Display what was read */}
-                <div className="text-sm font-medium text-muted-foreground whitespace-pre-wrap border-l-2 border-indigo-500/30 pl-4 py-1 italic">
+                <div className="text-sm font-medium text-ink2 whitespace-pre-wrap border-l-2 border-coral/40 pl-4 py-1 italic">
                   &quot;{text}&quot;
                 </div>
               </div>

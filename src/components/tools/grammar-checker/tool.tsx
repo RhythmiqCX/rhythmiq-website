@@ -664,26 +664,26 @@ export default function GrammarCheckerTool() {
     switch (severity) {
       case "error":
         return {
-          bg: "bg-red-500/10",
-          border: "border-red-500/30",
-          text: "text-red-400",
-          badge: "bg-red-500/20 text-red-400 border-red-500/30",
+          bg: "bg-[#C9461F]/10",
+          border: "border-[#C9461F]/30",
+          text: "text-[#C9461F]",
+          badge: "bg-[#C9461F]/15 text-[#C9461F] border-[#C9461F]/30",
           icon: <XCircle className="w-4 h-4" />,
         };
       case "warning":
         return {
           bg: "bg-amber-500/10",
           border: "border-amber-500/30",
-          text: "text-amber-400",
-          badge: "bg-amber-500/20 text-amber-400 border-amber-500/30",
+          text: "text-amber-600",
+          badge: "bg-amber-500/15 text-amber-600 border-amber-500/30",
           icon: <AlertTriangle className="w-4 h-4" />,
         };
       case "suggestion":
         return {
-          bg: "bg-blue-500/10",
-          border: "border-blue-500/30",
-          text: "text-blue-400",
-          badge: "bg-blue-500/20 text-blue-400 border-blue-500/30",
+          bg: "bg-coralSoft",
+          border: "border-coral/30",
+          text: "text-coral",
+          badge: "bg-coral/15 text-coral border-coral/30",
           icon: <Lightbulb className="w-4 h-4" />,
         };
     }
@@ -703,15 +703,15 @@ export default function GrammarCheckerTool() {
   };
 
   const getScoreColor = (score: number): string => {
-    if (score >= 80) return "text-emerald-500";
-    if (score >= 60) return "text-amber-500";
-    return "text-red-500";
+    if (score >= 80) return "text-[#1F7A4D]";
+    if (score >= 60) return "text-amber-600";
+    return "text-[#C9461F]";
   };
 
   const getFleschColor = (score: number): string => {
-    if (score >= 70) return "text-emerald-500";
-    if (score >= 50) return "text-amber-500";
-    return "text-red-500";
+    if (score >= 70) return "text-[#1F7A4D]";
+    if (score >= 50) return "text-amber-600";
+    return "text-[#C9461F]";
   };
 
   return (
@@ -720,16 +720,16 @@ export default function GrammarCheckerTool() {
         {/* Left Column: Editor — 3 cols */}
         <div className="lg:col-span-3 space-y-6">
           <MagicCard
-            className="p-8 border-border/50 shadow-2xl"
-            gradientColor="rgba(99, 102, 241, 0.05)"
+            className="p-8 bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
+            gradientColor="rgba(232, 93, 47, 0.05)"
           >
             <div className="space-y-5">
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-indigo-500/10 rounded-xl text-indigo-500">
+                  <div className="p-2.5 bg-coralSoft rounded-xl text-coral">
                     <SpellCheck className="w-6 h-6" />
                   </div>
-                  <h2 className="text-2xl font-bold">Text Editor</h2>
+                  <h2 className="text-2xl font-bold text-ink">Text Editor</h2>
                 </div>
                 <div className="flex items-center gap-2 flex-wrap">
                   <Button
@@ -757,7 +757,7 @@ export default function GrammarCheckerTool() {
                     size="sm"
                     onClick={handleClear}
                     disabled={!text}
-                    className="gap-2 text-red-400 hover:text-red-300 hover:border-red-500/40"
+                    className="gap-2 text-[#C9461F] hover:text-[#C9461F] hover:border-[#C9461F]/40"
                   >
                     <Trash2 className="w-3.5 h-3.5" />
                     Clear
@@ -782,7 +782,7 @@ export default function GrammarCheckerTool() {
                   placeholder="Start typing or paste your text here...
 
 The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. Their is no reason to worry. I have a unusual request for you."
-                  className="w-full min-h-[350px] max-h-[600px] p-5 rounded-xl border border-border/60 bg-background/60 text-foreground text-[15px] leading-relaxed resize-y focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/50 transition-all placeholder:text-muted-foreground/50"
+                  className="w-full min-h-[350px] max-h-[600px] p-5 rounded-xl border border-ink/10 bg-white text-ink text-[15px] leading-relaxed resize-y focus:outline-none focus:ring-2 focus:ring-coral/40 focus:border-coral/50 transition-all placeholder:text-muted-foreground/50"
                   spellCheck={false}
                 />
                 {/* Character counter */}
@@ -795,7 +795,7 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
               <Button
                 onClick={handleCheck}
                 disabled={!text.trim()}
-                className="w-full h-12 text-base font-semibold gap-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 shadow-lg shadow-indigo-500/25 transition-all duration-300"
+                className="btn btn-accent w-full h-12 text-base font-semibold gap-3 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
                 size="lg"
               >
                 <Zap className="w-5 h-5" />
@@ -804,38 +804,38 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
 
               {/* Live Stats Bar */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <div className="flex items-center gap-2 p-3 rounded-lg bg-muted/30 border border-border/30">
-                  <FileText className="w-4 h-4 text-blue-500" />
+                <div className="flex items-center gap-2 p-3 rounded-lg bg-paper2 border border-ink/10">
+                  <FileText className="w-4 h-4 text-coral" />
                   <div>
                     <p className="text-xs text-muted-foreground">Words</p>
-                    <p className="font-semibold text-sm">
+                    <p className="font-semibold text-sm text-ink">
                       {stats.wordCount.toLocaleString()}
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 p-3 rounded-lg bg-muted/30 border border-border/30">
-                  <Type className="w-4 h-4 text-violet-500" />
+                <div className="flex items-center gap-2 p-3 rounded-lg bg-paper2 border border-ink/10">
+                  <Type className="w-4 h-4 text-coral" />
                   <div>
                     <p className="text-xs text-muted-foreground">Characters</p>
-                    <p className="font-semibold text-sm">
+                    <p className="font-semibold text-sm text-ink">
                       {stats.charCount.toLocaleString()}
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 p-3 rounded-lg bg-muted/30 border border-border/30">
-                  <BookOpen className="w-4 h-4 text-emerald-500" />
+                <div className="flex items-center gap-2 p-3 rounded-lg bg-paper2 border border-ink/10">
+                  <BookOpen className="w-4 h-4 text-coral" />
                   <div>
                     <p className="text-xs text-muted-foreground">Sentences</p>
-                    <p className="font-semibold text-sm">
+                    <p className="font-semibold text-sm text-ink">
                       {stats.sentenceCount}
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 p-3 rounded-lg bg-muted/30 border border-border/30">
-                  <Clock className="w-4 h-4 text-amber-500" />
+                <div className="flex items-center gap-2 p-3 rounded-lg bg-paper2 border border-ink/10">
+                  <Clock className="w-4 h-4 text-coral" />
                   <div>
                     <p className="text-xs text-muted-foreground">Read Time</p>
-                    <p className="font-semibold text-sm">{stats.readingTime}</p>
+                    <p className="font-semibold text-sm text-ink">{stats.readingTime}</p>
                   </div>
                 </div>
               </div>
@@ -846,9 +846,7 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
         {/* Right Column: Results — 2 cols */}
         <div className="lg:col-span-2 space-y-6">
           {/* Writing Score Card */}
-          <Card className="border-border/40 shadow-lg overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-indigo-500/10 rounded-bl-full -z-10" />
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-violet-500/5 rounded-tr-full -z-10" />
+          <Card className="bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] overflow-hidden relative">
             <CardContent className="p-8">
               <div className="flex items-center justify-between mb-6">
                 <div>
@@ -874,20 +872,20 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
                   className={`w-20 h-20 rounded-full border-4 flex items-center justify-center ${
                     isChecked
                       ? writingScore >= 80
-                        ? "border-emerald-500/50"
+                        ? "border-[#1F7A4D]/50"
                         : writingScore >= 60
                           ? "border-amber-500/50"
-                          : "border-red-500/50"
-                      : "border-border/30"
+                          : "border-[#C9461F]/50"
+                      : "border-ink/10"
                   }`}
                 >
                   {isChecked ? (
                     writingScore >= 80 ? (
-                      <CheckCircle className="w-8 h-8 text-emerald-500" />
+                      <CheckCircle className="w-8 h-8 text-[#1F7A4D]" />
                     ) : writingScore >= 60 ? (
-                      <AlertTriangle className="w-8 h-8 text-amber-500" />
+                      <AlertTriangle className="w-8 h-8 text-amber-600" />
                     ) : (
-                      <XCircle className="w-8 h-8 text-red-500" />
+                      <XCircle className="w-8 h-8 text-[#C9461F]" />
                     )
                   ) : (
                     <SpellCheck className="w-8 h-8 text-muted-foreground/30" />
@@ -919,43 +917,43 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
           {/* Issue Summary Cards */}
           {isChecked && (
             <div className="grid grid-cols-2 gap-3">
-              <div className="p-4 rounded-xl border border-red-500/20 bg-red-500/5">
+              <div className="p-4 rounded-xl border border-[#C9461F]/20 bg-[#C9461F]/5">
                 <div className="flex items-center gap-2 mb-1">
-                  <XCircle className="w-4 h-4 text-red-500" />
-                  <span className="text-xs text-red-400 font-medium">
+                  <XCircle className="w-4 h-4 text-[#C9461F]" />
+                  <span className="text-xs text-[#C9461F] font-medium">
                     Errors
                   </span>
                 </div>
-                <p className="text-2xl font-bold text-red-500">
+                <p className="text-2xl font-bold text-[#C9461F]">
                   {issues.filter((i) => i.severity === "error").length}
                 </p>
               </div>
               <div className="p-4 rounded-xl border border-amber-500/20 bg-amber-500/5">
                 <div className="flex items-center gap-2 mb-1">
-                  <AlertTriangle className="w-4 h-4 text-amber-500" />
-                  <span className="text-xs text-amber-400 font-medium">
+                  <AlertTriangle className="w-4 h-4 text-amber-600" />
+                  <span className="text-xs text-amber-600 font-medium">
                     Warnings
                   </span>
                 </div>
-                <p className="text-2xl font-bold text-amber-500">
+                <p className="text-2xl font-bold text-amber-600">
                   {issues.filter((i) => i.severity === "warning").length}
                 </p>
               </div>
-              <div className="p-4 rounded-xl border border-blue-500/20 bg-blue-500/5">
+              <div className="p-4 rounded-xl border border-coral/20 bg-coralSoft">
                 <div className="flex items-center gap-2 mb-1">
-                  <Lightbulb className="w-4 h-4 text-blue-500" />
-                  <span className="text-xs text-blue-400 font-medium">
+                  <Lightbulb className="w-4 h-4 text-coral" />
+                  <span className="text-xs text-coral font-medium">
                     Suggestions
                   </span>
                 </div>
-                <p className="text-2xl font-bold text-blue-500">
+                <p className="text-2xl font-bold text-coral">
                   {issues.filter((i) => i.severity === "suggestion").length}
                 </p>
               </div>
-              <div className="p-4 rounded-xl border border-emerald-500/20 bg-emerald-500/5">
+              <div className="p-4 rounded-xl border border-[#1F7A4D]/20 bg-[#1F7A4D]/5">
                 <div className="flex items-center gap-2 mb-1">
-                  <BarChart3 className="w-4 h-4 text-emerald-500" />
-                  <span className="text-xs text-emerald-400 font-medium">
+                  <BarChart3 className="w-4 h-4 text-[#1F7A4D]" />
+                  <span className="text-xs text-[#1F7A4D] font-medium">
                     Readability
                   </span>
                 </div>
@@ -970,25 +968,25 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
 
           {/* Detailed Analysis */}
           {isChecked && (
-            <Card className="border-border/40 shadow-lg">
+            <Card className="bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
               <CardContent className="p-6 space-y-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-violet-500/10 rounded-lg text-violet-500">
+                  <div className="p-2 bg-coralSoft rounded-lg text-coral">
                     <BarChart3 className="w-5 h-5" />
                   </div>
-                  <p className="font-semibold">Writing Analysis</p>
+                  <p className="font-semibold text-ink">Writing Analysis</p>
                 </div>
 
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Paragraphs</span>
-                    <span className="font-medium">{stats.paragraphCount}</span>
+                    <span className="font-medium text-ink">{stats.paragraphCount}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">
                       Avg. Words/Sentence
                     </span>
-                    <span className="font-medium">
+                    <span className="font-medium text-ink">
                       {stats.avgWordsPerSentence}
                     </span>
                   </div>
@@ -996,7 +994,7 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
                     <span className="text-muted-foreground">
                       Avg. Syllables/Word
                     </span>
-                    <span className="font-medium">
+                    <span className="font-medium text-ink">
                       {stats.avgSyllablesPerWord}
                     </span>
                   </div>
@@ -1004,11 +1002,11 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
                     <span className="text-muted-foreground">
                       Characters (no spaces)
                     </span>
-                    <span className="font-medium">
+                    <span className="font-medium text-ink">
                       {stats.charCountNoSpaces.toLocaleString()}
                     </span>
                   </div>
-                  <div className="border-t border-border/40 pt-3 flex justify-between">
+                  <div className="border-t border-ink/10 pt-3 flex justify-between">
                     <span className="text-muted-foreground">
                       Flesch Reading Ease
                     </span>
@@ -1030,13 +1028,13 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
       {/* Issues Panel */}
       {isChecked && (
         <MagicCard
-          className="p-8 border-border/50 shadow-2xl"
-          gradientColor="rgba(99, 102, 241, 0.03)"
+          className="p-8 bg-white border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
+          gradientColor="rgba(232, 93, 47, 0.03)"
         >
           <div className="space-y-6">
             <div className="flex items-center justify-between flex-wrap gap-4">
-              <h2 className="text-2xl font-bold flex items-center gap-3">
-                <SpellCheck className="w-6 h-6 text-indigo-500" />
+              <h2 className="text-2xl font-bold flex items-center gap-3 text-ink">
+                <SpellCheck className="w-6 h-6 text-coral" />
                 Issues Found
                 <Badge variant="secondary" className="text-sm">
                   {issues.length}
@@ -1122,10 +1120,10 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
             <div className="space-y-3 max-h-[600px] overflow-y-auto pr-2">
               {filteredIssues.length === 0 ? (
                 <div className="flex flex-col items-center justify-center p-12 text-center">
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mb-4">
-                    <CheckCircle className="w-8 h-8 text-emerald-500" />
+                  <div className="w-16 h-16 rounded-full bg-[#1F7A4D]/10 flex items-center justify-center mb-4">
+                    <CheckCircle className="w-8 h-8 text-[#1F7A4D]" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-1">
+                  <h3 className="text-lg font-semibold mb-1 text-ink">
                     {activeFilter === "all"
                       ? "No issues found!"
                       : `No ${activeFilter} issues found!`}
@@ -1190,7 +1188,7 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
                             <p className="text-xs text-muted-foreground mb-1 font-medium">
                               Context:
                             </p>
-                            <code className="text-sm bg-background/60 border border-border/40 rounded-lg px-3 py-2 block text-muted-foreground">
+                            <code className="text-sm bg-paper2 border border-ink/10 rounded-lg px-3 py-2 block text-muted-foreground">
                               &quot;...{issue.context}...&quot;
                             </code>
                           </div>
@@ -1203,7 +1201,7 @@ The quick brown fox jumps over the lazy dog. She recieve teh package yesterday. 
                                   e.stopPropagation();
                                   handleApplySuggestion(issue);
                                 }}
-                                className="gap-2 border-emerald-500/30 text-emerald-500 hover:bg-emerald-500/10 hover:text-emerald-400"
+                                className="gap-2 border-[#1F7A4D]/30 text-[#1F7A4D] hover:bg-[#1F7A4D]/10 hover:text-[#1F7A4D]"
                               >
                                 <CheckCircle className="w-3.5 h-3.5" />
                                 Apply: &quot;{issue.suggestion}&quot;

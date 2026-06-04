@@ -250,7 +250,7 @@ export default function FaviconGeneratorTool() {
 
       {/* Controls Section */}
       <div className="lg:col-span-5 space-y-8">
-        <div className="bg-card border border-border/50 rounded-2xl p-6 shadow-sm">
+        <div className="bg-white border border-ink/10 rounded-2xl p-6 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
           <Tabs
             defaultValue="image"
             className="w-full"
@@ -268,7 +268,7 @@ export default function FaviconGeneratorTool() {
 
             <TabsContent value="image" className="space-y-4">
               <div
-                className="border-2 border-dashed border-border hover:border-primary/50 transition-colors rounded-xl p-8 flex flex-col items-center justify-center text-center cursor-pointer bg-muted/20"
+                className="border-2 border-dashed border-ink/10 hover:border-coral/50 transition-colors rounded-xl p-8 flex flex-col items-center justify-center text-center cursor-pointer bg-paper2"
                 onClick={() => fileInputRef.current?.click()}
                 onDragOver={(e) => e.preventDefault()}
                 onDrop={(e) => {
@@ -307,7 +307,7 @@ export default function FaviconGeneratorTool() {
                   <Upload className="w-10 h-10 text-muted-foreground mb-4" />
                 )}
 
-                <h3 className="font-semibold text-lg">
+                <h3 className="font-semibold text-lg text-ink">
                   {uploadedImage ? "Change Image" : "Upload Image"}
                 </h3>
                 <p className="text-sm text-muted-foreground mt-2 max-w-xs">
@@ -432,22 +432,22 @@ export default function FaviconGeneratorTool() {
 
         {/* HTML output */}
         {generatedIcons.length > 0 && (
-          <div className="bg-card border border-border/50 rounded-2xl p-6 shadow-sm space-y-4">
+          <div className="bg-white border border-ink/10 rounded-2xl p-6 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="font-semibold text-lg flex items-center gap-2">
-                <span className="text-primary">&lt;/&gt;</span> HTML Code
+              <h3 className="font-semibold text-lg flex items-center gap-2 text-ink">
+                <span className="text-coral">&lt;/&gt;</span> HTML Code
               </h3>
               <Button variant="ghost" size="sm" onClick={copyHTML}>
                 {copied ? (
-                  <Check className="w-4 h-4 mr-2 text-green-500" />
+                  <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                 ) : (
                   <Copy className="w-4 h-4 mr-2" />
                 )}
                 {copied ? "Copied" : "Copy"}
               </Button>
             </div>
-            <div className="bg-muted/50 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-border/50">
-              <pre className="text-muted-foreground">
+            <div className="bg-paper2 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-ink/10">
+              <pre className="text-ink2">
                 {`<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -457,7 +457,7 @@ export default function FaviconGeneratorTool() {
             </div>
             <p className="text-sm text-muted-foreground">
               Place these tags in the{" "}
-              <code className="bg-muted px-1.5 py-0.5 rounded text-foreground">
+              <code className="bg-paper2 px-1.5 py-0.5 rounded text-ink">
                 &lt;head&gt;
               </code>{" "}
               section of your HTML.
@@ -468,13 +468,13 @@ export default function FaviconGeneratorTool() {
 
       {/* Preview Section */}
       <div className="lg:col-span-7 space-y-8">
-        <div className="bg-card border border-border/50 rounded-2xl p-6 shadow-sm">
+        <div className="bg-white border border-ink/10 rounded-2xl p-6 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="font-semibold text-lg">Preview & Download</h3>
+            <h3 className="font-semibold text-lg text-ink">Preview & Download</h3>
             <Button
               onClick={downloadAll}
               disabled={generatedIcons.length === 0 || isGenerating}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20"
+              className="btn btn-accent shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]"
             >
               {isGenerating ? (
                 <>
@@ -499,7 +499,7 @@ export default function FaviconGeneratorTool() {
               {generatedIcons.map((icon) => (
                 <div
                   key={icon.name}
-                  className="group relative border border-border/50 rounded-xl p-4 flex flex-col items-center gap-3 hover:border-border transition-all hover:shadow-md bg-card/50"
+                  className="group relative border border-ink/10 rounded-xl p-4 flex flex-col items-center gap-3 hover:border-ink/20 transition-all hover:shadow-md bg-white"
                 >
                   <div className="relative w-16 h-16 flex items-center justify-center bg-transparent checkerboard-bg rounded-lg overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -511,7 +511,7 @@ export default function FaviconGeneratorTool() {
                   </div>
                   <div className="text-center w-full">
                     <p
-                      className="font-medium text-sm truncate w-full"
+                      className="font-medium text-sm truncate w-full text-ink"
                       title={icon.name}
                     >
                       {icon.name}
@@ -521,7 +521,7 @@ export default function FaviconGeneratorTool() {
                     </p>
                   </div>
 
-                  <div className="absolute inset-0 bg-background/80 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-xl">
+                  <div className="absolute inset-0 bg-paper/80 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-xl">
                     <Button
                       size="sm"
                       variant="secondary"
@@ -536,11 +536,11 @@ export default function FaviconGeneratorTool() {
           )}
         </div>
 
-        <div className="bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/20 rounded-2xl p-6">
-          <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
+        <div className="bg-coralSoft border border-coral/20 rounded-2xl p-6">
+          <h4 className="font-semibold text-ink mb-2">
             Did you know?
           </h4>
-          <ul className="list-disc list-inside text-sm text-blue-700 dark:text-blue-300 space-y-1">
+          <ul className="list-disc list-inside text-sm text-ink2 space-y-1">
             <li>
               A <strong>favicon</strong> (favorite icon) helps users identify
               your site quickly in tabs and bookmarks.

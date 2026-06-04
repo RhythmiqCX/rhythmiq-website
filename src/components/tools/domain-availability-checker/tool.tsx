@@ -107,8 +107,8 @@ export default function DomainAvailabilityCheckerTool() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-12 flex flex-col gap-6">
           <div className="flex items-center justify-between">
-            <Label className="text-base font-semibold flex items-center gap-2">
-              <Search className="w-5 h-5 text-blue-500" />
+            <Label className="text-base font-semibold flex items-center gap-2 text-ink">
+              <Search className="w-5 h-5 text-coral" />
               Search Domain
             </Label>
             <Button
@@ -122,7 +122,7 @@ export default function DomainAvailabilityCheckerTool() {
             </Button>
           </div>
 
-          <div className="p-6 bg-card rounded-xl border border-border shadow-sm space-y-6">
+          <div className="p-6 bg-white rounded-xl border border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] space-y-6">
             <div className="flex gap-4 items-end">
               <div className="flex-1 space-y-2">
                 <Label htmlFor="domain-input">Domain Name</Label>
@@ -140,7 +140,7 @@ export default function DomainAvailabilityCheckerTool() {
               </div>
               <Button
                 size="lg"
-                className="h-12 px-8 font-semibold"
+                className="btn btn-accent h-12 px-8 font-semibold"
                 onClick={handleCreateCheck}
                 disabled={loading}
               >
@@ -162,10 +162,10 @@ export default function DomainAvailabilityCheckerTool() {
                   <div
                     key={ext.value}
                     className={cn(
-                      "flex items-center space-x-2 border rounded-lg p-3 cursor-pointer transition-colors hover:bg-muted/50",
+                      "flex items-center space-x-2 border rounded-lg p-3 cursor-pointer transition-colors hover:bg-paper2",
                       selectedExtensions.includes(ext.value)
-                        ? "border-primary bg-primary/5"
-                        : "border-border",
+                        ? "border-coral bg-coralSoft"
+                        : "border-ink/10",
                     )}
                     onClick={() => toggleExtension(ext.value)}
                   >
@@ -198,39 +198,39 @@ export default function DomainAvailabilityCheckerTool() {
       {/* Results Section */}
       {results.length > 0 && (
         <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <h2 className="text-xl font-semibold flex items-center gap-2">
-            <CheckCircle2 className="w-5 h-5 text-green-500" />
+          <h2 className="text-xl font-semibold flex items-center gap-2 text-ink">
+            <CheckCircle2 className="w-5 h-5 text-[#1F7A4D]" />
             Availability Results
           </h2>
 
-          <div className="border border-border rounded-xl overflow-hidden shadow-sm bg-card">
+          <div className="border border-ink/10 rounded-xl overflow-hidden shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] bg-white">
             <Table>
-              <TableHeader className="bg-muted/50">
+              <TableHeader className="bg-paper2">
                 <TableRow>
-                  <TableHead className="w-[40%]">Domain</TableHead>
-                  <TableHead className="w-[30%]">Status</TableHead>
-                  <TableHead className="w-[30%] text-right">Action</TableHead>
+                  <TableHead className="w-[40%] text-ink">Domain</TableHead>
+                  <TableHead className="w-[30%] text-ink">Status</TableHead>
+                  <TableHead className="w-[30%] text-right text-ink">Action</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {results.map((result) => (
-                  <TableRow key={result.domain} className="hover:bg-muted/30">
-                    <TableCell className="font-medium text-lg">
+                  <TableRow key={result.domain} className="hover:bg-paper2">
+                    <TableCell className="font-medium text-lg text-ink">
                       {result.domain}
                     </TableCell>
                     <TableCell>
                       {result.status === "available" ? (
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-green-500/10 text-green-600 border border-green-500/20">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-[#E2F1E8] text-[#1F7A4D] border border-[#1F7A4D]/20">
                           <CheckCircle2 className="w-3.5 h-3.5" />
                           Available
                         </span>
                       ) : result.status === "taken" ? (
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-red-500/10 text-red-600 border border-red-500/20">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-[#C9461F]/10 text-[#C9461F] border border-[#C9461F]/20">
                           <XCircle className="w-3.5 h-3.5" />
                           Taken
                         </span>
                       ) : (
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-yellow-500/10 text-yellow-600 border border-yellow-500/20">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-paper2 text-ink2 border border-ink/10">
                           <AlertCircle className="w-3.5 h-3.5" />
                           Unknown
                         </span>
@@ -242,7 +242,7 @@ export default function DomainAvailabilityCheckerTool() {
                           variant="default"
                           size="sm"
                           asChild
-                          className="h-8"
+                          className="btn btn-accent h-8"
                         >
                           <a
                             href={`https://www.namecheap.com/domains/registration/results/?domain=${result.domain}`}

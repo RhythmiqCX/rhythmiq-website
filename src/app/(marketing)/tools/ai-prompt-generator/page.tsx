@@ -15,25 +15,22 @@ export const metadata = generateMetadata({
 export default function AIPromptGeneratorPage() {
   return (
     <div className="relative w-full py-20 overflow-hidden">
-      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-fuchsia-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-violet-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
-
       <Wrapper className="relative z-10">
         <Container className="flex flex-col gap-12">
           <div className="flex flex-col items-start gap-6">
             <Link
               href="/tools"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-2 text-sm text-ink3 hover:text-ink transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
               Back to Tools
             </Link>
 
             <div className="flex flex-col gap-4 max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
+              <h1 className="h-section text-ink">
                 AI Prompt Generator
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="lede">
                 Stop guessing. Use proven prompt frameworks to unlock the full
                 potential of AI models like ChatGPT, Claude, and Gemini.
               </p>
@@ -42,24 +39,24 @@ export default function AIPromptGeneratorPage() {
 
           <AIPromptGeneratorTool />
 
-          <div className="grid md:grid-cols-3 gap-8 pt-12 border-t border-border/40">
+          <div className="grid md:grid-cols-3 gap-8 pt-12 border-t border-ink/10">
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Structured Frameworks</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-ink">Structured Frameworks</h3>
+              <p className="text-ink2">
                 Choose from industry-standard frameworks like CREATE, APE, and
                 RACE to structure your thoughts effectively.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Better Outputs</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-ink">Better Outputs</h3>
+              <p className="text-ink2">
                 Clear inputs lead to precise outputs. Reduce hallucinations and
                 imprecise generic answers.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Multi-Model Ready</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-ink">Multi-Model Ready</h3>
+              <p className="text-ink2">
                 Designed to work across all major LLMs including GPT-4, Claude
                 3, and Gemini Pro.
               </p>

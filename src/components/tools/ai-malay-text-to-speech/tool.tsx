@@ -66,10 +66,10 @@ const AiMalayTextToSpeechTool = () => {
 
   return (
     <div className="flex flex-col gap-8 max-w-4xl mx-auto">
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-xl">
+      <Card className="border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Volume2 className="w-5 h-5 text-yellow-500" />
+          <CardTitle className="flex items-center gap-2 text-ink">
+            <Volume2 className="w-5 h-5 text-coral" />
             Malay AI Text to Speech — Bahasa Malaysia TTS
           </CardTitle>
           <CardDescription>
@@ -93,7 +93,7 @@ const AiMalayTextToSpeechTool = () => {
           <Button
             variant="default"
             size="lg"
-            className="w-full gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white border-0 shadow-md"
+            className="w-full gap-2 bg-coral hover:bg-coral2 text-white border-0 shadow-md"
             onClick={handleGenerate}
             disabled={isGenerating || isLimitReached}
           >
@@ -107,7 +107,7 @@ const AiMalayTextToSpeechTool = () => {
           </Button>
 
           {isLimitReached && (
-            <p className="text-sm text-red-500 text-center">
+            <p className="text-sm text-[#C9461F] text-center">
               Daily limit of 5 free generations reached. Sign up for unlimited access.
             </p>
           )}
@@ -116,9 +116,9 @@ const AiMalayTextToSpeechTool = () => {
 
       {audioSrc && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <Card className="border-yellow-500/20 bg-card/50 backdrop-blur-sm shadow-xl">
-            <CardHeader className="bg-yellow-500/5 py-4 border-b border-yellow-500/10">
-              <CardTitle className="text-lg flex items-center justify-between">
+          <Card className="border border-ink/10 bg-white shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
+            <CardHeader className="bg-paper2 py-4 border-b border-ink/10">
+              <CardTitle className="text-lg flex items-center justify-between text-ink">
                 <span>Generated Audio</span>
                 <Button variant="outline" size="sm" onClick={handleDownload} className="gap-2 h-8">
                   <Download className="w-3.5 h-3.5" /> Download
@@ -126,11 +126,11 @@ const AiMalayTextToSpeechTool = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
-              <div className="flex flex-col items-center p-6 bg-background/50 rounded-xl border border-border/50 gap-4">
+              <div className="flex flex-col items-center p-6 bg-paper2 rounded-xl border border-ink/10 gap-4">
                 <audio ref={audioRef} controls className="w-full max-w-md h-12" src={audioSrc} autoPlay>
                   Your browser does not support the audio element.
                 </audio>
-                <p className="text-sm text-muted-foreground text-center">
+                <p className="text-sm text-ink2 text-center">
                   AI-generated Bahasa Malaysia voice. Download as .wav for use in your projects.
                 </p>
               </div>

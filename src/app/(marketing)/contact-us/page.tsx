@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -57,52 +57,50 @@ export default function ContactUsPage() {
     };
 
   return (
-    <div className="bg-gradient-to-b from-blue-500/20 to-background py-16 px-4 sm:px-6 lg:px-8">
+    <div className="paper-surface bg-paper text-ink font-sans py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-3xl font-extrabold text-gray-200">Let's get in touch</h2>
-        {/* <p className="mt-4 text-lg text-gray-600">
-          Email us .
-        </p> */}
+        <span className="eyebrow justify-center">Contact</span>
+        <h2 className="h-section mt-3">Let&apos;s get in touch</h2>
       </div>
 
       <div className="max-w-4xl mx-auto text-center grid grid-cols-1 md:grid-cols-1 gap-8 px-4">
 
         {/* Contact Details */}
-        <Card className="shadow-lg">
+        <Card className="bg-white border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
           <CardHeader>
-            <CardTitle>Contact Info</CardTitle>
+            <CardTitle className="text-ink">Contact Info</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex items-center justify-center space-x-3 mb-4">
-              <Mail className="h-5 w-5 text-gray-200" />
+              <Mail className="h-5 w-5 text-coral" />
               <div className="flex items-center space-x-2 text-left">
                 <div>
-                  <p className="text-sm font-medium text-gray-500">Primary Email</p>
-                  <p className="text-sm text-gray-200">hello@rhythmiqcx.com</p>
+                  <p className="text-sm font-medium text-ink3">Primary Email</p>
+                  <p className="text-sm text-ink">hello@rhythmiqcx.com</p>
                 </div>
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={() => copyToClipboard('hello@rhythmiqcx.com', 'Primary Email')}
                 >
-                  <Copy className="h-5 w-5 text-gray-200" />
+                  <Copy className="h-5 w-5 text-ink2" />
                 </Button>
               </div>
             </div>
 
             <div className="flex items-center justify-center space-x-3">
-              <Mail className="h-5 w-5 text-gray-200" />
+              <Mail className="h-5 w-5 text-coral" />
               <div className="flex items-center space-x-2 text-left">
                 <div>
-                  <p className="text-sm font-medium text-gray-500">Alternate Email</p>
-                  <p className="text-sm text-gray-200">ray@rhythmiqcx.com</p>
+                  <p className="text-sm font-medium text-ink3">Alternate Email</p>
+                  <p className="text-sm text-ink">ray@rhythmiqcx.com</p>
                 </div>
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={() => copyToClipboard('ray@rhythmiqcx.com', 'Alternate Email')}
                 >
-                  <Copy className="h-5 w-5 text-gray-200" />
+                  <Copy className="h-5 w-5 text-ink2" />
                 </Button>
               </div>
             </div>
@@ -110,53 +108,72 @@ export default function ContactUsPage() {
         </Card>
 
         {/* Lead Capture Form */}
-        <Card className="shadow-lg">
+        <Card className="bg-white border-ink/10 shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]">
           <CardHeader>
             <div className="flex items-center gap-2 justify-center">
-              <Sparkles className="h-5 w-5 text-cyan-400" />
-              <CardTitle>Get in Touch</CardTitle>
+              <Sparkles className="h-5 w-5 text-coral" />
+              <CardTitle className="text-ink">Get in Touch</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4 text-left">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <label htmlFor="name" className="text-sm font-medium text-ink">Name</label>
+                  <Input
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="bg-white border-ink/10"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <label htmlFor="email" className="text-sm font-medium text-ink">Email</label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@company.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="bg-white border-ink/10"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <label htmlFor="company" className="text-sm font-medium text-ink">Company</label>
                 <Input
-                  name="name"
-                  placeholder="Your name"
-                  value={formData.name}
+                  id="company"
+                  name="company"
+                  placeholder="Company (optional)"
+                  value={formData.company}
                   onChange={handleChange}
-                  required
-                />
-                <Input
-                  name="email"
-                  type="email"
-                  placeholder="you@company.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
+                  className="bg-white border-ink/10"
                 />
               </div>
 
-              <Input
-                name="company"
-                placeholder="Company (optional)"
-                value={formData.company}
-                onChange={handleChange}
-              />
-
-              <Textarea
-                name="message"
-                placeholder="What brings you here? (optional)"
-                rows={4}
-                value={formData.message}
-                onChange={handleChange}
-                className="resize-none"
-              />
+              <div className="space-y-1.5">
+                <label htmlFor="message" className="text-sm font-medium text-ink">Message</label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  placeholder="What brings you here? (optional)"
+                  rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="resize-none bg-white border-ink/10"
+                />
+              </div>
 
               <Button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-gradient-to-r from-cyan-300 to-blue-600 hover:from-cyan-400 hover:to-blue-500"
+                className="btn btn-accent w-full justify-center"
               >
                 {submitting ? (
                   "Sending..."
@@ -171,11 +188,9 @@ export default function ContactUsPage() {
           </CardContent>
         </Card>
 
-        <Link href="https://calendly.com/ray-rhythmiqcx/30min">
-            <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-xl font-semibold shadow-lg hover:opacity-90 transition">
-              Schedule a Free Demo
-            </button>
-            </Link>
+        <Link href="https://calendly.com/ray-rhythmiqcx/30min" className="btn btn-dark mx-auto justify-center">
+          Schedule a Free Demo
+        </Link>
       </div>
     </div>
   );

@@ -123,7 +123,7 @@ const ContentRepurposerTool = () => {
   return (
     <div className="flex flex-col gap-8">
       {/* Input Section */}
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+      <Card className="border border-ink/10 bg-white">
         <CardHeader>
           <CardTitle>1. Input Source</CardTitle>
           <CardDescription>
@@ -173,7 +173,7 @@ const ContentRepurposerTool = () => {
             </TabsContent>
           </Tabs>
 
-          <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-border/50">
+          <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-ink/10">
             <div className="space-y-2">
               <Label>2. Brand Voice</Label>
               <Select value={selectedTone} onValueChange={setSelectedTone}>
@@ -194,7 +194,7 @@ const ContentRepurposerTool = () => {
               <Button
                 variant="default"
                 size="lg"
-                className="w-full gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-0"
+                className="btn btn-accent w-full gap-2"
                 onClick={generateContent}
                 disabled={isGenerating || isLimitReached}
               >
@@ -211,7 +211,7 @@ const ContentRepurposerTool = () => {
                 )}
               </Button>
               {isLimitReached && (
-                <p className="text-xs text-red-500 text-center mt-2">
+                <p className="text-xs text-[#C9461F] text-center mt-2">
                   You have reached your daily limit of 5 generations for this
                   tool.
                 </p>
@@ -224,15 +224,15 @@ const ContentRepurposerTool = () => {
       {/* Output Section */}
       {generatedContent && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
-            <div className="border-b border-border/50">
+          <Card className="border border-ink/10 bg-white overflow-hidden">
+            <div className="border-b border-ink/10">
               <div className="flex overflow-x-auto">
                 <button
                   onClick={() => setActiveTab("linkedin")}
                   className={`flex items-center gap-2 px-6 py-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
                     activeTab === "linkedin"
-                      ? "border-blue-500 text-blue-500 bg-blue-500/5"
-                      : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                      ? "border-coral text-coral bg-coralSoft"
+                      : "border-transparent text-muted-foreground hover:text-foreground hover:bg-paper2"
                   }`}
                 >
                   <Linkedin className="w-4 h-4" /> LinkedIn Post
@@ -241,8 +241,8 @@ const ContentRepurposerTool = () => {
                   onClick={() => setActiveTab("twitter")}
                   className={`flex items-center gap-2 px-6 py-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
                     activeTab === "twitter"
-                      ? "border-sky-500 text-sky-500 bg-sky-500/5"
-                      : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                      ? "border-coral text-coral bg-coralSoft"
+                      : "border-transparent text-muted-foreground hover:text-foreground hover:bg-paper2"
                   }`}
                 >
                   <Twitter className="w-4 h-4" /> Twitter Thread
@@ -251,8 +251,8 @@ const ContentRepurposerTool = () => {
                   onClick={() => setActiveTab("newsletter")}
                   className={`flex items-center gap-2 px-6 py-4 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
                     activeTab === "newsletter"
-                      ? "border-orange-500 text-orange-500 bg-orange-500/5"
-                      : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                      ? "border-coral text-coral bg-coralSoft"
+                      : "border-transparent text-muted-foreground hover:text-foreground hover:bg-paper2"
                   }`}
                 >
                   <Mail className="w-4 h-4" /> Newsletter
@@ -263,7 +263,7 @@ const ContentRepurposerTool = () => {
             <CardContent className="p-6 min-h-[300px]">
               {activeTab === "linkedin" && (
                 <div className="space-y-4">
-                  <div className="p-4 rounded-lg border border-border bg-background/50 whitespace-pre-wrap font-sans text-sm leading-relaxed">
+                  <div className="p-4 rounded-lg border border-ink/10 bg-paper2 whitespace-pre-wrap font-sans text-sm leading-relaxed text-ink">
                     {generatedContent.linkedin}
                   </div>
                   <div className="flex justify-end">
@@ -292,15 +292,15 @@ const ContentRepurposerTool = () => {
                     {generatedContent.twitter.map((tweet, i) => (
                       <div key={i} className="flex gap-4">
                         <div className="flex flex-col items-center gap-2">
-                          <div className="w-8 h-8 rounded-full bg-sky-500/10 flex items-center justify-center text-xs font-bold text-sky-500">
+                          <div className="w-8 h-8 rounded-full bg-coralSoft flex items-center justify-center text-xs font-bold text-coral">
                             {i + 1}
                           </div>
                           {i !== generatedContent.twitter.length - 1 && (
-                            <div className="w-0.5 flex-1 bg-border" />
+                            <div className="w-0.5 flex-1 bg-ink/10" />
                           )}
                         </div>
                         <div className="flex-1 pb-4">
-                          <div className="p-3 rounded-xl border border-border bg-background/50 text-sm">
+                          <div className="p-3 rounded-xl border border-ink/10 bg-paper2 text-sm text-ink">
                             {tweet}
                           </div>
                         </div>
@@ -329,7 +329,7 @@ const ContentRepurposerTool = () => {
 
               {activeTab === "newsletter" && (
                 <div className="space-y-4">
-                  <div className="p-6 rounded-lg border border-border bg-white text-black dark:bg-zinc-900 dark:text-gray-200 whitespace-pre-wrap font-serif text-base leading-relaxed">
+                  <div className="p-6 rounded-lg border border-ink/10 bg-white text-black whitespace-pre-wrap font-serif text-base leading-relaxed">
                     {generatedContent.newsletter}
                   </div>
                   <div className="flex justify-end">

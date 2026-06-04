@@ -19,27 +19,22 @@ export const metadata = generateMetadata({
 const EmailSignatureGeneratorPage = () => {
   return (
     <div className="relative w-full py-20 overflow-hidden">
-      {/* Background Gradients */}
-      <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-indigo-500/10 blur-[100px] rounded-full -z-10 opacity-50 pointer-events-none" />
-
       <Wrapper className="relative z-10">
         <Container className="flex flex-col gap-12">
           {/* Header Section */}
           <div className="flex flex-col items-start gap-6">
             <Link
               href="/tools"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-2 text-sm text-ink3 hover:text-ink transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
               Back to Tools
             </Link>
 
             <div className="flex flex-col gap-4 max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
-                Email Signature Generator
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <span className="eyebrow">Free Tool</span>
+              <h1 className="h-section">Email Signature Generator</h1>
+              <p className="lede max-w-2xl">
                 Create a professional, branded email signature in minutes.
                 Customize your name, company, social links, and layout then copy
                 & paste into Gmail, Outlook, or Apple Mail.
@@ -51,24 +46,24 @@ const EmailSignatureGeneratorPage = () => {
           <EmailSignatureTool />
 
           {/* Features / SEO Content */}
-          <div className="grid md:grid-cols-3 gap-8 pt-12 border-t border-border/40 mt-8">
+          <div className="grid md:grid-cols-3 gap-8 pt-12 border-t border-ink/10 mt-8">
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Live Preview</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-ink">Live Preview</h3>
+              <p className="text-ink2">
                 See your signature update in real-time as you type. Choose from
                 multiple professional layouts to match your brand.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Works Everywhere</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-ink">Works Everywhere</h3>
+              <p className="text-ink2">
                 Compatible with all major email clients including Gmail,
                 Outlook, Apple Mail, Yahoo, and Thunderbird.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">100% Free</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold text-ink">100% Free</h3>
+              <p className="text-ink2">
                 No sign-up required. No watermarks. Just create, copy, and paste
                 your professional signature instantly.
               </p>

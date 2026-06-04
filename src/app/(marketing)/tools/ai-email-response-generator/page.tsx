@@ -25,29 +25,24 @@ export const metadata = generateMetadata({
 const EmailResponseGeneratorPage = () => {
   return (
     <div className="relative w-full py-20 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
-
       <Wrapper className="relative z-10">
         <Container className="flex flex-col gap-12">
           <div className="flex flex-col items-start gap-6">
             <Link
               href="/tools"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-2 text-sm text-ink3 hover:text-ink transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
               Back to Tools
             </Link>
 
             <div className="flex flex-col gap-4 max-w-3xl">
-              <div className="inline-flex items-center rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-500 backdrop-blur-sm w-fit">
+              <div className="inline-flex items-center rounded-full border border-coral/20 bg-coralSoft px-3 py-1 text-sm font-medium text-coral w-fit">
                 ✨ Free AI Tool
               </div>
-              <h1 className="text-4xl md:text-5xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
-                AI Email Response Generator
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <span className="eyebrow">Free Tool</span>
+              <h1 className="h-section">AI Email Response Generator</h1>
+              <p className="lede max-w-2xl">
                 Streamline your communication with professional, personalized,
                 and context-aware email replies generated instantly.
               </p>
@@ -57,14 +52,14 @@ const EmailResponseGeneratorPage = () => {
           <EmailResponseGeneratorTool />
 
           {/* Features / Explanation Section */}
-          <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-border/40">
+          <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-ink/10">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold flex items-center gap-2">
-                  <Zap className="w-6 h-6 text-yellow-500" />
+                <h2 className="text-2xl font-bold text-ink flex items-center gap-2">
+                  <Zap className="w-6 h-6 text-coral" />
                   What This Tool Does
                 </h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-ink2 leading-relaxed">
                   The AI Email Response Generator helps you craft polished email
                   replies by understanding the received email, subject, intent,
                   and communication tone. It generates responses that are
@@ -73,11 +68,11 @@ const EmailResponseGeneratorPage = () => {
               </div>
 
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold flex items-center gap-2">
-                  <Clock className="w-6 h-6 text-green-500" />
+                <h2 className="text-2xl font-bold text-ink flex items-center gap-2">
+                  <Clock className="w-6 h-6 text-coral" />
                   How It Works
                 </h2>
-                <ul className="space-y-3 text-muted-foreground list-decimal list-inside">
+                <ul className="space-y-3 text-ink2 list-decimal list-inside">
                   <li>Paste the received email content</li>
                   <li>Enter the subject and your response goal</li>
                   <li>Provide sender and recipient names</li>
@@ -92,8 +87,8 @@ const EmailResponseGeneratorPage = () => {
 
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold flex items-center gap-2">
-                  <Briefcase className="w-6 h-6 text-blue-500" />
+                <h2 className="text-2xl font-bold text-ink flex items-center gap-2">
+                  <Briefcase className="w-6 h-6 text-coral" />
                   Perfect For
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -107,18 +102,18 @@ const EmailResponseGeneratorPage = () => {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-2 p-3 rounded-lg border border-border bg-card/50 text-sm"
+                      className="flex items-center gap-2 p-3 rounded-lg border border-ink/10 bg-white text-sm text-ink2"
                     >
-                      <MessageSquare className="w-4 h-4 text-primary/50" />
+                      <MessageSquare className="w-4 h-4 text-coral" />
                       {item}
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl border border-border bg-muted/20">
-                <h3 className="font-semibold mb-2">Did you know?</h3>
-                <p className="text-sm text-muted-foreground">
+              <div className="p-6 rounded-xl border border-ink/10 bg-white">
+                <h3 className="font-semibold mb-2 text-ink">Did you know?</h3>
+                <p className="text-sm text-ink2">
                   Spending just 2 minutes less on an email can save you hours
                   per week. Let AI handle the drafting while you focus on the
                   decision making.

@@ -61,41 +61,42 @@ const competitors = [
 
 const PricingComparison = () => {
   return (
-    <section className="w-full py-16 px-4">
+    <section className="w-full py-16 px-4 bg-paper">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10">
-          <p className="text-sm font-medium text-cyan-400 uppercase tracking-widest mb-2">
-            Pricing
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-white">
+          <span className="eyebrow justify-center">Pricing</span>
+          <h2 className="h-feature text-ink mt-3">
             $29/mo vs. $99 $349/mo Competitors
           </h2>
-          <p className="text-gray-400 mt-3 text-sm max-w-xl mx-auto">
+          <p className="text-ink2 mt-3 text-sm max-w-xl mx-auto">
             One flat price. No per-minute surprises. The only platform combining
             voice + chat + WhatsApp in one plan.
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-xl border border-slate-700">
-          <table className="w-full text-sm">
+        <div
+          className="overflow-x-auto rounded-[14px]"
+          style={{ border: "1px solid var(--line)" }}
+        >
+          <table className="w-full text-sm bg-white">
             <thead>
-              <tr className="border-b border-slate-700 bg-slate-800/60">
-                <th className="text-left px-4 py-3 text-gray-300 font-semibold">
+              <tr className="bg-paper2 text-ink">
+                <th className="text-left px-4 py-3 font-semibold">
                   Platform
                 </th>
-                <th className="text-center px-4 py-3 text-gray-300 font-semibold">
+                <th className="text-center px-4 py-3 font-semibold">
                   Price
                 </th>
-                <th className="text-center px-4 py-3 text-gray-300 font-semibold">
+                <th className="text-center px-4 py-3 font-semibold">
                   Pricing Model
                 </th>
-                <th className="text-center px-4 py-3 text-gray-300 font-semibold">
+                <th className="text-center px-4 py-3 font-semibold">
                   No-Code
                 </th>
-                <th className="text-center px-4 py-3 text-gray-300 font-semibold">
+                <th className="text-center px-4 py-3 font-semibold">
                   WhatsApp
                 </th>
-                <th className="text-center px-4 py-3 text-gray-300 font-semibold">
+                <th className="text-center px-4 py-3 font-semibold">
                   Indian English
                 </th>
               </tr>
@@ -104,17 +105,14 @@ const PricingComparison = () => {
               {competitors.map((c, i) => (
                 <tr
                   key={i}
-                  className={`border-b border-slate-700/50 ${
-                    c.highlight
-                      ? "bg-cyan-500/10 border-l-2 border-l-cyan-500"
-                      : "bg-slate-900/30"
-                  }`}
+                  className={`border-t ${c.highlight ? "bg-coral/5 border-l-2 border-l-coral" : ""}`}
+                  style={{ borderTopColor: "var(--line-soft)" }}
                 >
-                  <td className="px-4 py-3 font-semibold text-white">
+                  <td className="px-4 py-3 font-semibold text-ink">
                     {c.highlight ? (
                       <span className="flex items-center gap-2">
                         {c.name}
-                        <span className="text-[10px] bg-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
+                        <span className="text-[10px] bg-coral/15 text-coral px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
                           Best Value
                         </span>
                       </span>
@@ -123,32 +121,32 @@ const PricingComparison = () => {
                     )}
                   </td>
                   <td
-                    className={`px-4 py-3 text-center font-semibold ${c.highlight ? "text-cyan-400" : "text-gray-300"}`}
+                    className={`px-4 py-3 text-center font-semibold ${c.highlight ? "text-coral" : "text-ink2"}`}
                   >
                     {c.price}
                   </td>
-                  <td className="px-4 py-3 text-center text-gray-400">
+                  <td className="px-4 py-3 text-center text-ink2">
                     {c.model}
                   </td>
                   <td className="px-4 py-3 text-center">
                     {c.noCode ? (
-                      <Check className="w-4 h-4 text-green-400 mx-auto" />
+                      <Check className="w-4 h-4 text-[#1F7A4D] mx-auto" />
                     ) : (
-                      <X className="w-4 h-4 text-red-400 mx-auto" />
+                      <X className="w-4 h-4 text-[#C9461F] mx-auto" />
                     )}
                   </td>
                   <td className="px-4 py-3 text-center">
                     {c.whatsapp ? (
-                      <Check className="w-4 h-4 text-green-400 mx-auto" />
+                      <Check className="w-4 h-4 text-[#1F7A4D] mx-auto" />
                     ) : (
-                      <X className="w-4 h-4 text-red-400 mx-auto" />
+                      <X className="w-4 h-4 text-[#C9461F] mx-auto" />
                     )}
                   </td>
                   <td className="px-4 py-3 text-center">
                     {c.indianEnglish ? (
-                      <Check className="w-4 h-4 text-green-400 mx-auto" />
+                      <Check className="w-4 h-4 text-[#1F7A4D] mx-auto" />
                     ) : (
-                      <X className="w-4 h-4 text-red-400 mx-auto" />
+                      <X className="w-4 h-4 text-[#C9461F] mx-auto" />
                     )}
                   </td>
                 </tr>
@@ -159,10 +157,10 @@ const PricingComparison = () => {
 
         <div className="mt-8 text-center">
           <Link
-            href="/ai-chatbot-pricing"
-            className="inline-flex items-center gap-2 text-cyan-400 text-sm hover:underline"
+            href="/contact-us"
+            className="inline-flex items-center gap-2 text-coral text-sm hover:underline"
           >
-            See full pricing breakdown →
+            Talk to us about pricing →
           </Link>
         </div>
       </div>

@@ -19,25 +19,23 @@ export const metadata = generateMetadata({
 const MetaTagGeneratorPage = () => {
   return (
     <div className="relative w-full py-20 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-blue-500/10 blur-[120px] rounded-full -z-10 opacity-50 pointer-events-none" />
-
       <Wrapper className="relative z-10">
         <Container className="flex flex-col gap-12">
           <div className="flex flex-col items-start gap-6">
             <Link
               href="/tools"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-2 text-sm text-ink3 hover:text-ink transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
               Back to Tools
             </Link>
 
             <div className="flex flex-col gap-4 max-w-3xl">
-              <h1 className="text-4xl md:text-4xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
+              <span className="eyebrow">SEO Tool</span>
+              <h1 className="h-section mt-3 text-ink">
                 Meta Tag Generator
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="lede mt-3 max-w-2xl">
                 Create perfect SEO meta tags, Open Graph tags, and Twitter Cards
                 for your website. Boost your search rankings and make your links
                 look great on social media.

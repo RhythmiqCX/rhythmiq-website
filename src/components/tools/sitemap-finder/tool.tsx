@@ -81,7 +81,7 @@ export default function SitemapFinderTool() {
         <div className="lg:col-span-12 flex flex-col gap-6">
           <div className="flex items-center justify-between">
             <Label className="text-base font-semibold flex items-center gap-2">
-              <Search className="w-5 h-5 text-blue-500" />
+              <Search className="w-5 h-5 text-coral" />
               Find & Check Sitemaps
             </Label>
             <Button
@@ -95,7 +95,7 @@ export default function SitemapFinderTool() {
             </Button>
           </div>
 
-          <div className="p-6 bg-card rounded-xl border border-border shadow-sm space-y-6">
+          <div className="p-6 bg-white rounded-xl border border-ink/10 shadow-sm space-y-6">
             <div className="space-y-2">
               <Label htmlFor="domain-input">Website URL</Label>
               <div className="flex gap-4">
@@ -147,56 +147,56 @@ export default function SitemapFinderTool() {
         <div className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
           {/* Summary Cards */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-card border border-border rounded-xl p-4 flex flex-col gap-2">
-              <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
+            <div className="bg-white border border-ink/10 rounded-xl p-4 flex flex-col gap-2">
+              <div className="text-sm text-ink3 font-medium uppercase tracking-wider">
                 Total Sitemaps
               </div>
-              <div className="text-3xl font-bold">
+              <div className="text-3xl font-bold text-ink">
                 {result.summary.totalSitemaps}
               </div>
             </div>
-            <div className="bg-card border border-border rounded-xl p-4 flex flex-col gap-2">
-              <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
+            <div className="bg-white border border-ink/10 rounded-xl p-4 flex flex-col gap-2">
+              <div className="text-sm text-ink3 font-medium uppercase tracking-wider">
                 Total URLs Found
               </div>
-              <div className="text-3xl font-bold text-primary">
+              <div className="text-3xl font-bold text-coral">
                 {result.summary.totalUrls.toLocaleString()}
               </div>
             </div>
-            <div className="bg-card border border-border rounded-xl p-4 flex flex-col gap-2">
-              <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
+            <div className="bg-white border border-ink/10 rounded-xl p-4 flex flex-col gap-2">
+              <div className="text-sm text-ink3 font-medium uppercase tracking-wider">
                 Broken Sitemaps
               </div>
               <div
                 className={cn(
                   "text-3xl font-bold",
                   result.summary.brokenSitemaps > 0
-                    ? "text-destructive"
-                    : "text-green-500",
+                    ? "text-[#C9461F]"
+                    : "text-[#1F7A4D]",
                 )}
               >
                 {result.summary.brokenSitemaps}
               </div>
             </div>
-            <div className="bg-card border border-border rounded-xl p-4 flex flex-col gap-2">
-              <div className="text-sm text-muted-foreground font-medium uppercase tracking-wider">
+            <div className="bg-white border border-ink/10 rounded-xl p-4 flex flex-col gap-2">
+              <div className="text-sm text-ink3 font-medium uppercase tracking-wider">
                 Missing LastMod
               </div>
-              <div className="text-3xl font-bold text-orange-500">
+              <div className="text-3xl font-bold text-coral">
                 {result.summary.totalMissingLastMod}
               </div>
             </div>
           </div>
 
           <div className="flex flex-col gap-4">
-            <h2 className="text-xl font-semibold flex items-center gap-2">
-              <FileCode className="w-5 h-5 text-purple-500" />
+            <h2 className="text-xl font-semibold flex items-center gap-2 text-ink">
+              <FileCode className="w-5 h-5 text-coral" />
               Discovered Sitemaps
             </h2>
 
-            <div className="border border-border rounded-xl overflow-hidden shadow-sm bg-card">
+            <div className="border border-ink/10 rounded-xl overflow-hidden shadow-sm bg-white">
               <Table>
-                <TableHeader className="bg-muted/50">
+                <TableHeader className="bg-paper2">
                   <TableRow>
                     <TableHead className="w-[50%]">Sitemap URL</TableHead>
                     <TableHead className="w-[15%]">Status</TableHead>
@@ -210,7 +210,7 @@ export default function SitemapFinderTool() {
                     <TableRow>
                       <TableCell
                         colSpan={5}
-                        className="text-center py-8 text-muted-foreground"
+                        className="text-center py-8 text-ink3"
                       >
                         No sitemaps found. Check if /robots.txt exists or if
                         standard paths like /sitemap.xml are used.
@@ -218,13 +218,13 @@ export default function SitemapFinderTool() {
                     </TableRow>
                   ) : (
                     result.sitemaps.map((sitemap, idx) => (
-                      <TableRow key={idx} className="hover:bg-muted/30">
-                        <TableCell className="font-medium break-all">
+                      <TableRow key={idx} className="hover:bg-paper2">
+                        <TableCell className="font-medium break-all text-ink">
                           <a
                             href={sitemap.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center hover:underline hover:text-primary transition-colors gap-2 group"
+                            className="flex items-center hover:underline hover:text-coral transition-colors gap-2 group"
                           >
                             {sitemap.url}
                             <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -233,30 +233,30 @@ export default function SitemapFinderTool() {
                         <TableCell>
                           <span
                             className={cn(
-                              "inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold",
+                              "inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold border border-ink/10",
                               sitemap.status === 200
-                                ? "bg-green-500/10 text-green-600 border border-green-500/20"
-                                : "bg-red-500/10 text-red-600 border border-red-500/20",
+                                ? "bg-[#E2F1E8] text-[#1F7A4D]"
+                                : "bg-[#FBE6DD] text-[#C9461F]",
                             )}
                           >
                             {sitemap.status === 0 ? "Error" : sitemap.status}
                           </span>
                         </TableCell>
                         <TableCell>
-                          <span className="capitalize text-sm text-muted-foreground bg-muted px-2 py-0.5 rounded border border-border/50">
+                          <span className="capitalize text-sm text-ink2 bg-paper2 px-2 py-0.5 rounded border border-ink/10">
                             {sitemap.type}
                           </span>
                         </TableCell>
-                        <TableCell className="text-right font-mono text-sm">
+                        <TableCell className="text-right font-mono text-sm text-ink">
                           {sitemap.urlCount > 0
                             ? sitemap.urlCount.toLocaleString()
                             : "—"}
                         </TableCell>
                         <TableCell className="text-right">
                           {sitemap.valid ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-500 ml-auto" />
+                            <CheckCircle2 className="w-5 h-5 text-[#1F7A4D] ml-auto" />
                           ) : (
-                            <XCircle className="w-5 h-5 text-destructive ml-auto" />
+                            <XCircle className="w-5 h-5 text-[#C9461F] ml-auto" />
                           )}
                         </TableCell>
                       </TableRow>

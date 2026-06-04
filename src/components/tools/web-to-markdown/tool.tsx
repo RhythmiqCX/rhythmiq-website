@@ -212,7 +212,7 @@ export default function WebToMarkdownTool() {
         <div className="flex flex-col gap-4 h-full">
           <div className="flex items-center justify-between">
             <Label className="text-base font-semibold flex items-center gap-2">
-              <Globe className="w-5 h-5 text-blue-500" />
+              <Globe className="w-5 h-5 text-coral" />
               Webpage URL
             </Label>
             <Button
@@ -228,10 +228,10 @@ export default function WebToMarkdownTool() {
 
           <div
             className={cn(
-              "relative flex-none rounded-xl border-2 transition-all bg-card overflow-hidden p-6 gap-4 flex flex-col",
+              "relative flex-none rounded-xl border-2 transition-all bg-white overflow-hidden p-6 gap-4 flex flex-col",
               error
-                ? "border-destructive/50"
-                : "border-border hover:border-border/80 focus-within:border-primary/50",
+                ? "border-[#C9461F]/50"
+                : "border-ink/10 hover:border-ink/20 focus-within:border-coral/50",
             )}
           >
             <Label htmlFor="url-input" className="sr-only">
@@ -268,7 +268,7 @@ export default function WebToMarkdownTool() {
           </div>
 
           {/* Info/Instructions when empty */}
-          <div className="flex-1 rounded-xl border border-dashed border-border/50 bg-muted/20 p-6 flex items-center justify-center text-muted-foreground text-center">
+          <div className="flex-1 rounded-xl border border-dashed border-ink/10 bg-paper2 p-6 flex items-center justify-center text-ink3 text-center">
             <div className="max-w-xs space-y-2">
               <Globe className="w-8 h-8 mx-auto opacity-50 mb-2" />
               <p className="text-sm">
@@ -279,7 +279,7 @@ export default function WebToMarkdownTool() {
           </div>
 
           {error && (
-            <div className="flex items-center gap-2 text-destructive text-sm font-medium animate-in slide-in-from-top-2 fade-in bg-destructive/10 p-3 rounded-lg border border-destructive/20 mt-auto">
+            <div className="flex items-center gap-2 text-[#C9461F] text-sm font-medium animate-in slide-in-from-top-2 fade-in bg-[#FBE6DD] p-3 rounded-lg border border-ink/10 mt-auto">
               <AlertCircle className="w-4 h-4" />
               {error}
             </div>
@@ -290,7 +290,7 @@ export default function WebToMarkdownTool() {
         <div className="flex flex-col gap-4 h-full">
           <div className="flex items-center justify-between">
             <Label className="text-base font-semibold flex items-center gap-2">
-              <FileText className="w-5 h-5 text-green-500" />
+              <FileText className="w-5 h-5 text-coral" />
               Markdown Output
             </Label>
             <div className="flex gap-2">
@@ -299,7 +299,7 @@ export default function WebToMarkdownTool() {
                   <Button variant="outline" size="sm" onClick={handleCopy}>
                     {copied ? (
                       <>
-                        <Check className="w-4 h-4 mr-2 text-green-500" />
+                        <Check className="w-4 h-4 mr-2 text-[#1F7A4D]" />
                         Copied
                       </>
                     ) : (
@@ -312,7 +312,7 @@ export default function WebToMarkdownTool() {
                   <Button
                     size="sm"
                     onClick={handleDownload}
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    className="btn btn-accent"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download
@@ -322,9 +322,9 @@ export default function WebToMarkdownTool() {
             </div>
           </div>
 
-          <div className="relative flex-1 rounded-xl border-2 border-border/50 bg-muted/30 overflow-hidden group">
+          <div className="relative flex-1 rounded-xl border border-ink/10 bg-paper2 overflow-hidden group">
             {!output ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground p-6 text-center">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-ink3 p-6 text-center">
                 <FileText className="w-12 h-12 mb-4 opacity-20 hidden lg:block" />
                 <p>Markdown content will appear here</p>
               </div>
@@ -332,7 +332,7 @@ export default function WebToMarkdownTool() {
               <textarea
                 readOnly
                 value={output}
-                className="w-full h-full p-4 md:p-6 bg-transparent resize-none focus:outline-none font-mono text-sm leading-relaxed text-foreground/90 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
+                className="w-full h-full p-4 md:p-6 bg-transparent resize-none focus:outline-none font-mono text-sm leading-relaxed text-ink scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
               />
             )}
           </div>

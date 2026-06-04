@@ -122,7 +122,7 @@ const EmailResponseGeneratorTool = () => {
   return (
     <div className="flex flex-col gap-8">
       {/* Input Section */}
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+      <Card className="border border-ink/10 bg-white">
         <CardHeader>
           <CardTitle>Email Details</CardTitle>
           <CardDescription>
@@ -178,7 +178,7 @@ const EmailResponseGeneratorTool = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-border/50">
+          <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-ink/10">
             <div className="space-y-2">
               <Label>Language</Label>
               <Select value={language} onValueChange={setLanguage}>
@@ -215,7 +215,7 @@ const EmailResponseGeneratorTool = () => {
             <Button
               variant="default"
               size="lg"
-              className="w-full gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white border-0"
+              className="w-full gap-2 btn btn-accent justify-center"
               onClick={generateEmail}
               disabled={isGenerating || isLimitReached}
             >
@@ -232,7 +232,7 @@ const EmailResponseGeneratorTool = () => {
               )}
             </Button>
             {isLimitReached && (
-              <p className="text-xs text-red-500 text-center mt-2">
+              <p className="text-xs text-[#C9461F] text-center mt-2">
                 You have used all your free generations for today.
               </p>
             )}
@@ -243,10 +243,10 @@ const EmailResponseGeneratorTool = () => {
       {/* Output Section */}
       {generatedEmail && (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
-            <CardHeader className="border-b border-border/50">
+          <Card className="border border-ink/10 bg-white overflow-hidden">
+            <CardHeader className="border-b border-ink/10">
               <CardTitle className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-blue-500" /> Generated Email
+                <Mail className="w-5 h-5 text-coral" /> Generated Email
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6 space-y-4">
@@ -258,7 +258,7 @@ const EmailResponseGeneratorTool = () => {
                   <Input
                     readOnly
                     value={generatedEmail.subject}
-                    className="bg-background/50"
+                    className="bg-paper"
                   />
                   <Button
                     size="icon"
@@ -269,7 +269,7 @@ const EmailResponseGeneratorTool = () => {
                     className="shrink-0"
                   >
                     {copiedState === "subject" ? (
-                      <Check className="w-4 h-4 text-green-500" />
+                      <Check className="w-4 h-4 text-[#1F7A4D]" />
                     ) : (
                       <Copy className="w-4 h-4" />
                     )}
@@ -285,7 +285,7 @@ const EmailResponseGeneratorTool = () => {
                   <Textarea
                     readOnly
                     value={generatedEmail.body}
-                    className="min-h-[250px] bg-background/50 font-sans text-sm leading-relaxed p-4 resize-none"
+                    className="min-h-[250px] bg-paper font-sans text-sm leading-relaxed p-4 resize-none"
                   />
                   <Button
                     size="sm"

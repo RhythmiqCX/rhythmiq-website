@@ -6,7 +6,6 @@ import VoiceAIFeatures from "../../../components/marketing/VoiceAIFeatures";
 import VoiceAIFAQ from "./VoiceAIFAQ";
 import HowItWorks from "./HowItWorks";
 import PricingComparison from "./PricingComparison";
-import MarketsSection from "./MarketsSection";
 import { generateMetadata as genMeta } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
 
@@ -133,7 +132,7 @@ const featuresObject = [
 
 const VoiceAIApp = () => {
   return (
-    <div className="min-h-screen w-full">
+    <div className="min-h-screen w-full paper-surface bg-paper text-ink font-sans">
       <JsonLd schema={softwareSchema} />
       <JsonLd schema={faqSchema} />
 
@@ -144,13 +143,13 @@ const VoiceAIApp = () => {
 
       {/* Definition paragraph for AEO / AI citation */}
       <section className="w-full max-w-3xl mx-auto px-6 py-8 text-center">
-        <p className="text-gray-400 text-sm leading-relaxed">
-          <strong className="text-white">RhythmiqCX Voice AI</strong> is a
+        <p className="text-ink2 text-sm leading-relaxed">
+          <strong className="text-ink">RhythmiqCX Voice AI</strong> is a
           conversational AI phone receptionist platform that deploys human-like
           AI voice agents for 24/7 inbound and outbound call handling. Powered
           by Sarvam Bulbul v2 neural TTS and real-time speech-to-text, it routes
           calls intelligently, supports 60+ languages, and starts at{" "}
-          <strong className="text-white">$29/month</strong> — no per-minute
+          <strong className="text-ink">$29/month</strong> — no per-minute
           fees, no developer required.
         </p>
       </section>
@@ -181,11 +180,6 @@ const VoiceAIApp = () => {
           section1Subheading={featuresObject[2].section1Subheading}
           imageUrl1="images/thirdimg1-unscreen.gif"
         />
-      </section>
-
-      {/* Markets */}
-      <section>
-        <MarketsSection />
       </section>
 
       {/* Pricing Comparison */}
