@@ -8,6 +8,7 @@ import HowItWorks from "./HowItWorks";
 import PricingComparison from "./PricingComparison";
 import { generateMetadata as genMeta } from "@/utils";
 import JsonLd from "@/components/global/JsonLd";
+import { AlwaysOnArt, ConversationArt, RoutingArt } from "@/components/marketing/voice-art";
 
 export const metadata = genMeta({
   title: "AI Phone Receptionist & Voice AI Agents | RhythmiqCX — From $29/mo",
@@ -171,14 +172,14 @@ const VoiceAIApp = () => {
           section2Content={featuresObject[1].section1Content}
           section2Heading={featuresObject[1].section1Heading}
           section2Subheading={featuresObject[1].section1Subheading}
-          imageUrl1="images/mic_3.gif"
-          imageUrl2="images/ai-voice-1.gif"
+          art1={<AlwaysOnArt className="w-full h-full" />}
+          art2={<ConversationArt className="w-full h-full" />}
         />
         <VoiceAIFeatures
           section1Content={featuresObject[2].section1Content}
           section1Heading={featuresObject[2].section1Heading}
           section1Subheading={featuresObject[2].section1Subheading}
-          imageUrl1="images/thirdimg1-unscreen.gif"
+          art1={<RoutingArt className="w-full h-full" />}
         />
       </section>
 

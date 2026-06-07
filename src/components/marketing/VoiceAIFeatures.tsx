@@ -8,7 +8,11 @@ interface Props {
   section2Content?: string;
   imageUrl1?: string;
   imageUrl2?: string;
+  art1?: React.ReactNode;
+  art2?: React.ReactNode;
 }
+
+const ART_BOX = "w-full max-w-[400px] aspect-square rounded-2xl overflow-hidden shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)]";
 
 export default function VoiceAIFeatures({
   section1Subheading,
@@ -20,6 +24,8 @@ export default function VoiceAIFeatures({
   section2Content = "",
   imageUrl1 = "",
   imageUrl2 = "",
+  art1,
+  art2,
 }: Props) {
   return (
     <>
@@ -29,11 +35,15 @@ export default function VoiceAIFeatures({
 
           {/* Left Image */}
           <div className="flex justify-center items-center shrink-0">
-            <img
-              src={imageUrl1}
-              alt="Feature Image"
-              className="rounded-2xl shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] w-full max-w-[400px] h-auto"
-            />
+            {art1 ? (
+              <div className={ART_BOX}>{art1}</div>
+            ) : (
+              <img
+                src={imageUrl1}
+                alt="Feature Image"
+                className="rounded-2xl shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] w-full max-w-[400px] h-auto"
+              />
+            )}
           </div>
 
           {/* Right Text */}
@@ -59,11 +69,15 @@ export default function VoiceAIFeatures({
 
             {/* Right Image */}
             <div className="flex justify-center items-center md:order-2">
-              <img
-                src={imageUrl2}
-                alt="Feature Image"
-                className="rounded-2xl shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] w-full max-w-[400px] h-auto"
-              />
+              {art2 ? (
+                <div className={ART_BOX}>{art2}</div>
+              ) : (
+                <img
+                  src={imageUrl2}
+                  alt="Feature Image"
+                  className="rounded-2xl shadow-[0_14px_24px_-16px_rgba(25,24,20,0.2)] w-full max-w-[400px] h-auto"
+                />
+              )}
             </div>
           </div>
         </section>
