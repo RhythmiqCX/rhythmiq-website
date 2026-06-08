@@ -6,17 +6,16 @@ import JsonLd from "@/components/global/JsonLd";
 import { BOOK_DEMO_URL } from "@/constants/links";
 
 export const metadata = generateMetadata({
-  title: "Synthflow Alternative  RhythmiqCX Voice AI | $29/mo vs $99/mo",
+  title: "Synthflow Alternative for Restaurants | RhythmiqCX AI Phone Host",
   description:
-    "Synthflow removed its $29 tier  now starts at $99/mo with minute limits. RhythmiqCX offers AI phone receptionist + chat + WhatsApp at flat $29/mo with no minute caps.",
+    "Synthflow is a generic voice AI builder you configure yourself, with monthly minute caps. RhythmiqCX is the done-for-you AI phone host built for restaurants: books tables, takes orders, and answers in 12+ languages on flat plans with no minute caps.",
   keywords: [
     "Synthflow alternative",
-    "Synthflow competitor",
+    "Synthflow alternative for restaurants",
     "RhythmiqCX vs Synthflow",
-    "cheaper Synthflow alternative",
-    "Synthflow pricing",
-    "AI voice agent $29",
-    "AI phone receptionist affordable",
+    "AI phone host for restaurants",
+    "restaurant voice AI",
+    "AI that takes orders over the phone",
   ],
   alternates: {
     canonical: "/synthflow-alternative",
@@ -30,9 +29,9 @@ export const metadata = generateMetadata({
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Synthflow Alternative: RhythmiqCX Voice AI Comparison",
+  headline: "Synthflow Alternative: RhythmiqCX AI Phone Host for Restaurants",
   description:
-    "Side-by-side comparison of RhythmiqCX and Synthflow covering pricing, minute limits, omnichannel support, and value for money.",
+    "Side-by-side comparison of RhythmiqCX and Synthflow covering restaurant fit, order taking, pricing model, minute caps, and languages.",
   url: "https://rhythmiqcx.com/synthflow-alternative",
   author: { "@type": "Organization", name: "RhythmiqCX" },
   publisher: {
@@ -61,44 +60,44 @@ const Neg = ({ children }: { children: React.ReactNode }) => (
 
 const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
-    "Entry Price",
-    <Neg key="s-price">$99/mo entry tier (removed the $29 plan). 3.4× more expensive for the same core use case.</Neg>,
-    <Pos key="rx-price"><strong className="text-ink">Still $29/mo.</strong> Flat rate, no minute caps, no plan downgrades.</Pos>,
+    "Built for restaurants",
+    <Neg key="s-fit">A generic voice-AI builder. You design the call flows, prompts, and logic yourself, for any industry.</Neg>,
+    <Pos key="rx-fit"><strong className="text-ink">Purpose-built for restaurants.</strong> Reservations, takeout and delivery orders, and menu questions work out of the box.</Pos>,
   ],
   [
-    "Minute Caps",
-    <Neg key="s-min">Monthly minute allowances on all plans. Overage costs apply when you exceed your limit.</Neg>,
-    <Pos key="rx-min"><strong className="text-ink">No minute caps.</strong> Flat monthly pricing regardless of call duration or volume.</Pos>,
+    "Takes orders on the call",
+    <Neg key="s-order">Possible, but you have to build and maintain the ordering flow and POS logic yourself.</Neg>,
+    <Pos key="rx-order"><strong className="text-ink">Takes the whole order.</strong> Modifiers and all, pushed straight into your POS.</Pos>,
   ],
   [
-    "Omnichannel (WhatsApp + Chat)",
-    <Neg key="s-omni">Voice only. No WhatsApp channel, no web chat widget.</Neg>,
-    <Pos key="rx-omni"><strong className="text-ink">Voice + WhatsApp + web chat</strong> on one unified platform. No extra cost.</Pos>,
+    "Pricing model",
+    <Neg key="s-price">From $99/mo with monthly minute caps. A busy month triggers overages, so the real cost is unpredictable.</Neg>,
+    <Pos key="rx-price"><strong className="text-ink">Flat plans from $149/mo.</strong> No minute caps, no surprise overage bills.</Pos>,
   ],
   [
-    "Indian-English Support",
-    <Neg key="s-lang">No dedicated Indian-English voice model. Primarily optimised for US/UK English.</Neg>,
-    <Pos key="rx-lang"><strong className="text-ink">Native Indian-English.</strong> Sarvam Bulbul v2 TTS + Saarika STT. 60+ languages total.</Pos>,
+    "Languages",
+    <Neg key="s-lang">Optimised for US/UK English. No native support for Arabic, Spanish, or Hindi callers.</Neg>,
+    <Pos key="rx-lang"><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more, at no extra charge.</Pos>,
   ],
   [
-    "No-Code Setup",
-    <Neg key="s-setup">Setup requires configuration and some technical familiarity. Not as instant as claimed.</Neg>,
-    <Pos key="rx-setup"><strong className="text-ink">Truly no-code.</strong> Configure AI persona, upload knowledge base, connect phone live in under a day.</Pos>,
+    "Setup",
+    <Neg key="s-setup">No-code, but you still design the agent, prompts, and flows yourself.</Neg>,
+    <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your menu and hours, point your number at it, live in minutes.</Pos>,
   ],
   [
     "Smart Call Routing",
     <Neg key="s-route">Basic routing available. Full escalation logic requires additional configuration.</Neg>,
-    <Pos key="rx-route"><strong className="text-ink">Built-in smart routing.</strong> Auto-escalates to human agent with full call transcript zero customer repetition.</Pos>,
+    <Pos key="rx-route"><strong className="text-ink">Built-in smart routing.</strong> Hands the call to your team with the full transcript, zero customer repetition.</Pos>,
   ],
   [
     "Concurrent Calls",
-    <Neg key="s-conc">Limited concurrent call capacity on lower plans. Higher plans required for volume.</Neg>,
-    <Pos key="rx-conc"><strong className="text-ink">1,000+ concurrent calls</strong> GPU-accelerated, included on all plans.</Pos>,
+    <Neg key="s-conc">Limited concurrent call capacity on lower plans. Higher plans required for the dinner rush.</Neg>,
+    <Pos key="rx-conc"><strong className="text-ink">1,000+ concurrent calls</strong> handles the whole Friday rush at once.</Pos>,
   ],
   [
     "Support",
     <Neg key="s-sup">Support quality varies by plan tier. Lower plans get limited support access.</Neg>,
-    <Pos key="rx-sup"><strong className="text-ink">24×7 support</strong> via email, phone, and ticketing on every plan including entry.</Pos>,
+    <Pos key="rx-sup"><strong className="text-ink">Real support</strong> on every plan, with a dedicated success manager on Enterprise.</Pos>,
   ],
 ];
 
@@ -111,9 +110,9 @@ export default function SynthflowAlternative() {
       <section className="section-tight text-center">
         <div className="wrap max-w-4xl">
           <span className="eyebrow justify-center">Comparison · Synthflow</span>
-          <h1 className="h-section mt-4">Synthflow Alternative $29/mo vs $99/mo, No Minute Caps</h1>
+          <h1 className="h-section mt-4">Synthflow Alternative: An AI Phone Host Built for Restaurants</h1>
           <p className="lede mx-auto max-w-2xl mt-4">
-            Synthflow dropped its $29 plan. RhythmiqCX kept it and added WhatsApp, web chat, and no minute limits.
+            Synthflow is a generic voice-AI builder you configure yourself, with monthly minute caps. RhythmiqCX is the done-for-you AI phone host for restaurants: it books tables, takes orders, and answers in 12+ languages, on flat plans with no minute caps.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-7">
             <Link href={BOOK_DEMO_URL} className="btn btn-accent">Book a free demo</Link>
@@ -122,18 +121,20 @@ export default function SynthflowAlternative() {
         </div>
       </section>
 
-      <div className="wrap max-w-5xl pb-4 space-y-14">
+      <div className="wrap max-w-5xl pb-20 lg:pb-28 space-y-14">
         <section id="intro" className="text-center">
-          <h2 className="h-feature mb-3">Why Teams Are Looking for a Synthflow Alternative</h2>
+          <h2 className="h-feature mb-3">Why Restaurants Look for a Synthflow Alternative</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
-            Synthflow used to offer a $29/month entry tier it removed it. Their
-            current entry plan starts at $99/month and comes with a monthly minute
-            cap. That's a 3.4× price increase for the same core use case: an AI
-            voice agent that answers customer calls. On top of that, Synthflow is
-            voice-only there's no WhatsApp channel, no web chat widget, and no
-            omnichannel inbox. RhythmiqCX fills exactly that gap: the same AI
-            voice capabilities, still at $29/month flat, with web chat and
-            WhatsApp included in the same dashboard.
+            Synthflow is a capable, no-code voice-AI builder, but it is built for
+            everyone, which means it is built for no one in particular. You design
+            the call flows, write the prompts, and wire up your own ordering and
+            reservation logic. Its plans start around $99/month with monthly minute
+            caps, so a busy service can tip you into overages and an unpredictable
+            bill. RhythmiqCX takes the opposite approach: it is a done-for-you AI
+            phone host built specifically for restaurants. It already knows how to
+            book a table, take a takeout order with modifiers, and answer the
+            questions guests actually call about, in 12+ languages, on a flat plan
+            with no minute meter running in the background.
           </p>
         </section>
 
@@ -168,18 +169,17 @@ export default function SynthflowAlternative() {
               <h3 className="text-lg font-semibold text-[#1F7A4D] mb-3 text-center">RhythmiqCX</h3>
               <h4 className="text-ink font-medium mb-2 flex items-center gap-2"><CheckCircle className="h-4 w-4 text-[#1F7A4D]" /> Pros</h4>
               <ul className="pl-5 list-disc text-ink2 space-y-1">
-                <li><strong className="text-ink">$29/mo flat</strong> 3.4× cheaper than Synthflow's entry tier</li>
-                <li><strong className="text-ink">No minute caps</strong> flat cost regardless of call volume</li>
-                <li><strong className="text-ink">True omnichannel</strong> voice + WhatsApp + web chat included</li>
-                <li><strong className="text-ink">Indian-English native</strong> Sarvam models built for the accent</li>
-                <li>1,000+ concurrent calls on all plans</li>
-                <li>24×7 human support on entry plan</li>
-                <li>Built-in smart call routing</li>
+                <li><strong className="text-ink">Built for restaurants</strong> reservations, orders, and menu Q&A out of the box</li>
+                <li><strong className="text-ink">Takes the whole order</strong> modifiers and all, straight into your POS</li>
+                <li><strong className="text-ink">Flat plans, no minute caps</strong> no overage anxiety on a busy night</li>
+                <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>
+                <li>1,000+ concurrent calls for the dinner rush</li>
+                <li>Done-for-you setup, live in minutes</li>
               </ul>
               <h4 className="text-ink font-medium mt-4 mb-2 flex items-center gap-2"><XCircle className="h-4 w-4 text-ink3" /> Cons</h4>
               <ul className="pl-5 list-disc text-ink3 space-y-1">
-                <li>Newer brand less established in Western markets</li>
-                <li>Fewer third-party integrations than Synthflow</li>
+                <li>Not the cheapest generic builder it is a done-for-you product, priced like one</li>
+                <li>Focused on hospitality, not a general-purpose voice platform</li>
               </ul>
             </div>
             <div className="bg-white p-5 rounded-[14px]" style={{ border: "1px solid var(--line-soft)" }}>
@@ -187,15 +187,15 @@ export default function SynthflowAlternative() {
               <h4 className="text-ink font-medium mb-2 flex items-center gap-2"><CheckCircle className="h-4 w-4 text-[#1F7A4D]" /> Pros</h4>
               <ul className="pl-5 list-disc text-ink2 space-y-1">
                 <li>Established product with good US market presence</li>
-                <li>Clean no-code interface for voice AI configuration</li>
-                <li>Range of pre-built industry templates</li>
+                <li>Clean no-code interface for building voice agents</li>
+                <li>Flexible for any industry, not just restaurants</li>
+                <li>Lower entry price if your call volume is light</li>
               </ul>
               <h4 className="text-ink font-medium mt-4 mb-2 flex items-center gap-2"><XCircle className="h-4 w-4 text-ink3" /> Cons</h4>
               <ul className="pl-5 list-disc text-ink3 space-y-1">
-                <li>Removed $29/mo tier now starts at $99/mo (3.4× more expensive)</li>
-                <li>Monthly minute caps overages cost more</li>
-                <li>Voice only no WhatsApp or web chat channel</li>
-                <li>No Indian-English or regional language voice support</li>
+                <li>Generic you build the reservation and ordering flows yourself</li>
+                <li>Monthly minute caps overages make the real cost unpredictable</li>
+                <li>No native Arabic, Spanish, or Hindi voice support</li>
                 <li>Primarily US/UK market focused</li>
               </ul>
             </div>
@@ -203,28 +203,31 @@ export default function SynthflowAlternative() {
         </section>
 
         <section id="why-rhythmiq" className="bg-paper2 p-6 lg:p-8 rounded-[14px] text-center">
-          <h2 className="h-feature mb-3">Same Core Features. 3.4× Cheaper. With WhatsApp Included.</h2>
+          <h2 className="h-feature mb-3">Built for Restaurants, Not Assembled by You.</h2>
           <p className="text-ink2 max-w-3xl mx-auto mb-4 leading-[1.6]">
-            If you were on Synthflow's old $29 plan and it disappeared, or if
-            you're comparing options before committing to $99/mo, RhythmiqCX gives
-            you everything you need: AI voice agents, smart routing, voice cloning
-            plus WhatsApp and web chat all at the price Synthflow used to charge.
+            If you run a restaurant and you are weighing Synthflow, the real
+            question is not which builder is cheaper, it is whether you want to
+            build and babysit a voice agent at all. RhythmiqCX is the phone host,
+            already trained for hospitality, on a flat plan that does not punish you
+            for a busy Friday.
           </p>
           <ul className="list-disc text-ink2 text-left max-w-3xl mx-auto space-y-1 pl-5">
-            <li><strong className="text-ink">$29/mo vs $99/mo</strong> save $840/year on entry tier alone</li>
-            <li><strong className="text-ink">No minute caps</strong> handle any call volume without overage anxiety</li>
-            <li><strong className="text-ink">Omnichannel included</strong> voice + WhatsApp + chat, one subscription</li>
-            <li><strong className="text-ink">Indian-English native</strong> the only platform with Sarvam voice models</li>
+            <li><strong className="text-ink">Restaurant-ready</strong> books tables and takes orders without you building flows</li>
+            <li><strong className="text-ink">Flat, not minute-capped</strong> handle any volume without overage anxiety</li>
+            <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more, no upcharge</li>
+            <li><strong className="text-ink">Done-for-you</strong> live in minutes, not a build project</li>
           </ul>
         </section>
 
         <section id="conclusion" className="text-center">
           <h2 className="h-feature mb-3">Conclusion</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
-            Synthflow is a solid voice AI product, but at $99/mo with minute caps
-            and no WhatsApp channel, it's hard to justify over RhythmiqCX. For{" "}
-            <strong className="text-ink">the same AI phone receptionist capabilities at $29/mo flat with no caps, and omnichannel included</strong>
-            , RhythmiqCX is the better value.
+            Synthflow is a solid general-purpose voice-AI builder. But if you run a
+            restaurant and want the phone fully handled, orders, tables, and guest
+            questions in any language, without assembling it yourself or watching a
+            minute meter,{" "}
+            <strong className="text-ink">RhythmiqCX is purpose-built for exactly that</strong>
+            , on a flat plan with no caps.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Link href={BOOK_DEMO_URL} className="btn btn-accent">Book a free demo</Link>

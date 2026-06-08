@@ -26,7 +26,7 @@ const Hero = () => {
 
         <p className="lede leading-relaxed max-w-2xl">
           Deploy conversational AI voice agents that answer every customer call
-          24/7 no hold queues, no missed leads. Human-like accuracy from $29/mo.
+          24/7 no hold queues, no missed leads. Human-like accuracy, from $149/mo.
         </p>
 
         {/* Stats bar */}

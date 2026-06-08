@@ -22,7 +22,7 @@ const organizationSchema = {
     url: "https://rhythmiqcx.com/contact-us",
   },
   description:
-    "RhythmiqCX is an AI CX platform that transforms how companies interact with customers through AI-powered support automation, WhatsApp chatbots, and voice AI.",
+    "RhythmiqCX is the AI phone host for restaurants. It answers every call, books tables, takes orders, and answers guest questions 24/7 in 12+ languages.",
 };
 
 export const metadata = generateMetadata();

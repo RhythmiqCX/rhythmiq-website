@@ -8,9 +8,9 @@ import PricingFAQ from "./PricingFAQ";
 import { PRICING_FAQS } from "@/constants/pricing-plans";
 
 export const metadata = genMeta({
-  title: "Pricing for Restaurants: Flat Monthly AI Phone Host",
+  title: "Pricing for Restaurants: AI Phone Host Plans",
   description:
-    "Rhythmiq pricing starts at $29/mo, flat. No per minute fees. Answer every call, book every table, and take every order for one predictable price. See plans for single restaurants up to multi location groups.",
+    "Rhythmiq pricing starts at $149/mo. Answer every call, book every table, and take every order in 12+ languages. Pro adds full order taking and POS injection for $299/mo. Plans for single restaurants up to multi location groups, with no surprise overage bills.",
   keywords: [
     "AI phone host pricing",
     "restaurant voice AI pricing",
@@ -35,13 +35,13 @@ const offerSchema = {
   operatingSystem: "Web",
   url: "https://rhythmiqcx.com/pricing",
   description:
-    "Rhythmiq is an AI phone host for restaurants that answers calls, books reservations, and takes orders 24/7. Flat monthly pricing from $29, with no per minute fees.",
+    "Rhythmiq is an AI phone host for restaurants that answers calls, books reservations, and takes orders 24/7 in 12+ languages. Plans from $149/mo, with no surprise overage bills.",
   offers: {
     "@type": "Offer",
-    price: "29",
+    price: "149",
     priceCurrency: "USD",
     priceValidUntil: "2027-01-01",
-    description: "Flat monthly pricing, no per minute overages",
+    description: "Monthly plans from $149, no setup fees or surprise overage",
   },
 };
 

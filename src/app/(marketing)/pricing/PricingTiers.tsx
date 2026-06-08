@@ -9,7 +9,7 @@ const PricingTiers = () => {
   return (
     <section className="section bg-paper2" aria-label="Plans">
       <div className="wrap">
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4 items-stretch">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 items-stretch max-w-5xl mx-auto">
           {PRICING_TIERS.map((tier, i) => (
             <Reveal key={tier.name} delay={i * 0.06} className="h-full">
               <div
@@ -59,8 +59,10 @@ const PricingTiers = () => {
             </Reveal>
           ))}
         </div>
-        <p className="text-center text-sm text-ink3 mt-8">
-          Prices in USD. Have a question about a plan?{" "}
+        <p className="text-center text-sm text-ink3 mt-8 max-w-2xl mx-auto">
+          Prices in USD. Plenty of calls included, and if a big month pushes you
+          over, it is a clear published rate, never a $400 surprise bill. No setup
+          fees. Have a question about a plan?{" "}
           <Link href={CONTACT_URL} className="text-coral hover:underline">
             Talk to us
           </Link>

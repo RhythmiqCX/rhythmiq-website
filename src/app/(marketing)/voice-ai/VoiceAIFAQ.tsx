@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "How much does an AI phone receptionist cost?",
-    a: "RhythmiqCX Voice AI starts at $29/month  that's flat predictable pricing with no per-minute overages. Competitors like Retell AI charge $0.07+/min, Synthflow starts at $99/mo, and Ringly.io starts at $349/mo. At $29/mo you get 24/7 AI call handling included.",
+    a: "RhythmiqCX plans start at $149/month, flat and predictable, with no per-minute overages. Per-minute platforms like Retell AI ($0.07+/min) and Bland ($0.09+/min) get unpredictable fast on a busy service. With Rhythmiq you know your bill before the month starts, and order taking plus 12+ languages are included.",
   },
   {
     q: "How long does setup take?",

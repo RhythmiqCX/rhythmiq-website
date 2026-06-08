@@ -57,8 +57,8 @@ const Hero = () => {
             <p className="max-w-xl mx-auto mt-2 text-base lg:text-lg text-center text-muted-foreground">
               {/* AI-powered automation and insights to maximize your campaigns and grow your brand. */}
               Deploy human-like AI voice agents that handle inbound calls, route
-              complex queries, and never miss a lead in 60+ languages, from
-              $29/mo.
+              complex queries, and never miss a lead in 12+ languages, from
+              $149/mo.
             </p>
           </Container>
           <Container delay={0.25} className="z-20">

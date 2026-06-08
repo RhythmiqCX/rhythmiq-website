@@ -6,17 +6,16 @@ import JsonLd from "@/components/global/JsonLd";
 import { BOOK_DEMO_URL } from "@/constants/links";
 
 export const metadata = generateMetadata({
-  title: "Vapi AI Alternative  RhythmiqCX | Flat $29/mo, No 4-Vendor Setup",
+  title: "Vapi Alternative for Restaurants | RhythmiqCX All-in-One AI Phone Host",
   description:
-    "Looking for a Vapi alternative? Skip the 4–6 vendor contracts. RhythmiqCX is an all-in-one AI phone receptionist at flat $29/mo  no hidden add-ons, no HIPAA upcharges.",
+    "Vapi is middleware you wire to 4–6 vendors, billed per minute. RhythmiqCX is the all-in-one, done-for-you AI phone host for restaurants: books tables, takes orders, 12+ languages, one vendor, flat plans from $149/mo.",
   keywords: [
     "Vapi alternative",
-    "Vapi AI competitor",
+    "Vapi alternative for restaurants",
     "RhythmiqCX vs Vapi",
-    "Vapi AI pricing alternative",
-    "AI voice agent all-in-one",
-    "no vendor lock-in voice AI",
-    "AI phone receptionist",
+    "all-in-one AI phone host",
+    "restaurant voice AI",
+    "AI that takes orders over the phone",
   ],
   alternates: {
     canonical: "/vapi-alternative",
@@ -30,9 +29,9 @@ export const metadata = generateMetadata({
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Vapi AI Alternative: RhythmiqCX Voice AI Comparison",
+  headline: "Vapi Alternative: RhythmiqCX All-in-One AI Phone Host for Restaurants",
   description:
-    "Side-by-side comparison of RhythmiqCX and Vapi AI covering pricing, vendor complexity, setup, and omnichannel support.",
+    "Side-by-side comparison of RhythmiqCX and Vapi covering restaurant fit, order taking, all-in pricing, vendor complexity, and languages.",
   url: "https://rhythmiqcx.com/vapi-alternative",
   author: { "@type": "Organization", name: "RhythmiqCX" },
   publisher: {
@@ -61,44 +60,44 @@ const Neg = ({ children }: { children: React.ReactNode }) => (
 
 const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
-    "True All-In Pricing",
-    <Neg key="v-price">$0.13–$0.31/min true cost once LLM + TTS + STT + telephony vendor fees are added. Requires 4–6 contracts.</Neg>,
-    <Pos key="rx-price"><strong className="text-ink">Flat $29/mo all-inclusive.</strong> AI, TTS, STT, and routing bundled. One invoice, one vendor.</Pos>,
+    "Built for restaurants",
+    <Neg key="v-fit">A developer middleware layer for any use case. You build the restaurant logic yourself.</Neg>,
+    <Pos key="rx-fit"><strong className="text-ink">Purpose-built for restaurants.</strong> Reservations, orders, and menu questions out of the box.</Pos>,
   ],
   [
-    "Vendor Complexity",
-    <Neg key="v-vendor">Middleware layer you manage contracts with LLM, TTS, STT, and telephony separately.</Neg>,
-    <Pos key="rx-vendor"><strong className="text-ink">All-in-one platform.</strong> Everything managed by RhythmiqCX zero vendor juggling.</Pos>,
+    "Takes orders on the call",
+    <Neg key="v-order">Possible if you build it, across your own LLM, TTS, STT, and telephony vendors.</Neg>,
+    <Pos key="rx-order"><strong className="text-ink">Takes the whole order.</strong> Modifiers and all, pushed into your POS, no build required.</Pos>,
   ],
   [
-    "HIPAA Compliance",
+    "True all-in pricing",
+    <Neg key="v-price">$0.13–$0.31/min once LLM + TTS + STT + telephony fees are added. Requires 4–6 contracts.</Neg>,
+    <Pos key="rx-price"><strong className="text-ink">Flat plans from $149/mo, all-inclusive.</strong> AI, voice, telephony, and routing bundled. One invoice.</Pos>,
+  ],
+  [
+    "Vendor complexity",
+    <Neg key="v-vendor">You manage contracts with LLM, TTS, STT, and telephony providers separately.</Neg>,
+    <Pos key="rx-vendor"><strong className="text-ink">All-in-one platform.</strong> Everything managed by RhythmiqCX, zero vendor juggling.</Pos>,
+  ],
+  [
+    "Setup",
+    <Neg key="v-setup">Developer-first. A non-technical restaurant team can't configure or maintain it.</Neg>,
+    <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your menu and hours, point your number at it, live in minutes.</Pos>,
+  ],
+  [
+    "Languages",
+    <Neg key="v-lang">Depends on the TTS vendor you wire in. No restaurant-tuned dialect support out of the box.</Neg>,
+    <Pos key="rx-lang"><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more, at no extra charge.</Pos>,
+  ],
+  [
+    "Compliance",
     <Neg key="v-hipaa">HIPAA compliance is a $1,000/month add-on on top of per-minute usage costs.</Neg>,
     <Pos key="rx-hipaa"><strong className="text-ink">Compliance-ready at standard pricing.</strong> Encrypted in transit and at rest, audit logs included.</Pos>,
   ],
   [
-    "No-Code Setup",
-    <Neg key="v-setup">Developer-first. Non-technical teams can't configure or maintain it without engineering help.</Neg>,
-    <Pos key="rx-setup"><strong className="text-ink">No-code dashboard.</strong> Configure your AI persona and go live without writing a line of code.</Pos>,
-  ],
-  [
-    "Omnichannel",
-    <Neg key="v-omni">Voice only. No bundled web chat or WhatsApp channel.</Neg>,
-    <Pos key="rx-omni"><strong className="text-ink">Voice + Chat + WhatsApp</strong> on one platform at no extra cost.</Pos>,
-  ],
-  [
-    "Indian-English & Regional Voices",
-    <Neg key="v-lang">Depends on TTS vendor chosen. No built-in Indian-English optimisation.</Neg>,
-    <Pos key="rx-lang"><strong className="text-ink">Sarvam Bulbul v2 + Saarika v2.5</strong> purpose-built for Indian-English. 60+ languages.</Pos>,
-  ],
-  [
-    "Smart Call Routing",
-    <Neg key="v-route">Custom routing requires additional development and configuration work.</Neg>,
-    <Pos key="rx-route"><strong className="text-ink">Built-in smart routing.</strong> Low-confidence calls auto-escalate to a human with full transcript.</Pos>,
-  ],
-  [
     "Support",
-    <Neg key="v-sup">Developer community support. Issues may span multiple vendors making root cause tricky.</Neg>,
-    <Pos key="rx-sup"><strong className="text-ink">Single point of support.</strong> 24×7 on email, phone, ticketing. One vendor responsible for everything.</Pos>,
+    <Neg key="v-sup">Issues can span multiple vendors, making root cause and accountability tricky.</Neg>,
+    <Pos key="rx-sup"><strong className="text-ink">One point of support.</strong> One vendor responsible for everything, end to end.</Pos>,
   ],
 ];
 
@@ -110,10 +109,10 @@ export default function VapiAlternative() {
       {/* Hero */}
       <section className="section-tight text-center">
         <div className="wrap max-w-4xl">
-          <span className="eyebrow justify-center">Comparison · Vapi AI</span>
-          <h1 className="h-section mt-4">Vapi AI Alternative One Platform vs Four Vendors</h1>
+          <span className="eyebrow justify-center">Comparison · Vapi</span>
+          <h1 className="h-section mt-4">Vapi Alternative: One Platform vs Four Vendors</h1>
           <p className="lede mx-auto max-w-2xl mt-4">
-            Vapi requires 4–6 separate vendor contracts and bills $0.13–$0.31/min. RhythmiqCX is all-in-one at flat $29/mo.
+            Vapi wires together 4–6 separate vendors and bills $0.13–$0.31/min. RhythmiqCX is the all-in-one, done-for-you AI phone host for restaurants, flat from $149/mo.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-7">
             <Link href={BOOK_DEMO_URL} className="btn btn-accent">Book a free demo</Link>
@@ -122,19 +121,19 @@ export default function VapiAlternative() {
         </div>
       </section>
 
-      <div className="wrap max-w-5xl pb-4 space-y-14">
+      <div className="wrap max-w-5xl pb-20 lg:pb-28 space-y-14">
         <section id="intro" className="text-center">
-          <h2 className="h-feature mb-3">The Hidden Cost of Vapi</h2>
+          <h2 className="h-feature mb-3">The Hidden Cost of Vapi for Restaurants</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
-            Vapi is marketed as a voice AI platform, but the reality is that it's
-            a middleware layer that connects separate vendors you still need to
-            independently contract with an LLM provider, a TTS provider, an STT
-            provider, and a telephony provider. The true cost lands at
-            $0.13–$0.31/min once all vendors are accounted for, and HIPAA
-            compliance is an additional $1,000/month add-on. For businesses that
-            want to deploy an AI phone receptionist without managing a vendor
-            stack, RhythmiqCX offers a fully packaged solution: AI, TTS, STT,
-            telephony, and smart routing all included at a flat $29/month.
+            Vapi is marketed as a voice-AI platform, but it is really a middleware
+            layer that connects separate vendors you still contract with yourself:
+            an LLM provider, a TTS provider, an STT provider, and a telephony
+            provider. The true cost lands at $0.13–$0.31/min once every vendor is
+            counted, compliance is a costly add-on, and you are the systems
+            integrator. A restaurant does not want to assemble a voice stack, it
+            wants the phone answered and orders taken. RhythmiqCX packages
+            everything, AI, voice, telephony, and routing, into one done-for-you
+            product built for hospitality, on a flat plan from $149/month.
           </p>
         </section>
 
@@ -145,7 +144,7 @@ export default function VapiAlternative() {
               <thead>
                 <tr className="bg-paper2 text-ink">
                   <th className="p-3 text-left font-semibold">Capability</th>
-                  <th className="p-3 text-left font-semibold">Vapi AI</th>
+                  <th className="p-3 text-left font-semibold">Vapi</th>
                   <th className="p-3 text-left font-semibold">RhythmiqCX</th>
                 </tr>
               </thead>
@@ -169,66 +168,63 @@ export default function VapiAlternative() {
               <h3 className="text-lg font-semibold text-[#1F7A4D] mb-3 text-center">RhythmiqCX</h3>
               <h4 className="text-ink font-medium mb-2 flex items-center gap-2"><CheckCircle className="h-4 w-4 text-[#1F7A4D]" /> Pros</h4>
               <ul className="pl-5 list-disc text-ink2 space-y-1">
+                <li><strong className="text-ink">Built for restaurants</strong> reservations, orders, and menu Q&A out of the box</li>
                 <li><strong className="text-ink">One vendor, one invoice</strong> no contract juggling</li>
-                <li><strong className="text-ink">Flat $29/mo</strong> true all-in cost, no hidden vendor fees</li>
-                <li><strong className="text-ink">HIPAA-aligned at standard pricing</strong> no $1K add-on</li>
-                <li><strong className="text-ink">No-code setup</strong> live in under a day</li>
-                <li><strong className="text-ink">Omnichannel included</strong> voice + chat + WhatsApp</li>
-                <li>Single support contact for all issues</li>
-                <li>Indian-English native via Sarvam models</li>
+                <li><strong className="text-ink">Flat from $149/mo</strong> true all-in cost, no hidden vendor fees</li>
+                <li><strong className="text-ink">Done-for-you</strong> live in minutes, no integration build</li>
+                <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>
+                <li>Single support contact for everything</li>
               </ul>
               <h4 className="text-ink font-medium mt-4 mb-2 flex items-center gap-2"><XCircle className="h-4 w-4 text-ink3" /> Cons</h4>
               <ul className="pl-5 list-disc text-ink3 space-y-1">
                 <li>Less LLM flexibility you use RhythmiqCX's model stack</li>
-                <li>Smaller API surface for deep customisation</li>
+                <li>Smaller API surface for deep custom builds</li>
               </ul>
             </div>
             <div className="bg-white p-5 rounded-[14px]" style={{ border: "1px solid var(--line-soft)" }}>
-              <h3 className="text-lg font-semibold text-[#C9461F] mb-3 text-center">Vapi AI</h3>
+              <h3 className="text-lg font-semibold text-[#C9461F] mb-3 text-center">Vapi</h3>
               <h4 className="text-ink font-medium mb-2 flex items-center gap-2"><CheckCircle className="h-4 w-4 text-[#1F7A4D]" /> Pros</h4>
               <ul className="pl-5 list-disc text-ink2 space-y-1">
                 <li>Flexible LLM and TTS vendor choice</li>
                 <li>Strong developer API</li>
-                <li>Good for highly custom voice AI workflows</li>
+                <li>Good for highly custom voice-AI builds</li>
               </ul>
               <h4 className="text-ink font-medium mt-4 mb-2 flex items-center gap-2"><XCircle className="h-4 w-4 text-ink3" /> Cons</h4>
               <ul className="pl-5 list-disc text-ink3 space-y-1">
                 <li>True cost $0.13–$0.31/min across all vendor fees</li>
                 <li>Requires 4–6 separate vendor contracts</li>
-                <li>HIPAA compliance = $1,000/month extra</li>
-                <li>No no-code setup developer required</li>
-                <li>Voice only no chat or WhatsApp</li>
-                <li>Support spans multiple vendors accountability gaps</li>
+                <li>Compliance is a costly add-on</li>
+                <li>No no-code setup a developer is required</li>
+                <li>You build the reservation and ordering flows yourself</li>
               </ul>
             </div>
           </div>
         </section>
 
         <section id="why-rhythmiq" className="bg-paper2 p-6 lg:p-8 rounded-[14px] text-center">
-          <h2 className="h-feature mb-3">RhythmiqCX The Vapi Alternative That Just Works</h2>
+          <h2 className="h-feature mb-3">RhythmiqCX, the Vapi Alternative That Just Works</h2>
           <p className="text-ink2 max-w-3xl mx-auto mb-4 leading-[1.6]">
-            Vapi gives you maximum control but maximum complexity. You become the
-            systems integrator responsible for stitching together LLM, TTS, STT,
-            and telephony and paying each vendor separately. RhythmiqCX packages
-            everything you need into one product, one bill, and one support
-            contact. For teams who want voice AI working today not after a month
-            of vendor negotiations that's the better deal.
+            Vapi gives you maximum control and maximum complexity. You become the
+            systems integrator, stitching together LLM, TTS, STT, and telephony, and
+            paying each vendor separately. RhythmiqCX packages everything a
+            restaurant needs into one product, one bill, and one support contact, on
+            a flat plan with no per-minute meter.
           </p>
           <ul className="list-disc text-ink2 text-left max-w-3xl mx-auto space-y-1 pl-5">
-            <li><strong className="text-ink">$29/mo flat</strong> vs true $0.13–$0.31/min all-in Vapi cost</li>
+            <li><strong className="text-ink">Flat from $149/mo</strong> vs a true $0.13–$0.31/min all-in Vapi cost</li>
             <li><strong className="text-ink">One vendor</strong> vs 4–6 contracts and invoices</li>
-            <li><strong className="text-ink">No HIPAA upcharge</strong> vs Vapi's $1,000/month add-on</li>
-            <li><strong className="text-ink">Omnichannel</strong> voice + WhatsApp + chat, bundled</li>
+            <li><strong className="text-ink">Restaurant-ready</strong> books tables and takes orders out of the box</li>
+            <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>
           </ul>
         </section>
 
         <section id="conclusion" className="text-center">
           <h2 className="h-feature mb-3">Conclusion</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
-            Vapi is a good choice if you need full control over every component
-            and have the engineering resources to manage a multi-vendor stack. But
-            if you want{" "}
-            <strong className="text-ink">predictable pricing, no vendor complexity, and an AI phone receptionist that's live in a day</strong>
+            Vapi is a good choice if you need control over every component and have
+            engineers to manage a multi-vendor stack. But if you run a restaurant
+            and want{" "}
+            <strong className="text-ink">predictable pricing, no vendor complexity, and a phone host that takes real orders in any language</strong>
             , RhythmiqCX is the clear Vapi alternative.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">

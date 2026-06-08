@@ -11,9 +11,9 @@ import JsonLd from "@/components/global/JsonLd";
 import { AlwaysOnArt, ConversationArt, RoutingArt } from "@/components/marketing/voice-art";
 
 export const metadata = genMeta({
-  title: "AI Phone Receptionist & Voice AI Agents | RhythmiqCX — From $29/mo",
+  title: "AI Phone Receptionist & Voice AI Agents | RhythmiqCX — From $149/mo",
   description:
-    "Deploy AI voice agents that answer customer calls 24/7 with human-like accuracy. No-code setup, 60+ languages, smart call routing — start free from $29/mo.",
+    "Deploy AI voice agents that answer customer calls 24/7 with human-like accuracy. No-code setup, 12+ languages, smart call routing — plans from $149/mo.",
   keywords: [
     "AI phone receptionist",
     "voice AI agents",
@@ -43,13 +43,13 @@ const softwareSchema = {
   operatingSystem: "Web",
   url: "https://rhythmiqcx.com/voice-ai",
   description:
-    "RhythmiqCX Voice AI is a conversational AI phone receptionist platform that deploys human-like AI voice agents for 24/7 inbound and outbound call handling. Features voice cloning, neural TTS (Sarvam Bulbul v2), real-time synthesis, smart call routing, and no-code setup starting at $29/month.",
+    "RhythmiqCX Voice AI is a conversational AI phone receptionist platform that deploys human-like AI voice agents for 24/7 inbound and outbound call handling. Features voice cloning, neural TTS, real-time synthesis, smart call routing, and no-code setup. Plans from $149/month.",
   offers: {
     "@type": "Offer",
-    price: "29",
+    price: "149",
     priceCurrency: "USD",
     priceValidUntil: "2027-01-01",
-    description: "Flat monthly pricing — no per-minute overages",
+    description: "Monthly plans — no per-minute overages",
   },
   featureList: [
     "24/7 AI phone answering",
@@ -72,7 +72,7 @@ const faqSchema = {
       name: "How much does an AI phone receptionist cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "RhythmiqCX Voice AI starts at $29/month — flat rate with no per-minute overages. Competitors charge $0.07–$0.31/min or $99–$349/month. At $29/mo you get 24/7 AI call handling with voice, chat, and WhatsApp included.",
+        text: "RhythmiqCX plans start at $149/month, flat with no per-minute overages. Per-minute platforms charge $0.07–$0.31/min, which adds up fast on a busy service. With Rhythmiq you get 24/7 AI call handling, order taking, and 12+ languages included.",
       },
     },
     {
@@ -149,8 +149,8 @@ const VoiceAIApp = () => {
           conversational AI phone receptionist platform that deploys human-like
           AI voice agents for 24/7 inbound and outbound call handling. Powered
           by Sarvam Bulbul v2 neural TTS and real-time speech-to-text, it routes
-          calls intelligently, supports 60+ languages, and starts at{" "}
-          <strong className="text-ink">$29/month</strong> — no per-minute
+          calls intelligently, supports 12+ languages, and starts at{" "}
+          <strong className="text-ink">$149/month</strong> — no per-minute
           fees, no developer required.
         </p>
       </section>

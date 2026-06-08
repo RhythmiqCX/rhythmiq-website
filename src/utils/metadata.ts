@@ -25,7 +25,7 @@ const DEFAULT_OG_IMAGE = "/icons/og-default.png";
 
 export const generateMetadata = ({
     title = `Rhythmiq: The AI Phone Host for Restaurants`,
-    description = `Rhythmiq is the AI phone host for restaurants. It answers every call, books tables, takes orders, and sounds like your best maitre d, 24/7. Flat pricing from $29 a month.`,
+    description = `Rhythmiq is the AI phone host for restaurants. It answers every call, books tables, takes orders, and sounds like your best maitre d, 24/7, in 12+ languages. Plans from $149 a month.`,
     icons = [
         { rel: "icon", url: "/icons/rhythmiq-mark-32.png", sizes: "32x32", type: "image/png" },
         { rel: "icon", url: "/icons/rhythmiq-mark-16.png", sizes: "16x16", type: "image/png" },
