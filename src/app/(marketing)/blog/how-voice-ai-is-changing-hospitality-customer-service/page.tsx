@@ -179,7 +179,9 @@ export default function HospitalityVoiceAI() {
           create trust long before the guest experience officially begins.
         </p>
       </section>
-            <BlogCTA
+
+      {/* MID-ARTICLE CTA */}
+      <BlogCTA
         title="What Happens When Every Guest Gets An Immediate Response?"
         description="See how RhythmiqCX helps hospitality businesses answer calls, capture bookings, and deliver exceptional guest experiences with Voice AI and AI phone receptionists."
         primaryLabel="Book a Live Demo"
@@ -307,7 +309,8 @@ export default function HospitalityVoiceAI() {
           customers reach outcomes faster.
         </p>
       </section>
-            {/* SECTION 4 */}
+
+      {/* SECTION 4 */}
       <section
         id="new-front-desk"
         className="mt-24 space-y-6"
