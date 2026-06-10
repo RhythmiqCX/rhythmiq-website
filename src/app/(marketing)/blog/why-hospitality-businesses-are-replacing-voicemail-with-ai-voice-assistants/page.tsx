@@ -192,7 +192,9 @@ export default function HospitalityVoicemailVsVoiceAI() {
           businesses experience the exact same challenge.
         </p>
       </section>
-            <BlogCTA
+
+      {/* MID-ARTICLE CTA */}
+      <BlogCTA
         title="Still Sending Guests To Voicemail?"
         description="See how RhythmiqCX helps hospitality businesses answer every call, capture more bookings, and deliver instant guest support with AI voice assistants."
         primaryLabel="Book a Live Demo"
@@ -309,7 +311,8 @@ export default function HospitalityVoicemailVsVoiceAI() {
           that becomes harder to justify every year.
         </p>
       </section>
-            {/* SECTION 4 */}
+
+      {/* SECTION 4 */}
       <section
         id="better-than-voicemail"
         className="mt-24 space-y-6"
