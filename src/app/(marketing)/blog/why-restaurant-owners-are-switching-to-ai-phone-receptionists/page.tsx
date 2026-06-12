@@ -189,253 +189,253 @@ export default function RestaurantAIPReceptionist() {
         </p>
       </section>
       <BlogCTA
-  title="How Many Reservations Are You Losing Every Week?"
-  description="See how RhythmiqCX helps restaurants answer every call, reduce missed restaurant calls, and capture more bookings with an AI phone receptionist available 24/7."
-  primaryLabel="Book a Live Demo"
-  primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
-  secondaryLabel="Explore the Platform"
-  secondaryHref="/"
-/>
+        title="How Many Reservations Are You Losing Every Week?"
+        description="See how RhythmiqCX helps restaurants answer every call, reduce missed restaurant calls, and capture more bookings with an AI phone receptionist available 24/7."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
 
-{/* SECTION 2 */}
-<section
-  id="customers-call-when-ready"
-  className="mt-24 space-y-6"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    Customers Usually Call When They're Ready To Book.
-  </h2>
+      {/* SECTION 2 */}
+      <section
+        id="customers-call-when-ready"
+        className="mt-24 space-y-6"
+      >
+        <h2 className="text-3xl font-semibold text-ink">
+          Customers Usually Call When They're Ready To Book.
+        </h2>
 
-  <p>
-    One thing many restaurant owners overlook is that customers rarely call
-    just to browse. Most people pick up the phone when they're close to making
-    a decision. They want to reserve a table, ask about availability, check
-    whether the restaurant can accommodate a larger group, or confirm details
-    before committing.
-  </p>
+        <p>
+          One thing many restaurant owners overlook is that customers rarely call
+          just to browse. Most people pick up the phone when they're close to making
+          a decision. They want to reserve a table, ask about availability, check
+          whether the restaurant can accommodate a larger group, or confirm details
+          before committing.
+        </p>
 
-  <p>
-    That's what makes <strong>missed restaurant calls</strong> so expensive.
-    These aren't random inquiries. They're often high-intent customers who are
-    already moving toward a reservation. When nobody answers, the booking
-    momentum disappears.
-  </p>
+        <p>
+          That's what makes <strong>missed restaurant calls</strong> so expensive.
+          These aren't random inquiries. They're often high-intent customers who are
+          already moving toward a reservation. When nobody answers, the booking
+          momentum disappears.
+        </p>
 
-  <p>
-    Think about your own behavior. If you call a restaurant and nobody picks
-    up, how long do you wait before trying another option? Most customers
-    don't leave voicemails. They don't patiently wait for a callback. They
-    simply move on.
-  </p>
+        <p>
+          Think about your own behavior. If you call a restaurant and nobody picks
+          up, how long do you wait before trying another option? Most customers
+          don't leave voicemails. They don't patiently wait for a callback. They
+          simply move on.
+        </p>
 
-  <p>
-    That's why more operators are replacing voicemail with a dedicated
-    <strong> restaurant call answering service</strong>. The goal isn't just
-    answering calls. The goal is making sure customers receive help at the
-    exact moment they're ready to book.
-  </p>
+        <p>
+          That's why more operators are replacing voicemail with a dedicated
+          <strong> restaurant call answering service</strong>. The goal isn't just
+          answering calls. The goal is making sure customers receive help at the
+          exact moment they're ready to book.
+        </p>
 
-  <p>
-    We touched on this in{" "}
-    <Link
-      href="/blog/how-ai-voice-assistants-help-restaurants-capture-more-reservations"
-      className="text-coral underline"
-    >
-      How AI Voice Assistants Help Restaurants Capture More Reservations
-    </Link>
-    . Restaurants that respond first often capture bookings that competitors
-    never even realize they lost.
-  </p>
-</section>
+        <p>
+          We touched on this in{" "}
+          <Link
+            href="/blog/how-ai-voice-assistants-help-restaurants-capture-more-reservations"
+            className="text-coral underline"
+          >
+            How AI Voice Assistants Help Restaurants Capture More Reservations
+          </Link>
+          . Restaurants that respond first often capture bookings that competitors
+          never even realize they lost.
+        </p>
+      </section>
 
-{/* SECTION 3 */}
-<section
-  id="ai-receptionists-changing-game"
-  className="mt-24 space-y-6"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    AI Receptionists Are Changing The Economics Of Restaurant Calls.
-  </h2>
+      {/* SECTION 3 */}
+      <section
+        id="ai-receptionists-changing-game"
+        className="mt-24 space-y-6"
+      >
+        <h2 className="text-3xl font-semibold text-ink">
+          AI Receptionists Are Changing The Economics Of Restaurant Calls.
+        </h2>
 
-  <p>
-    This is where things start getting interesting. Historically, restaurants
-    had only two options. Hire more staff or accept that some calls would go
-    unanswered. Neither solution was particularly attractive.
-  </p>
+        <p>
+          This is where things start getting interesting. Historically, restaurants
+          had only two options. Hire more staff or accept that some calls would go
+          unanswered. Neither solution was particularly attractive.
+        </p>
 
-  <p>
-    Today, restaurants have a third option. An
-    <strong> AI phone receptionist</strong> can answer every incoming call,
-    collect reservation information, answer common questions, and provide
-    immediate assistance without requiring additional headcount.
-  </p>
+        <p>
+          Today, restaurants have a third option. An
+          <strong> AI phone receptionist</strong> can answer every incoming call,
+          collect reservation information, answer common questions, and provide
+          immediate assistance without requiring additional headcount.
+        </p>
 
-  <p>
-    Modern <strong>Voice AI for restaurants</strong> has improved
-    dramatically over the last few years. Powered by advanced
-    <strong> speech to text api</strong>, <strong>Voice api</strong>,
-    <strong> speech synthesis api</strong>, and
-    <strong> text to speech ai</strong> infrastructure, today's systems can
-    understand natural conversations and respond far more effectively than
-    traditional automated phone menus.
-  </p>
+        <p>
+          Modern <strong>Voice AI for restaurants</strong> has improved
+          dramatically over the last few years. Powered by advanced
+          <strong> speech to text api</strong>, <strong>Voice api</strong>,
+          <strong> speech synthesis api</strong>, and
+          <strong> text to speech ai</strong> infrastructure, today's systems can
+          understand natural conversations and respond far more effectively than
+          traditional automated phone menus.
+        </p>
 
-  <p>
-    Restaurants are also benefiting from advances in
-    <strong> ai voice technology</strong>,
-    <strong> ai voice generator</strong>,
-    <strong> voice synthesis ai</strong>,
-    <strong> voice cloning software</strong>,
-    <strong> ai voice cloning</strong>,
-    <strong> real time voice cloning</strong>,
-    <strong> instant voice cloning</strong>, and
-    <strong> voice cloning api</strong> solutions. Combined with
-    conversational <strong>ai voice bot</strong> workflows and natural
-    <strong> ai voiceover</strong> systems, these technologies help create
-    experiences that feel significantly more helpful than voicemail.
-  </p>
+        <p>
+          Restaurants are also benefiting from advances in
+          <strong> ai voice technology</strong>,
+          <strong> ai voice generator</strong>,
+          <strong> voice synthesis ai</strong>,
+          <strong> voice cloning software</strong>,
+          <strong> ai voice cloning</strong>,
+          <strong> real time voice cloning</strong>,
+          <strong> instant voice cloning</strong>, and
+          <strong> voice cloning api</strong> solutions. Combined with
+          conversational <strong>ai voice bot</strong> workflows and natural
+          <strong> ai voiceover</strong> systems, these technologies help create
+          experiences that feel significantly more helpful than voicemail.
+        </p>
 
-  <p>
-    More importantly, they enable
-    <strong> restaurant reservation automation</strong> and
-    <strong> 24/7 restaurant call answering</strong>. Customers can reserve
-    tables, ask questions, and receive support even during dinner rush,
-    weekends, holidays, or after-hours periods when staff are unavailable.
-  </p>
+        <p>
+          More importantly, they enable
+          <strong> restaurant reservation automation</strong> and
+          <strong> 24/7 restaurant call answering</strong>. Customers can reserve
+          tables, ask questions, and receive support even during dinner rush,
+          weekends, holidays, or after-hours periods when staff are unavailable.
+        </p>
 
-  <p>
-    Personally, I think this is why adoption is accelerating so quickly.
-    Restaurants aren't implementing AI because it's trendy. They're
-    implementing it because every answered call represents a potential booking.
-  </p>
-</section>
-{/* SECTION 4 */}
-<section
-  id="availability-beats-headcount"
-  className="mt-24 space-y-6"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    Availability Is Becoming More Valuable Than Headcount.
-  </h2>
+        <p>
+          Personally, I think this is why adoption is accelerating so quickly.
+          Restaurants aren't implementing AI because it's trendy. They're
+          implementing it because every answered call represents a potential booking.
+        </p>
+      </section>
+      {/* SECTION 4 */}
+      <section
+        id="availability-beats-headcount"
+        className="mt-24 space-y-6"
+      >
+        <h2 className="text-3xl font-semibold text-ink">
+          Availability Is Becoming More Valuable Than Headcount.
+        </h2>
 
-  <p>
-    One of the biggest misconceptions I see in hospitality is the belief that
-    growth always requires more people. More hosts. More receptionists. More
-    staff answering phones. While hiring certainly has its place, I don't
-    think staffing alone solves the underlying problem.
-  </p>
+        <p>
+          One of the biggest misconceptions I see in hospitality is the belief that
+          growth always requires more people. More hosts. More receptionists. More
+          staff answering phones. While hiring certainly has its place, I don't
+          think staffing alone solves the underlying problem.
+        </p>
 
-  <p>
-    Restaurants don't lose bookings because employees aren't working hard
-    enough. They lose bookings because customer demand doesn't arrive on a
-    predictable schedule. Calls come during dinner rush. Reservation requests
-    arrive after closing. Questions come in when staff are already helping
-    guests inside the restaurant.
-  </p>
+        <p>
+          Restaurants don't lose bookings because employees aren't working hard
+          enough. They lose bookings because customer demand doesn't arrive on a
+          predictable schedule. Calls come during dinner rush. Reservation requests
+          arrive after closing. Questions come in when staff are already helping
+          guests inside the restaurant.
+        </p>
 
-  <p>
-    That's why I think availability has quietly become one of the most
-    important competitive advantages in hospitality. The restaurants winning
-    today aren't necessarily the restaurants with the biggest teams. They're
-    the restaurants that remain available whenever customers decide to reach
-    out.
-  </p>
+        <p>
+          That's why I think availability has quietly become one of the most
+          important competitive advantages in hospitality. The restaurants winning
+          today aren't necessarily the restaurants with the biggest teams. They're
+          the restaurants that remain available whenever customers decide to reach
+          out.
+        </p>
 
-  <p>
-    An <strong>AI receptionist for restaurants</strong> helps close that
-    availability gap. Instead of sending callers to voicemail, businesses can
-    provide immediate support through intelligent
-    <strong> restaurant phone automation</strong>. Customers get answers,
-    reservations get captured, and opportunities stop slipping through the
-    cracks.
-  </p>
+        <p>
+          An <strong>AI receptionist for restaurants</strong> helps close that
+          availability gap. Instead of sending callers to voicemail, businesses can
+          provide immediate support through intelligent
+          <strong> restaurant phone automation</strong>. Customers get answers,
+          reservations get captured, and opportunities stop slipping through the
+          cracks.
+        </p>
 
-  <p>
-    We explored a similar idea in{" "}
-    <Link
-      href="/blog/why-hospitality-businesses-lose-bookings-after-business-hours"
-      className="text-coral underline"
-    >
-      Why Hospitality Businesses Lose Bookings After Business Hours
-    </Link>
-    . Businesses don't need to stay physically open twenty-four hours a day.
-    They simply need systems that remain available when customers are ready
-    to buy.
-  </p>
+        <p>
+          We explored a similar idea in{" "}
+          <Link
+            href="/blog/why-hospitality-businesses-lose-bookings-after-business-hours"
+            className="text-coral underline"
+          >
+            Why Hospitality Businesses Lose Bookings After Business Hours
+          </Link>
+          . Businesses don't need to stay physically open twenty-four hours a day.
+          They simply need systems that remain available when customers are ready
+          to buy.
+        </p>
 
-  <p>
-    That's why I view AI phone receptionists as leverage tools rather than
-    staffing tools. They don't replace hospitality. They extend it.
-  </p>
-</section>
+        <p>
+          That's why I view AI phone receptionists as leverage tools rather than
+          staffing tools. They don't replace hospitality. They extend it.
+        </p>
+      </section>
 
-{/* SECTION 5 */}
-<section
-  id="future-of-restaurant-calls"
-  className="mt-24 space-y-6 pb-20"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    The Future Of Restaurant Calls Is Instant Response.
-  </h2>
+      {/* SECTION 5 */}
+      <section
+        id="future-of-restaurant-calls"
+        className="mt-24 space-y-6 pb-20"
+      >
+        <h2 className="text-3xl font-semibold text-ink">
+          The Future Of Restaurant Calls Is Instant Response.
+        </h2>
 
-  <p>
-    Every major customer-service shift follows the same pattern. First, it
-    feels optional. Then it becomes a competitive advantage. Eventually,
-    customers begin expecting it.
-  </p>
+        <p>
+          Every major customer-service shift follows the same pattern. First, it
+          feels optional. Then it becomes a competitive advantage. Eventually,
+          customers begin expecting it.
+        </p>
 
-  <p>
-    Online reservations followed that path. Online ordering followed that
-    path. Mobile apps followed that path. I believe AI-powered call handling
-    is now following the exact same trajectory.
-  </p>
+        <p>
+          Online reservations followed that path. Online ordering followed that
+          path. Mobile apps followed that path. I believe AI-powered call handling
+          is now following the exact same trajectory.
+        </p>
 
-  <p>
-    A few years from now, customers probably won't be impressed that a
-    restaurant answered instantly. They'll simply assume that's how modern
-    businesses operate. They'll expect someone to answer, provide
-    information, capture reservations, and help them move forward
-    immediately.
-  </p>
+        <p>
+          A few years from now, customers probably won't be impressed that a
+          restaurant answered instantly. They'll simply assume that's how modern
+          businesses operate. They'll expect someone to answer, provide
+          information, capture reservations, and help them move forward
+          immediately.
+        </p>
 
-  <p>
-    That's why I think restaurant owners are asking the wrong question.
-    They're asking whether an <strong>AI phone receptionist</strong> is worth
-    adopting. I think the better question is whether they'll adopt it before
-    competitors do.
-  </p>
+        <p>
+          That's why I think restaurant owners are asking the wrong question.
+          They're asking whether an <strong>AI phone receptionist</strong> is worth
+          adopting. I think the better question is whether they'll adopt it before
+          competitors do.
+        </p>
 
-  <p>
-    Once customers become accustomed to immediate support, intelligent
-    reservation handling, and <strong>24/7 restaurant call answering</strong>,
-    it's incredibly difficult to go back to voicemail and missed
-    opportunities.
-  </p>
+        <p>
+          Once customers become accustomed to immediate support, intelligent
+          reservation handling, and <strong>24/7 restaurant call answering</strong>,
+          it's incredibly difficult to go back to voicemail and missed
+          opportunities.
+        </p>
 
-  <p>
-    Whether it's an <strong>AI voice assistant for restaurants</strong>,
-    advanced <strong>Voice AI for restaurants</strong>, a dedicated
-    <strong> restaurant call answering service</strong>, or intelligent
-    <strong> restaurant reservation automation</strong>, the direction feels
-    increasingly obvious. Restaurants that answer first will increasingly be
-    the restaurants that fill tables first.
-  </p>
+        <p>
+          Whether it's an <strong>AI voice assistant for restaurants</strong>,
+          advanced <strong>Voice AI for restaurants</strong>, a dedicated
+          <strong> restaurant call answering service</strong>, or intelligent
+          <strong> restaurant reservation automation</strong>, the direction feels
+          increasingly obvious. Restaurants that answer first will increasingly be
+          the restaurants that fill tables first.
+        </p>
 
-  <p className="text-xl italic text-ink2">
-    The future won't belong to restaurants with the biggest teams. It will
-    belong to restaurants that are available whenever customers are ready to
-    book.
-  </p>
+        <p className="text-xl italic text-ink2">
+          The future won't belong to restaurants with the biggest teams. It will
+          belong to restaurants that are available whenever customers are ready to
+          book.
+        </p>
 
-  <BlogCTA
-    title="Never Miss Another Reservation Opportunity"
-    description="See how RhythmiqCX helps restaurants capture more bookings with an AI phone receptionist, AI receptionist for restaurants, restaurant phone automation, and 24/7 restaurant call answering."
-    primaryLabel="Book a Live Technical Demo"
-    primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
-    secondaryLabel="Explore the Platform"
-    secondaryHref="/"
-  />
-</section>
-</BlogLayout>
-);
+        <BlogCTA
+          title="Never Miss Another Reservation Opportunity"
+          description="See how RhythmiqCX helps restaurants capture more bookings with an AI phone receptionist, AI receptionist for restaurants, restaurant phone automation, and 24/7 restaurant call answering."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
+      </section>
+    </BlogLayout>
+  );
 }
