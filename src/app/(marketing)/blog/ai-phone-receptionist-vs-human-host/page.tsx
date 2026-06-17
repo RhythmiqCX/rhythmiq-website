@@ -183,249 +183,249 @@ export default function AIReceptionistVsHumanHost() {
         </p>
       </section>
       <BlogCTA
-  title="How Many Calls Are Being Missed During Your Busiest Hours?"
-  description="See how RhythmiqCX helps restaurants answer every call, capture more reservations, and stay available 24/7 with an AI phone receptionist."
-  primaryLabel="Book a Live Demo"
-  primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
-  secondaryLabel="Explore the Platform"
-  secondaryHref="/"
-/>
+        title="How Many Calls Are Being Missed During Your Busiest Hours?"
+        description="See how RhythmiqCX helps restaurants answer every call, capture more reservations, and stay available 24/7 with an AI phone receptionist."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
 
-{/* SECTION 2 */}
-<section
-  id="human-host-strengths"
-  className="mt-24 space-y-6"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    Where Human Hosts Still Win.
-  </h2>
+      {/* SECTION 2 */}
+      <section
+        id="human-host-strengths"
+        className="mt-24 space-y-6"
+      >
+        <h2 className="text-3xl font-semibold text-ink">
+          Where Human Hosts Still Win.
+        </h2>
 
-  <p>
-    Let's start with something that often gets lost in AI discussions. Great
-    hospitality is still a deeply human experience. The best hosts don't just
-    answer questions. They read the room. They recognize returning guests.
-    They calm frustrated customers. They handle unusual situations with
-    empathy and judgment that software simply can't replicate.
-  </p>
+        <p>
+          Let's start with something that often gets lost in AI discussions. Great
+          hospitality is still a deeply human experience. The best hosts don't just
+          answer questions. They read the room. They recognize returning guests.
+          They calm frustrated customers. They handle unusual situations with
+          empathy and judgment that software simply can't replicate.
+        </p>
 
-  <p>
-    If a guest arrives upset about a reservation issue, celebrating an
-    anniversary, or dealing with a special request, a skilled host can turn
-    that interaction into a memorable experience. That's one of the reasons
-    hospitality businesses will always need great people.
-  </p>
+        <p>
+          If a guest arrives upset about a reservation issue, celebrating an
+          anniversary, or dealing with a special request, a skilled host can turn
+          that interaction into a memorable experience. That's one of the reasons
+          hospitality businesses will always need great people.
+        </p>
 
-  <p>
-    Human hosts also excel when situations become unpredictable. Maybe a large
-    party arrives unexpectedly. Maybe a reservation needs to be rearranged.
-    Maybe there's a service issue that requires sensitivity and discretion.
-    These are moments where experience and emotional intelligence matter far
-    more than efficiency.
-  </p>
+        <p>
+          Human hosts also excel when situations become unpredictable. Maybe a large
+          party arrives unexpectedly. Maybe a reservation needs to be rearranged.
+          Maybe there's a service issue that requires sensitivity and discretion.
+          These are moments where experience and emotional intelligence matter far
+          more than efficiency.
+        </p>
 
-  <p>
-    That's why I don't believe restaurants should think of AI as a replacement
-    for hospitality. The best guest experiences are still created by people.
-    Technology simply helps those people focus on higher-value interactions.
-  </p>
+        <p>
+          That's why I don't believe restaurants should think of AI as a replacement
+          for hospitality. The best guest experiences are still created by people.
+          Technology simply helps those people focus on higher-value interactions.
+        </p>
 
-  <p>
-    The reality is that customers don't remember the reservation process as
-    much as they remember how they felt during the experience. Human hosts
-    remain incredibly important for creating those moments.
-  </p>
-</section>
+        <p>
+          The reality is that customers don't remember the reservation process as
+          much as they remember how they felt during the experience. Human hosts
+          remain incredibly important for creating those moments.
+        </p>
+      </section>
 
-{/* SECTION 3 */}
-<section
-  id="ai-receptionist-strengths"
-  className="mt-24 space-y-6"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    Where AI Phone Receptionists Have A Clear Advantage.
-  </h2>
+      {/* SECTION 3 */}
+      <section
+        id="ai-receptionist-strengths"
+        className="mt-24 space-y-6"
+      >
+        <h2 className="text-3xl font-semibold text-ink">
+          Where AI Phone Receptionists Have A Clear Advantage.
+        </h2>
 
-  <p>
-    While human hosts excel at hospitality, there are certain tasks where an
-    <strong> AI phone receptionist</strong> simply performs better. The most
-    obvious example is availability.
-  </p>
+        <p>
+          While human hosts excel at hospitality, there are certain tasks where an
+          <strong> AI phone receptionist</strong> simply performs better. The most
+          obvious example is availability.
+        </p>
 
-  <p>
-    An AI system doesn't disappear during dinner rush. It doesn't stop
-    answering calls because it's seating guests. It doesn't miss opportunities
-    because the restaurant is busy. It answers immediately, every time.
-  </p>
+        <p>
+          An AI system doesn't disappear during dinner rush. It doesn't stop
+          answering calls because it's seating guests. It doesn't miss opportunities
+          because the restaurant is busy. It answers immediately, every time.
+        </p>
 
-  <p>
-    That's why so many operators are adopting an
-    <strong> AI receptionist for restaurants</strong> and intelligent
-    <strong> restaurant call answering service</strong> solutions. They're not
-    trying to replace staff. They're trying to make sure every customer gets a
-    response.
-  </p>
+        <p>
+          That's why so many operators are adopting an
+          <strong> AI receptionist for restaurants</strong> and intelligent
+          <strong> restaurant call answering service</strong> solutions. They're not
+          trying to replace staff. They're trying to make sure every customer gets a
+          response.
+        </p>
 
-  <p>
-    Modern <strong>Voice AI for restaurants</strong> can answer frequently
-    asked questions, collect reservation details, support
-    <strong> restaurant reservation automation</strong>, and provide
-    <strong> 24/7 restaurant call answering</strong> without increasing labor
-    costs.
-  </p>
+        <p>
+          Modern <strong>Voice AI for restaurants</strong> can answer frequently
+          asked questions, collect reservation details, support
+          <strong> restaurant reservation automation</strong>, and provide
+          <strong> 24/7 restaurant call answering</strong> without increasing labor
+          costs.
+        </p>
 
-  <p>
-    Today's systems are also powered by advanced
-    <strong> speech to text api</strong>,
-    <strong> Voice api</strong>,
-    <strong> speech synthesis api</strong>, and
-    <strong> text to speech ai</strong> technology. Customers can speak
-    naturally and receive useful responses without navigating frustrating
-    automated menus.
-  </p>
+        <p>
+          Today's systems are also powered by advanced
+          <strong> speech to text api</strong>,
+          <strong> Voice api</strong>,
+          <strong> speech synthesis api</strong>, and
+          <strong> text to speech ai</strong> technology. Customers can speak
+          naturally and receive useful responses without navigating frustrating
+          automated menus.
+        </p>
 
-  <p>
-    We're also seeing rapid improvements in
-    <strong> ai voice technology</strong>,
-    <strong> ai voice generator</strong>,
-    <strong> voice synthesis ai</strong>,
-    <strong> voice cloning software</strong>,
-    <strong> ai voice cloning</strong>,
-    <strong> real time voice cloning</strong>,
-    <strong> instant voice cloning</strong>, and
-    <strong> voice cloning api</strong> capabilities. Combined with
-    conversational <strong>ai voice bot</strong> workflows and natural
-    <strong> ai voiceover</strong> systems, the experience feels far more
-    conversational than most people expect.
-  </p>
+        <p>
+          We're also seeing rapid improvements in
+          <strong> ai voice technology</strong>,
+          <strong> ai voice generator</strong>,
+          <strong> voice synthesis ai</strong>,
+          <strong> voice cloning software</strong>,
+          <strong> ai voice cloning</strong>,
+          <strong> real time voice cloning</strong>,
+          <strong> instant voice cloning</strong>, and
+          <strong> voice cloning api</strong> capabilities. Combined with
+          conversational <strong>ai voice bot</strong> workflows and natural
+          <strong> ai voiceover</strong> systems, the experience feels far more
+          conversational than most people expect.
+        </p>
 
-  <p>
-    Personally, I think the biggest advantage isn't cost savings. It's
-    consistency. Every customer gets an answer. Every call gets handled. Every
-    reservation request receives attention. That's incredibly difficult for
-    even the best human team to guarantee.
-  </p>
-</section>
-{/* SECTION 4 */}
-<section
-  id="best-restaurants-use-both"
-  className="mt-24 space-y-6"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    The Smartest Restaurants Don't Choose. They Use Both.
-  </h2>
+        <p>
+          Personally, I think the biggest advantage isn't cost savings. It's
+          consistency. Every customer gets an answer. Every call gets handled. Every
+          reservation request receives attention. That's incredibly difficult for
+          even the best human team to guarantee.
+        </p>
+      </section>
+      {/* SECTION 4 */}
+      <section
+        id="best-restaurants-use-both"
+        className="mt-24 space-y-6"
+      >
+        <h2 className="text-3xl font-semibold text-ink">
+          The Smartest Restaurants Don't Choose. They Use Both.
+        </h2>
 
-  <p>
-    This is where I think the conversation gets interesting. Most restaurant
-    owners assume they have to pick a side. Either hire more staff or deploy
-    AI. Either trust people or trust technology. In reality, the most
-    successful restaurants are increasingly combining both.
-  </p>
+        <p>
+          This is where I think the conversation gets interesting. Most restaurant
+          owners assume they have to pick a side. Either hire more staff or deploy
+          AI. Either trust people or trust technology. In reality, the most
+          successful restaurants are increasingly combining both.
+        </p>
 
-  <p>
-    Human hosts and AI phone receptionists solve different problems. Hosts are
-    exceptional at creating memorable guest experiences, handling sensitive
-    situations, and building relationships. AI systems excel at answering
-    calls instantly, handling routine questions, and making sure opportunities
-    aren't missed when staff are busy.
-  </p>
+        <p>
+          Human hosts and AI phone receptionists solve different problems. Hosts are
+          exceptional at creating memorable guest experiences, handling sensitive
+          situations, and building relationships. AI systems excel at answering
+          calls instantly, handling routine questions, and making sure opportunities
+          aren't missed when staff are busy.
+        </p>
 
-  <p>
-    Think about what happens during a dinner rush. The host is helping guests
-    at the front desk. Servers are running food. The restaurant is operating
-    at full speed. Meanwhile, the phone rings. In a traditional setup, that
-    call may go unanswered. With an
-    <strong> AI phone receptionist</strong>, the customer immediately receives
-    assistance while the human team remains focused on the guests already
-    inside the restaurant.
-  </p>
+        <p>
+          Think about what happens during a dinner rush. The host is helping guests
+          at the front desk. Servers are running food. The restaurant is operating
+          at full speed. Meanwhile, the phone rings. In a traditional setup, that
+          call may go unanswered. With an
+          <strong> AI phone receptionist</strong>, the customer immediately receives
+          assistance while the human team remains focused on the guests already
+          inside the restaurant.
+        </p>
 
-  <p>
-    That's why I believe the smartest operators are using
-    <strong> AI voice assistants for restaurants</strong> as a support layer
-    rather than a replacement layer. The AI handles repetitive interactions.
-    The team handles hospitality. Together, they create a much stronger guest
-    experience than either could provide independently.
-  </p>
+        <p>
+          That's why I believe the smartest operators are using
+          <strong> AI voice assistants for restaurants</strong> as a support layer
+          rather than a replacement layer. The AI handles repetitive interactions.
+          The team handles hospitality. Together, they create a much stronger guest
+          experience than either could provide independently.
+        </p>
 
-  <p>
-    We touched on this idea in{" "}
-    <Link
-      href="/blog/why-restaurant-owners-are-switching-to-ai-phone-receptionists"
-      className="text-coral underline"
-    >
-      Why Restaurant Owners Are Switching to AI Phone Receptionists
-    </Link>
-    . The goal isn't fewer people. The goal is fewer missed opportunities.
-  </p>
-</section>
+        <p>
+          We touched on this idea in{" "}
+          <Link
+            href="/blog/why-restaurant-owners-are-switching-to-ai-phone-receptionists"
+            className="text-coral underline"
+          >
+            Why Restaurant Owners Are Switching to AI Phone Receptionists
+          </Link>
+          . The goal isn't fewer people. The goal is fewer missed opportunities.
+        </p>
+      </section>
 
-{/* SECTION 5 */}
-<section
-  id="future-is-coverage"
-  className="mt-24 space-y-6 pb-20"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    The Future Isn't Replacement. It's Coverage.
-  </h2>
+      {/* SECTION 5 */}
+      <section
+        id="future-is-coverage"
+        className="mt-24 space-y-6 pb-20"
+      >
+        <h2 className="text-3xl font-semibold text-ink">
+          The Future Isn't Replacement. It's Coverage.
+        </h2>
 
-  <p>
-    Every major technology shift seems to trigger the same debate. People ask
-    whether the new technology will replace the old one. We've seen it with
-    online ordering, digital reservations, mobile apps, and self-service
-    kiosks. The conversation around AI phone receptionists feels remarkably
-    similar.
-  </p>
+        <p>
+          Every major technology shift seems to trigger the same debate. People ask
+          whether the new technology will replace the old one. We've seen it with
+          online ordering, digital reservations, mobile apps, and self-service
+          kiosks. The conversation around AI phone receptionists feels remarkably
+          similar.
+        </p>
 
-  <p>
-    Personally, I don't think the future belongs entirely to AI, and I don't
-    think it belongs entirely to humans either. The future belongs to
-    businesses that remain available whenever customers need them.
-  </p>
+        <p>
+          Personally, I don't think the future belongs entirely to AI, and I don't
+          think it belongs entirely to humans either. The future belongs to
+          businesses that remain available whenever customers need them.
+        </p>
 
-  <p>
-    That's why technologies like
-    <strong> AI phone receptionists</strong>,
-    <strong> restaurant call answering services</strong>,
-    <strong> Voice AI for restaurants</strong>, and intelligent
-    <strong> restaurant phone automation</strong> are growing so quickly.
-    They're helping restaurants solve a problem that has existed for decades:
-    customers calling when nobody is available to answer.
-  </p>
+        <p>
+          That's why technologies like
+          <strong> AI phone receptionists</strong>,
+          <strong> restaurant call answering services</strong>,
+          <strong> Voice AI for restaurants</strong>, and intelligent
+          <strong> restaurant phone automation</strong> are growing so quickly.
+          They're helping restaurants solve a problem that has existed for decades:
+          customers calling when nobody is available to answer.
+        </p>
 
-  <p>
-    Combined with
-    <strong> restaurant reservation automation</strong> and
-    <strong> 24/7 restaurant call answering</strong>, restaurants can stay
-    responsive during busy periods, after-hours, weekends, and holidays
-    without dramatically increasing staffing costs.
-  </p>
+        <p>
+          Combined with
+          <strong> restaurant reservation automation</strong> and
+          <strong> 24/7 restaurant call answering</strong>, restaurants can stay
+          responsive during busy periods, after-hours, weekends, and holidays
+          without dramatically increasing staffing costs.
+        </p>
 
-  <p>
-    The restaurants that continue viewing AI as a threat will likely miss the
-    bigger opportunity. The restaurants that view AI as a tool for extending
-    availability and improving responsiveness will be much better positioned
-    to compete over the next few years.
-  </p>
+        <p>
+          The restaurants that continue viewing AI as a threat will likely miss the
+          bigger opportunity. The restaurants that view AI as a tool for extending
+          availability and improving responsiveness will be much better positioned
+          to compete over the next few years.
+        </p>
 
-  <p>
-    At the end of the day, customers don't really care whether a human or an
-    AI answered first. They care whether somebody helped them quickly.
-  </p>
+        <p>
+          At the end of the day, customers don't really care whether a human or an
+          AI answered first. They care whether somebody helped them quickly.
+        </p>
 
-  <p className="text-xl italic text-ink2">
-    The best restaurants won't replace hospitality with AI. They'll use AI to
-    make hospitality available everywhere.
-  </p>
+        <p className="text-xl italic text-ink2">
+          The best restaurants won't replace hospitality with AI. They'll use AI to
+          make hospitality available everywhere.
+        </p>
 
-  <BlogCTA
-    title="See How AI And Hospitality Work Better Together"
-    description="Discover how RhythmiqCX helps restaurants combine AI phone receptionists, Voice AI, and human hospitality to answer more calls, capture more reservations, and stay available 24/7."
-    primaryLabel="Book a Live Technical Demo"
-    primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
-    secondaryLabel="Explore the Platform"
-    secondaryHref="/"
-  />
-</section>
-</BlogLayout>
-);
+        <BlogCTA
+          title="See How AI And Hospitality Work Better Together"
+          description="Discover how RhythmiqCX helps restaurants combine AI phone receptionists, Voice AI, and human hospitality to answer more calls, capture more reservations, and stay available 24/7."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
+      </section>
+    </BlogLayout>
+  );
 }
