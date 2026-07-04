@@ -151,10 +151,7 @@ export default function RestaurantPhoneAutomationCompetitiveAdvantage() {
       <hr className="border-ink/10 mt-12 mb-8" />
 
       {/* SECTION 1 */}
-      <section
-        id="hidden-advantage"
-        className="space-y-6"
-      >
+      <section id="hidden-advantage" className="space-y-6">
         <h2 className="text-3xl font-semibold text-ink">
           The Competitive Advantage Most Restaurants Ignore.
         </h2>
@@ -191,231 +188,224 @@ export default function RestaurantPhoneAutomationCompetitiveAdvantage() {
           fastest.
         </p>
       </section>
+
       <BlogCTA
-  title="How Many Calls Are Going Unanswered During Your Busiest Hours?"
-  description="See how RhythmiqCX helps restaurants answer every call, reduce missed restaurant calls, and capture more bookings with AI-powered phone automation."
-  primaryLabel="Book a Live Demo"
-  primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
-  secondaryLabel="Explore the Platform"
-  secondaryHref="/"
-/>
+        title="How Many Calls Are Going Unanswered During Your Busiest Hours?"
+        description="See how RhythmiqCX helps restaurants answer every call, reduce missed restaurant calls, and capture more bookings with AI-powered phone automation."
+        primaryLabel="Book a Live Demo"
+        primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+        secondaryLabel="Explore the Platform"
+        secondaryHref="/"
+      />
 
-{/* SECTION 2 */}
-<section
-  id="traditional-calls-break"
-  className="mt-24 space-y-6"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    Why Traditional Call Handling Breaks Down During Peak Hours.
-  </h2>
+      {/* SECTION 2 */}
+      <section id="traditional-calls-break" className="mt-24 space-y-6">
+        <h2 className="text-3xl font-semibold text-ink">
+          Why Traditional Call Handling Breaks Down During Peak Hours.
+        </h2>
 
-  <p>
-    Restaurants don't miss calls because employees aren't working hard enough.
-    They miss calls because the busiest moments for customers are often the
-    busiest moments for staff as well. During lunch rushes, dinner rushes,
-    weekends, and special events, hosts are seating guests, servers are
-    delivering food, and managers are solving operational challenges.
-    Meanwhile, the phone keeps ringing.
-  </p>
+        <p>
+          Restaurants don't miss calls because employees aren't working hard enough.
+          They miss calls because the busiest moments for customers are often the
+          busiest moments for staff as well. During lunch rushes, dinner rushes,
+          weekends, and special events, hosts are seating guests, servers are
+          delivering food, and managers are solving operational challenges.
+          Meanwhile, the phone keeps ringing.
+        </p>
 
-  <p>
-    Every unanswered call creates uncertainty. Some customers leave a
-    voicemail. Some try calling again. Most simply move on to another
-    restaurant that answers first. That's why missed restaurant calls often
-    become lost restaurant bookings. The restaurant never knows how many
-    opportunities disappeared because nobody picked up the phone.
-  </p>
+        <p>
+          Every unanswered call creates uncertainty. Some customers leave a
+          voicemail. Some try calling again. Most simply move on to another
+          restaurant that answers first. That's why missed restaurant calls often
+          become lost restaurant bookings. The restaurant never knows how many
+          opportunities disappeared because nobody picked up the phone.
+        </p>
 
-  <p>
-    The challenge becomes even more difficult because restaurants can't
-    accurately predict when calls will arrive. Reservation requests, catering
-    inquiries, event bookings, and customer questions can happen at any time.
-    Staffing every phone line around the clock simply isn't realistic for most
-    businesses.
-  </p>
+        <p>
+          The challenge becomes even more difficult because restaurants can't
+          accurately predict when calls will arrive. Reservation requests, catering
+          inquiries, event bookings, and customer questions can happen at any time.
+          Staffing every phone line around the clock simply isn't realistic for most
+          businesses.
+        </p>
 
-  <p>
-    We explored a similar challenge in{" "}
-    <Link
-      href="/blog/why-hospitality-businesses-lose-bookings-after-business-hours"
-      className="text-coral underline"
-    >
-      Why Hospitality Businesses Lose Bookings After Business Hours
-    </Link>
-    . The businesses winning today aren't necessarily the ones with the biggest
-    teams. They're the ones that remain available when customers are ready to
-    buy.
-  </p>
-</section>
+        <p>
+          We explored a similar challenge in{" "}
+          <Link
+            href="/blog/why-hospitality-businesses-lose-bookings-after-business-hours"
+            className="text-coral underline"
+          >
+            Why Hospitality Businesses Lose Bookings After Business Hours
+          </Link>
+          . The businesses winning today aren't necessarily the ones with the biggest
+          teams. They're the ones that remain available when customers are ready to
+          buy.
+        </p>
+      </section>
 
-{/* SECTION 3 */}
-<section
-  id="always-on-availability"
-  className="mt-24 space-y-6"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    Restaurant Phone Automation Creates Always-On Availability.
-  </h2>
+      {/* SECTION 3 */}
+      <section id="always-on-availability" className="mt-24 space-y-6">
+        <h2 className="text-3xl font-semibold text-ink">
+          Restaurant Phone Automation Creates Always-On Availability.
+        </h2>
 
-  <p>
-    This is where restaurant phone automation becomes incredibly valuable.
-    Instead of relying entirely on staff availability, restaurants can ensure
-    every customer receives an immediate response, regardless of how busy the
-    dining room happens to be.
-  </p>
+        <p>
+          This is where restaurant phone automation becomes incredibly valuable.
+          Instead of relying entirely on staff availability, restaurants can ensure
+          every customer receives an immediate response, regardless of how busy the
+          dining room happens to be.
+        </p>
 
-  <p>
-    Modern solutions powered by an <strong>AI phone receptionist</strong>,
-    <strong> AI receptionist for restaurants</strong>, and intelligent
-    <strong> restaurant call answering service</strong> technology can answer
-    calls instantly, collect reservation details, answer common questions, and
-    guide customers toward a booking without interrupting restaurant
-    operations.
-  </p>
+        <p>
+          Modern solutions powered by an <strong>AI phone receptionist</strong>,
+          <strong> AI receptionist for restaurants</strong>, and intelligent
+          <strong> restaurant call answering service</strong> technology can answer
+          calls instantly, collect reservation details, answer common questions, and
+          guide customers toward a booking without interrupting restaurant
+          operations.
+        </p>
 
-  <p>
-    What makes today's systems different is how naturally they communicate.
-    Advances in <strong>Voice AI for restaurants</strong>, speech recognition,
-    and conversational AI allow customers to speak naturally instead of
-    navigating frustrating phone menus or waiting on hold for staff to become
-    available.
-  </p>
+        <p>
+          What makes today's systems different is how naturally they communicate.
+          Advances in <strong>Voice AI for restaurants</strong>, speech recognition,
+          and conversational AI allow customers to speak naturally instead of
+          navigating frustrating phone menus or waiting on hold for staff to become
+          available.
+        </p>
 
-  <p>
-    Restaurants are also benefiting from improvements in AI voice technology,
-    voice synthesis, and conversational automation. These tools help create
-    interactions that feel significantly more natural than the automated phone
-    systems most customers are used to.
-  </p>
+        <p>
+          Restaurants are also benefiting from improvements in AI voice technology,
+          voice synthesis, and conversational automation. These tools help create
+          interactions that feel significantly more natural than the automated phone
+          systems most customers are used to.
+        </p>
 
-  <p>
-    Combined with <strong>restaurant reservation automation</strong> and
-    <strong> 24/7 restaurant call answering</strong>, restaurants can remain
-    available whenever customers decide to call. Whether it's during a busy
-    dinner rush or after closing time, potential reservations no longer have
-    to disappear because nobody answered the phone.
-  </p>
+        <p>
+          Combined with <strong>restaurant reservation automation</strong> and
+          <strong> 24/7 restaurant call answering</strong>, restaurants can remain
+          available whenever customers decide to call. Whether it's during a busy
+          dinner rush or after closing time, potential reservations no longer have
+          to disappear because nobody answered the phone.
+        </p>
 
-  <p>
-    Personally, I think that's where the real advantage comes from. Not the
-    technology itself, but the ability to stay available when competitors
-    aren't.
-  </p>
-</section>
-{/* SECTION 4 */}
-<section
-  id="availability-advantage"
-  className="mt-24 space-y-6"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    Why Availability Is Becoming A Competitive Advantage.
-  </h2>
+        <p>
+          Personally, I think that's where the real advantage comes from. Not the
+          technology itself, but the ability to stay available when competitors
+          aren't.
+        </p>
+      </section>
 
-  <p>
-    For years, restaurants competed on food quality, atmosphere, pricing, and
-    location. All of those factors still matter. But I think another
-    competitive advantage is quietly becoming just as important:
-    availability.
-  </p>
+      {/* SECTION 4 */}
+      <section id="availability-advantage" className="mt-24 space-y-6">
+        <h2 className="text-3xl font-semibold text-ink">
+          Why Availability Is Becoming A Competitive Advantage.
+        </h2>
 
-  <p>
-    Customers increasingly expect immediate responses. They can book hotels,
-    order food, schedule appointments, and buy products online within seconds.
-    Naturally, they expect the same level of convenience when contacting a
-    restaurant. If one restaurant answers instantly and another sends callers
-    to voicemail, the difference can directly impact bookings.
-  </p>
+        <p>
+          For years, restaurants competed on food quality, atmosphere, pricing, and
+          location. All of those factors still matter. But I think another
+          competitive advantage is quietly becoming just as important:
+          availability.
+        </p>
 
-  <p>
-    That's why more operators are investing in
-    <strong> AI phone receptionists</strong>,
-    <strong> AI voice assistants for restaurants</strong>, and
-    <strong> restaurant call answering services</strong>. They're not simply
-    adopting new technology. They're improving accessibility for customers who
-    are ready to make decisions.
-  </p>
+        <p>
+          Customers increasingly expect immediate responses. They can book hotels,
+          order food, schedule appointments, and buy products online within seconds.
+          Naturally, they expect the same level of convenience when contacting a
+          restaurant. If one restaurant answers instantly and another sends callers
+          to voicemail, the difference can directly impact bookings.
+        </p>
 
-  <p>
-    Every missed call creates an opportunity for competitors. Every answered
-    call creates an opportunity for revenue. The restaurants that consistently
-    stay available are often the restaurants that fill more tables and build
-    stronger customer relationships over time.
-  </p>
+        <p>
+          That's why more operators are investing in
+          <strong> AI phone receptionists</strong>,
+          <strong> AI voice assistants for restaurants</strong>, and
+          <strong> restaurant call answering services</strong>. They're not simply
+          adopting new technology. They're improving accessibility for customers who
+          are ready to make decisions.
+        </p>
 
-  <p>
-    We saw this trend in{" "}
-    <Link
-      href="/blog/ai-phone-receptionist-vs-human-host"
-      className="text-coral underline"
-    >
-      AI Phone Receptionist vs Human Host: What Actually Works Better?
-    </Link>
-    . The real advantage isn't AI versus humans. It's making sure customers
-    always receive help when they need it.
-  </p>
-</section>
+        <p>
+          Every missed call creates an opportunity for competitors. Every answered
+          call creates an opportunity for revenue. The restaurants that consistently
+          stay available are often the restaurants that fill more tables and build
+          stronger customer relationships over time.
+        </p>
 
-{/* SECTION 5 */}
-<section
-  id="future-of-restaurant-service"
-  className="mt-24 space-y-6 pb-20"
->
-  <h2 className="text-3xl font-semibold text-ink">
-    The Restaurants Winning Tomorrow Will Be Easier To Reach Today.
-  </h2>
+        <p>
+          We saw this trend in{" "}
+          <Link
+            href="/blog/ai-phone-receptionist-vs-human-host"
+            className="text-coral underline"
+          >
+            AI Phone Receptionist vs Human Host: What Actually Works Better?
+          </Link>
+          . The real advantage isn't AI versus humans. It's making sure customers
+          always receive help when they need it.
+        </p>
+      </section>
 
-  <p>
-    Every major business trend eventually becomes an expectation. There was a
-    time when online reservations felt innovative. There was a time when food
-    delivery apps felt optional. Today, customers simply expect those
-    conveniences to exist.
-  </p>
+      {/* SECTION 5 */}
+      <section
+        id="future-of-restaurant-service"
+        className="mt-24 space-y-6 pb-20"
+      >
+        <h2 className="text-3xl font-semibold text-ink">
+          The Restaurants Winning Tomorrow Will Be Easier To Reach Today.
+        </h2>
 
-  <p>
-    I believe restaurant phone automation is heading in the same direction.
-    Customers increasingly expect restaurants to answer quickly, provide
-    information immediately, and make reservations easy regardless of whether
-    it's during lunch, dinner, or after closing time.
-  </p>
+        <p>
+          Every major business trend eventually becomes an expectation. There was a
+          time when online reservations felt innovative. There was a time when food
+          delivery apps felt optional. Today, customers simply expect those
+          conveniences to exist.
+        </p>
 
-  <p>
-    That's why technologies such as
-    <strong> AI phone receptionists</strong>,
-    <strong> Voice AI for restaurants</strong>,
-    <strong> restaurant reservation automation</strong>, and
-    <strong> restaurant phone automation</strong> are becoming more common.
-    They're helping restaurants remove friction from the customer journey and
-    capture opportunities that would otherwise disappear.
-  </p>
+        <p>
+          I believe restaurant phone automation is heading in the same direction.
+          Customers increasingly expect restaurants to answer quickly, provide
+          information immediately, and make reservations easy regardless of whether
+          it's during lunch, dinner, or after closing time.
+        </p>
 
-  <p>
-    The restaurants that continue relying entirely on manual call handling
-    will likely find themselves competing against businesses that are
-    effectively available around the clock. The gap between those experiences
-    will only become more noticeable over time.
-  </p>
+        <p>
+          That's why technologies such as
+          <strong> AI phone receptionists</strong>,
+          <strong> Voice AI for restaurants</strong>,
+          <strong> restaurant reservation automation</strong>, and
+          <strong> restaurant phone automation</strong> are becoming more common.
+          They're helping restaurants remove friction from the customer journey and
+          capture opportunities that would otherwise disappear.
+        </p>
 
-  <p>
-    Personally, I don't think the biggest winners will be the restaurants with
-    the largest marketing budgets. I think they'll be the restaurants that
-    make it easiest for customers to reach them, ask questions, and reserve a
-    table.
-  </p>
+        <p>
+          The restaurants that continue relying entirely on manual call handling
+          will likely find themselves competing against businesses that are
+          effectively available around the clock. The gap between those experiences
+          will only become more noticeable over time.
+        </p>
 
-  <p className="text-xl italic text-ink2">
-    The future won't belong to the restaurants that shout the loudest. It
-    will belong to the restaurants that are easiest to reach.
-  </p>
+        <p>
+          Personally, I don't think the biggest winners will be the restaurants with
+          the largest marketing budgets. I think they'll be the restaurants that
+          make it easiest for customers to reach them, ask questions, and reserve a
+          table.
+        </p>
 
-  <BlogCTA
-    title="Make Every Call An Opportunity"
-    description="See how RhythmiqCX helps restaurants answer every call, capture more reservations, reduce missed opportunities, and stay available 24/7 with AI-powered phone automation."
-    primaryLabel="Book a Live Technical Demo"
-    primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
-    secondaryLabel="Explore the Platform"
-    secondaryHref="/"
-  />
-</section>
-</BlogLayout>
-);
+        <p className="text-xl italic text-ink2">
+          The future won't belong to the restaurants that shout the loudest. It
+          will belong to the restaurants that are easiest to reach.
+        </p>
+
+        <BlogCTA
+          title="Make Every Call An Opportunity"
+          description="See how RhythmiqCX helps restaurants answer every call, capture more reservations, reduce missed opportunities, and stay available 24/7 with AI-powered phone automation."
+          primaryLabel="Book a Live Technical Demo"
+          primaryHref="https://calendly.com/ray-rhythmiqcx/30min"
+          secondaryLabel="Explore the Platform"
+          secondaryHref="/"
+        />
+      </section>
+    </BlogLayout>
+  );
 }
