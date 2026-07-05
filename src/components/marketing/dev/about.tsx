@@ -89,7 +89,7 @@ const DevAbout = () => {
                 border: "1px solid var(--line-soft)",
               }}
             >
-              the engineers behind RhythmiqCX
+              the engineers behind Rhythmiq
             </span>
           </div>
         </Reveal>

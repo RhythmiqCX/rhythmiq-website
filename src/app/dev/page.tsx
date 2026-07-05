@@ -5,7 +5,7 @@ import { DevLanding } from "@/components/marketing/dev";
 export const metadata = buildMetadata({
   title: "Rhythmiq Dev: Websites, web apps & mobile, built like clockwork",
   description:
-    "Rhythmiq Dev is the software studio arm of RhythmiqCX. We build websites, CRUD web apps, and mobile products for businesses everywhere. Fixed scope, weekly ships, senior hands only.",
+    "Rhythmiq Dev is the software studio arm of Rhythmiq. We build websites, CRUD web apps, and mobile products for businesses everywhere. Fixed scope, weekly ships, senior hands only.",
   keywords: [
     "web development studio",
     "custom web app development",
@@ -34,11 +34,11 @@ const studioSchema = {
   url: "https://dev.rhythmiqcx.com",
   parentOrganization: {
     "@type": "Organization",
-    name: "RhythmiqCX",
+    name: "Rhythmiq",
     url: "https://rhythmiqcx.com",
   },
   description:
-    "The software studio arm of RhythmiqCX. We build websites, CRUD web apps, and mobile products for businesses. Fixed scope, weekly ships.",
+    "The software studio arm of Rhythmiq. We build websites, CRUD web apps, and mobile products for businesses. Fixed scope, weekly ships.",
   areaServed: "Worldwide",
   serviceType: [
     "Website development",

@@ -26,7 +26,7 @@ const DevFooter = () => {
           style={{ borderTop: "1px solid var(--line-dark)" }}
         >
           <span>&copy; {new Date().getFullYear()} Rhythmiq, Inc.</span>
-          <span>A studio by the team behind the AI phone host for restaurants.</span>
+          <span>The studio arm of Rhythmiq. We build the software businesses grow on.</span>
         </div>
       </div>
     </footer>

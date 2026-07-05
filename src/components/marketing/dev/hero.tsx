@@ -112,7 +112,7 @@ const DevHero = () => {
             animation: "fadeUp 0.8s ease-out 1.35s both",
           }}
         >
-          Websites, web apps, and mobile, built right the first time by the RhythmiqCX studio.
+          Websites, web apps, and mobile, built right the first time by the Rhythmiq studio.
         </p>
 
         <div
