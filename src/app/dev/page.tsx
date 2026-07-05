@@ -20,7 +20,7 @@ export const metadata = buildMetadata({
     canonical: "https://dev.rhythmiqcx.com/",
   },
   openGraph: {
-    images: ["/icons/og-default.png"],
+    images: ["/images/dev/og-dev.jpg"],
     type: "website",
   },
 });
