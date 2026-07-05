@@ -124,5 +124,6 @@ export const DEV_PRINCIPLES = [
   "If a template or an off-the-shelf tool does the job, we will say so and save you the money.",
 ] as const;
 
-// About — engineering pedigree shown in the credentials panel.
-export const DEV_PEDIGREE = ["ex-Meta", "ex-Google", "ex-Paytm"] as const;
+// About — engineering pedigree shown in the credentials panel. These are the
+// companies our engineers currently build at (not former employers).
+export const DEV_PEDIGREE = ["Meta", "Google", "Paytm"] as const;

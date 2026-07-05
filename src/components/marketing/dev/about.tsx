@@ -21,11 +21,11 @@ const DevAbout = () => {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="lede max-w-[52ch]">
-              We&rsquo;re a group of senior engineers, ex-Meta, ex-Google, ex-Paytm, backed by a
-              vetted network of freelance developers. We pick up work through that network as
-              availability allows, so the people on your project have already built and run software
-              at real scale. Web, mobile, backend, or AI, we take on application development at any
-              level.
+              We&rsquo;re a group of senior engineers working at companies like Meta, Google, and
+              Paytm, backed by a vetted network of freelance developers. We pick up work through that
+              network as availability allows, so the people on your project build and run software at
+              real scale every day. Web, mobile, backend, or AI, we take on application development at
+              any level.
             </p>
           </Reveal>
           <Reveal delay={0.24}>
@@ -64,8 +64,7 @@ const DevAbout = () => {
                     className="inline-flex items-center rounded-full bg-dark2 px-3.5 py-1.5 font-mono text-[13px] text-onDark"
                     style={{ border: "1px solid var(--line-dark)" }}
                   >
-                    <span className="text-onDark2">ex-</span>
-                    {badge.replace("ex-", "")}
+                    {badge}
                   </span>
                 ))}
                 <span
