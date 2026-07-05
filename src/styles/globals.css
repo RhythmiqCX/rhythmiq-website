@@ -89,6 +89,20 @@ img { user-select: none; }
   50% { box-shadow: 0 0 0 6px rgba(54, 169, 106, 0); }
 }
 
+/* --- Rhythmiq Dev (dev.rhythmiqcx.com) landing — hero entrance + pipeline pulse.
+   Scoped by intent to the /dev page; harmless globally. --------------------- */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes riseLine { from { opacity: 0; transform: translateY(105%) rotate(1.2deg); } to { opacity: 1; transform: none; } }
+@keyframes livePulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(54, 169, 106, 0.22); }
+  50% { box-shadow: 0 0 0 7px rgba(54, 169, 106, 0); }
+}
+
+/* Respect reduced-motion: skip the dev hero entrance animations entirely. */
+@media (prefers-reduced-motion: reduce) {
+  [data-dev-anim] { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+
 @layer components {
   /* Layout helpers */
   .wrap { @apply max-w-content mx-auto; padding-inline: clamp(20px, 5vw, 64px); }

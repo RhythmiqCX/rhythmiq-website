@@ -76,6 +76,10 @@ export default {
 				dark2: '#262019',
 				onDark: '#F4EFE6',
 				onDark2: '#A89F90',
+				// On-dark highlight (KPI numbers, hero accent words on dark, dev
+				// process rail). Previously used as a bare literal (#FF9A78).
+				hlOnDark: '#FF9A78',
+				live: '#36A96A',
 			},
 			maxWidth: {
 				content: '1240px',
