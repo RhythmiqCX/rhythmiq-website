@@ -84,9 +84,21 @@ export const prospectSchema = z
       .partial()
       .optional(),
   })
-  .refine((d) => Boolean(d.contact.phone || d.contact.email || d.contact.bookingUrl), {
-    message: "At least one contact method (phone, email, or bookingUrl) is required.",
-    path: ["contact"],
-  });
+  .refine(
+    (d) =>
+      Boolean(
+        d.contact.phone ||
+          d.contact.email ||
+          d.contact.bookingUrl ||
+          d.socials?.instagram ||
+          d.socials?.facebook ||
+          d.socials?.website,
+      ),
+    {
+      message:
+        "At least one contact is required (phone, email, bookingUrl, or an Instagram/Facebook/website link).",
+      path: ["contact"],
+    },
+  );
 
 export type Prospect = z.infer<typeof prospectSchema>;

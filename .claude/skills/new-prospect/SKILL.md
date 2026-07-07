@@ -34,6 +34,20 @@ The rendering system already exists; you only create **one JSON data file** (and
 optionally drop in a photo or two). Do not write new React components unless the
 operator explicitly asks to add a new vertical/variant.
 
+## Requirements to run this skill
+
+An operator needs, on their machine:
+- A local clone of the **rhythmiq-website** repo (the skill + the whole rendering
+  system live inside it). Open it in **Claude Code** (VS Code extension or CLI).
+- **Node.js 18.18+** and **npm**, with deps installed once: `npm install`.
+- **Git** access to the repo with push rights (prototypes are committed to
+  `staging`; publishing merges `staging → main`).
+- Be on the **`staging`** branch.
+- **macOS** for the `sips` image-resize step (built in). On Linux/Windows,
+  install ImageMagick or `cwebp` and resize with that instead.
+- To actually publish a link: **Vercel** access, with `try.rhythmiqcx.com` added
+  under Project → Domains + DNS (one-time setup, already done for the project).
+
 ## How the system works (read these first)
 
 - Data model + validation: `src/lib/try/schema.ts` (Zod). Your JSON must satisfy it.
@@ -51,21 +65,44 @@ operator explicitly asks to add a new vertical/variant.
    on `main`.
 2. Skim `reference.md` for the current vertical/variant catalog.
 
-## Step 2 — Interview (keep it short)
+## Step 2 — Interview
 
-Use the **AskUserQuestion** tool for the closed-choice questions (batch them),
-and plain conversation for free text. Ask only what you need.
+**How to run it:** In ONE chat message, show the operator the exact field list
+below — split into **Required** and **Optional (with the default shown)** — and
+let them answer in plain chat. The free-text fields (name, description, contact,
+services, etc.) have no fixed options, so the operator types them; do **NOT**
+wrap free-text in an `AskUserQuestion` popup with invented example options
+(that's useless and frustrating). Use `AskUserQuestion` popups **only** for the
+two genuine either/or visual choices — **Style** and **Accent color** — and only
+if the operator didn't already state them. If the operator gives everything in
+one message, skip the popups and build.
 
-**Required (5):**
-1. **Business name** (may be given as the command arg).
-2. **Vertical** — closed choice from the catalog (currently `restaurant`,
-   `generic`). Pick `generic` when nothing fits.
-3. **Variant** — closed choice from that vertical's variants (e.g. restaurant →
-   `warm-editorial`, `bold-dark`). Default to the vertical's default variant.
-4. **One-liner** — one sentence: what they do / who for. Becomes the hero
-   subhead.
-5. **At least one contact method** — phone, booking URL, or email. (The schema
-   rejects a prospect with none.)
+Present this list verbatim (adjust defaults per vertical):
+
+**REQUIRED**
+1. **Business name**
+2. **Type** — restaurant/café (→ restaurant template) or anything else (→ generic)
+3. **What they do** — one sentence (becomes the hero line)
+4. **One contact** — a phone number, booking link, email, **or an Instagram /
+   Facebook page** (many IG-sourced prospects are social-only; the CTA then
+   becomes "Message on Instagram")
+
+**OPTIONAL — skip any; default in parentheses**
+5. **Style** — warm/light or bold/dark (default: warm/light) — popup choice
+6. **Accent color** — Coral / Deep Blue / Forest / Plum / Charcoal (default:
+   Coral) — popup choice
+7. **Tagline** — short phrase (default: reuse #3)
+8. **Highlights** — 2–4 proof points, e.g. "Est. 2015" · "4.8★" (default: none)
+9. **Signature line** — one bold statement for the mid-page feature (default:
+   reuse tagline)
+10. **Services** — 3–6 items, each an optional one-liner (default: generic)
+11. **Photo(s)** — 0–3 images, or an Instagram/Maps link. **If the operator
+    gives none, auto-source them (Step 3) — never ship a bare gradient for a
+    food/venue/visual business.** A photo makes the hero a full-bleed cinematic
+    shot; that's the whole point of the tool.
+12. **Address** (default: omit) · 13. **Hours** (default: omit) ·
+    14. **Socials** (default: omit) · 15. **Testimonial** — quote + author
+    (default: omit)
 
 **Optional — offer, but never block. Apply the default if skipped:**
 - Tagline (short) → shown as hero eyebrow + OG tagline; defaults to the one-liner.
@@ -107,8 +144,25 @@ and plain conversation for free text. Ask only what you need.
 - **Photos:** save provided images to `public/try/<slug>/` and reference them as
   `/try/<slug>/<file>`. Auto-size to ~1600px wide before committing (macOS
   `sips` is allow-listed):
-  `sips -Z 1600 public/try/<slug>/<file>` (use `-s format jpeg` if converting).
+  `sips -s format jpeg -s formatOptions 72 -Z 1600 public/try/<slug>/<file>`.
   Never commit a multi-MB original.
+- **Auto-source images when the operator gives none** — this is the default, not
+  a fallback. A gradient hero on a food/venue business defeats the tool.
+  1. **With an API key** (best): if `UNSPLASH_ACCESS_KEY` or `PEXELS_API_KEY` is
+     set, query it by the business's keywords (e.g. "fried chicken", "chicken
+     burger", "barbershop interior").
+  2. **Without a key:** pull from the Unsplash CDN by photo id —
+     `https://images.unsplash.com/photo-<id>?w=1600&q=75&auto=format&fit=crop`
+     (no key needed). Grab several candidates.
+  3. **Always VIEW each candidate and curate.** Pick appetizing, on-brand,
+     high-res (≥1200px), watermark-free shots. **Avoid LoremFlickr** (random
+     watermarked snapshots / wrong subjects) and **anything showing a
+     competitor's branding or logo** (e.g. a KFC wrapper on a chicken shop).
+  4. Use **1 dramatic landscape shot for the hero** (a dark background reads best
+     under the white headline) with `hero.mode: "ken-burns"`, and **2–3 more for
+     the gallery** (`photos`). `sips` them and save to `public/try/<slug>/`.
+  - **Licensing:** stock is fine for the outreach *prototype*; for the paid build
+    swap in the prospect's real photos.
 - **Logo:** if none, omit it — the templates + OG fall back to a monogram.
 
 ## Step 4 — Write the data file

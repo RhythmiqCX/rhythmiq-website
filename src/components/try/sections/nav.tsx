@@ -65,7 +65,15 @@ const TryNav = ({ data }: { data: Prospect }) => {
           className="shrink-0 rounded-full font-sans text-[14.5px] font-semibold no-underline transition-transform duration-200 hover:-translate-y-0.5"
           style={{ padding: "9px 20px", background: "var(--accent)", color: "var(--accent-ink)" }}
         >
-          {data.contact.bookingUrl ? "Book now" : data.contact.phone ? "Call us" : "Contact"}
+          {data.contact.bookingUrl
+            ? "Book now"
+            : data.contact.phone
+              ? "Call us"
+              : data.contact.email
+                ? "Email"
+                : data.socials?.instagram
+                  ? "Message"
+                  : "Contact"}
         </a>
       </div>
     </header>

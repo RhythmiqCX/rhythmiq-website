@@ -1,0 +1,32 @@
+{
+  "slug": "cluckin-chicken",
+  "vertical": "restaurant",
+  "variant": "warm-editorial",
+  "status": "live",
+  "business": {
+    "name": "Cluckin Chicken",
+    "tagline": "Crispy chicken, done loud.",
+    "oneLiner": "Chicken burgers, wings, and loaded fries — fried fresh and stacked high, done KFC-style."
+  },
+  "theme": { "accent": "#E8643C", "scheme": "light" },
+  "hero": { "mode": "ken-burns", "photo": "/try/cluckin-chicken/hero.jpg" },
+  "signature": "Fried fresh to order, stacked high, and messy in the best way.",
+  "highlights": [
+    { "value": "Burgers", "label": "Crispy & stacked" },
+    { "value": "Wings", "label": "Mild to fire" },
+    { "value": "Loaded fries", "label": "Piled high" },
+    { "value": "Fresh", "label": "Fried to order" }
+  ],
+  "services": [
+    { "title": "Chicken burgers", "blurb": "Crispy fillets stacked with sauce and slaw in a soft toasted bun." },
+    { "title": "Wings & tenders", "blurb": "Tossed to order in your sauce of choice, from mild to fire." },
+    { "title": "Loaded fries", "blurb": "Golden fries piled with crispy chicken, cheese, and the works." }
+  ],
+  "photos": [
+    "/try/cluckin-chicken/dish1.jpg",
+    "/try/cluckin-chicken/dish2.jpg",
+    "/try/cluckin-chicken/dish3.jpg"
+  ],
+  "contact": {},
+  "socials": { "instagram": "https://instagram.com/cluckingoodchicken" }
+}
