@@ -103,6 +103,34 @@ img { user-select: none; }
   [data-dev-anim] { animation: none !important; opacity: 1 !important; transform: none !important; }
 }
 
+/* --- Prospect prototypes (try.rhythmiqcx.com/<slug>) --------------------------
+   Theming is driven by CSS custom properties injected per-prospect (see
+   components/try/theme.ts); these are just the motion primitives the templates
+   share. All are disabled under reduced-motion. --------------------------------- */
+@keyframes tryKenburns { from { transform: scale(1.05); } to { transform: scale(1.18) translate(-2%, -2.5%); } }
+@keyframes tryFadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+/* Slow, organic drift for the aurora blobs — each layer gets a different
+   duration/delay so they never sync up. */
+@keyframes tryDrift1 { 0% { transform: translate(0,0) scale(1); } 50% { transform: translate(6%, 8%) scale(1.15); } 100% { transform: translate(0,0) scale(1); } }
+@keyframes tryDrift2 { 0% { transform: translate(0,0) scale(1.1); } 50% { transform: translate(-8%, 4%) scale(0.95); } 100% { transform: translate(0,0) scale(1.1); } }
+@keyframes tryDrift3 { 0% { transform: translate(0,0) scale(1); } 50% { transform: translate(5%, -7%) scale(1.2); } 100% { transform: translate(0,0) scale(1); } }
+@keyframes tryScrollCue { 0% { transform: translateY(0); opacity: 0.9; } 50% { transform: translateY(7px); opacity: 0.35; } 100% { transform: translateY(0); opacity: 0.9; } }
+.try-kenburns { animation: tryKenburns 22s ease-in-out both alternate infinite; }
+.try-drift-1 { animation: tryDrift1 16s ease-in-out infinite; }
+.try-drift-2 { animation: tryDrift2 21s ease-in-out infinite; }
+.try-drift-3 { animation: tryDrift3 26s ease-in-out infinite; }
+.try-scroll-cue { animation: tryScrollCue 1.8s ease-in-out infinite; }
+[data-try-anim] { animation: tryFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) both; }
+/* Fine film grain overlay for depth on gradient/photo heroes. */
+.try-grain::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion: reduce) {
+  .try-kenburns, .try-drift-1, .try-drift-2, .try-drift-3, .try-scroll-cue { animation: none !important; }
+  [data-try-anim] { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+
 @layer components {
   /* Layout helpers */
   .wrap { @apply max-w-content mx-auto; padding-inline: clamp(20px, 5vw, 64px); }

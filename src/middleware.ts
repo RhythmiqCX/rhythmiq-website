@@ -2,30 +2,40 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 /**
- * Subdomain routing for the Rhythmiq Dev studio site.
+ * Subdomain routing for Rhythmiq's marketing surfaces.
  *
- * When a request arrives on the `dev.` subdomain (e.g. dev.rhythmiqcx.com), we
- * transparently rewrite it to the `/dev` route so the studio landing page is
- * served at the subdomain root. Every other host (rhythmiqcx.com, www, Vercel
- * previews, localhost) is a no-op, so the main restaurant site is untouched.
+ *  - `dev.rhythmiqcx.com`  → rewritten to `/dev` (the studio landing page).
+ *  - `try.rhythmiqcx.com`  → rewritten to `/try` (per-prospect prototype sites,
+ *                            e.g. try.rhythmiqcx.com/bella-bistro → /try/bella-bistro).
  *
- * NOTE: this only handles the *rewrite*. The `dev.rhythmiqcx.com` domain must
+ * Every other host (rhythmiqcx.com, www, Vercel previews, localhost) is a no-op,
+ * so the main restaurant site is untouched.
+ *
+ * NOTE: this only handles the *rewrite*. Each subdomain (`dev.`, `try.`) must
  * also be added to this project in Vercel (Project → Domains) and pointed at it
  * via DNS for the subdomain to reach this app at all.
  */
 export function middleware(req: NextRequest) {
   const host = (req.headers.get("host") || "").split(":")[0].toLowerCase();
-  const isDevSubdomain = host.startsWith("dev.");
 
-  if (!isDevSubdomain) return NextResponse.next();
+  if (host.startsWith("dev.")) {
+    const { pathname } = req.nextUrl;
+    // Already under /dev (e.g. direct hit) — leave it alone.
+    if (pathname === "/dev" || pathname.startsWith("/dev/")) return NextResponse.next();
+    const url = req.nextUrl.clone();
+    url.pathname = pathname === "/" ? "/dev" : `/dev${pathname}`;
+    return NextResponse.rewrite(url);
+  }
 
-  const { pathname } = req.nextUrl;
-  // Already under /dev (e.g. direct hit) — leave it alone.
-  if (pathname === "/dev" || pathname.startsWith("/dev/")) return NextResponse.next();
+  if (host.startsWith("try.")) {
+    const { pathname } = req.nextUrl;
+    if (pathname === "/try" || pathname.startsWith("/try/")) return NextResponse.next();
+    const url = req.nextUrl.clone();
+    url.pathname = pathname === "/" ? "/try" : `/try${pathname}`;
+    return NextResponse.rewrite(url);
+  }
 
-  const url = req.nextUrl.clone();
-  url.pathname = pathname === "/" ? "/dev" : `/dev${pathname}`;
-  return NextResponse.rewrite(url);
+  return NextResponse.next();
 }
 
 export const config = {

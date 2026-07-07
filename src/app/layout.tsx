@@ -111,6 +111,10 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{
               __html: `
                                 (function(d,t){
+                                // Never load the Rhythmiq widget on prospect prototype sites
+                                // (try.rhythmiqcx.com/<slug> or the /try/* path) — it would
+                                // appear on the prospect's "own" site and break the illusion.
+                                if (location.hostname.indexOf("try.")===0 || location.pathname.indexOf("/try")===0) return;
                                 var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
                                 g.src="https://app.rhythmiqcx.com/widget/widget-loader.js?websiteToken=${rhythmiqWidgetToken}";
                                 g.defer=true;g.async=true;
