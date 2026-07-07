@@ -1,0 +1,21 @@
+{
+  "slug": "dorasani",
+  "vertical": "restaurant",
+  "variant": "bold-dark",
+  "status": "live",
+  "business": {
+    "name": "Dorasani",
+    "tagline": "South Indian tiffin, made fresh daily.",
+    "oneLiner": "Crisp dosas, soft idlis, and everything in between — real South Indian tiffin, made fresh every morning."
+  },
+  "theme": { "accent": "#2E7D57", "scheme": "dark" },
+  "hero": { "mode": "ken-burns", "photo": "/try/dorasani/hero.jpg" },
+  "services": [
+    { "title": "Dosa varieties", "blurb": "Plain, masala, ghee roast & more, straight off the tawa." },
+    { "title": "Idli & vada", "blurb": "Soft idlis, crispy vadas, sambar & chutneys made fresh daily." },
+    { "title": "Takeaway & delivery", "blurb": "Your tiffin favourites, ready to go." }
+  ],
+  "photos": ["/try/dorasani/idli-sambar.jpg", "/try/dorasani/idli-chutney.jpg"],
+  "contact": {},
+  "socials": { "instagram": "https://instagram.com/dorasani" }
+}
