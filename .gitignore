@@ -48,4 +48,5 @@ docs/
 
 # design handoff reference material (input, not app code)
 _design_handoff_tmp/
+design-refs/
 *.zip

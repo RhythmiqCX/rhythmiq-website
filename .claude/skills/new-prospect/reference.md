@@ -5,13 +5,14 @@ This file is the quick human-readable version for the interview.
 
 ## Verticals & variants
 
-| Vertical     | Variants                          | Default variant  | Default hero | House accent |
-|--------------|-----------------------------------|------------------|--------------|--------------|
-| `restaurant` | `warm-editorial`, `bold-dark`     | `warm-editorial` | `ken-burns`  | `#E8643C`    |
-| `generic`    | `default`                         | `default`        | `gradient`   | `#E8643C`    |
+| Vertical     | Variants                                        | Default variant  | Default hero | House accent |
+|--------------|-------------------------------------------------|------------------|--------------|--------------|
+| `restaurant` | `warm-editorial`, `bold-dark`, `retro-vibe`     | `warm-editorial` | `ken-burns`  | `#E8643C`    |
+| `generic`    | `default`                                       | `default`        | `gradient`   | `#E8643C`    |
 
 - `warm-editorial` — light "paper + coral" editorial. Set `theme.scheme` = `light`.
 - `bold-dark` — cinematic dark. Set `theme.scheme` = `dark`.
+- `retro-vibe` — bold 70s / neo-brutalist "Gen-Z" look: cream canvas, thick black borders, hard offset shadows, Syne caps + Playfair italic accents, film grain, crosshair cursor. Fixed palette (orange `#ff4d00` / blue `#2d31fa` / neon `#bff000` / cream / near-black), so `theme.accent` is ignored. Uses the richer `services` fields — `price`, `tag` ("Best Seller"/"Spicy"/"Popular"), `photo` — plus `business.about` for the "Vibe Check" story. **Photo slots:** `hero.photo` → framed hero; `services[].photo` → the 3 menu cards; `photos[0..3]` → the Instagram grid.
 - Unknown vertical/variant gracefully falls back (variant → vertical default → generic).
 
 More verticals (dentist, salon, …) get added by extending `catalog.ts` +

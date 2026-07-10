@@ -131,6 +131,20 @@ img { user-select: none; }
   [data-try-anim] { animation: none !important; opacity: 1 !important; transform: none !important; }
 }
 
+/* --- Restaurant · Retro / neo-brutalist variant (templates/restaurant/retro-vibe)
+   Scoped helpers: crosshair cursor, hard offset shadows with hover growth,
+   grayscale→colour Instagram tiles, and the marquee (reuses the shared
+   @keyframes marquee). All motion respects reduced-motion. */
+.retro-vibe, .retro-vibe * { cursor: crosshair; }
+.retro-press { transition: transform .16s ease, box-shadow .16s ease; box-shadow: 4px 4px 0 0 #1a1a1a; }
+.retro-press:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 0 #1a1a1a; }
+.retro-lift { transition: transform .2s ease, box-shadow .2s ease; box-shadow: 6px 6px 0 0 #1a1a1a; }
+.retro-lift:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0 0 #1a1a1a; }
+.retro-ig-tile img { filter: grayscale(1) contrast(1.03); transition: filter .4s ease, transform .5s ease; }
+.retro-ig-tile:hover img { filter: grayscale(0); transform: scale(1.05); }
+.retro-marquee { animation: marquee 24s linear infinite; will-change: transform; }
+@media (prefers-reduced-motion: reduce) { .retro-marquee { animation: none !important; } }
+
 @layer components {
   /* Layout helpers */
   .wrap { @apply max-w-content mx-auto; padding-inline: clamp(20px, 5vw, 64px); }

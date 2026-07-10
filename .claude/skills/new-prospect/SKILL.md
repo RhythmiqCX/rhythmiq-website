@@ -73,9 +73,10 @@ let them answer in plain chat. The free-text fields (name, description, contact,
 services, etc.) have no fixed options, so the operator types them; do **NOT**
 wrap free-text in an `AskUserQuestion` popup with invented example options
 (that's useless and frustrating). Use `AskUserQuestion` popups **only** for the
-two genuine either/or visual choices — **Style** and **Accent color** — and only
-if the operator didn't already state them. If the operator gives everything in
-one message, skip the popups and build.
+visual choices — **Style / template** (which variant) and **Accent color** — and
+only if the operator didn't already state them. Some variants ship a fixed
+palette (e.g. `retro-vibe`), so skip the accent popup when one of those is picked.
+If the operator gives everything in one message, skip the popups and build.
 
 Present this list verbatim (adjust defaults per vertical):
 
@@ -88,7 +89,10 @@ Present this list verbatim (adjust defaults per vertical):
    becomes "Message on Instagram")
 
 **OPTIONAL — skip any; default in parentheses**
-5. **Style** — warm/light or bold/dark (default: warm/light) — popup choice
+5. **Style / template** — which variant. Restaurant: **warm-editorial** (warm
+   paper + coral) · **bold-dark** (cinematic dark) · **retro-vibe** (bold 70s /
+   neo-brutalist, Gen-Z). Default: warm-editorial — popup choice. See
+   `reference.md` for the current list per vertical.
 6. **Accent color** — Coral / Deep Blue / Forest / Plum / Charcoal (default:
    Coral) — popup choice
 7. **Tagline** — short phrase (default: reuse #3)

@@ -22,6 +22,7 @@ export const prospectSchema = z
       name: z.string().min(1),
       tagline: z.string().optional(),
       oneLiner: z.string().min(1),
+      about: z.string().optional(), // longer brand-story paragraph (optional)
       logo: z.string().optional(), // e.g. /try/<slug>/logo.png
     }),
 
@@ -46,7 +47,15 @@ export const prospectSchema = z
       .default({ mode: "gradient" }),
 
     services: z
-      .array(z.object({ title: z.string().min(1), blurb: z.string().optional() }))
+      .array(
+        z.object({
+          title: z.string().min(1),
+          blurb: z.string().optional(),
+          price: z.string().optional(), // e.g. "$18" — shown on menu-card templates
+          tag: z.string().optional(), // e.g. "Best Seller" / "Spicy" — a badge
+          photo: z.string().optional(), // dish image for menu-card templates
+        }),
+      )
       .max(6)
       .default([]),
 

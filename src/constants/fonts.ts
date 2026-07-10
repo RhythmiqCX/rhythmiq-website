@@ -1,4 +1,4 @@
-import { Instrument_Serif, Schibsted_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Instrument_Serif, Schibsted_Grotesk, JetBrains_Mono, Syne, Playfair_Display, Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 
 // --- Restaurant redesign type system (paper aesthetic) ---
@@ -54,5 +54,30 @@ export const subheading = Instrument_Serif({
     subsets: ["latin"],
     weight: ["400"],
     variable: "--font-subheading",
-    display: "swap", 
+    display: "swap",
+});
+
+// --- Retro / neo-brutalist variant type system (used by the try/ "retro-vibe"
+// restaurant template): Syne = uppercase display headlines; Playfair Display
+// italic = editorial accents; Space Grotesk = body.
+export const syne = Syne({
+    subsets: ["latin"],
+    weight: ["600", "700", "800"],
+    variable: "--font-syne",
+    display: "swap",
+});
+
+export const playfair = Playfair_Display({
+    subsets: ["latin"],
+    weight: ["400"],
+    style: ["normal", "italic"],
+    variable: "--font-playfair",
+    display: "swap",
+});
+
+export const spaceGrotesk = Space_Grotesk({
+    subsets: ["latin"],
+    weight: ["400", "500", "700"],
+    variable: "--font-space",
+    display: "swap",
 });

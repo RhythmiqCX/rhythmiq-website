@@ -46,6 +46,7 @@ export const VERTICAL_META: Record<Vertical, VerticalMeta> = {
     variants: [
       { id: "warm-editorial", label: "Warm editorial (paper + coral)", scheme: "light" },
       { id: "bold-dark", label: "Bold dark (cinematic)", scheme: "dark" },
+      { id: "retro-vibe", label: "Retro / neo-brutalist (70s + Gen-Z, bold & loud)", scheme: "light" },
     ],
     defaultServices: [
       { title: "Dine in", blurb: "A room worth lingering in, plate after plate." },

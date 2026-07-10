@@ -1,0 +1,62 @@
+{
+  "slug": "vibe-bistro",
+  "vertical": "restaurant",
+  "variant": "retro-vibe",
+  "status": "live",
+  "business": {
+    "name": "Vibe Bistro",
+    "tagline": "No cap, just flavor",
+    "oneLiner": "Locally-sourced, chef-fired comfort food and natural-wine cocktails — served loud in the heart of the city.",
+    "about": "Born in 2024 out of a supper club that got way too popular, Vibe Bistro is where your grandma's recipes meet a Gen-Z playlist. Everything's made from scratch with produce from farms we can actually name — big flavor, zero pretension."
+  },
+  "theme": { "accent": "#ff4d00", "scheme": "light" },
+  "hero": {
+    "mode": "gradient",
+    "photo": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=1200&q=70&auto=format&fit=crop"
+  },
+  "signature": "Come for the vibe, stay because the food actually slaps.",
+  "highlights": [
+    { "value": "Smash", "label": "Burgers" },
+    { "value": "Craft", "label": "Cocktails" },
+    { "value": "Open", "label": "Til Late" },
+    { "value": "Locally", "label": "Sourced" }
+  ],
+  "services": [
+    {
+      "title": "The Big Vibe Burger",
+      "blurb": "Double smash patty, aged cheddar, house pickles, secret orange sauce.",
+      "price": "$18",
+      "tag": "Best Seller",
+      "photo": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&q=70&auto=format&fit=crop"
+    },
+    {
+      "title": "Electric Negroni",
+      "blurb": "Barrel-aged gin, blood-orange bitters, a neon twist. Proceed with caution.",
+      "price": "$14",
+      "tag": "Popular",
+      "photo": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1200&q=70&auto=format&fit=crop"
+    },
+    {
+      "title": "Firecracker Risotto",
+      "blurb": "Charred corn, calabrian chili, crispy parmesan. Brings the heat.",
+      "price": "$22",
+      "tag": "Spicy",
+      "photo": "https://images.unsplash.com/photo-1481931098730-318b6f776db0?w=1200&q=70&auto=format&fit=crop"
+    }
+  ],
+  "photos": [
+    "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=1000&q=70&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1000&q=70&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1000&q=70&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1529417305485-480f579e7578?w=1000&q=70&auto=format&fit=crop"
+  ],
+  "contact": {
+    "phone": "+1 212 555 0147",
+    "bookingUrl": "https://example.com/book",
+    "address": "88 Loud Street, Brooklyn, NY",
+    "hours": "Wed–Sun · 5pm til late"
+  },
+  "socials": {
+    "instagram": "https://instagram.com/vibe.bistro"
+  }
+}

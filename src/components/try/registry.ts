@@ -3,6 +3,7 @@ import type { Prospect } from "@/lib/try/schema";
 import GenericDefault from "./templates/generic/default";
 import RestaurantWarmEditorial from "./templates/restaurant/warm-editorial";
 import RestaurantBoldDark from "./templates/restaurant/bold-dark";
+import RestaurantRetroVibe from "./templates/restaurant/retro-vibe";
 
 export type TemplateProps = { data: Prospect };
 export type Template = ComponentType<TemplateProps>;
@@ -20,6 +21,7 @@ export const REGISTRY: Record<string, Record<string, Template>> = {
     default: RestaurantWarmEditorial,
     "warm-editorial": RestaurantWarmEditorial,
     "bold-dark": RestaurantBoldDark,
+    "retro-vibe": RestaurantRetroVibe,
   },
 };
 
