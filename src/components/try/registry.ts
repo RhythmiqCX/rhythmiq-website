@@ -5,6 +5,7 @@ import RestaurantWarmEditorial from "./templates/restaurant/warm-editorial";
 import RestaurantBoldDark from "./templates/restaurant/bold-dark";
 import RestaurantRetroVibe from "./templates/restaurant/retro-vibe";
 import DentistCleanClinic from "./templates/dentist/clean-clinic";
+import PetsBoutiqueHero from "./templates/pets/boutique-hero";
 
 export type TemplateProps = { data: Prospect };
 export type Template = ComponentType<TemplateProps>;
@@ -27,6 +28,10 @@ export const REGISTRY: Record<string, Record<string, Template>> = {
   dentist: {
     default: DentistCleanClinic,
     "clean-clinic": DentistCleanClinic,
+  },
+  pets: {
+    default: PetsBoutiqueHero,
+    "boutique-hero": PetsBoutiqueHero,
   },
 };
 

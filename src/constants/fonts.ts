@@ -1,4 +1,4 @@
-import { Instrument_Serif, Schibsted_Grotesk, JetBrains_Mono, Syne, Playfair_Display, Space_Grotesk } from "next/font/google";
+import { Instrument_Serif, Schibsted_Grotesk, JetBrains_Mono, Syne, Playfair_Display, Space_Grotesk, Inter, DM_Serif_Display } from "next/font/google";
 import localFont from "next/font/local";
 
 // --- Restaurant redesign type system (paper aesthetic) ---
@@ -89,5 +89,20 @@ export const openSauce = localFont({
         { path: "../../public/fonts/opensauce/OpenSauceOne-Bold.woff2", weight: "700", style: "normal" },
     ],
     variable: "--font-opensauce",
+    display: "swap",
+});
+
+// --- Pets "boutique-hero" template: Inter (body/UI) + DM Serif Display (heading).
+export const inter = Inter({
+    subsets: ["latin"],
+    weight: ["400", "500", "600"],
+    variable: "--font-inter",
+    display: "swap",
+});
+
+export const dmSerifDisplay = DM_Serif_Display({
+    subsets: ["latin"],
+    weight: ["400"],
+    variable: "--font-dmserif",
     display: "swap",
 });

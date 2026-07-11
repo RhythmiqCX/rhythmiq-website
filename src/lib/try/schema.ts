@@ -24,6 +24,7 @@ export const prospectSchema = z
       oneLiner: z.string().min(1),
       about: z.string().optional(), // longer brand-story paragraph (optional)
       logo: z.string().optional(), // e.g. /try/<slug>/logo.png
+      avatar: z.string().optional(), // small owner/customer avatar for some templates
     }),
 
     theme: z

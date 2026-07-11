@@ -1,0 +1,33 @@
+{
+  "slug": "cozypaws",
+  "vertical": "pets",
+  "variant": "boutique-hero",
+  "status": "live",
+  "business": {
+    "name": "CozyPaws",
+    "tagline": "Everything Your Pets Love",
+    "oneLiner": "Thoughtfully-made beds, houses, toys and treats for the pets who run the house.",
+    "logo": "/try/cozypaws/logo.svg",
+    "avatar": "/try/cozypaws/avatar.webp"
+  },
+  "theme": { "accent": "#E86A10", "scheme": "light" },
+  "hero": {
+    "mode": "ken-burns",
+    "photo": "/try/cozypaws/video.webp"
+  },
+  "highlights": [
+    { "value": "98K+", "label": "Happy pets" },
+    { "value": "4.6", "label": "Rating" }
+  ],
+  "services": [
+    { "title": "Cozy Cat House", "price": "$49.99", "photo": "/try/cozypaws/product.webp" }
+  ],
+  "photos": [
+    "/try/cozypaws/bottom-left.webp",
+    "/try/cozypaws/bottom-center.webp",
+    "/try/cozypaws/bottom-right.webp"
+  ],
+  "contact": {
+    "bookingUrl": "https://example.com/shop"
+  }
+}
