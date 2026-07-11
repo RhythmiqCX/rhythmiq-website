@@ -8,31 +8,60 @@
     "tagline": "Wood-fired Italian, since 2012.",
     "oneLiner": "A neighbourhood trattoria serving wood-fired pizza and hand-rolled pasta in the heart of the old town."
   },
-  "theme": { "accent": "#E8643C", "scheme": "light" },
-  "hero": { "mode": "ken-burns", "photo": "/try/bellas-bistro/hero.jpg" },
+  "theme": {
+    "accent": "#E8643C",
+    "scheme": "light"
+  },
+  "hero": {
+    "mode": "ken-burns",
+    "photo": "/try/bellas-bistro/hero.jpg"
+  },
   "signature": "Every plate leaves the kitchen the way we'd serve it to family.",
   "highlights": [
-    { "value": "Est. 2012", "label": "Family run" },
-    { "value": "4.9★", "label": "1,200+ Google reviews" },
-    { "value": "90 sec", "label": "Wood-fired crust" },
-    { "value": "Daily", "label": "Fresh pasta made in-house" }
+    {
+      "value": "Est. 2012",
+      "label": "Family run"
+    },
+    {
+      "value": "4.9★",
+      "label": "1,200+ Google reviews"
+    },
+    {
+      "value": "90 sec",
+      "label": "Wood-fired crust"
+    },
+    {
+      "value": "Daily",
+      "label": "Fresh pasta made in-house"
+    }
   ],
   "services": [
-    { "title": "Wood-fired pizza", "blurb": "Blistered, 90-second Neapolitan crusts, straight from the oven." },
-    { "title": "Fresh pasta", "blurb": "Rolled, cut, and cooked to order every single day." },
-    { "title": "Private dining", "blurb": "A candle-lit back room for up to 30 of your favourite people." }
+    {
+      "title": "Wood-fired pizza",
+      "blurb": "Blistered, 90-second Neapolitan crusts, straight from the oven."
+    },
+    {
+      "title": "Fresh pasta",
+      "blurb": "Rolled, cut, and cooked to order every single day."
+    },
+    {
+      "title": "Private dining",
+      "blurb": "A candle-lit back room for up to 30 of your favourite people."
+    }
   ],
-  "photos": ["/try/bellas-bistro/room.jpg", "/try/bellas-bistro/plate.jpg"],
+  "photos": [
+    "/try/bellas-bistro/room.jpg",
+    "/try/bellas-bistro/plate.jpg"
+  ],
   "testimonial": {
     "quote": "The best carbonara this side of Rome — worth the wait every single time.",
     "author": "The Weekend Food Review"
   },
   "contact": {
     "phone": "555 012 3456",
-    "bookingUrl": "https://example.com/book",
+    "bookingUrl": "https://try.rhythmiqcx.com",
     "address": "12 Garden Street, Old Town",
     "hours": "Tue–Sun · 12:00pm – 11:00pm\nClosed Mondays",
-    "mapUrl": "https://maps.google.com/?q=12+Garden+Street+Old+Town"
-  },
-  "socials": { "instagram": "https://instagram.com" }
+    "mapUrl": "https://try.rhythmiqcx.com"
+  }
 }
