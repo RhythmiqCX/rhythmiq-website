@@ -13,7 +13,8 @@
   "theme": { "accent": "#12f542", "scheme": "dark" },
   "hero": {
     "mode": "video",
-    "videoMp4": "/try/akor/hero.mp4"
+    "videoMp4": "/try/akor/hero.mp4",
+    "poster": "/try/akor/hero-poster.webp"
   },
   "services": [
     { "title": "AI-Driven\nSecurity Solutions", "photo": "/try/akor/icon1.webp" },
@@ -25,6 +26,6 @@
     "/try/akor/about.mp4"
   ],
   "contact": {
-    "email": "hello@akor.systems"
+    "bookingUrl": "https://dev.rhythmiqcx.com"
   }
 }

@@ -1,18 +1,26 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import type { Prospect } from "@/lib/try/schema";
 import { primaryCta, secondaryCta } from "../../sections/util";
 
 /**
- * Security · AKOR — a faithful 1:1 build of the "AKOR — Intelligent Security
+ * Security · AKOR — a faithful build of the "AKOR — Intelligent Security
  * Systems" dark landing page: a fixed navbar with a green hexagon mark, a
- * full-viewport video hero with bottom-left copy + two CTAs, an inverted
- * near-white Services section (2×2 icon cards), and a black About section with
- * a looping video beside a mission block. Sora type, vivid-green accent.
+ * full-viewport video hero with bottom-left copy + two CTAs, an elevated dark
+ * Services section (2×2 icon cards on white tiles), and a black About section
+ * with a looping video beside a mission block. Sora type, vivid-green accent.
  * Fixed identity; theme.accent is ignored.
+ *
+ * Videos ship at source quality (several MB each), so a full-screen preloader
+ * (same pattern as the dev.rhythmiqcx.com one) holds until the hero video can
+ * play — eased counter, then the panel slides up. Hard 6s fallback.
  *
  * DATA: business.name → wordmark · business.tagline → hero H1 (use \n for the
  *   line break) · oneLiner → hero subtext · business.about → Services heading ·
  *   services[0..3] (title with \n / blurb / photo=icon) → the 4 service cards ·
- *   signature → About heading · hero.videoMp4 → hero bg · photos[0] → About video.
+ *   signature → About heading · hero.videoMp4 + hero.poster → hero bg ·
+ *   photos[0] → About video.
  */
 
 const SORA = "var(--font-sora), system-ui, sans-serif";
@@ -22,7 +30,8 @@ const PRIMARY = "hsl(119 99% 46%)";
 const PRIMARY_FG = "hsl(0 0% 4%)";
 const MUTED = "hsl(0 0% 60%)";
 const HERO_BG = "hsl(0 0% 8%)";
-const NAV_BTN = "hsl(0 0% 18%)";
+// Services panel: a step above the page bg, well inside the dark theme.
+const PANEL = "hsl(0 0% 13%)";
 const NAV = ["Services", "About Us", "Projects", "Team", "Contacts"];
 const BASE = "/try/akor";
 
@@ -34,7 +43,89 @@ const Hexagon = () => (
   </svg>
 );
 
+/**
+ * Eased counter that idles at ~88 until the hero video reports it can play,
+ * then completes and slides the panel up. Skips under prefers-reduced-motion.
+ */
+const Preloader = ({ brand, ready }: { brand: string; ready: boolean }) => {
+  const [pct, setPct] = useState(0);
+  const [done, setDone] = useState(false);
+  const readyRef = useRef(ready);
+  readyRef.current = ready;
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setPct(100);
+      setDone(true);
+      return;
+    }
+    let dead = false;
+    let raf = 0;
+    let value = 0;
+    const tick = () => {
+      if (dead) return;
+      const target = readyRef.current ? 100 : 88;
+      value += (target - value) * 0.08;
+      if (readyRef.current && value > 99.2) {
+        setPct(100);
+        setTimeout(() => !dead && setDone(true), 220);
+        return;
+      }
+      setPct(Math.round(value));
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    const fallback = setTimeout(() => {
+      if (dead) return;
+      setPct(100);
+      setDone(true);
+    }, 6000);
+    return () => {
+      dead = true;
+      cancelAnimationFrame(raf);
+      clearTimeout(fallback);
+    };
+  }, []);
+
+  return (
+    <div
+      aria-hidden
+      className="fixed inset-0 z-[200] flex flex-col justify-between px-8 py-6 lg:px-16"
+      style={{
+        background: "hsl(0 0% 6%)",
+        transition: "transform 0.85s cubic-bezier(0.76, 0, 0.24, 1)",
+        transform: done ? "translateY(-101%)" : "none",
+        pointerEvents: done ? "none" : "auto",
+      }}
+    >
+      <div className="flex items-center gap-3">
+        <span className="grid h-8 w-8 place-items-center rounded-lg" style={{ background: PRIMARY }}>
+          <Hexagon />
+        </span>
+        <span className="text-xl font-semibold tracking-tight" style={{ color: FG }}>{brand}</span>
+      </div>
+      <div className="flex items-end justify-between gap-6">
+        <span className="pb-2 text-xs uppercase tracking-[0.25em]" style={{ color: MUTED }}>
+          Initializing systems
+        </span>
+        <span className="font-light leading-[0.9] tracking-tight" style={{ color: PRIMARY, fontSize: "clamp(72px, 12vw, 160px)" }}>
+          {String(pct).padStart(2, "0")}
+        </span>
+      </div>
+    </div>
+  );
+};
+
 const Akor = ({ data }: { data: Prospect }) => {
+  const heroVideoRef = useRef<HTMLVideoElement | null>(null);
+  const [heroReady, setHeroReady] = useState(false);
+
+  // Cached/fast loads can fire canplay before hydration attaches the listener.
+  useEffect(() => {
+    const v = heroVideoRef.current;
+    if (v && v.readyState >= 3) setHeroReady(true);
+  }, []);
+
   const brand = data.business.name || "AKOR";
   const h1 = data.business.tagline || "Intelligent\nSecurity Systems";
   const heroSub = data.business.oneLiner;
@@ -61,6 +152,8 @@ const Akor = ({ data }: { data: Prospect }) => {
 
   return (
     <div className="akor" style={{ background: BG, color: FG, fontFamily: SORA, WebkitFontSmoothing: "antialiased" }}>
+      <Preloader brand={brand} ready={heroReady} />
+
       {/* ---------------- Navbar ---------------- */}
       <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-8 py-5 lg:px-16">
         <div className="flex items-center gap-3">
@@ -71,17 +164,27 @@ const Akor = ({ data }: { data: Prospect }) => {
         </div>
         <div className="hidden items-center gap-9 lg:flex">
           {NAV.map((n) => (
-            <a key={n} href="#" className="text-sm uppercase tracking-widest no-underline transition-colors hover:opacity-100" style={{ color: MUTED }}>{n}</a>
+            <a key={n} href="#" className="text-sm uppercase tracking-widest text-[hsl(0_0%_60%)] no-underline transition-colors hover:text-[hsl(119_99%_46%)]">{n}</a>
           ))}
         </div>
-        <a href={cta.href} {...ext(cta.external)} className="hidden h-11 items-center rounded-lg px-6 text-xs uppercase tracking-widest no-underline transition-transform active:scale-[0.97] lg:flex" style={{ background: NAV_BTN, color: FG }}>
+        <a href={cta.href} {...ext(cta.external)} className="hidden h-11 items-center rounded-lg bg-[hsl(0_0%_18%)] px-6 text-xs uppercase tracking-widest text-[hsl(0_0%_96%)] no-underline transition-all hover:bg-[hsl(119_99%_46%)] hover:text-[hsl(0_0%_4%)] active:scale-[0.97] lg:flex">
           Get Quote
         </a>
       </nav>
 
       {/* ---------------- Hero ---------------- */}
       <section className="relative flex min-h-screen flex-col justify-end overflow-hidden" style={{ background: HERO_BG }}>
-        <video autoPlay loop muted playsInline preload="metadata" className="absolute inset-0 h-full w-full object-cover">
+        <video
+          ref={heroVideoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={data.hero.poster || undefined}
+          onCanPlay={() => setHeroReady(true)}
+          className="absolute inset-0 h-full w-full object-cover"
+        >
           <source src={heroVideo} type="video/mp4" />
         </video>
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.15) 55%, transparent)" }} />
@@ -101,27 +204,29 @@ const Akor = ({ data }: { data: Prospect }) => {
         </div>
       </section>
 
-      {/* ---------------- Services (inverted) ---------------- */}
-      <section className="px-8 py-20 lg:px-16 lg:py-28" style={{ background: FG, color: BG }}>
-        <div className="mb-8 text-xs uppercase tracking-[0.25em]" style={{ color: "rgba(0,0,0,0.45)" }}>Services</div>
-        <div className="mb-16 h-px w-full" style={{ background: "rgba(0,0,0,0.15)" }} />
+      {/* ---------------- Services (elevated dark panel) ---------------- */}
+      <section className="px-8 py-20 lg:px-16 lg:py-28" style={{ background: PANEL, color: FG }}>
+        <div className="mb-8 text-xs uppercase tracking-[0.25em]" style={{ color: "rgba(255,255,255,0.45)" }}>Services</div>
+        <div className="mb-16 h-px w-full" style={{ background: "rgba(255,255,255,0.14)" }} />
         <div className="flex flex-col gap-16 lg:flex-row lg:gap-24">
           <div className="flex flex-col justify-center lg:w-[38%]">
-            <h2 className="text-3xl font-normal leading-[1.15] tracking-tight sm:text-4xl" style={{ color: BG }}>{servicesHeading}</h2>
+            <h2 className="text-3xl font-normal leading-[1.15] tracking-tight sm:text-4xl" style={{ color: FG }}>{servicesHeading}</h2>
             <a href={cta.href} {...ext(cta.external)} className="mt-8 flex h-11 w-fit items-center rounded-lg px-8 text-xs font-semibold uppercase tracking-widest no-underline transition-transform active:scale-[0.97]" style={greenBtn}>
               Get Consultation
             </a>
           </div>
           <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-16 lg:w-[62%]">
             {serviceCards.map((c, i) => (
-              <div key={i} className="pl-8" style={{ borderLeft: `1px solid rgba(0,0,0,0.15)` }}>
+              <div key={i} className="pl-8" style={{ borderLeft: `1px solid rgba(255,255,255,0.14)` }}>
                 {c.photo && (
+                  // The source icons have a white background baked in — rounding
+                  // them turns that into a deliberate light tile on the dark panel.
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={c.photo} alt="" className="mb-6 h-16 w-16 object-contain" />
+                  <img src={c.photo} alt="" className="mb-6 h-16 w-16 rounded-2xl object-contain" />
                 )}
-                <div className="mb-2 text-xs" style={{ color: "rgba(0,0,0,0.35)" }}>{String(i + 1).padStart(2, "0")}</div>
-                <h3 className="mb-3 whitespace-pre-line text-xl font-medium leading-tight" style={{ color: BG }}>{c.title}</h3>
-                {c.blurb && <p className="text-sm leading-relaxed" style={{ color: "rgba(0,0,0,0.5)" }}>{c.blurb}</p>}
+                <div className="mb-2 text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>{String(i + 1).padStart(2, "0")}</div>
+                <h3 className="mb-3 whitespace-pre-line text-xl font-medium leading-tight" style={{ color: FG }}>{c.title}</h3>
+                {c.blurb && <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{c.blurb}</p>}
               </div>
             ))}
           </div>
@@ -134,14 +239,26 @@ const Akor = ({ data }: { data: Prospect }) => {
         <div className="mb-16 h-px w-full" style={{ background: "rgba(255,255,255,0.15)" }} />
         <div className="flex flex-col items-stretch gap-12 lg:flex-row lg:gap-0">
           <div className="lg:w-[45%]">
-            <video autoPlay loop muted playsInline preload="metadata" className="h-auto w-full rounded-sm">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              poster={aboutVideo === `${BASE}/about.mp4` ? `${BASE}/about-poster.webp` : undefined}
+              className="h-auto w-full rounded-sm"
+            >
               <source src={aboutVideo} type="video/mp4" />
             </video>
           </div>
           <div className="mx-10 mt-8 hidden w-px lg:block" style={{ background: "rgba(255,255,255,0.15)" }} />
-          <div className="flex min-h-[500px] flex-1 flex-col justify-between lg:min-h-[600px]">
+          {/* The source design pinned the heading top and the mission block bottom
+              (min-h + justify-between), leaving a large hole between them. We
+              deviate deliberately: the text block flows naturally and is centered
+              against the video's height on desktop. */}
+          <div className="flex flex-1 flex-col lg:justify-center">
             <h2 className="text-3xl font-normal leading-[1.15] tracking-tight sm:text-4xl" style={{ color: FG }}>{aboutHeading}</h2>
-            <div className="mt-auto">
+            <div className="mt-12">
               <p className="mb-10 max-w-xl text-base leading-relaxed" style={{ color: MUTED }}>
                 We design and integrate intelligent security, automation, and AI systems that protect people, assets, and infrastructure — engineered to run quietly, scale cleanly, and stay a step ahead.
               </p>
