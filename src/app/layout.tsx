@@ -3,7 +3,7 @@ import { cn } from "@/lib";
 import { generateMetadata } from "@/utils";
 import { heading, sans, mono } from "@/constants";
 import { Toaster } from "@/components/ui/sonner";
-import { subheading, syne, playfair, spaceGrotesk } from "@/constants/fonts";
+import { subheading, syne, playfair, spaceGrotesk, openSauce } from "@/constants/fonts";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import JsonLd from "@/components/global/JsonLd";
@@ -48,6 +48,7 @@ export default function RootLayout({
           syne.variable,
           playfair.variable,
           spaceGrotesk.variable,
+          openSauce.variable,
         )}
       >
         <JsonLd schema={organizationSchema} />

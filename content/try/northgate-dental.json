@@ -1,0 +1,40 @@
+{
+  "slug": "northgate-dental",
+  "vertical": "dentist",
+  "variant": "clean-clinic",
+  "status": "live",
+  "business": {
+    "name": "Northgate Dental",
+    "tagline": "quality healthcare",
+    "oneLiner": "We provide professional dental services that match the latest technology — in a calm, modern clinic."
+  },
+  "theme": { "accent": "#111111", "scheme": "light" },
+  "hero": {
+    "mode": "ken-burns",
+    "photo": "/try/northgate-dental/hero.webp"
+  },
+  "signature": "Dental Care",
+  "highlights": [
+    { "value": "Advanced", "label": "Dentistry" },
+    { "value": "High-Quality", "label": "Equipment" },
+    { "value": "Friendly", "label": "Staff" }
+  ],
+  "services": [
+    { "title": "Dental\nVeneers", "blurb": "Natural, custom-shaded porcelain veneers." },
+    { "title": "Dental\nCrowns", "blurb": "Durable, precise tooth restorations." },
+    { "title": "Teeth\nWhitening", "blurb": "A brighter smile in a single visit." },
+    { "title": "Dental\nImplants", "blurb": "Permanent replacements for missing teeth." }
+  ],
+  "photos": [
+    "/try/northgate-dental/gallery.webp",
+    "/try/northgate-dental/implant-1.webp",
+    "/try/northgate-dental/implant-2.webp",
+    "/try/northgate-dental/patient.webp"
+  ],
+  "contact": {
+    "phone": "+1 201 555 0192",
+    "bookingUrl": "https://example.com/book",
+    "address": "5401 Bergenline Ave, West New York, NJ",
+    "hours": "Mon–Sat · 9am–6pm"
+  }
+}

@@ -4,6 +4,7 @@ import GenericDefault from "./templates/generic/default";
 import RestaurantWarmEditorial from "./templates/restaurant/warm-editorial";
 import RestaurantBoldDark from "./templates/restaurant/bold-dark";
 import RestaurantRetroVibe from "./templates/restaurant/retro-vibe";
+import DentistCleanClinic from "./templates/dentist/clean-clinic";
 
 export type TemplateProps = { data: Prospect };
 export type Template = ComponentType<TemplateProps>;
@@ -22,6 +23,10 @@ export const REGISTRY: Record<string, Record<string, Template>> = {
     "warm-editorial": RestaurantWarmEditorial,
     "bold-dark": RestaurantBoldDark,
     "retro-vibe": RestaurantRetroVibe,
+  },
+  dentist: {
+    default: DentistCleanClinic,
+    "clean-clinic": DentistCleanClinic,
   },
 };
 

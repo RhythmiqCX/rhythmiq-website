@@ -9,7 +9,7 @@
 // Verticals we ship a real template for today. Add "dentist"/"salon"/etc here
 // (and a matching template + registry entry) to expand. Anything authored for a
 // vertical without a dedicated template gracefully falls back to `generic`.
-export const VERTICALS = ["restaurant", "generic"] as const;
+export const VERTICALS = ["restaurant", "dentist", "generic"] as const;
 export type Vertical = (typeof VERTICALS)[number];
 
 export const HERO_MODES = ["gradient", "particles", "ken-burns", "video"] as const;
@@ -52,6 +52,21 @@ export const VERTICAL_META: Record<Vertical, VerticalMeta> = {
       { title: "Dine in", blurb: "A room worth lingering in, plate after plate." },
       { title: "Takeaway & delivery", blurb: "Your favourites, ready to go." },
       { title: "Private events", blurb: "Celebrations and gatherings, catered to." },
+    ],
+  },
+  dentist: {
+    label: "Dentist / Clinic",
+    houseAccent: "#111111",
+    defaultVariant: "clean-clinic",
+    defaultHeroMode: "ken-burns",
+    variants: [
+      { id: "clean-clinic", label: "Clean clinic (mono photo-mosaic + splash)", scheme: "light" },
+    ],
+    defaultServices: [
+      { title: "Dental\nVeneers", blurb: "Natural, custom-shaded porcelain veneers." },
+      { title: "Dental\nCrowns", blurb: "Durable, precise tooth restorations." },
+      { title: "Teeth\nWhitening", blurb: "A brighter smile in a single visit." },
+      { title: "Dental\nImplants", blurb: "Permanent replacements for missing teeth." },
     ],
   },
   generic: {

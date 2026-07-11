@@ -81,3 +81,13 @@ export const spaceGrotesk = Space_Grotesk({
     variable: "--font-space",
     display: "swap",
 });
+
+// --- Dentist "clean-clinic" template: Open Sauce One (self-hosted woff2). ---
+export const openSauce = localFont({
+    src: [
+        { path: "../../public/fonts/opensauce/OpenSauceOne-Regular.woff2", weight: "400", style: "normal" },
+        { path: "../../public/fonts/opensauce/OpenSauceOne-Bold.woff2", weight: "700", style: "normal" },
+    ],
+    variable: "--font-opensauce",
+    display: "swap",
+});
