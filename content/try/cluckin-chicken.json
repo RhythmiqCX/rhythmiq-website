@@ -3,6 +3,7 @@
   "vertical": "restaurant",
   "variant": "warm-editorial",
   "status": "live",
+  "unlisted": true,
   "business": {
     "name": "Cluckin Chicken",
     "tagline": "Crispy chicken, done loud.",

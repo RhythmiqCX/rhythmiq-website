@@ -17,6 +17,9 @@ export const prospectSchema = z
     vertical: z.enum(VERTICALS),
     variant: z.string().default("default"),
     status: z.enum(["live", "archived"]).default("live"),
+    // Live at its URL but hidden from the try.rhythmiqcx.com showcase grid
+    // (e.g. near-duplicate variants we still want shareable by direct link).
+    unlisted: z.boolean().default(false),
 
     business: z.object({
       name: z.string().min(1),

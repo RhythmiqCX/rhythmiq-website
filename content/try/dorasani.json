@@ -3,6 +3,7 @@
   "vertical": "restaurant",
   "variant": "bold-dark",
   "status": "live",
+  "unlisted": true,
   "business": {
     "name": "Dorasani",
     "tagline": "South Indian tiffin, made fresh daily.",

@@ -24,7 +24,9 @@ function thumbFor(p: Prospect): string | null {
  * appears automatically; archived ones drop off on the next build.
  */
 export default function TryIndex() {
-  const sites = listLiveProspects().sort((a, b) => a.business.name.localeCompare(b.business.name));
+  const sites = listLiveProspects()
+    .filter((p) => !p.unlisted)
+    .sort((a, b) => a.business.name.localeCompare(b.business.name));
 
   return (
     <main className="min-h-[100svh] bg-paper px-6 pb-24 pt-20 text-ink md:px-10 lg:px-16">

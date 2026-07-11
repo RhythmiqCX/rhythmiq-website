@@ -49,6 +49,7 @@ don't re-skin or assemble prompts to force a niche.
 | Field | Notes |
 |---|---|
 | `slug`, `vertical`, `variant`, `status` | status `archived` → 404 |
+| `unlisted` | live at its URL but hidden from the /try showcase grid |
 | `business.name` | required; also feeds OG title + monogram fallback |
 | `business.oneLiner` | required; OG description |
 | `business.tagline`, `.about`, `.logo`, `.avatar` | optional |

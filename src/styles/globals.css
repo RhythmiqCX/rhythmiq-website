@@ -160,7 +160,11 @@ img { user-select: none; }
   60% { opacity: 1; transform: translateY(-6px) scale(1.03) rotate(1deg); filter: blur(0); }
   100% { opacity: 1; transform: none; filter: none; }
 }
-@keyframes cozyScaleIn { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
+/* Used only on the three bottom overlays, which are centered with left-1/2 —
+   the keyframes must carry the -50% shift because `animation-fill-mode: both`
+   makes the keyframe transform REPLACE any transform utility class, which
+   pushed the overlays half their width to the right. */
+@keyframes cozyScaleIn { from { opacity: 0; transform: translateX(-50%) scale(0.85); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
 @keyframes cozyPhotoReveal { from { opacity: 0; transform: translateY(80px) scale(1.02); } to { opacity: 1; transform: none; } }
 .cozypaws .animate-fade-up { animation: cozyFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) both; }
 .cozypaws .animate-fade-in { animation: cozyFadeIn 0.6s ease-out both; }
