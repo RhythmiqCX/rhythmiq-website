@@ -241,13 +241,15 @@ function Footer({ brand }: { brand: string }) {
     viewport: { once: true, amount: 0.3 },
     transition: { duration: 1, ease: "easeOut" },
   } as const;
+  // Demo site: footer destinations stay inside our properties.
+  const LINK_HREF = "https://try.rhythmiqcx.com";
   const Column = ({ heading, items }: { heading: string; items: string[] }) => (
     <div>
       <div className="mb-5 text-black/55" style={{ fontFamily: SANS, fontSize: 11, fontWeight: 500, letterSpacing: "0.3em", textTransform: "uppercase" }}>{heading}</div>
       <ul className="space-y-3">
         {items.map((l) => (
           <li key={l}>
-            <a href="#" className="hover:underline" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 400, color: "rgba(0,0,0,0.85)" }}>{l}</a>
+            <a href={LINK_HREF} className="hover:underline" style={{ fontFamily: SANS, fontSize: 15, fontWeight: 400, color: "rgba(0,0,0,0.85)" }}>{l}</a>
           </li>
         ))}
       </ul>
@@ -272,11 +274,11 @@ function Footer({ brand }: { brand: string }) {
         <motion.div {...blurUp} transition={{ duration: 0.9, ease: "easeOut", delay: 0.25 }} className="flex flex-col items-start justify-between gap-6 border-t border-black/15 pt-8 md:flex-row md:items-center">
           <div className="text-black/55" style={{ fontFamily: SANS, fontSize: 11, fontWeight: 500, letterSpacing: "0.3em", textTransform: "uppercase" }}>© 2026 {brand}</div>
           <div className="flex items-center gap-5" style={{ fontFamily: SANS, fontSize: 11, fontWeight: 500, letterSpacing: "0.28em", textTransform: "uppercase" }}>
-            <a href="#" className="hover:underline">Instagram</a>
+            <a href={LINK_HREF} className="hover:underline">Instagram</a>
             <span className="text-black/30">·</span>
-            <a href="#" className="hover:underline">TikTok</a>
+            <a href={LINK_HREF} className="hover:underline">TikTok</a>
             <span className="text-black/30">·</span>
-            <a href="#" className="hover:underline">Spotify</a>
+            <a href={LINK_HREF} className="hover:underline">Spotify</a>
           </div>
           <div className="text-black/55" style={{ fontFamily: SANS, fontSize: 11, fontWeight: 500, letterSpacing: "0.3em", textTransform: "uppercase" }}>EN · USD</div>
         </motion.div>
@@ -406,10 +408,14 @@ const LuxuryBotanical = ({ data }: { data: Prospect }) => {
 
             <div className="pointer-events-auto absolute bottom-16 right-[6vw] z-10 flex flex-col items-start md:right-[10vw]">
               <motion.p className="mb-6 w-[240px] cursor-text text-left" style={{ fontFamily: SERIF, fontSize: 16, textTransform: "uppercase", letterSpacing: "0.2em", color: "#000", lineHeight: "20px", y: yElement, filter: filterText, opacity: textOpacity }}>{data.business.oneLiner}</motion.p>
-              <motion.div className="pointer-events-auto flex items-center gap-0" style={{ y: yElement, filter: filterText, opacity: textOpacity }}>
-                <a href={cta.href} {...ext} className="z-10 rounded-[40px] bg-black px-8 py-3.5 uppercase text-white no-underline transition-colors hover:bg-black/90" style={{ fontFamily: SERIF, letterSpacing: "0.1em", fontSize: 14 }}>Buy collection</a>
-                <a href={cta.href} {...ext} className="z-0 -ml-2 flex h-[46px] w-[46px] items-center justify-center rounded-full bg-black text-white no-underline">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="ml-1"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              <motion.div className="pointer-events-auto" style={{ y: yElement, filter: filterText, opacity: textOpacity }}>
+                {/* Single CTA: pill + arrow chip are one link (the source design drew
+                    them as two overlapping anchors to the same href). */}
+                <a href={cta.href} {...ext} className="group flex w-fit items-center gap-1.5 no-underline">
+                  <span className="rounded-[40px] bg-black px-8 py-3.5 uppercase text-white transition-colors group-hover:bg-black/90" style={{ fontFamily: SERIF, letterSpacing: "0.1em", fontSize: 14 }}>Buy collection</span>
+                  <span className="flex h-[46px] w-[46px] items-center justify-center rounded-full bg-black text-white transition-transform duration-300 ease-out group-hover:translate-x-1">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  </span>
                 </a>
               </motion.div>
             </div>
