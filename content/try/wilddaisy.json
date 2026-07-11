@@ -14,11 +14,11 @@
     "videoMp4": "/try/wilddaisy/hero.mp4"
   },
   "services": [
-    { "title": "Eau So Fresh", "blurb": "100 ml / 3.4 oz", "photo": "/try/wilddaisy/p-fresh.webp" },
-    { "title": "Eau So Sweet", "blurb": "100 ml / 3.3 oz", "photo": "/try/wilddaisy/p-sweet.webp" },
-    { "title": "Eau So Extra", "blurb": "100 ml / 3.3 oz", "photo": "/try/wilddaisy/p-extra.webp" }
+    { "title": "Eau So Fresh", "blurb": "100 ml / 3.4 oz", "photo": "/try/wilddaisy/p-fresh.webp", "price": "$72" },
+    { "title": "Eau So Sweet", "blurb": "100 ml / 3.3 oz", "photo": "/try/wilddaisy/p-sweet.webp", "price": "$78" },
+    { "title": "Eau So Extra", "blurb": "100 ml / 3.3 oz", "photo": "/try/wilddaisy/p-extra.webp", "price": "$84" }
   ],
   "contact": {
-    "bookingUrl": "https://example.com/shop"
+    "bookingUrl": "https://try.rhythmiqcx.com"
   }
 }
