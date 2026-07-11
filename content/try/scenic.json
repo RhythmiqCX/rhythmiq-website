@@ -1,0 +1,22 @@
+{
+  "slug": "scenic",
+  "vertical": "travel",
+  "variant": "scenic",
+  "status": "live",
+  "business": {
+    "name": "Voyage",
+    "tagline": "Discover the beauty\nof the world around",
+    "oneLiner": "Escape the ordinary and find inspiration in the most breathtaking corners of the globe. We curate unique travel experiences tailored to your rhythm and spirit."
+  },
+  "theme": { "accent": "#1c1c1c", "scheme": "light" },
+  "hero": {
+    "mode": "video",
+    "videoMp4": "/try/scenic/hero.mp4"
+  },
+  "services": [
+    { "title": "Hidden Gems", "blurb": "Explore our handpicked collection of authentic stays and secluded retreats, where nature meets comfort in perfect harmony.", "photo": "/try/scenic/gem.mp4" }
+  ],
+  "contact": {
+    "bookingUrl": "https://example.com/destinations"
+  }
+}

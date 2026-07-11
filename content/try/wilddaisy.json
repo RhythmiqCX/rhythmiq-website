@@ -1,0 +1,24 @@
+{
+  "slug": "wilddaisy",
+  "vertical": "retail",
+  "variant": "wild-scent",
+  "status": "live",
+  "business": {
+    "name": "Wild Daisy Fragrances",
+    "tagline": "Sweet Daisy\nPersonal Scent\nFinder",
+    "oneLiner": "Playful daisy-led fragrances, bottled wild."
+  },
+  "theme": { "accent": "#332023", "scheme": "light" },
+  "hero": {
+    "mode": "video",
+    "videoMp4": "/try/wilddaisy/hero.mp4"
+  },
+  "services": [
+    { "title": "Eau So Fresh", "blurb": "100 ml / 3.4 oz", "photo": "/try/wilddaisy/p-fresh.webp" },
+    { "title": "Eau So Sweet", "blurb": "100 ml / 3.3 oz", "photo": "/try/wilddaisy/p-sweet.webp" },
+    { "title": "Eau So Extra", "blurb": "100 ml / 3.3 oz", "photo": "/try/wilddaisy/p-extra.webp" }
+  ],
+  "contact": {
+    "bookingUrl": "https://example.com/shop"
+  }
+}

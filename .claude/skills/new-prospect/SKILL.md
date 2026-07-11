@@ -82,9 +82,11 @@ Present this list verbatim (adjust defaults per vertical):
 
 **REQUIRED**
 1. **Business name**
-2. **Type / niche** — restaurant/café, **dentist/clinic**, **pet store/vet**, or
-   anything else (→ generic). See `reference.md` for the verticals we ship
-   templates for.
+2. **Type / niche** — restaurant/café, **dentist/clinic**, **pet store/vet**,
+   **real estate**, **architecture/studio**, **boutique/DTC product**,
+   **beauty/spa/perfumery**, **finance/wealth**, **travel/hotel**,
+   **security/automation**, or anything else (→ generic). See `reference.md` for
+   the verticals we ship templates for.
 3. **What they do** — one sentence (becomes the hero line)
 4. **One contact** — a phone number, booking link, email, **or an Instagram /
    Facebook page** (many IG-sourced prospects are social-only; the CTA then

@@ -9,7 +9,7 @@
 // Verticals we ship a real template for today. Add "dentist"/"salon"/etc here
 // (and a matching template + registry entry) to expand. Anything authored for a
 // vertical without a dedicated template gracefully falls back to `generic`.
-export const VERTICALS = ["restaurant", "dentist", "pets", "generic"] as const;
+export const VERTICALS = ["restaurant", "dentist", "pets", "realestate", "architecture", "retail", "beauty", "finance", "travel", "security", "generic"] as const;
 export type Vertical = (typeof VERTICALS)[number];
 
 export const HERO_MODES = ["gradient", "particles", "ken-burns", "video"] as const;
@@ -81,6 +81,108 @@ export const VERTICAL_META: Record<Vertical, VerticalMeta> = {
       { title: "Cozy Cat House", blurb: "Snug, stylish, and built to last." },
       { title: "Dog Beds", blurb: "Orthopedic comfort for every size." },
       { title: "Toys & Treats", blurb: "Vet-approved, tail-wag guaranteed." },
+    ],
+  },
+  realestate: {
+    label: "Real estate / Property",
+    houseAccent: "#213138",
+    defaultVariant: "luxury-estate",
+    defaultHeroMode: "ken-burns",
+    variants: [
+      { id: "luxury-estate", label: "Luxury estate (Velar — typewriter intro, scroll-driven building, video gallery)", scheme: "light" },
+    ],
+    defaultServices: [
+      { title: "Residences", blurb: "Hand-chosen homes built with vision and permanence." },
+      { title: "Story", blurb: "A brand built on refinement and timeless detail." },
+      { title: "Listings", blurb: "Stately estates across our global portfolio." },
+    ],
+  },
+  architecture: {
+    label: "Architecture / Studio",
+    houseAccent: "#241f21",
+    defaultVariant: "layered-depth",
+    defaultHeroMode: "video",
+    variants: [
+      { id: "layered-depth", label: "Layered depth (Qelora — ambient video, parallax slab, frosted panels)", scheme: "dark" },
+    ],
+    defaultServices: [
+      { title: "Projects", blurb: "Places designed beyond what's expected." },
+      { title: "Studio", blurb: "A quiet dialogue between site, light, and use." },
+      { title: "Responsibility", blurb: "Resilient communities and purposeful places." },
+    ],
+  },
+  retail: {
+    label: "Boutique / DTC product",
+    houseAccent: "#332023",
+    defaultVariant: "wild-scent",
+    defaultHeroMode: "video",
+    variants: [
+      { id: "wild-scent", label: "Wild scent (Wild Daisy — video hero + split product panels)", scheme: "light" },
+    ],
+    defaultServices: [
+      { title: "Eau So Fresh", blurb: "100 ml / 3.4 oz" },
+      { title: "Eau So Sweet", blurb: "100 ml / 3.3 oz" },
+      { title: "Eau So Extra", blurb: "100 ml / 3.3 oz" },
+    ],
+  },
+  beauty: {
+    label: "Beauty / Spa / Perfumery",
+    houseAccent: "#000000",
+    defaultVariant: "luxury-botanical",
+    defaultHeroMode: "video",
+    variants: [
+      { id: "luxury-botanical", label: "Luxury botanical (Beyond — scroll-driven orbit of bottles)", scheme: "light" },
+    ],
+    defaultServices: [
+      { title: "Wild Vetiver", blurb: "Smoky vetiver wrapped in saffron and leather." },
+      { title: "Radiant Osmanthus", blurb: "Apricot-tinged osmanthus over soft musks." },
+      { title: "Vibrant Hibiscus", blurb: "Bright hibiscus and pink pepper on sandalwood." },
+      { title: "Mellow Heliotrope", blurb: "Almond, vanilla and heliotrope petals." },
+      { title: "Magnetic Amber", blurb: "Resinous amber, oud and rich woods." },
+      { title: "Crystal Edition", blurb: "A limited cut — etched facets, lavender pour." },
+    ],
+  },
+  finance: {
+    label: "Finance / Wealth / Advisory",
+    houseAccent: "#020b1f",
+    defaultVariant: "synthesis",
+    defaultHeroMode: "video",
+    variants: [
+      { id: "synthesis", label: "Synthesis (Elias Norden — scroll-scrubbed video, revealed statements)", scheme: "dark" },
+    ],
+    defaultServices: [
+      { title: "Purpose", blurb: "Committed to a tomorrow where people enjoy more vibrant, rewarding decades beside loved ones." },
+      { title: "Alliance", blurb: "Co-founded a global nonprofit backing early-stage science on prolonging the healthy human lifespan." },
+      { title: "Ventures", blurb: "A managing partner backing bold pioneers in biotech and lifespans." },
+    ],
+  },
+  travel: {
+    label: "Travel / Hotel / Resort",
+    houseAccent: "#1c1c1c",
+    defaultVariant: "scenic",
+    defaultHeroMode: "video",
+    variants: [
+      { id: "scenic", label: "Scenic (split-screen mirrored headline + scenic video + gem card)", scheme: "light" },
+    ],
+    defaultServices: [
+      { title: "Hidden Gems", blurb: "Handpicked authentic stays and secluded retreats where nature meets comfort." },
+      { title: "Curated tours", blurb: "Unique travel experiences tailored to your rhythm and spirit." },
+      { title: "Concierge", blurb: "Every detail arranged, from arrival to the last horizon." },
+    ],
+  },
+  security: {
+    label: "Security / Automation",
+    houseAccent: "#12f542",
+    defaultVariant: "akor",
+    defaultHeroMode: "video",
+    variants: [
+      { id: "akor", label: "AKOR (dark security landing — video hero, inverted services grid, green accent)", scheme: "dark" },
+    ],
+    defaultServices: [
+      { title: "AI-Driven\nSecurity Solutions", blurb: "Threat detection and response, powered by on-site AI." },
+      { title: "Smart Building\nAutomation", blurb: "Access, climate, and energy — orchestrated from one console." },
+      { title: "AI Consulting\nand Integration", blurb: "Design, deploy, and integrate with your existing stack." },
+      { title: "Training\nand Support", blurb: "Onboarding and 24/7 support that keeps systems sharp." },
     ],
   },
   generic: {

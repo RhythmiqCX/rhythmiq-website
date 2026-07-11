@@ -1,0 +1,36 @@
+{
+  "slug": "velar",
+  "vertical": "realestate",
+  "variant": "luxury-estate",
+  "status": "live",
+  "business": {
+    "name": "Velar.",
+    "tagline": "Live in",
+    "oneLiner": "Stately homes built with vision, scope, and architectural finesse.",
+    "about": "Every estate we present is hand-chosen through a frame of permanence, refinement, and timeless detail. Standards are not a flourish. It is our discipline."
+  },
+  "signature": "Irreplaceable",
+  "theme": { "accent": "#213138", "scheme": "dark" },
+  "hero": {
+    "mode": "ken-burns",
+    "photo": "/try/velar/herobg.webp",
+    "poster": "/try/velar/house.webp"
+  },
+  "highlights": [
+    { "value": "120+", "label": "Portfolio Holdings" },
+    { "value": "12", "label": "Global Locations" },
+    { "value": "98%", "label": "Patron Loyalty Rate" }
+  ],
+  "photos": [
+    "/try/velar/gal1.mp4",
+    "/try/velar/gal2.mp4",
+    "/try/velar/gal3.mp4",
+    "/try/velar/gal4.mp4",
+    "/try/velar/gal5.mp4"
+  ],
+  "contact": {
+    "email": "private@velar.estate",
+    "phone": "+1 212 555 0110",
+    "address": "Madison Avenue, New York"
+  }
+}

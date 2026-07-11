@@ -1,4 +1,4 @@
-import { Instrument_Serif, Schibsted_Grotesk, JetBrains_Mono, Syne, Playfair_Display, Space_Grotesk, Inter, DM_Serif_Display } from "next/font/google";
+import { Instrument_Serif, Schibsted_Grotesk, JetBrains_Mono, Syne, Playfair_Display, Space_Grotesk, Inter, DM_Serif_Display, Bricolage_Grotesque, Manrope, Sora } from "next/font/google";
 import localFont from "next/font/local";
 
 // --- Restaurant redesign type system (paper aesthetic) ---
@@ -104,5 +104,32 @@ export const dmSerifDisplay = DM_Serif_Display({
     subsets: ["latin"],
     weight: ["400"],
     variable: "--font-dmserif",
+    display: "swap",
+});
+
+// --- Architecture "layered-depth" template (Qelora): Bricolage Grotesque, a
+// characterful architectural grotesque used as a self-hosted stand-in for the
+// reference's trial-only "Zimula" face. Display wordmark + body.
+export const bricolage = Bricolage_Grotesque({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800"],
+    variable: "--font-bricolage",
+    display: "swap",
+});
+
+// --- Beauty "luxury-botanical" template (Bentley fragrance orbit): Manrope
+// (body/UI) paired with the already-loaded Instrument Serif for display.
+export const manrope = Manrope({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600"],
+    variable: "--font-manrope",
+    display: "swap",
+});
+
+// --- Security "akor" template: Sora, a geometric technical grotesque.
+export const sora = Sora({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700"],
+    variable: "--font-sora",
     display: "swap",
 });

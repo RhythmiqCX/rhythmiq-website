@@ -1,0 +1,27 @@
+{
+  "slug": "botanical",
+  "vertical": "beauty",
+  "variant": "luxury-botanical",
+  "status": "live",
+  "business": {
+    "name": "Bentley",
+    "tagline": "Beyond The Collection",
+    "oneLiner": "Six botanical signatures, composed for the ones who wear intention. Discover your note."
+  },
+  "theme": { "accent": "#000000", "scheme": "light" },
+  "hero": {
+    "mode": "video",
+    "videoMp4": "/try/botanical/bg.mp4"
+  },
+  "services": [
+    { "title": "Wild Vetiver", "blurb": "Smoky vetiver wrapped in saffron and leather — a grounded, untamed signature.", "photo": "/try/botanical/b1.webp" },
+    { "title": "Radiant Osmanthus", "blurb": "Apricot-tinged osmanthus over soft musks. Quietly luminous, never loud.", "photo": "/try/botanical/b2.webp" },
+    { "title": "Vibrant Hibiscus", "blurb": "Bright hibiscus and pink pepper resting on creamy sandalwood.", "photo": "/try/botanical/b3.webp" },
+    { "title": "Mellow Heliotrope", "blurb": "Almond, vanilla and heliotrope petals — a powdery, hushed warmth.", "photo": "/try/botanical/b4.webp" },
+    { "title": "Magnetic Amber", "blurb": "Resinous amber, oud and rich woods. The collection's deepest note.", "photo": "/try/botanical/b5.webp" },
+    { "title": "Crystal Edition", "blurb": "A limited cut of the bottle — etched facets, lavender pour, leather collar.", "photo": "/try/botanical/b6.webp" }
+  ],
+  "contact": {
+    "bookingUrl": "https://example.com/collection"
+  }
+}

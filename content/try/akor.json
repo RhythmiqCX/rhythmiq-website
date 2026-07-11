@@ -1,0 +1,30 @@
+{
+  "slug": "akor",
+  "vertical": "security",
+  "variant": "akor",
+  "status": "live",
+  "business": {
+    "name": "AKOR",
+    "tagline": "Intelligent\nSecurity Systems",
+    "oneLiner": "Innovative security, automation, and AI solutions for businesses and smart cities.",
+    "about": "Security, automation, and AI, helping businesses enhance efficiency"
+  },
+  "signature": "AI-powered security, automation for businesses and smart infrastructures",
+  "theme": { "accent": "#12f542", "scheme": "dark" },
+  "hero": {
+    "mode": "video",
+    "videoMp4": "/try/akor/hero.mp4"
+  },
+  "services": [
+    { "title": "AI-Driven\nSecurity Solutions", "photo": "/try/akor/icon1.webp" },
+    { "title": "Smart Building\nAutomation", "photo": "/try/akor/icon2.webp" },
+    { "title": "AI Consulting\nand Integration", "photo": "/try/akor/icon3.webp" },
+    { "title": "Training\nand Support", "photo": "/try/akor/icon4.webp" }
+  ],
+  "photos": [
+    "/try/akor/about.mp4"
+  ],
+  "contact": {
+    "email": "hello@akor.systems"
+  }
+}

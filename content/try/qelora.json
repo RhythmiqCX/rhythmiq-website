@@ -1,0 +1,27 @@
+{
+  "slug": "qelora",
+  "vertical": "architecture",
+  "variant": "layered-depth",
+  "status": "live",
+  "business": {
+    "name": "Qelora",
+    "tagline": "Designing places\nbeyond\nwhat's expected",
+    "oneLiner": "Every lasting space begins with a quiet dialogue.",
+    "about": "Civic bodies and private clients trust us to shape resilient communities and purposeful places."
+  },
+  "signature": "What stands the test of time is all that guides the work.",
+  "theme": { "accent": "#241f21", "scheme": "dark" },
+  "hero": {
+    "mode": "video",
+    "videoMp4": "/try/qelora/bg.mp4",
+    "poster": "/try/qelora/slab.webp"
+  },
+  "photos": [
+    "/try/qelora/cta.webp",
+    "/try/qelora/bg2.mp4"
+  ],
+  "contact": {
+    "email": "studio@qelora.com",
+    "address": "Lisbon · Copenhagen"
+  }
+}

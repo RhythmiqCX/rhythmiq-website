@@ -1,0 +1,25 @@
+{
+  "slug": "synthesis",
+  "vertical": "finance",
+  "variant": "synthesis",
+  "status": "live",
+  "business": {
+    "name": "Elias Norden",
+    "tagline": "Merging science, defi and lifespans into",
+    "oneLiner": "Health capital for a longer, more vibrant human lifespan."
+  },
+  "signature": "true wellness.",
+  "theme": { "accent": "#020b1f", "scheme": "dark" },
+  "hero": {
+    "mode": "video",
+    "videoMp4": "/try/synthesis/scrub.mp4"
+  },
+  "services": [
+    { "title": "Purpose", "blurb": "Elias is committed to a tomorrow where people enjoy more vibrant, rewarding decades beside loved ones." },
+    { "title": "Alliance", "blurb": "In pursuit of this purpose, in 2021 he co-founded the Healthspan Research Alliance, a global nonprofit backing early-stage science on prolonging the healthy human lifespan." },
+    { "title": "Ventures", "blurb": "Elias is also a managing partner and co-founder of VitalVC, a venture capital firm backing bold pioneers in biotech and lifespans." }
+  ],
+  "contact": {
+    "email": "invest@eliasnorden.capital"
+  }
+}

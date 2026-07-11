@@ -6,6 +6,13 @@ import RestaurantBoldDark from "./templates/restaurant/bold-dark";
 import RestaurantRetroVibe from "./templates/restaurant/retro-vibe";
 import DentistCleanClinic from "./templates/dentist/clean-clinic";
 import PetsBoutiqueHero from "./templates/pets/boutique-hero";
+import RealEstateLuxuryEstate from "./templates/realestate/luxury-estate";
+import ArchitectureLayeredDepth from "./templates/architecture/layered-depth";
+import RetailWildScent from "./templates/retail/wild-scent";
+import BeautyLuxuryBotanical from "./templates/beauty/luxury-botanical";
+import FinanceSynthesis from "./templates/finance/synthesis";
+import TravelScenic from "./templates/travel/scenic";
+import SecurityAkor from "./templates/security/akor";
 
 export type TemplateProps = { data: Prospect };
 export type Template = ComponentType<TemplateProps>;
@@ -32,6 +39,34 @@ export const REGISTRY: Record<string, Record<string, Template>> = {
   pets: {
     default: PetsBoutiqueHero,
     "boutique-hero": PetsBoutiqueHero,
+  },
+  realestate: {
+    default: RealEstateLuxuryEstate,
+    "luxury-estate": RealEstateLuxuryEstate,
+  },
+  architecture: {
+    default: ArchitectureLayeredDepth,
+    "layered-depth": ArchitectureLayeredDepth,
+  },
+  retail: {
+    default: RetailWildScent,
+    "wild-scent": RetailWildScent,
+  },
+  beauty: {
+    default: BeautyLuxuryBotanical,
+    "luxury-botanical": BeautyLuxuryBotanical,
+  },
+  finance: {
+    default: FinanceSynthesis,
+    synthesis: FinanceSynthesis,
+  },
+  travel: {
+    default: TravelScenic,
+    scenic: TravelScenic,
+  },
+  security: {
+    default: SecurityAkor,
+    akor: SecurityAkor,
   },
 };
 
