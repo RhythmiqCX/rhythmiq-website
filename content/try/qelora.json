@@ -16,12 +16,17 @@
     "videoMp4": "/try/qelora/bg.mp4",
     "poster": "/try/qelora/slab.webp"
   },
+  "services": [
+    { "title": "Projects", "blurb": "Places designed beyond what's expected — houses, civic rooms, and quiet landmarks." },
+    { "title": "Studio", "blurb": "A quiet dialogue between site, light, and use, carried from first sketch to last detail." },
+    { "title": "Responsibility", "blurb": "Resilient communities and purposeful places, built to hold their meaning over decades." }
+  ],
   "photos": [
     "/try/qelora/cta.webp",
     "/try/qelora/bg2.mp4"
   ],
   "contact": {
-    "email": "studio@qelora.com",
+    "bookingUrl": "https://try.rhythmiqcx.com",
     "address": "Lisbon · Copenhagen"
   }
 }

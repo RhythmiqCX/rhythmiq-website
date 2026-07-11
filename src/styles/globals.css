@@ -344,6 +344,26 @@ img { user-select: none; }
 }
 
 /* ============================================================
+   Architecture · "Qelora" layered-depth template (scoped .qelora)
+   ============================================================ */
+/* nav pills: lift on hover, and the active-dot scales in (mirrors the
+   always-on dot of the active "Projects" pill) */
+.qelora .qelora-pill { transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1); }
+.qelora .qelora-pill:hover { transform: translateY(-2px); }
+.qelora .qelora-dot { opacity: 0; transform: translateX(-50%) scale(0.3); transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.22, 1, 0.36, 1); }
+.qelora .qelora-pill:hover .qelora-dot, .qelora .qelora-dot.is-active { opacity: 1; transform: translateX(-50%) scale(1); }
+/* "Explore our approach": arrow dips on hover */
+.qelora .qelora-explore svg { transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
+.qelora .qelora-explore:hover svg { transform: translateY(3px); }
+.qelora .qelora-cta-pill { transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1); }
+.qelora .qelora-cta-pill:hover { transform: translateY(-2px); }
+.qelora .qelora-foot-link { transition: opacity 0.25s ease; }
+.qelora .qelora-foot-link:hover { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .qelora .qelora-pill, .qelora .qelora-dot, .qelora .qelora-explore svg, .qelora .qelora-cta-pill, .qelora .qelora-foot-link { transition: none; }
+}
+
+/* ============================================================
    Real estate · "Velar." luxury-estate template (scoped .velar)
    ============================================================ */
 @keyframes velarBlink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
