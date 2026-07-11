@@ -1,20 +1,28 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import type { Prospect } from "@/lib/try/schema";
 import { primaryCta } from "../../sections/util";
 
 /**
  * Finance / Wealth · Synthesis — a faithful build of the "Elias Norden — Health
- * Capital" scroll story: a 700vh section pins a viewport where an ambient video
+ * Capital" scroll story: a 700vh section pins a viewport where an ambient shot
  * scrubs frame-by-frame with scroll (phase 1), cross-fades into a near-black
  * layer (phase 2), then reveals three statement paragraphs one by one (phase 3).
  * Dark-navy, white type, Instrument-Serif accents. Fixed identity.
  *
+ * The scrub is an image sequence drawn to a canvas — NOT a <video> seek.
+ * video.currentTime scrubbing tops out around ~30 uneven updates/s because
+ * every seek runs through the browser's async seek pipeline; drawing
+ * pre-extracted frames hits a steady 60fps. Frames live in
+ * public/try/synthesis/frames/f001..f193.webp (1600w, from the source video)
+ * and load coarse-to-fine (every 8th first) so the scrub works within the
+ * first few hundred KB.
+ *
  * DATA: business.name → logo (last word italic serif) · business.tagline →
  *   headline · signature → the italic headline accent · services[0..2].blurb →
- *   the three reveal paragraphs · hero.videoMp4 → the scrubbed video · contact
- *   → the "Inquire" CTA. Press names are editable template defaults.
+ *   the three reveal paragraphs · contact → the "Inquire" CTA. Press names are
+ *   editable template defaults.
  */
 
 const NAVY = "#020b1f";
@@ -22,6 +30,8 @@ const SERIF = "var(--font-subheading), Georgia, serif";
 const SANS = "var(--font-manrope), system-ui, sans-serif";
 const SCRUB_END = 0.55;
 const FADE_END = 0.65;
+const FRAME_COUNT = 193;
+const framePath = (i: number) => `/try/synthesis/frames/f${String(i + 1).padStart(3, "0")}.webp`;
 
 const PRESS = [
   { label: "Praxis", cls: "font-bold tracking-wide", font: SERIF, italic: false },
@@ -53,43 +63,118 @@ const Synthesis = ({ data }: { data: Prospect }) => {
         ];
 
   const sectionRef = useRef<HTMLElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const heroLayerRef = useRef<HTMLDivElement>(null);
   const navyLayerRef = useRef<HTMLDivElement>(null);
   const paraRefs = useRef<(HTMLParagraphElement | null)[]>([]);
-  const durationRef = useRef(8);
-  const seekingRef = useRef(false);
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const loadedRef = useRef<boolean[]>([]);
+  const drawnRef = useRef(-1);
+
+  /** Cover-draw a loaded frame onto the canvas (crops like object-fit: cover). */
+  const drawFrame = useCallback((index: number) => {
+    const canvas = canvasRef.current;
+    const img = imagesRef.current[index];
+    if (!canvas || !img || !loadedRef.current[index]) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    const cw = canvas.width;
+    const ch = canvas.height;
+    if (!cw || !ch) return;
+    const ir = img.naturalWidth / img.naturalHeight;
+    const cr = cw / ch;
+    let dw = cw;
+    let dh = ch;
+    let dx = 0;
+    let dy = 0;
+    if (ir > cr) {
+      dh = ch;
+      dw = ch * ir;
+      dx = (cw - dw) / 2;
+    } else {
+      dw = cw;
+      dh = cw / ir;
+      dy = (ch - dh) / 2;
+    }
+    ctx.drawImage(img, dx, dy, dw, dh);
+    drawnRef.current = index;
+  }, []);
+
+  /** The loaded frame closest to the wanted index (loading is coarse-to-fine). */
+  const nearestLoaded = useCallback((i: number) => {
+    const loaded = loadedRef.current;
+    if (loaded[i]) return i;
+    for (let d = 1; d < FRAME_COUNT; d++) {
+      if (i - d >= 0 && loaded[i - d]) return i - d;
+      if (i + d < FRAME_COUNT && loaded[i + d]) return i + d;
+    }
+    return -1;
+  }, []);
+
+  // Frame preloading (coarse-to-fine) + canvas sizing.
+  useEffect(() => {
+    let dead = false;
+    const imgs: HTMLImageElement[] = new Array(FRAME_COUNT);
+    const loaded: boolean[] = new Array(FRAME_COUNT).fill(false);
+    imagesRef.current = imgs;
+    loadedRef.current = loaded;
+    drawnRef.current = -1;
+
+    const order: number[] = [];
+    const queued = new Set<number>();
+    for (const step of [8, 4, 2, 1]) {
+      for (let i = 0; i < FRAME_COUNT; i += step) {
+        if (!queued.has(i)) {
+          queued.add(i);
+          order.push(i);
+        }
+      }
+    }
+    order.forEach((i) => {
+      const img = new Image();
+      img.decoding = "async";
+      img.onload = () => {
+        if (dead) return;
+        loaded[i] = true;
+        if (drawnRef.current === -1) drawFrame(i);
+      };
+      img.src = framePath(i);
+      imgs[i] = img;
+    });
+
+    const resize = () => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(canvas.clientWidth * dpr);
+      canvas.height = Math.round(canvas.clientHeight * dpr);
+      if (drawnRef.current >= 0) drawFrame(drawnRef.current);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+    return () => {
+      dead = true;
+      window.removeEventListener("resize", resize);
+    };
+  }, [drawFrame]);
 
   useEffect(() => {
     let raf = 0;
     let smoothed = 0;
     const loop = () => {
       const section = sectionRef.current;
-      const video = videoRef.current;
       if (section) {
         const rect = section.getBoundingClientRect();
         const raw = -rect.top / (section.offsetHeight - window.innerHeight);
         const target = raw < 0 ? 0 : raw > 1 ? 1 : raw;
-        smoothed += (target - smoothed) * 0.1;
+        // 0.2 ≈ 80ms catch-up at 60fps. 0.1 trailed scroll by ~160ms and read
+        // as lag; higher than ~0.3 loses the cinematic ease entirely.
+        smoothed += (target - smoothed) * 0.2;
 
-        // phase 1 — scrub video by currentTime
-        if (video && !seekingRef.current) {
-          const p1 = Math.min(smoothed / SCRUB_END, 1);
-          const t = p1 * (durationRef.current - 0.05);
-          if (Math.abs(video.currentTime - t) > 0.02) {
-            seekingRef.current = true;
-            const done = () => {
-              seekingRef.current = false;
-              video.removeEventListener("seeked", done);
-            };
-            video.addEventListener("seeked", done);
-            try {
-              video.currentTime = t;
-            } catch {
-              seekingRef.current = false;
-            }
-          }
-        }
+        // phase 1 — draw the frame matching the scroll position
+        const p1 = Math.min(smoothed / SCRUB_END, 1);
+        const idx = nearestLoaded(Math.round(p1 * (FRAME_COUNT - 1)));
+        if (idx >= 0 && idx !== drawnRef.current) drawFrame(idx);
 
         // phase 2 — cross-fade hero → near-black
         const fade = smoothed <= SCRUB_END ? 0 : smoothed >= FADE_END ? 1 : (smoothed - SCRUB_END) / (FADE_END - SCRUB_END);
@@ -113,7 +198,7 @@ const Synthesis = ({ data }: { data: Prospect }) => {
     };
     raf = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(raf);
-  }, [paras.length]);
+  }, [paras.length, drawFrame, nearestLoaded]);
 
   return (
     <div style={{ background: NAVY, color: "#fff", fontFamily: SANS }}>
@@ -137,18 +222,7 @@ const Synthesis = ({ data }: { data: Prospect }) => {
         <div className="sticky top-0 h-screen overflow-hidden" style={{ background: NAVY }}>
           {/* hero layer */}
           <div ref={heroLayerRef} className="absolute inset-0" style={{ opacity: 1 }}>
-            <video
-              ref={videoRef}
-              muted
-              playsInline
-              preload="auto"
-              onLoadedMetadata={(e) => {
-                durationRef.current = e.currentTarget.duration || 8;
-              }}
-              className="absolute inset-0 h-full w-full object-cover"
-            >
-              <source src={data.hero.videoMp4 || "/try/synthesis/scrub.mp4"} type="video/mp4" />
-            </video>
+            <canvas ref={canvasRef} aria-hidden className="absolute inset-0 h-full w-full" />
             <div className="absolute inset-0 bg-black/35" />
 
             {/* headline */}

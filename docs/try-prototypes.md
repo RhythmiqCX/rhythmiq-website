@@ -89,8 +89,9 @@ palette, custom scroll/animation code, ~150–650 lines each):
   product panels with intersection-observer reveals.
 - **beauty/luxury-botanical** — 600vh scroll: clip-path ellipse wipes open onto
   orbiting product bottles (CSS offset-path), newsletter + full footer.
-- **finance/synthesis** — 700vh scroll-scrubbed video (`currentTime` driven by
-  smoothed RAF), cross-fade to navy layer with sequential paragraph reveals.
+- **finance/synthesis** — 700vh scroll-scrubbed frame sequence (193 webp
+  frames drawn to canvas — smoother than video seeking), cross-fade to navy
+  layer with sequential paragraph reveals.
 - **travel/scenic** — split-screen mirrored/clipped headline (dark on cream,
   white on video), floating "gem" card with video background.
 - **security/akor** — dark video hero, inverted light 2×2 services grid,

@@ -11,8 +11,7 @@
   "signature": "true wellness.",
   "theme": { "accent": "#020b1f", "scheme": "dark" },
   "hero": {
-    "mode": "video",
-    "videoMp4": "/try/synthesis/scrub.mp4"
+    "mode": "video"
   },
   "services": [
     { "title": "Purpose", "blurb": "Elias is committed to a tomorrow where people enjoy more vibrant, rewarding decades beside loved ones." },
@@ -20,6 +19,6 @@
     { "title": "Ventures", "blurb": "Elias is also a managing partner and co-founder of VitalVC, a venture capital firm backing bold pioneers in biotech and lifespans." }
   ],
   "contact": {
-    "email": "invest@eliasnorden.capital"
+    "bookingUrl": "https://try.rhythmiqcx.com"
   }
 }
