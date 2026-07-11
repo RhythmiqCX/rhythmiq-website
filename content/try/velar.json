@@ -29,8 +29,6 @@
     "/try/velar/gal5.mp4"
   ],
   "contact": {
-    "email": "private@velar.estate",
-    "phone": "+1 212 555 0110",
-    "address": "Madison Avenue, New York"
+    "bookingUrl": "https://try.rhythmiqcx.com"
   }
 }

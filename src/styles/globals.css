@@ -348,6 +348,9 @@ img { user-select: none; }
    ============================================================ */
 @keyframes velarBlink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
 .velar .velar-cursor { animation: velarBlink 0.7s step-end infinite; }
+/* gallery background wordmark: seamless marquee (track holds two copies) */
+@keyframes velarTicker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.velar .velar-ticker-track { animation: velarTicker 48s linear infinite; }
 /* hover-expand gallery: hovered tile grows, siblings shrink */
 .velar .velar-row:hover .velar-item { flex: 1 1 0%; }
 .velar .velar-row .velar-item:hover { flex: 4 1 0%; }
@@ -377,7 +380,9 @@ img { user-select: none; }
 @media (min-width: 1024px) {
   .velar .velar-sub-desktop { display: block !important; }
   .velar .velar-sub-mobile { display: none !important; }
-  .velar .velar-hero-block { padding-top: calc(28vh - 50px) !important; }
+  /* 22vh (was 28vh): keeps the headline block clear of the building's roofline
+     on short laptop viewports, where the min-width:1400px art runs tall. */
+  .velar .velar-hero-block { padding-top: calc(22vh - 50px) !important; }
   .velar .velar-own { font-size: 3vw !important; }
   .velar .velar-big { font-size: clamp(52px, 6.5vw, 9vw) !important; white-space: nowrap !important; line-height: 0.88 !important; }
   .velar .velar-statement { padding-left: 25%; }
@@ -395,6 +400,7 @@ img { user-select: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .velar .velar-cursor { animation: none; }
+  .velar .velar-ticker-track { animation: none; }
 }
 
 /* ============================================================

@@ -25,6 +25,23 @@ const DARK = "#1a1a1a"; // statement + gallery bg
 const SYNE = "var(--font-syne), ui-sans-serif, sans-serif";
 const INTER = "var(--font-inter), ui-sans-serif, sans-serif";
 const NAV = ["Residences", "Story", "Listings", "Inquire"];
+// Demo site: menu entries all lead back to the prototype showcase.
+const NAV_HREF = "https://try.rhythmiqcx.com";
+
+// House geometry. The building art (house.webp) is transparent sky for its top
+// ~40% — the opaque "red mass" starts at RED_TOP_RATIO of the image height.
+// We sink the image so that red mass can never climb over the copy: it may
+// start no higher than REST_RED_TOP of the viewport at rest (hero + dark-entry)
+// and settles at FINAL_RED_TOP as the dark statement section plays out.
+const FINAL_SCALE = 1.28;
+const RED_TOP_RATIO = 0.4;
+const REST_RED_TOP = 0.42;
+const FINAL_RED_TOP = 0.7;
+
+/** How far (px) the house must sink so its red mass starts at `target` × vh. */
+function sinkFor(imgH: number, scale: number, target: number, vh: number): number {
+  return Math.max(0, (1 - RED_TOP_RATIO) * imgH * scale - (1 - target) * vh);
+}
 
 const smooth = (t: number) => t * t * (3 - 2 * t);
 const clamp01 = (n: number) => (n < 0 ? 0 : n > 1 ? 1 : n);
@@ -101,10 +118,13 @@ const LuxuryEstate = ({ data }: { data: Prospect }) => {
 
   // preloader / entrance
   const [typed, setTyped] = useState(0);
+  const [typedDone, setTypedDone] = useState(false);
+  const [assetsReady, setAssetsReady] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
   const [lifting, setLifting] = useState(false);
   const [liftDone, setLiftDone] = useState(false);
   const [heroVisible, setHeroVisible] = useState(false);
+  const [restSink, setRestSink] = useState(0);
 
   // nav
   const [navOnDark, setNavOnDark] = useState(false);
@@ -115,7 +135,7 @@ const LuxuryEstate = ({ data }: { data: Prospect }) => {
   const houseWrapRef = useRef<HTMLDivElement>(null);
   const houseInnerRef = useRef<HTMLDivElement>(null);
 
-  // Typewriter → lift sequence.
+  // Typewriter. The lift is released separately, once assets are also in.
   useEffect(() => {
     const CHAR = 140;
     const START = 600;
@@ -123,17 +143,48 @@ const LuxuryEstate = ({ data }: { data: Prospect }) => {
     for (let i = 1; i <= name.length; i++) {
       timers.push(window.setTimeout(() => setTyped(i), START + i * CHAR));
     }
-    const liftAt = START + name.length * CHAR + 700;
-    timers.push(window.setTimeout(() => setShowCursor(false), liftAt - 150));
-    timers.push(
-      window.setTimeout(() => {
-        setLifting(true);
-      }, liftAt),
-    );
-    timers.push(window.setTimeout(() => setHeroVisible(true), liftAt + 1300));
-    timers.push(window.setTimeout(() => setLiftDone(true), liftAt + 2100));
+    timers.push(window.setTimeout(() => setTypedDone(true), START + name.length * CHAR + 700));
     return () => timers.forEach(clearTimeout);
   }, [name.length]);
+
+  // Preload the two hero-critical images while the typewriter plays, so the
+  // preloader never lifts onto a half-loaded hero. Hard 6s cap so a failed
+  // asset can't trap the page.
+  useEffect(() => {
+    let alive = true;
+    const load = (src?: string | null) =>
+      new Promise<void>((resolve) => {
+        if (!src) return resolve();
+        const img = new Image();
+        img.onload = () => resolve();
+        img.onerror = () => resolve();
+        img.src = src;
+      });
+    const cap = window.setTimeout(() => {
+      if (alive) setAssetsReady(true);
+    }, 6000);
+    Promise.all([load(heroBg), load(houseImg)]).then(() => {
+      if (alive) setAssetsReady(true);
+    });
+    return () => {
+      alive = false;
+      clearTimeout(cap);
+    };
+  }, [heroBg, houseImg]);
+
+  // Lift sequence: typewriter finished AND hero assets ready.
+  useEffect(() => {
+    if (!typedDone || !assetsReady) return;
+    const inner = houseInnerRef.current;
+    if (inner) setRestSink(sinkFor(inner.offsetHeight, 1, REST_RED_TOP, window.innerHeight));
+    setShowCursor(false);
+    const timers: number[] = [
+      window.setTimeout(() => setLifting(true), 150),
+      window.setTimeout(() => setHeroVisible(true), 1450),
+      window.setTimeout(() => setLiftDone(true), 2250),
+    ];
+    return () => timers.forEach(clearTimeout);
+  }, [typedDone, assetsReady]);
 
   // Scroll: nav colour + scroll-driven house transform.
   const onScroll = useCallback(() => {
@@ -149,7 +200,6 @@ const LuxuryEstate = ({ data }: { data: Prospect }) => {
     if (!hero || !wrap || !inner || !dark) return;
     if (!liftDone) return;
 
-    const vw = window.innerWidth;
     const vh = window.innerHeight;
     const heroTop = hero.offsetTop;
     const heroH = hero.offsetHeight;
@@ -163,15 +213,15 @@ const LuxuryEstate = ({ data }: { data: Prospect }) => {
     const progress = clamp01((y - start) / (end - start));
     const t = smooth(smooth(progress));
 
-    const finalScale = 1.28;
-    const scale = 1 + (finalScale - 1) * t;
-    // Grow from the bottom-center and settle DOWNWARD so the building reads as a
-    // cinematic base anchoring the dark stats — its mass never climbs over the
-    // statement text above it.
-    const sinkY = t * vh * 0.24;
-    inner.style.transform = `translateY(${sinkY}px) scale(${scale})`;
+    const scale = 1 + (FINAL_SCALE - 1) * t;
+    // Grow from the bottom-center while sinking from the resting line to the
+    // settled line, so the red mass reads as a cinematic base anchoring the
+    // dark stats — it can never climb over the statement text above it.
+    const imgH = inner.offsetHeight;
+    const from = sinkFor(imgH, 1, REST_RED_TOP, vh);
+    const to = sinkFor(imgH, FINAL_SCALE, FINAL_RED_TOP, vh);
+    inner.style.transform = `translateY(${from + (to - from) * t}px) scale(${scale})`;
     wrap.style.opacity = progress > 0.985 ? "0" : "1";
-    void vw;
   }, [liftDone]);
 
   useEffect(() => {
@@ -254,7 +304,7 @@ const LuxuryEstate = ({ data }: { data: Prospect }) => {
           {NAV.map((l) => (
             <a
               key={l}
-              href="#"
+              href={NAV_HREF}
               onClick={() => setMenuOpen(false)}
               style={{ fontFamily: SYNE }}
               className="text-4xl font-light uppercase tracking-widest text-black no-underline transition-colors hover:text-gray-500"
@@ -331,7 +381,7 @@ const LuxuryEstate = ({ data }: { data: Prospect }) => {
             ref={houseInnerRef}
             style={{
               transformOrigin: "bottom center",
-              transform: lifting ? "translateY(0)" : "translateY(102vh)",
+              transform: lifting ? `translateY(${restSink}px)` : "translateY(102vh)",
               transition: liftDone ? "none" : "transform 1.5s cubic-bezier(0.45,0,0.15,1) 0.4s",
             }}
           >
@@ -349,7 +399,7 @@ const LuxuryEstate = ({ data }: { data: Prospect }) => {
           style={{ position: "sticky", top: 0, height: "100vh", background: DARK, overflow: "hidden" }}
           className="flex flex-col justify-start px-6 md:px-10 lg:px-16"
         >
-          <div className="velar-s2-content" style={{ paddingTop: "clamp(90px,12vh,140px)" }}>
+          <div className="velar-s2-content" style={{ paddingTop: "clamp(48px,7vh,90px)" }}>
             <p
               className="velar-statement"
               style={{ fontFamily: INTER, fontWeight: 300, color: "#e8e4df", letterSpacing: "-0.02em", lineHeight: 1.35, fontSize: "clamp(22px,2.6vw,42px)", maxWidth: 1200, margin: "0 auto" }}
@@ -389,10 +439,17 @@ const LuxuryEstate = ({ data }: { data: Prospect }) => {
         className="velar-gallery"
         style={{ position: "relative", zIndex: 25, marginTop: "-100vh", background: DARK, height: "100vh", overflow: "hidden" }}
       >
-        <div className="velar-ticker" aria-hidden style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", overflow: "hidden", zIndex: 0, pointerEvents: "none" }}>
-          <span style={{ fontFamily: SYNE, fontWeight: 800, fontSize: "clamp(100px,14vw,220px)", color: "rgba(255,255,255,0.05)", whiteSpace: "nowrap", letterSpacing: "-0.02em", userSelect: "none" }}>
-            {`${name}   ${name}   ${name}   ${name}   ${name}   ${name}  `}
-          </span>
+        {/* Giant scrolling wordmark. Top-anchored so it peeks above the video
+            row (centered, it hid behind the opaque tiles), and animated so it
+            reads as deliberate branding rather than a misprint. */}
+        <div className="velar-ticker" aria-hidden style={{ position: "absolute", inset: 0, display: "flex", alignItems: "flex-start", paddingTop: "3vh", overflow: "hidden", zIndex: 0, pointerEvents: "none" }}>
+          <div className="velar-ticker-track" style={{ display: "flex" }}>
+            {[0, 1].map((copy) => (
+              <span key={copy} style={{ fontFamily: SYNE, fontWeight: 800, fontSize: "clamp(80px,10vw,160px)", color: "rgba(255,255,255,0.12)", whiteSpace: "pre", letterSpacing: "-0.02em", userSelect: "none" }}>
+                {`${name}   ${name}   ${name}   ${name}   `}
+              </span>
+            ))}
+          </div>
         </div>
         <div className="velar-gallery-content" style={{ position: "relative", zIndex: 1, height: "100%", display: "flex", alignItems: "center", justifyContent: "center", padding: "clamp(24px,4vw,60px)" }}>
           <div className="velar-row" style={{ display: "flex", gap: 6, height: "70%", width: "100%", maxWidth: 1200 }}>
