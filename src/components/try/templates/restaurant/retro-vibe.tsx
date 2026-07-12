@@ -4,7 +4,7 @@ import { primaryCta } from "../../sections/util";
 /**
  * Restaurant · Retro / neo-brutalist ("VIBE") — a 70s-meets-Gen-Z landing page:
  * cream canvas, thick 3px black borders, hard offset drop-shadows, Syne display
- * caps, Playfair italic accents, Space Grotesk body, film grain + crosshair
+ * caps, Playfair italic accents, Space Grotesk body, film grain + pizza
  * cursor, and rotated sticker chrome. Bold and loud on purpose.
  *
  * Palette (fixed identity): orange #ff4d00, blue #2d31fa, neon #bff000,

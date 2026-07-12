@@ -132,10 +132,17 @@ img { user-select: none; }
 }
 
 /* --- Restaurant · Retro / neo-brutalist variant (templates/restaurant/retro-vibe)
-   Scoped helpers: crosshair cursor, hard offset shadows with hover growth,
-   grayscale→colour Instagram tiles, and the marquee (reuses the shared
-   @keyframes marquee). All motion respects reduced-motion. */
-.retro-vibe, .retro-vibe * { cursor: crosshair; }
+   Scoped helpers: pizza cursor (was crosshair — read as a weird "+" over
+   buttons), hard offset shadows with hover growth, grayscale→colour Instagram
+   tiles, and the marquee (reuses the shared @keyframes marquee). Clickables
+   get a bigger, tilted slice so interactivity still reads. Falls back to
+   auto/pointer if the SVG cursor is unsupported. */
+.retro-vibe, .retro-vibe * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Ctext y='21' font-size='20'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E") 3 3, auto;
+}
+.retro-vibe a, .retro-vibe a *, .retro-vibe button, .retro-vibe button * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Ctext y='24' font-size='23' transform='rotate(-15 15 15)'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E") 4 4, pointer;
+}
 .retro-press { transition: transform .16s ease, box-shadow .16s ease; box-shadow: 4px 4px 0 0 #1a1a1a; }
 .retro-press:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 0 #1a1a1a; }
 .retro-lift { transition: transform .2s ease, box-shadow .2s ease; box-shadow: 6px 6px 0 0 #1a1a1a; }
