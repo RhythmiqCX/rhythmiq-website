@@ -83,6 +83,21 @@ const DevWork = () => {
             );
           })}
         </div>
+
+        {/* Full portfolio lives on the try showcase (live previews + own products). */}
+        <Reveal delay={0.1}>
+          <div className="mt-12 text-center">
+            <a
+              href="https://try.rhythmiqcx.com"
+              target="_blank"
+              rel="noopener"
+              className="btn btn-dark"
+            >
+              See more of our work
+              <span className="arrow">→</span>
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
