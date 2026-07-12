@@ -10,7 +10,7 @@ serves three surfaces, split by hostname in `src/middleware.ts`:
 |---|---|---|
 | Main marketing site | rhythmiqcx.com | `src/app/(marketing)/` |
 | Software-studio landing ("Rhythmiq Dev") | dev.rhythmiqcx.com | `src/app/dev/` |
-| Prospect demo sites | try.rhythmiqcx.com/`<slug>` | `src/app/try/` |
+| Prospect demos + showcase grid | try.rhythmiqcx.com (root = shareable showcase, /`<slug>` = sites) | `src/app/try/` |
 
 Deployed on Vercel. `staging` is the day-to-day working branch; `main` is
 production. Commits follow loose conventional style (`feat(try): ...`).
@@ -73,3 +73,7 @@ Tools/API backends use OpenAI, Groq, Gemini, Deepgram, Sarvam, Supabase, Resend.
    `LAUNCH-FOLLOWUPS.md`) are historical status docs — may be stale; don't treat
    them as current state. `rhythmiq-knowledge-base.md` is product marketing
    knowledge, useful for writing copy.
+6. **Copy conventions on the dev + try surfaces:** no em dashes in any
+   customer-facing text, and every link points to our own properties
+   (`https://try.rhythmiqcx.com` showcase or `https://dev.rhythmiqcx.com`) —
+   never external placeholders (no example.com, no fake mailto/socials).

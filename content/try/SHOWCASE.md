@@ -11,7 +11,11 @@ and the source design/prompt each template was built from.
   in `design-refs/motionsites/prompts/<id>.md` — this folder is **gitignored**
   (local only). The niche pick-list is `design-refs/motionsites/CATALOG.md`.
 
-## Sites (13 live)
+## Sites (13 live, 11 listed)
+
+`cluckin-chicken` and `dorasani` are `unlisted: true` — live at their URLs but
+hidden from the try.rhythmiqcx.com showcase grid (near-duplicates of the
+in-house restaurant looks).
 
 | Vertical | Variant (template) | Source design / prompt | Site slug | Business | Scheme |
 |----------|--------------------|------------------------|-----------|----------|--------|

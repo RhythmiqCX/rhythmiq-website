@@ -32,6 +32,23 @@ Companion docs — keep the split in mind so each stays current:
    the first available of bookingUrl > phone > email > Instagram > Facebook >
    website. Schema guarantees at least one contact method exists.
 
+## Showcase listing page (`/try` root)
+
+`src/app/try/page.tsx` is the shareable portfolio grid at try.rhythmiqcx.com —
+the page we send prospects to show the quality of our work. It lists every live
+prospect minus `unlisted` ones, plus an "Our own work" section reusing
+`DEV_WORK` from the dev-landing constants.
+
+Card thumbnails prefer a real page screenshot at
+`public/try/_showcase/<slug>.webp` (fallback: first still image from the
+site's own assets, then a monogram tile). Regenerate after a big visual change
+to a site: headless Chromium (Python playwright) at 1440×900, wait out the
+site's preloader (5–9 s depending on site), then
+`cwebp -resize 1200 0 -q 82` into `public/try/_showcase/`.
+
+Copy rule for anything showcase-visible (intro copy and each site's
+`business.oneLiner`, which renders on the cards): no em dashes.
+
 ## Registries — adding a vertical/variant
 
 `src/lib/try/catalog.ts` is the single source of truth for verticals, variants,
