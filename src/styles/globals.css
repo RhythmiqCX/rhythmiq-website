@@ -143,6 +143,16 @@ img { user-select: none; }
 .retro-vibe a, .retro-vibe a *, .retro-vibe button, .retro-vibe button * {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Ctext y='24' font-size='23' transform='rotate(-15 15 15)'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E") 4 4, pointer;
 }
+/* --- Education · Retro study variant (templates/education/retro-study)
+   Shares the neo-brutalist helpers below, but swaps the pizza slice for a
+   pencil so the cursor reads on-brand for a study / exam-prep site. Falls back
+   to auto/pointer if the SVG cursor is unsupported. */
+.retro-study, .retro-study * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Ctext y='21' font-size='20'%3E%E2%9C%8F%EF%B8%8F%3C/text%3E%3C/svg%3E") 3 3, auto;
+}
+.retro-study a, .retro-study a *, .retro-study button, .retro-study button * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Ctext y='24' font-size='23' transform='rotate(-12 15 15)'%3E%E2%9C%8F%EF%B8%8F%3C/text%3E%3C/svg%3E") 4 4, pointer;
+}
 .retro-press { transition: transform .16s ease, box-shadow .16s ease; box-shadow: 4px 4px 0 0 #1a1a1a; }
 .retro-press:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 0 #1a1a1a; }
 .retro-lift { transition: transform .2s ease, box-shadow .2s ease; box-shadow: 6px 6px 0 0 #1a1a1a; }

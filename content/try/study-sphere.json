@@ -1,0 +1,62 @@
+{
+  "slug": "study-sphere",
+  "vertical": "education",
+  "variant": "retro-study",
+  "status": "live",
+  "business": {
+    "name": "Study Sphere",
+    "tagline": "Crack it, don't cram it.",
+    "oneLiner": "Bite-size revision for competitive exams. GS, Polity, Science and English, broken down so it finally sticks.",
+    "about": "Study Sphere turns a heavy syllabus into quick, punchy revision you can actually finish between classes. Built for competitive-exam aspirants who are done with 12-hour lectures, we post daily cards that cut GS, Polity, Science and English down to just the high-yield stuff that shows up in the paper."
+  },
+  "theme": { "accent": "#ff4d00", "scheme": "light" },
+  "hero": {
+    "mode": "gradient",
+    "photo": "/try/study-sphere/hero.jpg"
+  },
+  "signature": "Less scrolling, more scoring.",
+  "highlights": [
+    { "value": "60-Sec", "label": "Revisions" },
+    { "value": "4", "label": "Core Subjects" },
+    { "value": "Daily", "label": "Practice" },
+    { "value": "Exam-Ready", "label": "Notes" }
+  ],
+  "services": [
+    {
+      "title": "General Studies",
+      "blurb": "History, geography, economy and current affairs, condensed into quick daily cards.",
+      "tag": "Most Asked",
+      "photo": "/try/study-sphere/gs.jpg"
+    },
+    {
+      "title": "Polity",
+      "blurb": "The Constitution, Parliament and governance, mapped so the concepts finally click.",
+      "tag": "Popular",
+      "photo": "/try/study-sphere/polity.jpg"
+    },
+    {
+      "title": "Science",
+      "blurb": "Physics, chemistry and biology basics, plus the science-and-tech news examiners love.",
+      "tag": "Hot Topic",
+      "photo": "/try/study-sphere/science.jpg"
+    },
+    {
+      "title": "English",
+      "blurb": "Grammar, vocabulary and comprehension drills to lock down the easy marks.",
+      "tag": "Easy Marks",
+      "photo": "/try/study-sphere/english.jpg"
+    }
+  ],
+  "photos": [
+    "/try/study-sphere/ig-1.jpg",
+    "/try/study-sphere/ig-2.jpg",
+    "/try/study-sphere/ig-3.jpg",
+    "/try/study-sphere/ig-4.jpg"
+  ],
+  "contact": {
+    "hours": "New revision drops, every day"
+  },
+  "socials": {
+    "instagram": "https://www.instagram.com/crack_competitive_exams_100"
+  }
+}

@@ -13,6 +13,7 @@ import BeautyLuxuryBotanical from "./templates/beauty/luxury-botanical";
 import FinanceSynthesis from "./templates/finance/synthesis";
 import TravelScenic from "./templates/travel/scenic";
 import SecurityAkor from "./templates/security/akor";
+import EducationRetroStudy from "./templates/education/retro-study";
 
 export type TemplateProps = { data: Prospect };
 export type Template = ComponentType<TemplateProps>;
@@ -67,6 +68,10 @@ export const REGISTRY: Record<string, Record<string, Template>> = {
   security: {
     default: SecurityAkor,
     akor: SecurityAkor,
+  },
+  education: {
+    default: EducationRetroStudy,
+    "retro-study": EducationRetroStudy,
   },
 };
 

@@ -9,7 +9,7 @@
 // Verticals we ship a real template for today. Add "dentist"/"salon"/etc here
 // (and a matching template + registry entry) to expand. Anything authored for a
 // vertical without a dedicated template gracefully falls back to `generic`.
-export const VERTICALS = ["restaurant", "dentist", "pets", "realestate", "architecture", "retail", "beauty", "finance", "travel", "security", "generic"] as const;
+export const VERTICALS = ["restaurant", "dentist", "pets", "realestate", "architecture", "retail", "beauty", "finance", "travel", "security", "education", "generic"] as const;
 export type Vertical = (typeof VERTICALS)[number];
 
 export const HERO_MODES = ["gradient", "particles", "ken-burns", "video"] as const;
@@ -183,6 +183,21 @@ export const VERTICAL_META: Record<Vertical, VerticalMeta> = {
       { title: "Smart Building\nAutomation", blurb: "Access, climate, and energy — orchestrated from one console." },
       { title: "AI Consulting\nand Integration", blurb: "Design, deploy, and integrate with your existing stack." },
       { title: "Training\nand Support", blurb: "Onboarding and 24/7 support that keeps systems sharp." },
+    ],
+  },
+  education: {
+    label: "Education / Exam Prep",
+    houseAccent: "#ff4d00",
+    defaultVariant: "retro-study",
+    defaultHeroMode: "gradient",
+    variants: [
+      { id: "retro-study", label: "Retro study (70s + Gen-Z, bold subject cards + feed)", scheme: "light" },
+    ],
+    defaultServices: [
+      { title: "General Studies", blurb: "History, geography, economy and current affairs, in quick daily cards." },
+      { title: "Polity", blurb: "The Constitution, Parliament and governance, mapped so it clicks." },
+      { title: "Science", blurb: "Physics, chemistry and biology basics, plus the science-and-tech news examiners love." },
+      { title: "English", blurb: "Grammar, vocabulary and comprehension drills to lock down the easy marks." },
     ],
   },
   generic: {
