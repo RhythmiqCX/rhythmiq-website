@@ -1,11 +1,11 @@
 // Pricing tiers for the dedicated /pricing page.
 //
-// Value-based pricing modelled on the restaurant voice-AI market:
-// Loman ~$199–529/mo, Slang.ai ~$399–599/location (and +$99/mo just for one
-// extra language). Rhythmiq undercuts on price while including the two things
-// they charge extra for or can't do: in-call order taking and native
-// multilingual (Arabic/Spanish/Hindi). Backend cost is ~$0.02–0.07/min, so
-// margins stay healthy at these prices. Swap freely once finalized.
+// Value-based pricing for D2C voice AI: undercuts generic per-minute dev
+// platforms ($0.07-0.09+/min) with a flat plan, while including the things
+// a manual calling team can't scale and per-minute platforms don't build for:
+// return-to-exchange handling and native multilingual (Arabic/Spanish/Hindi).
+// Backend cost is ~$0.02-0.07/min, so margins stay healthy at these prices.
+// Swap freely once finalized.
 
 import { BOOK_DEMO_URL, CONTACT_URL } from "./links";
 
@@ -24,14 +24,14 @@ export const PRICING_TIERS: PricingTier[] = [
         name: "Essentials",
         price: "$149",
         period: "/mo",
-        tagline: "For a single spot that just can't miss another call.",
+        tagline: "For a growing brand that can't afford another failed delivery.",
         cta: { label: "Start free", href: BOOK_DEMO_URL },
         features: [
-            "1 location",
-            "AI phone host, 24/7",
-            "Up to 500 answered calls / mo",
-            "Reservations + SMS confirmations",
-            "Missed-call recovery",
+            "1 store / catalogue",
+            "Voice AI outbound + inbound, 24/7",
+            "Up to 500 calls / mo",
+            "Failed-delivery rescue + address correction",
+            "COD confirmation calls",
             "Answers in English + 1 language",
             "Email support",
         ],
@@ -40,15 +40,15 @@ export const PRICING_TIERS: PricingTier[] = [
         name: "Pro",
         price: "$299",
         period: "/mo",
-        tagline: "For busy restaurants that want the whole phone handled.",
+        tagline: "For D2C brands that want the whole call queue handled.",
         highlight: true,
         cta: { label: "Start free", href: BOOK_DEMO_URL },
         features: [
             "Everything in Essentials",
-            "Up to 1,500 answered calls / mo",
-            "Full order taking + POS injection",
+            "Up to 1,500 calls / mo",
+            "Returns-to-exchange + COD confirmation on every call",
             "All 12+ languages included (Arabic, Spanish, Hindi & more)",
-            "Reservation + CRM sync",
+            "OMS/WMS + CRM sync",
             "Web chat widget",
             "Custom greeting + voice",
             "Live call analytics",
@@ -59,11 +59,11 @@ export const PRICING_TIERS: PricingTier[] = [
         name: "Enterprise",
         price: "Custom",
         period: "",
-        tagline: "For groups, franchises, and multi-location brands.",
+        tagline: "For multi-brand groups and high-volume D2C operators.",
         cta: { label: "Talk to sales", href: CONTACT_URL },
         features: [
             "Everything in Pro",
-            "Unlimited locations + calls",
+            "Unlimited catalogues + calls",
             "Custom + cloned voice models",
             "SSO + dedicated success manager",
             "SLA, security review + DPA",
@@ -76,19 +76,19 @@ export type PricingFAQ = { q: string; a: string };
 export const PRICING_FAQS: PricingFAQ[] = [
     {
         q: "How much does Rhythmiq cost?",
-        a: "Essentials is $149 a month for a single location. Pro is $299 a month and adds full order taking and every language. Enterprise is custom pricing for groups and franchises. Pick the plan that matches how busy your phone gets.",
+        a: "Essentials is $149 a month for a single store or catalogue. Pro is $299 a month and adds returns-to-exchange handling and every language. Enterprise is custom pricing for multi-brand groups. Pick the plan that matches your order volume.",
     },
     {
         q: "Do you support other languages?",
-        a: "Yes, and we include them. Pro and Enterprise answer in 12+ languages including Arabic, Spanish, and Hindi at no extra charge. Some tools charge $99 a month extra just to add one language. We bundle them all in.",
+        a: "Yes, and we include them. Pro and Enterprise answer in 12+ languages including Arabic, Spanish, and Hindi at no extra charge, so a call can switch languages mid-sentence and stay natural.",
     },
     {
-        q: "Can it actually take orders, not just reservations?",
-        a: "Yes. Pro takes complete takeout and delivery orders, modifiers and all, and pushes them straight into your POS. A lot of voice tools only book reservations and bounce order callers to a website. Rhythmiq closes the order on the call.",
+        q: "Can it actually turn a return into an exchange, not just log it?",
+        a: "Yes. Pro handles the objection live: offers a size swap, store credit, or a discount to keep the sale, and writes the outcome straight to your OMS. A lot of voice tools only follow a script and hand off the moment a customer says no. Rhythmiq keeps the conversation going.",
     },
     {
         q: "Is there a free trial?",
-        a: "Yes. You can try Rhythmiq before you pay. Book a quick demo and we will set you up so you can hear it answer your own calls first.",
+        a: "Yes. You can try Rhythmiq before you pay. Book a quick demo and we will set you up so you can hear it call on your own catalogue first.",
     },
     {
         q: "What happens if I go over my plan's calls?",
@@ -96,10 +96,10 @@ export const PRICING_FAQS: PricingFAQ[] = [
     },
     {
         q: "Can I change plans later?",
-        a: "Yes. You can move up or down a plan at any time as your call volume changes. Nothing is locked in.",
+        a: "Yes. You can move up or down a plan at any time as your order volume changes. Nothing is locked in.",
     },
     {
-        q: "Do you offer pricing for multiple locations?",
-        a: "Yes. Enterprise is built for groups, franchises, and multi unit brands, with custom pricing, unlimited locations, and a dedicated success manager. Talk to us and we will put together a plan that fits.",
+        q: "Do you offer pricing for multiple brands or warehouses?",
+        a: "Yes. Enterprise is built for multi-brand groups and high-volume D2C operators, with custom pricing, unlimited catalogues, and a dedicated success manager. Talk to us and we will put together a plan that fits.",
     },
 ];

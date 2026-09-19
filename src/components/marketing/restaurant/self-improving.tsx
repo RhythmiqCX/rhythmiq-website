@@ -9,10 +9,10 @@ const SelfImproving = () => {
           <AnalyticsMockup className="max-w-[880px] mx-auto w-full" />
         </Reveal>
         <Reveal className="max-w-[52ch]">
-          <h3 className="h-feature mb-2.5">A system that gets sharper every shift</h3>
+          <h3 className="h-feature mb-2.5">A system that gets sharper with every order</h3>
           <p className="text-ink2">
-            Every call makes Rhythmiq better. It flags new questions, suggests answers for you to
-            approve, and adapts to your busiest nights. No engineering and no retraining.
+            Every call makes Rhythmiq better. It flags new objections, suggests answers for you to
+            approve, and adapts to your busiest sale days. No engineering and no retraining.
           </p>
         </Reveal>
       </div>

@@ -11,8 +11,8 @@ const Integrations = () => {
           <span className="eyebrow">Apps &amp; integrations</span>
           <h2 className="h-section my-3.5">Plugs into the stack you already run</h2>
           <p className="lede max-w-[46ch]">
-            Two way sync with your POS, reservation book, and CRM. Rhythmiq writes bookings and
-            orders where your team already looks, so there are no new screens to learn.
+            Two way sync with your store platform, OMS/WMS, and CRM. Rhythmiq writes order updates
+            and exchanges where your team already looks, so there are no new screens to learn.
           </p>
           <Link href={INTEGRATIONS_URL} className="link-arrow mt-[18px] inline-flex">
             Browse integrations <span className="arrow">→</span>

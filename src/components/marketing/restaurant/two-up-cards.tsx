@@ -6,13 +6,13 @@ import { DEMO_URL } from "@/constants/links";
 const CARDS = [
   {
     Art: GuestTextMockup,
-    title: "Easy for guests, less work for your team",
-    body: "Callers get a warm, natural conversation with no menus to press. Your team gets every booking, note, and order pushed straight into the tools they already use.",
+    title: "Easy for customers, less work for your team",
+    body: "Customers get a warm, natural conversation with no IVR menu to press. Your team gets every rescued delivery, exchange, and confirmation pushed straight into the tools they already use.",
   },
   {
     Art: InsightsMockup,
     title: "Insights from across every call",
-    body: "See what guests ask for most, when you are missing covers, and which nights need more hands, all pulled from thousands of real calls.",
+    body: "See why customers actually return items, which pincodes fail delivery most, and where COD orders go bad, all pulled from thousands of real calls.",
   },
 ];
 

@@ -52,17 +52,17 @@ const ICON = {
 /* ---------- 1. Knowledge base (AIWorkspace) ---------- */
 
 const SOURCES = [
-  { icon: ICON.menu, name: "Dinner & wine menu", meta: "Updated 2h ago · 64 items", tag: "ok" as const, label: "Live" },
-  { icon: ICON.clock, name: "Hours & holidays", meta: "Open late Fri–Sat", tag: "ok" as const, label: "Live" },
-  { icon: ICON.doc, name: "Reservation policy", meta: "Parties of 6+ · deposit", tag: "ok" as const, label: "Live" },
-  { icon: ICON.faq, name: "Top guest questions", meta: "48 answers learned", tag: "new" as const, label: "Learning" },
+  { icon: ICON.menu, name: "Product catalogue", meta: "Updated 2h ago · 340 SKUs", tag: "ok" as const, label: "Live" },
+  { icon: ICON.clock, name: "Delivery & COD policy", meta: "Zones, cutoffs, cash limits", tag: "ok" as const, label: "Live" },
+  { icon: ICON.doc, name: "Return & exchange policy", meta: "Eligible items · windows", tag: "ok" as const, label: "Live" },
+  { icon: ICON.faq, name: "Top customer objections", meta: "48 answers learned", tag: "new" as const, label: "Learning" },
 ];
 
 export const KnowledgeMockup = ({ className }: { className?: string }) => (
   <Win addr="rhythmiq · knowledge" className={className}>
     <div className="p-[18px]">
       <div className="flex items-center justify-between mb-3.5">
-        <h4 className="text-[15px] font-semibold">Trained on your restaurant</h4>
+        <h4 className="text-[15px] font-semibold">Trained on your catalogue</h4>
         <span className="font-mono text-[11px] text-coral bg-coralSoft px-2.5 py-1 rounded-full">auto-updated</span>
       </div>
       <div className="flex flex-col gap-2">
@@ -105,14 +105,14 @@ export const AnalyticsMockup = ({ className }: { className?: string }) => (
           <div className="d">100% · 0 missed</div>
         </div>
         <div className="stat">
-          <div className="k">Tables booked</div>
+          <div className="k">Deliveries rescued</div>
           <div className="v">1,284</div>
           <div className="d">+18% vs last mo</div>
         </div>
         <div className="stat">
-          <div className="k">After hours</div>
+          <div className="k">RTO avoided</div>
           <div className="v">37%</div>
-          <div className="d">won back</div>
+          <div className="d">of order value saved</div>
         </div>
       </div>
       <div className="flex items-center justify-between mb-1.5">
@@ -131,9 +131,9 @@ export const AnalyticsMockup = ({ className }: { className?: string }) => (
 /* ---------- 3. Insights (TwoUpCards, right) ---------- */
 
 const REQUESTS = [
-  { label: "Reservations", pct: 62 },
-  { label: "Hours & menu", pct: 24 },
-  { label: "Takeout orders", pct: 14 },
+  { label: "Failed delivery rescue", pct: 48 },
+  { label: "Return to exchange", pct: 32 },
+  { label: "COD confirmation", pct: 20 },
 ];
 
 export const InsightsMockup = ({ className }: { className?: string }) => (
@@ -146,7 +146,7 @@ export const InsightsMockup = ({ className }: { className?: string }) => (
         </div>
         <span className="tagpill ok mb-1">▲ 18% this week</span>
       </div>
-      <div className="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink3 mb-2">What guests ask for</div>
+      <div className="font-mono text-[10.5px] tracking-[0.06em] uppercase text-ink3 mb-2">What calls are for</div>
       <div className="flex flex-col gap-2.5">
         {REQUESTS.map((r, i) => (
           <div key={r.label}>
@@ -174,19 +174,19 @@ export const GuestTextMockup = ({ className }: { className?: string }) => (
     <div className="p-[18px]">
       <div className="app-head">
         <h4>Auto-confirmation</h4>
-        <span className="live">Texting guest</span>
+        <span className="live">Texting customer</span>
       </div>
       <div className="transcript">
         <div className="bubble caller">
-          <small>Guest · SMS</small>Can I move my 7pm to 8 tonight?
+          <small>Customer · SMS</small>Can you redeliver after 6pm instead?
         </div>
         <div className="bubble ai">
-          <small>Rhythmiq</small>Done. Your table for 4 is now at <span className="hl">8:00 PM</span> tonight. See you then.
+          <small>Rhythmiq</small>Done. Your order is rescheduled for <span className="hl">tomorrow after 6 PM</span>. See you then.
         </div>
       </div>
       <div className="flex items-center gap-2 mt-3.5">
-        <span className="tagpill ok">Booking updated</span>
-        <span className="text-[12px] text-ink3">synced to your reservation book</span>
+        <span className="tagpill ok">Delivery updated</span>
+        <span className="text-[12px] text-ink3">synced to your OMS</span>
       </div>
     </div>
   </Win>
@@ -205,13 +205,13 @@ export const CallComposerMockup = ({ className }: { className?: string }) => (
       </div>
       <div className="transcript">
         <div className="bubble caller">
-          <small>Caller</small>Are you open on Sunday, and can I bring a dog on the patio?
+          <small>Caller</small>Hi, where&apos;s my order? It was supposed to arrive yesterday.
         </div>
         <div className="bubble ai">
-          <small>Rhythmiq</small>We are. We open at <span className="hl">10 AM Sunday</span>, and dogs are welcome on the patio. Want me to hold a table?
+          <small>Rhythmiq</small>It shipped Tuesday and is out for delivery today by <span className="hl">6 PM</span>. Want me to text you the tracking link?
         </div>
         <div className="bubble caller">
-          <small>Caller</small>Yes please, two of us at noon.
+          <small>Caller</small>Yes please.
         </div>
       </div>
       <div className="wave mt-2.5" aria-hidden>
@@ -226,10 +226,10 @@ export const CallComposerMockup = ({ className }: { className?: string }) => (
 /* ---------- 6. Unified inbox (Omnichannel) ---------- */
 
 const INBOX = [
-  { icon: ICON.phone, channel: "Phone", who: "Table for 4 tonight", snip: "Booked for 8:00 PM", tag: "ok" as const, label: "Booked", time: "now", on: true },
-  { icon: ICON.sms, channel: "SMS", who: "Moving my reservation", snip: "7:00 → 8:00 PM", tag: "new" as const, label: "Updated", time: "2m" },
-  { icon: ICON.whatsapp, channel: "WhatsApp", who: "Any vegan mains?", snip: "Shared 3 dishes", tag: "ok" as const, label: "Answered", time: "8m" },
-  { icon: ICON.web, channel: "Web chat", who: "Pickup order", snip: "Pushed to POS", tag: "ok" as const, label: "Sent", time: "12m" },
+  { icon: ICON.phone, channel: "Phone", who: "Failed delivery, Sector 21", snip: "Rescheduled for 6:00 PM", tag: "ok" as const, label: "Rescued", time: "now", on: true },
+  { icon: ICON.sms, channel: "SMS", who: "Reschedule my delivery", snip: "Tomorrow, 10 AM–1 PM", tag: "new" as const, label: "Updated", time: "2m" },
+  { icon: ICON.whatsapp, channel: "WhatsApp", who: "Is this the right size?", snip: "Sent size guide", tag: "ok" as const, label: "Answered", time: "8m" },
+  { icon: ICON.web, channel: "Web chat", who: "Return this order", snip: "Exchange offered", tag: "ok" as const, label: "Sent", time: "12m" },
 ];
 
 export const InboxMockup = ({ className }: { className?: string }) => (
@@ -278,10 +278,10 @@ export const MiniBookingCard = ({ className }: { className?: string }) => (
             <path d="M3 8.5l3 3 7-7" />
           </svg>
         </span>
-        <span className="font-mono text-[10px] tracking-[0.08em] uppercase text-ink3">Booked</span>
+        <span className="font-mono text-[10px] tracking-[0.08em] uppercase text-ink3">Rescued</span>
       </div>
-      <div className="text-[14px] font-semibold text-ink leading-tight">Table for 4</div>
-      <div className="text-[12px] text-ink3 mt-0.5">Tonight · 8:00 PM</div>
+      <div className="text-[14px] font-semibold text-ink leading-tight">Delivery rescheduled</div>
+      <div className="text-[12px] text-ink3 mt-0.5">Today · 6:00 PM</div>
       <span className="tagpill ok mt-2.5 inline-block">Confirmed</span>
     </div>
   </div>

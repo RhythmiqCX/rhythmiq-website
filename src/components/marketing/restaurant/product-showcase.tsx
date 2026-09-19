@@ -2,21 +2,21 @@
 
 import { useRef, useState, type CSSProperties } from "react";
 
-type TabKey = "calls" | "reservations" | "orders" | "insights";
+type TabKey = "calls" | "returns" | "orders" | "insights";
 
 const TABS: { key: TabKey; label: string; sub: string; addr: string }[] = [
   { key: "calls", label: "Live calls", sub: "Real-time transcripts", addr: "app.rhythmiq.ai / live" },
-  { key: "reservations", label: "Reservations", sub: "Bookings & waitlist", addr: "app.rhythmiq.ai / reservations" },
-  { key: "orders", label: "Orders", sub: "Takeout & delivery", addr: "app.rhythmiq.ai / orders" },
+  { key: "returns", label: "Returns", sub: "Refund → exchange", addr: "app.rhythmiq.ai / returns" },
+  { key: "orders", label: "Orders", sub: "COD & upsell", addr: "app.rhythmiq.ai / orders" },
   { key: "insights", label: "Insights", sub: "Call analytics", addr: "app.rhythmiq.ai / insights" },
 ];
 
-const SIDE_ITEMS = ["Live calls", "Reservations", "Orders", "Voicemail"] as const;
+const SIDE_ITEMS = ["Live calls", "Returns", "Orders", "Voicemail"] as const;
 const SIDE_MANAGE = ["Knowledge", "Insights", "Settings"] as const;
 
 const ACTIVE_LABEL: Record<TabKey, string> = {
   calls: "Live calls",
-  reservations: "Reservations",
+  returns: "Returns",
   orders: "Orders",
   insights: "Insights",
 };
@@ -27,7 +27,7 @@ function Sidebar({ active }: { active: TabKey }) {
     <aside className="app-side">
       <div className="org">
         <span className="av" />
-        <b>Osteria Lume</b>
+        <b>Northgate Skincare</b>
       </div>
       {SIDE_ITEMS.map((item) => (
         <div key={item} className={`nav-item${item === activeLabel ? " is-on" : ""}`}>
@@ -52,23 +52,20 @@ function CallsPanel() {
   return (
     <main className="app-main">
       <div className="app-head">
-        <h4>Incoming call · +1 (415) 555‑0148</h4>
-        <span className="live">On call · 01:12</span>
+        <h4>Outbound call · +91 98765 43210</h4>
+        <span className="live">On call · 00:45</span>
       </div>
       <div className="transcript">
-        <div className="bubble caller">
-          <small>Caller</small>Hi, do you have a table for four tonight around 7:30?
-        </div>
         <div className="bubble ai">
-          <small>Rhythmiq</small>Let me check. We have <span className="hl">7:15 or 8:00</span> for a party
-          of four. Which works better?
+          <small>Rhythmiq</small>Hi, this is Northgate Skincare. Our courier tried delivering your
+          order this morning but couldn&rsquo;t reach you. Are you home this evening after 6?
         </div>
         <div className="bubble caller">
-          <small>Caller</small>8 o&rsquo;clock is perfect. Under the name Marsh.
+          <small>Customer</small>Yes, I&rsquo;ll be home after 6.
         </div>
         <div className="bubble ai">
-          <small>Rhythmiq</small>Booked! Table for four at 8:00 PM under Marsh. I&rsquo;ve texted a
-          confirmation. Anything else?
+          <small>Rhythmiq</small>Perfect, I&rsquo;ve rescheduled for <span className="hl">today after 6 PM</span> and
+          texted you the update. Anything else before I let you go?
         </div>
       </div>
       <div className="wave" aria-hidden>
@@ -80,58 +77,58 @@ function CallsPanel() {
   );
 }
 
-function ReservationsPanel() {
+function ReturnsPanel() {
   return (
     <main className="app-main">
       <div className="app-head">
-        <h4>Tonight · 22 covers booked</h4>
+        <h4>Today · 14 returns processed</h4>
         <span className="chip">auto‑synced</span>
       </div>
       <div className="rows">
         <div className="row">
-          <span className="time">7:00</span>
+          <span className="time">10:15</span>
           <span>
-            <span className="who">Alvarez · 2</span>
+            <span className="who">Verma · Order #4021</span>
             <br />
-            <span className="meta">Window booth · anniversary</span>
+            <span className="meta">Size mismatch → exchanged to L</span>
           </span>
-          <span className="tagpill ok">Confirmed</span>
+          <span className="tagpill ok">Exchanged</span>
         </div>
         <div className="row">
-          <span className="time">7:30</span>
+          <span className="time">11:02</span>
           <span>
-            <span className="who">Okafor · 6</span>
+            <span className="who">Iyer · Order #4030</span>
             <br />
-            <span className="meta">High-top · 1 highchair</span>
+            <span className="meta">Color issue → store credit +₹200</span>
           </span>
-          <span className="tagpill warn">Pending</span>
+          <span className="tagpill warn">Pending pickup</span>
         </div>
         <div className="row">
-          <span className="time">8:00</span>
+          <span className="time">12:40</span>
           <span>
-            <span className="who">Marsh · 4</span>
+            <span className="who">Bose · Order #4041</span>
             <br />
-            <span className="meta">Booked by Rhythmiq · 2 min ago</span>
+            <span className="meta">Refund requested → converted by Rhythmiq</span>
           </span>
           <span className="tagpill new">New</span>
         </div>
         <div className="row">
-          <span className="time">8:30</span>
+          <span className="time">13:15</span>
           <span>
-            <span className="who">Chen · 2</span>
+            <span className="who">Nair · Order #4055</span>
             <br />
-            <span className="meta">Bar seating · gluten-free</span>
+            <span className="meta">Wrong size → exchanged, free shipping</span>
           </span>
-          <span className="tagpill ok">Confirmed</span>
+          <span className="tagpill ok">Exchanged</span>
         </div>
         <div className="row">
-          <span className="time">9:00</span>
+          <span className="time">14:00</span>
           <span>
-            <span className="who">Waitlist · 3</span>
+            <span className="who">Return pickup failed · Kapoor</span>
             <br />
-            <span className="meta">Texted when table frees</span>
+            <span className="meta">Rescheduled for tomorrow</span>
           </span>
-          <span className="tagpill warn">Waitlist</span>
+          <span className="tagpill warn">Rescue needed</span>
         </div>
       </div>
     </main>
@@ -142,45 +139,45 @@ function OrdersPanel() {
   return (
     <main className="app-main">
       <div className="app-head">
-        <h4>Open tickets · pushed to POS</h4>
-        <span className="chip">Toast · synced</span>
+        <h4>Open COD orders · confirmed today</h4>
+        <span className="chip">Shopify · synced</span>
       </div>
       <div className="rows">
         <div className="row">
-          <span className="time">#1843</span>
+          <span className="time">#8821</span>
           <span>
-            <span className="who">Pickup · Daniela</span>
+            <span className="who">COD · Meera</span>
             <br />
-            <span className="meta">2× margherita, 1× burrata, 1× tiramisu</span>
+            <span className="meta">Confirmed + added conditioner, ₹100 off</span>
           </span>
-          <span className="tagpill new">$58.00</span>
+          <span className="tagpill new">₹1,450</span>
         </div>
         <div className="row">
-          <span className="time">#1844</span>
+          <span className="time">#8822</span>
           <span>
-            <span className="who">Delivery · J. Park</span>
+            <span className="who">COD · Rao</span>
             <br />
-            <span className="meta">Cacio e pepe, side meatballs · no cheese on side</span>
+            <span className="meta">Confirmed, no changes</span>
           </span>
-          <span className="tagpill ok">$41.50</span>
+          <span className="tagpill ok">₹899</span>
         </div>
         <div className="row">
-          <span className="time">#1845</span>
+          <span className="time">#8823</span>
           <span>
-            <span className="who">Pickup · Marsh</span>
+            <span className="who">High-risk COD · Singh</span>
             <br />
-            <span className="meta">Pre-order for 8:00 table · 1× branzino</span>
+            <span className="meta">3 calls unanswered → flagged</span>
           </span>
-          <span className="tagpill warn">Scheduled</span>
+          <span className="tagpill warn">Flagged</span>
         </div>
         <div className="row">
-          <span className="time">#1846</span>
+          <span className="time">#8824</span>
           <span>
-            <span className="who">Delivery · Okafor</span>
+            <span className="who">COD · Fernandes</span>
             <br />
-            <span className="meta">Family meal × 2, garlic bread, soda</span>
+            <span className="meta">Switched to prepaid, ₹50 off</span>
           </span>
-          <span className="tagpill new">$72.25</span>
+          <span className="tagpill new">₹2,100</span>
         </div>
       </div>
     </main>
@@ -203,7 +200,7 @@ function InsightsPanel() {
           <div className="d">100% · 0 missed</div>
         </div>
         <div className="stat">
-          <div className="k">Tables booked</div>
+          <div className="k">Deliveries rescued</div>
           <div className="v">312</div>
           <div className="d">+18% vs last wk</div>
         </div>
@@ -224,7 +221,7 @@ function InsightsPanel() {
 
 const PANELS: Record<TabKey, () => React.JSX.Element> = {
   calls: CallsPanel,
-  reservations: ReservationsPanel,
+  returns: ReturnsPanel,
   orders: OrdersPanel,
   insights: InsightsPanel,
 };

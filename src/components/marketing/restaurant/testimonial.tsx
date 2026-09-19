@@ -1,5 +1,5 @@
 import Reveal from "./reveal";
-import { WineGlassArt } from "./art";
+import { ExchangeArt } from "./art";
 
 const Testimonial = () => {
   return (
@@ -7,27 +7,28 @@ const Testimonial = () => {
       <div className="wrap grid lg:grid-cols-[1.6fr_1fr] gap-8 lg:gap-[72px] items-center">
         <Reveal>
           <div className="font-mono text-xs tracking-[0.12em] uppercase text-ink3 mb-[22px]">
-            Saltwater Hospitality Group
+            Northgate Skincare
           </div>
           <blockquote
             className="font-medium leading-[1.25] tracking-[-0.02em] mb-6"
             style={{ fontSize: "clamp(22px,2.6vw,33px)", textWrap: "balance" }}
           >
-            &ldquo;We were missing one in three calls at peak. Rhythmiq took that to zero, and our
-            bookings went up the week we switched on. It pays for itself before the first service.&rdquo;
+            &ldquo;A third of our COD orders were coming back undelivered. Rhythmiq calls before we
+            ship, and our RTO rate dropped the week we switched it on. It paid for itself before
+            the first invoice.&rdquo;
           </blockquote>
           <div className="flex items-center gap-3.5">
             <span className="w-[46px] h-[46px] rounded-full bg-coral text-white flex-none grid place-items-center font-semibold text-[15px]">
-              MV
+              AK
             </span>
             <div>
-              <b className="text-[15px] block">Mara Velez</b>
-              <span className="text-[13.5px] text-ink2">Director of Operations, Saltwater</span>
+              <b className="text-[15px] block">Ananya Kapoor</b>
+              <span className="text-[13.5px] text-ink2">Head of Operations, Northgate Skincare</span>
             </div>
           </div>
         </Reveal>
         <Reveal delay={0.12}>
-          <WineGlassArt className="aspect-[4/5] rounded-[14px]" />
+          <ExchangeArt className="aspect-[4/5] rounded-[14px]" />
         </Reveal>
       </div>
     </section>

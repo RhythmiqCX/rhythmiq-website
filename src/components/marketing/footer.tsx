@@ -39,7 +39,7 @@ const Footer = () => {
           <div>
             <Brand onDark className="mb-4" />
             <p className="text-sm max-w-[30ch] leading-[1.55] mb-[18px]">
-              The AI phone host for restaurants. Answer every call, book every table, never lose a cover.
+              Voice AI for D2C brands. Rescues failed deliveries, confirms COD orders, and turns returns into exchanges.
             </p>
             <Link href={BOOK_DEMO_URL} className="btn btn-light">
               Start free trial
@@ -73,7 +73,7 @@ const Footer = () => {
           style={{ borderTop: "1px solid var(--line-dark)" }}
         >
           <span>&copy; {new Date().getFullYear()} Rhythmiq, Inc. All rights reserved.</span>
-          <span>Made for restaurants that never want to miss a call.</span>
+          <span>Made for D2C brands that never want to lose an order.</span>
         </div>
       </div>
     </footer>

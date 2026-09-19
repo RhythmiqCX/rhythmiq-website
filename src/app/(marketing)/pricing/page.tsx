@@ -8,15 +8,15 @@ import PricingFAQ from "./PricingFAQ";
 import { PRICING_FAQS } from "@/constants/pricing-plans";
 
 export const metadata = genMeta({
-  title: "Pricing for Restaurants: AI Phone Host Plans",
+  title: "Pricing for D2C Brands: Voice AI Plans",
   description:
-    "Rhythmiq pricing starts at $149/mo. Answer every call, book every table, and take every order in 12+ languages. Pro adds full order taking and POS injection for $299/mo. Plans for single restaurants up to multi location groups, with no surprise overage bills.",
+    "Rhythmiq pricing starts at $149/mo. Rescue failed deliveries, confirm COD orders, and turn returns into exchanges in 12+ languages. Pro adds returns-to-exchange handling and full catalogue integration for $299/mo. Plans for single brands up to multi-warehouse groups, with no surprise overage bills.",
   keywords: [
-    "AI phone host pricing",
-    "restaurant voice AI pricing",
-    "AI receptionist cost",
+    "voice AI pricing D2C",
+    "NDR RTO reduction pricing",
+    "COD confirmation call pricing",
     "flat rate voice AI",
-    "AI answering service pricing restaurants",
+    "AI outbound calling pricing ecommerce",
   ],
   alternates: {
     canonical: "/pricing",
@@ -30,12 +30,12 @@ export const metadata = genMeta({
 const offerSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Rhythmiq, AI Phone Host for Restaurants",
+  name: "Rhythmiq, Voice AI for D2C Ecommerce",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   url: "https://rhythmiqcx.com/pricing",
   description:
-    "Rhythmiq is an AI phone host for restaurants that answers calls, books reservations, and takes orders 24/7 in 12+ languages. Plans from $149/mo, with no surprise overage bills.",
+    "Rhythmiq is voice AI for D2C brands that calls customers to rescue failed deliveries, confirm COD orders, and turn returns into exchanges, 24/7 in 12+ languages. Plans from $149/mo, with no surprise overage bills.",
   offers: {
     "@type": "Offer",
     price: "149",

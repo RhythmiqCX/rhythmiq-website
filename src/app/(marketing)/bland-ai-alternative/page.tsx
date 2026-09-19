@@ -6,16 +6,16 @@ import JsonLd from "@/components/global/JsonLd";
 import { BOOK_DEMO_URL } from "@/constants/links";
 
 export const metadata = generateMetadata({
-  title: "Bland AI Alternative for Restaurants | RhythmiqCX AI Phone Host",
+  title: "Bland AI Alternative for D2C Brands | RhythmiqCX Voice AI",
   description:
-    "Bland AI is a per-minute, developer-first platform with enterprise friction. RhythmiqCX is the done-for-you AI phone host for restaurants: books tables, takes orders, answers in 12+ languages, on flat plans from $149/mo with no contract.",
+    "Bland AI is a per-minute, developer-first platform with enterprise friction. RhythmiqCX is the done-for-you voice AI for D2C brands: rescues failed deliveries, confirms COD orders, answers in 12+ languages, on flat plans from $149/mo with no contract.",
   keywords: [
     "Bland AI alternative",
-    "Bland AI alternative for restaurants",
+    "Bland AI alternative for D2C ecommerce",
     "RhythmiqCX vs Bland AI",
-    "no-code AI phone host",
-    "restaurant voice AI",
-    "AI that takes orders over the phone",
+    "no-code voice AI",
+    "D2C voice AI",
+    "AI that confirms COD orders",
   ],
   alternates: {
     canonical: "/bland-ai-alternative",
@@ -29,9 +29,9 @@ export const metadata = generateMetadata({
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Bland AI Alternative: RhythmiqCX AI Phone Host for Restaurants",
+  headline: "Bland AI Alternative: RhythmiqCX Voice AI for D2C Brands",
   description:
-    "Side-by-side comparison of RhythmiqCX and Bland AI covering restaurant fit, order taking, pricing, setup, and languages.",
+    "Side-by-side comparison of RhythmiqCX and Bland AI covering D2C fit, order recovery, pricing, setup, and languages.",
   url: "https://rhythmiqcx.com/bland-ai-alternative",
   author: { "@type": "Organization", name: "RhythmiqCX" },
   publisher: {
@@ -60,14 +60,14 @@ const Neg = ({ children }: { children: React.ReactNode }) => (
 
 const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
-    "Built for restaurants",
-    <Neg key="b-fit">A general-purpose, developer-first voice platform. You build the restaurant logic yourself.</Neg>,
-    <Pos key="rx-fit"><strong className="text-ink">Purpose-built for restaurants.</strong> Reservations, orders, and menu questions out of the box.</Pos>,
+    "Built for D2C ecommerce",
+    <Neg key="b-fit">A general-purpose, developer-first voice platform. You build the D2C logic yourself.</Neg>,
+    <Pos key="rx-fit"><strong className="text-ink">Purpose-built for D2C ecommerce.</strong> Failed deliveries, returns, and COD orders out of the box.</Pos>,
   ],
   [
-    "Takes orders on the call",
-    <Neg key="b-order">Possible with engineering. You build and maintain the ordering flow and POS integration.</Neg>,
-    <Pos key="rx-order"><strong className="text-ink">Takes the whole order.</strong> Modifiers and all, pushed into your POS, no build required.</Pos>,
+    "Handles objections on the call",
+    <Neg key="b-order">Possible with engineering. You build and maintain the returns flow and OMS integration.</Neg>,
+    <Pos key="rx-order"><strong className="text-ink">Handles the whole objection.</strong> Swap, credit, or discount, written into your OMS, no build required.</Pos>,
   ],
   [
     "Pricing model",
@@ -76,12 +76,12 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   ],
   [
     "Setup",
-    <Neg key="b-setup">Developer integration and configuration. Tough for a non-technical restaurant team.</Neg>,
-    <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your menu and hours, point your number at it, live in minutes.</Pos>,
+    <Neg key="b-setup">Developer integration and configuration. Tough for a non-technical D2C team.</Neg>,
+    <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your catalogue and policies, point your number at it, live in minutes.</Pos>,
   ],
   [
     "Languages",
-    <Neg key="b-lang">Standard TTS may struggle with non-English callers. No restaurant-tuned dialect support.</Neg>,
+    <Neg key="b-lang">Standard TTS may struggle with non-English callers. No D2C-tuned dialect support.</Neg>,
     <Pos key="rx-lang"><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more, at no extra charge.</Pos>,
   ],
   [
@@ -92,7 +92,7 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
     "Time to Go Live",
     <Neg key="b-time">Procurement, developer onboarding, and a custom integration build.</Neg>,
-    <Pos key="rx-time"><strong className="text-ink">Minutes, not weeks.</strong> Most restaurants go live the same day they sign up.</Pos>,
+    <Pos key="rx-time"><strong className="text-ink">Minutes, not weeks.</strong> Most brands go live the same day they sign up.</Pos>,
   ],
   [
     "Support",
@@ -110,9 +110,9 @@ export default function BlandAlternative() {
       <section className="section-tight text-center">
         <div className="wrap max-w-4xl">
           <span className="eyebrow justify-center">Comparison · Bland AI</span>
-          <h1 className="h-section mt-4">Bland AI Alternative: An AI Phone Host Built for Restaurants</h1>
+          <h1 className="h-section mt-4">Bland AI Alternative: Voice AI Built for D2C Brands</h1>
           <p className="lede mx-auto max-w-2xl mt-4">
-            No developer, no per-minute meter, no enterprise contract. RhythmiqCX is the done-for-you AI phone host that books tables and takes orders, on a flat plan from $149/mo.
+            No developer, no per-minute meter, no enterprise contract. RhythmiqCX is the done-for-you voice AI that rescues deliveries and confirms orders, on a flat plan from $149/mo.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-7">
             <Link href={BOOK_DEMO_URL} className="btn btn-accent">Book a free demo</Link>
@@ -123,17 +123,17 @@ export default function BlandAlternative() {
 
       <div className="wrap max-w-5xl pb-20 lg:pb-28 space-y-14">
         <section id="intro" className="text-center">
-          <h2 className="h-feature mb-3">Why Restaurants Look for a Bland AI Alternative</h2>
+          <h2 className="h-feature mb-3">Why D2C Brands Look for a Bland AI Alternative</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
             Bland AI is a capable, enterprise-grade conversational voice platform,
             but it comes with enterprise friction. Getting started takes developer
-            resources, the per-minute billing makes a busy service hard to forecast,
+            resources, the per-minute billing makes real call volume hard to forecast,
             and it is a toolkit rather than a finished product: you build the
-            reservation and ordering logic yourself. For a restaurant that just
-            needs the phone answered, tables booked, and orders taken, that is a lot
+            returns logic yourself. For a D2C brand that just
+            needs the call queue answered, deliveries rescued, and orders confirmed, that is a lot
             of overhead. RhythmiqCX delivers the same core capability, human-like
             voice that handles real calls, as a done-for-you product built for
-            hospitality, on a flat plan from $149/month with no developer required.
+            D2C ecommerce, on a flat plan from $149/month with no developer required.
           </p>
         </section>
 
@@ -168,17 +168,17 @@ export default function BlandAlternative() {
               <h3 className="text-lg font-semibold text-[#1F7A4D] mb-3 text-center">RhythmiqCX</h3>
               <h4 className="text-ink font-medium mb-2 flex items-center gap-2"><CheckCircle className="h-4 w-4 text-[#1F7A4D]" /> Pros</h4>
               <ul className="pl-5 list-disc text-ink2 space-y-1">
-                <li><strong className="text-ink">Built for restaurants</strong> reservations, orders, and menu Q&A out of the box</li>
-                <li><strong className="text-ink">Flat plans, no per-minute meter</strong> no surprise bill on a busy night</li>
+                <li><strong className="text-ink">Built for D2C ecommerce</strong> failed deliveries, returns, and COD orders out of the box</li>
+                <li><strong className="text-ink">Flat plans, no per-minute meter</strong> no surprise bill on a busy day</li>
                 <li><strong className="text-ink">No developer, no contract</strong> live in minutes</li>
-                <li><strong className="text-ink">Takes the whole order</strong> modifiers and all, into your POS</li>
+                <li><strong className="text-ink">Handles the whole objection</strong> swap, credit, or discount, into your OMS</li>
                 <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>
-                <li>1,000+ concurrent calls for the dinner rush</li>
+                <li>1,000+ concurrent calls for a sale-day spike</li>
               </ul>
               <h4 className="text-ink font-medium mt-4 mb-2 flex items-center gap-2"><XCircle className="h-4 w-4 text-ink3" /> Cons</h4>
               <ul className="pl-5 list-disc text-ink3 space-y-1">
                 <li>Not a build-it-yourself developer toolkit</li>
-                <li>Focused on hospitality, not a general-purpose platform</li>
+                <li>Focused on D2C ecommerce, not a general-purpose platform</li>
               </ul>
             </div>
             <div className="bg-white p-5 rounded-[14px]" style={{ border: "1px solid var(--line-soft)" }}>
@@ -194,8 +194,8 @@ export default function BlandAlternative() {
                 <li>Per-minute billing the cost is hard to predict at volume</li>
                 <li>Enterprise friction and contracts to get started</li>
                 <li>Requires a developer to set up and maintain</li>
-                <li>You build the reservation and ordering flows yourself</li>
-                <li>No restaurant-tuned Arabic, Spanish, or Hindi out of the box</li>
+                <li>You build the returns flows yourself</li>
+                <li>No D2C-tuned Arabic, Spanish, or Hindi out of the box</li>
               </ul>
             </div>
           </div>
@@ -204,16 +204,16 @@ export default function BlandAlternative() {
         <section id="why-rhythmiq" className="bg-paper2 p-6 lg:p-8 rounded-[14px] text-center">
           <h2 className="h-feature mb-3">Who Should Choose RhythmiqCX Over Bland AI?</h2>
           <p className="text-ink2 max-w-3xl mx-auto mb-4 leading-[1.6]">
-            If you run a restaurant and want the phone fully handled this week, not
+            If you run a D2C brand and want the call queue fully handled this week, not
             after a procurement cycle and a developer build, RhythmiqCX is the
-            answer. You get human-like voice, order taking, and 24/7 coverage
+            answer. You get human-like voice, order recovery, and 24/7 coverage
             without the developer dependency, the per-minute billing roulette, or
             the enterprise contract.
           </p>
           <ul className="list-disc text-ink2 text-left max-w-3xl mx-auto space-y-1 pl-5">
             <li><strong className="text-ink">No developer needed</strong> done-for-you, not a build project</li>
             <li><strong className="text-ink">Predictable cost</strong> flat plans, not a per-minute meter</li>
-            <li><strong className="text-ink">Restaurant-ready</strong> books tables and takes orders out of the box</li>
+            <li><strong className="text-ink">D2C-ready</strong> rescues deliveries and confirms orders out of the box</li>
             <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>
           </ul>
         </section>
@@ -222,8 +222,8 @@ export default function BlandAlternative() {
           <h2 className="h-feature mb-3">Conclusion</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
             Bland AI is built for large enterprises with developer teams. RhythmiqCX
-            is built for restaurants,{" "}
-            <strong className="text-ink">flat pricing, done-for-you, live in a day, and it actually takes orders.</strong>{" "}
+            is built for D2C brands,{" "}
+            <strong className="text-ink">flat pricing, done-for-you, live in a day, and it actually recovers orders.</strong>{" "}
             If you want a Bland AI alternative without the procurement process, the
             choice is clear.
           </p>

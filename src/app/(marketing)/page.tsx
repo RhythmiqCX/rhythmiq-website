@@ -19,20 +19,20 @@ import {
 } from "@/components/marketing/restaurant";
 
 export const metadata = generateMetadata({
-  title: "Rhythmiq: The AI Phone Host for Restaurants | Never Miss a Call",
+  title: "Rhythmiq: Voice AI for D2C — Rescue Failed Deliveries & Returns",
   description:
-    "Rhythmiq is the AI phone host for restaurants, answering every call 24/7, booking tables, taking orders, and answering guest questions in 12+ languages. Start free.",
+    "Rhythmiq is voice AI for D2C brands. It calls customers to rescue failed deliveries, confirm COD orders, turn returns into exchanges, and recover abandoned carts, 24/7 in 12+ languages. Start free.",
   keywords: [
-    "AI phone host for restaurants",
-    "restaurant phone answering service",
-    "AI reservations",
-    "restaurant voice AI",
-    "AI host restaurant",
-    "automated restaurant phone",
-    "take restaurant orders by phone AI",
-    "restaurant booking AI",
-    "never miss a call restaurant",
-    "AI maitre d",
+    "voice AI for D2C ecommerce",
+    "reduce RTO with voice AI",
+    "NDR reduction calling",
+    "COD confirmation calls",
+    "AI call for failed delivery",
+    "returns to exchange voice AI",
+    "reorder reminder calls",
+    "abandoned cart call AI",
+    "WISMO automation",
+    "AI outbound calling ecommerce",
   ],
   alternates: {
     canonical: "/",
@@ -49,7 +49,7 @@ const websiteSchema = {
   name: "Rhythmiq",
   url: "https://rhythmiqcx.com",
   description:
-    "The AI phone host for restaurants that answers every call, books tables, takes orders, and answers guest questions, 24/7 in 12+ languages.",
+    "Voice AI for D2C brands that calls customers to rescue failed deliveries, confirm COD orders, turn returns into exchanges, and recover abandoned carts, 24/7 in 12+ languages.",
   potentialAction: {
     "@type": "SearchAction",
     target: {

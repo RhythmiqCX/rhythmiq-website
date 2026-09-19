@@ -8,7 +8,7 @@ const ResolveFaster = () => {
         <Reveal className="mb-7">
           <span className="eyebrow">Answered in seconds</span>
           <h2 className="h-section mt-3.5 max-w-[18ch]">
-            Answer every guest in seconds, day or night
+            Answer every customer in seconds, day or night
           </h2>
         </Reveal>
         <Reveal delay={0.1}>

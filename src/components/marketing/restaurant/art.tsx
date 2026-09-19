@@ -13,8 +13,6 @@ const INK = "#191814";
 const INK3 = "#8B847A";
 const CORAL = "#E8643C";
 const CORAL2 = "#C9461F";
-const SOFT = "#F7D9C9";
-const CRUST = "#F2C7A0";
 
 const TINT = {
   sand: "#EAE2D4",
@@ -286,40 +284,18 @@ export const SprigArt = ({ className }: { className?: string }) => (
   </ArtBox>
 );
 
-/* --- Place setting (CompleteSolution) --- */
-export const PlaceSettingArt = ({ className }: { className?: string }) => (
+/* --- Parcel (CompleteSolution) --- */
+export const ParcelArt = ({ className }: { className?: string }) => (
   <ArtBox className={className} viewBox="0 0 220 220" tint={TINT.sand}>
-    <circle cx="116" cy="110" r="62" stroke={INK} strokeWidth="2.4" fill="none" />
-    <circle cx="116" cy="110" r="46" stroke={INK3} strokeWidth="1.4" fill="none" />
-    <g stroke={INK} strokeWidth="2.2" fill="none" strokeLinecap="round">
-      <line x1="30" y1="58" x2="30" y2="86" />
-      <line x1="38" y1="58" x2="38" y2="86" />
-      <line x1="46" y1="58" x2="46" y2="86" />
-      <path d="M30 86h16v10c0 6-4 8-8 8s-8-2-8-8z" />
-      <line x1="38" y1="104" x2="38" y2="168" />
-    </g>
-    <g stroke={INK} strokeWidth="2.2" fill="none" strokeLinecap="round">
-      <path d="M196 56c8 6 8 30 0 46l-4 0 0-46z" />
-      <line x1="194" y1="102" x2="194" y2="168" />
-    </g>
-    {/* pizza on the plate */}
-    <circle cx="116" cy="110" r="33" fill={CRUST} stroke={CORAL2} strokeWidth="2" />
-    <circle cx="116" cy="110" r="27" fill={CORAL} />
-    <g stroke={SOFT} strokeWidth="1.3" opacity="0.65">
-      <line x1="89" y1="110" x2="143" y2="110" />
-      <line x1="96.9" y1="90.9" x2="135.1" y2="129.1" />
-      <line x1="116" y1="83" x2="116" y2="137" />
-      <line x1="135.1" y1="90.9" x2="96.9" y2="129.1" />
-    </g>
-    <g fill={CORAL2}>
-      <circle cx="107" cy="103" r="3.2" />
-      <circle cx="124" cy="100" r="3.2" />
-      <circle cx="128" cy="115" r="3.2" />
-      <circle cx="109" cy="120" r="3.2" />
-      <circle cx="119" cy="111" r="3.2" />
-      <circle cx="103" cy="113" r="3.2" />
-      <circle cx="122" cy="123" r="3.2" />
-    </g>
+    <rect x="46" y="62" width="128" height="112" rx="6" stroke={INK} strokeWidth="2.4" fill="none" />
+    <line x1="46" y1="102" x2="174" y2="102" stroke={INK3} strokeWidth="1.4" />
+    <line x1="110" y1="62" x2="110" y2="174" stroke={CORAL} strokeWidth="8" opacity="0.9" />
+    <line x1="46" y1="102" x2="174" y2="102" stroke={CORAL} strokeWidth="8" opacity="0.9" />
+    {/* shipping label */}
+    <rect x="64" y="118" width="56" height="38" rx="2" fill="#FAF8F3" stroke={CORAL2} strokeWidth="1.6" />
+    <line x1="72" y1="129" x2="112" y2="129" stroke={CORAL2} strokeWidth="1.6" />
+    <line x1="72" y1="138" x2="104" y2="138" stroke={CORAL2} strokeWidth="1.6" />
+    <line x1="72" y1="147" x2="108" y2="147" stroke={CORAL2} strokeWidth="1.6" />
   </ArtBox>
 );
 
@@ -384,23 +360,52 @@ export const SoundArcsArt = ({ className }: { className?: string }) => (
   </ArtBox>
 );
 
-/* --- Wine glass (Testimonial) --- */
-export const WineGlassArt = ({ className }: { className?: string }) => (
+/* --- Return, exchanged (Testimonial) --- */
+export const ExchangeArt = ({ className }: { className?: string }) => (
   <ArtBox className={className} viewBox="0 0 150 220" tint={TINT.coral}>
-    <path d="M44 30 Q44 92 75 96 Q106 92 106 30 Z" stroke={INK} strokeWidth="2.4" fill="none" strokeLinejoin="round" />
-    <path d="M52 56 Q56 80 75 84 Q94 80 98 56" fill={CORAL} opacity="0.16" />
-    <path d="M52 56 Q75 70 98 56" stroke={CORAL} strokeWidth="2.2" fill="none" />
-    <line x1="75" y1="96" x2="75" y2="170" stroke={INK} strokeWidth="2.4" strokeLinecap="round" />
-    <path d="M50 182 Q75 172 100 182" stroke={INK} strokeWidth="2.4" fill="none" strokeLinecap="round" />
+    <rect x="35" y="62" width="80" height="80" rx="6" stroke={INK} strokeWidth="2.4" fill="none" />
+    <line x1="35" y1="102" x2="115" y2="102" stroke={INK} strokeWidth="1.6" opacity="0.55" />
+    <line x1="75" y1="62" x2="75" y2="142" stroke={CORAL} strokeWidth="6" opacity="0.9" />
+    <path d="M42 168 Q75 194 108 168" stroke={INK} strokeWidth="2.4" fill="none" strokeLinecap="round" />
+    <path d="M108 168 l-12 -3 M108 168 l-3 12" stroke={INK} strokeWidth="2.4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+  </ArtBox>
+);
+
+/* --- Outbound call (Hero) --- */
+export const PhoneCallArt = ({ className }: { className?: string }) => (
+  <ArtBox className={className} viewBox="0 0 150 200" tint={TINT.sky}>
+    <rect x="46" y="30" width="58" height="140" rx="14" stroke={INK} strokeWidth="2.4" fill="none" />
+    <line x1="66" y1="42" x2="84" y2="42" stroke={INK} strokeWidth="2.4" strokeLinecap="round" />
+    <circle cx="75" cy="152" r="5" fill={INK} />
+    <path d="M112 80 a30 30 0 0 1 0 40" stroke={CORAL} strokeWidth="2.6" fill="none" strokeLinecap="round" />
+    <path d="M124 68 a48 48 0 0 1 0 64" stroke={CORAL} strokeWidth="2.2" fill="none" strokeLinecap="round" opacity="0.7" />
+  </ArtBox>
+);
+
+/* --- Recovered cart (Hero) --- */
+export const CartCheckArt = ({ className }: { className?: string }) => (
+  <ArtBox className={className} viewBox="0 0 200 180" tint={TINT.paper2}>
+    <path
+      d="M30 34h20l14 84h84l14-56H68"
+      stroke={INK}
+      strokeWidth="2.4"
+      fill="none"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+    <circle cx="76" cy="146" r="9" stroke={INK} strokeWidth="2.2" fill="none" />
+    <circle cx="140" cy="146" r="9" stroke={INK} strokeWidth="2.2" fill="none" />
+    <circle cx="150" cy="60" r="22" fill={CORAL} />
+    <path d="M140 60 l7 8 l14 -16" stroke="#FAF8F3" strokeWidth="3.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
   </ArtBox>
 );
 
 /* --- Plug board (Integrations: "plugs into the stack you already run") --- */
 const PLUGS = [
-  { sx: 76, label: "POS" },
-  { sx: 128, label: "Reserve" },
+  { sx: 76, label: "Shopify" },
+  { sx: 128, label: "OMS" },
   { sx: 180, label: "CRM" },
-  { sx: 232, label: "Delivery" },
+  { sx: 232, label: "WMS" },
 ];
 const PLUG_CONNECTED = 1;
 

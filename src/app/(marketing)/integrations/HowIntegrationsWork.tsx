@@ -6,21 +6,21 @@ const steps = [
     step: "01",
     title: "Connect",
     description:
-      "Link your POS, booking system, and CRM in a few clicks. No engineer required for the common stacks, and our team handles the rest.",
+      "Link your store platform, OMS/WMS, and CRM in a few clicks. No engineer required for the common stacks, and our team handles the rest.",
   },
   {
     icon: RefreshCw,
     step: "02",
     title: "Sync",
     description:
-      "Rhythmiq reads your menu, your tables, and your hours, then writes bookings and orders back in real time. Both sides always match.",
+      "Rhythmiq reads your catalogue, your return policy, and your delivery zones, then writes order updates and exchanges back in real time. Both sides always match.",
   },
   {
     icon: Zap,
     step: "03",
     title: "Go live",
     description:
-      "Your AI host starts answering with full context from day one. Every call updates your tools automatically, with nothing to copy over by hand.",
+      "Your AI agent starts calling with full context from day one. Every call updates your tools automatically, with nothing to copy over by hand.",
   },
 ];
 
@@ -32,7 +32,7 @@ const HowIntegrationsWork = () => {
           <span className="eyebrow justify-center">How it works</span>
           <h2 className="h-section text-ink mt-3">Connect once, then forget it</h2>
           <p className="lede mt-3 max-w-xl mx-auto">
-            Most restaurants are live within a day. After that, the sync runs
+            Most brands are live within a day. After that, the sync runs
             quietly in the background on every call.
           </p>
         </div>

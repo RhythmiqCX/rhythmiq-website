@@ -17,16 +17,17 @@ const Hero = () => {
         {/* Main Heading */}
         <div className="space-y-4">
           <span className="eyebrow justify-center">
-            Redefining Customer Conversations with the Power of Voice AI
+            Voice AI Built for D2C Order Recovery
           </span>
           <h1 className="h-section text-ink">
-            AI Phone Receptionist &amp; <br /> Voice AI Agents
+            Voice AI Agents for <br /> D2C Ecommerce
           </h1>
         </div>
 
         <p className="lede leading-relaxed max-w-2xl">
-          Deploy conversational AI voice agents that answer every customer call
-          24/7 no hold queues, no missed leads. Human-like accuracy, from $149/mo.
+          Deploy conversational AI voice agents that call customers to rescue
+          failed deliveries, confirm COD orders, and turn returns into exchanges.
+          Human-like accuracy, from $149/mo.
         </p>
 
         {/* Stats bar */}

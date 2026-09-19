@@ -1,7 +1,7 @@
 import Reveal from "./reveal";
 
 const KPIS: { value: React.JSX.Element; label: string }[] = [
-  { value: <span className="hl">0</span>, label: "Missed calls, ever" },
+  { value: <span className="hl">0</span>, label: "Delivery windows missed, ever" },
   {
     value: (
       <>
@@ -10,7 +10,7 @@ const KPIS: { value: React.JSX.Element; label: string }[] = [
     ),
     label: "Average pickup time",
   },
-  { value: <>24/7</>, label: "Always answering" },
+  { value: <>24/7</>, label: "Always calling" },
   {
     value: (
       <>
@@ -23,14 +23,14 @@ const KPIS: { value: React.JSX.Element; label: string }[] = [
 
 const GuestIntelligence = () => {
   return (
-    <section className="section bg-dark text-onDark" aria-label="Guest intelligence">
+    <section className="section bg-dark text-onDark" aria-label="Customer intelligence">
       <div className="wrap grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-[72px] items-center">
         <Reveal>
-          <span className="eyebrow !text-onDark2">Live guest intelligence</span>
-          <h2 className="h-section my-3.5 text-onDark">Know your guests before they walk in</h2>
+          <span className="eyebrow !text-onDark2">Live customer intelligence</span>
+          <h2 className="h-section my-3.5 text-onDark">Know your customer before you dial</h2>
           <p className="lede !text-onDark2">
-            Rhythmiq remembers regulars, allergies, favorite tables, and last visit, so every call
-            feels personal and every service runs smoother.
+            Rhythmiq remembers repeat buyers, past returns, and order history, so every call feels
+            personal and every follow-up lands right.
           </p>
         </Reveal>
         <Reveal delay={0.12} className="kpi-grid frame frame-light">

@@ -67,7 +67,7 @@ export const DEV_WORK = [
     id: "rhythmiq",
     image: "/images/dev/work-rhythmiq.png",
     title: "Rhythmiq",
-    caption: "The AI phone host for restaurants. Answers every call, 24/7.",
+    caption: "Voice AI for D2C brands. Rescues failed deliveries, 24/7.",
     href: "https://rhythmiqcx.com",
   },
   {

@@ -5,36 +5,36 @@ import { cn } from "@/lib";
 
 const faqs = [
   {
-    q: "How realistic does the AI phone receptionist sound?",
+    q: "How realistic does the voice AI sound?",
     a: "RhythmiqCX uses Sarvam Bulbul v2 neural TTS one of the most advanced Indian-English voice models available. Callers consistently describe the voice as natural and human-like, with configurable pitch and pace. Voice cloning is also available to match your specific brand persona.",
   },
   {
-    q: "What languages does Voice AI support?",
-    a: "The default voice model (Sarvam Saarika + Bulbul) is optimised for Indian-English with native accent support. The platform covers 60+ languages at the text level. More regional voice personas (Hindi, Tamil, Telugu, and SEA languages) are actively on the roadmap.",
+    q: "Can it handle a customer switching between Hindi and English mid-sentence?",
+    a: "Yes. The default voice model (Sarvam Saarika + Bulbul) is optimised for Indian-English with native accent support, and the platform covers 60+ languages at the text level, including code-switching between English and Hindi, Arabic, or Spanish within the same call.",
   },
   {
-    q: "How much does an AI phone receptionist cost?",
-    a: "RhythmiqCX plans start at $149/month, flat and predictable, with no per-minute overages. Per-minute platforms like Retell AI ($0.07+/min) and Bland ($0.09+/min) get unpredictable fast on a busy service. With Rhythmiq you know your bill before the month starts, and order taking plus 12+ languages are included.",
+    q: "How much does voice AI for D2C cost?",
+    a: "RhythmiqCX plans start at $149/month, flat and predictable, with no per-minute overages. Generic per-minute platforms get unpredictable fast once call volume grows. With Rhythmiq you know your bill before the month starts, and returns-to-exchange handling plus 12+ languages are included.",
   },
   {
     q: "How long does setup take?",
-    a: "Most deployments go live within a day. Configure your AI persona, connect your phone number or embed the widget, and upload your knowledge base. No coding required  our no-code setup works with most telephony providers and CRM stacks.",
+    a: "Most deployments go live within a day. Configure your AI agent, connect your store platform and phone number, and upload your catalogue and return policy. No coding required, our no-code setup works with most ecommerce stacks.",
   },
   {
-    q: "Can the AI handle complex customer queries?",
-    a: "Yes, up to a threshold. The AI is trained on your knowledge base for FAQs, booking, and routine queries. When confidence is low, it automatically transfers the caller to a live agent  with the full transcript  so the customer never needs to repeat themselves.",
+    q: "Can the AI handle a customer's objection, not just a script?",
+    a: "Yes, up to a threshold. The AI is trained on your catalogue and policies to offer real alternatives like a size swap or store credit. When confidence is low, it automatically transfers the caller to a live agent, with the full transcript, so the customer never needs to repeat themselves.",
   },
   {
     q: "Is call data secure and GDPR/HIPAA compliant?",
     a: "Yes. All calls are encrypted in transit and at rest. In-region data storage is available. Full audit logs are maintained for GDPR and HIPAA-aligned compliance. Enterprise deployments can request a DPA.",
   },
   {
-    q: "Does it work with our existing phone system?",
-    a: "Yes. A REST API connects to most telephony providers and IVR systems. No-code connectors are available for common platforms, and custom integrations typically take a few hours.",
+    q: "Does it work with our existing store platform?",
+    a: "Yes. A REST API connects to Shopify, WooCommerce, most OMS/WMS platforms, and CRM stacks. No-code connectors are available for common platforms, and custom integrations typically take a few hours.",
   },
   {
-    q: "What is the difference between RhythmiqCX and a traditional IVR?",
-    a: "Traditional IVR forces callers through rigid press-1 menus. RhythmiqCX uses natural language understanding  callers simply speak their request in plain English (or Hindi, or 60+ other languages) and the AI responds conversationally. No menus, no frustration.",
+    q: "What is the difference between RhythmiqCX and a generic voice AI platform?",
+    a: "Generic dev platforms give you a script that reads well until a customer says something unexpected. RhythmiqCX is trained on your catalogue and return policy, so it can actually offer a swap, confirm a COD order, or reschedule a delivery, in plain English, Hindi, or 60+ other languages. No dead ends, no forced handoff.",
   },
 ];
 
@@ -46,7 +46,7 @@ const VoiceAIFAQ = () => {
       <div className="text-center mb-10">
         <span className="eyebrow justify-center">FAQ</span>
         <h2 className="h-feature text-ink mt-3">
-          Common Questions About AI Phone Receptionists
+          Common Questions About Voice AI for D2C
         </h2>
       </div>
 

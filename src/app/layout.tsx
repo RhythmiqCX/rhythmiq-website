@@ -22,7 +22,7 @@ const organizationSchema = {
     url: "https://rhythmiqcx.com/contact-us",
   },
   description:
-    "RhythmiqCX is the AI phone host for restaurants. It answers every call, books tables, takes orders, and answers guest questions 24/7 in 12+ languages.",
+    "RhythmiqCX is voice AI for D2C ecommerce. It calls customers to rescue failed deliveries, confirm COD orders, turn returns into exchanges, and recover abandoned carts, 24/7 in 12+ languages.",
 };
 
 export const metadata = generateMetadata();

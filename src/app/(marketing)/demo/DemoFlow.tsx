@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { cn } from "@/lib";
 import { APP_LOGIN_URL } from "@/constants/links";
 import {
@@ -12,31 +13,31 @@ import {
 
 type Step = "scenario" | "details" | "preview";
 
-type RestaurantInfo = {
+type BrandInfo = {
   name: string;
-  cuisine: string;
+  category: string;
   city: string;
-  busyHours: string;
-  tone: string;
+  orderValue: string;
+  channel: string;
 };
 
-const EMPTY_FORM: RestaurantInfo = {
+const EMPTY_FORM: BrandInfo = {
   name: "",
-  cuisine: "",
+  category: "",
   city: "",
-  busyHours: "",
-  tone: "",
+  orderValue: "",
+  channel: "",
 };
 
 const STEPS: { key: Step; label: string }[] = [
   { key: "scenario", label: "Scenario" },
-  { key: "details", label: "Your restaurant" },
+  { key: "details", label: "Your brand" },
   { key: "preview", label: "Preview" },
 ];
 
 function renderLine(line: TranscriptLine, name: string) {
-  const restaurant = name.trim() || "your restaurant";
-  const text = line.text.replace("{restaurant}", restaurant);
+  const brand = name.trim() || "your brand";
+  const text = line.text.replace("{brand}", brand);
   if (line.hl && text.includes(line.hl)) {
     const [before, after] = text.split(line.hl);
     return (
@@ -51,9 +52,13 @@ function renderLine(line: TranscriptLine, name: string) {
 }
 
 const DemoFlow = () => {
+  const searchParams = useSearchParams();
+  const preselected = searchParams?.get("scenario") ?? null;
   const [step, setStep] = useState<Step>("scenario");
-  const [scenarioId, setScenarioId] = useState<string | null>(null);
-  const [form, setForm] = useState<RestaurantInfo>(EMPTY_FORM);
+  const [scenarioId, setScenarioId] = useState<string | null>(
+    DEMO_SCENARIOS.some((s) => s.id === preselected) ? preselected : null,
+  );
+  const [form, setForm] = useState<BrandInfo>(EMPTY_FORM);
 
   const scenario: DemoScenario | undefined = DEMO_SCENARIOS.find(
     (s) => s.id === scenarioId,
@@ -106,7 +111,7 @@ const DemoFlow = () => {
                 <div className="text-center mb-6">
                   <h2 className="h-section">Pick a moment to see it handled</h2>
                   <p className="lede mt-3 max-w-[48ch] mx-auto">
-                    These are the calls that slip through on a busy service. Choose
+                    These are the calls that quietly cost D2C brands money every day. Choose
                     one and watch how Rhythmiq would take it.
                   </p>
                 </div>
@@ -160,13 +165,13 @@ const DemoFlow = () => {
               </div>
             )}
 
-            {/* STEP 2: restaurant details */}
+            {/* STEP 2: brand details */}
             {step === "details" && (
               <div className="max-w-xl mx-auto">
                 <div className="text-center mb-6">
-                  <h2 className="h-section">Tell us about your place</h2>
+                  <h2 className="h-section">Tell us about your brand</h2>
                   <p className="lede mt-3 max-w-[44ch] mx-auto">
-                    Just enough to make the preview feel like your restaurant. Only
+                    Just enough to make the preview feel like your brand. Only
                     the name is required.
                   </p>
                 </div>
@@ -252,7 +257,7 @@ const DemoFlow = () => {
                       <i />
                     </div>
                     <span className="addr">
-                      {(form.name.trim() || "your restaurant").toLowerCase()} · live call
+                      {(form.name.trim() || "your brand").toLowerCase()} · live call
                     </span>
                   </div>
                   <div className="p-5 sm:p-6">
@@ -276,7 +281,7 @@ const DemoFlow = () => {
                 <div className="text-center mt-8 max-w-xl mx-auto">
                   <h3 className="h-feature">Want to hear this on your own number?</h3>
                   <p className="text-ink2 mt-2 leading-relaxed">
-                    That was a preview. Create your account to set up your AI host
+                    That was a preview. Create your account to set up your AI agent
                     and take a real call from your own phone.
                   </p>
                   <div className="flex gap-3 justify-center flex-wrap mt-5">

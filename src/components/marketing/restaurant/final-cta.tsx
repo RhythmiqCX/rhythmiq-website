@@ -9,9 +9,9 @@ const FinalCTA = () => {
         <Reveal>
           <span className="eyebrow justify-center">Get started</span>
           <h2 className="h-display mt-[18px]">
-            Never miss
+            Never lose
             <br />
-            another call.
+            another order.
           </h2>
           <div className="flex gap-3 justify-center flex-wrap mt-7">
             <Link href={BOOK_DEMO_URL} className="btn btn-accent">

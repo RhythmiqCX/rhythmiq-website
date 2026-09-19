@@ -1,6 +1,10 @@
-// Data for the interactive /demo funnel. The `{restaurant}` token in transcript
+// Data for the interactive /demo funnel. The `{brand}` token in transcript
 // lines is replaced with the name the visitor enters (falls back to "your
-// restaurant"). `hl` is a substring of `text` that gets the coral highlight.
+// brand"). `hl` is a substring of `text` that gets the coral highlight.
+//
+// These six scenarios are the locked MVP use cases: failed delivery rescue,
+// return-to-exchange, COD confirmation + upsell, reorder reminder, WISMO
+// (inbound), and abandoned cart recovery.
 
 export type Tint = "default" | "sky" | "coral" | "sand" | "ink";
 
@@ -22,114 +26,135 @@ export type DemoScenario = {
 
 export const DEMO_SCENARIOS: DemoScenario[] = [
     {
-        id: "missed-rush",
-        title: "Missed dinner-rush call",
-        blurb: "It's 7:42 on a Friday and every server is slammed. The phone still gets answered.",
-        tag: "7:42 PM · Friday rush",
+        id: "failed-delivery",
+        title: "Failed delivery rescue",
+        blurb: "The courier tried once, nobody was in. A call fixes it before it ships back.",
+        tag: "Outbound · ~45s",
         tint: "sand",
         transcript: [
-            { who: "caller", text: "Hi, do you have a table for four tonight around eight?" },
             {
                 who: "ai",
-                text: "Thanks for calling {restaurant}. We can seat four at eight fifteen. Want me to hold it?",
-                hl: "eight fifteen",
+                text: "Hi, this is {brand}. Our courier tried delivering your order this morning but couldn't reach you. When are you around today?",
+                hl: "couldn't reach you",
             },
-            { who: "caller", text: "Yes please, under Marcus." },
+            { who: "caller", text: "Sorry, I was out. I'll be home after 6." },
             {
                 who: "ai",
-                text: "Done, Marcus. Table for four at eight fifteen, and I just texted you a confirmation. See you tonight.",
+                text: "Perfect, I've rescheduled for today after 6 PM and texted you the update. Anything else before I let you go?",
+                hl: "today after 6 PM",
             },
+            { who: "caller", text: "No, that's it. Thanks." },
         ],
-        outcome: "Booked · table for 4 · 8:15 PM",
+        outcome: "Delivery rescheduled · saved from RTO",
     },
     {
-        id: "reservation-change",
-        title: "Reservation change",
-        blurb: "A guest needs to grow their party at the last minute. No host time needed.",
-        tag: "2:10 PM · change request",
-        tint: "sky",
-        transcript: [
-            { who: "caller", text: "I booked for six tomorrow, but we are now eight." },
-            {
-                who: "ai",
-                text: "No problem. I found your booking and moved you to eight guests at the same time. You are all set.",
-                hl: "moved you to eight",
-            },
-            { who: "caller", text: "Amazing, thank you." },
-            {
-                who: "ai",
-                text: "Anytime. I sent the updated confirmation by text. See you tomorrow.",
-            },
-        ],
-        outcome: "Updated · party of 8",
-    },
-    {
-        id: "takeout-order",
-        title: "Takeout order",
-        blurb: "A phone order goes straight to the kitchen with the total read back, no notepad.",
-        tag: "12:30 PM · takeout",
+        id: "return-to-exchange",
+        title: "Return turned into an exchange",
+        blurb: "A refund request becomes a swap, no lost sale and no double shipping cost.",
+        tag: "Outbound · ~90s",
         tint: "coral",
         transcript: [
-            { who: "caller", text: "Can I get two margherita pizzas and a caesar salad for pickup?" },
+            { who: "caller", text: "I want to return this dress, it's too small." },
             {
                 who: "ai",
-                text: "You got it. Two margherita pizzas and one caesar salad, ready in twenty minutes. That comes to thirty four dollars.",
-                hl: "ready in twenty minutes",
+                text: "Sorry about that. I can send the next size up today at no extra charge, or give you store credit plus 200 rupees extra to spend. Which would you prefer?",
+                hl: "next size up today at no extra charge",
             },
-            { who: "caller", text: "Perfect." },
+            { who: "caller", text: "Oh, I didn't realize that was an option. Send the next size up." },
             {
                 who: "ai",
-                text: "Great. Your order is in with the kitchen and I texted you the pickup details.",
+                text: "Done, the medium ships today and the return pickup is scheduled for the same visit.",
             },
         ],
-        outcome: "Order sent to POS · $34",
+        outcome: "Exchanged · sale kept, both shipping legs saved",
     },
     {
-        id: "after-hours",
-        title: "After-hours booking",
-        blurb: "An 11 PM call still turns into a Saturday reservation while you sleep.",
-        tag: "11:18 PM · after hours",
-        tint: "ink",
+        id: "cod-upsell",
+        title: "COD confirmation + upsell",
+        blurb: "One call prevents a loss and adds revenue at the same time.",
+        tag: "Outbound · ~60s",
+        tint: "sky",
         transcript: [
-            { who: "caller", text: "Are you still open? I wanted to book for Saturday." },
             {
                 who: "ai",
-                text: "We just closed for the night, but I am happy to book that now. How many and what time on Saturday?",
-                hl: "happy to book that now",
+                text: "Hi, calling to confirm your cash-on-delivery order for the shampoo, arriving Thursday. Can you confirm you'll be home to receive it?",
+                hl: "confirm your cash-on-delivery order",
             },
-            { who: "caller", text: "Six people at seven." },
+            { who: "caller", text: "Yes, that's right." },
             {
                 who: "ai",
-                text: "Booked, six at seven on Saturday. Your confirmation is on its way by text. Have a good night.",
+                text: "Great. Since you're getting the shampoo anyway, want the matching conditioner in the same parcel? No extra delivery, and I can knock 100 rupees off.",
+                hl: "no extra delivery",
             },
+            { who: "caller", text: "Sure, add it." },
         ],
-        outcome: "Booked after hours · 6 at 7 PM Sat",
+        outcome: "COD confirmed · +1 item added",
     },
     {
-        id: "dietary",
-        title: "Allergy or dietary question",
-        blurb: "A careful guest gets a real answer from your menu, then a table.",
-        tag: "4:05 PM · dietary question",
+        id: "reorder-reminder",
+        title: "Reorder reminder",
+        blurb: "A month's supply is running out. A quick call brings in new revenue, not saved losses.",
+        tag: "Outbound · ~45s",
         tint: "sand",
         transcript: [
-            { who: "caller", text: "Do you have gluten free pasta options?" },
             {
                 who: "ai",
-                text: "We do. We have three gluten free pastas and the kitchen preps them separately to avoid cross contact. Want me to hold a table so you can try them?",
-                hl: "three gluten free pastas",
+                text: "Hi, this is {brand}. You ordered a month's supply of protein powder about four weeks ago, it's probably running low. Want me to send another one out today?",
+                hl: "running low",
             },
-            { who: "caller", text: "Sure, two of us at six thirty." },
+            { who: "caller", text: "Actually yes, I was meaning to reorder." },
             {
                 who: "ai",
-                text: "Done, two at six thirty. I noted the gluten free request for the kitchen.",
+                text: "Done, same order, same address, shipping today. You'll get a text with tracking shortly.",
             },
         ],
-        outcome: "Booked + note to kitchen",
+        outcome: "Reordered · new revenue",
+    },
+    {
+        id: "wismo-inbound",
+        title: "“Where is my order” (inbound)",
+        blurb: "The most common reason customers call any online store, answered instantly.",
+        tag: "Inbound · they call us",
+        tint: "ink",
+        transcript: [
+            { who: "caller", text: "Hi, where's my order? It was supposed to arrive yesterday." },
+            {
+                who: "ai",
+                text: "Let me check. It shipped Tuesday and is out for delivery today by 6 PM. Want me to text you the tracking link?",
+                hl: "out for delivery today by 6 PM",
+            },
+            { who: "caller", text: "Yes please." },
+            {
+                who: "ai",
+                text: "Sent. If it doesn't arrive by tonight, call this number back and I'll flag it right away.",
+            },
+        ],
+        outcome: "Answered instantly · tracking sent",
+    },
+    {
+        id: "abandoned-cart",
+        title: "Abandoned cart recovery",
+        blurb: "A call reaches the half of customers who never open a recovery email.",
+        tag: "Outbound · ~60s",
+        tint: "coral",
+        transcript: [
+            {
+                who: "ai",
+                text: "Hi, this is {brand}, an AI assistant calling on their behalf. I noticed you were looking at the blue shirt earlier, it's the last one in your size. Want me to hold it and knock 10% off?",
+                hl: "last one in your size",
+            },
+            { who: "caller", text: "Oh, I forgot about that. Yes, go ahead." },
+            {
+                who: "ai",
+                text: "Done, it's held with the discount applied and I've texted you the checkout link.",
+            },
+        ],
+        outcome: "Cart recovered · 10% off applied",
     },
 ];
 
 export type DemoFormField = {
-    name: "name" | "cuisine" | "city" | "busyHours" | "tone";
+    name: "name" | "category" | "city" | "orderValue" | "channel";
     label: string;
     placeholder?: string;
     required?: boolean;
@@ -137,13 +162,13 @@ export type DemoFormField = {
 };
 
 export const DEMO_FORM_FIELDS: DemoFormField[] = [
-    { name: "name", label: "Restaurant name", placeholder: "Bella Trattoria", required: true },
+    { name: "name", label: "Brand name", placeholder: "Northgate Skincare", required: true },
     {
-        name: "cuisine",
-        label: "Cuisine / type",
-        options: ["Italian", "Indian", "Japanese", "Mexican", "Cafe", "Steakhouse", "Other"],
+        name: "category",
+        label: "Product category",
+        options: ["Fashion & apparel", "Beauty & personal care", "Electronics", "Home & kitchen", "Food & FMCG", "Jewellery", "Other"],
     },
-    { name: "city", label: "City", placeholder: "Austin, TX" },
-    { name: "busyHours", label: "Typical busy hours", placeholder: "Thu to Sat, 6 to 9 PM" },
-    { name: "tone", label: "Greeting tone", options: ["Warm", "Upscale", "Casual", "Concise"] },
+    { name: "city", label: "Primary market", placeholder: "India, UAE, USA" },
+    { name: "orderValue", label: "Typical order value", placeholder: "₹1,200" },
+    { name: "channel", label: "Where most orders come from", options: ["Own website", "Shopify", "WooCommerce", "Marketplace", "Other"] },
 ];

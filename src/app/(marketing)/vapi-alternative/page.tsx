@@ -6,16 +6,16 @@ import JsonLd from "@/components/global/JsonLd";
 import { BOOK_DEMO_URL } from "@/constants/links";
 
 export const metadata = generateMetadata({
-  title: "Vapi Alternative for Restaurants | RhythmiqCX All-in-One AI Phone Host",
+  title: "Vapi Alternative for D2C Brands | RhythmiqCX All-in-One Voice AI",
   description:
-    "Vapi is middleware you wire to 4–6 vendors, billed per minute. RhythmiqCX is the all-in-one, done-for-you AI phone host for restaurants: books tables, takes orders, 12+ languages, one vendor, flat plans from $149/mo.",
+    "Vapi is middleware you wire to 4–6 vendors, billed per minute. RhythmiqCX is the all-in-one, done-for-you voice AI for D2C brands: rescues failed deliveries, confirms COD orders, turns returns into exchanges, 12+ languages, one vendor, flat plans from $149/mo.",
   keywords: [
     "Vapi alternative",
-    "Vapi alternative for restaurants",
+    "Vapi alternative for D2C ecommerce",
     "RhythmiqCX vs Vapi",
-    "all-in-one AI phone host",
-    "restaurant voice AI",
-    "AI that takes orders over the phone",
+    "all-in-one voice AI",
+    "D2C voice AI",
+    "AI that confirms COD orders",
   ],
   alternates: {
     canonical: "/vapi-alternative",
@@ -29,9 +29,9 @@ export const metadata = generateMetadata({
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Vapi Alternative: RhythmiqCX All-in-One AI Phone Host for Restaurants",
+  headline: "Vapi Alternative: RhythmiqCX All-in-One Voice AI for D2C Brands",
   description:
-    "Side-by-side comparison of RhythmiqCX and Vapi covering restaurant fit, order taking, all-in pricing, vendor complexity, and languages.",
+    "Side-by-side comparison of RhythmiqCX and Vapi covering D2C fit, order recovery, all-in pricing, vendor complexity, and languages.",
   url: "https://rhythmiqcx.com/vapi-alternative",
   author: { "@type": "Organization", name: "RhythmiqCX" },
   publisher: {
@@ -60,14 +60,14 @@ const Neg = ({ children }: { children: React.ReactNode }) => (
 
 const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
-    "Built for restaurants",
-    <Neg key="v-fit">A developer middleware layer for any use case. You build the restaurant logic yourself.</Neg>,
-    <Pos key="rx-fit"><strong className="text-ink">Purpose-built for restaurants.</strong> Reservations, orders, and menu questions out of the box.</Pos>,
+    "Built for D2C ecommerce",
+    <Neg key="v-fit">A developer middleware layer for any use case. You build the D2C logic yourself.</Neg>,
+    <Pos key="rx-fit"><strong className="text-ink">Purpose-built for D2C ecommerce.</strong> Failed deliveries, returns, and COD orders handled out of the box.</Pos>,
   ],
   [
-    "Takes orders on the call",
+    "Handles objections on the call",
     <Neg key="v-order">Possible if you build it, across your own LLM, TTS, STT, and telephony vendors.</Neg>,
-    <Pos key="rx-order"><strong className="text-ink">Takes the whole order.</strong> Modifiers and all, pushed into your POS, no build required.</Pos>,
+    <Pos key="rx-order"><strong className="text-ink">Handles the whole objection.</strong> Swap, credit, or discount, written into your OMS, no build required.</Pos>,
   ],
   [
     "True all-in pricing",
@@ -81,12 +81,12 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   ],
   [
     "Setup",
-    <Neg key="v-setup">Developer-first. A non-technical restaurant team can't configure or maintain it.</Neg>,
-    <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your menu and hours, point your number at it, live in minutes.</Pos>,
+    <Neg key="v-setup">Developer-first. A non-technical D2C team can't configure or maintain it.</Neg>,
+    <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your catalogue and policies, point your number at it, live in minutes.</Pos>,
   ],
   [
     "Languages",
-    <Neg key="v-lang">Depends on the TTS vendor you wire in. No restaurant-tuned dialect support out of the box.</Neg>,
+    <Neg key="v-lang">Depends on the TTS vendor you wire in. No D2C-tuned dialect support out of the box.</Neg>,
     <Pos key="rx-lang"><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more, at no extra charge.</Pos>,
   ],
   [
@@ -112,7 +112,7 @@ export default function VapiAlternative() {
           <span className="eyebrow justify-center">Comparison · Vapi</span>
           <h1 className="h-section mt-4">Vapi Alternative: One Platform vs Four Vendors</h1>
           <p className="lede mx-auto max-w-2xl mt-4">
-            Vapi wires together 4–6 separate vendors and bills $0.13–$0.31/min. RhythmiqCX is the all-in-one, done-for-you AI phone host for restaurants, flat from $149/mo.
+            Vapi wires together 4–6 separate vendors and bills $0.13–$0.31/min. RhythmiqCX is the all-in-one, done-for-you voice AI for D2C brands, flat from $149/mo.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-7">
             <Link href={BOOK_DEMO_URL} className="btn btn-accent">Book a free demo</Link>
@@ -123,17 +123,17 @@ export default function VapiAlternative() {
 
       <div className="wrap max-w-5xl pb-20 lg:pb-28 space-y-14">
         <section id="intro" className="text-center">
-          <h2 className="h-feature mb-3">The Hidden Cost of Vapi for Restaurants</h2>
+          <h2 className="h-feature mb-3">The Hidden Cost of Vapi for D2C Brands</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
             Vapi is marketed as a voice-AI platform, but it is really a middleware
             layer that connects separate vendors you still contract with yourself:
             an LLM provider, a TTS provider, an STT provider, and a telephony
             provider. The true cost lands at $0.13–$0.31/min once every vendor is
             counted, compliance is a costly add-on, and you are the systems
-            integrator. A restaurant does not want to assemble a voice stack, it
-            wants the phone answered and orders taken. RhythmiqCX packages
+            integrator. A D2C brand does not want to assemble a voice stack, it
+            wants failed deliveries rescued and orders confirmed. RhythmiqCX packages
             everything, AI, voice, telephony, and routing, into one done-for-you
-            product built for hospitality, on a flat plan from $149/month.
+            product built for D2C ecommerce, on a flat plan from $149/month.
           </p>
         </section>
 
@@ -168,7 +168,7 @@ export default function VapiAlternative() {
               <h3 className="text-lg font-semibold text-[#1F7A4D] mb-3 text-center">RhythmiqCX</h3>
               <h4 className="text-ink font-medium mb-2 flex items-center gap-2"><CheckCircle className="h-4 w-4 text-[#1F7A4D]" /> Pros</h4>
               <ul className="pl-5 list-disc text-ink2 space-y-1">
-                <li><strong className="text-ink">Built for restaurants</strong> reservations, orders, and menu Q&A out of the box</li>
+                <li><strong className="text-ink">Built for D2C ecommerce</strong> failed deliveries, returns, and COD orders out of the box</li>
                 <li><strong className="text-ink">One vendor, one invoice</strong> no contract juggling</li>
                 <li><strong className="text-ink">Flat from $149/mo</strong> true all-in cost, no hidden vendor fees</li>
                 <li><strong className="text-ink">Done-for-you</strong> live in minutes, no integration build</li>
@@ -195,7 +195,7 @@ export default function VapiAlternative() {
                 <li>Requires 4–6 separate vendor contracts</li>
                 <li>Compliance is a costly add-on</li>
                 <li>No no-code setup a developer is required</li>
-                <li>You build the reservation and ordering flows yourself</li>
+                <li>You build the returns and order-recovery flows yourself</li>
               </ul>
             </div>
           </div>
@@ -207,13 +207,13 @@ export default function VapiAlternative() {
             Vapi gives you maximum control and maximum complexity. You become the
             systems integrator, stitching together LLM, TTS, STT, and telephony, and
             paying each vendor separately. RhythmiqCX packages everything a
-            restaurant needs into one product, one bill, and one support contact, on
+            D2C brand needs into one product, one bill, and one support contact, on
             a flat plan with no per-minute meter.
           </p>
           <ul className="list-disc text-ink2 text-left max-w-3xl mx-auto space-y-1 pl-5">
             <li><strong className="text-ink">Flat from $149/mo</strong> vs a true $0.13–$0.31/min all-in Vapi cost</li>
             <li><strong className="text-ink">One vendor</strong> vs 4–6 contracts and invoices</li>
-            <li><strong className="text-ink">Restaurant-ready</strong> books tables and takes orders out of the box</li>
+            <li><strong className="text-ink">D2C-ready</strong> rescues deliveries and confirms orders out of the box</li>
             <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>
           </ul>
         </section>
@@ -222,9 +222,9 @@ export default function VapiAlternative() {
           <h2 className="h-feature mb-3">Conclusion</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
             Vapi is a good choice if you need control over every component and have
-            engineers to manage a multi-vendor stack. But if you run a restaurant
+            engineers to manage a multi-vendor stack. But if you run a D2C brand
             and want{" "}
-            <strong className="text-ink">predictable pricing, no vendor complexity, and a phone host that takes real orders in any language</strong>
+            <strong className="text-ink">predictable pricing, no vendor complexity, and voice AI that recovers real orders in any language</strong>
             , RhythmiqCX is the clear Vapi alternative.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">

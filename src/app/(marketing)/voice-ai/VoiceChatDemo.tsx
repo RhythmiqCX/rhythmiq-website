@@ -66,7 +66,7 @@ const VoiceChatDemo = () => {
           {
             role: "system",
             content:
-              "You are a helpful and friendly voice AI assistant for Rhythmiqcx. Rhythmiqcx is an AI CX platform that transforms how companies interact with customers. We leverage AI to automate support queries, create personalized AI agents, and boost productivity, ensuring seamless, 24/7 support. Keep your responses concise and conversational.",
+              "You are a helpful and friendly voice AI assistant for Rhythmiqcx. Rhythmiqcx is voice AI for D2C ecommerce brands. We call customers to rescue failed deliveries, confirm COD orders, turn returns into exchanges, send reorder reminders, and recover abandoned carts, ensuring seamless, 24/7 support in 12+ languages. Keep your responses concise and conversational.",
           },
           { role: "user", content: userText },
         ],

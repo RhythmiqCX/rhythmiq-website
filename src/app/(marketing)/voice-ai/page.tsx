@@ -11,18 +11,18 @@ import JsonLd from "@/components/global/JsonLd";
 import { AlwaysOnArt, ConversationArt, RoutingArt } from "@/components/marketing/voice-art";
 
 export const metadata = genMeta({
-  title: "AI Phone Receptionist & Voice AI Agents | RhythmiqCX — From $149/mo",
+  title: "Voice AI for D2C Ecommerce | RhythmiqCX — From $149/mo",
   description:
-    "Deploy AI voice agents that answer customer calls 24/7 with human-like accuracy. No-code setup, 12+ languages, smart call routing — plans from $149/mo.",
+    "Deploy AI voice agents that call D2C customers to rescue failed deliveries, confirm COD orders, and turn returns into exchanges, 24/7 with human-like accuracy. No-code setup, 12+ languages — plans from $149/mo.",
   keywords: [
-    "AI phone receptionist",
-    "voice AI agents",
-    "AI voice customer support",
-    "AI answering service small business",
+    "voice AI for D2C ecommerce",
+    "reduce RTO with voice AI",
+    "NDR reduction calling",
+    "COD confirmation calls",
     "conversational voice AI",
     "no-code voice AI",
-    "AI call routing",
-    "replace IVR with AI",
+    "returns to exchange voice AI",
+    "abandoned cart call AI",
     "AI receptionist India",
     "Indian English voice AI",
   ],
@@ -38,12 +38,12 @@ export const metadata = genMeta({
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "RhythmiqCX Voice AI — AI Phone Receptionist",
+  name: "RhythmiqCX Voice AI — Voice AI for D2C Ecommerce",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   url: "https://rhythmiqcx.com/voice-ai",
   description:
-    "RhythmiqCX Voice AI is a conversational AI phone receptionist platform that deploys human-like AI voice agents for 24/7 inbound and outbound call handling. Features voice cloning, neural TTS, real-time synthesis, smart call routing, and no-code setup. Plans from $149/month.",
+    "RhythmiqCX Voice AI is a conversational voice AI platform for D2C ecommerce that deploys human-like AI voice agents to rescue failed deliveries, confirm COD orders, turn returns into exchanges, and recover abandoned carts for 24/7 inbound and outbound call handling. Features voice cloning, neural TTS, real-time synthesis, and no-code setup. Plans from $149/month.",
   offers: {
     "@type": "Offer",
     price: "149",
@@ -52,12 +52,14 @@ const softwareSchema = {
     description: "Monthly plans — no per-minute overages",
   },
   featureList: [
-    "24/7 AI phone answering",
+    "24/7 outbound + inbound voice AI",
+    "Failed-delivery rescue calls",
+    "COD order confirmation",
+    "Returns-to-exchange handling",
+    "Abandoned cart recovery calls",
     "Voice cloning",
     "Neural TTS (Sarvam Bulbul v2)",
-    "Indian-English support",
     "60+ language support",
-    "Smart call routing",
     "No-code setup",
     "WhatsApp + Chat + Voice omnichannel",
   ],
@@ -69,15 +71,15 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How much does an AI phone receptionist cost?",
+      name: "How much does voice AI for D2C cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "RhythmiqCX plans start at $149/month, flat with no per-minute overages. Per-minute platforms charge $0.07–$0.31/min, which adds up fast on a busy service. With Rhythmiq you get 24/7 AI call handling, order taking, and 12+ languages included.",
+        text: "RhythmiqCX plans start at $149/month, flat with no per-minute overages. Per-minute platforms charge $0.07–$0.31/min, which adds up fast at real call volume. With Rhythmiq you get 24/7 outbound and inbound call handling, returns-to-exchange handling, and 12+ languages included.",
       },
     },
     {
       "@type": "Question",
-      name: "How realistic does the AI phone receptionist sound?",
+      name: "How realistic does the voice AI sound?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "RhythmiqCX uses Sarvam Bulbul v2 neural TTS one of the most advanced Indian-English voice models. Callers consistently describe the voice as natural and human-like. Voice cloning is available to match your brand persona.",
@@ -85,26 +87,26 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What languages does Voice AI support?",
+      name: "Can it switch between Hindi and English mid-call?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The default model is optimised for Indian-English with native accent support. The platform covers 60+ languages. Hindi, Tamil, Telugu, and SEA language voice personas are on the roadmap.",
+        text: "Yes. The default model is optimised for Indian-English with native accent support, and the platform covers 60+ languages, including code-switching between English and Hindi, Arabic, or Spanish within the same call.",
       },
     },
     {
       "@type": "Question",
-      name: "How long does AI receptionist setup take?",
+      name: "How long does voice AI setup take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most deployments go live within one business day. Configure your AI persona, connect your phone number, and upload your knowledge base. No coding required.",
+        text: "Most deployments go live within one business day. Configure your AI agent, connect your phone number, and upload your catalogue and return policy. No coding required.",
       },
     },
     {
       "@type": "Question",
-      name: "Can the AI handle complex customer queries?",
+      name: "Can the AI handle a customer's objection, not just a script?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The AI handles FAQs, bookings, and routine queries. Low-confidence calls automatically transfer to a live agent with the full transcript — customers never repeat themselves.",
+        text: "Yes. The AI offers real alternatives like a size swap or store credit instead of reading a script. Low-confidence calls automatically transfer to a live agent with the full transcript — customers never repeat themselves.",
       },
     },
   ],
@@ -112,22 +114,22 @@ const faqSchema = {
 
 const featuresObject = [
   {
-    section1Subheading: "Always Available",
-    section1Heading: "24/7 Instant Support",
+    section1Subheading: "Always Calling",
+    section1Heading: "24/7 Outbound & Inbound",
     section1Content:
-      "Our AI voice assistant responds instantly to customers anytime, handling queries without delays or human intervention.",
+      "Our voice AI agent calls customers the moment an order needs it, rescuing deliveries and confirming COD orders without delays or human intervention.",
   },
   {
     section1Subheading: "Human-Like Interaction",
     section1Heading: "Natural Conversations",
     section1Content:
-      "Deliver engaging, empathetic responses that make every interaction feel personal and human.",
+      "Deliver engaging responses that handle a customer's objection with a real alternative, not a dead end.",
   },
   {
     section1Subheading: "Effortless Handoff",
     section1Heading: "Smart Call Routing",
     section1Content:
-      "Automatically route complex queries to human agents while your AI handles FAQs seamlessly.",
+      "Automatically route complex queries to human agents while your AI handles the rest seamlessly.",
   },
 ];
 
@@ -146,10 +148,11 @@ const VoiceAIApp = () => {
       <section className="w-full max-w-3xl mx-auto px-6 py-8 text-center">
         <p className="text-ink2 text-sm leading-relaxed">
           <strong className="text-ink">RhythmiqCX Voice AI</strong> is a
-          conversational AI phone receptionist platform that deploys human-like
-          AI voice agents for 24/7 inbound and outbound call handling. Powered
-          by Sarvam Bulbul v2 neural TTS and real-time speech-to-text, it routes
-          calls intelligently, supports 12+ languages, and starts at{" "}
+          conversational voice AI platform for D2C ecommerce that deploys
+          human-like AI voice agents to rescue failed deliveries, confirm COD
+          orders, and turn returns into exchanges, for 24/7 inbound and outbound
+          call handling. Powered by Sarvam Bulbul v2 neural TTS and real-time
+          speech-to-text, it supports 12+ languages, and starts at{" "}
           <strong className="text-ink">$149/month</strong> — no per-minute
           fees, no developer required.
         </p>

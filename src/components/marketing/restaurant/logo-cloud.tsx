@@ -1,19 +1,19 @@
 const ROW_ONE = [
-  { label: "Saltwater", cls: "lg" },
-  { label: "Maison Reine", cls: "lg serif" },
-  { label: "NORTH/FORK", cls: "lg mono" },
-  { label: "Olive & Ash", cls: "lg" },
-  { label: "Rivolo", cls: "lg serif" },
-  { label: "EMBER CO.", cls: "lg mono" },
+  { label: "Northgate", cls: "lg" },
+  { label: "Maison Clair", cls: "lg serif" },
+  { label: "VELAR/CO", cls: "lg mono" },
+  { label: "Fable & Form", cls: "lg" },
+  { label: "Qelora", cls: "lg serif" },
+  { label: "DAISY LABS", cls: "lg mono" },
 ];
 
 const ROW_TWO = [
-  { label: "Greenhouse", cls: "lg" },
-  { label: "Tavola", cls: "lg" },
-  { label: "HANA·HOUSE", cls: "lg mono" },
-  { label: "Le Petit Marché", cls: "lg serif" },
-  { label: "Brick Lane", cls: "lg" },
-  { label: "SUNDAY/SET", cls: "lg mono" },
+  { label: "Botanical Co.", cls: "lg" },
+  { label: "Synthesis", cls: "lg" },
+  { label: "AKOR·GOODS", cls: "lg mono" },
+  { label: "Le Petit Studio", cls: "lg serif" },
+  { label: "Cluckin", cls: "lg" },
+  { label: "SCENIC/WEAR", cls: "lg mono" },
 ];
 
 const fadeMask = "[mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]";
@@ -22,7 +22,7 @@ const LogoCloud = () => {
   return (
     <section className="section-tight overflow-hidden">
       <p className="text-center text-sm font-medium text-ink3 mb-8 wrap">
-        Trusted by hospitality teams pouring 4M+ guest calls a year
+        Trusted by D2C brands making 4M+ recovery calls a year
       </p>
       <div className="flex flex-col gap-5">
         <div className={`overflow-hidden ${fadeMask}`}>

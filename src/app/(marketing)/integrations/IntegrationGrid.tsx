@@ -4,34 +4,34 @@ type Category = { name: string; desc: string; items: string[] };
 
 const CATEGORIES: Category[] = [
   {
-    name: "Point of sale",
-    desc: "Push phone orders straight to your POS so the kitchen and the register stay in sync.",
-    items: ["Order injection", "Menu + modifier sync", "Open ticket lookup"],
+    name: "Ecommerce platform",
+    desc: "Look up orders and customer history straight from Shopify or WooCommerce so every call has full context.",
+    items: ["Order lookup", "Catalogue sync", "Customer history"],
   },
   {
-    name: "Reservations",
-    desc: "Read and write your booking calendar in real time, so the floor never gets double seated.",
-    items: ["Live table availability", "Create + change bookings", "Waitlist + SMS confirmations"],
+    name: "OMS / WMS",
+    desc: "Read and write shipment and delivery status in real time, so a rescued delivery actually reroutes.",
+    items: ["Live shipment status", "Reschedule delivery", "Return pickup scheduling"],
   },
   {
-    name: "CRM + guest data",
-    desc: "Every call writes back to your guest records, so regulars feel known the moment they ring.",
-    items: ["Guest profiles", "Tags + notes", "Visit history"],
+    name: "Courier & logistics",
+    desc: "Pull live NDR flags and delivery attempts straight from your courier partners, before a parcel ships back.",
+    items: ["NDR alerts", "Delivery attempt history", "Reattempt scheduling"],
   },
   {
-    name: "Delivery + online orders",
-    desc: "Keep phone orders and delivery tickets together instead of scattered across tabs.",
-    items: ["Takeout capture", "Delivery handoff", "Order status"],
+    name: "CRM + customer data",
+    desc: "Every call writes back to your customer records, so repeat buyers feel known the moment they pick up.",
+    items: ["Customer profiles", "Tags + notes", "Order history"],
   },
   {
     name: "Payments",
-    desc: "Take deposits for large parties and events without chasing anyone for a card.",
-    items: ["Deposit links", "Saved cards", "No show protection"],
+    desc: "Confirm COD orders, process exchanges, and issue refunds without chasing anyone for a card.",
+    items: ["COD confirmation", "Refund + exchange processing", "Prepaid switch links"],
   },
   {
     name: "Messaging + calendar",
     desc: "Follow every call with the right text and the right reminder, automatically.",
-    items: ["SMS + WhatsApp", "Web chat", "Calendar holds"],
+    items: ["SMS + WhatsApp", "Web chat", "Callback scheduling"],
   },
 ];
 

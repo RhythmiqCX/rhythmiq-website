@@ -43,7 +43,7 @@ const CHANNELS: { name: string; icon: React.JSX.Element }[] = [
     ),
   },
   {
-    name: "Booking widget",
+    name: "Order status page",
     icon: (
       <>
         <rect x="2.5" y="2.5" width="11" height="11" rx="2.5" stroke="#fff" strokeWidth="1.2" />
@@ -58,11 +58,11 @@ const Omnichannel = () => {
     <section className="section bg-paper2" aria-label="Omnichannel">
       <div className="wrap grid lg:grid-cols-[1fr_1.1fr] gap-8 lg:gap-[72px] items-center">
         <Reveal>
-          <span className="eyebrow">One host, every channel</span>
-          <h2 className="h-section my-3.5">Meet guests wherever they reach you</h2>
+          <span className="eyebrow">One voice, every channel</span>
+          <h2 className="h-section my-3.5">Meet customers wherever they reach you</h2>
           <p className="lede max-w-[46ch]">
-            Phone, SMS, web chat, WhatsApp, and your booking widget. Rhythmiq answers on all of them
-            with one voice and one shared memory.
+            Phone, SMS, web chat, WhatsApp, and your order status page. Rhythmiq answers on all of
+            them with one voice and one shared memory.
           </p>
           <div className="flex flex-wrap gap-3 mt-7">
             {CHANNELS.map((ch) => (

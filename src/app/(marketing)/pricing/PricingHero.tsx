@@ -8,12 +8,12 @@ const PricingHero = () => {
       <div className="wrap">
         <span className="eyebrow justify-center">Pricing</span>
         <h1 className="h-display mt-[18px] max-w-[18ch] mx-auto">
-          Costs less than the tables you're missing.
+          Costs less than the orders you&rsquo;re losing.
         </h1>
         <p className="lede mt-5 max-w-[54ch] mx-auto">
-          Every plan answers your phone 24/7, books tables, takes orders, and
-          speaks your guests' language. Pick by how busy your phone gets. No setup
-          fees, no surprise overage bills.
+          Every plan calls your customers 24/7, rescues failed deliveries, confirms
+          COD orders, and speaks their language. Pick by how many orders you ship a
+          month. No setup fees, no surprise overage bills.
         </p>
         <Reveal className="flex gap-3 justify-center flex-wrap mt-7">
           <Link href={BOOK_DEMO_URL} className="btn btn-dark">

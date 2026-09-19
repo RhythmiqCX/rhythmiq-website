@@ -68,8 +68,13 @@ export default function AboutUs() {
             {[
               {
                 href: "/voice-ai",
-                title: "AI Phone Host",
-                desc: "Answer every call, book tables, and take orders 24/7.",
+                title: "Voice AI for D2C",
+                desc: "Rescue failed deliveries, confirm COD orders, and turn returns into exchanges, 24/7.",
+              },
+              {
+                href: "/use-cases",
+                title: "Use Cases",
+                desc: "NDR, RTO, returns, reorders, WISMO, and abandoned cart recovery.",
               },
               {
                 href: "/retell-ai-alternative",
@@ -84,12 +89,12 @@ export default function AboutUs() {
               {
                 href: "/tools",
                 title: "Free Tools",
-                desc: "Calculators and generators for AI receptionists and more.",
+                desc: "Calculators and generators for AI voice agents and more.",
               },
               {
                 href: "/blog",
                 title: "Blog",
-                desc: "Guides and ideas on voice AI and front-of-house automation.",
+                desc: "Guides and ideas on voice AI and ecommerce order recovery.",
               },
             ].map((item) => (
               <Link

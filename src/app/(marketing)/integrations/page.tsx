@@ -6,14 +6,14 @@ import IntegrationGrid from "./IntegrationGrid";
 import HowIntegrationsWork from "./HowIntegrationsWork";
 
 export const metadata = genMeta({
-  title: "Integrations: POS, Reservations, CRM & More for Restaurants",
+  title: "Integrations: Shopify, OMS/WMS, CRM & More for D2C Brands",
   description:
-    "Rhythmiq syncs two ways with your restaurant stack, including POS, reservations, CRM, delivery, payments, and messaging. Connect anything else with a REST API, webhooks, or Zapier.",
+    "Rhythmiq syncs two ways with your D2C stack, including Shopify, WooCommerce, OMS/WMS, CRM, payments, and messaging. Connect anything else with a REST API, webhooks, or Zapier.",
   keywords: [
-    "restaurant AI integrations",
-    "POS integration voice AI",
-    "reservation system integration",
-    "restaurant CRM integration",
+    "D2C ecommerce voice AI integrations",
+    "Shopify integration voice AI",
+    "OMS WMS integration voice AI",
+    "ecommerce CRM integration",
     "voice AI Zapier",
   ],
   alternates: {

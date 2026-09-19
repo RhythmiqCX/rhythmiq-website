@@ -11,14 +11,14 @@ const AnnouncementBar = () => {
         New
       </span>
       <span className="hidden sm:inline">
-        See how restaurants book more tables with an AI phone host that never misses a call.
+        See how D2C brands cut RTO and NDR with voice AI that never misses a call.
       </span>
-      <span className="sm:hidden">Book more tables with an AI phone host.</span>
+      <span className="sm:hidden">Cut RTO and NDR with voice AI.</span>
       <Link
-        href="/blog/how-ai-voice-assistants-help-restaurants-capture-more-reservations"
+        href="/use-cases"
         className="text-white underline underline-offset-2 font-semibold whitespace-nowrap"
       >
-        Read the guide →
+        See the use cases →
       </Link>
     </div>
   );

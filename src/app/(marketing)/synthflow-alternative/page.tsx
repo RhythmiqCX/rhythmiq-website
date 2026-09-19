@@ -6,16 +6,16 @@ import JsonLd from "@/components/global/JsonLd";
 import { BOOK_DEMO_URL } from "@/constants/links";
 
 export const metadata = generateMetadata({
-  title: "Synthflow Alternative for Restaurants | RhythmiqCX AI Phone Host",
+  title: "Synthflow Alternative for D2C Brands | RhythmiqCX Voice AI",
   description:
-    "Synthflow is a generic voice AI builder you configure yourself, with monthly minute caps. RhythmiqCX is the done-for-you AI phone host built for restaurants: books tables, takes orders, and answers in 12+ languages on flat plans with no minute caps.",
+    "Synthflow is a generic voice AI builder you configure yourself, with monthly minute caps. RhythmiqCX is the done-for-you voice AI built for D2C brands: rescues failed deliveries, confirms COD orders, and answers in 12+ languages on flat plans with no minute caps.",
   keywords: [
     "Synthflow alternative",
-    "Synthflow alternative for restaurants",
+    "Synthflow alternative for D2C ecommerce",
     "RhythmiqCX vs Synthflow",
-    "AI phone host for restaurants",
-    "restaurant voice AI",
-    "AI that takes orders over the phone",
+    "voice AI for D2C brands",
+    "D2C voice AI",
+    "AI that confirms COD orders",
   ],
   alternates: {
     canonical: "/synthflow-alternative",
@@ -29,9 +29,9 @@ export const metadata = generateMetadata({
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Synthflow Alternative: RhythmiqCX AI Phone Host for Restaurants",
+  headline: "Synthflow Alternative: RhythmiqCX Voice AI for D2C Brands",
   description:
-    "Side-by-side comparison of RhythmiqCX and Synthflow covering restaurant fit, order taking, pricing model, minute caps, and languages.",
+    "Side-by-side comparison of RhythmiqCX and Synthflow covering D2C fit, order recovery, pricing model, minute caps, and languages.",
   url: "https://rhythmiqcx.com/synthflow-alternative",
   author: { "@type": "Organization", name: "RhythmiqCX" },
   publisher: {
@@ -60,14 +60,14 @@ const Neg = ({ children }: { children: React.ReactNode }) => (
 
 const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
-    "Built for restaurants",
+    "Built for D2C ecommerce",
     <Neg key="s-fit">A generic voice-AI builder. You design the call flows, prompts, and logic yourself, for any industry.</Neg>,
-    <Pos key="rx-fit"><strong className="text-ink">Purpose-built for restaurants.</strong> Reservations, takeout and delivery orders, and menu questions work out of the box.</Pos>,
+    <Pos key="rx-fit"><strong className="text-ink">Purpose-built for D2C ecommerce.</strong> Failed deliveries, returns, and COD orders work out of the box.</Pos>,
   ],
   [
-    "Takes orders on the call",
-    <Neg key="s-order">Possible, but you have to build and maintain the ordering flow and POS logic yourself.</Neg>,
-    <Pos key="rx-order"><strong className="text-ink">Takes the whole order.</strong> Modifiers and all, pushed straight into your POS.</Pos>,
+    "Handles objections on the call",
+    <Neg key="s-order">Possible, but you have to build and maintain the returns flow and OMS logic yourself.</Neg>,
+    <Pos key="rx-order"><strong className="text-ink">Handles the whole objection.</strong> Swap, credit, or discount, written straight into your OMS.</Pos>,
   ],
   [
     "Pricing model",
@@ -82,7 +82,7 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
     "Setup",
     <Neg key="s-setup">No-code, but you still design the agent, prompts, and flows yourself.</Neg>,
-    <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your menu and hours, point your number at it, live in minutes.</Pos>,
+    <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your catalogue and policies, point your number at it, live in minutes.</Pos>,
   ],
   [
     "Smart Call Routing",
@@ -91,8 +91,8 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   ],
   [
     "Concurrent Calls",
-    <Neg key="s-conc">Limited concurrent call capacity on lower plans. Higher plans required for the dinner rush.</Neg>,
-    <Pos key="rx-conc"><strong className="text-ink">1,000+ concurrent calls</strong> handles the whole Friday rush at once.</Pos>,
+    <Neg key="s-conc">Limited concurrent call capacity on lower plans. Higher plans required for a sale-day spike.</Neg>,
+    <Pos key="rx-conc"><strong className="text-ink">1,000+ concurrent calls</strong> handles a whole flash-sale spike at once.</Pos>,
   ],
   [
     "Support",
@@ -110,9 +110,9 @@ export default function SynthflowAlternative() {
       <section className="section-tight text-center">
         <div className="wrap max-w-4xl">
           <span className="eyebrow justify-center">Comparison · Synthflow</span>
-          <h1 className="h-section mt-4">Synthflow Alternative: An AI Phone Host Built for Restaurants</h1>
+          <h1 className="h-section mt-4">Synthflow Alternative: Voice AI Built for D2C Brands</h1>
           <p className="lede mx-auto max-w-2xl mt-4">
-            Synthflow is a generic voice-AI builder you configure yourself, with monthly minute caps. RhythmiqCX is the done-for-you AI phone host for restaurants: it books tables, takes orders, and answers in 12+ languages, on flat plans with no minute caps.
+            Synthflow is a generic voice-AI builder you configure yourself, with monthly minute caps. RhythmiqCX is the done-for-you voice AI for D2C brands: it rescues failed deliveries, confirms COD orders, and answers in 12+ languages, on flat plans with no minute caps.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-7">
             <Link href={BOOK_DEMO_URL} className="btn btn-accent">Book a free demo</Link>
@@ -123,17 +123,17 @@ export default function SynthflowAlternative() {
 
       <div className="wrap max-w-5xl pb-20 lg:pb-28 space-y-14">
         <section id="intro" className="text-center">
-          <h2 className="h-feature mb-3">Why Restaurants Look for a Synthflow Alternative</h2>
+          <h2 className="h-feature mb-3">Why D2C Brands Look for a Synthflow Alternative</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
             Synthflow is a capable, no-code voice-AI builder, but it is built for
             everyone, which means it is built for no one in particular. You design
-            the call flows, write the prompts, and wire up your own ordering and
-            reservation logic. Its plans start around $99/month with monthly minute
-            caps, so a busy service can tip you into overages and an unpredictable
-            bill. RhythmiqCX takes the opposite approach: it is a done-for-you AI
-            phone host built specifically for restaurants. It already knows how to
-            book a table, take a takeout order with modifiers, and answer the
-            questions guests actually call about, in 12+ languages, on a flat plan
+            the call flows, write the prompts, and wire up your own returns
+            logic. Its plans start around $99/month with monthly minute
+            caps, so real call volume can tip you into overages and an unpredictable
+            bill. RhythmiqCX takes the opposite approach: it is a done-for-you voice
+            AI built specifically for D2C ecommerce. It already knows how to
+            rescue a failed delivery, confirm a COD order, and answer the
+            questions customers actually call about, in 12+ languages, on a flat plan
             with no minute meter running in the background.
           </p>
         </section>
@@ -169,17 +169,17 @@ export default function SynthflowAlternative() {
               <h3 className="text-lg font-semibold text-[#1F7A4D] mb-3 text-center">RhythmiqCX</h3>
               <h4 className="text-ink font-medium mb-2 flex items-center gap-2"><CheckCircle className="h-4 w-4 text-[#1F7A4D]" /> Pros</h4>
               <ul className="pl-5 list-disc text-ink2 space-y-1">
-                <li><strong className="text-ink">Built for restaurants</strong> reservations, orders, and menu Q&A out of the box</li>
-                <li><strong className="text-ink">Takes the whole order</strong> modifiers and all, straight into your POS</li>
-                <li><strong className="text-ink">Flat plans, no minute caps</strong> no overage anxiety on a busy night</li>
+                <li><strong className="text-ink">Built for D2C ecommerce</strong> failed deliveries, returns, and COD orders out of the box</li>
+                <li><strong className="text-ink">Handles the whole objection</strong> swap, credit, or discount, straight into your OMS</li>
+                <li><strong className="text-ink">Flat plans, no minute caps</strong> no overage anxiety on a busy day</li>
                 <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>
-                <li>1,000+ concurrent calls for the dinner rush</li>
+                <li>1,000+ concurrent calls for a sale-day spike</li>
                 <li>Done-for-you setup, live in minutes</li>
               </ul>
               <h4 className="text-ink font-medium mt-4 mb-2 flex items-center gap-2"><XCircle className="h-4 w-4 text-ink3" /> Cons</h4>
               <ul className="pl-5 list-disc text-ink3 space-y-1">
                 <li>Not the cheapest generic builder it is a done-for-you product, priced like one</li>
-                <li>Focused on hospitality, not a general-purpose voice platform</li>
+                <li>Focused on D2C ecommerce, not a general-purpose voice platform</li>
               </ul>
             </div>
             <div className="bg-white p-5 rounded-[14px]" style={{ border: "1px solid var(--line-soft)" }}>
@@ -188,12 +188,12 @@ export default function SynthflowAlternative() {
               <ul className="pl-5 list-disc text-ink2 space-y-1">
                 <li>Established product with good US market presence</li>
                 <li>Clean no-code interface for building voice agents</li>
-                <li>Flexible for any industry, not just restaurants</li>
+                <li>Flexible for any industry, not just D2C ecommerce</li>
                 <li>Lower entry price if your call volume is light</li>
               </ul>
               <h4 className="text-ink font-medium mt-4 mb-2 flex items-center gap-2"><XCircle className="h-4 w-4 text-ink3" /> Cons</h4>
               <ul className="pl-5 list-disc text-ink3 space-y-1">
-                <li>Generic you build the reservation and ordering flows yourself</li>
+                <li>Generic you build the returns flows yourself</li>
                 <li>Monthly minute caps overages make the real cost unpredictable</li>
                 <li>No native Arabic, Spanish, or Hindi voice support</li>
                 <li>Primarily US/UK market focused</li>
@@ -203,16 +203,16 @@ export default function SynthflowAlternative() {
         </section>
 
         <section id="why-rhythmiq" className="bg-paper2 p-6 lg:p-8 rounded-[14px] text-center">
-          <h2 className="h-feature mb-3">Built for Restaurants, Not Assembled by You.</h2>
+          <h2 className="h-feature mb-3">Built for D2C Ecommerce, Not Assembled by You.</h2>
           <p className="text-ink2 max-w-3xl mx-auto mb-4 leading-[1.6]">
-            If you run a restaurant and you are weighing Synthflow, the real
+            If you run a D2C brand and you are weighing Synthflow, the real
             question is not which builder is cheaper, it is whether you want to
-            build and babysit a voice agent at all. RhythmiqCX is the phone host,
-            already trained for hospitality, on a flat plan that does not punish you
-            for a busy Friday.
+            build and babysit a voice agent at all. RhythmiqCX is the voice AI,
+            already trained for D2C ecommerce, on a flat plan that does not punish you
+            for a flash sale.
           </p>
           <ul className="list-disc text-ink2 text-left max-w-3xl mx-auto space-y-1 pl-5">
-            <li><strong className="text-ink">Restaurant-ready</strong> books tables and takes orders without you building flows</li>
+            <li><strong className="text-ink">D2C-ready</strong> rescues deliveries and confirms orders without you building flows</li>
             <li><strong className="text-ink">Flat, not minute-capped</strong> handle any volume without overage anxiety</li>
             <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more, no upcharge</li>
             <li><strong className="text-ink">Done-for-you</strong> live in minutes, not a build project</li>
@@ -223,8 +223,8 @@ export default function SynthflowAlternative() {
           <h2 className="h-feature mb-3">Conclusion</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
             Synthflow is a solid general-purpose voice-AI builder. But if you run a
-            restaurant and want the phone fully handled, orders, tables, and guest
-            questions in any language, without assembling it yourself or watching a
+            D2C brand and want the call queue fully handled, deliveries, returns, and
+            customer questions in any language, without assembling it yourself or watching a
             minute meter,{" "}
             <strong className="text-ink">RhythmiqCX is purpose-built for exactly that</strong>
             , on a flat plan with no caps.

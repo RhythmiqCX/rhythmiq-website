@@ -6,10 +6,11 @@
 export type NavItem = { name: string; href: string; description?: string };
 
 export const PRODUCT_LINKS: NavItem[] = [
-    { name: "AI Phone Host", href: "/voice-ai", description: "Answers every call, 24/7" },
-    { name: "How it works", href: "/voice-ai#how-it-works", description: "From ring to booking" },
-    { name: "Live demo", href: "/demo", description: "See it take a call" },
-    { name: "Integrations", href: "/integrations", description: "POS, reservations, CRM" },
+    { name: "Voice AI for D2C", href: "/voice-ai", description: "Calls that rescue orders, 24/7" },
+    { name: "Use cases", href: "/use-cases", description: "NDR, RTO, returns, reorders & more" },
+    { name: "How it works", href: "/voice-ai#how-it-works", description: "From failed order to fixed order" },
+    { name: "Live demo", href: "/demo", description: "See it make a call" },
+    { name: "Integrations", href: "/integrations", description: "Shopify, WooCommerce, CRM, WMS" },
 ];
 
 export const COMPARE_LINKS: NavItem[] = [

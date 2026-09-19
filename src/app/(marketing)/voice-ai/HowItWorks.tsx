@@ -5,23 +5,23 @@ const steps = [
   {
     icon: Settings,
     step: "01",
-    title: "Configure Your AI Persona",
+    title: "Configure Your AI Agent",
     description:
-      "Set your AI receptionist's name, voice, language, and knowledge base. Upload FAQs, product docs, or booking flows — no coding needed.",
+      "Set your AI agent's name, voice, language, and connect your catalogue and return policy. Upload FAQs or product docs — no coding needed.",
   },
   {
     icon: PhoneCall,
     step: "02",
-    title: "Connect Your Phone Number",
+    title: "Connect Your Order Data",
     description:
-      "Point your existing business number to RhythmiqCX via our REST API or no-code connector. Works with most telephony providers and IVR systems in minutes.",
+      "Point your store platform and OMS/WMS to RhythmiqCX via our REST API or no-code connector. Works with most ecommerce stacks in minutes.",
   },
   {
     icon: Zap,
     step: "03",
     title: "Go Live — 24/7 from Day One",
     description:
-      "Your AI phone receptionist answers every call instantly. Complex queries route to your team with full transcripts — customers never repeat themselves.",
+      "Your AI agent starts calling on failed deliveries, COD orders, and returns instantly. Complex queries route to your team with full transcripts — customers never repeat themselves.",
   },
 ];
 
@@ -32,7 +32,7 @@ const HowItWorks = () => {
         <div className="text-center mb-12">
           <span className="eyebrow justify-center">How It Works</span>
           <h2 className="h-feature text-ink mt-3">
-            Set Up Your AI Phone Receptionist in 3 Steps
+            Set Up Your D2C Voice AI Agent in 3 Steps
           </h2>
           <p className="text-ink2 mt-3 max-w-xl mx-auto text-sm">
             Most businesses go live within one business day. No ML team, no developer required.

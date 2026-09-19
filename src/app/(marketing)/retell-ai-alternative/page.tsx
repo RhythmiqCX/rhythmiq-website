@@ -6,16 +6,16 @@ import JsonLd from "@/components/global/JsonLd";
 import { BOOK_DEMO_URL } from "@/constants/links";
 
 export const metadata = generateMetadata({
-  title: "Retell AI Alternative for Restaurants | RhythmiqCX AI Phone Host",
+  title: "Retell AI Alternative for D2C Brands | RhythmiqCX Voice AI",
   description:
-    "Retell AI is a per-minute developer platform you build on. RhythmiqCX is the done-for-you AI phone host for restaurants: books tables, takes orders, answers in 12+ languages, on flat plans with no per-minute meter.",
+    "Retell AI is a per-minute developer platform you build on. RhythmiqCX is the done-for-you voice AI for D2C brands: rescues failed deliveries, confirms COD orders, answers in 12+ languages, on flat plans with no per-minute meter.",
   keywords: [
     "Retell AI alternative",
-    "Retell AI alternative for restaurants",
+    "Retell AI alternative for D2C ecommerce",
     "RhythmiqCX vs Retell AI",
     "no per-minute voice AI",
-    "AI phone host for restaurants",
-    "AI that takes orders over the phone",
+    "voice AI for D2C brands",
+    "AI that confirms COD orders",
   ],
   alternates: {
     canonical: "/retell-ai-alternative",
@@ -29,9 +29,9 @@ export const metadata = generateMetadata({
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Retell AI Alternative: RhythmiqCX AI Phone Host for Restaurants",
+  headline: "Retell AI Alternative: RhythmiqCX Voice AI for D2C Brands",
   description:
-    "Side-by-side comparison of RhythmiqCX and Retell AI covering restaurant fit, order taking, per-minute vs flat pricing, setup, and languages.",
+    "Side-by-side comparison of RhythmiqCX and Retell AI covering D2C fit, order recovery, per-minute vs flat pricing, setup, and languages.",
   url: "https://rhythmiqcx.com/retell-ai-alternative",
   author: { "@type": "Organization", name: "RhythmiqCX" },
   publisher: {
@@ -60,14 +60,14 @@ const Neg = ({ children }: { children: React.ReactNode }) => (
 
 const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
-    "Built for restaurants",
-    <Neg key="r-fit">A developer platform for building voice agents in any domain. You build the restaurant logic yourself.</Neg>,
-    <Pos key="rx-fit"><strong className="text-ink">Purpose-built for restaurants.</strong> Reservations, orders, and menu questions work out of the box.</Pos>,
+    "Built for D2C ecommerce",
+    <Neg key="r-fit">A developer platform for building voice agents in any domain. You build the D2C logic yourself.</Neg>,
+    <Pos key="rx-fit"><strong className="text-ink">Purpose-built for D2C ecommerce.</strong> Failed deliveries, returns, and COD orders work out of the box.</Pos>,
   ],
   [
-    "Takes orders on the call",
-    <Neg key="r-order">Possible with engineering. You build and maintain the ordering flow and POS integration.</Neg>,
-    <Pos key="rx-order"><strong className="text-ink">Takes the whole order.</strong> Modifiers and all, pushed into your POS, no build required.</Pos>,
+    "Handles objections on the call",
+    <Neg key="r-order">Possible with engineering. You build and maintain the returns flow and OMS integration.</Neg>,
+    <Pos key="rx-order"><strong className="text-ink">Handles the whole objection.</strong> Swap, credit, or discount, written into your OMS, no build required.</Pos>,
   ],
   [
     "Pricing model",
@@ -77,11 +77,11 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
     "Setup",
     <Neg key="r-setup">Developer-only. API integration, telephony wiring, and engineering time required.</Neg>,
-    <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your menu and hours, point your number at it, live in minutes.</Pos>,
+    <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your catalogue and policies, point your number at it, live in minutes.</Pos>,
   ],
   [
     "Languages",
-    <Neg key="r-lang">Multilingual via configuration, but no restaurant-tuned dialect support out of the box.</Neg>,
+    <Neg key="r-lang">Multilingual via configuration, but no D2C-tuned dialect support out of the box.</Neg>,
     <Pos key="rx-lang"><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more, at no extra charge.</Pos>,
   ],
   [
@@ -92,7 +92,7 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
     "Concurrent Call Capacity",
     <Neg key="r-conc">Scales with usage, but costs scale per minute right along with it.</Neg>,
-    <Pos key="rx-conc"><strong className="text-ink">1,000+ concurrent calls</strong> handles the dinner rush at a flat cost.</Pos>,
+    <Pos key="rx-conc"><strong className="text-ink">1,000+ concurrent calls</strong> handles a sale-day spike at a flat cost.</Pos>,
   ],
   [
     "Support",
@@ -110,9 +110,9 @@ export default function RetellAlternative() {
       <section className="section-tight text-center">
         <div className="wrap max-w-4xl">
           <span className="eyebrow justify-center">Comparison · Retell AI</span>
-          <h1 className="h-section mt-4">Retell AI Alternative: An AI Phone Host Built for Restaurants</h1>
+          <h1 className="h-section mt-4">Retell AI Alternative: Voice AI Built for D2C Brands</h1>
           <p className="lede mx-auto max-w-2xl mt-4">
-            Retell is a per-minute developer platform you build on. RhythmiqCX is done-for-you, restaurant-ready, and flat, no engineers and no per-minute meter.
+            Retell is a per-minute developer platform you build on. RhythmiqCX is done-for-you, D2C-ready, and flat, no engineers and no per-minute meter.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-7">
             <Link href={BOOK_DEMO_URL} className="btn btn-accent">Book a free demo</Link>
@@ -123,15 +123,15 @@ export default function RetellAlternative() {
 
       <div className="wrap max-w-5xl pb-20 lg:pb-28 space-y-14">
         <section id="intro" className="text-center">
-          <h2 className="h-feature mb-3">The core problem with Retell AI for restaurants</h2>
+          <h2 className="h-feature mb-3">The core problem with Retell AI for D2C brands</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
             Retell AI is a powerful voice-AI platform, for developers. It bills by
-            the minute, so the cost compounds on a busy service and the invoice is
+            the minute, so the cost compounds at real call volume and the invoice is
             never the same twice. And it is a toolkit, not a product: there is no
-            no-code setup, and you build the reservation and ordering logic, the POS
+            no-code setup, and you build the returns logic, the OMS
             integration, and the routing yourself. RhythmiqCX is the opposite: a
-            done-for-you AI phone host built for restaurants. It already knows how to
-            book a table, take a takeout order with modifiers, and answer guest
+            done-for-you voice AI built for D2C ecommerce. It already knows how to
+            rescue a failed delivery, confirm a COD order, and answer customer
             questions in 12+ languages, on a flat plan with no per-minute meter
             running in the background.
           </p>
@@ -168,7 +168,7 @@ export default function RetellAlternative() {
               <h3 className="text-lg font-semibold text-[#1F7A4D] mb-3 text-center">RhythmiqCX</h3>
               <h4 className="text-ink font-medium mb-2 flex items-center gap-2"><CheckCircle className="h-4 w-4 text-[#1F7A4D]" /> Pros</h4>
               <ul className="pl-5 list-disc text-ink2 space-y-1">
-                <li><strong className="text-ink">Built for restaurants</strong> reservations, orders, and menu Q&A out of the box</li>
+                <li><strong className="text-ink">Built for D2C ecommerce</strong> failed deliveries, returns, and COD orders out of the box</li>
                 <li><strong className="text-ink">Flat, predictable pricing</strong> no per-minute meter, no surprise bill</li>
                 <li><strong className="text-ink">Done-for-you</strong> live in minutes, no engineers</li>
                 <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>
@@ -194,24 +194,24 @@ export default function RetellAlternative() {
               <ul className="pl-5 list-disc text-ink3 space-y-1">
                 <li>Per-minute pricing the bill compounds and is hard to predict</li>
                 <li>No no-code setup it requires a developer</li>
-                <li>You build the reservation and ordering flows yourself</li>
-                <li>No restaurant-tuned Arabic, Spanish, or Hindi out of the box</li>
+                <li>You build the returns flows yourself</li>
+                <li>No D2C-tuned Arabic, Spanish, or Hindi out of the box</li>
               </ul>
             </div>
           </div>
         </section>
 
         <section id="why-rhythmiq" className="bg-paper2 p-6 lg:p-8 rounded-[14px] text-center">
-          <h2 className="h-feature mb-3">RhythmiqCX, the Retell alternative for restaurants, not engineers</h2>
+          <h2 className="h-feature mb-3">RhythmiqCX, the Retell alternative for D2C brands, not engineers</h2>
           <p className="text-ink2 max-w-3xl mx-auto mb-4 leading-[1.6]">
             Retell AI is a great fit if you have an engineering team and want to
-            build on a per-minute platform. RhythmiqCX is for restaurant owners and
-            operators who want the phone fully handled, on a flat plan, without
+            build on a per-minute platform. RhythmiqCX is for D2C brand owners and
+            operators who want the call queue fully handled, on a flat plan, without
             hiring a developer or watching a minute meter.
           </p>
           <ul className="list-disc text-ink2 text-left max-w-3xl mx-auto space-y-1 pl-5">
             <li><strong className="text-ink">Flat, not metered</strong> no per-minute bill that compounds with every call</li>
-            <li><strong className="text-ink">Restaurant-ready</strong> books tables and takes orders without you building flows</li>
+            <li><strong className="text-ink">D2C-ready</strong> rescues deliveries and confirms orders without you building flows</li>
             <li><strong className="text-ink">Done-for-you</strong> live in minutes, no engineers</li>
             <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>
           </ul>
@@ -221,8 +221,8 @@ export default function RetellAlternative() {
           <h2 className="h-feature mb-3">Conclusion</h2>
           <p className="text-ink2 max-w-3xl mx-auto leading-[1.6]">
             If you need deep API customisation and have developer resources, Retell
-            AI works. But if you run a restaurant and want a phone host that is{" "}
-            <strong className="text-ink">done-for-you, flat-priced, and takes real orders in any language</strong>
+            AI works. But if you run a D2C brand and want voice AI that is{" "}
+            <strong className="text-ink">done-for-you, flat-priced, and recovers real orders in any language</strong>
             , RhythmiqCX is purpose-built for that.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">

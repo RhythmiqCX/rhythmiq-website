@@ -24,8 +24,8 @@ interface MetadataProps {
 const DEFAULT_OG_IMAGE = "/icons/og-default.png";
 
 export const generateMetadata = ({
-    title = `Rhythmiq: The AI Phone Host for Restaurants`,
-    description = `Rhythmiq is the AI phone host for restaurants. It answers every call, books tables, takes orders, and sounds like your best maitre d, 24/7, in 12+ languages. Plans from $149 a month.`,
+    title = `Rhythmiq: Voice AI That Rescues Failed Deliveries & Returns`,
+    description = `Rhythmiq calls your D2C customers to rescue failed deliveries, confirm COD orders, turn returns into exchanges, and bring back abandoned carts, 24/7, in 12+ languages. Plans from $149 a month.`,
     icons = [
         { rel: "icon", url: "/icons/rhythmiq-mark-32.png", sizes: "32x32", type: "image/png" },
         { rel: "icon", url: "/icons/rhythmiq-mark-16.png", sizes: "16x16", type: "image/png" },
@@ -35,13 +35,13 @@ export const generateMetadata = ({
     ],
     noIndex = false,
     keywords = [
-        "AI phone host for restaurants",
-        "restaurant voice AI",
-        "AI receptionist for restaurants",
-        "AI answering service restaurant",
-        "restaurant reservation AI",
-        "AI phone answering restaurant",
-        "voice AI for restaurants",
+        "voice AI for D2C ecommerce",
+        "reduce RTO with voice AI",
+        "NDR reduction calling",
+        "COD confirmation calls",
+        "AI call for failed delivery",
+        "returns to exchange voice AI",
+        "abandoned cart call AI",
     ],
     author = process.env.NEXT_PUBLIC_AUTHOR_NAME || "Rhythmiq",
     type = "website",
