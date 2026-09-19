@@ -371,35 +371,6 @@ export const ExchangeArt = ({ className }: { className?: string }) => (
   </ArtBox>
 );
 
-/* --- Outbound call (Hero) --- */
-export const PhoneCallArt = ({ className }: { className?: string }) => (
-  <ArtBox className={className} viewBox="0 0 150 200" tint={TINT.sky}>
-    <rect x="46" y="30" width="58" height="140" rx="14" stroke={INK} strokeWidth="2.4" fill="none" />
-    <line x1="66" y1="42" x2="84" y2="42" stroke={INK} strokeWidth="2.4" strokeLinecap="round" />
-    <circle cx="75" cy="152" r="5" fill={INK} />
-    <path d="M112 80 a30 30 0 0 1 0 40" stroke={CORAL} strokeWidth="2.6" fill="none" strokeLinecap="round" />
-    <path d="M124 68 a48 48 0 0 1 0 64" stroke={CORAL} strokeWidth="2.2" fill="none" strokeLinecap="round" opacity="0.7" />
-  </ArtBox>
-);
-
-/* --- Recovered cart (Hero) --- */
-export const CartCheckArt = ({ className }: { className?: string }) => (
-  <ArtBox className={className} viewBox="0 0 200 180" tint={TINT.paper2}>
-    <path
-      d="M30 34h20l14 84h84l14-56H68"
-      stroke={INK}
-      strokeWidth="2.4"
-      fill="none"
-      strokeLinejoin="round"
-      strokeLinecap="round"
-    />
-    <circle cx="76" cy="146" r="9" stroke={INK} strokeWidth="2.2" fill="none" />
-    <circle cx="140" cy="146" r="9" stroke={INK} strokeWidth="2.2" fill="none" />
-    <circle cx="150" cy="60" r="22" fill={CORAL} />
-    <path d="M140 60 l7 8 l14 -16" stroke="#FAF8F3" strokeWidth="3.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-  </ArtBox>
-);
-
 /* --- Plug board (Integrations: "plugs into the stack you already run") --- */
 const PLUGS = [
   { sx: 76, label: "Shopify" },

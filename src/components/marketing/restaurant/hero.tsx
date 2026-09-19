@@ -1,6 +1,30 @@
 import Link from "next/link";
+import Image from "next/image";
+import { cn } from "@/lib";
 import { BOOK_DEMO_URL, DEMO_URL } from "@/constants/links";
-import { MeshTile, ParcelArt, PhoneCallArt, ExchangeArt, CartCheckArt } from "./art";
+
+const HeroPhoto = ({
+  src,
+  alt,
+  className,
+  priority,
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  priority?: boolean;
+}) => (
+  <div className={cn("relative overflow-hidden bg-paper2", className)}>
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      sizes="(max-width:640px) 33vw, (max-width:1024px) 25vw, 14vw"
+      className="object-cover"
+      priority={priority}
+    />
+  </div>
+);
 
 const Hero = () => {
   return (
@@ -31,15 +55,15 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Eclectic art strip */}
+        {/* Eclectic photo strip */}
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-3.5 mt-8 lg:mt-12">
-          <MeshTile uid="hero-dark" variant="dark" className="aspect-[3/2.4] self-end rounded-lg" />
-          <MeshTile uid="hero-coral" variant="coral" className="aspect-[3/3.4] rounded-lg" />
-          <ParcelArt className="aspect-[3/3.4] rounded-lg" />
-          <PhoneCallArt className="aspect-[3/4] rounded-lg" />
-          <ExchangeArt className="aspect-[3/3.4] rounded-lg" />
-          <MeshTile uid="hero-cool" variant="cool" className="aspect-[3/2.6] self-end rounded-lg" />
-          <CartCheckArt className="aspect-[3/3.4] rounded-lg" />
+          <HeroPhoto src="/images/hero/call-01.jpg" alt="Agent on a call with a customer at sunset" className="aspect-[3/2.4] self-end rounded-lg" priority />
+          <HeroPhoto src="/images/hero/parcel-02.jpg" alt="A packed parcel ready for delivery" className="aspect-[3/3.4] rounded-lg" priority />
+          <HeroPhoto src="/images/hero/courier-03.jpg" alt="A courier handing a package to a customer" className="aspect-[3/3.4] rounded-lg" priority />
+          <HeroPhoto src="/images/hero/shop-04.jpg" alt="A customer browsing a product on their phone" className="aspect-[3/4] rounded-lg" />
+          <HeroPhoto src="/images/hero/return-05.jpg" alt="Taping up a return box" className="aspect-[3/3.4] rounded-lg" />
+          <HeroPhoto src="/images/hero/boxes-06.jpg" alt="Stacked parcels in a warehouse" className="aspect-[3/2.6] self-end rounded-lg" />
+          <HeroPhoto src="/images/hero/phone-07.jpg" alt="A customer smiling at a text confirmation" className="aspect-[3/3.4] rounded-lg" />
         </div>
       </div>
     </section>
