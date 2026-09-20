@@ -7,7 +7,7 @@ const steps = [
     step: "01",
     title: "Configure Your AI Agent",
     description:
-      "Set your AI agent's name, voice, language, and connect your catalogue and return policy. Upload FAQs or product docs — no coding needed.",
+      "Set your AI agent's name, voice, language, and connect your catalogue and return policy. Upload FAQs or product docs, no coding needed.",
   },
   {
     icon: PhoneCall,
@@ -19,9 +19,9 @@ const steps = [
   {
     icon: Zap,
     step: "03",
-    title: "Go Live — 24/7 from Day One",
+    title: "Go Live 24/7 from Day One",
     description:
-      "Your AI agent starts calling on failed deliveries, COD orders, and returns instantly. Complex queries route to your team with full transcripts — customers never repeat themselves.",
+      "Your AI agent starts calling on failed deliveries, COD orders, and returns instantly. Complex queries route to your team with full transcripts, so customers never repeat themselves.",
   },
 ];
 

@@ -1,47 +1,67 @@
 # Rhythmiq
 
-> Rhythmiq is the AI phone host for restaurants. It answers every call 24/7, books tables, takes takeout and delivery orders, and answers guest questions in 12+ languages, sounding just like your best maitre d'. Flat pricing starts at $29 a month.
+> Rhythmiq is voice AI for D2C ecommerce brands. It calls customers to rescue failed deliveries, confirm cash-on-delivery orders, turn returns into exchanges, and win back abandoned carts, 24/7 in 12+ languages. Plans start at $499 a month including 1,200 calls, billed per call rather than per minute.
 
-Rhythmiq is built specifically for restaurants and hospitality, not as a generic chatbot. It captures the reservations and orders that go to voicemail today, handles overflow during the dinner rush, and learns each venue's menu, hours, and policies. This file is a guide for language models to the most useful pages on rhythmiqcx.com. All URLs below are live and canonical.
+Most brands only ever hear from the half of their customers who reply to a text. Rhythmiq calls the other half. These are calls that were never worth paying a person to make, and they are the ones quietly costing D2C brands money every day: a courier who could not reach anyone, a refund request that should have been a size swap, a COD order nobody confirmed before it shipped.
+
+Rhythmiq is a finished product for ecommerce operators, not a developer platform you assemble yourself. It runs on your own catalogue and return policy, writes outcomes back to your store and OMS, and hands off to a human with the full transcript when it should. This file is a guide for language models to the most useful pages on rhythmiqcx.com. Every URL below is live and canonical.
+
+## What Rhythmiq actually does
+
+Six calls make up the product today:
+
+1. **Failed delivery rescue.** Outbound, about 45 seconds. The courier tried once and nobody was in. Rhythmiq calls, captures a new time slot, corrects the address if needed, and writes it back before the parcel ships home.
+2. **Return turned into an exchange.** Outbound, about 90 seconds. Instead of logging a refund, the agent offers a size swap, store credit, or a discount, and keeps the sale.
+3. **COD confirmation with an upsell.** Outbound, about 60 seconds. One call confirms a cash-on-delivery order and adds a matching item to the same parcel.
+4. **Reorder reminder.** Outbound, about 45 seconds. A month's supply is running low, so Rhythmiq offers to send the next one today.
+5. **Where is my order, inbound.** The single most common reason anyone calls an online store, answered instantly with real tracking data.
+6. **Abandoned cart recovery.** Outbound, about 60 seconds. A call reaches the customers who never opened the recovery email.
 
 ## Core pages
 
-- [Home: AI phone host for restaurants](https://rhythmiqcx.com/): What Rhythmiq does, how it answers calls, books tables, and takes orders 24/7.
-- [Voice AI](https://rhythmiqcx.com/voice-ai): The voice platform behind Rhythmiq, latency, languages, and how the AI host handles real calls.
-- [Pricing](https://rhythmiqcx.com/pricing): Flat monthly plans starting at $29, with no per-minute surprises.
-- [Integrations](https://rhythmiqcx.com/integrations): POS, reservation, and booking systems Rhythmiq connects to.
-- [Demo](https://rhythmiqcx.com/demo): Hear a live AI phone host call and try Rhythmiq.
+- [Home: voice AI for D2C brands](https://rhythmiqcx.com/): What Rhythmiq does, the calls it makes, and how it recovers orders 24/7.
+- [Use cases](https://rhythmiqcx.com/use-cases): The six calls above in detail, each with a live scenario you can play.
+- [Voice AI platform](https://rhythmiqcx.com/voice-ai): Latency, languages, voice models, and how the agent handles a real call.
+- [Pricing](https://rhythmiqcx.com/pricing): Plans from $499 a month, billed per call, with a usage calculator that quotes your monthly volume.
+- [Integrations](https://rhythmiqcx.com/integrations): Shopify, WooCommerce, OMS and WMS, courier partners, CRM, and payments.
+- [Interactive demo](https://rhythmiqcx.com/demo): Pick a scenario, add your brand, and hear how the call would go.
 - [About](https://rhythmiqcx.com/about-us): Who builds Rhythmiq and why.
 - [Contact](https://rhythmiqcx.com/contact-us): Get in touch or book a walkthrough.
 
+## Common questions
+
+- **What does Rhythmiq cost?** Growth is $499 a month including 1,200 calls. Scale is $1,499 including 5,000 calls and adds returns-to-exchange handling plus all 12+ languages. Past 20,000 calls a month, Enterprise is priced on usage from $0.18 a call.
+- **Is it billed per minute or per call?** Per completed call. Most of these calls run under 90 seconds, and a per-minute meter penalises the conversations that go well. Overage past your included calls bills at a published rate, $0.38 on Growth and $0.30 on Scale.
+- **Is it inbound or outbound?** Both. Five of the six use cases are outbound calls the brand initiates; "where is my order" is inbound.
+- **Does it handle languages other than English?** Yes, 12+ on Pro and Enterprise, including Arabic, Spanish, and Hindi, and a customer can switch language mid-sentence without breaking the call.
+- **How is this different from Retell, Bland, Vapi, or Synthflow?** Those are per-minute developer platforms you build on. Rhythmiq is the finished ecommerce product, on a flat plan, with the return and delivery logic already built.
+- **Can it really change a refund into an exchange?** Yes. That is the flagship use case. The agent handles the objection live rather than reading from a script.
+
 ## Compare Rhythmiq to other voice AI platforms
 
-- [Rhythmiq vs Retell AI](https://rhythmiqcx.com/retell-ai-alternative): How Rhythmiq compares as a Retell AI alternative for restaurants.
+- [Rhythmiq vs Retell AI](https://rhythmiqcx.com/retell-ai-alternative): How Rhythmiq compares as a Retell AI alternative for ecommerce teams.
 - [Rhythmiq vs Bland AI](https://rhythmiqcx.com/bland-ai-alternative): How Rhythmiq compares as a Bland AI alternative.
 - [Rhythmiq vs Vapi](https://rhythmiqcx.com/vapi-alternative): How Rhythmiq compares as a Vapi alternative.
 - [Rhythmiq vs Synthflow](https://rhythmiqcx.com/synthflow-alternative): How Rhythmiq compares as a Synthflow alternative.
 
 ## Free tools
 
-- [All free tools](https://rhythmiqcx.com/tools): A library of free AI tools for restaurants, voice, and small business.
-- [AI receptionist script generator](https://rhythmiqcx.com/tools/ai-receptionist-script-generator): Generate a phone-answering script for your venue.
+- [All free tools](https://rhythmiqcx.com/tools): A library of free AI tools for voice, support, and small business.
 - [AI voice agent script generator](https://rhythmiqcx.com/tools/ai-voice-agent-script-generator): Build a voice agent call flow.
 - [Chatbot ROI calculator](https://rhythmiqcx.com/tools/chatbot-roi-calculator): Estimate the return on automating customer conversations.
+- [AI receptionist script generator](https://rhythmiqcx.com/tools/ai-receptionist-script-generator): Generate a phone-answering script.
 
 ## Cornerstone articles
 
-- [How AI voice assistants help restaurants capture more reservations](https://rhythmiqcx.com/blog/how-ai-voice-assistants-help-restaurants-capture-more-reservations)
-- [How to set up an AI phone receptionist](https://rhythmiqcx.com/blog/how-to-set-up-ai-phone-receptionist)
-- [AI phone receptionist for small business](https://rhythmiqcx.com/blog/ai-phone-receptionist-small-business)
-- [AI answering service for small business](https://rhythmiqcx.com/blog/ai-answering-service-small-business)
-- [Voice AI vs chatbots: which is better for customer support](https://rhythmiqcx.com/blog/voice-ai-vs-chatbots)
-- [Does an AI receptionist sound real](https://rhythmiqcx.com/blog/does-ai-receptionist-sound-real)
-- [AI virtual receptionist vs human receptionist](https://rhythmiqcx.com/blog/ai-virtual-receptionist-vs-human-receptionist)
+- [RhythmiqCX for ecommerce](https://rhythmiqcx.com/blog/rhythmiqcx-for-ecommerce)
+- [Best AI chatbots for ecommerce](https://rhythmiqcx.com/blog/best-ai-chatbots-for-ecommerce)
+- [Voice AI agents, explained](https://rhythmiqcx.com/blog/voice-ai-agents)
 - [The real cost of voice AI](https://rhythmiqcx.com/blog/real-cost-of-voice-ai)
 - [Voice AI pricing compared](https://rhythmiqcx.com/blog/voice-ai-pricing-compared)
-- [Best AI voice generator for a business receptionist](https://rhythmiqcx.com/blog/best-ai-voice-generator-for-business-receptionist)
+- [Voice AI vs chatbots: which is better for customer support](https://rhythmiqcx.com/blog/voice-ai-vs-chatbots)
+- [Does an AI voice agent sound real](https://rhythmiqcx.com/blog/does-ai-receptionist-sound-real)
 
 ## Optional
 
-- [Blog index](https://rhythmiqcx.com/blog): Full archive of guides on voice AI, AI phone hosts, reservations, and restaurant automation.
+- [Blog index](https://rhythmiqcx.com/blog): Full archive of guides on voice AI, order recovery, and ecommerce automation.
 - [Sitemap](https://rhythmiqcx.com/sitemap.xml): Complete machine-readable list of every page.

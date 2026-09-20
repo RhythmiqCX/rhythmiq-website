@@ -57,7 +57,7 @@ export const DEMO_SCENARIOS: DemoScenario[] = [
             { who: "caller", text: "I want to return this dress, it's too small." },
             {
                 who: "ai",
-                text: "Sorry about that. I can send the next size up today at no extra charge, or give you store credit plus 200 rupees extra to spend. Which would you prefer?",
+                text: "Sorry about that. I can send the next size up today at no extra charge, or give you store credit plus 10 dollars extra to spend. Which would you prefer?",
                 hl: "next size up today at no extra charge",
             },
             { who: "caller", text: "Oh, I didn't realize that was an option. Send the next size up." },
@@ -83,7 +83,7 @@ export const DEMO_SCENARIOS: DemoScenario[] = [
             { who: "caller", text: "Yes, that's right." },
             {
                 who: "ai",
-                text: "Great. Since you're getting the shampoo anyway, want the matching conditioner in the same parcel? No extra delivery, and I can knock 100 rupees off.",
+                text: "Great. Since you're getting the shampoo anyway, want the matching conditioner in the same parcel? No extra delivery, and I can knock 5 dollars off.",
                 hl: "no extra delivery",
             },
             { who: "caller", text: "Sure, add it." },
@@ -168,7 +168,7 @@ export const DEMO_FORM_FIELDS: DemoFormField[] = [
         label: "Product category",
         options: ["Fashion & apparel", "Beauty & personal care", "Electronics", "Home & kitchen", "Food & FMCG", "Jewellery", "Other"],
     },
-    { name: "city", label: "Primary market", placeholder: "India, UAE, USA" },
-    { name: "orderValue", label: "Typical order value", placeholder: "₹1,200" },
+    { name: "city", label: "Primary market", placeholder: "USA, UAE, India" },
+    { name: "orderValue", label: "Typical order value", placeholder: "$45" },
     { name: "channel", label: "Where most orders come from", options: ["Own website", "Shopify", "WooCommerce", "Marketplace", "Other"] },
 ];

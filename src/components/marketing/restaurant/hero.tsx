@@ -55,15 +55,17 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Eclectic photo strip */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-3.5 mt-8 lg:mt-12">
-          <HeroPhoto src="/images/hero/call-01.jpg" alt="Agent on a call with a customer at sunset" className="aspect-[3/2.4] self-end rounded-lg" priority />
-          <HeroPhoto src="/images/hero/parcel-02.jpg" alt="A packed parcel ready for delivery" className="aspect-[3/3.4] rounded-lg" priority />
-          <HeroPhoto src="/images/hero/courier-03.jpg" alt="A courier handing a package to a customer" className="aspect-[3/3.4] rounded-lg" priority />
-          <HeroPhoto src="/images/hero/shop-04.jpg" alt="A customer browsing a product on their phone" className="aspect-[3/4] rounded-lg" />
-          <HeroPhoto src="/images/hero/return-05.jpg" alt="Taping up a return box" className="aspect-[3/3.4] rounded-lg" />
-          <HeroPhoto src="/images/hero/boxes-06.jpg" alt="Stacked parcels in a warehouse" className="aspect-[3/2.6] self-end rounded-lg" />
-          <HeroPhoto src="/images/hero/phone-07.jpg" alt="A customer smiling at a text confirmation" className="aspect-[3/3.4] rounded-lg" />
+        {/* Eclectic photo strip. Slots alternate landscape and portrait, and each
+            photo sits in a slot matching its native orientation so nothing gets
+            crushed by the crop. Staggered heights and `self-end` give the row its
+            uneven, cut-and-paste rhythm. */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 mt-8 lg:mt-12">
+          <HeroPhoto src="/images/hero/handoff-01.webp" alt="A courier handing two parcels to a customer at the door" className="aspect-[3/2.4] self-end rounded-lg" priority />
+          <HeroPhoto src="/images/hero/shopping-02.webp" alt="A shopper browsing clothes in an app, card in hand" className="aspect-[3/3.4] rounded-lg" priority />
+          <HeroPhoto src="/images/hero/fragile-03.webp" alt="A delivery driver carrying a box marked fragile" className="aspect-[3/4] rounded-lg" priority />
+          <HeroPhoto src="/images/hero/packing-04.webp" alt="Someone packing orders at a fulfilment desk" className="aspect-[3/2.6] self-end rounded-lg" />
+          <HeroPhoto src="/images/hero/call-05.webp" alt="A customer taking a call at home about their order" className="aspect-[3/3.4] rounded-lg" />
+          <HeroPhoto src="/images/hero/mailers-06.webp" alt="Branded mailer boxes with thank-you cards, ready to ship" className="aspect-[3/2.6] self-end rounded-lg" />
         </div>
       </div>
     </section>

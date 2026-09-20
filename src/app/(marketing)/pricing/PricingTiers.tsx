@@ -60,9 +60,9 @@ const PricingTiers = () => {
           ))}
         </div>
         <p className="text-center text-sm text-ink3 mt-8 max-w-2xl mx-auto">
-          Prices in USD. Plenty of calls included, and if a big month pushes you
-          over, it is a clear published rate, never a $400 surprise bill. No setup
-          fees. Have a question about a plan?{" "}
+          Prices in USD, billed per completed call rather than per minute. If a big
+          month pushes you past what is included, the extra calls bill at a published
+          rate, never a surprise. No setup fees. Have a question about a plan?{" "}
           <Link href={CONTACT_URL} className="text-coral hover:underline">
             Talk to us
           </Link>

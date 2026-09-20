@@ -25,7 +25,7 @@ const DEFAULT_OG_IMAGE = "/icons/og-default.png";
 
 export const generateMetadata = ({
     title = `Rhythmiq: Voice AI That Rescues Failed Deliveries & Returns`,
-    description = `Rhythmiq calls your D2C customers to rescue failed deliveries, confirm COD orders, turn returns into exchanges, and bring back abandoned carts, 24/7, in 12+ languages. Plans from $149 a month.`,
+    description = `Rhythmiq calls your D2C customers to rescue failed deliveries, confirm COD orders, turn returns into exchanges, and bring back abandoned carts, 24/7, in 12+ languages. Plans from $499 a month, billed per call.`,
     icons = [
         { rel: "icon", url: "/icons/rhythmiq-mark-32.png", sizes: "32x32", type: "image/png" },
         { rel: "icon", url: "/icons/rhythmiq-mark-16.png", sizes: "16x16", type: "image/png" },

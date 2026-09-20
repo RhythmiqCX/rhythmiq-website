@@ -11,9 +11,9 @@ import JsonLd from "@/components/global/JsonLd";
 import { AlwaysOnArt, ConversationArt, RoutingArt } from "@/components/marketing/voice-art";
 
 export const metadata = genMeta({
-  title: "Voice AI for D2C Ecommerce | RhythmiqCX — From $149/mo",
+  title: "Voice AI for D2C Ecommerce | RhythmiqCX from $499/mo",
   description:
-    "Deploy AI voice agents that call D2C customers to rescue failed deliveries, confirm COD orders, and turn returns into exchanges, 24/7 with human-like accuracy. No-code setup, 12+ languages — plans from $149/mo.",
+    "Deploy AI voice agents that call D2C customers to rescue failed deliveries, confirm COD orders, and turn returns into exchanges, 24/7 with human-like accuracy. No-code setup, 12+ languages, plans from $499/mo.",
   keywords: [
     "voice AI for D2C ecommerce",
     "reduce RTO with voice AI",
@@ -38,18 +38,18 @@ export const metadata = genMeta({
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "RhythmiqCX Voice AI — Voice AI for D2C Ecommerce",
+  name: "RhythmiqCX Voice AI for D2C Ecommerce",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   url: "https://rhythmiqcx.com/voice-ai",
   description:
-    "RhythmiqCX Voice AI is a conversational voice AI platform for D2C ecommerce that deploys human-like AI voice agents to rescue failed deliveries, confirm COD orders, turn returns into exchanges, and recover abandoned carts for 24/7 inbound and outbound call handling. Features voice cloning, neural TTS, real-time synthesis, and no-code setup. Plans from $149/month.",
+    "RhythmiqCX Voice AI is a conversational voice AI platform for D2C ecommerce that deploys human-like AI voice agents to rescue failed deliveries, confirm COD orders, turn returns into exchanges, and recover abandoned carts for 24/7 inbound and outbound call handling. Features voice cloning, neural TTS, real-time synthesis, and no-code setup. Plans from $499/month.",
   offers: {
     "@type": "Offer",
-    price: "149",
+    price: "499",
     priceCurrency: "USD",
     priceValidUntil: "2027-01-01",
-    description: "Monthly plans — no per-minute overages",
+    description: "Monthly plans billed per call, with no per-minute meter",
   },
   featureList: [
     "24/7 outbound + inbound voice AI",
@@ -74,7 +74,7 @@ const faqSchema = {
       name: "How much does voice AI for D2C cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "RhythmiqCX plans start at $149/month, flat with no per-minute overages. Per-minute platforms charge $0.07–$0.31/min, which adds up fast at real call volume. With Rhythmiq you get 24/7 outbound and inbound call handling, returns-to-exchange handling, and 12+ languages included.",
+        text: "RhythmiqCX plans start at $499/month, flat with no per-minute overages. Per-minute platforms charge $0.07–$0.31/min, which adds up fast at real call volume. With Rhythmiq you get 24/7 outbound and inbound call handling, returns-to-exchange handling, and 12+ languages included.",
       },
     },
     {
@@ -106,7 +106,7 @@ const faqSchema = {
       name: "Can the AI handle a customer's objection, not just a script?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The AI offers real alternatives like a size swap or store credit instead of reading a script. Low-confidence calls automatically transfer to a live agent with the full transcript — customers never repeat themselves.",
+        text: "Yes. The AI offers real alternatives like a size swap or store credit instead of reading a script. Low-confidence calls automatically transfer to a live agent with the full transcript, so customers never repeat themselves.",
       },
     },
   ],
@@ -153,8 +153,8 @@ const VoiceAIApp = () => {
           orders, and turn returns into exchanges, for 24/7 inbound and outbound
           call handling. Powered by Sarvam Bulbul v2 neural TTS and real-time
           speech-to-text, it supports 12+ languages, and starts at{" "}
-          <strong className="text-ink">$149/month</strong> — no per-minute
-          fees, no developer required.
+          <strong className="text-ink">$499/month</strong>, with no per-minute
+          fees and no developer required.
         </p>
       </section>
 

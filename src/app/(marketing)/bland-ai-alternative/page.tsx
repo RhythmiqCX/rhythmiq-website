@@ -8,7 +8,7 @@ import { BOOK_DEMO_URL } from "@/constants/links";
 export const metadata = generateMetadata({
   title: "Bland AI Alternative for D2C Brands | RhythmiqCX Voice AI",
   description:
-    "Bland AI is a per-minute, developer-first platform with enterprise friction. RhythmiqCX is the done-for-you voice AI for D2C brands: rescues failed deliveries, confirms COD orders, answers in 12+ languages, on flat plans from $149/mo with no contract.",
+    "Bland AI is a per-minute, developer-first platform with enterprise friction. RhythmiqCX is the done-for-you voice AI for D2C brands: rescues failed deliveries, confirms COD orders, answers in 12+ languages, on flat plans from $499/mo with no contract.",
   keywords: [
     "Bland AI alternative",
     "Bland AI alternative for D2C ecommerce",
@@ -72,7 +72,7 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
     "Pricing model",
     <Neg key="b-price">Per-minute billing and enterprise plans. Costs scale with volume and the bill is hard to predict.</Neg>,
-    <Pos key="rx-price"><strong className="text-ink">Flat plans from $149/mo.</strong> No per-minute meter, no enterprise contract, no surprise overage.</Pos>,
+    <Pos key="rx-price"><strong className="text-ink">Flat plans from $499/mo.</strong> No per-minute meter, no enterprise contract, no surprise overage.</Pos>,
   ],
   [
     "Setup",
@@ -112,7 +112,7 @@ export default function BlandAlternative() {
           <span className="eyebrow justify-center">Comparison · Bland AI</span>
           <h1 className="h-section mt-4">Bland AI Alternative: Voice AI Built for D2C Brands</h1>
           <p className="lede mx-auto max-w-2xl mt-4">
-            No developer, no per-minute meter, no enterprise contract. RhythmiqCX is the done-for-you voice AI that rescues deliveries and confirms orders, on a flat plan from $149/mo.
+            No developer, no per-minute meter, no enterprise contract. RhythmiqCX is the done-for-you voice AI that rescues deliveries and confirms orders, on a flat plan from $499/mo.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-7">
             <Link href={BOOK_DEMO_URL} className="btn btn-accent">Book a free demo</Link>
@@ -133,7 +133,7 @@ export default function BlandAlternative() {
             needs the call queue answered, deliveries rescued, and orders confirmed, that is a lot
             of overhead. RhythmiqCX delivers the same core capability, human-like
             voice that handles real calls, as a done-for-you product built for
-            D2C ecommerce, on a flat plan from $149/month with no developer required.
+            D2C ecommerce, on a flat plan from $499/month with no developer required.
           </p>
         </section>
 

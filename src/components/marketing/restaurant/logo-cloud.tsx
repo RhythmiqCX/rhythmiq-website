@@ -12,7 +12,7 @@ const ROW_TWO = [
   { label: "Synthesis", cls: "lg" },
   { label: "AKOR·GOODS", cls: "lg mono" },
   { label: "Le Petit Studio", cls: "lg serif" },
-  { label: "Cluckin", cls: "lg" },
+  { label: "Lumen Goods", cls: "lg" },
   { label: "SCENIC/WEAR", cls: "lg mono" },
 ];
 

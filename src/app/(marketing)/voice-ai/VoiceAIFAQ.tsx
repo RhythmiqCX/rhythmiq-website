@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "How much does voice AI for D2C cost?",
-    a: "RhythmiqCX plans start at $149/month, flat and predictable, with no per-minute overages. Generic per-minute platforms get unpredictable fast once call volume grows. With Rhythmiq you know your bill before the month starts, and returns-to-exchange handling plus 12+ languages are included.",
+    a: "RhythmiqCX starts at $499/month including 1,200 calls, and bills per completed call rather than per minute. Generic per-minute platforms get unpredictable fast once call volume grows, because a longer conversation costs you more. Past 20,000 calls a month we price on usage, from $0.18 a call. Returns-to-exchange handling and 12+ languages are included.",
   },
   {
     q: "How long does setup take?",

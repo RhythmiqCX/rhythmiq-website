@@ -12,8 +12,9 @@ const PricingHero = () => {
         </h1>
         <p className="lede mt-5 max-w-[54ch] mx-auto">
           Every plan calls your customers 24/7, rescues failed deliveries, confirms
-          COD orders, and speaks their language. Pick by how many orders you ship a
-          month. No setup fees, no surprise overage bills.
+          COD orders, and speaks their language. Billed per call rather than per
+          minute, so you can work the number out from your order volume. No setup
+          fees and no surprise overage bills.
         </p>
         <Reveal className="flex gap-3 justify-center flex-wrap mt-7">
           <Link href={BOOK_DEMO_URL} className="btn btn-dark">

@@ -27,7 +27,7 @@ const Hero = () => {
         <p className="lede leading-relaxed max-w-2xl">
           Deploy conversational AI voice agents that call customers to rescue
           failed deliveries, confirm COD orders, and turn returns into exchanges.
-          Human-like accuracy, from $149/mo.
+          Human-like accuracy, from $499/mo.
         </p>
 
         {/* Stats bar */}

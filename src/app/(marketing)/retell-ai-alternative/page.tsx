@@ -72,7 +72,7 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
     "Pricing model",
     <Neg key="r-price">$0.07+/min, metered. Costs compound on a busy service and the bill is never the same twice.</Neg>,
-    <Pos key="rx-price"><strong className="text-ink">Flat plans from $149/mo.</strong> No per-minute meter, no surprise overage.</Pos>,
+    <Pos key="rx-price"><strong className="text-ink">Flat plans from $499/mo.</strong> No per-minute meter, no surprise overage.</Pos>,
   ],
   [
     "Setup",

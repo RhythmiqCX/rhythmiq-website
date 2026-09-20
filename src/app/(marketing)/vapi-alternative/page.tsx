@@ -8,7 +8,7 @@ import { BOOK_DEMO_URL } from "@/constants/links";
 export const metadata = generateMetadata({
   title: "Vapi Alternative for D2C Brands | RhythmiqCX All-in-One Voice AI",
   description:
-    "Vapi is middleware you wire to 4–6 vendors, billed per minute. RhythmiqCX is the all-in-one, done-for-you voice AI for D2C brands: rescues failed deliveries, confirms COD orders, turns returns into exchanges, 12+ languages, one vendor, flat plans from $149/mo.",
+    "Vapi is middleware you wire to 4–6 vendors, billed per minute. RhythmiqCX is the all-in-one, done-for-you voice AI for D2C brands: rescues failed deliveries, confirms COD orders, turns returns into exchanges, 12+ languages, one vendor, flat plans from $499/mo.",
   keywords: [
     "Vapi alternative",
     "Vapi alternative for D2C ecommerce",
@@ -72,7 +72,7 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
     "True all-in pricing",
     <Neg key="v-price">$0.13–$0.31/min once LLM + TTS + STT + telephony fees are added. Requires 4–6 contracts.</Neg>,
-    <Pos key="rx-price"><strong className="text-ink">Flat plans from $149/mo, all-inclusive.</strong> AI, voice, telephony, and routing bundled. One invoice.</Pos>,
+    <Pos key="rx-price"><strong className="text-ink">Flat plans from $499/mo, all-inclusive.</strong> AI, voice, telephony, and routing bundled. One invoice.</Pos>,
   ],
   [
     "Vendor complexity",
@@ -81,7 +81,7 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   ],
   [
     "Setup",
-    <Neg key="v-setup">Developer-first. A non-technical D2C team can't configure or maintain it.</Neg>,
+    <Neg key="v-setup">Developer-first. A non-technical D2C team can&rsquo;t configure or maintain it.</Neg>,
     <Pos key="rx-setup"><strong className="text-ink">Done-for-you.</strong> Tell us your catalogue and policies, point your number at it, live in minutes.</Pos>,
   ],
   [
@@ -112,7 +112,7 @@ export default function VapiAlternative() {
           <span className="eyebrow justify-center">Comparison · Vapi</span>
           <h1 className="h-section mt-4">Vapi Alternative: One Platform vs Four Vendors</h1>
           <p className="lede mx-auto max-w-2xl mt-4">
-            Vapi wires together 4–6 separate vendors and bills $0.13–$0.31/min. RhythmiqCX is the all-in-one, done-for-you voice AI for D2C brands, flat from $149/mo.
+            Vapi wires together 4–6 separate vendors and bills $0.13–$0.31/min. RhythmiqCX is the all-in-one, done-for-you voice AI for D2C brands, flat from $499/mo.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-7">
             <Link href={BOOK_DEMO_URL} className="btn btn-accent">Book a free demo</Link>
@@ -133,7 +133,7 @@ export default function VapiAlternative() {
             integrator. A D2C brand does not want to assemble a voice stack, it
             wants failed deliveries rescued and orders confirmed. RhythmiqCX packages
             everything, AI, voice, telephony, and routing, into one done-for-you
-            product built for D2C ecommerce, on a flat plan from $149/month.
+            product built for D2C ecommerce, on a flat plan from $499/month.
           </p>
         </section>
 
@@ -170,7 +170,7 @@ export default function VapiAlternative() {
               <ul className="pl-5 list-disc text-ink2 space-y-1">
                 <li><strong className="text-ink">Built for D2C ecommerce</strong> failed deliveries, returns, and COD orders out of the box</li>
                 <li><strong className="text-ink">One vendor, one invoice</strong> no contract juggling</li>
-                <li><strong className="text-ink">Flat from $149/mo</strong> true all-in cost, no hidden vendor fees</li>
+                <li><strong className="text-ink">Flat from $499/mo</strong> true all-in cost, no hidden vendor fees</li>
                 <li><strong className="text-ink">Done-for-you</strong> live in minutes, no integration build</li>
                 <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>
                 <li>Single support contact for everything</li>
@@ -211,7 +211,7 @@ export default function VapiAlternative() {
             a flat plan with no per-minute meter.
           </p>
           <ul className="list-disc text-ink2 text-left max-w-3xl mx-auto space-y-1 pl-5">
-            <li><strong className="text-ink">Flat from $149/mo</strong> vs a true $0.13–$0.31/min all-in Vapi cost</li>
+            <li><strong className="text-ink">Flat from $499/mo</strong> vs a true $0.13–$0.31/min all-in Vapi cost</li>
             <li><strong className="text-ink">One vendor</strong> vs 4–6 contracts and invoices</li>
             <li><strong className="text-ink">D2C-ready</strong> rescues deliveries and confirms orders out of the box</li>
             <li><strong className="text-ink">12+ languages included</strong> Arabic, Spanish, Hindi and more</li>

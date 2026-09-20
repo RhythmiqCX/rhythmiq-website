@@ -99,7 +99,7 @@ function ReturnsPanel() {
           <span>
             <span className="who">Iyer · Order #4030</span>
             <br />
-            <span className="meta">Color issue → store credit +₹200</span>
+            <span className="meta">Color issue → store credit +$10</span>
           </span>
           <span className="tagpill warn">Pending pickup</span>
         </div>
@@ -148,9 +148,9 @@ function OrdersPanel() {
           <span>
             <span className="who">COD · Meera</span>
             <br />
-            <span className="meta">Confirmed + added conditioner, ₹100 off</span>
+            <span className="meta">Confirmed + added conditioner, $5 off</span>
           </span>
-          <span className="tagpill new">₹1,450</span>
+          <span className="tagpill new">$58.00</span>
         </div>
         <div className="row">
           <span className="time">#8822</span>
@@ -159,7 +159,7 @@ function OrdersPanel() {
             <br />
             <span className="meta">Confirmed, no changes</span>
           </span>
-          <span className="tagpill ok">₹899</span>
+          <span className="tagpill ok">$36.50</span>
         </div>
         <div className="row">
           <span className="time">#8823</span>
@@ -175,9 +175,9 @@ function OrdersPanel() {
           <span>
             <span className="who">COD · Fernandes</span>
             <br />
-            <span className="meta">Switched to prepaid, ₹50 off</span>
+            <span className="meta">Switched to prepaid, $5 off</span>
           </span>
-          <span className="tagpill new">₹2,100</span>
+          <span className="tagpill new">$84.00</span>
         </div>
       </div>
     </main>

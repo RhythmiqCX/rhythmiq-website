@@ -72,7 +72,7 @@ const ROWS: [string, React.ReactNode, React.ReactNode][] = [
   [
     "Pricing model",
     <Neg key="s-price">From $99/mo with monthly minute caps. A busy month triggers overages, so the real cost is unpredictable.</Neg>,
-    <Pos key="rx-price"><strong className="text-ink">Flat plans from $149/mo.</strong> No minute caps, no surprise overage bills.</Pos>,
+    <Pos key="rx-price"><strong className="text-ink">Flat plans from $499/mo.</strong> No minute caps, no surprise overage bills.</Pos>,
   ],
   [
     "Languages",

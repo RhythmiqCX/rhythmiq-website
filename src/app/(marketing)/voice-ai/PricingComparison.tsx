@@ -10,8 +10,8 @@ import Link from "next/link";
 const competitors = [
   {
     name: "RhythmiqCX",
-    price: "From $149/mo",
-    model: "Simple plan",
+    price: "From $499/mo",
+    model: "Per call",
     orders: true,
     languages: true,
     noSurprise: true,
@@ -28,7 +28,7 @@ const competitors = [
   },
   {
     name: "Generic dev voice platforms",
-    price: "$0.07–0.09+/min",
+    price: "$0.12–0.27/min all-in",
     model: "Per-minute",
     orders: false,
     languages: true,

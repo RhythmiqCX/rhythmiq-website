@@ -19,7 +19,7 @@ import {
 } from "@/components/marketing/restaurant";
 
 export const metadata = generateMetadata({
-  title: "Rhythmiq: Voice AI for D2C — Rescue Failed Deliveries & Returns",
+  title: "Rhythmiq: Voice AI That Rescues Failed Deliveries for D2C Brands",
   description:
     "Rhythmiq is voice AI for D2C brands. It calls customers to rescue failed deliveries, confirm COD orders, turn returns into exchanges, and recover abandoned carts, 24/7 in 12+ languages. Start free.",
   keywords: [

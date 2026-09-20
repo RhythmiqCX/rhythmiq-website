@@ -238,6 +238,60 @@ img { user-select: none; }
   .btn:hover .arrow, .link-arrow:hover .arrow { transform: translateX(3px); }
   .link-arrow { @apply font-semibold text-[15px] inline-flex items-center gap-1.5 pb-0.5 border-b border-ink/15 hover:border-ink; }
 
+  /* Usage calculator slider. The track is painted with a gradient stop at
+     --pct (set inline from React) so the filled portion tracks the value in
+     both WebKit and Firefox, which style range tracks differently. */
+  .usage-range {
+    @apply appearance-none bg-transparent cursor-pointer;
+    height: 26px;
+  }
+  .usage-range:focus-visible { @apply outline-none; }
+  .usage-range::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(
+      to right,
+      #E8643C 0%, #E8643C var(--pct, 0%),
+      var(--line-soft) var(--pct, 0%), var(--line-soft) 100%
+    );
+  }
+  .usage-range::-moz-range-track {
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(
+      to right,
+      #E8643C 0%, #E8643C var(--pct, 0%),
+      var(--line-soft) var(--pct, 0%), var(--line-soft) 100%
+    );
+  }
+  .usage-range::-webkit-slider-thumb {
+    @apply appearance-none bg-white;
+    width: 24px;
+    height: 24px;
+    margin-top: -9px;
+    border-radius: 999px;
+    border: 2px solid #E8643C;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.14);
+    transition: transform 0.15s ease;
+  }
+  .usage-range::-moz-range-thumb {
+    @apply bg-white;
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    border: 2px solid #E8643C;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.14);
+    transition: transform 0.15s ease;
+  }
+  .usage-range:hover::-webkit-slider-thumb,
+  .usage-range:focus-visible::-webkit-slider-thumb { transform: scale(1.12); }
+  .usage-range:hover::-moz-range-thumb,
+  .usage-range:focus-visible::-moz-range-thumb { transform: scale(1.12); }
+  @media (prefers-reduced-motion: reduce) {
+    .usage-range::-webkit-slider-thumb,
+    .usage-range::-moz-range-thumb { transition: none; }
+  }
+
   /* Crop-mark frame */
   .frame {
     @apply relative;
