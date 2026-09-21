@@ -8,8 +8,12 @@ import type { NextRequest } from "next/server";
  *  - `try.rhythmiqcx.com`  → rewritten to `/try` (per-prospect prototype sites,
  *                            e.g. try.rhythmiqcx.com/bella-bistro → /try/bella-bistro).
  *
- * Every other host (rhythmiqcx.com, www, Vercel previews, localhost) is a no-op,
- * so the main restaurant site is untouched.
+ * On every other host (rhythmiqcx.com, www, Vercel previews, localhost) only the
+ * root path is rewritten: `/` now serves the same studio landing page as
+ * `dev.rhythmiqcx.com`. The original D2C home page is untouched in the codebase
+ * at `src/app/(marketing)/page.tsx` — delete the SERVE_DEV_AT_ROOT block below to
+ * put it back. Every other marketing route (/pricing, /blog, /voice-ai, ...) is
+ * a no-op and keeps rendering as before.
  *
  * NOTE: this only handles the *rewrite*. Each subdomain (`dev.`, `try.`) must
  * also be added to this project in Vercel (Project → Domains) and pointed at it
@@ -32,6 +36,14 @@ export function middleware(req: NextRequest) {
     if (pathname === "/try" || pathname.startsWith("/try/")) return NextResponse.next();
     const url = req.nextUrl.clone();
     url.pathname = pathname === "/" ? "/try" : `/try${pathname}`;
+    return NextResponse.rewrite(url);
+  }
+
+  // SERVE_DEV_AT_ROOT — main site landing page shows the Rhythmiq Dev page.
+  // Root path only; the rest of the marketing site is untouched.
+  if (req.nextUrl.pathname === "/") {
+    const url = req.nextUrl.clone();
+    url.pathname = "/dev";
     return NextResponse.rewrite(url);
   }
 
