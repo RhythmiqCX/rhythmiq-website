@@ -84,11 +84,12 @@ export default function PipsPotionsPrivacyPage() {
               has used the Game and data was collected, contact us and we will help remove it.
             </p>
 
-            <h2 className="font-bold mt-8 text-ink">6. Keeping and deleting data</h2>
+            <h2 id="delete-data" className="font-bold mt-8 text-ink scroll-mt-24">6. Keeping and deleting data</h2>
             <p className="text-ink2">
               Data saved on your phone stays there until you uninstall the Game. Google and GameAnalytics keep
               the data they receive according to their own policies. You can ask us to request deletion of
-              analytics data linked to your device by emailing us with the date you played.
+              analytics and advertising data linked to your device by emailing support@rhythmiqcx.com with the
+              date you played. We reply within 30 days.
             </p>
 
             <h2 className="font-bold mt-8 text-ink">7. Your rights</h2>
